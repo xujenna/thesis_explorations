@@ -1,0 +1,4 @@
+say "what up cool stuff"
+cat test.py
+python test.py
+python Si

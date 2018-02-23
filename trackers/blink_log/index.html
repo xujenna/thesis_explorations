@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style type="text/css">
+  /*css to go here*/
+  body {
+    font-family: monospace;
+    font-size: 11px;
+    color: #D3D3D3;
+    background-size: cover;
+    background-color:#3c4149;
+/*    background-image:url("hour13_cover.png");
+*/
+}
+
+svg {
+/*  border: 1px solid #f0f;
+*/  /*color: white;*/
+    fill: white;
+    z-index: 100;
+    display:inline;
+    margin:auto;
+    margin-top:200px;
+}
+
+.title {
+  font-size:24px;
+  font-family:monospace;
+  color:#D3D3D3;
+  text-align: center;
+}
+
+.kicker {
+  font-family:roboto;
+  font-size:11px;
+  letter-spacing: 2px;
+  text-align:center;
+  border-bottom: 1px solid white;
+  padding-bottom:4px;
+  display:table;
+  margin:auto;
+  width:inherit;
+  margin-top:40px;
+  margin-bottom:15px;
+}
+
+
+.Axis line,
+.Axis path {
+  filL:none;
+  stroke:#D3D3D3;
+  stroke-width:1;
+}
+
+.axis-labels {
+  text-anchor:middle;
+  font-family:roboto;
+  font-weight:bold;
+  letter-spacing: 2px;
+  font-color:#D3D3D3;
+}
+
+.Axis text {
+  font-color:#D3D3D3;
+}
+
+.area {
+  fill:white;
+}
+
+.y-axis-label {
+  margin-left:0px;
+}
+
+
+.chart {
+  z-index: 101;
+}
+
+.time-title {
+  display:inline;
+}
+
+.wrapper {
+  height: 100%;
+  display:inline;
+  margin:20px;
+}
+</style>
+
+<body>
+<!-- 
+<div class="kicker">H.C. Andersens Blvd and Vesterbrogade, Copenhagen</div> <div class="title">Air Pollution Data for July 28, 2016 at <div class="time-title">[select a data point]</div></div> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script>
+//JS to go here
+
+var margin = {top: 50, right: 50, bottom: 100, left: 75};
+
+var width = 750 - margin.left - margin.right,
+    height = 450 - margin.top - margin.bottom;
+
+// var svg = d3.select("body").append("div")
+//     .attr("class", "wrapper")
+//     .append("svg")
+//       .attr("width", width + margin.left + margin.right)
+//       .attr("height", height + margin.top + margin.bottom)
+//     .append("g")
+//       .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+//     .attr("class", "chart")
+//     .style("display", "block");
+
+
+var xScale = d3.time.scale()
+  .range([0,width])
+  .domain([1517418120000, 1517418480000]);
+
+var xScale2 = d3.time.scale()
+  .range([0,width])
+  .domain([1517440020000, 1517440800000]);
+
+var xScale3 = d3.time.scale()
+  .range([0,width])
+  .domain([1517442300000, 1517442960000]);
+
+var yScale = d3.scale.linear()
+  .range([height, 0])
+  .domain([0, 22]);
+
+
+var blinks = d3.svg.line()
+  .x(function(d) {return xScale(d.key);})
+  .y(function(d){return yScale(d.values);});
+
+var blinks2 = d3.svg.line()
+  .x(function(d) {return xScale2(d.key);})
+  .y(function(d){return yScale(d.values);});
+
+var blinks3 = d3.svg.line()
+  .x(function(d) {return xScale3(d.key);})
+  .y(function(d){return yScale(d.values);});
+
+var xAxis = d3.svg.axis()
+  .scale(xScale)
+  .orient("bottom")
+  .tickPadding(10)
+  .tickFormat(d3.time.format("%H:%M"));
+
+
+var xAxis2 = d3.svg.axis()
+  .scale(xScale2)
+  .orient("bottom")
+  .tickPadding(10)
+  .tickFormat(d3.time.format("%H:%M"));
+
+  var xAxis3 = d3.svg.axis()
+  .scale(xScale3)
+  .orient("bottom")
+  .tickPadding(10)
+  .tickFormat(d3.time.format("%H:%M"));
+
+var yAxis = d3.svg.axis()
+  .scale(yScale)
+  .tickPadding(10)
+  .orient("left");
+  
+var area = d3.svg.area()
+  .x(function(d) {return xScale(d.key);})
+  .y0(height)
+  .y1(function(d){console.log("d.values", yScale(d.values));});
+
+
+
+
+var svg2 = d3.select("body").append("div")
+    .attr("class", "wrapper")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr("class", "chart");
+
+
+var svg3 = d3.select("body").append("div")
+    .attr("class", "wrapper")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr("class", "chart");
+
+
+
+d3.csv("blink_log.csv", ready);
+
+function ready(err, data) {
+    if (err) console.warn(err, "error loading data");
+
+
+
+
+data.forEach(function(d){
+  var dateTime = new Date('2018-01-31T' + d.timee.slice(0,5) + 'Z');
+  d.timee = +dateTime;
+
+  // d.timee = d.timee.slice(0,5);
+});
+
+
+
+
+
+var finaldata = d3.nest()
+  .key(function(d) { return d.timee; })
+  .rollup(function(v) {return v.length;})
+  .entries(data);
+
+console.log("finaldata", finaldata);
+
+
+var blinkdata1 = finaldata.filter(function(d){
+  return d.key < 1517440020000;
+});
+
+var blinkdata2 = finaldata.filter(function(d){
+  return d.key >= 1517440020000 && d.key < 1517442300000;
+});
+
+var blinkdata3 = finaldata.filter(function(d){
+  return d.key >= 1517442300000;
+});
+
+
+console.log("blink data 1", blinkdata1);
+
+console.log("blink data 2", blinkdata2);
+
+console.log("blink data 3", blinkdata3);
+
+
+
+// svg.append("g")
+//   .attr("class", "Axis")
+//   .attr("transform","translate(0, "+(height)+")")
+//   .call(xAxis);
+
+// svg.append("text")
+//   .attr("class", "axis-labels")
+//   .attr("transform","rotate(-90)")
+//   .attr("y", 25)
+//   .attr("x", (0 - width/5))
+//   .attr("dy", "-7em")
+//   .text("BLINKS");
+
+// svg.append("text")
+//   .attr("class", "axis-labels")
+//   .attr("y", height-10)
+//   .attr("x", (width/2))
+//   .attr("dy", "7em")
+//   .style("text-transform", "uppercase")
+//   .text("time");
+
+// svg.append("g")
+//   .attr("class","Axis")
+//   .call(yAxis);
+
+
+// var blinksContainer1 = svg.append("path")
+//   .attr("d", blinks(blinkdata1))
+//   .attr("stroke", "white")
+//   .attr("stroke-width", 1)
+//   .attr("fill", "none")
+//   .attr("class", "line");
+
+
+// var blinksSel1 = svg.selectAll(".blinks")
+//   .data(blinkdata1)
+//   .enter()
+//   .append("circle")
+
+// // svg.selectAll("circle")
+//   .attr("class", "blinks")
+//   .attr("cx", function(d){return xScale(d.key)})
+//   // .attr("cy", function(d){return yScale(d.values.NO2)})
+//   .attr("cy", function(d) {return yScale(d.values)})
+//   .attr("r",4);
+
+// svg.append("text")
+//   .attr("class", "chart-title")
+//   .attr("y",0)
+//   .attr("x",width/3)
+//   .text("Reading silently")
+//   .style("font-weight","bold")
+//   .style("font-size", "14px")
+//   .style("text-transform", "uppercase")
+//   .style("text-decoration", "underline");
+
+
+
+
+svg2.append("text")
+  .attr("class", "chart-title")
+  .attr("y",0)
+  .attr("x",width/3)
+  .text("Reading Out Loud")
+  .style("font-size", "16px")
+  .style("text-transform", "uppercase")
+  .style("letter-spacing","3px");
+
+svg2.append("g")
+  .attr("class", "Axis")
+  .attr("transform","translate(0, "+(height)+")")
+  .call(xAxis2);
+
+svg2.append("text")
+  .attr("class", "axis-labels")
+  .attr("transform","rotate(-90)")
+  .attr("y", 30)
+  .attr("x", (0 - width/4))
+  .attr("dy", "-7em")
+  .text("BLINKS");
+
+svg2.append("text")
+  .attr("class", "axis-labels")
+  .attr("y", height-15)
+  .attr("x", (width/2))
+  .attr("dy", "7em")
+  .style("text-transform", "uppercase")
+  .text("time");
+
+svg2.append("g")
+  .attr("class","Axis")
+  .call(yAxis);
+
+
+var blinksContainer2 = svg2.append("path")
+  .attr("d", blinks2(blinkdata2))
+  .attr("stroke", "white")
+  .attr("stroke-width", 1)
+  .attr("fill", "none")
+  .attr("class", "line");
+
+
+var blinksSel2 = svg2.selectAll(".blinks")
+  .data(blinkdata2)
+  .enter()
+  .append("circle")
+
+// svg.selectAll("circle")
+  .attr("class", "blinks")
+  .attr("cx", function(d){return xScale2(d.key)})
+  // .attr("cy", function(d){return yScale(d.values.NO2)})
+  .attr("cy", function(d) {return yScale(d.values)})
+  .attr("r",4);
+
+
+
+
+svg3.append("text")
+  .attr("class", "chart-title")
+  .attr("y",0)
+  .attr("x",width/3)
+  .text("Reading Silently")
+  .style("font-size", "16px")
+  .style("text-transform", "uppercase")
+  .style("letter-spacing","3px");
+
+svg3.append("g")
+  .attr("class", "Axis")
+  .attr("transform","translate(0, "+(height)+")")
+  .call(xAxis3);
+
+svg3.append("text")
+  .attr("class", "axis-labels")
+  .attr("transform","rotate(-90)")
+  .attr("y", 30)
+  .attr("x", (0 - width/4))
+  .attr("dy", "-7em")
+  .text("BLINKS");
+
+svg3.append("text")
+  .attr("class", "axis-labels")
+  .attr("y", height-15)
+  .attr("x", (width/2))
+  .attr("dy", "7em")
+  .style("text-transform", "uppercase")
+  .text("time");
+
+svg3.append("g")
+  .attr("class","Axis")
+  .call(yAxis);
+
+
+var blinksContainer3 = svg3.append("path")
+  .attr("d", blinks3(blinkdata3))
+  .attr("stroke", "white")
+  .attr("stroke-width", 1)
+  .attr("fill", "none")
+  .attr("class", "line");
+
+
+var blinksSel3 = svg3.selectAll(".blinks")
+  .data(blinkdata3)
+  .enter()
+  .append("circle")
+
+// svg.selectAll("circle")
+  .attr("class", "blinks")
+  .attr("cx", function(d){return xScale3(d.key)})
+  // .attr("cy", function(d){return yScale(d.values.NO2)})
+  .attr("cy", function(d) {return yScale(d.values)})
+  .attr("r",4);
+
+
+}
+
+</script>
+</body>

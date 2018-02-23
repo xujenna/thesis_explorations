@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style type="text/css">
+  /*css to go here*/
+  body {
+      font-family: arial;
+      font-size: 12px;
+  }
+
+  svg {
+      border: 1px solid #f0f;
+  }
+
+
+
+</style>
+
+<body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+
+<script>
+//JS to go here
+
+
+var margin = {top: 20, right: 10, bottom: 20, left: 10};
+
+var width = 900 - margin.left - margin.right,
+    height = 900 - margin.top - margin.bottom;
+
+
+var xScale = d3.time.scale()
+  .range([0,width])
+  .domain([1517864314492, 1517867115969]);
+
+
+var yScale = d3.scale.linear()
+  .range([height, 0])
+  .domain([-100, 100]);
+
+
+var xAxis = d3.svg.axis()
+  .scale(xScale)
+  .orient("bottom")
+  .tickPadding(10)
+  .tickFormat(d3.time.format("%H:%M"));
+
+var yAxis = d3.svg.axis()
+  .scale(yScale)
+  .tickPadding(10)
+  .orient("left");
+
+var area = d3.svg.area()
+  .x(function(d) {return xScale(d.key);})
+  .y0(height)
+  .y1(function(d){console.log("d.values", yScale(d.values));});
+
+
+
+var svg = d3.select("body").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  var drawAttentionLine = d3.svg.line()
+  .x(function(d) {return xScale(d.time);})
+  .y(function(d){return yScale(d.attention);});
+
+  var drawValenceLine = d3.svg.line()
+  .x(function(d) {return xScale(d.time);})
+  .y(function(d){return yScale(d.valence);});
+
+  var drawEngagementLine = d3.svg.line()
+  .x(function(d) {return xScale(d.time);})
+  .y(function(d){return yScale(d.engagement);});
+
+
+d3.json("data.json", ready);
+
+function ready(err, data) {
+    if (err) console.warn(err, "error loading data");
+
+
+svg.append("g")
+  .attr("class", "Axis")
+  .attr("transform","translate(0, "+(height)+")")
+  .call(xAxis);
+
+svg.append("text")
+  .attr("class", "axis-labels")
+  .attr("transform","rotate(-90)")
+  .attr("y", 25)
+  .attr("x", (0 - width/5))
+  .attr("dy", "-7em")
+  .text("BLINKS");
+
+svg.append("text")
+  .attr("class", "axis-labels")
+  .attr("y", height-10)
+  .attr("x", (width/2))
+  .attr("dy", "7em")
+  .style("text-transform", "uppercase")
+  .text("time");
+
+svg.append("g")
+  .attr("class","Axis")
+  .call(yAxis);
+
+
+    // console.log("data", data);
+
+
+    var circles = svg.selectAll("circle")
+      .data(data)
+      .enter()
+      .append("circle");
+
+
+    var circleAttributes = circles
+      .attr("cx", function(d) {return xScale(d.time)})
+      .attr("cy", function(d) {return yScale(d.attention)})
+      .attr("r", 2)
+      .attr("fill", "red");
+
+
+
+
+
+
+    var attentionLine = svg.selectAll(".attention-line")
+      .data(data)
+      .enter()
+      .append("g")
+      .attr("class", "attention-line");
+
+
+    attentionLine.append("path")
+      .attr("d", drawAttentionLine(data))
+  .attr("stroke", "red")
+  .attr("stroke-width", 1)
+  .attr("fill", "none");
+
+
+
+
+    var valenceLine = svg.selectAll(".valence-line")
+      .data(data)
+      .enter()
+      .append("g")
+      .attr("class", "valence-line");
+
+
+    valenceLine.append("path")
+      .attr("d", drawValenceLine(data))
+  .attr("stroke", "black")
+  .attr("stroke-width", 1)
+  .attr("fill", "none")
+  .attr("class", "line");
+
+
+
+
+
+    var engagementLine = svg.selectAll(".engagement-line")
+      .data(data)
+      .enter()
+      .append("g")
+      .attr("class", "engagement-line");
+
+
+    engagementLine.append("path")
+      .attr("d", drawEngagementLine(data))
+  .attr("stroke", "blue")
+  .attr("stroke-width", 1)
+  .attr("fill", "none")
+  .attr("class", "line");
+
+
+
+  var emoji = svg.selectAll(".emoji")
+    .data(data)
+    .enter()
+    .append("g")
+    .attr("class", "emoji")
+
+    emoji.append("text")
+    .attr("y", 100)
+    .attr("x", function(d) {return xScale(d.time)})
+    .text(function(d) {return d.emoji});
+
+}
+
+
+
+
+
+</script>
+</body>

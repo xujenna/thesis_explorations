@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style type="text/css">
+  /*css to go here*/
+  body {
+      font-family: arial;
+      font-size: 12px;
+  }
+
+  .yAxis line,
+  .yAxis path {
+    fill:none;
+    stroke:silver;
+  }
+
+  .yAxis .tick line {
+    stroke-dasharray: 1px 2px;
+  }
+
+.yAxis text {
+  text-align:right;
+  font-size:10px;
+}
+
+  .xAxis line,
+  .xAxis path {
+    fill:none;
+    stroke:silver;
+
+  }
+
+.xAxis text {
+  transform: rotate(-45deg) translateX(-10px) translateY(-2px);
+  text-align:right;
+/*  text-transform:uppercase;
+*/  text-anchor:end !important;
+  font-size:11px;
+}
+
+</style>
+
+<body>
+<div class ="container">
+
+
+<div class ="g-chart">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+<script src="jquery-3.3.1.js"></script>
+
+<script>
+//JS to go here
+
+
+var margin = {top: 5, right: 80, bottom: 195, left: 70};
+
+var chart = d3.select(".g-chart");
+
+var width = chart.node().clientWidth - margin.left - margin.right,
+  height = 800 - margin.top - margin.bottom;
+
+
+var concepts = [];
+
+
+d3.json("flickr_predictions.json", ready);
+
+var allData;
+
+function ready(err, data) {
+    if (err) console.warn(err, "error loading data");
+
+console.log("data", data);
+  // allData = data; 
+
+    data.forEach(function(d){
+
+      var currentConcepts = d.outputs[0].data.concepts;
+
+      for(var i=0; i<20; i++){
+        concepts.push(currentConcepts[i]);
+      };
+
+    });
+    // for (var i = 0; i < d.length)
+
+console.log("concepts", concepts);
+
+  var conceptCount = d3.nest()
+    .key(function(d) {return d.name;})
+    .rollup(function(v) {return v.length;})
+    .entries(concepts);
+
+  console.log("unique concepts: ", conceptCount);
+
+  conceptCount = conceptCount.filter(function(d){
+    return d.values > 300;
+  })
+
+  conceptCount = conceptCount.sort(function(a,b){
+    return b.values-a.values;
+  });
+
+
+  console.log("Top Concepts: ", conceptCount);
+
+
+
+  var yMin = d3.min(conceptCount,function(d){return d.values;});
+  var yMax = d3.max(conceptCount,function(d){return d.values;});
+
+  var xScale = d3.scale.ordinal()
+    .rangeRoundBands([0,width], .1)
+    .domain(conceptCount.map(function(d){return d.key;}));
+
+  var yScale = d3.scale.linear()
+    .range([height, 0])
+    .domain([yMin, (yMax + 10)]);
+
+
+  var xAxis = d3.svg.axis()
+    .orient("bottom")
+    .scale(xScale)
+    .tickPadding(0);
+
+  var yAxis = d3.svg.axis()
+    .orient("left")
+    .scale(yScale)
+    // .tickSize(-width)
+    .tickPadding(4);
+
+
+
+var svg = chart.append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+var xAxisGroup = svg.append("g")
+  .attr("class", "xAxis")
+  .attr("transform", "translate(0, " + (height) + ")")
+  .call(xAxis);
+
+svg.append("g")
+  .attr("class", "yAxis")
+  .call(yAxis);
+
+
+ svg.selectAll("bar")
+      .data(conceptCount)
+    .enter().append("rect")
+      .style("fill", "#ff00ff")
+      .attr("x", function(d) { return xScale(d.key); })
+      .attr("width", xScale.rangeBand())
+      .attr("y", function(d) { return yScale(d.values); })
+      .attr("height", function(d) { return height - yScale(d.values); })
+      .attr("id", function(d) {
+        $(this).click(function(){
+          populatePhotoDiv(d.key);
+          console.log(d.values);
+          // console.log(d.key);
+        })
+        return d.key;
+      });
+
+
+}
+
+
+function populatePhotoDiv(d){
+  console.log("d",d);
+  // console.log("data", allData);
+}
+
+</script>
+</body>

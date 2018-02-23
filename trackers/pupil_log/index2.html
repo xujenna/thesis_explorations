@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style type="text/css">
+  /*css to go here*/
+  body {
+    font-family: monospace;
+    font-size: 11px;
+    color: #D3D3D3;
+    background-size: cover;
+   background-image: url("bg.png");
+}
+
+svg {
+/*  border: 1px solid #f0f;
+*/  /*color: white;*/
+    fill: white;
+    z-index: 100;
+    display:inline;
+    margin:auto;
+    margin-top:20px;
+}
+
+.title {
+  font-size:24px;
+  font-family:monospace;
+  color:#D3D3D3;
+  text-align: center;
+}
+
+.kicker {
+  font-family:roboto;
+  font-size:11px;
+  letter-spacing: 2px;
+  text-align:center;
+  border-bottom: 1px solid white;
+  padding-bottom:4px;
+  display:table;
+  margin:auto;
+  width:inherit;
+  margin-top:40px;
+  margin-bottom:15px;
+}
+
+
+.Axis line,
+.Axis path {
+  filL:none;
+  stroke:#D3D3D3;
+  stroke-width:1;
+}
+
+.axis-labels {
+  text-anchor:middle;
+  font-family:roboto;
+  font-weight:bold;
+  letter-spacing: 2px;
+  font-color:#D3D3D3;
+}
+
+.Axis text {
+  font-color:#D3D3D3;
+}
+
+.area {
+  fill:white;
+}
+
+.y-axis-label {
+  margin-left:0px;
+}
+
+
+.chart {
+  z-index: 101;
+}
+
+.time-title {
+  display:inline;
+}
+
+.wrapper {
+  display:block;
+  margin:50px;
+}
+
+.wrapper2 {
+  display:block;
+}
+
+</style>
+
+<body>
+<!-- 
+<div class="kicker">H.C. Andersens Blvd and Vesterbrogade, Copenhagen</div> <div class="title">Air Pollution Data for July 28, 2016 at <div class="time-title">[select a data point]</div></div> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.sound.min.js"></script>
+
+<script>
+
+
+//JS to go here
+
+var margin = {top: 0, right: 50, bottom: 100, left: 75};
+
+var width = Window.innerWidth,
+    height = Window.innerHeight;
+
+var diameterData = [];
+var xposData = [];
+var yposData = [];
+
+d3.csv("gaze_positions.csv", function (err, gaze) {
+  d3.csv("pupil_positions.csv", function (err, pupil) {
+    if (err) console.warn(err, "error loading data");
+
+
+pupil.forEach(function(d){
+
+  diameterData.push(+d.diameter_3d);
+
+  // d.timee = d.timee.slice(0,5);
+});
+
+
+gaze.forEach(function(d){
+
+  xposData.push(+d.gaze_point_3d_x);
+  yposData.push(+d.gaze_point_3d_y);
+
+});
+
+
+console.log(diameterData);
+// console.log(yposData);
+
+
+
+});
+});
+
+
+function setup() { 
+  createCanvas(1600, 850);
+  frameRate(400);
+} 
+
+var i = 0; 
+
+function draw() { 
+  background(225, 255, 255, 2);
+  strokeWeight(0.5);
+  fill(255,255,255,0);
+  stroke(255,0,0);
+  ellipse(1450,700, diameterData[i]*3.779528);
+  stroke(255,20,120,50);
+  strokeWeight(diameterData[i]*3.779528);
+
+  push(); // Start a new drawing state
+translate(-650, -1025);
+
+  line((xposData[i]+500) * 3, (yposData[i]+500) * 3, (xposData[i+1]+500) * 3, (yposData[i+1]+500)*3);
+pop(); // Restore original state
+
+  if (i < diameterData.length) {
+    i++;
+  }
+  else {
+    i--;
+  };
+
+}
+
+
+</script>
+</body>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style type="text/css">
+  /*css to go here*/
+  body {
+    font-family: monospace;
+    font-size: 11px;
+    color: #D3D3D3;
+    background-size: cover;
+    background-color:#3c4149;
+}
+
+svg {
+/*  border: 1px solid #f0f;
+*/  /*color: white;*/
+    fill: white;
+    z-index: 100;
+    display:inline;
+    margin:auto;
+    margin-top:20px;
+}
+
+.title {
+  font-size:24px;
+  font-family:monospace;
+  color:#D3D3D3;
+  text-align: center;
+}
+
+.kicker {
+  font-family:roboto;
+  font-size:11px;
+  letter-spacing: 2px;
+  text-align:center;
+  border-bottom: 1px solid white;
+  padding-bottom:4px;
+  display:table;
+  margin:auto;
+  width:inherit;
+  margin-top:40px;
+  margin-bottom:15px;
+}
+
+
+.Axis line,
+.Axis path {
+  filL:none;
+  stroke:#D3D3D3;
+  stroke-width:1;
+}
+
+.axis-labels {
+  text-anchor:middle;
+  font-family:roboto;
+  font-weight:bold;
+  letter-spacing: 2px;
+  font-color:#D3D3D3;
+}
+
+.Axis text {
+  font-color:#D3D3D3;
+}
+
+.area {
+  fill:white;
+}
+
+.y-axis-label {
+  margin-left:0px;
+}
+
+
+.chart {
+  z-index: 101;
+}
+
+.time-title {
+  display:inline;
+}
+
+.wrapper {
+  display:block;
+  margin:50px;
+}
+
+.wrapper2 {
+  display:block;
+}
+
+</style>
+
+<body>
+<!-- 
+<div class="kicker">H.C. Andersens Blvd and Vesterbrogade, Copenhagen</div> <div class="title">Air Pollution Data for July 28, 2016 at <div class="time-title">[select a data point]</div></div> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script>
+//JS to go here
+
+var margin = {top: 0, right: 50, bottom: 100, left: 75};
+
+var width = 1500 - margin.left - margin.right,
+    height = 1000 - margin.top - margin.bottom;
+
+// var svg = d3.select("body").append("div")
+//     .attr("class", "wrapper")
+//     .append("svg")
+//       .attr("width", width + margin.left + margin.right)
+//       .attr("height", height + margin.top + margin.bottom)
+//     .append("g")
+//       .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+//     .attr("class", "chart")
+//     .style("display", "block");
+
+
+// var xAxis = d3.svg.axis()
+//   .scale(xScale)
+//   .orient("bottom")
+//   .tickPadding(10)
+//   .tickFormat(d3.time.format("%H:%M"));
+
+// var yAxis = d3.svg.axis()
+//   .scale(yScale)
+//   .tickPadding(10)
+//   .orient("left");
+  
+// var area = d3.svg.area()
+//   .x(function(d) {return xScale(d.key);})
+//   .y0(height)
+//   .y1(function(d){console.log("d.values", yScale(d.values));});
+
+
+
+// var svg = d3.select("body").append("div")
+//     .attr("class", "wrapper")
+//     .append("svg")
+//       .attr("width", width + margin.left + margin.right)
+//       .attr("height", height + margin.top + margin.bottom)
+//     // .append("g")
+//     //   .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+//     .attr("class", "chart");
+
+var svg2 = d3.select("body").append("div")
+  .attr("class", "wrapper2")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    // .append("g")
+    //   .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr("class", "chart");
+
+d3.csv("gaze_positions.csv", ready);
+
+function ready(err, data) {
+    if (err) console.warn(err, "error loading data");
+
+
+var xMax = d3.max(data, function(d) {return d.gaze_point_3d_x;});
+var xMin = d3.min(data, function(d) {return d.gaze_point_3d_x;});
+
+var yMin = d3.min(data, function(d) {return d.gaze_point_3d_y;});
+var yMax = d3.max(data, function(d) {return d.gaze_point_3d_y;});
+
+
+var xScale = d3.scale.linear()
+  .range([0,width])
+  .domain([(xMin * 6) - 500, xMax * 6]);
+
+
+var yScale = d3.scale.linear()
+  .range([height, 0])
+  .domain([(yMin * 6) -100, yMax * 6]);
+
+// var pupilPosNormal = d3.svg.line()
+//   .x(function(d) {return d.gaze_normal0_x * 500;})
+//   .y(function(d){return d.gaze_normal0_y * 500;});
+
+
+var pupilPos3d = d3.svg.line()
+  .x(function(d) {return xScale(d.gaze_point_3d_x);})
+  .y(function(d){return yScale(d.gaze_point_3d_y);});
+
+
+
+// var finaldata = d3.nest()
+//   .key(function(d) { return d.timee; })
+//   .rollup(function(v) {return v.length;})
+//   .entries(data);
+
+// console.log("finaldata", finaldata);
+
+
+
+
+
+// var pupilPosNormalContainer = svg.append("path")
+//   .attr("d", pupilPosNormal(data))
+//   .attr("stroke", "white")
+//   .attr("stroke-width", 1)
+//   .attr("fill", "none")
+//   .attr("class", "line");
+
+
+
+var pupilPos3dContainer = svg2.append("path")
+  .attr("d", pupilPos3d(data))
+  .attr("stroke", "white")
+  .attr("stroke-width", 1)
+  .attr("fill", "none")
+  .attr("class", "line");
+
+
+// var blinksSel1 = svg.selectAll(".blinks")
+//   .data(finaldata)
+//   .enter()
+//   .append("circle")
+
+// // svg.selectAll("circle")
+//   .attr("class", "blinks")
+//   .attr("cx", function(d){return xScale(d.key)})
+//   // .attr("cy", function(d){return yScale(d.values.NO2)})
+//   .attr("cy", function(d) {return yScale(d.values)})
+//   .attr("r",4);
+
+// svg.append("text")
+//   .attr("class", "chart-title")
+//   .attr("y",0)
+//   .attr("x",width/3)
+//   .text("Reading silently: Day 2")
+//   .style("font-weight","bold")
+//   .style("font-size", "14px")
+//   .style("text-transform", "uppercase")
+//   .style("text-decoration", "underline");
+
+
+
+
+
+}
+
+</script>
+</body>
