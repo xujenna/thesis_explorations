@@ -8064,3 +8064,151 @@ gwall
 2018-03-03T13:18:34.327560
 †weare 
 2018-03-03T13:18:43.188944
+∑        1010441041000px 
+2018-03-03T13:22:44.435428
+padding0100 
+2018-03-03T13:23:15.866218
+pxpx 
+2018-03-03T13:23:20.890471
+-20›‹› ∑∑        ß∑@matth 
+2018-03-03T13:26:31.823961
+not sure  babout that comment anymore. tested it just now it and it seems okfine. but can we get the desktop background to crop more like this:  
+2018-03-03T13:27:01.353468
+currently ththe image is super huge. i can give you a  a newmaybe i can give you a new crop of the background/ image/ if that's more e easier  
+2018-03-03T13:27:49.303800
+can yåcan you please explain what you mean by your second question/  
+2018-03-03T13:28:22.793799
+also afalsoand ∑åas fo rr the staging server, you can do whatever you feel is best1å∑I was wond s also wondering if wer could have slihghtly more subtle music. it doesn't really what you have currently is nice, but doesn't fit the tone of tehe video's content/our brand. did you not think the åsinging was appropriate/ worked in the video/  the singing not work in the video/ 
+2018-03-03T13:31:33.242275
+if∑∑if you wantant to point me to some sources of for music, i can dig around as well . i know it's pretty tough to findtough to find appappropriate music for ASH video s 
+2018-03-03T13:34:00.558756
+video 
+2018-03-03T13:34:14.125745
+music 
+2018-03-03T13:37:48.729729
+∑∑avideo 
+2018-03-03T13:40:05.531978
+åvideo 
+2018-03-03T13:40:07.259973
+video 
+2018-03-03T13:40:18.051835
+can you link me to the video that junhee made/ 
+2018-03-03T13:42:36.353707
+can you åaalso ca , can you remind me where he got his musucic/ 
+2018-03-03T13:42:56.601239
+®†fa 
+2018-03-03T13:43:01.272739
+oh right  
+2018-03-03T13:46:52.532376
+well that branding i s super old no w w lol 
+2018-03-03T13:47:25.303869
+∑∑indoor/ vs  vs outdoor†stress biometrics 
+2018-03-03T13:53:55.239541
+∑∑∑çç∑√∑›             çç∑machine learning√Ω√GREATCOFFEE 
+2018-03-03T14:53:03.650173
+†5g wifi 
+2018-03-03T14:53:35.752433
+        †fa 
+2018-03-03T15:16:57.187764
+most successful ƒblack 
+2018-03-03T15:20:41.877426
+ panther 
+2018-03-03T15:20:45.868956
+çç˜∑∑∑∑∑˜√ 
+2018-03-03T15:27:49.410351
+// laptop\None 
+2018-03-03T15:28:05.069373
+# #phoneç√201803320180303åçç†√ 
+2018-03-03T15:28:46.795486
+∑ç√ç†√ 
+2018-03-03T15:29:09.203048
+22 
+2018-03-03T15:32:07.715963
+efficiency 
+2018-03-03T15:33:38.562922
+ç√ 
+2018-03-03T15:34:35.445936
+ç√ 
+2018-03-03T15:35:51.753974
+∑ 
+2018-03-03T15:36:02.001628
+†how to download jsonåç√ 
+2018-03-03T15:36:35.624449
+pythonåhow to rread api response sjson pythonhon 
+2018-03-03T15:36:55.263161
+∑†how to download json api response python 
+2018-03-03T15:37:39.972625
+update json fi get json from rescue timeupdated jsonç√215 
+2018-03-03T15:40:02.158062
+215303 
+2018-03-03T15:40:22.501566
+ç√ 
+2018-03-03T15:40:52.804203
+∑ƒƒliitimit 
+2018-03-03T15:42:25.800867
+∑ 
+2018-03-03T15:43:26.014472
+import requetsts˜ipip install requests 
+2018-03-03T15:43:41.549798
+re = requests.get(url='') 
+2018-03-03T15:44:11.068268
+print (r.json() 
+2018-03-03T15:44:16.516036
+ßrescuetime 
+2018-03-03T15:44:45.994702
+prodgetproductivity.py 
+2018-03-03T15:44:57.909041
+˜cd git status 
+2018-03-03T15:45:55.923092
+get add -A 
+2018-03-03T15:46:07.624410
+git add -A 
+2018-03-03T15:46:11.544156
+git commit -m "added rescumeuetime API tracker" 
+2018-03-03T15:46:39.799561
+git push 
+2018-03-03T15:46:41.215331
+git status 
+2018-03-03T15:46:52.305459
+†iggithu 
+2018-03-03T15:47:02.217271
+˜cd  
+2018-03-03T15:48:12.438033
+python get 
+2018-03-03T15:48:14.942366
+while Ω 
+2018-03-03T15:48:33.933416
+while çç∑√with open('productivity.json, 'a as f: 
+2018-03-03T15:50:08.969494
+for f.write(r.sjson() + '\n 
+2018-03-03T15:50:46.519842
+Ω†√Ω 
+2018-03-03T15:51:31.840399
+†rescumetime api limits 
+2018-03-03T15:51:48.055770
+# jsave to ç√ 
+2018-03-03T15:53:42.504676
+# save json to file 
+2018-03-03T15:53:50.176538
+#  checheck the producitivity  of the  tctivity isolates"Efficiency ç√ 
+2018-03-03T16:05:03.111150
+(perfeccent value : rows > index number )(eacpper hour > 4 
+2018-03-03T16:06:58.792861
+# if  
+2018-03-03T16:07:08.168492
+ of last arraybypvefficientyy valcy value is less than 50, open xujenna.com/focus 
+2018-03-03T16:11:41.128751
+wwith open('producitivity.json, 'r as f: 
+2018-03-03T16:12:43.322980
+import json 
+2018-03-03T16:12:47.802766
+çpython 
+2018-03-03T16:15:03.717198
+√ 
+2018-03-03T16:15:05.589296
+x = √ 
+2018-03-03T16:15:11.884381
+x 
+2018-03-03T16:15:14.420673
+÷r.json9ßpython requests json string 
+2018-03-03T16:17:25.735038
