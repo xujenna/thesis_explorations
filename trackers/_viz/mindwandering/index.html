@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style type="text/css">
+  /*css to go here*/
+  body {
+    font-family: monospace;
+    font-size: 11px;
+    background-size: cover;
+    background-color:#fff;
+/*    background-image:url("hour13_cover.png");
+*/
+}
+
+svg {
+/*  border: 1px solid #f0f;
+*/  /*color: white;*/
+    /*fill: white;*/
+    z-index: 100;
+    display:block;
+    margin:auto;
+    margin-top:200px;
+}
+
+.title {
+  font-size:24px;
+  font-family:monospace;
+  color:#000;
+  text-align: center;
+}
+
+.kicker {
+  font-family:roboto;
+  font-size:11px;
+  letter-spacing: 2px;
+  text-align:center;
+  border-bottom: 1px solid white;
+  padding-bottom:4px;
+  display:table;
+  margin:auto;
+  width:inherit;
+  margin-top:40px;
+  margin-bottom:15px;
+}
+
+
+.Axis line,
+.Axis path {
+  filL:none;
+  stroke:#000;
+  stroke-width:1;
+}
+
+.axis-labels {
+  text-anchor:middle;
+  font-family:roboto;
+  font-weight:bold;
+  letter-spacing: 2px;
+  font-color:#000;
+}
+
+.Axis text {
+  fill: black;
+}
+
+
+
+.y-axis-label {
+  margin-left:0px;
+}
+
+
+.chart {
+  z-index: 101;
+}
+
+.time-title {
+  display:inline;
+}
+
+.wrapper {
+  height: 100%;
+  display:inline;
+  margin:20px;
+}
+</style>
+
+<body>
+<!--
+<div class="kicker">H.C. Andersens Blvd and Vesterbrogade, Copenhagen</div> <div class="title">Air Pollution Data for July 28, 2016 at <div class="time-title">[select a data point]</div></div> -->
+<div class ="g-chart">
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script src="jquery-3.3.1.js"></script>
+
+<script>
+//JS to go here
+
+var margin = {top: 50, right: 50, bottom: 100, left: 75};
+
+var chart = d3.select(".g-chart");
+
+var width = chart.node().clientWidth - margin.left - margin.right,
+  height = 450 - margin.top - margin.bottom;
+
+var svg = d3.select("body").append("div")
+    .attr("class", "wrapper")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr("class", "chart")
+    .style("display", "block");
+
+
+
+// var blinks2 = d3.svg.line()
+//   .x(function(d) {return xScale2(d.key);})
+//   .y(function(d){return yScale(d.values);});
+//
+// var blinks3 = d3.svg.line()
+//   .x(function(d) {return xScale3(d.key);})
+//   .y(function(d){return yScale(d.values);});
+
+var area = d3.svg.area()
+  .x(function(d) {return xScale(d.key);})
+  .y0(height)
+  .y1(function(d){console.log("d.values", yScale(d.values));});
+
+
+
+
+var svg2 = d3.select("body").append("div")
+    .attr("class", "wrapper")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr("class", "chart");
+
+
+var svg3 = d3.select("body").append("div")
+    .attr("class", "wrapper")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr("class", "chart");
+
+
+
+var day1Productivity = [{"time": "10:00 AM", "score":68}, {"time": "11:00 AM", "score":52}, {"time": "12:00 PM", "score":51}, {"time": "1:00 PM", "score":98}];
+var day2Productivity = [{"time": "1:00 PM", "score":31}, {"time": "2:00 PM", "score":50}, {"time": "3:00 PM", "score":59}, {"time": "4:00 PM", "score":65}, {"time": "5:00 PM", "score":25}];
+var day3Productivity = [{"time": "12:00 PM", "score":48}, {"time": "1:00 PM", "score":47}, {"time": "2:00 PM", "score":54}, {"time": "3:00 PM", "score":40}];
+
+d3.csv("Untitled.csv", function (err, one) {
+  d3.csv("Untitled2.csv", function (err, two) {
+    d3.csv("Untitled3.csv", function(err, three) {
+    if (err) console.warn(err, "error loading data");
+
+
+
+one.forEach(function(d){
+  var dateTime = new Date('February 26, 2018 ' + String(d.time));
+  d.time = dateTime;
+
+  // d.timee = d.timee.slice(0,5);
+});
+
+two.forEach(function(d){
+  var dateTime = new Date('February 27, 2018 ' + String(d.time));
+  d.time = dateTime;
+
+  // d.timee = d.timee.slice(0,5);
+});
+
+three.forEach(function(d){
+  var dateTime = new Date('February 28, 2018 ' + String(d.time));
+  d.time = dateTime;
+
+  // d.timee = d.timee.slice(0,5);
+});
+
+day1Productivity.forEach(function(d){
+  var dateTime = new Date('February 26, 2018 ' + String(d.time));
+  d.time = dateTime;
+})
+console.log(day1Productivity);
+
+day2Productivity.forEach(function(d){
+  var dateTime = new Date('February 27, 2018 ' + String(d.time));
+  d.time = dateTime;
+})
+
+
+day3Productivity.forEach(function(d){
+  var dateTime = new Date('February 28, 2018 ' + String(d.time));
+  d.time = dateTime;
+})
+
+console.log("one", one);
+
+console.log("two", two);
+
+console.log("three", three);
+
+
+var x1Min = d3.min(one,function(d){return d.time;});
+var x1Max = d3.max(one,function(d){return d.time;});
+
+var x2Min = d3.min(two,function(d){return d.time;});
+var x2Max = d3.max(two,function(d){return d.time;});
+
+var x3Min = d3.min(three,function(d){return d.time;});
+var x3Max = d3.max(three,function(d){return d.time;});
+
+
+var xScale = d3.time.scale()
+  .range([0,width])
+  .domain([x1Min, x1Max]);
+
+var xScale2 = d3.time.scale()
+  .range([0,width])
+  .domain([x2Min, x2Max]);
+
+var xScale3 = d3.time.scale()
+  .range([0,width])
+  .domain([x3Min, x3Max]);
+
+var yScale = d3.scale.linear()
+  .range([height, 0])
+  .domain([0, 100]);
+
+  var blinks = d3.svg.line()
+    .x(function(d) {return xScale(d.time);})
+    .y(function(d){return yScale(d.score);});
+
+    var blinks2 = d3.svg.line()
+      .x(function(d) {return xScale2(d.time);})
+      .y(function(d){return yScale(d.score);});
+
+      var blinks3 = d3.svg.line()
+        .x(function(d) {return xScale3(d.time);})
+        .y(function(d){return yScale(d.score);});
+
+
+var xAxis = d3.svg.axis()
+  .scale(xScale)
+  .orient("bottom")
+  .tickPadding(10)
+  .tickFormat(d3.time.format("%H:%M"));
+
+
+var xAxis2 = d3.svg.axis()
+  .scale(xScale2)
+  .orient("bottom")
+  .tickPadding(10)
+  .tickFormat(d3.time.format("%H:%M"));
+
+  var xAxis3 = d3.svg.axis()
+  .scale(xScale3)
+  .orient("bottom")
+  .tickPadding(10)
+  .tickFormat(d3.time.format("%H:%M"));
+
+var yAxis = d3.svg.axis()
+  .scale(yScale)
+  .tickPadding(10)
+  .orient("left");
+
+
+
+svg.append("g")
+  .attr("class", "Axis")
+  .attr("transform","translate(0, "+(height)+")")
+  .call(xAxis);
+
+svg.append("text")
+  .attr("class", "axis-labels")
+  .attr("transform","rotate(-90)")
+  .attr("y", 25)
+  .attr("x", (0 - width/10))
+  .attr("dy", "-7em")
+  .text("PRODUCTIVITY SCORE")
+  .attr("fill", "silver");
+
+svg.append("text")
+  .attr("class", "axis-labels")
+  .attr("y", height-10)
+  .attr("x", (width/2))
+  .attr("dy", "7em")
+  .style("text-transform", "uppercase");
+
+svg.append("g")
+  .attr("class","Axis")
+  .call(yAxis);
+
+//
+var blinksContainer1 = svg.append("path")
+  .attr("d", blinks(day1Productivity))
+  .attr("stroke", "silver")
+  .attr("stroke-width", 1)
+  .attr("fill", "none")
+  .attr("class", "line");
+
+var focusX1;
+var blinksSel1 = svg.selectAll(".blinks")
+  .data(one)
+  .enter()
+  .append("svg:image")
+  // .attr("class", "logo")
+  // .attr("cx", function(d){return xScale(d.time)})
+  // .attr("cy", height)
+  .attr("xlink:href", function(d){
+    // return "<div style='background-image: -webkit-image-set(url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 1x, url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 2x);'></div>";
+    var url = d.url;
+    if(url.includes("xujenna.com/focus") == true) {
+      focusX1 = xScale(d.time);
+    }
+    return "http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F" + d.url + ".jpg";
+
+  })
+  .attr("transform", function(d){
+    return "translate(" + xScale(d.time) + "," + yScale(10) + ")";
+  });
+
+
+svg.append("line")
+  .style("stroke", "#ff00ff")
+  .attr("x1", focusX1)
+  .attr("y1", 0)
+  .attr("x2", focusX1)
+  .attr("y2", height);
+
+
+// svg.append("text")
+//   .attr("class", "chart-title")
+//   .attr("y",0)
+//   .attr("x",width/3)
+//   .text("Reading silently")
+//   .style("font-weight","bold")
+//   .style("font-size", "14px")
+//   .style("text-transform", "uppercase")
+//   .style("text-decoration", "underline");
+
+
+
+//
+// svg2.append("text")
+//   .attr("class", "chart-title")
+//   .attr("y",0)
+//   .attr("x",width/3)
+//   .text("Reading Out Loud")
+//   .style("font-size", "16px")
+//   .style("text-transform", "uppercase")
+//   .style("letter-spacing","3px");
+
+svg2.append("g")
+  .attr("class", "Axis")
+  .attr("transform","translate(0, "+(height)+")")
+  .call(xAxis2);
+
+svg2.append("text")
+  .attr("class", "axis-labels")
+  .attr("transform","rotate(-90)")
+  .attr("y", 30)
+  .attr("x", (0 - width/10))
+  .attr("dy", "-7em")
+  .text("PRODUCTIVITY SCORE")
+  .attr("fill", "silver");
+
+svg2.append("text")
+  .attr("class", "axis-labels")
+  .attr("y", height-15)
+  .attr("x", (width/2))
+  .attr("dy", "7em")
+  .style("text-transform", "uppercase");
+
+svg2.append("g")
+  .attr("class","Axis")
+  .call(yAxis);
+
+
+var blinksContainer2 = svg2.append("path")
+  .attr("d", blinks2(day2Productivity))
+  .attr("stroke", "silver")
+  .attr("stroke-width", 1)
+  .attr("fill", "none")
+  .attr("class", "line");
+
+var focusX;
+var blinksSel2 = svg2.selectAll(".blinks2")
+  .data(two)
+  .enter()
+  .append("svg:image")
+  // .attr("class", "logo")
+  // .attr("cx", function(d){return xScale(d.time)})
+  // .attr("cy", height)
+  .attr("xlink:href", function(d){
+    // return "<div style='background-image: -webkit-image-set(url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 1x, url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 2x);'></div>";
+    var url = d.url;
+    if(url.includes("xujenna.com/focus") == true) {
+      focusX = xScale2(d.time);
+    }
+    return "http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F" + d.url + ".jpg";
+
+  })
+  .attr("transform", function(d){
+    return "translate(" + xScale2(d.time) + "," + yScale(10) + ")";
+  });
+
+
+svg2.append("line")
+  .style("stroke", "#ff00ff")
+  .attr("x1", focusX)
+  .attr("y1", 0)
+  .attr("x2", focusX)
+  .attr("y2", height);
+
+
+// svg3.append("text")
+//   .attr("class", "chart-title")
+//   .attr("y",0)
+//   .attr("x",width/3)
+//   .text("Reading Silently")
+//   .style("font-size", "16px")
+//   .style("text-transform", "uppercase")
+//   .style("letter-spacing","3px");
+
+svg3.append("g")
+  .attr("class", "Axis")
+  .attr("transform","translate(0, "+(height)+")")
+  .call(xAxis3);
+
+svg3.append("text")
+  .attr("class", "axis-labels")
+  .attr("transform","rotate(-90)")
+  .attr("y", 30)
+  .attr("x", (0 - width/10))
+  .attr("dy", "-7em")
+  .text("PRODUCTIVITY SCORE")
+  .attr("fill", "silver");
+
+svg3.append("text")
+  .attr("class", "axis-labels")
+  .attr("y", height-15)
+  .attr("x", (width/2))
+  .attr("dy", "7em")
+  .style("text-transform", "uppercase");
+
+svg3.append("g")
+  .attr("class","Axis")
+  .call(yAxis);
+
+
+var blinksContainer3 = svg3.append("path")
+  .attr("d", blinks3(day3Productivity))
+  .attr("stroke", "silver")
+  .attr("stroke-width", 1)
+  .attr("fill", "none")
+  .attr("class", "line");
+
+var focusX3;
+  var blinksSel3 = svg3.selectAll(".blinks3")
+    .data(three)
+    .enter()
+    .append("svg:image")
+    // .attr("class", "logo")
+    // .attr("cx", function(d){return xScale(d.time)})
+    // .attr("cy", height)
+    .attr("xlink:href", function(d){
+      // return "<div style='background-image: -webkit-image-set(url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 1x, url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 2x);'></div>";
+      var url = d.url;
+      if(url.includes("xujenna.com/focus") == true) {
+        focusX3 = xScale3(d.time);
+      }
+      return "http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F" + d.url + ".jpg";
+
+    })
+    .attr("transform", function(d){
+      return "translate(" + xScale3(d.time) + "," + yScale(10) + ")";
+    });
+
+
+  svg3.append("line")
+    .style("stroke", "#ff00ff")
+    .attr("x1", focusX3)
+    .attr("y1", 0)
+    .attr("x2", focusX3)
+    .attr("y2", height);
+
+
+});
+});
+});
+
+</script>
+</body>
