@@ -46,7 +46,7 @@ svg {
 
 .Axis line,
 .Axis path {
-  filL:none;
+  filL:nchrome_history;
   stroke:#000;
   stroke-width:1;
 }
@@ -153,119 +153,54 @@ var svg3 = d3.select("body").append("div")
 
 
 
-var day1Productivity = [{"time": "10:00 AM", "score":68}, {"time": "11:00 AM", "score":52}, {"time": "12:00 PM", "score":51}, {"time": "1:00 PM", "score":98}];
-var day2Productivity = [{"time": "1:00 PM", "score":31}, {"time": "2:00 PM", "score":50}, {"time": "3:00 PM", "score":59}, {"time": "4:00 PM", "score":65}, {"time": "5:00 PM", "score":25}];
-var day3Productivity = [{"time": "12:00 PM", "score":48}, {"time": "1:00 PM", "score":47}, {"time": "2:00 PM", "score":54}, {"time": "3:00 PM", "score":40}];
-
-d3.csv("Untitled.csv", function (err, one) {
-  d3.csv("Untitled2.csv", function (err, two) {
-    d3.csv("Untitled3.csv", function(err, three) {
+d3.csv("../../chrome_history/data/my-chrome-output.csv", function (err, chrome_history) {
+  d3.json("../../rescuetime/productivity.json", function (err, productivitydata) {
+  //   d3.csv("Untitled3.csv", function(err, three) {
     if (err) console.warn(err, "error loading data");
 
+productivity = productivitydata.rows;
 
-
-one.forEach(function(d){
-  var dateTime = new Date('February 26, 2018 ' + String(d.time));
-  d.time = dateTime;
-
-  // d.timee = d.timee.slice(0,5);
-});
-
-two.forEach(function(d){
-  var dateTime = new Date('February 27, 2018 ' + String(d.time));
-  d.time = dateTime;
-
-  // d.timee = d.timee.slice(0,5);
-});
-
-three.forEach(function(d){
-  var dateTime = new Date('February 28, 2018 ' + String(d.time));
-  d.time = dateTime;
-
-  // d.timee = d.timee.slice(0,5);
-});
-
-day1Productivity.forEach(function(d){
-  var dateTime = new Date('February 26, 2018 ' + String(d.time));
-  d.time = dateTime;
-})
-console.log(day1Productivity);
-
-day2Productivity.forEach(function(d){
-  var dateTime = new Date('February 27, 2018 ' + String(d.time));
+chrome_history.forEach(function(d){
+  var dateTime = new Date(String(d.time));
   d.time = dateTime;
 })
 
 
-day3Productivity.forEach(function(d){
-  var dateTime = new Date('February 28, 2018 ' + String(d.time));
-  d.time = dateTime;
+productivity.forEach(function(d){
+  var dateTime = new Date(String(d[0]));
+  d[0] = dateTime;
 })
 
-console.log("one", one);
 
-console.log("two", two);
+console.log("chrome_history", chrome_history);
 
-console.log("three", three);
+console.log("productivity", productivity);
 
 
-var x1Min = d3.min(one,function(d){return d.time;});
-var x1Max = d3.max(one,function(d){return d.time;});
-
-var x2Min = d3.min(two,function(d){return d.time;});
-var x2Max = d3.max(two,function(d){return d.time;});
-
-var x3Min = d3.min(three,function(d){return d.time;});
-var x3Max = d3.max(three,function(d){return d.time;});
+var xMin = d3.min(chrome_history,function(d){return d.time;});
+var xMax = d3.max(chrome_history,function(d){return d.time;});
 
 
 var xScale = d3.time.scale()
   .range([0,width])
-  .domain([x1Min, x1Max]);
-
-var xScale2 = d3.time.scale()
-  .range([0,width])
-  .domain([x2Min, x2Max]);
-
-var xScale3 = d3.time.scale()
-  .range([0,width])
-  .domain([x3Min, x3Max]);
+  .domain([xMin, xMax]);
 
 var yScale = d3.scale.linear()
   .range([height, 0])
   .domain([0, 100]);
 
-  var blinks = d3.svg.line()
-    .x(function(d) {return xScale(d.time);})
-    .y(function(d){return yScale(d.score);});
+  var productivityline = d3.svg.line()
+    .x(function(d) {return xScale(d[0]);})
+    .y(function(d){return yScale(d[4]);});
 
-    var blinks2 = d3.svg.line()
-      .x(function(d) {return xScale2(d.time);})
-      .y(function(d){return yScale(d.score);});
-
-      var blinks3 = d3.svg.line()
-        .x(function(d) {return xScale3(d.time);})
-        .y(function(d){return yScale(d.score);});
 
 
 var xAxis = d3.svg.axis()
   .scale(xScale)
   .orient("bottom")
   .tickPadding(10)
-  .tickFormat(d3.time.format("%H:%M"));
+  .tickFormat(d3.time.format("%c"));
 
-
-var xAxis2 = d3.svg.axis()
-  .scale(xScale2)
-  .orient("bottom")
-  .tickPadding(10)
-  .tickFormat(d3.time.format("%H:%M"));
-
-  var xAxis3 = d3.svg.axis()
-  .scale(xScale3)
-  .orient("bottom")
-  .tickPadding(10)
-  .tickFormat(d3.time.format("%H:%M"));
 
 var yAxis = d3.svg.axis()
   .scale(yScale)
@@ -300,16 +235,16 @@ svg.append("g")
   .call(yAxis);
 
 //
-var blinksContainer1 = svg.append("path")
-  .attr("d", blinks(day1Productivity))
+var productivitycontainer = svg.append("path")
+  .attr("d", productivityline(productivity))
   .attr("stroke", "silver")
   .attr("stroke-width", 1)
-  .attr("fill", "none")
+  .attr("fill", "nchrome_history")
   .attr("class", "line");
 
 var focusX1;
 var blinksSel1 = svg.selectAll(".blinks")
-  .data(one)
+  .data(chrome_history)
   .enter()
   .append("svg:image")
   // .attr("class", "logo")
@@ -321,7 +256,7 @@ var blinksSel1 = svg.selectAll(".blinks")
     if(url.includes("xujenna.com/focus") == true) {
       focusX1 = xScale(d.time);
     }
-    return "http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F" + d.url + ".jpg";
+    return "http://www.google.com/s2/favicons?domain_url=" + d.url + ".jpg";
 
   })
   .attr("transform", function(d){
@@ -337,166 +272,10 @@ svg.append("line")
   .attr("y2", height);
 
 
-// svg.append("text")
-//   .attr("class", "chart-title")
-//   .attr("y",0)
-//   .attr("x",width/3)
-//   .text("Reading silently")
-//   .style("font-weight","bold")
-//   .style("font-size", "14px")
-//   .style("text-transform", "uppercase")
-//   .style("text-decoration", "underline");
-
-
-
-//
-// svg2.append("text")
-//   .attr("class", "chart-title")
-//   .attr("y",0)
-//   .attr("x",width/3)
-//   .text("Reading Out Loud")
-//   .style("font-size", "16px")
-//   .style("text-transform", "uppercase")
-//   .style("letter-spacing","3px");
-
-svg2.append("g")
-  .attr("class", "Axis")
-  .attr("transform","translate(0, "+(height)+")")
-  .call(xAxis2);
-
-svg2.append("text")
-  .attr("class", "axis-labels")
-  .attr("transform","rotate(-90)")
-  .attr("y", 30)
-  .attr("x", (0 - width/10))
-  .attr("dy", "-7em")
-  .text("PRODUCTIVITY SCORE")
-  .attr("fill", "silver");
-
-svg2.append("text")
-  .attr("class", "axis-labels")
-  .attr("y", height-15)
-  .attr("x", (width/2))
-  .attr("dy", "7em")
-  .style("text-transform", "uppercase");
-
-svg2.append("g")
-  .attr("class","Axis")
-  .call(yAxis);
-
-
-var blinksContainer2 = svg2.append("path")
-  .attr("d", blinks2(day2Productivity))
-  .attr("stroke", "silver")
-  .attr("stroke-width", 1)
-  .attr("fill", "none")
-  .attr("class", "line");
-
-var focusX;
-var blinksSel2 = svg2.selectAll(".blinks2")
-  .data(two)
-  .enter()
-  .append("svg:image")
-  // .attr("class", "logo")
-  // .attr("cx", function(d){return xScale(d.time)})
-  // .attr("cy", height)
-  .attr("xlink:href", function(d){
-    // return "<div style='background-image: -webkit-image-set(url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 1x, url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 2x);'></div>";
-    var url = d.url;
-    if(url.includes("xujenna.com/focus") == true) {
-      focusX = xScale2(d.time);
-    }
-    return "http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F" + d.url + ".jpg";
-
-  })
-  .attr("transform", function(d){
-    return "translate(" + xScale2(d.time) + "," + yScale(10) + ")";
-  });
-
-
-svg2.append("line")
-  .style("stroke", "#ff00ff")
-  .attr("x1", focusX)
-  .attr("y1", 0)
-  .attr("x2", focusX)
-  .attr("y2", height);
-
-
-// svg3.append("text")
-//   .attr("class", "chart-title")
-//   .attr("y",0)
-//   .attr("x",width/3)
-//   .text("Reading Silently")
-//   .style("font-size", "16px")
-//   .style("text-transform", "uppercase")
-//   .style("letter-spacing","3px");
-
-svg3.append("g")
-  .attr("class", "Axis")
-  .attr("transform","translate(0, "+(height)+")")
-  .call(xAxis3);
-
-svg3.append("text")
-  .attr("class", "axis-labels")
-  .attr("transform","rotate(-90)")
-  .attr("y", 30)
-  .attr("x", (0 - width/10))
-  .attr("dy", "-7em")
-  .text("PRODUCTIVITY SCORE")
-  .attr("fill", "silver");
-
-svg3.append("text")
-  .attr("class", "axis-labels")
-  .attr("y", height-15)
-  .attr("x", (width/2))
-  .attr("dy", "7em")
-  .style("text-transform", "uppercase");
-
-svg3.append("g")
-  .attr("class","Axis")
-  .call(yAxis);
-
-
-var blinksContainer3 = svg3.append("path")
-  .attr("d", blinks3(day3Productivity))
-  .attr("stroke", "silver")
-  .attr("stroke-width", 1)
-  .attr("fill", "none")
-  .attr("class", "line");
-
-var focusX3;
-  var blinksSel3 = svg3.selectAll(".blinks3")
-    .data(three)
-    .enter()
-    .append("svg:image")
-    // .attr("class", "logo")
-    // .attr("cx", function(d){return xScale(d.time)})
-    // .attr("cy", height)
-    .attr("xlink:href", function(d){
-      // return "<div style='background-image: -webkit-image-set(url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 1x, url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 2x);'></div>";
-      var url = d.url;
-      if(url.includes("xujenna.com/focus") == true) {
-        focusX3 = xScale3(d.time);
-      }
-      return "http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F" + d.url + ".jpg";
-
-    })
-    .attr("transform", function(d){
-      return "translate(" + xScale3(d.time) + "," + yScale(10) + ")";
-    });
-
-
-  svg3.append("line")
-    .style("stroke", "#ff00ff")
-    .attr("x1", focusX3)
-    .attr("y1", 0)
-    .attr("x2", focusX3)
-    .attr("y2", height);
-
 
 });
 });
-});
+// });
 
 </script>
 </body>
