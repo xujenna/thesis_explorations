@@ -11,7 +11,6 @@
 /*    background-image:url("hour13_cover.png");
 */
 }
-
 svg {
 /*  border: 1px solid #f0f;
 */  /*color: white;*/
@@ -21,14 +20,12 @@ svg {
     margin:auto;
     margin-top:200px;
 }
-
 .title {
   font-size:24px;
   font-family:monospace;
   color:#000;
   text-align: center;
 }
-
 .kicker {
   font-family:roboto;
   font-size:11px;
@@ -42,15 +39,12 @@ svg {
   margin-top:40px;
   margin-bottom:15px;
 }
-
-
 .Axis line,
 .Axis path {
-  filL:none;
+  filL:nchrome_history;
   stroke:#000;
   stroke-width:1;
 }
-
 .axis-labels {
   text-anchor:middle;
   font-family:roboto;
@@ -58,26 +52,18 @@ svg {
   letter-spacing: 2px;
   font-color:#000;
 }
-
 .Axis text {
   fill: black;
 }
-
-
-
 .y-axis-label {
   margin-left:0px;
 }
-
-
 .chart {
   z-index: 101;
 }
-
 .time-title {
   display:inline;
 }
-
 .wrapper {
   height: 100%;
   display:inline;
@@ -96,128 +82,85 @@ svg {
 
 <script>
 //JS to go here
-
-
-
-    // width = chrome_history.length * 10;
-    // $("svg").width(width);
-
-// var area = d3.svg.area()
-//   .x(function(d) {return xScale(d.key);})
-//   .y0(height)
-//   .y1(function(d){console.log("d.values", yScale(d.values));});
-
-
-
-
-
+var margin = {top: 50, right: 50, bottom: 100, left: 75};
+var chart = d3.select(".g-chart");
+var width = chart.node().clientWidth - margin.left - margin.right,
+  height = 450 - margin.top - margin.bottom;
+var svg = d3.select("body").append("div")
+    .attr("class", "wrapper")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr("class", "chart")
+    .style("display", "block");
+// var blinks2 = d3.svg.line()
+//   .x(function(d) {return xScale2(d.key);})
+//   .y(function(d){return yScale(d.values);});
+//
+// var blinks3 = d3.svg.line()
+//   .x(function(d) {return xScale3(d.key);})
+//   .y(function(d){return yScale(d.values);});
+var area = d3.svg.area()
+  .x(function(d) {return xScale(d.key);})
+  .y0(height)
+  .y1(function(d){console.log("d.values", yScale(d.values));});
+var svg2 = d3.select("body").append("div")
+    .attr("class", "wrapper")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr("class", "chart");
+var svg3 = d3.select("body").append("div")
+    .attr("class", "wrapper")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr("class", "chart");
 d3.csv("../../chrome_history/data/my-chrome-output.csv", function (err, chrome_history) {
   d3.json("../../rescuetime/productivity.json", function (err, productivitydata) {
+  //   d3.csv("Untitled3.csv", function(err, three) {
     if (err) console.warn(err, "error loading data");
-
-    var margin = {top: 50, right: 50, bottom: 100, left: 75};
-
-    var chart = d3.select(".g-chart");
-
-    var width = (chrome_history.length * 2) - margin.left - margin.right;
-    var height = 450 - margin.top - margin.bottom;
-
-    var svg = d3.select("body").append("div")
-        .attr("class", "wrapper")
-        .append("svg")
-          .attr("width", width + margin.left + margin.right)
-          .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-        .attr("class", "chart")
-        .style("display", "block");
-
 productivity = productivitydata.rows;
-
 chrome_history.forEach(function(d){
-  var dateTime = new Date(String(d.time.slice(0,15)));
+  var dateTime = new Date(String(d.time));
   d.time = dateTime;
 })
-
-var chromeRollup = d3.nest()
-  .key(function(d) {return d.time;})
-  // .values(function(d) {return d.url;})
-  // .rollup(function(v) {return {
-  //   count: v.length
-    // url: d.url
-  // };
-  // })
-  .entries(chrome_history);
-
-chromeRollup.forEach(function(d){
-  var dateTime = new Date(d.key);
-  d.key = dateTime;
-
-})
-
 productivity.forEach(function(d){
   var dateTime = new Date(String(d[0]));
   d[0] = dateTime;
 })
-
-
 console.log("chrome_history", chrome_history);
-
-console.log("chromeRollup", chromeRollup);
-
-
-var xMin = d3.min(chromeRollup,function(d){return d.key;});
-var xMax = d3.max(chromeRollup,function(d){return d.key;});
-
-
+console.log("productivity", productivity);
+var xMin = d3.min(chrome_history,function(d){return d.time;});
+var xMax = d3.max(chrome_history,function(d){return d.time;});
 var xScale = d3.time.scale()
   .range([0,width])
   .domain([xMin, xMax]);
-
 var yScale = d3.scale.linear()
   .range([height, 0])
   .domain([0, 100]);
-
   var productivityline = d3.svg.line()
     .x(function(d) {return xScale(d[0]);})
     .y(function(d){return yScale(d[4]);});
-
-
-
 var xAxis = d3.svg.axis()
   .scale(xScale)
   .orient("bottom")
   .tickPadding(10)
   .tickFormat(d3.time.format("%c"));
-
-
 var yAxis = d3.svg.axis()
   .scale(yScale)
   .tickPadding(10)
   .orient("left");
-
-
-  svg.append("line")
-    .style("stroke", "#e4e4e4")
-    .style("stroke-dasharray", ("5,5"))
-    .attr("x1", 0)
-    .attr("y1", yScale(100))
-    .attr("x2", width)
-    .attr("y2", yScale(100))
-
-    svg.append("line")
-      .style("stroke", "#e4e4e4")
-      .style("stroke-dasharray", ("5,5"))
-      .attr("x1", 0)
-      .attr("y1", yScale(50))
-      .attr("x2", width)
-      .attr("y2", yScale(50))
-
 svg.append("g")
   .attr("class", "Axis")
   .attr("transform","translate(0, "+(height)+")")
   .call(xAxis);
-
 svg.append("text")
   .attr("class", "axis-labels")
   .attr("transform","rotate(-90)")
@@ -226,55 +169,25 @@ svg.append("text")
   .attr("dy", "-7em")
   .text("PRODUCTIVITY SCORE")
   .attr("fill", "silver");
-
 svg.append("text")
   .attr("class", "axis-labels")
   .attr("y", height-10)
   .attr("x", (width/2))
   .attr("dy", "7em")
   .style("text-transform", "uppercase");
-
 svg.append("g")
   .attr("class","Axis")
   .call(yAxis);
-
-
+//
 var productivitycontainer = svg.append("path")
   .attr("d", productivityline(productivity))
-  .attr("stroke", "#ff00ff")
+  .attr("stroke", "silver")
   .attr("stroke-width", 1)
-  .attr("fill", "none")
+  .attr("fill", "nchrome_history")
   .attr("class", "line");
-
 var focusX1;
-var timeObject;
-//
-// chromeRollup.forEach(function(d,i){
-//   console.log(d);
-//   iconGroup = svg.append('g')
-//   for(j=0; j < d.values.length; j++) {
-//     console.log(d.values[j].url);
-//     iconGroup.append("svg:image")
-//     .attr("xlink:href", "http://www.google.com/s2/favicons?domain_url=" + d.values[j].url)
-//     .attr("transform", "translate(" + xScale(d.key) + "," + yScale(j*3) + ")");
-//   }
-//   if(url.includes("xujenna.com/focus") == true) {
-//     focusX1 = xScale(d.time);
-//   }
-//   return "http://www.google.com/s2/favicons?domain_url=" + d.url + ".jpg";
-// })
-// .attr("transform", function(d){
-//   return "translate(" + xScale(d.time) + "," + yScale(10) + ")";
-
-// })
-
-
-var blinksSel1 = svg.selectAll(".chromeIcons")
-  .data(chromeRollup)
-  .enter()
-  .append("g")
-  .selectAll(".icons")
-  .data(function(d) {return d.values;})
+var blinksSel1 = svg.selectAll(".blinks")
+  .data(chrome_history)
   .enter()
   .append("svg:image")
   // .attr("class", "logo")
@@ -282,28 +195,23 @@ var blinksSel1 = svg.selectAll(".chromeIcons")
   // .attr("cy", height)
   .attr("xlink:href", function(d){
     // return "<div style='background-image: -webkit-image-set(url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 1x, url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 2x);'></div>";
-    // for(i = 0; i < d.values.length; i++){
-
-      var url = d.url;
-      if(url.includes("xujenna.com/focus") == true) {
-        focusX1 = xScale(d.time);
-      }
-      return "http://www.google.com/s2/favicons?domain_url=" + d.url;
-    // };
+    var url = d.url;
+    if(url.includes("xujenna.com/focus") == true) {
+      focusX1 = xScale(d.time);
+    }
+    return "http://www.google.com/s2/favicons?domain_url=" + d.url + ".jpg";
   })
-  .attr("transform", function(d,j){
-    // for(var i = 0; i < d.values.length; i++){
-      // console.log(d);
-      return "translate(" + xScale(d.time) + "," + yScale((j+2)*4) + ")";
-    // }
+  .attr("transform", function(d){
+    return "translate(" + xScale(d.time) + "," + yScale(10) + ")";
   });
-
-
-
-
+svg.append("line")
+  .style("stroke", "#ff00ff")
+  .attr("x1", focusX1)
+  .attr("y1", 0)
+  .attr("x2", focusX1)
+  .attr("y2", height);
 });
 });
 // });
-
 </script>
 </body>
