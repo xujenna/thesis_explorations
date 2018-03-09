@@ -22,6 +22,12 @@ svg {
     margin-top:200px;
 }
 
+.heading {
+  position:fixed;
+  left:50%;
+  transform: translate(-50%, 0);
+}
+
 .title {
   font-size:24px;
   font-family:monospace;
@@ -41,6 +47,7 @@ svg {
   width:inherit;
   margin-top:40px;
   margin-bottom:15px;
+  text-decoration: underline;
 }
 
 
@@ -86,8 +93,10 @@ svg {
 </style>
 
 <body>
-<!--
-<div class="kicker">H.C. Andersens Blvd and Vesterbrogade, Copenhagen</div> <div class="title">Air Pollution Data for July 28, 2016 at <div class="time-title">[select a data point]</div></div> -->
+<div class="heading">
+<div class="kicker">MIND-WANDERING STUDY</div> <div class="title">Chrome History and Productivity Levels for March
+  <!-- <div class="time-title">[select a data point]</div> --></div>
+</div>
 <div class ="g-chart">
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
@@ -114,23 +123,6 @@ svg {
 d3.csv("../../chrome_history/data/my-chrome-output.csv", function (err, chrome_history) {
   d3.json("../../rescuetime/productivity.json", function (err, productivitydata) {
     if (err) console.warn(err, "error loading data");
-
-    var margin = {top: 50, right: 50, bottom: 100, left: 75};
-
-    var chart = d3.select(".g-chart");
-
-    var width = (chrome_history.length * 2) - margin.left - margin.right;
-    var height = 450 - margin.top - margin.bottom;
-
-    var svg = d3.select("body").append("div")
-        .attr("class", "wrapper")
-        .append("svg")
-          .attr("width", width + margin.left + margin.right)
-          .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-        .attr("class", "chart")
-        .style("display", "block");
 
 productivity = productivitydata.rows;
 
@@ -166,6 +158,26 @@ console.log("chrome_history", chrome_history);
 console.log("chromeRollup", chromeRollup);
 
 
+
+    var margin = {top: 50, right: 50, bottom: 100, left: 75};
+
+    var chart = d3.select(".g-chart");
+
+    var width = (chromeRollup.length * 15) - margin.left - margin.right;
+    var height = 450 - margin.top - margin.bottom;
+
+    var svg = d3.select("body").append("div")
+        .attr("class", "wrapper")
+        .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+        .attr("class", "chart")
+        .style("display", "block");
+
+
+
 var xMin = d3.min(chromeRollup,function(d){return d.key;});
 var xMax = d3.max(chromeRollup,function(d){return d.key;});
 
@@ -198,7 +210,7 @@ var yAxis = d3.svg.axis()
 
 
   svg.append("line")
-    .style("stroke", "#e4e4e4")
+    .style("stroke", "#e0e0e0")
     .style("stroke-dasharray", ("5,5"))
     .attr("x1", 0)
     .attr("y1", yScale(100))
@@ -206,7 +218,7 @@ var yAxis = d3.svg.axis()
     .attr("y2", yScale(100))
 
     svg.append("line")
-      .style("stroke", "#e4e4e4")
+      .style("stroke", "#e0e0e0")
       .style("stroke-dasharray", ("5,5"))
       .attr("x1", 0)
       .attr("y1", yScale(50))
@@ -246,8 +258,7 @@ var productivitycontainer = svg.append("path")
   .attr("fill", "none")
   .attr("class", "line");
 
-var focusX1;
-var timeObject;
+
 //
 // chromeRollup.forEach(function(d,i){
 //   console.log(d);
@@ -267,7 +278,10 @@ var timeObject;
 //   return "translate(" + xScale(d.time) + "," + yScale(10) + ")";
 
 // })
-
+var focusX1;
+var firstT;
+var secondT;
+var eLines = [];
 
 var blinksSel1 = svg.selectAll(".chromeIcons")
   .data(chromeRollup)
@@ -283,22 +297,55 @@ var blinksSel1 = svg.selectAll(".chromeIcons")
   .attr("xlink:href", function(d){
     // return "<div style='background-image: -webkit-image-set(url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 1x, url('http://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'" + d.url + ") 2x);'></div>";
     // for(i = 0; i < d.values.length; i++){
-
-      var url = d.url;
-      if(url.includes("xujenna.com/focus") == true) {
-        focusX1 = xScale(d.time);
-      }
+    var url = d.url;
+    if(url.includes("xujenna.com/focus") == true) {
+      // console.log(d.time);
+      eLines.push(d.time);
+      // console.log(eLines);
+    }
       return "http://www.google.com/s2/favicons?domain_url=" + d.url;
     // };
   })
   .attr("transform", function(d,j){
-    // for(var i = 0; i < d.values.length; i++){
-      // console.log(d);
       return "translate(" + xScale(d.time) + "," + yScale((j+2)*4) + ")";
-    // }
-  });
+    })
+
+    // .selectAll(".entrainmentline")
+    //   .data()
+    //   .enter()
+
+var entrainmentLines = svg.selectAll(".entrainmentLines")
+.data(eLines)
+.enter()
+// .append("g")
+// .selectAll(".elines")
+// .data(function(d) {return d.values;})
+// .enter()
+      .append("line")
+      .style("stroke", "#6dffd5")
+      .attr("x1", function(d){ return xScale(d);})
+      .attr("x2", function(d) {return xScale(d);})
+
+  //       focusX1 = d.time;
+  //       var firstT = focusX1.getTime();
+  //       var secondT = focusX1.getTime() + 360000;
+
+      .attr("y1", 0)
+      // .attr("x2", xScale(d.time))
+      .attr("y2", height)
+      // .style("stroke-width", (xScale(secondT) - xScale(firstT)))
 
 
+
+
+  //
+  // svg.append("line")
+  //   .style("stroke", "#6dffd5")
+  //   .style("stroke-width", (xScale(secondT) - xScale(firstT)))
+  //   .attr("x1", xScale(focusX1))
+  //   .attr("y1", 0)
+  //   .attr("x2", xScale(focusX1))
+  //   .attr("y2", height);
 
 
 });
