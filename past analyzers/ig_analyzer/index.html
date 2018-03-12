@@ -79,8 +79,9 @@ body {
 }
 
 .photoDiv {
-  margin-right:200px;
-  margin-left:200px;
+  margin-right:300px;
+  margin-left:300px;
+  text-align: center;
 }
 
 
@@ -145,7 +146,7 @@ body {
     I used <a href="https://clarifai.com/models/general-image-recognition-model-aaa03c23b3724a16a56b629203edc62c" target="new">Clarifai's General Model</a> to identify subject matter, as well as their <a href="https://clarifai.com/models/color-image-recognition-model-eeed0b6733a644cea07cf4c60f87ebb7" target="new">Color Model</a> to determine a photo's dominant colors.
     <p>Since I knew my Instagram activity wasn't typical for most users, I started my experiments with a <a href="http://www.xujenna.com/itp_blog/2018/02/22/two-more-years/" target="new">limited study on my Flickr photostream</a> with the General Model, to interesting and extremely telling results.
     Clarifai's generous 100,000 operation donation to my cause allowed me to analyze my entire Instgram history with both the General and Color Models, the results of which are below.</p>
-  <p><b>Next steps</b> are running sentiment analysis on my captions, analyzing the comments/likes ratio, calculating and mapping a depression "score" based on the study's correlations, and looking for filters in Instagram's metadata.</p>
+  <p><b>Next steps</b> are visualizing the sentiment analysis I've run my captions, analyzing the comments/likes ratio, calculating and mapping a depression "score" based on the study's correlations, and looking for filters in Instagram's metadata.</p>
   </div>
   <div class="break"><hr></div>
   <div class="color-container">
@@ -172,7 +173,7 @@ body {
 
 
 d3.json("ig_to_clarifai.json", ready);
-var margin = {top: 0, right: 200, bottom: 150, left: 200};
+var margin = {top: 0, right: 300, bottom: 150, left: 300};
 
 
 var conceptChart = d3.select(".concept-chart");
@@ -181,7 +182,7 @@ var colorChart = d3.select(".color-chart");
 var width = conceptChart.node().clientWidth - margin.left - margin.right,
 height = 600 - margin.top - margin.bottom;
 
-var colorChartHeight = 900;
+var colorChartHeight = 1300;
 
 var conceptSVG = conceptChart.append("svg")
 .attr("width", width + margin.left + margin.right)
@@ -194,7 +195,7 @@ var colorSVG = colorChart.append("svg")
 .attr("height", colorChartHeight + margin.top + margin.bottom)
 .append("g")
 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+// .attr("transform", "rotate(90," + width/2 + ","+ height*2 + ")");
 
 
 function ready(err, data) {
@@ -407,11 +408,11 @@ console.log(colorData)
         return d.raw_hex;
     })
     .attr("transform", function(d,i){
-        return "translate(" + (color_xScale(d.date) - 10) + "," + (colorChartHeight - (i*20) - 20) + ")";
+        return "translate(" + (color_xScale(d.date) - 13) + "," + (colorChartHeight - (i*26) - 26) + ")";
       })
 
-    .attr("width", "20px")
-    .attr("height", "20px")
+    .attr("width", "26px")
+    .attr("height", "26px")
 
 
 
