@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2016-05-05 13:47:13",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "My second favorite airport terminal in the world, where security takes less than 3 minutes and strangers smile and make small talk as if that's acceptable behavior in NYC.",
+        "tones": [
+          {
+            "score": 0.636688,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I like to credit this to the charm of the art deco building (circa 1939), but it's most likely because only Delta flights to Chicago and D.C. are served here.",
+        "tones": [
+          {
+            "score": 0.631525,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "tldr; I only ever want to be flying with other Chicagoans.",
+        "tones": [
+          {
+            "score": 0.579436,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ]
+  }
+]

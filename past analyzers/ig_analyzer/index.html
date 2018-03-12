@@ -2,196 +2,492 @@
 <meta charset="utf-8">
 
 <style type="text/css">
-  /*css to go here*/
-  body {
-      font-family: monospace;
-      font-size: 12px;
-  }
+/*css to go here*/
+body {
+  font-family: monospace;
+  font-size: 12px;
+}
 
-  .yAxis line,
-  .yAxis path {
-    fill:none;
-    stroke:silver;
-  }
+.yAxis line,
+.yAxis path {
+  fill:none;
+  stroke:silver;
+}
 
-  .yAxis .tick line {
-    stroke-dasharray: 1px 2px;
-  }
+.yAxis .tick line {
+  stroke-dasharray: 1px 2px;
+}
 
 .yAxis text {
   text-align:right;
   font-size:10px;
 }
 
-  .xAxis line,
-  .xAxis path {
-    fill:none;
-    stroke:silver;
+.xAxis line,
+.xAxis path {
+  fill:none;
+  stroke:silver;
 
-  }
+}
 
 .xAxis text {
   transform: rotate(-45deg) translateX(-10px) translateY(-2px);
   text-align:right;
-/*  text-transform:uppercase;
-*/  text-anchor:end !important;
+  /*  text-transform:uppercase;
+  */  text-anchor:end !important;
   font-size:11px;
 }
 
 .title {
   text-align: center;
-  font-weight: bold;
-  font-family: roboto;
-  font-size:24pt;
+  font-family: monospace;
+  font-size:18pt;
+  margin-bottom:10px;
+  margin-top:110px;
 }
 
 .button-container {
   text-align: center;
+  margin-bottom: 10px;
+}
+.date-buttons {
+  font-family:monospace;
+  border: 0.5px solid silver;
+  padding: 8px 9px;
+  width:100px;
+  height:40px;
+  text-align:center;
+  background-color:white;
+  cursor: pointer;
+  font-size:14px;
+  margin-right:4px;
+  margin-left:4px;
 }
 
+.date-buttons:hover {
+  background-color: silver;
+  color:white;
+}
+
+.date-buttons:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.date-buttons:focus {
+  outline:none;
+}
+
+.photoDiv {
+  margin-right:200px;
+  margin-left:200px;
+}
+
+
+.tooltip {
+  width: 110px;
+  font-size:12px;
+  font-family:monospace;
+  background:rgba(255,255,255,0.85);
+  padding:5px;
+  line-height:1.25;
+  clear:both;
+  text-align: center;
+}
+
+.tooltip:after {
+  font-size:18px;
+  width: 110px;
+  line-height:1.5;
+  color: black;
+  content: "\2193";
+  position:absolute;
+  text-align:center;
+  display:block;
+  pointer-events:none;
+}
+
+.intro {
+  width: 1000px;
+  margin: auto;
+  font-family: roboto;
+  font-size: 11pt;
+  line-height: 18pt;
+  margin-bottom: 100px;
+  column-count:3;
+  column-gap:25px;
+  margin-top:75px;
+}
+
+.intro_images {
+  margin: auto;
+  text-align: center;
+  width:900px;
+  margin-top:100px;
+}
+
+.intro_images img {
+  margin:2px;
+  width:25%
+}
+
+.break {
+  margin:auto;
+  text-align: center;
+  width:700px;
+}
 </style>
 
 <body>
+  <div class="intro_images"><img src="https://scontent-lga3-1.cdninstagram.com/vp/493819f3990c8667033f1d1684ed3efd/5B416156/t51.2885-15/e15/1737370_281904085295389_1913153407_n.jpg"><img src="https://scontent-lga3-1.cdninstagram.com/vp/2834da35079827b1455b0430a1a5c50a/5B2AB12A/t51.2885-15/e15/11296698_905908749476157_819136658_n.jpg"><img src="https://scontent-lga3-1.cdninstagram.com/vp/d8f17ab17c02a1a2ccefdb34cbb34128/5B4732F1/t51.2885-15/e15/10362273_295687197258383_125605912_n.jpg"></div>
+  <div class="intro">Inspired by <a href="https://arxiv.org/pdf/1608.03282.pdf" target="new">Reece and Danforth's 2016 study</a> on the predictive markers of depression in Instagram activity, I've been running some tests on my photographic archive to see if it can map my own history with depression.
+    The markers considered in the study include the presence of people, the setting (indoors vs outsdoors), time of day, average pixel color, brightness, comments vs "likes" ratio, filters, and posting frequency.
+    I used <a href="https://clarifai.com/models/general-image-recognition-model-aaa03c23b3724a16a56b629203edc62c" target="new">Clarifai's General Model</a> to identify subject matter, as well as their <a href="https://clarifai.com/models/color-image-recognition-model-eeed0b6733a644cea07cf4c60f87ebb7" target="new">Color Model</a> to determine a photo's dominant colors.
+    <p>Since I knew my Instagram activity wasn't typical for most users, I started my experiments with a <a href="http://www.xujenna.com/itp_blog/2018/02/22/two-more-years/" target="new">limited study on my Flickr photostream</a> with the General Model, to interesting and extremely telling results.
+    Clarifai's generous 100,000 operation donation to my cause allowed me to analyze my entire Instgram history with both the General and Color Models, the results of which are below.</p>
+  <p><b>Next steps</b> are running sentiment analysis on my captions, analyzing the comments/likes ratio, calculating and mapping a depression "score" based on the study's correlations, and looking for filters in Instagram's metadata.</p>
+  </div>
+  <div class="break"><hr></div>
+  <div class="color-container">
+    <div class ="color-chart">
+      <div class="title">Dominant Colors on My Instagram, 2013-2016</div>
+    </div>
+  </div>
 
+  <div class="concept-container">
+    <div class ="concept-chart">
+      <div class="title" id="concept-title">Top 20 Concepts Instagrammed in 2013</div>
+      <div class="button-container"></div>
+    </div>
+  </div>
 
-<div class ="g-chart"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+  <script src="jquery-3.3.1.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
-<script src="jquery-3.3.1.js"></script>
-
-<div class="photoDiv"></div>
-<script>
-//JS to go here
-
-
-var margin = {top: 5, right: 80, bottom: 195, left: 70};
-
-var chart = d3.select(".g-chart");
-
-var width = chart.node().clientWidth - margin.left - margin.right,
-  height = 800 - margin.top - margin.bottom;
+  <div class="photoDiv">Click on a concept bar to see its photos.</div>
+  <script>
+  //JS to go here
 
 
 
 d3.json("ig_to_clarifai.json", ready);
+var margin = {top: 0, right: 200, bottom: 150, left: 200};
+
+
+var conceptChart = d3.select(".concept-chart");
+var colorChart = d3.select(".color-chart");
+
+var width = conceptChart.node().clientWidth - margin.left - margin.right,
+height = 600 - margin.top - margin.bottom;
+
+var colorChartHeight = 900;
+
+var conceptSVG = conceptChart.append("svg")
+.attr("width", width + margin.left + margin.right)
+.attr("height", height + margin.top + margin.bottom)
+.append("g")
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var colorSVG = colorChart.append("svg")
+.attr("width", width + margin.left + margin.right)
+.attr("height", colorChartHeight + margin.top + margin.bottom)
+.append("g")
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
 
 
 function ready(err, data) {
     if (err) console.warn(err, "error loading data");
 
+// DATA BY CONCEPTS
+
+    var concepts2016 = [];
+    var concepts2015 = [];
+    var concepts2014 = [];
+    var concepts2013 = [];
+    var concepts2012 = [];
+
+    data.forEach(function(d){
+      var currentImage = d.display_src;
+      var currentConcepts = d.general_predictions;
+      for(var i=0; i<20; i++){
+        if(d.date < "2017-01-01 00:00:00" && d.date > "2016-01-01 00:00:00"){
+          currentConcepts[i]['url'] = currentImage;
+          concepts2016.push(currentConcepts[i]);
+        };
+        if(d.date < "2016-01-01 00:00:00" && d.date > "2015-01-01 00:00:00"){
+          currentConcepts[i]['url'] = currentImage;
+          concepts2015.push(currentConcepts[i]);
+        };
+        if(d.date < "2015-01-01 00:00:00" && d.date > "2014-01-01 00:00:00"){
+          currentConcepts[i]['url'] = currentImage;
+          concepts2014.push(currentConcepts[i]);
+        };
+        if(d.date < "2014-01-01 00:00:00" && d.date > "2013-01-01 00:00:00"){
+          currentConcepts[i]['url'] = currentImage;
+          concepts2013.push(currentConcepts[i]);
+        };
+        if(d.date < "2013-01-01 00:00:00" && d.date > "2012-01-01 00:00:00"){
+          currentConcepts[i]['url'] = currentImage;
+          concepts2012.push(currentConcepts[i]);
+        };
+      };
+    });
+
+
+    concepts_list = [concepts2013, concepts2014, concepts2015, concepts2016]
+    uniqueconcepts_list = []
+    topconcepts_list = []
+
+    for(var i = 0; i < concepts_list.length; i++) {
+
+      var uniqueconcepts = d3.nest()
+      .key(function(d) {return d.name;})
+      // .key(function(d){return d.url;})
+      .entries(concepts_list[i]);
+
+      uniqueconcepts_list.push(uniqueconcepts);
+
+      var topconcepts = uniqueconcepts
+      .sort(function(a,b) { return b.values.length-a.values.length;})
+      .filter(function(d,i){return i < 20;})
+
+      topconcepts_list.push(topconcepts);
+    }
+
+
+    var concept_yMin = d3.min(topconcepts_list[0],function(d,i){return d.values.length;});
+    var concept_yMax = d3.max(topconcepts_list[0],function(d,i){return d.values.length;});
+
+    var concept_xScale = d3.scale.ordinal()
+    .rangeRoundBands([0,width], .1)
+    .domain(topconcepts_list[0].map(function(d){return d.key;}));
+
+    var concept_yScale = d3.scale.linear()
+    .range([height, 0])
+    .domain([0, (concept_yMax)]);
+
+    var concept_xAxis = d3.svg.axis()
+    .orient("bottom")
+    .scale(concept_xScale)
+    .tickPadding(0);
+
+    var concept_yAxis = d3.svg.axis()
+    .orient("left")
+    .scale(concept_yScale)
+    .tickSize(-width)
+    .tickPadding(4);
+
+    var concept_xAxisGroup = conceptSVG.append("g")
+    .attr("class", "xAxis")
+    .attr("transform", "translate(0, " + (height) + ")")
+    .call(concept_xAxis);
+
+    var concept_yAxisGroup = conceptSVG.append("g")
+    .attr("class", "yAxis")
+    .call(concept_yAxis);
+
+    d3.select(".button-container").selectAll(".date-buttons")
+    .data(topconcepts_list)
+    .enter().append("button")
+    .attr("class", "date-buttons")
+    .text(function(d,i) {return 2013 + i;})
+    .on("click", function(d) {
+      title(this);
+      drawRects(d);
+      // console.log("d", d);
+    });
+
+    var tip = d3.tip()
+      .attr("class", "tooltip")
+      .offset([-20,0])
+      .html(function(d,i) {
+      return 'Click to see <br>' + d.values.length + ' pictures of <br>"' + d.key + '"';
+      });
+
+    drawRects(topconcepts_list[0]);
+
+
   var dataByDate = d3.nest()
-    .key(function(d) {return d.date;})
+    .key(function(d) {return d.date})
     .entries(data);
 
-console.log("nested data", dataByDate);
+  var colorData = [];
+
+  dataByDate.forEach(function(d,i){
+    var holder = {};
+    var currentDate = new Date(String(d.key.slice(0,7)) + "-01 00:00:00");
+    var currentColors = d.values[0].color_predictions;
+    var topCurrentColors = currentColors
+    .sort(function(a,b){return b.value - a.value;})
+    .filter(function(d,i){
+      if(d.w3c.name !== "White"){
+        return d;
+      }
+    })
+    .filter(function(d,i){return i < 2;})
+
+    topCurrentColors.forEach(function(d){
+      d["date"] = currentDate;
+    })
+    holder["date"] = currentDate;
+    holder["colors"] =  topCurrentColors;
+    colorData.push(holder);
+    });
+console.log(colorData)
+
+  nestedColorData = d3.nest()
+  .key(function (d) {return d.date;})
+  .entries(colorData);
+
+  nestedColorData.forEach(function(d){
+    d.key = new Date(d.key)
+
+  })
+
+  // console.log(nestedColorData);
+
+  // colorData.forEach(function(d){
+  //   var dateTime = new Date(d.date);
+  //   d.date = dateTime;
+  // })
+
+  var color_xMin = d3.min(nestedColorData,function(d){return d.key;});
+  var color_xMax = d3.max(nestedColorData,function(d){return d.key;});
+
+  // console.log(color_xMax)
+  // console.log(color_xMin)
+
+  var color_xScale = d3.time.scale()
+    .range([0,width])
+    .domain([color_xMin, color_xMax]);
+
+  // var concept_yScale = d3.scale.linear()
+  // .range([height, 0])
+  // .domain([0, (concept_yMax)]);
+  //
+
+  var color_xAxis = d3.svg.axis()
+    .scale(color_xScale)
+    .orient("bottom")
+    .tickPadding(10)
+    .tickFormat(d3.time.format("%b %Y"));
+
+
+  var color_xAxisGroup = colorSVG.append("g")
+  .attr("class", "xAxis")
+  .attr("transform", "translate(0, " + (colorChartHeight) + ")")
+  .call(color_xAxis);
+
+  // var concept_yAxisGroup = conceptSVG.append("g")
+  // .attr("class", "yAxis")
+  // .call(concept_yAxis);
+  var colorBlockContainer = colorSVG.selectAll(".colorBlocks")
+    .data(nestedColorData)
+    .enter()
+    .append("g")
+  .selectAll(".blocks")
+    .data(function(d){
+      // console.log([].concat.apply([],d.values.map(function(x){return x.colors})));
+
+      // d.values = [ {} , {} , {}  ]
+      // d.values.map(function(x) { return x.colors }) = [ {}.colors, {}.colors, {}.colors ]
+      //                                               = [ [a,b], [c,d], [e,f] ]
+
+      return [].concat.apply([],d.values.map(function(x){return x.colors}))  ;})
+    .enter()
+  //   .append("g")
+  // .selectAll(".colors")
+    // .data(function(d){return d.colors;})
+    // .enter()
+    .append("rect")
+    .style("fill", function(d){
+      // for(var i=0; i < 2; i++)
+        return d.raw_hex;
+    })
+    .attr("transform", function(d,i){
+        return "translate(" + (color_xScale(d.date) - 10) + "," + (colorChartHeight - (i*20) - 20) + ")";
+      })
+
+    .attr("width", "20px")
+    .attr("height", "20px")
 
 
 
-var concepts2016 = [];
-
-data.forEach(function(d){
-  var currentConcepts = d.general_predictions;
-
-  for(var i=0; i<20; i++){
-    if(d.time < 2017-01-01 && d.time > 2016-01-01)
-    concepts2016.push(currentConcepts[i]);
-  };
-});
 
 
-console.log("concepts2016", concepts2016);
-//
-//   var conceptCount = d3.nest()
-//     .key(function(d) {return d.name;})
-//     .rollup(function(v) {return v.length;})
-//     .entries(concepts);
-//
-//   console.log("unique concepts: ", conceptCount);
-//
-//   conceptCount = conceptCount.filter(function(d){
-//     return d.values > 300;
-//   })
-//
-//   conceptCount = conceptCount.sort(function(a,b){
-//     return b.values-a.values;
-//   });
-//
-//
-//   console.log("Top Concepts: ", conceptCount);
-//
-//
-//   var yMin = d3.min(conceptCount,function(d){return d.values.length;});
-//   var yMax = d3.max(conceptCount,function(d){return d.values.length;});
-//
-//   var xScale = d3.scale.ordinal()
-//     .rangeRoundBands([0,width], .1)
-//     .domain(conceptCount.map(function(d){return d.key;}));
-//
-//   var yScale = d3.scale.linear()
-//     .range([height, 0])
-//     .domain([yMin, (yMax + 10)]);
-//
-//
-//   var xAxis = d3.svg.axis()
-//     .orient("bottom")
-//     .scale(xScale)
-//     .tickPadding(0);
-//
-//   var yAxis = d3.svg.axis()
-//     .orient("left")
-//     .scale(yScale)
-//     // .tickSize(-width)
-//     .tickPadding(4);
-//
-//
-//
-// var svg = chart.append("svg")
-//       .attr("width", width + margin.left + margin.right)
-//       .attr("height", height + margin.top + margin.bottom)
-//     .append("g")
-//       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-//
-//
-// var xAxisGroup = svg.append("g")
-//   .attr("class", "xAxis")
-//   .attr("transform", "translate(0, " + (height) + ")")
-//   .call(xAxis);
-//
-// svg.append("g")
-//   .attr("class", "yAxis")
-//   .call(yAxis);
-//
-//
-//  svg.selectAll("bar")
-//       .data(conceptCount)
-//     .enter().append("rect")
-//       .style("fill", "#ff00ff")
-//       .attr("x", function(d) { return xScale(d.key); })
-//       .attr("width", xScale.rangeBand())
-//       .attr("y", function(d) { return yScale(d.values.length); })
-//       .attr("height", function(d) { return height - yScale(d.values.length); })
-//       .attr("id", function(d) {
-//         $(this).click(function(){
-//           populatePhotoDiv(d.values);
-//           // console.log(d.values);
-//           // console.log(d.key);
-//         })
-//         return d.key;
-//       });
-//
-//
-// function populatePhotoDiv(d){
-//   console.log("d",d);
-//   $('.photoDiv').html(" ");
-//   var length = d.length;
-//
-//   for(var i = 1; i < 200; i++){
-//     var photoindex = length - i;
-//     console.log("photoindex",photoindex);
-//     $('.photoDiv').append("<img src='" + d[photoindex].key + "'>");
-//   }
+  function title(d) {
+    var x = d.textContent;
+    var title = d3.select("#concept-title")
+    .html(function() {return "Top 20 Concepts Instagrammed in " + "<span style='text-decoration:underline'>" + x +"</span>";});
+  }
+
+
+  function drawRects(d) {
+    // console.log("d", d);
+    //  yMin = d3.min(d,function(d,i){return d.values.length;});
+    //  yMax = d3.max(d,function(d,i){return d.values.length;});
+
+    concept_xScale.domain(d.map(function(d){return d.key;}));
+    //  yScale.domain([0, (yMax + 10)]);
+
+    conceptSVG.select(".xAxis")
+    // .duration(750)
+    .call(concept_xAxis);
+    // conceptSVG.select(".yAxis")
+    //   // .duration(750)
+    //   .call(yAxis);
+
+    var rectsDataSel = conceptSVG.selectAll(".bar")
+    .data(d)
+    var rectsEnter = rectsDataSel
+    .enter().append("rect")
+    .attr("class", "bar");
+    conceptSVG.selectAll(".bar")
+    .style("fill", "#d3d3d3")
+    .attr("x", function(d) { return concept_xScale(d.key); })
+    .attr("width", concept_xScale.rangeBand())
+    .attr("y", function(d) { return concept_yScale(d.values.length); })
+    .attr("height", function(d) { return height - concept_yScale(d.values.length); })
+    .attr("id", function(d) {
+      $(this).click(function(){
+        populatePhotoDiv(d.values);
+        // console.log(d.values);
+        // console.log(d.key);
+      })
+      return d.key;
+    });
+
+
+    conceptSVG.selectAll("rect")
+    .call(tip)
+
+    .on("mouseover", function(d) {
+      tip.show(d);
+    })
+
+    .on("mouseout", function(d) {
+      tip.hide(d);
+    })
+
+    rectsDataSel
+    .exit().remove();
+  }
+
+
+
+  function populatePhotoDiv(d){
+    // console.log("d",d);
+    $('.photoDiv').html(" ");
+    var length = d.length;
+
+    for(var i = 0; i < length; i++){
+      // console.log("photoindex",i);
+      $('.photoDiv').append("<img src='" + d[i].url + "' width='10%' height='10%'>");
+    }
+  }
 }
-//
-// </script>
-// </body>
+
+</script>
+</body>
