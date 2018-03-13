@@ -120,6 +120,17 @@ body {
   margin-top:75px;
 }
 
+.explanation {
+  width: 700px;
+  margin: auto;
+  font-family: roboto;
+  font-size: 11pt;
+  line-height: 18pt;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 .intro_images {
   margin: auto;
   text-align: center;
@@ -137,27 +148,37 @@ body {
   text-align: center;
   width:700px;
 }
+
+.footer {
+  padding-top:60px;
+  padding-bottom: 20px;
+  margin:auto;
+  text-align: center;
+}
 </style>
 
 <body>
   <div class="intro_images"><img src="https://scontent-lga3-1.cdninstagram.com/vp/493819f3990c8667033f1d1684ed3efd/5B416156/t51.2885-15/e15/1737370_281904085295389_1913153407_n.jpg"><img src="https://scontent-lga3-1.cdninstagram.com/vp/2834da35079827b1455b0430a1a5c50a/5B2AB12A/t51.2885-15/e15/11296698_905908749476157_819136658_n.jpg"><img src="https://scontent-lga3-1.cdninstagram.com/vp/d8f17ab17c02a1a2ccefdb34cbb34128/5B4732F1/t51.2885-15/e15/10362273_295687197258383_125605912_n.jpg"></div>
-  <div class="intro">Inspired by <a href="https://arxiv.org/pdf/1608.03282.pdf" target="new">Reece and Danforth's 2016 study</a> on the predictive markers of depression in Instagram activity, I've been running some tests on my photographic archive to see if it can map my own history with depression.
-    The markers considered in the study include the presence of people, the setting (indoors vs outsdoors), time of day, average pixel color, brightness, comments vs "likes" ratio, filters, and posting frequency.
-    I used <a href="https://clarifai.com/models/general-image-recognition-model-aaa03c23b3724a16a56b629203edc62c" target="new">Clarifai's General Model</a> to identify subject matter, as well as their <a href="https://clarifai.com/models/color-image-recognition-model-eeed0b6733a644cea07cf4c60f87ebb7" target="new">Color Model</a> to determine a photo's dominant colors.
-    <p>Since I knew my Instagram activity wasn't typical for most users, I started my experiments with a <a href="http://www.xujenna.com/itp_blog/2018/02/22/two-more-years/" target="new">limited study on my Flickr photostream</a> with the General Model, to interesting and extremely telling results.
-    Clarifai's generous 100,000 operation donation to my cause allowed me to analyze my entire Instgram history with both the General and Color Models, the results of which are below.</p>
+  <div class="intro">Inspired by <a href="https://arxiv.org/pdf/1608.03282.pdf" target="new">Reece and Danforth's 2016 study</a> on the predictive markers of depression in Instagram activity, I've been running some tests on my photographic archive to see if it can map my own history with depression, which peaked in 2013 and has improved gradually since.
+    <p>The markers considered in the study include the presence of people, the setting (indoors vs outsdoors), time of day, average pixel color, brightness, comments vs "likes" ratio, filters, and posting frequency.
+    I used <a href="https://clarifai.com/" target="new">Clarifai's</a> General Model to identify subject matter, as well as their Color Model to determine a photo's dominant colors.</p>
+    <p>Since I knew my Instagram activity wasn't typical for most users, I started my experiments with a <a href="http://www.xujenna.com/itp_blog/2018/02/22/two-more-years/" target="new">limited study on my Flickr photostream</a> with the General Model; the results were encouraging and extremely telling.
+    Clarifai's generous 100,000 operation donation to my cause allowed me to analyze my entire Instgram history with both the General and Color Models, the results of which thus far are below. For my dataset, the most predictive marker for depression seems to be activity: I posted the most during 2013, while I was severely depressed, and posted less as my mood improved.</p>
   <p><b>Next steps</b> are visualizing the sentiment analysis I've run my captions, analyzing the comments/likes ratio, calculating and mapping a depression "score" based on the study's correlations, and looking for filters in Instagram's metadata.</p>
+  <p>This is a proof of concept for a service design idea—developed for a proposal for the Open Seventeen Challenge—which is <a href="http://www.xujenna.com/itp_blog/2018/02/26/846/" target="new">mapped out here</a>.</p>
   </div>
   <div class="break"><hr></div>
   <div class="color-container">
     <div class ="color-chart">
       <div class="title">Dominant Colors on My Instagram, 2013-2016</div>
+      <div class="explanation">In the 2016 Reece and Danforth study, increased hue, and decreased brightness and saturation in photos predicted depression. Clarifai's color analysis on my Instagram posts certainly returned results that were much darker and less colorful during the period I was acutely depressed (2013); the colors also seem to lift along with my mood as time progresses along the x-axis, albeit still rather grey. The below visualization displays the top two most dominant hex colors per post.</div>
     </div>
   </div>
-
+  <div class="break"><hr></div>
   <div class="concept-container">
     <div class ="concept-chart">
       <div class="title" id="concept-title">Top 20 Concepts Instagrammed in 2013</div>
+      <div class="explanation">In the Reece and Danforth study, depressed users were more likely to post photos of people, but had less per post than usual; this was definitely reflected in my posts, as the "people" category drops from second place in 2013 until it disappears completely in 2016 (you can also tell my photos contained less people from the presence of the "one" category). Additionally, the concepts "outdoors" and "travel" slowly move up the list as I start to feel better.</div><div style="text-align:center; margin-bottom:20px;"> Choose a year below to see its corresponding concept breakdown;<br>click on a bar to see its included photographs.</div>
       <div class="button-container"></div>
     </div>
   </div>
@@ -166,7 +187,10 @@ body {
   <script src="jquery-3.3.1.js"></script>
   <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
-  <div class="photoDiv">Click on a concept bar to see its photos.</div>
+  <div class="photoDiv"></div>
+
+  <div class="footer"><p>For further documentation, please see my <a href="http://www.xujenna.com/itp_blog/2018/02/22/two-more-years/" target="new">Flickr analysis</a>.</p>
+  <p>For my concomitant service design sketch, please <a href="http://www.xujenna.com/itp_blog/2018/02/26/846/" target="new">click here</a>.</div>
   <script>
   //JS to go here
 
