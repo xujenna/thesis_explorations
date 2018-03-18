@@ -19,7 +19,7 @@ svg {
     z-index: 100;
     display:block;
     margin:auto;
-    margin-top:200px;
+    margin-top:100px;
 }
 
 .heading {
@@ -164,7 +164,7 @@ console.log("chromeRollup", chromeRollup);
     var chart = d3.select(".g-chart");
 
     var width = (chromeRollup.length * 15) - margin.left - margin.right;
-    var height = 450 - margin.top - margin.bottom;
+    var height = 750 - margin.top - margin.bottom;
 
     var svg = d3.select("body").append("div")
         .attr("class", "wrapper")
@@ -307,13 +307,13 @@ var blinksSel1 = svg.selectAll(".chromeIcons")
     // };
   })
   .attr("transform", function(d,j){
-      return "translate(" + xScale(d.time) + "," + yScale((j+2)*4) + ")";
+      return "translate(" + xScale(d.time) + "," + yScale((j+2)*2) + ")";
     })
 
     // .selectAll(".entrainmentline")
     //   .data()
     //   .enter()
-
+console.log(eLines);
 var entrainmentLines = svg.selectAll(".entrainmentLines")
 .data(eLines)
 .enter()
