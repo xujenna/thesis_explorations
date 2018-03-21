@@ -6,9 +6,8 @@
   body {
     font-family: monospace;
     font-size: 11px;
-    color: #D3D3D3;
     background-size: cover;
-   background-image: url("bg.jpg");
+   background-image: url("bg2.jpg");
 }
 
 svg {
@@ -19,27 +18,6 @@ svg {
     display:inline;
     margin:auto;
     margin-top:20px;
-}
-
-.title {
-  font-size:24px;
-  font-family:monospace;
-  color:#D3D3D3;
-  text-align: center;
-}
-
-.kicker {
-  font-family:roboto;
-  font-size:11px;
-  letter-spacing: 2px;
-  text-align:center;
-  border-bottom: 1px solid white;
-  padding-bottom:4px;
-  display:table;
-  margin:auto;
-  width:inherit;
-  margin-top:40px;
-  margin-bottom:15px;
 }
 
 
@@ -87,12 +65,52 @@ svg {
 .wrapper2 {
   display:block;
 }
+.title {
+  font-size:24px;
+  font-family:monospace;
+  color:#000;
+  text-align: center;
+}
 
+.kicker {
+  font-family:roboto;
+  font-size:11px;
+  letter-spacing: 2px;
+  text-align:center;
+  padding-bottom:4px;
+  display:table;
+  margin:auto;
+  width:inherit;
+  margin-top:40px;
+  margin-bottom:10px;
+  text-decoration: underline;
+}
+.title-container {
+  z-index:102;
+  position:absolute;
+  width:100%;
+}
+.intro {
+  width: 700px;
+  margin: auto;
+  font-family: roboto;
+  font-size: 10pt;
+  line-height: 16pt;
+  /*column-count:2;
+  column-gap:25px;*/
+  margin-top:10px;
+}
 </style>
 
 <body>
-<!-- 
-<div class="kicker">H.C. Andersens Blvd and Vesterbrogade, Copenhagen</div> <div class="title">Air Pollution Data for July 28, 2016 at <div class="time-title">[select a data point]</div></div> -->
+  <div class="title-container">
+  <div class="kicker">MIND-WANDERING STUDY #1A</div> <div class="title">Pupil Behavior While Reading in a Disruptive Environment</div>
+  <div class="intro">Pupil dilation is known to be correlated with mental exertion; for this two-part mind-wandering experiment,
+    I used <a href="https://pupil-labs.com/" target="new">Pupil Labs</a>, an open-source eye tracking platform, to track my pupil diameter and
+    gaze positions in two vastly different environments: 1) on the floor of my department on PB&J day, and 2) alone at home. The results of the
+    former are visualized here. Please see <a href="http://www.xujenna.com/itp_blog/2018/02/08/pupil-labs-is-awesome/" target="new">my documentation</a>
+    for more information.</div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
@@ -116,8 +134,8 @@ var diameterData = [];
 var xposData = [];
 var yposData = [];
 
-d3.csv("gaze_positions.csv", function (err, gaze) {
-  d3.csv("pupil_positions.csv", function (err, pupil) {
+d3.csv("gaze_cleanup.csv", function (err, gaze) {
+  d3.csv("pupil_cleanup.csv", function (err, pupil) {
     if (err) console.warn(err, "error loading data");
 
 
@@ -137,35 +155,39 @@ gaze.forEach(function(d){
 });
 
 
-console.log(diameterData);
-// console.log(yposData);
-
-
-
 });
 });
 
 
-function setup() { 
-  createCanvas(1600, 850);
-  frameRate(400);
-} 
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  frameRate(60);
+}
 
-var i = 0; 
+var i = 0;
 
-function draw() { 
+function draw() {
   background(225, 255, 255, 2);
+
   strokeWeight(0.5);
   fill(255,255,255,0);
-  stroke(255,0,0);
-  ellipse(1450,700, diameterData[i]*3.779528);
+  stroke(0,0,255);
+  ellipse((windowWidth - 110),(windowHeight - 150), diameterData[i]*3.779528);
+  noStroke();
+  fill(0,0,255);
+  textSize(12);
+  textFont('roboto');
+  text("PUPIL DIAMETER:",(windowWidth - 250),(windowHeight - 145));
+
   stroke(255,20,120,50);
   strokeWeight(diameterData[i]*3.779528);
 
   push(); // Start a new drawing state
-translate(-650, -1025);
+translate(-390, -1220);
+angleMode(DEGREES);
+rotate(8);
 
-  line((xposData[i]+500) * 3, (yposData[i]+500) * 3, (xposData[i+1]+500) * 3, (yposData[i+1]+500)*3);
+  line((xposData[i]+500) * 3, (yposData[i]+500) *3, (xposData[i+1]+500) * 3, (yposData[i+1]+500)*3);
 pop(); // Restore original state
 
   if (i < diameterData.length) {
