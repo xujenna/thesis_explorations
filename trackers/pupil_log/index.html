@@ -6,9 +6,8 @@
   body {
     font-family: monospace;
     font-size: 11px;
-    color: #D3D3D3;
     background-size: cover;
-    background-color:#3c4149;
+   background-image: url("bg.jpg");
 }
 
 svg {
@@ -19,27 +18,6 @@ svg {
     display:inline;
     margin:auto;
     margin-top:20px;
-}
-
-.title {
-  font-size:24px;
-  font-family:monospace;
-  color:#D3D3D3;
-  text-align: center;
-}
-
-.kicker {
-  font-family:roboto;
-  font-size:11px;
-  letter-spacing: 2px;
-  text-align:center;
-  border-bottom: 1px solid white;
-  padding-bottom:4px;
-  display:table;
-  margin:auto;
-  width:inherit;
-  margin-top:40px;
-  margin-bottom:15px;
 }
 
 
@@ -87,158 +65,142 @@ svg {
 .wrapper2 {
   display:block;
 }
+.title {
+  font-size:25px;
+  font-family:monospace;
+  color:#000;
+  text-align: left;
+  line-height: 27pt;
+}
 
+.kicker {
+  font-family:roboto;
+  font-size:11px;
+  letter-spacing: 2px;
+  text-align:left;
+  display:table;
+  margin:auto;
+  width:inherit;
+  margin-top:15px;
+  margin-bottom:10px;
+  text-decoration: underline;
+}
+.title-container {
+  z-index:102;
+  position:absolute;
+  width:900px;
+  column-count:2;
+  column-gap:25px;
+  left:50%;
+  margin-left:-450px;
+  margin-top:50px;
+}
+.intro {
+  /*width: 600px;*/
+  /*margin: auto;*/
+  font-family: roboto;
+  font-size: 10pt;
+  line-height: 16pt;
+  /*column-count:2;
+  column-gap:25px;*/
+  /*margin-top:10px;*/
+  /*display:inline;*/
+}
 </style>
 
 <body>
-<!-- 
-<div class="kicker">H.C. Andersens Blvd and Vesterbrogade, Copenhagen</div> <div class="title">Air Pollution Data for July 28, 2016 at <div class="time-title">[select a data point]</div></div> -->
+  <div class="title-container">
+  <p class="kicker">MIND-WANDERING STUDY #1B<p> <p class="title">Pupil Behavior While Reading <br>in a Quiet Environment</p>
+  <p class="intro">Pupil dilation is known to be correlated with mental exertion; for this two-part mind-wandering experiment,
+    I used <a href="https://pupil-labs.com/" target="new">Pupil Labs</a>, an open-source eye tracking platform, to track my pupil diameter and
+    gaze positions in two vastly different environments: 1) on the floor of my department on PB&J day, and 2) alone at home. The results of the
+    latter are visualized here. Please see <a href="http://www.xujenna.com/itp_blog/2018/02/08/pupil-labs-is-awesome/" target="new">my documentation</a>
+    for more information.</p>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.sound.min.js"></script>
+
 <script>
+
+
 //JS to go here
 
 var margin = {top: 0, right: 50, bottom: 100, left: 75};
 
-var width = 1500 - margin.left - margin.right,
-    height = 1000 - margin.top - margin.bottom;
+var width = Window.innerWidth,
+    height = Window.innerHeight;
 
-// var svg = d3.select("body").append("div")
-//     .attr("class", "wrapper")
-//     .append("svg")
-//       .attr("width", width + margin.left + margin.right)
-//       .attr("height", height + margin.top + margin.bottom)
-//     .append("g")
-//       .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-//     .attr("class", "chart")
-//     .style("display", "block");
+var diameterData = [];
+var xposData = [];
+var yposData = [];
 
-
-// var xAxis = d3.svg.axis()
-//   .scale(xScale)
-//   .orient("bottom")
-//   .tickPadding(10)
-//   .tickFormat(d3.time.format("%H:%M"));
-
-// var yAxis = d3.svg.axis()
-//   .scale(yScale)
-//   .tickPadding(10)
-//   .orient("left");
-  
-// var area = d3.svg.area()
-//   .x(function(d) {return xScale(d.key);})
-//   .y0(height)
-//   .y1(function(d){console.log("d.values", yScale(d.values));});
-
-
-
-// var svg = d3.select("body").append("div")
-//     .attr("class", "wrapper")
-//     .append("svg")
-//       .attr("width", width + margin.left + margin.right)
-//       .attr("height", height + margin.top + margin.bottom)
-//     // .append("g")
-//     //   .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-//     .attr("class", "chart");
-
-var svg2 = d3.select("body").append("div")
-  .attr("class", "wrapper2")
-      .append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-    // .append("g")
-    //   .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-    .attr("class", "chart");
-
-d3.csv("gaze_positions.csv", ready);
-
-function ready(err, data) {
+d3.csv("gaze_cleanup.csv", function (err, gaze) {
+  d3.csv("pupil_cleanup.csv", function (err, pupil) {
     if (err) console.warn(err, "error loading data");
 
 
-var xMax = d3.max(data, function(d) {return d.gaze_point_3d_x;});
-var xMin = d3.min(data, function(d) {return d.gaze_point_3d_x;});
+pupil.forEach(function(d){
 
-var yMin = d3.min(data, function(d) {return d.gaze_point_3d_y;});
-var yMax = d3.max(data, function(d) {return d.gaze_point_3d_y;});
+  diameterData.push(+d.diameter_3d);
 
-
-var xScale = d3.scale.linear()
-  .range([0,width])
-  .domain([(xMin * 6) - 500, xMax * 6]);
+  // d.timee = d.timee.slice(0,5);
+});
 
 
-var yScale = d3.scale.linear()
-  .range([height, 0])
-  .domain([(yMin * 6) -100, yMax * 6]);
+gaze.forEach(function(d){
 
-// var pupilPosNormal = d3.svg.line()
-//   .x(function(d) {return d.gaze_normal0_x * 500;})
-//   .y(function(d){return d.gaze_normal0_y * 500;});
+  xposData.push(+d.gaze_point_3d_x);
+  yposData.push(+d.gaze_point_3d_y);
 
-
-var pupilPos3d = d3.svg.line()
-  .x(function(d) {return xScale(d.gaze_point_3d_x);})
-  .y(function(d){return yScale(d.gaze_point_3d_y);});
+});
 
 
-
-// var finaldata = d3.nest()
-//   .key(function(d) { return d.timee; })
-//   .rollup(function(v) {return v.length;})
-//   .entries(data);
-
-// console.log("finaldata", finaldata);
+});
+});
 
 
-
-
-
-// var pupilPosNormalContainer = svg.append("path")
-//   .attr("d", pupilPosNormal(data))
-//   .attr("stroke", "white")
-//   .attr("stroke-width", 1)
-//   .attr("fill", "none")
-//   .attr("class", "line");
-
-
-
-var pupilPos3dContainer = svg2.append("path")
-  .attr("d", pupilPos3d(data))
-  .attr("stroke", "white")
-  .attr("stroke-width", 1)
-  .attr("fill", "none")
-  .attr("class", "line");
-
-
-// var blinksSel1 = svg.selectAll(".blinks")
-//   .data(finaldata)
-//   .enter()
-//   .append("circle")
-
-// // svg.selectAll("circle")
-//   .attr("class", "blinks")
-//   .attr("cx", function(d){return xScale(d.key)})
-//   // .attr("cy", function(d){return yScale(d.values.NO2)})
-//   .attr("cy", function(d) {return yScale(d.values)})
-//   .attr("r",4);
-
-// svg.append("text")
-//   .attr("class", "chart-title")
-//   .attr("y",0)
-//   .attr("x",width/3)
-//   .text("Reading silently: Day 2")
-//   .style("font-weight","bold")
-//   .style("font-size", "14px")
-//   .style("text-transform", "uppercase")
-//   .style("text-decoration", "underline");
-
-
-
-
-
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  frameRate(60);
 }
+
+var i = 0;
+
+function draw() {
+  background(225, 255, 255, 2);
+
+  strokeWeight(0.5);
+  fill(255,255,255,0);
+  stroke(0,0,255);
+  ellipse((windowWidth - 110),(windowHeight - 125), diameterData[i]*3.779528);
+  noStroke();
+  fill(0,0,0);
+  textSize(12);
+  textFont('roboto');
+  text("PUPIL DIAMETER:",(windowWidth - 250),(windowHeight - 120));
+
+  stroke(255,20,120,50);
+  strokeWeight(diameterData[i]*3.779528);
+
+  push(); // Start a new drawing state
+translate(-390, -1170);
+angleMode(DEGREES);
+rotate(8);
+
+  line((xposData[i]+500) * 3, (yposData[i]+500) *3, (xposData[i+1]+500) * 3, (yposData[i+1]+500)*3);
+pop(); // Restore original state
+
+  if (i < diameterData.length) {
+    i++;
+  };
+}
+
 
 </script>
 </body>
