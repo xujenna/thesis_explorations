@@ -19,7 +19,7 @@ tweetbot = MarkovBot()
 #     writer = csv.writer(f)
 #     for row in data:
 #         writer.writerow([row[4]])
-tweetbot.read("quotes.txt")
+tweetbot.read("hm_only.txt")
 
 
 # # # # #
@@ -31,7 +31,9 @@ tweetbot.read("quotes.txt")
 # 	should attempt to use to start its text. It's nothing fancy: the bot will
 # 	simply try the first, and move on to the next if he can't find something
 # 	that works.
-my_first_text = tweetbot.generate_text(25, seedword=[u'You', u'I'])
+while True:
+    my_first_text = tweetbot.generate_text(15)
 
-# Print your text to the console
-print(u'\ntweetbot says: "%s"' % (my_first_text))
+    # Print your text to the console
+    print(u'\ntweetbot says: "%s"' % (my_first_text))
+    time.sleep(7)
