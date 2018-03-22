@@ -1,0 +1,79 @@
+[MUSIC] For a long time, emotions were considered
+unreliable compared with cognition. This has all changed in
+the last few decades. Emotions are important for
+social interactions, learning, and decision making. Emotions are complex brain states,
+associated with positive and negative experiences, and they
+are accompanied by facial expressions. Darwin wrote a book about visual
+expression as a form of communication that is important for survival,
+and natural selection. Paul Ekman is the world's leading
+expert on facial expression. He was the real world inspiration for Cal
+Lightman in the TV drama series Lie to me, although Paul is lot
+nicer person than Cal. Ekman went to Papua New Guinea to
+find out if pre-industrial cultures responded emotionally with the same
+facial expressions that we do. He found six universal
+expressions of emotion in all human societies that he studied. Happiness, sadness, anger,
+surprise, fear, and disgust. Emotions are typically slow in onset and
+can last for a long time. Can you remember the last
+time that you got angry? How long did the angry mood last? There are groups of neurons very deep in
+the brain stem called neuromodulatory systems that control your levels of
+arousal, motivation, and attention. Last week, we saw that one of them,
+the serotonin system, was important for regulating social interactions. Another brain stem system that fans
+out over wide regions of the brain, uses a chemical called noradrenaline. Edronax is a drug that works along
+the lines of Prozac, except that it is a reuptake inhibitor for noradrenaline,
+and it increases its activity. It could be more effective than Prozac in
+helping patients who are depressed and lack the capacity for
+sustained motivation. Whereas, serotonin activation
+results in serenity and mellowness, noradrenaline activity is
+involved in increasing drive motivation. When a closely related molecule
+manufactured in your adrenal gland, called adrenaline, is released in your blood,
+it makes your heart pound faster and prepares your body for vigorous physical
+activity, paralleling the increase in mental activity triggered by
+noradrenaline inside the brain. Is depression caused by imbalances
+in serotonin or in noradrenaline? These ancient neural systems interact with
+one another like players in an orchestra. So part of a serotonergic drug's efficacy, may be indirect by altering
+levels of noradrenaline. This interaction complicates
+the search for effective treatments for mental disorders, and reminds us,
+that although we talk about this or that chemical system,
+brain systems are deeply integrated. There is another powerful motivational
+system in the brain that uses dopamine, and is centered in the few
+groups of cells in the midbrain. This system of dopamine neurons
+underlies both the motivational and the emotional facets of extraversion. High dopamine levels puts people in a good
+mood, energizes some people to seek out new worlds, and
+to go boldly where no one has gone before. But not too high a level since
+that leads to Tourette Syndrome, characterized by uncontrolled
+ballistic movements, and a blue streak of swear words,
+which you can imagine on your own. Your dopamine neurons can be interrogated
+when you need to make a decision. What should I order from the menu? You imagine each item, and your dopamine cells provide
+an estimate of the expected reward. Should I marry this person? Your dopamine cells will
+give you a gut opinion that is more trustworthy than reasoning. Problems with many incommensurate
+dimensions are the most difficult to decide. For example,
+how do you trade off a sense of humor, a good dimension,
+with being messy, a bad dimension? Or hundreds of other comparisons. Your reward system reduces all these
+dimensions down to a common currency, the transient dopamine signal. Dopamine is a central part
+of reinforcement learning, which occurs when you associate
+a sensory input with a reward. Such as Pavlov's dog, in which food odors
+are are associated with salivation. Dopamine is released in the brain
+when an unexpected reward occurs, and dopamine levels are reduced from baseline,
+when an expected reward is not received. Dopamine neurons receive inputs from
+a part of the brain called the basal ganglia, which evaluates cortical
+states and assigns value to them, and is involved with learning sequences
+of motor actions to achieve a goal. Although this form of
+learning might seem simple, it has now been shown that
+reinforcement learning is the basis for the most powerful artificial
+intelligence system ever created. It is not just your cognitive systems,
+but also the impetus provided by your emotional systems
+that make you intelligent. Go is an ancient game that
+is highly popular in Asia. The 19 by 19 Go board is much
+larger than the 8 by 8 chessboard, which makes it possible to have several
+battles raging in different parts of the board, white against black pieces,
+vying for territory. Go is to chess in difficulty,
+as chess is to checkers. If chess is a battle, Go is a war. It has been thought that Go was so difficult that no computer program
+could ever play at championship level. However, this changed when
+the Korean Go world champion played a match with AlphaGo, a program based on reinforcement learning
+that played itself many millions of times. It came as a shock to many when
+AlphaGo won the first three games, winning the match, and exhibiting an
+an unexpectedly high level of play. The three neuromodulatory systems
+based on serotonin, noradrenaline, and dopamine interact strongly with
+the emotional systems in the brain. Without them, we would not be human. With them, we are able to form social
+bonds, evaluate dangerous situations, and learn new skills. I often wondered why Spock,
+on Star Trek, had such a flat affect. Could it be his neuromodulators were low? Think about it. [MUSIC]

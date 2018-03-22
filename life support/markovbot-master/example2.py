@@ -19,7 +19,7 @@ tweetbot = MarkovBot()
 #     writer = csv.writer(f)
 #     for row in data:
 #         writer.writerow([row[4]])
-tweetbot.read("hm_only.txt")
+tweetbot.read("ggia.txt")
 
 
 # # # # #
