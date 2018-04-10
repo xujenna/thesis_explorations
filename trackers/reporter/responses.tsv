@@ -1,3 +1,9 @@
 time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue	compulsions
 2018-04-09T10:03:18.315716	4	Feeling pretty good	Making good progress with project (this questionnaire!)	Schoolwork	1	True	Kevin Home	4	3	1	True
 2018-04-09T11:03:48.939009	4	Productive	Making progress on project	Schoolwork, Errands, Chatting	1	True	Kevin Home	4	3	1	True
+2018-04-09T12:00:17.159027	3	Neutral	Taking a break	Leisure	1	True	Kevin Home	3	2	1	False
+2018-04-09T14:34:53.010916	3	Tired	Jet lag, chores	Leisure, Errands, Eating, Reading, Chatting, Email	2	True	Kevin Home	3	2	4	False
+2018-04-09T16:56:31.979721	3	drowsy	jet lagged but unable to sleep	Schoolwork, Resting	0	True	Kevin Home	3	2	3	False
+2018-04-09T18:00:51.257329	3	drowsy	jet lagged but unable to sleep	Schoolwork	0	True	Kevin Home	3	2	4	False
+2018-04-09T19:58:39.830408	4	tired	jet lagged	 in class, schoolwork, chatting	2	False	School	3	2	4	True
+2018-04-10T02:00:04.219220	4	content	good couple's therapy session	Therapy	2	False	School	4	2	2	True
