@@ -7,3 +7,13 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-09T18:00:51.257329	3	drowsy	jet lagged but unable to sleep	Schoolwork	0	True	Kevin Home	3	2	4	False
 2018-04-09T19:58:39.830408	4	tired	jet lagged	 in class, schoolwork, chatting	2	False	School	3	2	4	True
 2018-04-10T02:00:04.219220	4	content	good couple's therapy session	Therapy	2	False	School	4	2	2	True
+2018-04-10T12:47:00.108283	3	neutral	in class	in class, schoolwork, email	2	False	School	3	3	3	True
+2018-04-10T13:54:55.984234	2	antisocial, grumpy	fatigue	in class	1	False	School	2	3	4	True
+2018-04-10T15:41:39.202590	3	tired	jetlag, hunger	Eating, Reading, Resting	2	True	Home	2	3	4	False
+2018-04-10T18:36:19.043137	2	groggy, stressed	am behind on homework but keep falling asleep	Schoolwork, Resting	0	True	Home	2	4	5	True
+2018-04-10T19:43:28.252137	3	neutral	catching up on homework and finding that it's manageable	Schoolwork	1	True	Home	3	3	3	True
+2018-04-10T21:08:09.784039	4	sleepy, lazy	jet lag	Schoolwork, Leisure, Resting	2	False	Home	3	2	4	False
+2018-04-11T00:19:42.212395	3	restless, worried about homework, but generally content	behind on homework	Resting	1	False	Home	3	3	2	True
+2018-04-11T09:55:45.772075	4	motivated	talked to danny rozin about project and got positive feedback	in class, schoolwork	5	False	School	4	3	2	False
+2018-04-11T11:03:27.501462	4	productive	making progress on project	Schoolwork, in class	1	False	School	4	3	2	False
+2018-04-11T12:04:12.017554	5	cheerful	fun at school	Schoolwork, with friends	3	False	School	4	3	2	True

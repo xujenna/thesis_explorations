@@ -131,53 +131,30 @@ svg.append("g")
 
 
     var attentionLine = svg.selectAll(".attention-line")
-      .data(data)
-      .enter()
-      .append("g")
-      .attr("class", "attention-line");
-
-
-    attentionLine.append("path")
+      .attr("class", "attention-line")
       .attr("d", drawAttentionLine(data))
-  .attr("stroke", "red")
-  .attr("stroke-width", 1)
-  .attr("fill", "none");
-
-
+      .attr("stroke", "red")
+      .attr("stroke-width", 1)
+      .attr("fill", "none");
 
 
     var valenceLine = svg.selectAll(".valence-line")
-      .data(data)
-      .enter()
-      .append("g")
-      .attr("class", "valence-line");
-
-
-    valenceLine.append("path")
+      .attr("class", "valence-line")
       .attr("d", drawValenceLine(data))
-  .attr("stroke", "black")
-  .attr("stroke-width", 1)
-  .attr("fill", "none")
-  .attr("class", "line");
+      .attr("stroke", "black")
+      .attr("stroke-width", 1)
+      .attr("fill", "none");
 
 
 
 
 
     var engagementLine = svg.selectAll(".engagement-line")
-      .data(data)
-      .enter()
-      .append("g")
-      .attr("class", "engagement-line");
-
-
-    engagementLine.append("path")
+      .attr("class", "engagement-line")
       .attr("d", drawEngagementLine(data))
-  .attr("stroke", "blue")
-  .attr("stroke-width", 1)
-  .attr("fill", "none")
-  .attr("class", "line");
-
+      .attr("stroke", "blue")
+      .attr("stroke-width", 1)
+      .attr("fill", "none");
 
 
   var emoji = svg.selectAll(".emoji")
