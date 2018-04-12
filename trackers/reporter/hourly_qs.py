@@ -16,7 +16,7 @@ while True:
     mood = input("Mood 1-5: ")
     moodNotes = input("Mood description: ")
     trigger = input("Trigger: ")
-    activity = input("Activities (Schoolwork/InClass/Leisure/Errands/Eating/Cooking/Reading/Resting/Chatting/Email/WithFriends/Therapy): ")
+    activity = input("Activities (Schoolwork/In Class/Leisure/Errands/Eating/Cooking/Reading/Resting/Chatting/Email/With Friends/with Kevin/Therapy): ")
     social = input("# of Unique Interactions: ")
     alone = input("Alone (True/False): ")
     location = input("Location: ")

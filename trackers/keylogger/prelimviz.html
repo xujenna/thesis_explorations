@@ -4,7 +4,7 @@
 <style type="text/css">
   /*css to go here*/
   body {
-      font-family: arial;
+      font-family: roboto;
       font-size: 12px;
   }
 
@@ -12,13 +12,8 @@
       border: 1px solid #f0f;
   }*/
 
-.teamLines {
-  stroke:black;
-  stroke-width:1px;
-  fill:none;
-}
 
-.yAxis line,
+/*.yAxis line,
 .yAxis path {
   fill: none;
   stroke: silver;
@@ -28,12 +23,12 @@
   fill:silver;
   font-size:9px;
   margin-right:6px;
-}
+}*/
 
 .xAxis text {
-  fill:silver;
-  font-size:9px;
-  transform: rotate(-45deg) translateX(-60px) translateY(-10px);
+  fill:black;
+  font-size:12px;
+  /*transform: rotate(-45deg) translateX(-80px) translateY(0px);*/
 }
 
 .xAxis line,
@@ -45,58 +40,20 @@
 
 .tick line {
   fill: none;
-  stroke-dasharray: 1px 1px;
+  stroke-dasharray: 2px 4px;
 }
 
-.divisionGroups {
-  display:inline-block;
-/*  border-color:black;
-  border-style:solid;
-  border-width:1px;
-  margin-right:-1px;
-  margin-bottom:-1px;*/
-  padding:10px;
-}
 
-.divisionNames {
-  text-align:right;
-  margin-right:55px;
-  transform: translateY(40px);
-  font-family:monospace;
-}
-
-.leagueGroups {
-  clear:left;
-  text-align:center;
-  /*border-color:#f0f;*/
-  /*border-style:solid;*/
-  /*border-width:1px;*/
-}
-
-.leagueNames {
-  display:inline-block;
-  vertical-align: middle;
-  text-align:center;
-  transform: rotate(-90deg);
-  font-family:monospace;
-
-  /*height: 150px;*/
-}
-
-.teamLabels {
-  font-size:9px;
-}
-
-.tick.major line {
+/*.tick.major line {
   stroke: gray;
   stroke-width:1;
- }
+ }*/
 
-.tick.major text {
+/*.tick.major text {
   display:block;
-  transform: rotate(-90deg) translateX(-24px) translateY(-7px);
-  text-transform:uppercase;
-}
+  /*transform: rotate(-90deg) translateX(-24px) translateY(-7px);*/
+  /*text-transform:uppercase;*/
+/*}*/
 
 h3 {
   font-size:12px;
@@ -135,16 +92,17 @@ h3 {
 <body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+<script src="https://d3js.org/d3-time.v1.min.js"></script>
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
 <script>
 //JS to go here
 
 
-var margin = {top: 5, right: 30, bottom: 150, left: 75};
+var margin = {top: 150, right: 30, bottom: 150, left: 75};
 
-var width = window.innerWidth - margin.left - margin.right,
-    height = window.innerHeight - margin.top - margin.bottom;
+var width = 15000 - margin.left - margin.right,
+    height = 750 - margin.top - margin.bottom;
 
 
 
@@ -279,22 +237,24 @@ var xMax = d3.max(joy, function(d) {return d.time;});
 var xScale = d3.time.scale()
   .range([0,width])
   .domain([xMin, xMax]);
-
-var yScale = d3.scale.linear()
-  .range([height,0])
-  .domain([0.5,1]);
+//
+// var yScale = d3.scale.linear()
+//   .range([height,0])
+//   .domain([0.5,1]);
 
 
   var xAxis = d3.svg.axis()
     .scale(xScale)
     .orient("bottom")
-    .tickPadding(10)
-    .tickFormat(d3.time.format("%c"));
-
-  var yAxis = d3.svg.axis()
-    .scale(yScale)
-    .tickPadding(10)
-    .orient("left");
+    .tickPadding(20)
+    .tickFormat(d3.time.format("%a %B %d"))
+    .ticks(d3.timeDay.every(1))
+    .tickSize(-height,0);
+  //
+  // var yAxis = d3.svg.axis()
+  //   .scale(yScale)
+  //   .tickPadding(10)
+  //   .orient("left");
 
     var tip = d3.tip()
       .attr("class", "tooltip")
@@ -308,10 +268,10 @@ var yScale = d3.scale.linear()
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    var drawLine = d3.svg.line()
-    .x(function(d) {return xScale(d.time);})
-    .y(function(d){return yScale(d.score);});
+    //
+    // var drawLine = d3.svg.line()
+    // .x(function(d) {return xScale(d.time);})
+    // .y(function(d){return yScale(d.score);});
 
 
   svg.append("g")
@@ -334,9 +294,9 @@ var yScale = d3.scale.linear()
     .attr("dy", "7em")
     .style("text-transform", "uppercase");
 
-  svg.append("g")
-    .attr("class","yAxis")
-    .call(yAxis);
+  // svg.append("g")
+  //   .attr("class","yAxis")
+  //   .call(yAxis);
 
 
       // console.log("data", data);
@@ -363,19 +323,10 @@ var yScale = d3.scale.linear()
     .append("circle")
     .attr("class","joy-circle")
     .attr("cx", function(d) {return xScale(d.time)})
-    .attr("cy", function(d) {return yScale(d.score)})
-    .attr("r", 5)
-    .attr("fill", "magenta");
-
-  var sadCircles = svg.selectAll(".sad-circle")
-    .data(sadness)
-    .enter()
-    .append("circle")
-    .attr("class", "sad-circle")
-    .attr("cx", function(d) {return xScale(d.time)})
-    .attr("cy", function(d) {return yScale(d.score)})
-    .attr("r", 5)
-    .attr("fill", "blue");
+    .attr("cy", 50)
+    .attr("r", function(d) { return d.score * 20;})
+    .attr("fill-opacity", 0.25)
+    .attr("fill", "fuchsia");
 
   var confidentCircles = svg.selectAll(".confident-circle")
     .data(confidence)
@@ -383,8 +334,9 @@ var yScale = d3.scale.linear()
     .append("circle")
     .attr("class", "confident-circle")
     .attr("cx", function(d) {return xScale(d.time)})
-    .attr("cy", function(d) {return yScale(d.score)})
-    .attr("r", 5)
+    .attr("cy", 100)
+    .attr("r", function(d) { return d.score * 20;})
+    .attr("fill-opacity", 0.25)
     .attr("fill", "springgreen");
 
   var analyticalCircles = svg.selectAll(".analytical-circle")
@@ -393,45 +345,66 @@ var yScale = d3.scale.linear()
     .append("circle")
     .attr("class", "analytical-circle")
     .attr("cx", function(d) {return xScale(d.time)})
-    .attr("cy", function(d) {return yScale(d.score)})
-    .attr("r", 5)
-    .attr("fill", "coral");
-  var angryCircles = svg.selectAll(".angry-circle")
-    .data(anger)
-    .enter()
-    .append("circle")
-    .attr("class", "angry-circle")
-    .attr("cx", function(d) {return xScale(d.time)})
-    .attr("cy", function(d) {return yScale(d.score)})
-    .attr("r", 5)
-    .attr("fill", "red");
+    .attr("cy", 150)
+    .attr("r", function(d) { return d.score * 20;})
+    .attr("fill-opacity", 0.25)
+    .attr("fill", "gold");
+
   var tentativeCircles = svg.selectAll(".tentative-circle")
     .data(tentative)
     .enter()
     .append("circle")
     .attr("class", "tentative-circle")
     .attr("cx", function(d) {return xScale(d.time)})
-    .attr("cy", function(d) {return yScale(d.score)})
-    .attr("r", 5)
-    .attr("fill", "coral");
-  var disgustCircles = svg.selectAll(".disgust-circle")
-    .data(disgust)
+    .attr("cy", 200)
+    .attr("r", function(d) { return d.score * 20;})
+    .attr("fill-opacity", 0.25)
+    .attr("fill", "lavender");
+
+  var sadCircles = svg.selectAll(".sad-circle")
+    .data(sadness)
     .enter()
     .append("circle")
-    .attr("class", "disgust-circle")
+    .attr("class", "sad-circle")
     .attr("cx", function(d) {return xScale(d.time)})
-    .attr("cy", function(d) {return yScale(d.score)})
-    .attr("r", 5)
-    .attr("fill", "thistle");
+    .attr("cy", 250)
+    .attr("r", function(d) { return d.score * 20;})
+    .attr("fill-opacity", 0.25)
+    .attr("fill", "cyan");
+
   var fearCircles = svg.selectAll(".fear-circle")
     .data(fear)
     .enter()
     .append("circle")
     .attr("class", "fear-circle")
     .attr("cx", function(d) {return xScale(d.time)})
-    .attr("cy", function(d) {return yScale(d.score)})
-    .attr("r", 5)
-    .attr("fill", "royalblue");
+    .attr("cy", 300)
+    .attr("r", function(d) { return d.score * 20;})
+    .attr("fill-opacity", 0.25)
+    .attr("fill", "blue");
+
+  var angryCircles = svg.selectAll(".angry-circle")
+    .data(anger)
+    .enter()
+    .append("circle")
+    .attr("class", "angry-circle")
+    .attr("cx", function(d) {return xScale(d.time)})
+    .attr("cy", 350)
+    .attr("r", function(d) { return d.score * 20;})
+    .attr("fill-opacity", 0.25)
+    .attr("fill", "deeppink");
+
+  var disgustCircles = svg.selectAll(".disgust-circle")
+    .data(disgust)
+    .enter()
+    .append("circle")
+    .attr("class", "disgust-circle")
+    .attr("cx", function(d) {return xScale(d.time)})
+    .attr("cy", 400)
+    .attr("r", function(d) { return d.score * 20;})
+    .attr("fill-opacity", 0.25)
+    .attr("fill", "thistle");
+
 
 
   svg.selectAll("circle")
