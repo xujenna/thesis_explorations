@@ -27,3 +27,9 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-12T13:40:07.405005	2	stressed	still stressed about midterm	Schoolwork	0	True	Home	2	4	2	False
 2018-04-12T14:42:51.922735	2	stressed	still stressed about midterm	Schoolwork, Eating	0	True	Home	3	4	2	False
 2018-04-12T16:47:51.900184	2	exhausted	nonstop work on this midterm	Schoolwork	0	True	Home	2	4	3	False
+2018-04-12T17:57:38.743968	3	accomplished	midterm is in pretty good shape	Schoolwork, in class	1	False	School	3	2	3	False
+2018-04-12T21:00:10.756322	3	tired	long day, jet lag	in class, leisure	1	False	School	3	2	4	False
+2018-04-13T09:07:26.361488	5	cheerful, energetic, excited	warm weather, had breakfast at la bonbonniere with kevin, about to attend yoga, njet lag woke us up early, nyc is nice in the mornings	Eating, with Kevin	2	False	School	4	1	1	False
+2018-04-13T14:26:12.496000	4	content, happy, a bit tired	warm weather, active morning	Leisure, Eating, Reading, Resting, Email, Errands	5	True	Home	4	2	3	True
+2018-04-13T15:27:43.578694	4	content, physically tired	so much exercise 	Errands, Resting, Leisure, Schoolwork	0	True	Home	4	2	3	False
+2018-04-13T16:29:00.230369	3	a bit frustrated	can't debug code	Schoolwork	1	True	Home	3	2	3	True

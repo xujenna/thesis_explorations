@@ -632,23 +632,23 @@ var productivitycontainer = svg.append("path")
 // var secondT;
 // var eLines = [];
 
-// var blinksSel1 = svg.selectAll(".chromeIcons")
-//   .data(chromeRollup)
-//   .enter()
-//   .append("g")
-//   .selectAll(".icons")
-//   .data(function(d) {return d.values;})
-//   .enter()
-//   .append("svg:image")
-//   // .attr("class", "logo")
-//   // .attr("cx", function(d){return xScale(d.time)})
-//   // .attr("cy", height)
-//   .attr("xlink:href", function(d){
-//       return "http://www.google.com/s2/favicons?domain_url=" + d.url;
-//   })
-//   .attr("transform", function(d,j){
-//       return "translate(" + xScale(d.time) + "," + yScale((j+2)*2) + ")";
-//     })
+var blinksSel1 = svg.selectAll(".chromeIcons")
+  .data(chromeRollup)
+  .enter()
+  .append("g")
+  .selectAll(".icons")
+  .data(function(d) {return d.values;})
+  .enter()
+  .append("svg:image")
+  // .attr("class", "logo")
+  // .attr("cx", function(d){return xScale(d.time)})
+  // .attr("cy", height)
+  .attr("xlink:href", function(d){
+      return "http://www.google.com/s2/favicons?domain_url=" + d.url;
+  })
+  .attr("transform", function(d,j){
+      return "translate(" + xScale(d.time) + "," + yScale((j+2)*2) + ")";
+    })
 
 })
 });
@@ -862,7 +862,7 @@ d3.tsv("responses.tsv", function (err, responses) {
 
   svg.append("text")
     .attr("y", 0)
-    .attr("x", (width/2) - 100)
+    .attr("x", (width/2) - 75)
     .text("SELF-REPORTED MOOD DATA")
     .attr("class","title");
 

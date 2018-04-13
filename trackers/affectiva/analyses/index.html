@@ -1,0 +1,284 @@
+<html>
+<head>
+  <!DOCTYPE html>
+  <meta charset="utf-8">
+
+  <style type="text/css">
+    /*css to go here*/
+    body {
+      font-family: monospace;
+      font-size: 11px;
+      background-size: cover;
+      background-color:#fff;
+      text-align: center;
+  /*    background-image:url("hour13_cover.png");
+  */
+  }
+
+  svg {
+  /*  border: 1px solid #f0f;
+  */  /*color: white;*/
+      /*fill: white;*/
+      z-index: 100;
+      display:inline;
+      margin:100px;
+  }
+
+  .heading {
+    position:fixed;
+    left:50%;
+    transform: translate(-50%, 0);
+  }
+
+  .title {
+    font-size:15px;
+    font-family:monospace;
+    color:#000;
+    letter-spacing: 1px;
+  }
+
+  .kicker {
+    font-family:roboto;
+    font-size:11px;
+    letter-spacing: 2px;
+    text-align:center;
+    border-bottom: 1px solid white;
+    padding-bottom:4px;
+    display:table;
+    margin:auto;
+    width:inherit;
+    margin-top:40px;
+    margin-bottom:15px;
+    text-decoration: underline;
+  }
+
+
+  .Axis line,
+  .Axis path {
+    fill:none;
+    stroke:silver;
+    stroke-width:1;
+  }
+
+  .axis-labels {
+    text-anchor:middle;
+    font-family:roboto;
+    font-weight:bold;
+    letter-spacing: 2px;
+    font-color:#000;
+  }
+
+  .Axis text {
+    fill: black;
+  }
+
+  .tick line {
+    fill: none;
+    stroke-dasharray: 2px 4px;
+  }
+
+
+  .y-axis-label {
+    margin-left:0px;
+  }
+
+
+  .chart {
+    z-index: 101;
+  }
+
+  .time-title {
+    display:inline;
+  }
+
+  .wrapper {
+    height: 100%;
+    display:inline;
+    margin:20px;
+  }
+
+
+  .tooltip {
+    width: 200px;
+    font-size:12px;
+    font-family:monospace;
+    background:rgba(255,255,255,0.9);
+    padding:5px;
+    line-height:1.25;
+    clear:both;
+    text-align: center;
+  }
+
+  .tooltip:after {
+    font-size:18px;
+    width: 200px;
+    line-height:1.5;
+    color: black;
+    content: "\2193";
+    position:absolute;
+    text-align:center;
+    display:block;
+    pointer-events:none;
+  }
+
+.container {
+  display:inline;
+}
+  </style>
+
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+  <script src="https://d3js.org/d3-time.v1.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+<script>
+
+d3.json("merged_file.json", function (err, affectiva) {
+      if (err) console.warn(err, "error loading data");
+
+
+affectiva.forEach(function(d){
+var dateTime = new Date(d.time);
+d.time = dateTime;
+});
+
+var xMin = d3.min(affectiva,function(d){return d.time;});
+var xMax = d3.max(affectiva,function(d){return d.time;});
+
+var yMin = d3.min(affectiva,function(d){return d.valence;});
+var yMax = d3.max(affectiva,function(d){return d.attention;});
+
+
+    var margin = {top: 30, right: 20, bottom: 50, left: 40};
+
+    var width = window.innerWidth - margin.left - margin.right,
+        height = 800 - margin.top - margin.bottom;
+
+
+      var svg = d3.select("body").append("div")
+          .attr("class", "container")
+          .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+          .attr("class", "chart")
+          .style("display", "block");
+
+
+
+  var xScale = d3.time.scale()
+    .range([0,width])
+    .domain([xMin, xMax]);
+
+  var yScale = d3.scale.linear()
+    .range([height, 0])
+    .domain([yMin, yMax]);
+
+    // var attentionLine = d3.svg.line()
+    //   .x(function(d) {return xScale(d.time);})
+    //   .y(function(d){return yScale(d.attention);});
+    //
+
+
+  var xAxis = d3.svg.axis()
+    .scale(xScale)
+    .orient("bottom")
+    .tickPadding(10)
+    .tickFormat(d3.time.format("%c"))
+    .ticks(4);
+
+
+  var yAxis = d3.svg.axis()
+    .scale(yScale)
+    .tickPadding(10)
+    .orient("left");
+
+
+
+  svg.append("g")
+    .attr("class", "Axis")
+    .attr("transform","translate(0, "+(height/2)+")")
+    .call(xAxis);
+
+
+  svg.append("text")
+    .attr("class", "axis-labels")
+    .attr("y", height-10)
+    .attr("x", (width/2))
+    .attr("dy", "7em")
+    .style("text-transform", "uppercase");
+
+  svg.append("g")
+    .attr("class","Axis")
+    .call(yAxis);
+
+//
+// svg.append("path")
+//     .attr("d", attentionLine(affectiva))
+//     .attr("stroke", "#ff00ff")
+//     .attr("stroke-width", 1)
+//     .attr("fill", "none")
+//     .attr("class", "line");
+//
+//   });
+
+var attentionCircles = svg.selectAll(".attention-circle")
+  .data(affectiva)
+  .enter()
+  .append("circle")
+  .attr("class","attention-circle")
+  .attr("cx", function(d) {return xScale(d.time)})
+  .attr("r", 5)
+  .attr("cy", function(d) { return yScale(d.attention);})
+  .attr("fill-opacity", 0.15)
+  .attr("fill", "fuchsia");
+
+var engagementCircles = svg.selectAll(".engagement-circle")
+  .data(affectiva)
+  .enter()
+  .append("circle")
+  .attr("class","engagement-circle")
+  .attr("cx", function(d) {return xScale(d.time)})
+  .attr("r", 5)
+  .attr("cy", function(d) { return yScale(d.engagement);})
+  .attr("fill-opacity", 0.15)
+  .attr("fill", "cyan");
+
+var valenceCircles = svg.selectAll(".valence-circle")
+  .data(affectiva)
+  .enter()
+  .append("circle")
+  .attr("class","valence-circle")
+  .attr("cx", function(d) {return xScale(d.time)})
+  .attr("r", 5)
+  .attr("cy", function(d) { return yScale(d.valence);})
+  .attr("fill-opacity", 0.15)
+  .attr("fill", "springgreen");
+
+
+
+  var emoji = svg.selectAll(".emoji")
+    .data(affectiva)
+    .enter()
+    .append("g")
+    .attr("class", "emoji")
+  emoji.append("text")
+    .attr("y", yScale(10))
+    .attr("x", function(d) {return xScale(d.time)})
+    .text(function(d) {return d.emoji});
+
+    svg.append("text")
+      .attr("y", 0)
+      .attr("x", (width/2) - 75)
+      .text("FACIAL ANALYSIS")
+      .attr("class","title");
+
+
+});
+
+
+</script>
+</body>
+</html>
