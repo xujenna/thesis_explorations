@@ -33,3 +33,6 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-13T14:26:12.496000	4	content, happy, a bit tired	warm weather, active morning	Leisure, Eating, Reading, Resting, Email, Errands	5	True	Home	4	2	3	True
 2018-04-13T15:27:43.578694	4	content, physically tired	so much exercise 	Errands, Resting, Leisure, Schoolwork	0	True	Home	4	2	3	False
 2018-04-13T16:29:00.230369	3	a bit frustrated	can't debug code	Schoolwork	1	True	Home	3	2	3	True
+2018-04-13T18:02:39.450067	3	drowsy	finally debugged code, want to nap	Schoolwork, Leisure	1	True	Home	3	2	4	True
+2018-04-14T16:22:02.472148	4	cheerful, lazy	too much sleep, lazy Saturday with Kevin, nice weather	Schoolwork, Resting, Leisure	1	False	Kevin Home	4	3	2	False
+2018-04-14T17:32:10.595708	4	accomplished	cleaned up affectiva data collection	Schoolwork	1	False	Kevin Home	4	2	2	True
