@@ -148,8 +148,11 @@
       var newobject = {};
       var bigEvent = false;
 
+      newobject["attention"] = faces[0].expressions["attention"];
+
+
       for (var key in expressions) {
-        if (expressions[key] > 99) {
+        if (expressions[key] > 95) {
           newobject[key] = expressions[key];
           // data.push(newobject);
           bigEvent = true;
@@ -167,7 +170,6 @@
       if (bigEvent) {
         var emoji = faces[0].emojis["dominantEmoji"];
         newobject["emoji"] = emoji;
-        newobject["attention"] = faces[0].expressions["attention"];
         newobject["valence"] = faces[0].emotions["valence"];
         newobject["engagement"] = faces[0].emotions["engagement"];
         newobject["time"] = Date.now();

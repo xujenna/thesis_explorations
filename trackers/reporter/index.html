@@ -1,0 +1,528 @@
+<html>
+<head>
+  <!DOCTYPE html>
+  <meta charset="utf-8">
+
+  <style type="text/css">
+    /*css to go here*/
+    body {
+      font-family: monospace;
+      font-size: 11px;
+      background-size: cover;
+      background-color:#fff;
+      text-align: center;
+  /*    background-image:url("hour13_cover.png");
+  */
+  }
+
+  svg {
+  /*  border: 1px solid #f0f;
+  */  /*color: white;*/
+      /*fill: white;*/
+      z-index: 100;
+      display:inline;
+      margin:100px;
+  }
+
+  .heading {
+    position:fixed;
+    left:50%;
+    transform: translate(-50%, 0);
+  }
+
+  .title {
+    font-size:15px;
+    font-family:monospace;
+    color:#000;
+    letter-spacing: 1px;
+  }
+
+  .kicker {
+    font-family:roboto;
+    font-size:11px;
+    letter-spacing: 2px;
+    text-align:center;
+    border-bottom: 1px solid white;
+    padding-bottom:4px;
+    display:table;
+    margin:auto;
+    width:inherit;
+    margin-top:40px;
+    margin-bottom:15px;
+    text-decoration: underline;
+  }
+
+
+  .Axis line,
+  .Axis path {
+    fill:none;
+    stroke:silver;
+    stroke-width:1;
+  }
+
+  .axis-labels {
+    text-anchor:middle;
+    font-family:roboto;
+    font-weight:bold;
+    letter-spacing: 2px;
+    font-color:#000;
+  }
+
+  .Axis text {
+    fill: black;
+  }
+
+  .tick line {
+    fill: none;
+    stroke-dasharray: 2px 4px;
+  }
+
+
+  .y-axis-label {
+    margin-left:0px;
+  }
+
+
+  .chart {
+    z-index: 101;
+  }
+
+  .time-title {
+    display:inline;
+  }
+
+  .wrapper {
+    height: 100%;
+    display:inline;
+    margin:20px;
+  }
+
+
+  .tooltip {
+    width: 200px;
+    font-size:12px;
+    font-family:monospace;
+    background:rgba(255,255,255,0.9);
+    padding:5px;
+    line-height:1.25;
+    clear:both;
+    text-align: center;
+  }
+
+  .tooltip:after {
+    font-size:18px;
+    width: 200px;
+    line-height:1.5;
+    color: black;
+    content: "\2193";
+    position:absolute;
+    text-align:center;
+    display:block;
+    pointer-events:none;
+  }
+
+.container {
+  display:inline;
+}
+
+
+  .hover-line {
+  stroke: black;
+  fill: none;
+  stroke-width: 1px;
+}
+
+
+.hoverLabels {
+/*font-family:roboto;
+font-size:10px;*/
+}
+
+  </style>
+
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+  <script src="https://d3js.org/d3-time.v1.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+
+<script>
+
+d3.tsv("responses.tsv", function (err, responses) {
+    if (err) console.warn(err, "error loading data");
+
+  var margin = {top: 30, right: 55, bottom: 50, left: 40};
+
+  var width = 3000 - margin.left - margin.right,
+      height = 500 - margin.top - margin.bottom;
+
+
+    var svg = d3.select("body").append("div")
+        .attr("class", "container")
+        .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+        .attr("class", "chart")
+        .style("display", "block");
+
+
+minDate = d3.min(responses,function(d){return d.time});
+maxDate = d3.max(responses, function(d){return d.time});
+
+
+responses.forEach(function(d){
+  var dateTime = new Date(String(d.time));
+  d.time = dateTime;
+  d.mood = +d.mood;
+  d.fatigue = +d.fatigue;
+  d.morale = +d.morale;
+  d.social = +d.social;
+  d.stress = +d.stress;
+});
+
+
+newResponses = [];
+
+responses.forEach(function(d, i){
+  newResponses.push(d);
+  if(i == responses.length-1){
+    return;
+  }
+
+  var timee = responses[i+1].time;
+  // var subtractMe = timee.setHours(timee.getHours() - 1);
+  // console.log("d.time", d.time)
+  // console.log("timee", timee)
+  // console.log("timee-400000", new Date(timee - 4000000))
+
+
+  if(d.time < (timee - 20000000)) {
+    var nullTime = new Date(timee - 20000000);
+    var nullItems = {};
+    nullItems["time"] = nullTime;
+    nullItems["fatigue"] = null;
+    nullItems["mood"] = null;
+    nullItems["social"] = null;
+    nullItems["stress"] = null;
+    var nullIndex = i+1;
+    newResponses.push(nullItems);
+}
+
+});
+
+
+
+
+    var xMin = d3.min(newResponses,function(d){return d.time;});
+    var xMax = d3.max(newResponses,function(d){return d.time;});
+
+console.log(newResponses)
+    var xScale = d3.time.scale()
+      .range([0,width])
+      .domain([xMin, xMax]);
+
+    var yScale = d3.scale.linear()
+      .range([height, 0])
+      .domain([0, 5]);
+
+var moodArea = d3.svg.area()
+    .interpolate("basis")
+    .x(function(d) { return xScale(d.time); })
+    .y1(function(d) { return yScale(d.mood); })
+    .y0(yScale(0))
+      .defined(function(d){return d.mood!=null;});
+
+var fatigueArea = d3.svg.area()
+    .interpolate("basis")
+    .x(function(d) { return xScale(d.time); })
+    .y1(function(d) { return yScale(d.fatigue); })
+    .y0(yScale(0))
+      .defined(function(d){return d.fatigue!=null;});
+
+var stressArea = d3.svg.area()
+    .interpolate("basis")
+    .x(function(d) { return xScale(d.time); })
+    .y1(function(d) { return yScale(d.stress); })
+    .y0(yScale(0))
+      .defined(function(d){return d.stress!=null;});
+
+var moraleArea = d3.svg.area()
+    .interpolate("basis")
+    .x(function(d) { return xScale(d.time); })
+    .y1(function(d) { return yScale(d.morale); })
+    .y0(yScale(0))
+      .defined(function(d){return d.morale!=null;});
+
+
+  svg.append("text")
+    .attr("y", 0)
+    .attr("x", (width/2) - 75)
+    .text("SELF-REPORTED MOOD DATA")
+    .attr("class","title");
+
+  var moodLine = d3.svg.line()
+  .interpolate("basis")
+  .defined(function(d){return d.mood!=null})
+    .x(function(d) {return xScale(d.time);})
+    .y(function(d){return yScale(d.mood) - 1.5;});
+
+
+  var fatigueLine = d3.svg.line()
+  .interpolate("basis")
+  .defined(function(d){return d.fatigue!=null})
+    .x(function(d) {return xScale(d.time);})
+    .y(function(d){return yScale(d.fatigue);});
+
+  var moraleLine = d3.svg.line()
+  .interpolate("basis")
+  .defined(function(d){return d.fatigue!=null})
+    .x(function(d) {return xScale(d.time);})
+    .y(function(d){return yScale(d.morale);});
+
+  var stressLine = d3.svg.line()
+  .interpolate("basis")
+  .defined(function(d){return d.stress!=null})
+    .x(function(d) {return xScale(d.time);})
+    .y(function(d){return yScale(d.stress);});
+
+var xAxis = d3.svg.axis()
+  .scale(xScale)
+  .orient("bottom")
+  .tickPadding(10)
+  .tickFormat(d3.time.format("%c"));
+
+
+var yAxis = d3.svg.axis()
+  .scale(yScale)
+  .tickPadding(10)
+  .orient("left")
+  .ticks(5);
+
+
+  svg.append("line")
+    .style("stroke", "#e0e0e0")
+    .style("stroke-dasharray", ("5,5"))
+    .attr("x1", 0)
+    .attr("y1", yScale(100))
+    .attr("x2", width)
+    .attr("y2", yScale(100))
+
+    svg.append("line")
+      .style("stroke", "#e0e0e0")
+      .style("stroke-dasharray", ("5,5"))
+      .attr("x1", 0)
+      .attr("y1", yScale(50))
+      .attr("x2", width)
+      .attr("y2", yScale(50))
+
+svg.append("g")
+  .attr("class", "Axis")
+  .attr("transform","translate(0, "+(height)+")")
+  .call(xAxis);
+
+svg.append("text")
+  .attr("class", "axis-labels")
+  .attr("transform","rotate(-90)")
+  .attr("y", 25)
+  .attr("x", (0 - width/10))
+  .attr("dy", "-7em")
+  .text("PRODUCTIVITY SCORE")
+  .attr("fill", "silver");
+
+svg.append("g")
+  .attr("class","Axis")
+  .call(yAxis);
+
+svg.append("text")
+    .attr("class", "axis")
+    .attr("y", yScale(newResponses[newResponses.length - 1].fatigue)-10)
+    .attr("x", width + 10)
+    .text("Fatigue");
+
+  var moodAreaChart = svg.append("path")
+    // .data(newProductivity)
+    .attr("d", moodArea(newResponses))
+    .attr("fill", "hotpink")
+    .attr("opacity", 0.4);
+
+
+  var stressAreaChart = svg.append("path")
+    // .data(newProductivity)
+    .attr("d", stressArea(newResponses))
+    .attr("fill", "blue")
+    .attr("opacity", 0.15);
+
+  var fatigueAreaChart = svg.append("path")
+    // .data(newProductivity)
+    .attr("d", fatigueArea(newResponses))
+    .attr("fill", "lavender")
+    .attr("opacity", 0.6);
+
+var moraleAreaChart = svg.append("path")
+  // .data(newProductivity)
+  .attr("d", moraleArea(newResponses))
+  .attr("fill", "gold")
+  .attr("opacity", 0.25);
+
+
+svg.append("path")
+    .attr("d", fatigueLine(newResponses))
+    .attr("stroke", "lavender")
+    .attr("stroke-width", 1)
+    .attr("fill", "none")
+    .attr("class", "line");
+
+svg.append("text")
+    .attr("class", "axis")
+    .attr("y", yScale(newResponses[newResponses.length - 1].morale))
+    .attr("x", width + 10)
+    .text("Morale");
+
+svg.append("path")
+    .attr("d", moraleLine(newResponses))
+    .attr("stroke", "gold")
+    .attr("stroke-width", 1)
+    .attr("fill", "none")
+    .attr("class", "line");
+
+  var stressCircles = svg.selectAll(".stress-circle")
+    .data(newResponses)
+    .enter()
+    .append("circle")
+    .attr("class","stress-circle")
+    .attr("cx", function(d) {return xScale(d.time)})
+    .attr("r", 30)
+    .attr("cy", function(d) { return yScale(d.stress);})
+    .attr("opacity", 0)
+    .attr("fill", "blue");
+
+
+svg.append("text")
+    .attr("class", "axis")
+    .attr("y", yScale(newResponses[newResponses.length - 1].stress))
+    .attr("x", width + 30)
+    .text("Stress");
+
+svg.append("path")
+    .attr("d", stressLine(newResponses))
+    .attr("stroke", "blue")
+    .attr("stroke-width", 1)
+    .attr("fill", "none")
+    .attr("class", "line");
+
+
+var moodCircles = svg.selectAll(".mood-circle")
+  .data(newResponses)
+  .enter()
+  .append("circle")
+  .attr("class","mood-circle")
+  .attr("cx", function(d) {return xScale(d.time)})
+  .attr("r", 20)
+  .attr("cy", function(d) { return yScale(d.mood);})
+  .attr("opacity",0)
+  .attr("fill", "magenta");
+
+
+svg.append("text")
+    .attr("class", "axis")
+    .attr("y", yScale(newResponses[newResponses.length - 1].mood))
+    .attr("x", width + 10)
+    .text("Mood")
+
+svg.append("path")
+  .attr("d", moodLine(newResponses))
+  .attr("stroke", "magenta")
+  .attr("stroke-width", 1)
+  .attr("fill", "none")
+  .attr("class", "line");
+
+
+//
+// var moodTip = d3.tip()
+//   .attr("class", "tooltip")
+//   .offset([-20,0])
+//   .html(function(d,i) {
+//   return "<b>" + d.moodNotes + "</b>: " + d.trigger;
+//   });
+//
+// svg.selectAll(".mood-circle")
+// .call(moodTip)
+//
+// .on("mouseover", function(d) {
+//   moodTip.show(d);
+// })
+//
+// .on("mouseout", function(d) {
+//   moodTip.hide(d);
+// })
+
+
+// var stressTip = d3.tip()
+//   .attr("class", "tooltip")
+//   .offset([-20,0])
+//   .html(function(d,i) {
+//   return "<b>Activity</b>: " + d.activity;
+//   });
+//
+// svg.selectAll(".stress-circle")
+// .call(stressTip)
+//
+// .on("mouseover", function(d) {
+//   stressTip.show(d);
+// })
+//
+// .on("mouseout", function(d) {
+//   stressTip.hide(d);
+// })
+
+// Hover line.
+var hoverLineGroup = svg.append("g")
+          .attr("class", "hover-line");
+var hoverLine = hoverLineGroup
+  .append("line")
+    .attr("y1", 0).attr("y2", height);
+
+// Hide hover line by default.
+hoverLineGroup.style("opacity", 1e-6);
+
+
+svg.selectAll("circle")
+.attr("cursor", "pointer")
+
+.on("mouseover", function(d) {
+  console.log(d)
+  d3.select("body")
+
+  svg.append("g")
+  .attr("class", "hoverLabels")
+  .append("text")
+  .attr("x", xScale(d.time) + 12)
+  .attr("y", 8)
+  .text(d.moodNotes + ", " + d.trigger);
+  svg.append("g")
+  .attr("class", "hoverLabels")
+  .append("text")
+  .attr("x", xScale(d.time) + 12)
+  .attr("y", 26)
+  .text(d.activity);
+  hoverLine.attr("x1", xScale(d.time)).attr("x2", xScale(d.time));
+ hoverLineGroup.style("opacity", 1);
+})
+
+
+d3.select("body")
+    .on("mouseout", function(d) {
+    // tip.hide(d);
+        hoverLineGroup.style("opacity", 1e-6);
+
+    d3.selectAll(".hoverLabels").remove();
+  });
+
+});
+
+</script>
+</body>
+</html>

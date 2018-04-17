@@ -2,37 +2,46 @@ import json
 import glob
 
 result = []
-avg_results = {}
+range_results = {}
 
 for f in glob.glob("*.json"):
     with open(f, "rb") as infile:
-        avg_results = {}
+        range_results = {}
         print(f)
         j = json.load(infile)
         emotions = []
 
         attention_values = list(map(lambda x: x.get('attention',0), j))
-        avg_attention = sum(attention_values)/len(attention_values)
-        avg_results["attention"] = avg_attention
+        max_attenion = max(attention_values)
+        min_attention = min(attention_values)
+        # avg_attention = sum(attention_values)/len(attention_values)
+        range_results["max_attention"] = max_attenion
+        range_results["min_attention"] = min_attention
 
         valence_values = list(map(lambda x: x.get('valence',0), j))
-        avg_valence = sum(valence_values)/len(valence_values)
-        avg_results["valence"] = avg_valence
+        max_valence = max(valence_values)
+        min_valence = min(valence_values)
+        # avg_attention = sum(attention_values)/len(attention_values)
+        range_results["max_valence"] = max_valence
+        range_results["min_valence"] = min_valence
 
         engagement_values = list(map(lambda x: x.get('engagement',0), j))
-        avg_engagement = sum(engagement_values)/len(engagement_values)
-        avg_results["engagement"] = sum(engagement_values)/len(engagement_values)
+        # avg_engagement = sum(engagement_values)/len(engagement_values)
+        max_engagement = max(engagement_values)
+        min_engagement = min(engagement_values)
+        range_results["max_engagement"] = max_engagement
+        range_results["min_engagement"] = min_engagement
 
         time_values = list(map(lambda x: x.get('time', 0), j))
-        avg_results["time"] = time_values[0]
+        range_results["time"] = time_values[0]
 
         emoji_values = list(map(lambda x: x.get('emoji', 0), j))
         unique_emoji = list(set(emoji_values))
-        avg_results["emoji"] = unique_emoji
+        range_results["emoji"] = unique_emoji
 
         blink_values = list(filter(lambda x: x!=0, map(lambda x: x.get('eyeClosure', 0), j)))
         blinks = int(len(blink_values) / 2)
-        avg_results["blinks"] = blinks
+        range_results["blinks"] = blinks
 
         anger_values = list(filter(lambda x: x!=0, map(lambda x: x.get('anger', 0), j)))
         if(len(anger_values) > 0):
@@ -63,8 +72,8 @@ for f in glob.glob("*.json"):
             emotions.append("surprise")
 
         # result += json.load(infile)
-        avg_results["emotions"] = emotions
-        result.append(avg_results)
+        range_results["emotions"] = emotions
+        result.append(range_results)
 
 
 

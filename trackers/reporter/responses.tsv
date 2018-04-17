@@ -36,3 +36,19 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-13T18:02:39.450067	3	drowsy	finally debugged code, want to nap	Schoolwork, Leisure	1	True	Home	3	2	4	True
 2018-04-14T16:22:02.472148	4	cheerful, lazy	too much sleep, lazy Saturday with Kevin, nice weather	Schoolwork, Resting, Leisure	1	False	Kevin Home	4	3	2	False
 2018-04-14T17:32:10.595708	4	accomplished	cleaned up affectiva data collection	Schoolwork	1	False	Kevin Home	4	2	2	True
+2018-04-14T20:10:53.490546	3	content	had a walk with Kevin	Schoolwork, Leisure, Eating	1	False	Kevin Home	3	3	3	True
+2018-04-14T22:14:03.200857	4	content	leisurely sunday morning with k	Resting, Leisure, Eating, Schoolwork	1	False	Kevin Home	3	3	2	True
+2018-04-15T14:11:40.131009	5	cheerful	k cooked lunch, helped me with coding	Schoolwork, Eating	1	False	Kevin Home	4	3	2	False
+2018-04-15T16:52:01.287242	4	productive	working on project	Schoolwork	1	False	Kevin Home	4	3	2	True
+2018-04-15T19:52:48.102348	4	cheerful	had break and dinner with k	Eating, Leisure, Resting	1	False	Kevin Home	4	3	2	True
+2018-04-15T21:32:04.116113	4	happy	getting some work done, chilling with k	Schoolwork	1	False	Kevin Home	4	2	3	True
+2018-04-15T22:32:56.023039	3	tired	jet lag	Schoolwork	1	False	Kevin Home	3	2	4	False
+2018-04-16T11:07:50.535380	4	content	had nice breakfast, k working from home this morning	Schoolwork	1	False	Kevin Home	3	4	2	False
+2018-04-16T12:11:50.100342	2	frustrated	can't figure out this emoji thing	Schoolwork	1	False	Kevin Home	2	4	2	False
+2018-04-16T14:27:29.932109	3	neutral	left k's, had lunch, now at library	Schoolwork, Eating	1	False	School, Library	3	3	2	False
+2018-04-16T15:28:46.623225	3	productive	jamming on hw for class tonight	Schoolwork, Chatting	1	False	School, Library	3	3	2	False
+2018-04-16T16:29:39.198534	3	productive	working on hw	Schoolwork	1	False	School, Library	3	4	2	True
+2018-04-16T17:39:30.197282	2	stressed	class soon	Schoolwork	0	False	School	2	5	2	False
+2018-04-16T18:48:19.579470	3	neutral	in class	in class, schoolwork, eating	3	False	School	3	2	2	False
+2018-04-16T20:45:00.587875	4	cheerful	talked to a few classmates during fire drill, got boba guys	in class, with friends	8	False	School	3	2	3	False
+2018-04-16T22:32:56.008568	3	sleepy,stressed	jet lag, long day, have hw to do	Schoolwork	1	False	Home	3	4	5	False

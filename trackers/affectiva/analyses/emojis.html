@@ -1,0 +1,326 @@
+<html>
+<head>
+  <!DOCTYPE html>
+  <meta charset="utf-8">
+
+  <style type="text/css">
+    /*css to go here*/
+    body {
+      font-family: monospace;
+      font-size: 11px;
+      background-color:#fff;
+      text-align: center;
+  }
+
+  svg {
+  /*  border: 1px solid #f0f;
+  */  /*color: white;*/
+      /*fill: white;*/
+      z-index: 100;
+      display:inline;
+      margin:100px;
+  }
+
+  .heading {
+    position:fixed;
+    left:50%;
+    transform: translate(-50%, 0);
+  }
+
+  .title {
+    font-size:15px;
+    font-family:monospace;
+    color:#000;
+    letter-spacing: 1px;
+  }
+
+  .kicker {
+    font-family:roboto;
+    font-size:11px;
+    letter-spacing: 2px;
+    text-align:center;
+    border-bottom: 1px solid white;
+    padding-bottom:4px;
+    display:table;
+    margin:auto;
+    width:inherit;
+    margin-top:40px;
+    margin-bottom:15px;
+    text-decoration: underline;
+  }
+
+
+  .Axis line,
+  .Axis path {
+    fill:none;
+    stroke:silver;
+    stroke-width:1;
+  }
+
+  .axis-labels {
+    text-anchor:middle;
+    font-family:roboto;
+    font-weight:bold;
+    letter-spacing: 2px;
+    font-color:#000;
+  }
+
+  .Axis text {
+    fill: black;
+  }
+
+  .tick line {
+    fill: none;
+    stroke-dasharray: 2px 4px;
+  }
+
+
+  .y-axis-label {
+    margin-left:0px;
+  }
+
+
+  .chart {
+    z-index: 101;
+  }
+
+  .time-title {
+    display:inline;
+  }
+
+  .wrapper {
+    height: 100%;
+    display:inline;
+    margin:20px;
+  }
+
+
+  .tooltip {
+    width: 200px;
+    font-size:12px;
+    font-family:monospace;
+    background:rgba(255,255,255,0.9);
+    padding:5px;
+    line-height:1.25;
+    clear:both;
+    text-align: center;
+  }
+
+  .tooltip:after {
+    font-size:18px;
+    width: 200px;
+    line-height:1.5;
+    color: black;
+    content: "\2193";
+    position:absolute;
+    text-align:center;
+    display:block;
+    pointer-events:none;
+  }
+
+.container {
+  display:inline;
+}
+
+}
+  </style>
+
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+  <script src="https://d3js.org/d3-time.v1.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+<script>
+
+d3.json("merged_file.json", function (err, affectiva) {
+  d3.json("productivity.json", function(err, rescuetime){
+      if (err) console.warn(err, "error loading data");
+
+
+productivity = rescuetime.rows;
+
+productivity.forEach(function(d){
+  var dateTime = new Date(String(d[0]));
+  d[0] = dateTime;
+})
+
+console.log("original length ", productivity.length)
+
+newProductivity = [];
+
+productivity.forEach(function(d, i){
+
+  newProductivity.push(d);
+
+  if(i == productivity.length-1){
+    return;
+  }
+  var timee = productivity[i+1][0];
+  // var subtractMe = timee.setHours(timee.getHours() - 1);
+
+
+
+  if(d[0] < (timee - 3600000)) {
+    var nullTime = new Date(timee - 3600000);
+    var nullItems = [];
+    nullItems[0] = nullTime;
+    nullItems[1] = null;
+    nullItems[2] = null;
+    nullItems[3] = null;
+    nullItems[4] = null;
+    var nullIndex = i+1;
+    newProductivity.push(nullItems);
+
+  }
+
+});
+
+console.log(newProductivity)
+
+affectiva.sort(function(a,b) {return a.time - b.time});
+
+// affectiva.forEach(function(d, i){
+//   if(d.time < (affectiva[i+1].time - 5000000)) {
+//     var nullTime = affectiva[i+1].time - 3600000;
+//     var nullItems = {
+//       "time": nullTime,
+//       "attention": null,
+//       "engagement": null,
+//       "valence": null
+//     }
+//     var nullIndex = i+1;
+//     affectiva.splice(nullIndex, 0, nullItems);
+//   }
+// });
+
+affectiva.forEach(function(d){
+
+    var dateTime = new Date(d.time);
+    d.time = dateTime;
+})
+
+console.log(affectiva)
+
+
+var xMin = d3.min(affectiva,function(d){return d.time;});
+var xMax = d3.max(affectiva,function(d){return d.time;});
+
+var yMin = d3.min(affectiva,function(d){return d.min_valence;});
+
+
+    var margin = {top: 30, right: 20, bottom: 50, left: 40};
+
+    var width = window.innerWidth - margin.left - margin.right,
+        height = 700 - margin.top - margin.bottom;
+
+
+      var svg = d3.select("body").append("div")
+          .attr("class", "container")
+          .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+          .attr("class", "chart")
+          .style("display", "block");
+
+
+
+  var xScale = d3.time.scale()
+    .range([0,width])
+    .domain([xMin, xMax]);
+
+  var yScale = d3.scale.linear()
+    .range([height, 0])
+    .domain([yMin, 100]);
+
+    // var attentionLine = d3.svg.line()
+    //   .x(function(d) {return xScale(d.time);})
+    //   .y(function(d){return yScale(d.attention);});
+    //
+
+
+  var xAxis = d3.svg.axis()
+    .scale(xScale)
+    .orient("bottom")
+    .tickPadding(10)
+    .tickFormat(d3.time.format("%c"))
+    .ticks(4);
+
+
+  var yAxis = d3.svg.axis()
+    .scale(yScale)
+    .tickPadding(10)
+    .orient("left");
+
+
+      svg.append("g")
+        .attr("class", "Axis")
+        .attr("transform","translate(0, "+(yScale(0))+")")
+        .call(xAxis);
+
+
+      svg.append("text")
+        .attr("class", "axis-labels")
+        .attr("y", height-10)
+        .attr("x", (width/2))
+        .attr("dy", "7em")
+        .style("text-transform", "uppercase");
+
+      svg.append("g")
+        .attr("class","Axis")
+        .call(yAxis);
+
+
+  var emoji = svg.selectAll(".emoji")
+    .data(affectiva)
+    .enter()
+    .append("g")
+    .attr("class", "emoji")
+    .attr("transform", function(d) {
+      return "translate(" + xScale(d.time) + ")";})
+    .selectAll(".asdf")
+    .data(function(d) {
+      console.log(d)
+      return d.emoji;
+    })
+    .enter()
+    .append("g")
+    .attr("transform", function(d,i) {
+      return "translate(0," + yScale(i*6) + ")";
+    })
+    .append("text")
+    .text(function(d) {return d;})
+      .attr("font-size", "19px");
+
+
+
+  //   .attr("transform", function(d,j){
+  //       return "translate(" + xScale(d.time) + "," + yScale((j+2)*2) + ")";
+  //     })
+  //   .attr("width", "50px")
+  // emoji.append("text")
+  //   // .attr("x", function(d) {return xScale(d.time)})
+  //   .text(function(d) {return d.emoji;})
+  //   .attr("font-size", "20px")
+  //   // .attr("y", function(d,j) {return yScale(j*10);});
+  //
+  //   // .attr("transform", function(d,j){
+  //   //     return "translate(" + xScale(d.time) + "," + yScale((j+2)*2) + ")";
+  //   //   });
+
+    svg.append("text")
+      .attr("y", 0)
+      .attr("x", (width/2) - 75)
+      .text("FACIAL ANALYSIS")
+      .attr("class","title");
+
+
+})
+});
+
+
+</script>
+</body>
+</html>

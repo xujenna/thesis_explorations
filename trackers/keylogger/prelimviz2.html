@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style type="text/css">
+  /*css to go here*/
+  body {
+    font-family: monospace;
+    font-size: 11px;
+    background-color:#fff;
+    text-align: center;
+  }
+
+/*  svg {
+      border: 1px solid #f0f;
+  }*/
+
+
+/*.yAxis line,
+.yAxis path {
+  fill: none;
+  stroke: silver;
+}
+
+.yAxis text {
+  fill:silver;
+  font-size:9px;
+  margin-right:6px;
+}*/
+
+.Axis text {
+  fill:black;
+  font-size:12px;
+  /*transform: rotate(-45deg) translateX(-80px) translateY(0px);*/
+}
+
+.Axis line,
+.Axis path {
+  fill: none;
+  stroke: silver;
+}
+
+
+.tick line {
+  stroke: #e0e0e0;
+  stroke-dasharray: 5px 5px;
+}
+/*.tick.major line {
+  stroke: gray;
+  stroke-width:1;
+ }*/
+
+/*.tick.major text {
+  display:block;
+  /*transform: rotate(-90deg) translateX(-24px) translateY(-7px);*/
+  /*text-transform:uppercase;*/
+/*}*/
+
+h3 {
+  font-size:12px;
+  text-align:center;
+  text-decoration:underline;
+  text-transform: uppercase;
+  -webkit-margin-after: 0px;
+}
+
+
+.tooltip {
+  width: 200px;
+  font-size:12px;
+  font-family:monospace;
+  background:rgba(255,255,255,0.9);
+  padding:5px;
+  line-height:1.25;
+  clear:both;
+  text-align: center;
+}
+
+.tooltip:after {
+  font-size:18px;
+  width: 200px;
+  line-height:1.5;
+  color: black;
+  content: "\2193";
+  position:absolute;
+  text-align:center;
+  display:block;
+  pointer-events:none;
+}
+
+</style>
+
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+<script src="https://d3js.org/d3-time.v1.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+<script>
+//JS to go here
+
+
+var margin = {top: 150, right: 30, bottom: 150, left: 100};
+
+var width = 15000 - margin.left - margin.right,
+    height = 750 - margin.top - margin.bottom;
+
+
+
+
+d3.json("logs/log.json", ready);
+
+
+
+function ready(err, data) {
+    if (err) console.warn(err, "error loading data");
+
+
+
+
+data.forEach(function(d){
+  var dateTime = new Date(String(d.time));
+  d.time = dateTime;
+})
+
+
+    console.log("data", data);
+
+
+var joy = [];
+var sadness = [];
+var confidence = [];
+var analytical = [];
+var anger = [];
+var disgust = [];
+var fear = [];
+var tentative = [];
+
+data.filter(function(d) {
+  var holder;
+  for(var i = 0; i < d.sentences_tone.length; i++) {
+    if(d.sentences_tone[i].tones.length > 0) {
+    for(var j = 0; j < d.sentences_tone[i].tones.length; j++) {
+        if(d.sentences_tone[i].tones[j].tone_name == "Joy"){
+          holder = d.sentences_tone[i].tones[j];
+          holder["time"]=d.time;
+          holder["sentence"]=d.sentences_tone[i].text;
+          joy.push(holder);
+          holder = "";
+        }
+        else if (d.sentences_tone[i].tones[j].tone_name == "Sadness"){
+          holder = d.sentences_tone[i].tones[j];
+          holder["time"]=d.time;
+          holder["sentence"]=d.sentences_tone[i].text;
+          sadness.push(holder);
+          holder = "";
+        }
+        else if (d.sentences_tone[i].tones[j].tone_name == "Confident"){
+          holder = d.sentences_tone[i].tones[j];
+          holder["time"]=d.time;
+          holder["sentence"]=d.sentences_tone[i].text;
+          confidence.push(holder);
+          holder = "";
+        }
+        else if (d.sentences_tone[i].tones[j].tone_name == "Analytical"){
+          holder = d.sentences_tone[i].tones[j];
+          holder["time"]=d.time;
+          holder["sentence"]=d.sentences_tone[i].text;
+          analytical.push(holder);
+          holder = "";
+        }
+        else if (d.sentences_tone[i].tones[j].tone_name == "Anger"){
+          holder = d.sentences_tone[i].tones[j];
+          holder["time"]=d.time;
+          holder["sentence"]=d.sentences_tone[i].text;
+          anger.push(holder);
+          holder = "";
+        }
+        else if (d.sentences_tone[i].tones[j].tone_name == "Disgust"){
+          holder = d.sentences_tone[i].tones[j];
+          holder["time"]=d.time;
+          holder["sentence"]=d.sentences_tone[i].text;
+          disgust.push(holder);
+          holder = "";
+        }
+        else if (d.sentences_tone[i].tones[j].tone_name == "Fear"){
+          holder = d.sentences_tone[i].tones[j];
+          holder["time"]=d.time;
+          holder["sentence"]=d.sentences_tone[i].text;
+          fear.push(holder);
+          holder = "";
+        }
+        else if (d.sentences_tone[i].tones[j].tone_name == "Tentative"){
+          holder = d.sentences_tone[i].tones[j];
+          holder["time"]=d.time;
+          holder["sentence"]=d.sentences_tone[i].text;
+          tentative.push(holder);
+          holder = "";
+        }
+        // else if (d.document_tone.tones[i].tone_name == "Sadness"){
+        //   holder = d.document_tone.tones[i];
+        //   holder["time"]=d.time;
+        //   sadness.push(holder);
+        //   holder = "";
+        // }
+        // else if (d.document_tone.tones[i].tone_name == "Confident"){
+        //   holder = d.document_tone.tones[i];
+        //   holder["time"]=d.time;
+        //   confidence.push(holder);
+        //   holder = "";
+        // }
+        // else if (d.document_tone.tones[i].tone_name == "Analytical"){
+        //   holder = d.document_tone.tones[i];
+        //   holder["time"]=d.time;
+        //   analytical.push(holder);
+        //   holder = "";
+        // }
+      }
+    }
+  }
+});
+
+
+
+
+var xMin = d3.min(joy, function(d) {return d.time;});
+var xMax = d3.max(joy, function(d) {return d.time;});
+
+
+
+var xScale = d3.time.scale()
+  .range([0,width])
+  .domain([xMin, xMax]);
+
+var yScale = d3.scale.linear()
+  .range([height,0])
+  .domain([0.45,1]);
+
+
+  var xAxis = d3.svg.axis()
+    .scale(xScale)
+    .orient("bottom")
+    .tickPadding(20)
+    .tickFormat(d3.time.format("%a %B %d"))
+    .ticks(d3.timeDay.every(1))
+    .tickSize(-height,0);
+  //
+
+
+  var yAxis = d3.svg.axis()
+    .scale(yScale)
+    .tickPadding(10)
+    .orient("left")
+    .tickFormat(d3.format(".0%"))
+    .ticks(4);
+
+    var tip = d3.tip()
+      .attr("class", "tooltip")
+      .offset([-20,0])
+      .html(function(d,i) {
+      return "<b>" + d.tone_name + "</b>: " + d.sentence;
+      });
+
+  var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    //
+    // var drawLine = d3.svg.line()
+    // .x(function(d) {return xScale(d.time);})
+    // .y(function(d){return yScale(d.score);});
+
+
+  svg.append("g")
+    .attr("class", "Axis")
+    .attr("transform","translate(0, "+(height)+")")
+    .call(xAxis);
+
+
+
+      svg.append("g")
+        .attr("class","Axis")
+        .call(yAxis);
+
+
+  // svg.append("text")
+  //   .attr("class", "axis-labels")
+  //   .attr("y", height-10)
+  //   .attr("x", 0)
+  //   .attr("dy", "7em")
+  //   .style("text-transform", "uppercase")
+  //   .text("Score");
+
+  // svg.append("g")
+  //   .attr("class","yAxis")
+  //   .call(yAxis);
+
+
+      // console.log("data", data);
+
+      //
+      // var circles = svg.selectAll("circle")
+      //   .data(data)
+      //   .enter()
+      //   .append("circle");
+      //
+      //
+      // var circleAttributes = circles
+      //   .attr("cx", function(d) {return xScale(d.time)})
+      //   .attr("cy", function(d) {return yScale(d.score)})
+      //   .attr("r", 2)
+      //   .attr("fill", "red");
+      //
+      //
+      //
+console.log(joy)
+  var joyCircles = svg.selectAll(".joy-circle")
+    .data(joy)
+    .enter()
+    .append("circle")
+    .attr("class","joy-circle")
+    .attr("cx", function(d) {return xScale(d.time)})
+    .attr("cy", function(d) {return yScale(d.score)})
+    .attr("r", function(d) { return d.sentence.length / 10;})
+    .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+    .attr("fill", "fuchsia");
+
+  var confidentCircles = svg.selectAll(".confident-circle")
+    .data(confidence)
+    .enter()
+    .append("circle")
+    .attr("class", "confident-circle")
+    .attr("cx", function(d) {return xScale(d.time)})
+    .attr("cy", function(d) {return yScale(d.score)})
+    .attr("r", function(d) { return d.sentence.length / 10;})
+
+    // .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+    .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+    .attr("fill", "springgreen");
+
+  var analyticalCircles = svg.selectAll(".analytical-circle")
+    .data(analytical)
+    .enter()
+    .append("circle")
+    .attr("class", "analytical-circle")
+    .attr("cx", function(d) {return xScale(d.time)})
+    .attr("cy", function(d) {return yScale(d.score)})
+    .attr("r", function(d) { return d.sentence.length / 10;})
+
+    // .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+    .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+    .attr("fill", "gold");
+
+  var tentativeCircles = svg.selectAll(".tentative-circle")
+    .data(tentative)
+    .enter()
+    .append("circle")
+    .attr("class", "tentative-circle")
+    .attr("cx", function(d) {return xScale(d.time)})
+    .attr("cy", function(d) {return yScale(d.score)})
+    .attr("r", function(d) { return d.sentence.length / 10;})
+
+    // .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+    .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+    .attr("fill", "lavender");
+
+  var sadCircles = svg.selectAll(".sad-circle")
+    .data(sadness)
+    .enter()
+    .append("circle")
+    .attr("class", "sad-circle")
+    .attr("cx", function(d) {return xScale(d.time)})
+    .attr("cy", function(d) {return yScale(d.score)})
+    .attr("r", function(d) { return d.sentence.length / 10;})
+
+    // .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+    .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+    .attr("fill", "cyan");
+
+  var fearCircles = svg.selectAll(".fear-circle")
+    .data(fear)
+    .enter()
+    .append("circle")
+    .attr("class", "fear-circle")
+    .attr("cx", function(d) {return xScale(d.time)})
+    .attr("cy", function(d) {return yScale(d.score)})
+    .attr("r", function(d) { return d.sentence.length / 10;})
+
+    // .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+    .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+    .attr("fill", "blue");
+
+  var angryCircles = svg.selectAll(".angry-circle")
+    .data(anger)
+    .enter()
+    .append("circle")
+    .attr("class", "angry-circle")
+    .attr("cx", function(d) {return xScale(d.time)})
+    .attr("cy", function(d) {return yScale(d.score)})
+    .attr("r", function(d) { return d.sentence.length / 10;})
+
+    // .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+    .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+    .attr("fill", "deeppink");
+
+  var disgustCircles = svg.selectAll(".disgust-circle")
+    .data(disgust)
+    .enter()
+    .append("circle")
+    .attr("class", "disgust-circle")
+    .attr("cx", function(d) {return xScale(d.time)})
+    .attr("cy", function(d) {return yScale(d.score)})
+    .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+    .attr("fill-opacity", 0.25)
+    .attr("fill", "thistle");
+
+
+
+  svg.selectAll("circle")
+  .call(tip)
+
+  .on("mouseover", function(d) {
+    tip.show(d);
+  })
+
+  .on("mouseout", function(d) {
+    tip.hide(d);
+  })
+
+
+//       var joyLine = svg.append("path")
+//         .attr("d", drawLine(joy))
+//     .attr("stroke", "orange")
+//     .attr("stroke-width", 1)
+//     .attr("fill", "none")
+//     .attr("class", "joy-line");
+//
+//
+//     var sadnessLine = svg.append("path")
+//       .attr("d", drawLine(sadness))
+//   .attr("stroke", "blue")
+//   .attr("stroke-width", 1)
+//   .attr("fill", "none")
+//   .attr("class", "sadness-line");
+//
+//
+//   var confidenceLine = svg.append("path")
+//     .attr("d", drawLine(confidence))
+// .attr("stroke", "red")
+// .attr("stroke-width", 1)
+// .attr("fill", "none")
+// .attr("class", "confidence-line");
+//
+//
+//   var analyticalLine = svg.append("path")
+//     .attr("d", drawLine(analytical))
+// .attr("stroke", "green")
+// .attr("stroke-width", 1)
+// .attr("fill", "none")
+// .attr("class", "analytical-line");
+}
+
+</script>
+</body>

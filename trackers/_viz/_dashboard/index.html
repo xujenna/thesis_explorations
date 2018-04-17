@@ -632,7 +632,7 @@ var productivitycontainer = svg.append("path")
 // var secondT;
 // var eLines = [];
 
-var blinksSel1 = svg.selectAll(".chromeIcons")
+var icons = svg.selectAll(".chromeIcons")
   .data(chromeRollup)
   .enter()
   .append("g")
@@ -649,6 +649,7 @@ var blinksSel1 = svg.selectAll(".chromeIcons")
   .attr("transform", function(d,j){
       return "translate(" + xScale(d.time) + "," + yScale((j+2)*2) + ")";
     })
+
 
 })
 });
