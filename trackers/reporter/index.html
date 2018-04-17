@@ -411,7 +411,8 @@ svg.append("path")
     .attr("stroke", "blue")
     .attr("stroke-width", 1)
     .attr("fill", "none")
-    .attr("class", "line");
+    .attr("class", "line")
+    .attr("opacity", 0.75);
 
 
 var moodCircles = svg.selectAll(".mood-circle")
@@ -437,9 +438,45 @@ svg.append("path")
   .attr("stroke", "magenta")
   .attr("stroke-width", 1)
   .attr("fill", "none")
-  .attr("class", "line");
+  .attr("class", "line")
+  .attr("opacity", 0.75);
 
 
+  var compulsionCircles = svg.selectAll(".compulsion-circle")
+    .data(newResponses)
+    .enter()
+    .append("circle")
+    .attr("class","compulsion-circle")
+    .attr("cx", function(d) {return xScale(d.time)})
+    .attr("r", function(d){
+      if(d.compulsions == "True") {
+        return "3px";
+      }
+      else{
+        return "0px";
+      }
+    })
+    .attr("cy", yScale(0.5))
+    .attr("opacity", 0.75)
+    .attr("fill", "blue");
+
+var aloneCircles = svg.selectAll(".alone-circle")
+  .data(newResponses)
+  .enter()
+  .append("circle")
+  .attr("class","alone-circle")
+  .attr("cx", function(d) {return xScale(d.time)})
+  .attr("r", function(d){
+    if(d.alone == "True" || d.alone =="true") {
+      return "3px";
+    }
+    else{
+      return "0px";
+    }
+  })
+  .attr("cy", yScale(0.25))
+  .attr("opacity", 0.75)
+  .attr("fill", "cyan");
 //
 // var moodTip = d3.tip()
 //   .attr("class", "tooltip")

@@ -131,8 +131,9 @@
     margin-top:-27px;
   }
 
-.container {
+.affectiva-container {
   display:block;
+  margin-top:75px;
 }
 
 }
@@ -224,7 +225,7 @@ var yMin = d3.min(affectiva,function(d){return d.min_valence;});
 
     var margin = {top: 30, right: 120, bottom: 0, left: 140};
 
-    var width = 3000 - margin.left - margin.right,
+    var width = 3500 - margin.left - margin.right,
         height = 700 - margin.top - margin.bottom;
 
 
@@ -289,13 +290,12 @@ var yMin = d3.min(affectiva,function(d){return d.min_valence;});
   //   .y(function(d){return yScale(d.blinks);});
 
 
-    var markers = [
-     { id:0, name: 'attention', path: 'M 0,0 m -1,-2.5 L 1,-2.5 L 1,2.5 L -1,2.5 Z', fill: 'fuchsia', viewbox: '-1 -5 2 10' },
-     { id: 1, name: 'engagement', path: 'M 0,0 m -1,-2.5 L 1,-2.5 L 1,2.5 L -1,2.5 Z', fill: 'gold', viewbox: '-1 -5 2 10' },
-     { id: 2, name: 'valence', path: 'M 0,0 m -1,-2.5 L 1,-2.5 L 1,2.5 L -1,2.5 Z', fill: 'cyan', viewbox: '-1 -5 2 10' },
+  var markers = [
+   { id:0, name: 'attention', path: 'M 0,0 m -1,-4 L 1,-4 L 1,4 L -1,4 Z', fill: 'fuchsia', viewbox: '-1 -5 2 10' },
+   { id: 1, name: 'engagement', path: 'M 0,0 m -1,-2.5 L 1,-2.5 L 1,2.5 L -1,2.5 Z', fill: 'gold', viewbox: '-1 -5 2 10' },
+   { id: 2, name: 'valence', path: 'M 0,0 m -1,-4 L 1,-4 L 1,4 L -1,4 Z', fill: 'cyan', viewbox: '-1 -5 2 10' },
+  ]
 
-
-    ]
 
     var defs = svg.append('svg:defs')
 
@@ -330,7 +330,7 @@ var yMin = d3.min(affectiva,function(d){return d.min_valence;});
   svg.append("text")
     .attr("class", "axis")
     .attr("y", 60)
-    .attr("x", -60)
+    .attr("x", -85)
     .text("BLINKS/MIN");
 
     var blinkCircles = svg.selectAll(".blink-circle")
@@ -341,7 +341,7 @@ var yMin = d3.min(affectiva,function(d){return d.min_valence;});
       .attr("cx", function(d) {return xScale(d.time)})
       .attr("cy", 60)
       .attr("r", function(d) { return d.blinks * 2;})
-      .attr("fill-opacity", 0.5)
+      .attr("fill-opacity", 0.6)
       .attr("fill", "blue");
 
 
@@ -369,7 +369,7 @@ var yMin = d3.min(affectiva,function(d){return d.min_valence;});
 
   var svg2 = container.append("svg")
       .attr("width", width + margin.left + margin.right)
-      .attr("height", 600 + margin.top + margin.bottom)
+      .attr("height", 675 + margin.top + margin.bottom)
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
     .attr("class", "chart")
@@ -441,39 +441,30 @@ var yMin = d3.min(affectiva,function(d){return d.min_valence;});
     .append("line")
     .attr("class", "valenceLines")
     .attr("stroke", "cyan")
-    .attr("stroke-width", 10)
-    .attr("stroke-opacity", 0.2)
+    .attr("stroke-width", 1.5)
+    .attr("stroke-opacity", 0.65)
     .attr("x1", function(d){ return xScale(d.time);})
     .attr("x2", function(d) {return xScale(d.time);})
     .attr("y1", function(d){return yScale(d.min_valence)})
     .attr("y2", function(d) {return yScale(d.max_valence)})
-    // .attr('marker-start', 'url(#marker_valence)')
-    // .attr('marker-end', 'url(#marker_valence)');
+    .attr('marker-start', 'url(#marker_valence)')
+    .attr('marker-end', 'url(#marker_valence)');
 
-      var attentionLines = svg2.selectAll(".attentionLines")
-      .data(affectiva)
-      .enter()
-      .append("line")
-      .attr("class", "attentionLines")
-      .attr("stroke", "fuchsia")
-      .attr("stroke-width", 10)
-      .attr("stroke-opacity", 0.2)
-      // .attr("stroke-linecap", "butt")
-      .attr("x1", function(d){ return xScale(d.time);})
-      .attr("x2", function(d) {return xScale(d.time);})
-      .attr("y1", function(d){return yScale(d.min_attention)})
-      .attr("y2", function(d) {return yScale(d.max_attention)})
-      // .attr('marker-start', 'url(#marker_attention)')
-      // .attr('marker-end', 'url(#marker_attention)');
-
-      attentionLines.append("line")
-      .attr("x1",function(d){return xScale(d.time);})
-      .attr("x2", function(d){return xScale(d.time)+15})
-      .attr("y", function(d) {return yScale(d.max_attention)})
-      .attr("stroke", "hotpink")
-      .attr("stroke-width", 1.5)
-      .attr("stroke-opacity", 1);
-
+    var attentionLines = svg2.selectAll(".attentionLines")
+    .data(affectiva)
+    .enter()
+    .append("line")
+    .attr("class", "attentionLines")
+    .attr("stroke", "fuchsia")
+    .attr("stroke-width", 1.5)
+    .attr("stroke-opacity", 0.65)
+    // .attr("stroke-linecap", "butt")
+    .attr("x1", function(d){ return xScale(d.time);})
+    .attr("x2", function(d) {return xScale(d.time);})
+    .attr("y1", function(d){return yScale(d.min_attention)})
+    .attr("y2", function(d) {return yScale(d.max_attention)})
+    .attr('marker-start', 'url(#marker_attention)')
+    .attr('marker-end', 'url(#marker_attention)');
 
 
 // var valenceCircles = svg.selectAll(".valence-circle")
@@ -489,34 +480,6 @@ var yMin = d3.min(affectiva,function(d){return d.min_valence;});
 //
 //
 
-  //
-  // var emoji = svg.selectAll(".emoji")
-  //   .data(affectiva)
-  //   .enter()
-  //   .append("g")
-  //   .attr("class", "emoji")
-  //   .attr("transform", function(d) {
-  //     return "translate(" + (xScale(d.time)-7) + ")";})
-  //   .selectAll(".emoji")
-  //   .data(function(d) {
-  //     return d.emoji;
-  //   })
-  //   .enter()
-  //   .append("g")
-  //   .attr("transform", function(d,i) {
-  //     return "translate(0," + yScale(i*5) + ")";
-  //   })
-  //   .append("text")
-  //   .text(function(d) {return d;})
-  //     .attr("font-size", "15px");
-
-  // var blinksContainer = svg.append("path")
-  //   .attr("d", blinkLine(affectiva))
-  //   .attr("stroke", "springgreen")
-  //   .attr("stroke-width", 1)
-  //   .attr("opacity", 1)
-  //   .attr("fill", "none")
-  //   .attr("class", "line");
 
     svg.append("text")
       .attr("y", 0)
@@ -549,6 +512,74 @@ var yMin = d3.min(affectiva,function(d){return d.min_valence;});
   })
 
 
+  var svg3 = container.append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", 300 + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + ",-40)")
+    .attr("class", "chart")
+    .style("display", "block");
+
+
+  // svg3.append("g")
+  //   .attr("class", "Axis")
+  //   .attr("transform","translate(0, "+(yScale(0)/2.5)+")")
+  //   .call(xAxis);
+  svg3.append("line")
+    .style("stroke", "#e0e0e0")
+    .style("stroke-dasharray", ("5,5"))
+    .attr("x1", -30)
+    .attr("y1", 140)
+    .attr("x2", width)
+    .attr("y2", 140);
+
+  svg3.append("text")
+    .attr("class", "axis")
+    .attr("y", 140)
+    .attr("x", -85)
+    .text("EXPRESSIONS");
+
+    var j = 0;
+    var k = 0;
+
+    var emoji = svg3.selectAll(".emoji")
+      .data(affectiva)
+      .enter()
+      .append("g")
+      .attr("class", "emoji")
+      .attr("transform", function(d) {
+        return "translate(" + (xScale(d.time)-7) + ")";})
+      .selectAll(".emoji")
+      .data(function(d) {
+        return d.emoji;
+      })
+      .enter()
+      .append("g")
+      .attr("transform", function(d,i) {
+
+        if(d <= "😏" || d >= "😘" && d <="😝" || d == "😗") { //happy
+          if(i > 0){
+            j += 1;
+          }
+          else{
+            j = 0;
+          }
+          return "translate(0," + (yScale(j*15)/2.5) + ")";
+          }
+
+        else if (d > "😏" && d < "😘" || d > "😝") { //sad
+          if(i > 0){
+            k += 1;
+          }
+          else{
+            k = 0;
+          }
+          return "translate(0," + (300 - yScale(k*15)/2.5) + ")";
+      }
+      })
+      .append("text")
+      .text(function(d) {return d;})
+        .attr("font-size", "20px");
 
 
 

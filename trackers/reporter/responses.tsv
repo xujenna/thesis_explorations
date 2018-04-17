@@ -52,3 +52,10 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-16T18:48:19.579470	3	neutral	in class	in class, schoolwork, eating	3	False	School	3	2	2	False
 2018-04-16T20:45:00.587875	4	cheerful	talked to a few classmates during fire drill, got boba guys	in class, with friends	8	False	School	3	2	3	False
 2018-04-16T22:32:56.008568	3	sleepy,stressed	jet lag, long day, have hw to do	Schoolwork	1	False	Home	3	4	5	False
+2018-04-17T00:05:03.971960	2	sooo sleepy	getting late	Schoolwork	1	False	Home	2	3	5	True
+2018-04-17T02:04:10.561967	1	sleepy but can't sleep, stressed	caffeine, stress	Schoolwork	0	False	Home	2	4	5	True
+2018-04-17T04:31:00.950041	2	grumpy	couldn't sleep last night	Email	2	False	Home	2	3	5	True
+2018-04-17T11:51:16.224615	5	cheerful	hanging out with classmates, had good couple's therapy session, running on adrenaline	with friends	4	False	School	4	2	4	False
+2018-04-17T13:32:36.023295	4	cheerful but drowsy	group work	in class	7	False	School	3	3	4	True
+2018-04-17T15:35:57.809634	3	neutral	out of class, working now	schoolwork, eaitng	4	False	School (Leslie eLab)	3	4	4	True
+2018-04-17T16:36:59.385299	4	productive	working on project	schoolwork	1	False	School (Leslie eLab)	3	3	4	False
