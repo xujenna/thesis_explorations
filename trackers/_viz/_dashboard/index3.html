@@ -195,6 +195,14 @@
     /*border-bottom: 1px solid;*/
   }
 
+  h5 {
+    font-family: europa, sans-serif;
+    font-style: light;
+    font-weight:400;
+    font-size:10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
   /*h4::after {
     content: '';
     position: absolute;
@@ -226,6 +234,25 @@
     margin-left:40px;
     padding-right: 50px;
   }
+
+  .arrow {
+    display:block;
+    width: 1px;
+    height:100px;
+    background-color:white;
+    margin: auto;
+    margin-top:
+  }
+  .arrow::after {
+    content: "\25BE";
+    display:block;
+    position:relative;
+    top:100px;
+    text-align: center;
+    margin-left:-3.5px;
+    line-height:2px;
+
+  }
   </style>
 
 
@@ -243,6 +270,7 @@
     <h4>Kicker Here</h4>
     <h1>Life Support</h1>
     <p>In 1977, the great computer scientist Donald Knuth published a paper called The Complexity of Songs, which is basically one long joke about the repetitive lyrics of newfangled music (example quote: "the advent of modern drugs has led to demands for still less memory, and the ultimate improvement of Theorem 1 has consequently just been announced"). I'm going to try to test this hypothesis with data. I'll be analyzing the repetitiveness of a dataset of 15,000 songs that charted on the Billboard Hot 100 between 1958 and 2017.</p>
+    <br><br><br><p><h5>Choose a date</h5><span class="arrow"></span></p>
   </div>
   </div>
   <div class="container" id="context-container">
