@@ -1,0 +1,1395 @@
+<html>
+<head>
+  <!DOCTYPE html>
+  <meta charset="utf-8">
+
+  <style type="text/css">
+    /*css to go here*/
+
+    body {
+      font-family: europa;
+      font-size: 11px;
+      background-size: cover;
+      background-color:#fff;
+      text-align: center;
+  /*    background-image:url("hour13_cover.png");
+  */
+  }
+
+  svg {
+  /*  border: 1px solid #f0f;
+  */  /*color: white;*/
+      /*fill: white;*/
+      z-index: 100;
+      display:inline;
+      /*margin:50px 0px 100px 0px;*/
+  }
+
+  .heading {
+    position:fixed;
+    left:50%;
+    transform: translate(-50%, 0);
+  }
+
+  .title {
+    font-size:15px;
+    font-family:monospace;
+    color:#000;
+    letter-spacing: 1px;
+  }
+
+  .kicker {
+    font-family:roboto;
+    font-size:11px;
+    letter-spacing: 2px;
+    text-align:center;
+    border-bottom: 1px solid white;
+    padding-bottom:4px;
+    display:table;
+    margin:auto;
+    width:inherit;
+    margin-top:40px;
+    margin-bottom:15px;
+    text-decoration: underline;
+  }
+
+  .axis line,
+  .axis path {
+    fill:none;
+    stroke:silver;
+    stroke-width:1;
+  }
+
+
+  .axis text {
+    fill: black;
+    font-family: europa, sans-serif;
+    font-style: light;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+  .tick line {
+    fill: none;
+    stroke-dasharray: 2px 4px;
+  }
+
+
+  .y-axis-label {
+    margin-left:0px;
+  }
+
+
+  .chart {
+    z-index: 101;
+  }
+
+  .time-title {
+    display:inline;
+  }
+/*
+  .wrapper {
+    height: 100%;
+    display:inline;
+    margin:20px;
+  }*/
+
+
+  .tooltip {
+    width: 200px;
+    font-size:12px;
+    font-family:monospace;
+    background:rgba(255,255,255,0.9);
+    padding:5px;
+    line-height:1.25;
+    clear:both;
+    text-align: center;
+  }
+
+
+.container {
+  display:inline;
+}
+
+
+  .n::after {
+    font-size:18px;
+    width: 200px;
+    color: black;
+    content: "\2193";
+    position:absolute;
+    text-align:center;
+    display:block;
+    pointer-events:none;
+    margin-top:5px;
+  }
+
+  .s::before {
+    font-size:18px;
+    width: 200px;
+    color: black;
+    content: "\2191";
+    position:absolute;
+    text-align:center;
+    display:block;
+    pointer-events:none;
+    clear:both;
+    margin-top:-27px;
+  }
+
+  .hover-line {
+  stroke: black;
+  fill: none;
+  stroke-width: 1px;
+  }
+
+  .zoom {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+  }
+
+.container {
+    margin: 100px 100px 100px 100px;
+    display:inline-block;
+    /*width:600px;*/
+  }
+
+  h1 {
+    font-size:28px;
+  }
+
+  #context-container {
+    margin:0px;
+    width:100%;
+    position: fixed;
+    top:0px;
+
+  }
+  </style>
+
+
+</head>
+<body>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-time.v1.min.js"></script>
+  <script src="d3-tip.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/fao6qlb.css">
+
+  <div id="context-container">
+    <h1>Range:</h1>
+    <svg id="context"></svg>
+  </div>
+
+  <div class="container" id="reporter-container">
+    <h1>Mood Reporter</h1>
+    <svg id="reporter"></svg>
+  </div>
+
+  <div class="container" id="keylogger-container">
+    <h1>Keylogger Sentiments</h1>
+    <svg id="keylogger"></svg>
+  </div>
+
+
+<script>
+
+
+var margin = {top: 50, right: 30, bottom: 50, left: 50};
+var margin2 = {top: 5, right:30, bottom:20, left:50};
+
+var width = 600 - margin.left - margin.right,
+height = 350 - margin.top - margin.bottom;
+
+var width2 = 1000 - margin.left - margin.right;
+var height2 = 80 - margin2.top - margin2.bottom;
+
+var body = d3.select("body");
+
+var contextSVG = d3.select("#context")
+      .attr("width", width2 + margin.left + margin.right)
+      .attr("height", height2 + margin2.top + margin2.bottom);
+
+
+var reporterSVG = d3.select("#reporter")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom);
+
+
+var xScale = d3.scaleTime()
+  .range([0,width]);
+  // .domain([xMin, xMax]);
+
+var xScale2 = d3.scaleTime()
+.range([0,width2]);
+
+var yScale = d3.scaleLinear()
+  .range([height,0]);
+  // .domain([0.45,1]);
+
+var yScale2 = d3.scaleLinear()
+  .range([height2,0]);
+
+var xAxis = d3.axisBottom(xScale).tickPadding(10);
+var xAxis2 = d3.axisBottom(xScale2).tickSize(-height2).tickPadding(10);
+var yAxis = d3.axisLeft(yScale).tickSize(-width).ticks(5).tickPadding(10);
+
+
+var reporterChart = reporterSVG.append("g")
+  .attr("class", "focus")
+  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var contextChart = contextSVG.append("g")
+  .attr("class", "context")
+  .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
+
+
+
+  var brush = d3.brushX()
+    .extent([[0,0], [width2, height2]])
+    .on("brush end", brushed);
+
+  var zoom = d3.zoom()
+    .scaleExtent([1, Infinity])
+    .translateExtent([[0,0], [width, height]])
+    .extent([[0,0], [width, height]])
+    .on("zoom", zoomed);
+
+
+  var moodArea = d3.area()
+      .curve(d3.curveCardinal)
+      .x(function(d) { return xScale(d.time); })
+      .y1(function(d) { return yScale(d.mood); })
+      .y0(height)
+        .defined(function(d){return d.mood!=null;});
+
+  var moodArea2 = d3.area()
+      .curve(d3.curveCardinal)
+      .x(function(d) { return xScale2(d.time); })
+      .y1(function(d) { return yScale2(d.mood); })
+      .y0(height2)
+        .defined(function(d){return d.mood!=null;});
+
+  var fatigueArea = d3.area()
+    .curve(d3.curveCardinal)
+    .x(function(d) { return xScale(d.time); })
+    .y1(function(d) { return yScale(d.fatigue); })
+    .y0(height)
+      .defined(function(d){return d.fatigue!=null;});
+
+  var fatigueArea2 = d3.area()
+    .curve(d3.curveCardinal)
+    .x(function(d) { return xScale2(d.time); })
+    .y1(function(d) { return yScale2(d.fatigue); })
+    .y0(height2)
+      .defined(function(d){return d.fatigue!=null;});
+
+  var stressArea = d3.area()
+      .curve(d3.curveCardinal)
+      .x(function(d) { return xScale(d.time); })
+      .y1(function(d) { return yScale(d.stress); })
+      .y0(height)
+        .defined(function(d){return d.stress!=null;});
+
+  var stressArea2 = d3.area()
+      .curve(d3.curveCardinal)
+      .x(function(d) { return xScale2(d.time); })
+      .y1(function(d) { return yScale2(d.stress); })
+      .y0(height2)
+        .defined(function(d){return d.stress!=null;});
+
+  var moraleArea = d3.area()
+      .curve(d3.curveCardinal)
+      .x(function(d) { return xScale(d.time); })
+      .y1(function(d) { return yScale(d.morale); })
+      .y0(height)
+        .defined(function(d){return d.morale!=null;});
+
+  var moraleArea2 = d3.area()
+      .curve(d3.curveCardinal)
+      .x(function(d) { return xScale2(d.time); })
+      .y1(function(d) { return yScale2(d.morale); })
+      .y0(height2)
+        .defined(function(d){return d.morale!=null;});
+
+
+  var moodLine = d3.line()
+  .curve(d3.curveCardinal)
+  .defined(function(d){return d.mood!=null})
+    .x(function(d) {return xScale(d.time);})
+    .y(function(d){return yScale(d.mood);});
+
+  var moodLine2 = d3.line()
+  .curve(d3.curveCardinal)
+  .defined(function(d){return d.mood!=null})
+    .x(function(d) {return xScale2(d.time);})
+    .y(function(d){return yScale2(d.mood);});
+
+
+  var fatigueLine = d3.line()
+  .curve(d3.curveCardinal)
+  .defined(function(d){return d.fatigue!=null})
+    .x(function(d) {return xScale(d.time);})
+    .y(function(d){return yScale(d.fatigue);});
+
+  var fatigueLine2 = d3.line()
+  .curve(d3.curveCardinal)
+  .defined(function(d){return d.fatigue!=null})
+    .x(function(d) {return xScale2(d.time);})
+    .y(function(d){return yScale2(d.fatigue);});
+
+  var moraleLine = d3.line()
+  .curve(d3.curveCardinal)
+  .defined(function(d){return d.fatigue!=null})
+    .x(function(d) {return xScale(d.time);})
+    .y(function(d){return yScale(d.morale);});
+
+  var moraleLine2 = d3.line()
+  .curve(d3.curveCardinal)
+  .defined(function(d){return d.fatigue!=null})
+    .x(function(d) {return xScale2(d.time);})
+    .y(function(d){return yScale2(d.morale);});
+
+  var stressLine = d3.line()
+  .curve(d3.curveCardinal)
+  .defined(function(d){return d.stress!=null})
+    .x(function(d) {return xScale(d.time);})
+    .y(function(d){return yScale(d.stress);});
+
+  var stressLine2 = d3.line()
+  .curve(d3.curveCardinal)
+  .defined(function(d){return d.stress!=null})
+    .x(function(d) {return xScale2(d.time);})
+    .y(function(d){return yScale2(d.stress);});
+
+
+
+var newResponses = [];
+
+d3.tsv("responses.tsv", function (err, responses) {
+    if (err) console.warn(err, "error loading data");
+
+
+
+
+responses.forEach(function(d){
+  var dateTime = new Date(String(d.time));
+  d.time = dateTime;
+  d.mood = +d.mood;
+  d.fatigue = +d.fatigue;
+  d.morale = +d.morale;
+  d.social = +d.social;
+  d.stress = +d.stress;
+});
+
+// var mood = [];
+// var fatigue = [];
+// var stress = [];
+// var morale = [];
+
+
+responses.forEach(function(d,i){
+  // var holderArray = [];
+  // var holderBrackets = {};
+  //
+  // holderBrackets["time"] = d.time;
+  // holderBrackets["variable"] = "mood";
+  // holderBrackets["value"] = d.mood;
+  // holderBrackets["moodNotes"] = d.moodNotes;
+  // holderBrackets["trigger"] = d.trigger;
+  // mood.push(holderBrackets)
+  //
+  // holderBrackets = {};
+  // holderBrackets["time"] = d.time;
+  // holderBrackets["variable"] = "fatigue";
+  // holderBrackets["value"] = d.fatigue;
+  // fatigue.push(holderBrackets)
+  //
+  // holderBrackets = {};
+  // holderBrackets["time"] = d.time;
+  // holderBrackets["variable"] = "morale";
+  // holderBrackets["value"] = d.morale;
+  // morale.push(holderBrackets)
+  //
+  // holderBrackets = {};
+  // holderBrackets["time"] = d.time;
+  // holderBrackets["variable"] = "stress";
+  // holderBrackets["value"] = d.stress;
+  // holderBrackets["activities"] = d.activity;
+  // stress.push(holderBrackets)
+
+  // newResponses.push(holderArray);
+newResponses.push(d)
+
+  if(i+1 == responses.length){
+    return;
+  }
+
+
+  var timee = responses[i+1].time;
+
+
+  if(d.time < (timee - 20000000)) {
+    var nullTime = new Date(timee - 20000000);
+    var nullItems = {};
+
+    nullItems["time"] = nullTime;
+    nullItems["mood"] = null;
+    nullItems["moodNotes"] = null;
+    nullItems["fatigue"] = null;
+    nullItems["stress"] = null;
+    nullItems["activities"] = null;
+    nullItems["morale"] = null;
+
+    newResponses.push(nullItems);
+  }
+
+})
+
+
+// newResponses.push(mood);
+// newResponses.push(morale);
+// newResponses.push(fatigue);
+// newResponses.push(stress);
+console.log(newResponses)
+
+
+xScale.domain(d3.extent(newResponses, function(d) {return d.time;}));
+yScale.domain([0,5]);
+xScale2.domain(xScale.domain());
+yScale2.domain(yScale.domain());
+
+reporterChart.append("g")
+  .attr("class", "axis axis--x")
+  .attr("transform","translate(0, "+(height)+")")
+  .call(xAxis);
+
+reporterChart.append("g")
+.attr("class", "axis axis--y")
+  .call(yAxis);
+
+
+// var variableGroups = focus.selectAll(".area")
+//   .data(newResponses)
+//   .enter().append("g")
+// variableGroups.selectAll(".area")
+//   .data(function(d){return d;})
+//   .enter().append("path")
+//   // .text(function(d){console.log(d.value)})
+//   .attr("class", "area")
+//   .attr("d", function(d){return area(d);})
+//   .attr("fill", "magenta")
+//   .attr("opacity", 0.4);
+//
+
+reporterChart.append("path")
+  .datum(newResponses)
+  .attr("class", "moodArea")
+  .attr("d", moodArea)
+  .attr("fill", "magenta")
+  .attr("opacity", 0.4);
+
+reporterChart.append("path")
+  .attr("d", moodLine(newResponses))
+  .attr("stroke", "magenta")
+  .attr("stroke-width", 2)
+  .attr("fill", "none")
+  .attr("class", "moodLine");
+
+reporterChart.append("path")
+  .datum(newResponses)
+  .attr("class", "moraleArea")
+  .attr("d", moraleArea)
+  .attr("fill", "gold")
+  .attr("opacity", 0.4);
+
+reporterChart.append("path")
+  .attr("d", moraleLine(newResponses))
+  .attr("stroke", "gold")
+  .attr("stroke-width", 2)
+  .attr("fill", "none")
+  .attr("class", "moraleLine");
+
+contextChart.append("g")
+      .attr("class", "axis")
+      .attr("transform", "translate(0," + height2 + ")")
+      .call(xAxis2);
+
+
+  contextChart.append("path")
+    .attr("d", moodLine2(newResponses))
+    .attr("stroke", "black")
+    .attr("stroke-width", 2)
+    .attr("fill", "none")
+    .attr("class", "line");
+
+
+  contextChart.append("g")
+      .attr("class", "brush")
+      .call(brush)
+      .call(brush.move, xScale2.range());
+
+  reporterChart.append("rect")
+      .attr("class", "zoom")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+      .call(zoom);
+  });
+
+    // svg.append("text")
+    //     .attr("class", "axis")
+    //     .attr("y", yScale(newResponses[newResponses.length - 1].fatigue)-10)
+    //     .attr("x", width + 10)
+    //     .text("Fatigue");
+
+    function brushed() {
+      if (d3.event.sourceEvent && d3.event.sourceEvent.type === "zoom") return; // ignore brush-by-zoom
+      var s = d3.event.selection || xScale2.range();
+      xScale.domain(s.map(xScale2.invert, xScale2));
+      reporterChart.select(".moodArea").attr("d", moodArea);
+      reporterChart.select(".moodLine").attr("d", moodLine(newResponses));
+      reporterChart.select(".moraleArea").attr("d", moraleArea);
+      reporterChart.select(".moraleLine").attr("d", moraleLine(newResponses));
+      keyloggerChart.selectAll(".joy-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".sad-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".tentative-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".angry-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".confident-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".analytical-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".disgust-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".fear-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      body.selectAll(".axis--x").call(xAxis);
+      reporterChart.select(".zoom").call(zoom.transform, d3.zoomIdentity
+          .scale(width / (s[1] - s[0]))
+          .translate(-s[0], 0));
+    }
+
+    function zoomed() {
+      if (d3.event.sourceEvent && d3.event.sourceEvent.type === "brush") return; // ignore zoom-by-brush
+      var t = d3.event.transform;
+      xScale.domain(t.rescaleX(xScale2).domain());
+      reporterChart.select(".moodArea").attr("d", moodArea);
+      reporterChart.select(".moodLine").attr("d", moodLine(newResponses));
+      reporterChart.select(".moraleArea").attr("d", moraleArea);
+      reporterChart.select(".moraleLine").attr("d", moraleLine(newResponses));
+      keyloggerChart.selectAll(".joy-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".sad-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".tentative-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".angry-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".confident-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".analytical-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".disgust-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+      keyloggerChart.selectAll(".fear-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});      body.selectAll(".axis--x").call(xAxis);
+      contextChart.select(".brush").call(brush.move, xScale.range().map(t.invertX, t));
+    }
+
+
+    //
+    // var stressAreaChart = svg.append("path")
+    //   // .data(newProductivity)
+    //   .attr("d", stressArea(newResponses))
+    //   .attr("fill", "blue")
+    //   .attr("opacity", 0.15);
+    //
+    // var fatigueAreaChart = svg.append("path")
+    //   // .data(newProductivity)
+    //   .attr("d", fatigueArea(newResponses))
+    //   .attr("fill", "lavender")
+    //   .attr("opacity", 0.6);
+    //
+    // var moraleAreaChart = svg.append("path")
+    //   // .data(newProductivity)
+    //   .attr("d", moraleArea(newResponses))
+    //   .attr("fill", "gold")
+    //   .attr("opacity", 0.25);
+    //
+    //
+    // svg.append("path")
+    //     .attr("d", fatigueLine(newResponses))
+    //     .attr("stroke", "lavender")
+    //     .attr("stroke-width", 1)
+    //     .attr("fill", "none")
+    //     .attr("class", "line");
+    //
+    // svg.append("text")
+    //     .attr("class", "axis")
+    //     .attr("y", yScale(newResponses[newResponses.length - 1].morale))
+    //     .attr("x", width + 10)
+    //     .text("Morale");
+    //
+    // svg.append("path")
+    //     .attr("d", moraleLine(newResponses))
+    //     .attr("stroke", "gold")
+    //     .attr("stroke-width", 1)
+    //     .attr("fill", "none")
+    //     .attr("class", "line");
+    //
+    //   var stressCircles = svg.selectAll(".stress-circle")
+    //     .data(newResponses)
+    //     .enter()
+    //     .append("circle")
+    //     .attr("class","stress-circle")
+    //     .attr("cx", function(d) {return xScale(d.time)})
+    //     .attr("r", 30)
+    //     .attr("cy", function(d) { return yScale(d.stress);})
+    //     .attr("opacity", 0)
+    //     .attr("fill", "blue");
+    //
+    //
+    // svg.append("text")
+    //     .attr("class", "axis")
+    //     .attr("y", yScale(newResponses[newResponses.length - 1].stress))
+    //     .attr("x", width + 30)
+    //     .text("Stress");
+    //
+    // svg.append("path")
+    //     .attr("d", stressLine(newResponses))
+    //     .attr("stroke", "blue")
+    //     .attr("stroke-width", 1)
+    //     .attr("fill", "none")
+    //     .attr("class", "line");
+    //
+    //
+    // var moodCircles = svg.selectAll(".mood-circle")
+    //   .data(newResponses)
+    //   .enter()
+    //   .append("circle")
+    //   .attr("class","mood-circle")
+    //   .attr("cx", function(d) {return xScale(d.time)})
+    //   .attr("r", 20)
+    //   .attr("cy", function(d) { return yScale(d.mood);})
+    //   .attr("opacity",0)
+    //   .attr("fill", "magenta");
+    //
+    //
+    // svg.append("text")
+    //     .attr("class", "axis")
+    //     .attr("y", yScale(newResponses[newResponses.length - 1].mood))
+    //     .attr("x", width + 10)
+    //     .text("Mood")
+
+
+
+    // Hover line.
+    // var hoverLineGroup = svg.append("g")
+    //           .attr("class", "hover-line");
+    // var hoverLine = hoverLineGroup
+    //   .append("line")
+    //     .attr("y1", 0).attr("y2", height);
+    //
+    // // Hide hover line by default.
+    // hoverLineGroup.style("opacity", 1e-6);
+    //
+    //
+    // svg.selectAll("circle")
+    // .attr("cursor", "pointer")
+    //
+    // .on("mouseover", function(d) {
+    //   console.log(d)
+    //   d3.select("body")
+    //
+    //   svg.append("g")
+    //   .attr("class", "hoverLabels")
+    //   .append("text")
+    //   .attr("x", xScale(d.time) + 12)
+    //   .attr("y", 8)
+    //   .text(d.moodNotes + ", " + d.trigger);
+    //   svg.append("g")
+    //   .attr("class", "hoverLabels")
+    //   .append("text")
+    //   .attr("x", xScale(d.time) + 12)
+    //   .attr("y", 26)
+    //   .text(d.activity);
+    //   hoverLine.attr("x1", xScale(d.time)).attr("x2", xScale(d.time));
+    //  hoverLineGroup.style("opacity", 1);
+    // })
+    //
+    //
+    // d3.select("body")
+    //     .on("mouseout", function(d) {
+    //     // tip.hide(d);
+    //         hoverLineGroup.style("opacity", 1e-6);
+    //
+    //     d3.selectAll(".hoverLabels").remove();
+    //
+    // });
+
+</script>
+<script>
+
+var keyloggerSVG = d3.select("#keylogger")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+var keyloggerChart = keyloggerSVG.append("g")
+        .attr("class", "keyloggerG")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+var yScaleKeylogger = d3.scaleLinear()
+  .range([height,0]);
+  // .domain([0.45,1]);
+var yAxisKeylogger = d3.axisLeft(yScaleKeylogger).tickSize(-width).ticks(4).tickPadding(10).tickFormat(function(d) { return d*100 + "%"; });
+
+
+
+  d3.json("log.json", ready);
+
+  function ready(err, data) {
+      if (err) console.warn(err, "error loading data");
+
+  data.forEach(function(d){
+    var dateTime = new Date(String(d.time));
+    d.time = dateTime;
+  })
+
+
+  var joy = [];
+  var sadness = [];
+  var confidence = [];
+  var analytical = [];
+  var anger = [];
+  var disgust = [];
+  var fear = [];
+  var tentative = [];
+
+  data.filter(function(d) {
+    var holder;
+    for(var i = 0; i < d.sentences_tone.length; i++) {
+      if(d.sentences_tone[i].tones.length > 0) {
+      for(var j = 0; j < d.sentences_tone[i].tones.length; j++) {
+          if(d.sentences_tone[i].tones[j].tone_name == "Joy"){
+            holder = d.sentences_tone[i].tones[j];
+            holder["time"]=d.time;
+            holder["sentence"]=d.sentences_tone[i].text;
+            joy.push(holder);
+            holder = "";
+          }
+          else if (d.sentences_tone[i].tones[j].tone_name == "Sadness"){
+            holder = d.sentences_tone[i].tones[j];
+            holder["time"]=d.time;
+            holder["sentence"]=d.sentences_tone[i].text;
+            sadness.push(holder);
+            holder = "";
+          }
+          else if (d.sentences_tone[i].tones[j].tone_name == "Confident"){
+            holder = d.sentences_tone[i].tones[j];
+            holder["time"]=d.time;
+            holder["sentence"]=d.sentences_tone[i].text;
+            confidence.push(holder);
+            holder = "";
+          }
+          else if (d.sentences_tone[i].tones[j].tone_name == "Analytical"){
+            holder = d.sentences_tone[i].tones[j];
+            holder["time"]=d.time;
+            holder["sentence"]=d.sentences_tone[i].text;
+            analytical.push(holder);
+            holder = "";
+          }
+          else if (d.sentences_tone[i].tones[j].tone_name == "Anger"){
+            holder = d.sentences_tone[i].tones[j];
+            holder["time"]=d.time;
+            holder["sentence"]=d.sentences_tone[i].text;
+            anger.push(holder);
+            holder = "";
+          }
+          else if (d.sentences_tone[i].tones[j].tone_name == "Disgust"){
+            holder = d.sentences_tone[i].tones[j];
+            holder["time"]=d.time;
+            holder["sentence"]=d.sentences_tone[i].text;
+            disgust.push(holder);
+            holder = "";
+          }
+          else if (d.sentences_tone[i].tones[j].tone_name == "Fear"){
+            holder = d.sentences_tone[i].tones[j];
+            holder["time"]=d.time;
+            holder["sentence"]=d.sentences_tone[i].text;
+            fear.push(holder);
+            holder = "";
+          }
+          else if (d.sentences_tone[i].tones[j].tone_name == "Tentative"){
+            holder = d.sentences_tone[i].tones[j];
+            holder["time"]=d.time;
+            holder["sentence"]=d.sentences_tone[i].text;
+            tentative.push(holder);
+            holder = "";
+          }
+          // else if (d.document_tone.tones[i].tone_name == "Sadness"){
+          //   holder = d.document_tone.tones[i];
+          //   holder["time"]=d.time;
+          //   sadness.push(holder);
+          //   holder = "";
+          // }
+          // else if (d.document_tone.tones[i].tone_name == "Confident"){
+          //   holder = d.document_tone.tones[i];
+          //   holder["time"]=d.time;
+          //   confidence.push(holder);
+          //   holder = "";
+          // }
+          // else if (d.document_tone.tones[i].tone_name == "Analytical"){
+          //   holder = d.document_tone.tones[i];
+          //   holder["time"]=d.time;
+          //   analytical.push(holder);
+          //   holder = "";
+          // }
+        }
+      }
+    }
+  });
+
+
+
+  var tip = d3.tip()
+    .attr("class", "tooltip")
+    .offset([-20,0])
+    .html(function(d,i) {
+    return "<b>" + d.tone_name + "</b>: " + d.sentence;
+    });
+
+      // var drawLine = d3.line()
+      // .x(function(d) {return xScale(d.time);})
+      // .y(function(d){return yScale(d.score);});
+
+  xScale.domain(d3.extent(newResponses, function(d) {return d.time;}));
+  yScaleKeylogger.domain([0.45,1]);
+  // xScale2.domain(xScale.domain());
+  // yScale2.domain(yScale.domain());
+
+  keyloggerChart.append("g")
+    .attr("class", "axis axis--x")
+    .attr("transform","translate(0, "+(height)+")")
+    .call(xAxis);
+
+  keyloggerChart.append("g")
+  .attr("class", "axis axis--y")
+    .call(yAxisKeylogger);
+
+
+    // svg.append("text")
+    //   .attr("class", "axis-labels")
+    //   .attr("y", height-10)
+    //   .attr("x", 0)
+    //   .attr("dy", "7em")
+    //   .style("text-transform", "uppercase")
+    //   .text("Score");
+
+    // svg.append("g")
+    //   .attr("class","yAxis")
+    //   .call(yAxis);
+
+
+        // console.log("data", data);
+
+        //
+        // var circles = svg.selectAll("circle")
+        //   .data(data)
+        //   .enter()
+        //   .append("circle");
+        //
+        //
+        // var circleAttributes = circles
+        //   .attr("cx", function(d) {return xScale(d.time)})
+        //   .attr("cy", function(d) {return yScale(d.score)})
+        //   .attr("r", 2)
+        //   .attr("fill", "red");
+        //
+
+  keyloggerChart.append("defs").append("clipPath")
+    .attr("id", "clip")
+    .append("rect")
+    .attr("width", width)
+    .attr("height", height);
+
+
+    var joyCircles = keyloggerChart.selectAll(".joy-circle")
+      .data(joy)
+      .enter()
+      .append("circle")
+      .attr("class","joy-circle")
+      .attr("cx", function(d) {return xScale(d.time)})
+      .attr("cy", function(d) {return yScaleKeylogger(d.score)})
+      .attr("r", function(d) { return d.sentence.length / 10;})
+      .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+      .attr("fill", "fuchsia");
+
+    var confidentCircles = keyloggerChart.selectAll(".confident-circle")
+      .data(confidence)
+      .enter()
+      .append("circle")
+      .attr("class", "confident-circle")
+      .attr("cx", function(d) {return xScale(d.time)})
+      .attr("cy", function(d) {return yScaleKeylogger(d.score)})
+      .attr("r", function(d) { return d.sentence.length / 10;})
+
+      // .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+      .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+      .attr("fill", "springgreen");
+
+    var analyticalCircles = keyloggerChart.selectAll(".analytical-circle")
+      .data(analytical)
+      .enter()
+      .append("circle")
+      .attr("class", "analytical-circle")
+      .attr("cx", function(d) {return xScale(d.time)})
+      .attr("cy", function(d) {return yScaleKeylogger(d.score)})
+      .attr("r", function(d) { return d.sentence.length / 10;})
+
+      // .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+      .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+      .attr("fill", "gold");
+
+    var tentativeCircles = keyloggerChart.selectAll(".tentative-circle")
+      .data(tentative)
+      .enter()
+      .append("circle")
+      .attr("class", "tentative-circle")
+      .attr("cx", function(d) {return xScale(d.time)})
+      .attr("cy", function(d) {return yScaleKeylogger(d.score)})
+      .attr("r", function(d) { return d.sentence.length / 10;})
+
+      // .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+      .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+      .attr("fill", "lavender");
+
+    var sadCircles = keyloggerChart.selectAll(".sad-circle")
+      .data(sadness)
+      .enter()
+      .append("circle")
+      .attr("class", "sad-circle")
+      .attr("cx", function(d) {return xScale(d.time)})
+      .attr("cy", function(d) {return yScaleKeylogger(d.score)})
+      .attr("r", function(d) { return d.sentence.length / 10;})
+
+      // .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+      .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+      .attr("fill", "cyan");
+
+    var fearCircles = keyloggerChart.selectAll(".fear-circle")
+      .data(fear)
+      .enter()
+      .append("circle")
+      .attr("class", "fear-circle")
+      .attr("cx", function(d) {return xScale(d.time)})
+      .attr("cy", function(d) {return yScaleKeylogger(d.score)})
+      .attr("r", function(d) { return d.sentence.length / 10;})
+
+      // .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+      .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+      .attr("fill", "blue");
+
+    var angryCircles = keyloggerChart.selectAll(".angry-circle")
+      .data(anger)
+      .enter()
+      .append("circle")
+      .attr("class", "angry-circle")
+      .attr("cx", function(d) {return xScale(d.time)})
+      .attr("cy", function(d) {return yScaleKeylogger(d.score)})
+      .attr("r", function(d) { return d.sentence.length / 10;})
+
+      // .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+      .attr("fill-opacity", function(d) { return Math.pow(d.score, 3);})
+      .attr("fill", "deeppink");
+
+    var disgustCircles = keyloggerChart.selectAll(".disgust-circle")
+      .data(disgust)
+      .enter()
+      .append("circle")
+      .attr("class", "disgust-circle")
+      .attr("cx", function(d) {return xScale(d.time)})
+      .attr("cy", function(d) {return yScaleKeylogger(d.score)})
+      .attr("r", function(d) { return Math.pow(d.score, 3) * 20;})
+      .attr("fill-opacity", 0.25)
+      .attr("fill", "thistle");
+
+
+
+    keyloggerSVG.selectAll("circle")
+    .call(tip)
+
+    .on("mouseover", function(d) {
+      tip.show(d);
+    })
+
+    .on("mouseout", function(d) {
+      tip.hide(d);
+    })
+
+
+  //       var joyLine = svg.append("path")
+  //         .attr("d", drawLine(joy))
+  //     .attr("stroke", "orange")
+  //     .attr("stroke-width", 1)
+  //     .attr("fill", "none")
+  //     .attr("class", "joy-line");
+  //
+  //
+  //     var sadnessLine = svg.append("path")
+  //       .attr("d", drawLine(sadness))
+  //   .attr("stroke", "blue")
+  //   .attr("stroke-width", 1)
+  //   .attr("fill", "none")
+  //   .attr("class", "sadness-line");
+  //
+  //
+  //   var confidenceLine = svg.append("path")
+  //     .attr("d", drawLine(confidence))
+  // .attr("stroke", "red")
+  // .attr("stroke-width", 1)
+  // .attr("fill", "none")
+  // .attr("class", "confidence-line");
+  //
+  //
+  //   var analyticalLine = svg.append("path")
+  //     .attr("d", drawLine(analytical))
+  // .attr("stroke", "green")
+  // .attr("stroke-width", 1)
+  // .attr("fill", "none")
+  // .attr("class", "analytical-line");
+  }
+  </script>
+
+
+<!-- <script>
+
+
+d3.json("merged_file.json", function (err, affectiva) {
+  d3.json("productivity.json", function(err, rescuetime){
+      if (err) console.warn(err, "error loading data");
+
+
+productivity = rescuetime.rows;
+
+productivity.forEach(function(d){
+  var dateTime = new Date(String(d[0]));
+  d[0] = dateTime;
+})
+
+
+newProductivity = [];
+
+productivity.forEach(function(d, i){
+
+  newProductivity.push(d);
+
+  if(i == productivity.length-1){
+    return;
+  }
+  var timee = productivity[i+1][0];
+  // var subtractMe = timee.setHours(timee.getHours() - 1);
+
+
+
+  if(d[0] < (timee - 3600000)) {
+    var nullTime = new Date(timee - 3600000);
+    var nullItems = [];
+    nullItems[0] = nullTime;
+    nullItems[1] = null;
+    nullItems[2] = null;
+    nullItems[3] = null;
+    nullItems[4] = null;
+    var nullIndex = i+1;
+    newProductivity.push(nullItems);
+
+  }
+
+});
+
+console.log(newProductivity)
+
+affectiva.sort(function(a,b) {return a.time - b.time});
+
+// affectiva.forEach(function(d, i){
+//   if(d.time < (affectiva[i+1].time - 5000000)) {
+//     var nullTime = affectiva[i+1].time - 3600000;
+//     var nullItems = {
+//       "time": nullTime,
+//       "attention": null,
+//       "engagement": null,
+//       "valence": null
+//     }
+//     var nullIndex = i+1;
+//     affectiva.splice(nullIndex, 0, nullItems);
+//   }
+// });
+
+affectiva.forEach(function(d){
+
+    var dateTime = new Date(d.time);
+    d.time = dateTime;
+})
+
+console.log(affectiva)
+
+
+// var xMin = new Date("Thu Apr 12 2018 09:00:00 GMT-0400 (EDT)");
+// var xMax = new Date("Fri Apr 13 2018 00:00:00 GMT-0400 (EDT)");
+
+var yMin = d3.min(affectiva,function(d){return d.min_valence;});
+
+
+    // var margin = {top: 50, right: 20, bottom: 50, left: 40};
+
+    // var width = 1000 - margin.left - margin.right,
+    height = 700 - margin.top - margin.bottom;
+
+
+      var svg = d3.select("body").append("div")
+          .attr("class", "container")
+          .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+          .attr("class", "chart")
+          .style("display", "block");
+
+
+
+  var xScale = d3.scaleTime()
+    .range([0,width])
+    .domain([xMin, xMax]);
+
+  var yScale = d3.scaleLinear()
+    .range([height, 0])
+    .domain([yMin, 100]);
+
+    // var attentionLine = d3.line()
+    //   .x(function(d) {return xScale(d.time);})
+    //   .y(function(d){return yScale(d.attention);});
+    //
+
+
+  var xAxis = d3.axisBottom(xScale)
+    .tickPadding(10)
+    .tickFormat(d3.timeFormat("%X"))
+    .ticks(4);
+
+
+
+  var yAxis = d3.axisLeft(yScale)
+    .tickPadding(10)
+    .tickFormat(function(d) { return parseInt(d, 10) + "%"; });
+
+
+  var area = d3.area()
+      .x(function(d) { return xScale(d[0]); })
+      .y1(function(d) { return yScale(d[4]); })
+      .y0(yScale(0))
+        .defined(function(d){return d[4]!=null;});
+
+  var productivityline = d3.line()
+    .defined(function(d){return d[4]!=null;})
+    .x(function(d) {return xScale(d[0]);})
+    .y(function(d){return yScale(d[4]);})
+    .curve(d3.curveCardinal);
+    // .defined(function(d){return !isNaN(d[4]);});
+
+  var blinkLine = d3.line()
+    .defined(function(d){return d.blinks!=null;})
+    .x(function(d) {return xScale(d.time);})
+    .y(function(d){return yScale(d.blinks * 2);});
+
+
+    var markers = [
+     { id:0, name: 'attention', path: 'M 0,0 m -1,-4 L 1,-4 L 1,4 L -1,4 Z', fill: 'fuchsia', viewbox: '-1 -5 2 10' },
+     { id: 1, name: 'engagement', path: 'M 0,0 m -1,-2.5 L 1,-2.5 L 1,2.5 L -1,2.5 Z', fill: 'gold', viewbox: '-1 -5 2 10' },
+     { id: 2, name: 'valence', path: 'M 0,0 m -1,-4 L 1,-4 L 1,4 L -1,4 Z', fill: 'cyan', viewbox: '-1 -5 2 10' },
+    ]
+
+    var defs = svg.append('svg:defs')
+
+    var marker = defs.selectAll('marker')
+      .data(markers)
+      .enter()
+      .append('svg:marker')
+        .attr('id', function(d){ return 'marker_' + d.name})
+        .attr('markerHeight', 5)
+        .attr('markerWidth', 5)
+        .attr('markerUnits', 'strokeWidth')
+        .attr('orient', 'auto')
+        .attr('refX', 0)
+        .attr('refY', 0)
+        .attr('viewBox', function(d){ return d.viewbox })
+        .append('svg:path')
+          .attr('d', function(d){ return d.path })
+          .attr("fill", function(d){return d.fill})
+          .attr("fill-opacity", 0.8);
+
+
+  svg.append("line")
+    .style("stroke", "#e0e0e0")
+    .style("stroke-dasharray", ("5,5"))
+    .attr("x1", 0)
+    .attr("y1", yScale(50))
+    .attr("x2", width)
+    .attr("y2", yScale(50));
+
+
+
+  svg.append("g")
+    .attr("class", "Axis")
+    .attr("transform","translate(0, "+(yScale(0))+")")
+    .call(xAxis);
+
+
+  svg.append("text")
+    .attr("class", "axis-labels")
+    .attr("y", height-10)
+    .attr("x", (width/2))
+    .attr("dy", "7em")
+    .style("text-transform", "uppercase");
+
+  svg.append("g")
+    .attr("class","Axis")
+    .call(yAxis);
+
+  var attentionTip = d3.tip()
+    .attr("class", "tooltip")
+    .offset([-20,0])
+    .html(function(d,i) {
+    return "<b>Max Attention:</b> " + d.max_attention.toFixed(2) + "% <br><b>Min Attention:</b> " + d.min_attention.toFixed(2) + "%<br><b>Blinks: </b>" + d.blinks ;
+    });
+
+
+  var valenceTip = d3.tip()
+    .attr("class", "tooltip")
+    .offset([22,0])
+    .direction("s")
+    .html(function(d,i) {
+    return "<b>Max Valence:</b> " + d.max_valence.toFixed(2) + "% <br><b>Min Valence:</b> " + d.min_valence.toFixed(2) + "% <p><span style='font-size:16px'>" + d.emoji + "</span></p>";
+    });
+
+    // productivityCircles.filter(function(d) { return d[4] == null; }).remove()
+
+    var productivityarea = svg.append("path")
+      // .data(newProductivity)
+      .attr("d", area(newProductivity))
+      .attr("fill", "gold")
+      .attr("opacity", 0.35);
+
+    // var productivitycontainer = svg.append("path")
+    //   .attr("d", productivityline(newProductivity))
+    //   .attr("stroke", "springgreen")
+    //   .attr("stroke-width", 1)
+    //   .attr("opacity", 0.65)
+    //   .attr("fill", "none")
+    //   .attr("class", "line");
+
+
+    var valenceLines = svg.selectAll(".valenceLines")
+    .data(affectiva)
+    .enter()
+    .append("line")
+    .attr("class", "valenceLines")
+    .attr("stroke", "cyan")
+    .attr("stroke-width", 1.5)
+    .attr("stroke-opacity", 0.6)
+    .attr("x1", function(d){ return xScale(d.time);})
+    .attr("x2", function(d) {return xScale(d.time);})
+    .attr("y1", function(d){return yScale(d.min_valence)})
+    .attr("y2", function(d) {return yScale(d.max_valence)})
+    .attr('marker-start', 'url(#marker_valence)')
+    .attr('marker-end', 'url(#marker_valence)');
+
+      var attentionLines = svg.selectAll(".attentionLines")
+      .data(affectiva)
+      .enter()
+      .append("line")
+      .attr("class", "attentionLines")
+      .attr("stroke", "fuchsia")
+      .attr("stroke-width", 1.5)
+      .attr("stroke-opacity", 0.6)
+      // .attr("stroke-linecap", "butt")
+      .attr("x1", function(d){ return xScale(d.time);})
+      .attr("x2", function(d) {return xScale(d.time);})
+      .attr("y1", function(d){return yScale(d.min_attention)})
+      .attr("y2", function(d) {return yScale(d.max_attention)})
+      .attr('marker-start', 'url(#marker_attention)')
+      .attr('marker-end', 'url(#marker_attention)');
+
+
+
+
+var blinksCircles = svg.selectAll(".blinks-circle")
+  .data(affectiva)
+  .enter()
+  .append("circle")
+  .attr("class","blinks-circle")
+  .attr("cx", function(d) {return xScale(d.time)})
+  .attr("r", function(d) { return d.blinks})
+  .attr("cy", function(d) { return yScale(d.blinks);})
+  .attr("fill-opacity", .75)
+  .attr("fill", "blue");
+
+//
+
+  //
+  // var emoji = svg.selectAll(".emoji")
+  //   .data(affectiva)
+  //   .enter()
+  //   .append("g")
+  //   .attr("class", "emoji")
+  //   .attr("transform", function(d) {
+  //     return "translate(" + (xScale(d.time)-7) + ")";})
+  //   .selectAll(".emoji")
+  //   .data(function(d) {
+  //     return d.emoji;
+  //   })
+  //   .enter()
+  //   .append("g")
+  //   .attr("transform", function(d,i) {
+  //     return "translate(0," + yScale(i*5) + ")";
+  //   })
+  //   .append("text")
+  //   .text(function(d) {return d;})
+  //     .attr("font-size", "15px");
+
+  // var blinksContainer = svg.append("path")
+  //   .attr("d", blinkLine(affectiva))
+  //   .attr("stroke", "blue")
+  //   .attr("stroke-width", 1)
+  //   .attr("opacity", 1)
+  //   .attr("fill", "none")
+  //   .attr("class", "line");
+
+    svg.append("text")
+      .attr("y", -15)
+      .attr("x", (width/2) - 75)
+      .text("FACIAL ANALYSIS")
+      .attr("class","title");
+
+
+  svg.selectAll(".attentionLines")
+  .call(attentionTip)
+
+  .on("mouseover", function(d) {
+    attentionTip.show(d);
+  })
+
+  .on("mouseout", function(d) {
+    attentionTip.hide(d);
+  })
+
+
+  svg.selectAll(".valenceLines")
+  .call(valenceTip)
+
+  .on("mouseover", function(d) {
+    valenceTip.show(d);
+  })
+
+  .on("mouseout", function(d) {
+    valenceTip.hide(d);
+  })
+
+})
+});
+
+
+
+
+</script> -->
+
+
+</body>

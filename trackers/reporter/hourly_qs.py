@@ -11,8 +11,7 @@ def writeToCSV(response):
 while True:
     os.system("osascript -e \'display notification \"Questionnaire Time!\" with title \"Questionnaire Time!\" sound name \"Pop\"\' -e \'activate application \"Terminal\"\'")
 
-    dateTimeNum = datetime.datetime.now().timestamp()
-    timestamp = datetime.datetime.fromtimestamp(dateTimeNum).isoformat()
+
     mood = input("Mood 1-5: ")
     moodNotes = input("Mood description: ")
     trigger = input("Trigger: ")
@@ -24,7 +23,8 @@ while True:
     stress = input("Stress 1-5: ")
     fatigue = input("Fatigue 1-5: ")
     compulsions = input("Compulsion (True/False): ")
-
+    dateTimeNum = datetime.datetime.now().timestamp()
+    timestamp = datetime.datetime.fromtimestamp(dateTimeNum).isoformat()
     response = [timestamp, mood, moodNotes, trigger, activity, social, alone, location, morale, stress, fatigue, compulsions]
 
     writeToCSV(response)

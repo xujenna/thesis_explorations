@@ -22104,5 +22104,2363 @@
       }
     ],
     "time": "2018-04-16T17:24:45.187489"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.573975,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.546153,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "in classtalked to a few classmates during fire fdrill, got boba guys .",
+        "tones": [
+          {
+            "score": 0.54783,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "To think critically and oconceptually about quanquantified selfpersonal data sccollection and the quantified self movement., and  andd to thgthough engage practice itt thoguughtfully.enage",
+        "tones": [
+          {
+            "score": 0.668151,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "gage /ThTSurveying the quant ified self landscapeproject  for inspiration and nand  and c.Could use more technical instruction.",
+        "tones": [
+          {
+            "score": 0.707447,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.5538,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "abround APIs.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": ", ie arou, .bvar",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "svg 2 = 2\u00df300\u00df\u00df\u03a9\u03a9\u03a9\u03a9\u03a9\u03a92.container\u00dfcontainercontainercontainer\u00df\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u03a9\u03a9\u03a9\u00b8\u00b8\u03a9\u03a9\u03a9\u00b8\u00b8\u03a9\u00df1\u22112\u2020github .",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "invent new ways to represent uncertainty, outsides, missing data, and flawed methods:: can we  .",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "invent new ways to refernce ence the material ceconomy behind the data .",
+        "tones": [
+          {
+            "score": 0.693697,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.620279,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "what are the conditions that make data viz possible/ .",
+        "tones": [
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "can we collect and represent data that was never collected/  .",
+        "tones": [
+          {
+            "score": 0.618451,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "can we find the population that was excluded/ .",
+        "tones": [
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "can we critically examine tehe methods of study wrather than accepting the JSON as its/ .",
+        "tones": [
+          {
+            "score": 0.781949,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "InWhwhat if what if we visualized interested/stakeholders behind the data/ make dissent possible .",
+        "tones": [
+          {
+            "score": 0.681699,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.801827,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "res-situate data viz by destabilizing, ie making dissent possible .",
+        "tones": [
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.724236,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "how can we devitalk back to the data/ .",
+        "tones": []
+      },
+      {
+        "sentence_id": 15,
+        "text": "to how can we quetstion the facts/ .",
+        "tones": [
+          {
+            "score": 0.92125,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.93884,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 16,
+        "text": "how can we present alternative viewsiews an d relatial\u2211ities/ .",
+        "tones": []
+      },
+      {
+        "sentence_id": 17,
+        "text": "satellite images were  wereo nl olnly recently state secretsuntil recently statestate ses  secretss used for drone strieks kesmilitaryrys . in 2000, the nytt for the first time suused the newly available Ikonos satellite as a so\"\"as a sort of alternative investigative journalist in Cheechnya\" but \"failed to aroust public se public sympathy or outrage\"; however, before/after images have becstlill became commonplace has ve stillbecomein reporting from zone of cs of conflict .",
+        "tones": [
+          {
+            "score": 0.576634,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 18,
+        "text": "InSept 1999: Space Imaging slaunched Ikonos, the first  sateellite to make hires image data publicaly ly ly available .",
+        "tones": []
+      },
+      {
+        "sentence_id": 19,
+        "text": "WeWe need to be alert to what is ebeing highligheeted and pointed toward, to the ways in which satellite evidence is used in making assertions and arguments; for every  image, we neded to should be able to inquire about its technology , location data, ownerhship, legibility, and source  .",
+        "tones": [
+          {
+            "score": 0.655458,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 20,
+        "text": "download my location history from Google, and otit\u2020flickr .",
+        "tones": []
+      },
+      {
+        "sentence_id": 21,
+        "text": "\u2211 to get a sense of my habitshaibitshabits and identify opportunities for  to navigational navigation walkingnavigational  for breaking themseeing new parts of the city/biases\u221a\u03a9\u221a\u2020maps .",
+        "tones": []
+      },
+      {
+        "sentence_id": 22,
+        "text": "\u2211/comfort zonesbreaking out of my comfort zones\u2020f .",
+        "tones": [
+          {
+            "score": 0.540303,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-17T01:17:35.650884"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.519374,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "I talso thought this was really bink this is a \u2211\u221a\u00e7\u221a\u221a\u03a9\u221a\u03a9\u221a\u03a9\u00e7\u221a\u2020maps .",
+        "tones": [
+          {
+            "score": 0.781949,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I als tho thought this was a n illuminating use of  nice use of satellite imagery: <br>\u2020eye in the sky radiolab .",
+        "tones": [
+          {
+            "score": 0.699641,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "It never occurred to me that ssatellite imagery  .",
+        "tones": [
+          {
+            "score": 0.704642,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "was originated from milita military technologywas born from the agenagenda of the US militaryUS military's agendaI never realized agenda of the US military, but it makes a lot of sense's renot surprissing.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "yetWhat struck me most from the latter reading was the at Colin Powell learning thatused satellite imagery s as incontroverittible \u00e7\u221a\u00e5proof that there were weapons of mass destruction in Iraqy._I",
+        "tones": [
+          {
+            "score": 0.586053,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "don't think you can get a better example of \"interpreted data\".",
+        "tones": [
+          {
+            "score": 0.963079,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "much  .",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "One year later, in 2003, Ross McNutt 's team put a 44- megega-pixel plcamera on as  small planeiraq\u00e7 to watch over the city of \u221a, Irawq., as 21 .",
+        "tones": [
+          {
+            "score": 0.523444,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "sleepy t sleep, a bit alstressed . .",
+        "tones": [
+          {
+            "score": 0.524005,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "It was The footage was high defin-def enough to Its imagesweretrack the sources of roadside bombs.",
+        "tones": []
+      },
+      {
+        "sentence_id": 10,
+        "text": "After , and it was on all day, every daythe war, Ross brough t stested implemented a pilot did a pilot run of his technoloogythis this in Dayton , Ohio, as a way for way for the policelocal police to identify criminals.",
+        "tones": [
+          {
+            "score": 0.618451,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "and gang members.",
+        "tones": []
+      },
+      {
+        "sentence_id": 12,
+        "text": "ted this technology aodijaod \u0192\u2211 .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-17T02:17:38.880422"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.64553,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.578777,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.93509,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "When I firthis story,  I thought didn't feel too conflicted about it_bad guys were being caught and brought to justice.",
+        "tones": [
+          {
+            "score": 0.645618,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": ", yay.",
+        "tones": [
+          {
+            "score": 1.0,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "., hooray.",
+        "tones": [
+          {
+            "score": 0.642857,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": ", what's there tohe problems oo bad about thattehe bproblem/  here/ Howeever, ain the after reading Laura Kurgan's chapter on representation and interpretation, it jstust seems like another now it feels like Ross was just thinking locally about surveiling ailing eiling  and persecutae\u00e5perspersecuting colored just people.",
+        "tones": [
+          {
+            "score": 0.725707,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.883593,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.552075,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "Especially considinerering just that a program like his would only be implemented in larger urban areas, ie whreere all the tre motst of the minorities live.there",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "arare greater proportproportions of\u03a9\u03a9\u03a9\u00b8our\u03a9None; this view shows the urbanization of Shanghai\u2020shanghai .",
+        "tones": [
+          {
+            "score": 0.643899,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "\u2211 Huangpu rRiver.",
+        "tones": [
+          {
+            "score": 0.984352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "I also Alsloo fascirapid draamatic over 30 yearsnating i s the expanding coastline (manmade, perresumably manmade,  Impossible Maps W4 HW\u00e7\u00e7\u2211nyuedu\u221a\u2211\u2211\u2211\u2211\u2211\u2211\u2211\u2211\u2211\u2020fa .",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "the boba really did me in last night .",
+        "tones": [
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "i slept for like 3 hours lol .",
+        "tones": [
+          {
+            "score": 0.620618,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.681699,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-17T09:12:21.220364"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.622995,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.836844,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "Just wanted to flollow up with you on this.",
+        "tones": [
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Please 455 .",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "hanging out at school, had good couple's tehherapy sessioncheerful .",
+        "tones": [
+          {
+            "score": 0.758835,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "hanging out at scht with clasasclassmates, had good couple's therapy esession, running on adrenaline .",
+        "tones": [
+          {
+            "score": 0.683688,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "Thanks1 Please let me know if there's anything I can do to make your hmake your jo b easier.",
+        "tones": [
+          {
+            "score": 0.730335,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.525007,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "!\u2020gist. .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-17T12:17:56.181497"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.791903,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u2211\u2211just got out of class .",
+        "tones": [
+          {
+            "score": 0.968123,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "where\u00e5where is the nearest rest stop .",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "out of class, working now .",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "console.log(d.emoji\u00df\u00df\u00df\u00dfoh",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "i never heard back from you so i i sassumed no lol .",
+        "tones": [
+          {
+            "score": 0.543112,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "sorry, forgot to follow up .",
+        "tones": [
+          {
+            "score": 0.641057,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.882284,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-17T16:58:05.332344"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.534571,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.637919,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.541969,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.815828,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u00dfysScale(0\u00e7\u221a\u00df\u03a9\u03a9\u03a9\u03a9\u03a9\u00dfwhen do you think youl''ll be out of workll be done today/ .",
+        "tones": [
+          {
+            "score": 0.532616,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "\u2211If no one else, I caould possibly help RiShawn with the SVGs stuff.",
+        "tones": [
+          {
+            "score": 0.716301,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "I'm 'm used to to manipulating the wm with d3, and he'he's probably using p5, but in the end they're both javascript libraries//...try tolol hthat does not answer m y question .",
+        "tones": [
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "i hav e tan ASH call today at 8 .",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "\u2211300\u00df\u00e7 && d|| d >==\u00e7 \"\u221a && \u00e7d <=\"\u221a\u00e7\u221a\u221a && d <\u00e7 \"\u221a || d >\u00e7 \u221a\u00df\u00df if (i = 0 if (oi = 0\u00df\u00df\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u00df .",
+        "tones": [
+          {
+            "score": 0.743104,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "I forgot to ask_do you have still have that 5pmmerin .",
+        "tones": [
+          {
+            "score": 0.675775,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "i'm just working at school .",
+        "tones": [
+          {
+            "score": 0.968123,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "do you tfeel like eating anything/ .",
+        "tones": [
+          {
+            "score": 0.984352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "gans\u00e5can we eat in bk/ i hjust had lunch had sweetgreen at 3 so not starving yet100% hungry yet .",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": ".attr(\"fill, \"none\u00dfblueblue3\u00dfshould we meet now\u00e5ca\u00e5reare you free to go// .",
+        "tones": []
+      },
+      {
+        "sentence_id": 10,
+        "text": "i can leave too .",
+        "tones": [
+          {
+            "score": 0.916667,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "should we meet at the w4/ .",
+        "tones": [
+          {
+            "score": 0.66007,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-17T18:10:16.121906"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.606882,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.719276,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "That'shat's nks at'snks, Cindy1 Did the hiring committee say whave any feedback for me/indicate why theyhthey re why they made their decision, or 2 .",
+        "tones": [
+          {
+            "score": 0.594263,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I'm intterested in this Co-Lab Asassistant position and would love to hear more information about it.",
+        "tones": [
+          {
+            "score": 0.506763,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "I'm a grad student at ITP, focussing on front endfroront-end dsfotoftware development._;_I've",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "attached my resumse to e to this e-mail. .",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "It was fun talking to you last week.",
+        "tones": [
+          {
+            "score": 0.676368,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "Thanks aga\u2211 again for your time._ about this positione SerService Design apApprenteictice APositioposition_t~!,.Thanks again for taking the time aking to he \u03a9\u03a9\u03a9\u03a9\u03a9\u03a9your time ,; last week; i! .",
+        "tones": [
+          {
+            "score": 0.843125,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-17T20:42:32.703076"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.572232,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.540645,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.592436,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.841273,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "I was  feeling a bit paranoid about  \u2211as feeling a bit paranoid about my suddenly became paranoid toda ty that my application to the ServiceDevelopment Apprenteniceship dasda for didn't go through, and chckecked the application page to find your e-mail as the \u2211referencereference\u00e5 help (sorrsorry_clearly I got a little etaddadmittedly, I got a bit too excited about NYC Opportunity)make it through\u2211about the internships at\u03a9.",
+        "tones": [
+          {
+            "score": 0.507463,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "reference.",
+        "tones": [
+          {
+            "score": 0.997482,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "for all the apprenticeships.",
+        "tones": [
+          {
+            "score": 0.97759,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "ship I hope you don't mind me botherinreaching out to cofnfirm tehe receipt receipt\u00e5of my application for that position as well.",
+        "tones": [
+          {
+            "score": 0.828638,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.525007,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "\u2020insta .",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "(as well as my overnor my exicobvious eagerness \u2020e\u2211\u2020we\u00e5win .",
+        "tones": [
+          {
+            "score": 0.868643,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.868982,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "over over NYNYthe positions ast NYC Opporutunity).",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "(somewhat irrationally) addmittedly\u2211in generalor/my general overeagerness whnen it comes to NYNYC Opportunity .",
+        "tones": [
+          {
+            "score": 0.615352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "JEnnaenna., nor my general overeagerness about NYC Opportunity.",
+        "tones": [
+          {
+            "score": 0.506763,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.908439,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "overs againHey guys, .",
+        "tones": []
+      },
+      {
+        "sentence_id": 10,
+        "text": "The only days I'mve available after 7pm are Tuesdays and Unfortunately, th Fridays, fRiFridays, and the weekends.",
+        "tones": [
+          {
+            "score": 0.564193,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "Please le t me know if this Friday or weeke or anyti tiAre you guys available this weekend, or next Tuesday/next Tuesday or Friday/ .",
+        "tones": [
+          {
+            "score": 0.939968,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "8:00pm308:00pmThanks guysfor the quick responsejoeThanks for the quick responses, guys1 Jutst sent yout a calnendar invite.",
+        "tones": []
+      },
+      {
+        "sentence_id": 13,
+        "text": "Let me know  Please let me know if anything changes. .",
+        "tones": [
+          {
+            "score": 0.954486,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.822231,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "Thanks1/.",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 15,
+        "text": "Let me know if 73L3:30pm doesn't work next Tuesday.;",
+        "tones": [
+          {
+            "score": 0.896021,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 16,
+        "text": "l3 .",
+        "tones": []
+      },
+      {
+        "sentence_id": 17,
+        "text": "neutrmehnot great,edistill disappointed low morale disappointed ,mehlow low ww motivation .",
+        "tones": [
+          {
+            "score": 0.887701,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.653099,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 18,
+        "text": "getting rejected from thei nt internship makes eme question whyWHYwhyeverything .",
+        "tones": [
+          {
+            "score": 0.550655,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.882284,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 19,
+        "text": "I'd like to attend if there's still wroom1,nyu.eduxujenna@nyu.edu\u2211Hacking the Browser Makeup Class\u2211\u2211\u2211\u2020f .",
+        "tones": [
+          {
+            "score": 0.603857,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-17T21:54:21.141179"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.749706,
+          "tone_id": "confident",
+          "tone_name": "Confident"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "ibookmarklet to chrome extentinension Ww3 hw\u00e5content_script.js\u00e5\u00e7\u221abackground.js\u00e5\u00e7\u221a\u03a9\u00f7\u00f7\u00f7\u00df\u03a9\u03a9\u03a9\u00b8\u00b8\u03a9\u00b8\u00b8\u00b8\u00b8\u00b8\u00e5\u00e7manifest.json\u221aaAppend a progress bar that obsscures the entire iwindow as  as you scroll\u00e7\u2020\u221a .",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "\u00e5\u00e7\u221aexbookmarklet.jsbokok\u2211\u2211\u0192remove bloat\u00e5\u221a\u2020\u00e5\u00e7\u2211\u2211\u00e5\u221abookmarklet de\u00e5decoded bookrmmarklet and + analysisanalysis.txtThis",
+        "tones": [
+          {
+            "score": 0.821913,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "bookmarklet \u2211selects  all taobject, embed, applet, and iframe tags on a webpage and replaces them with a div that contains the stringthat contains < \u2020<del> .",
+        "tones": [
+          {
+            "score": 0.543112,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "\u2211 crossed out text of the the tag name \",<the tagtext of the tag name elements,,  that was removed.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "crossed-uotout\u00e7\u00e7\u00e7\u221achrome exten .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-17T22:54:22.312015"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.541246,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.511104,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.694882,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.827288,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "Not usre if sure if these are interesting, but they amused me at the timeflyby .",
+        "tones": [
+          {
+            "score": 0.672353,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.781949,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.727798,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "a little tired and grumpyirritableirritable\u00e5apddedtired .",
+        "tones": [
+          {
+            "score": 0.770351,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "woke up early, bad commute from bk, , bad laday yesterday .",
+        "tones": [
+          {
+            "score": 0.629735,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "Somehow , I only just discovered The Pudding,g this mroorning, ,  somehow d3 sslider selects x ra rarange for multiple charts .",
+        "tones": [
+          {
+            "score": 0.822231,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "\u2020how to share a variable betweeamong script tags jtags  .",
+        "tones": [
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "\u2211 and am aoalready obsessseed.",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "and wondering wondering if you\u0192slider .",
+        "tones": [
+          {
+            "score": 0.882284,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.997314,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "you uhuys guys are needed aeedwere looking orfor interns. .",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "!",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "I'm a grad currentlyy a grad student at NYU's ITInteractive Telecommuncatications Program (ITP), \u2020xu .",
+        "tones": []
+      },
+      {
+        "sentence_id": 10,
+        "text": "\u2211and have been working mainly with dinteractive data visualizations this semester  .",
+        "tones": []
+      },
+      {
+        "sentence_id": 11,
+        "text": "aam currently working on a system of trackers to that gathers monitors behavio digital behaviorial  my s my computer activityeasures at working on a system of trackers\u2020padlet .",
+        "tones": []
+      },
+      {
+        "sentence_id": 12,
+        "text": "that mthat tracks of my cvariuous predictors  me potential metrics of destrstressstress, anxiety, and depressiond3 slider js .",
+        "tones": [
+          {
+            "score": 0.829414,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "a host ofdeanxdedepression stdepressionof pythoners\u03a9\u03a9\u03a9\u03a9, in order to monitor tits cyclical nature _and work on my d3 chopsgie myve mysel f a \u2211\u2211\u2211 create an excuse to work on my d3 chops..!.! .",
+        "tones": [
+          {
+            "score": 0.715998,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "presently  and eventually create a train it to recognize reorecognize its onsetbut also, toaan I eventually would love to work in data journalism, anwhich is why I'm hoping The Pudding will consider bra, ie a site like thThe Pudding. .",
+        "tones": [
+          {
+            "score": 0.629476,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.540225,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 15,
+        "text": "\u00e7\u2211\u2211 you coudld apass on my portfolioI, and would really appreciate if you could pass on this e-mai ltl to your design or development teams:1My portfolio can be fou:  can be found here:  .",
+        "tones": [
+          {
+            "score": 0.817805,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.58393,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 16,
+        "text": "I somehow only just discovered tThe Pudding this morning, and am lalready obsessed and wondering if Polytgraph is looking for interns\u2211.",
+        "tones": [
+          {
+            "score": 0.842108,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.876534,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 17,
+        "text": ".! .",
+        "tones": []
+      },
+      {
+        "sentence_id": 18,
+        "text": "I'm curd student at NYU's Interactive Tellecommunication s Program (ITP), and am presently workingo n on a system of  tathat tracks a host of potential//provenproven metric of depressions, in order to \u2020word that means generally a .",
+        "tones": [
+          {
+            "score": 0.51011,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.716415,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 19,
+        "text": "getting back into the swing of things .",
+        "tones": []
+      },
+      {
+        "sentence_id": 20,
+        "text": "2432\u00df\u2211\u2211 monitor its cyclical nature and eventually reoccogniztee its onset__abut also to create an excuse to work on my d3 chops. .",
+        "tones": []
+      },
+      {
+        "sentence_id": 21,
+        "text": "I eventulove to work in  .",
+        "tones": []
+      },
+      {
+        "sentence_id": 22,
+        "text": "data journalism, ie a site like The Pudding,a place like Polygraph, and would really appreciate if you could pass this e-mail on to your design or development teams1 .",
+        "tones": [
+          {
+            "score": 0.802309,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.833824,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 23,
+        "text": "\u2211\u2211another reason why we need a programming language that writes programs .",
+        "tones": [
+          {
+            "score": 0.653099,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-18T12:44:44.475754"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.575524,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u2211\u2211JennaXu    No worries, hope everything new york times .",
+        "tones": [
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "xMax = new Date)(h + \u2020how to ad d one hour to javascript tdateetime object .",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "I'm currently a grad studen t at NYU's Interactive Telelcommunications Program (ITP, and a0), and would love to be kept on file for considerondsideration for the News Applications fFellow.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "I'm pret'' love both visual journalism and Propublica's workP, and think I would be an apt a_k1 .",
+        "tones": [
+          {
+            "score": 0.591072,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "ntI'm currently a grpresently working on a system that tracks a host of potential/evidenced metrics of depression, in order to monitor its cyclical nature and eventually recognize its onset_but also to create an excuse to work on improve my d3 chops. .",
+        "tones": [
+          {
+            "score": 0.535531,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.552075,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "I eventuan data journalism in the pnon-profit sector, ie a pla place like pPropublica, and would really appreciate if you coluld keep me in mind for future opportunities. .",
+        "tones": [
+          {
+            "score": 0.693618,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.711887,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "Thanks osso much1news applications fellowinternships at \u2211\u2211\u2211\u2211ffellowships at internships with \u221a\u03a9\u2211\u2211\u2211\u2020the ga .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-18T15:51:45.728778"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.811599,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.924421,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "watched some SATCan episode of SATC .",
+        "tones": [
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "\u03a9\u03a9-height2\u00df\u03a9\u03a9\u03a9\u00df\u00b8\u00b8\u03a9\u03a9\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8-height2\u00df\u00df\u00df\u00df87\u00df<svg><\u2020\u2211can an svg have a class .",
+        "tones": [
+          {
+            "score": 0.673026,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "obsessed with my d3 my dashboard, not paying attention in class .",
+        "tones": [
+          {
+            "score": 0.944551,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "still working on dashboard, jhad some fun in class .",
+        "tones": [
+          {
+            "score": 0.699029,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-18T23:04:58.984778"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.602821,
+          "tone_id": "fear",
+          "tone_name": "Fear"
+        },
+        {
+          "score": 0.520169,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.944845,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": ".tickPadding(10\u00df\u00dfsorry, just have been tired and bummed demoralized, but alsoand also obsessed with my prd3 thing  feelingi've so haven't felt like talking .",
+        "tones": [
+          {
+            "score": 0.684566,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.769251,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "love you sorry to make you worry  .",
+        "tones": [
+          {
+            "score": 0.772692,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-19T00:05:00.802893"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.852741,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        },
+        {
+          "score": 0.897581,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "couldn't figure out d3 thow to  progrmaammatically generate hchartsgprogrammatically\u00e5s .",
+        "tones": [
+          {
+            "score": 0.955445,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "slept late last night but worke up at the same time .",
+        "tones": [
+          {
+            "score": 0.868982,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "sure\u00e5today is not a good day for lunch for me, what about tomorrow/maybe  .",
+        "tones": [
+          {
+            "score": 0.591462,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.845297,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "i'll follow up with my friednnd about\u00e5 .",
+        "tones": [
+          {
+            "score": 0.508536,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-19T12:14:39.876206"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.552028,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u00e7\u2211lunch w ke and hi k and momhis mom's mom\u2020github.com/rubway,;ml/examples_javascript .",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "i'm in \u00e5the ML genius here (who rwrote the his hosting a workshop about this desktop appML desktop app he built for his thesis .",
+        "tones": [
+          {
+            "score": 0.538881,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "\u00e7\u2211this i\u00e5he showed us this which is pretyty crazy \u221a .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-19T13:54:00.049935"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.869578,
+          "tone_id": "confident",
+          "tone_name": "Confident"
+        },
+        {
+          "score": 0.818141,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "it loads researcher's code and \u00e5it's a gUI GUI that executes fancy eresearcheresearcher's fs f' fancy codetrained models models .",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "\u2211\u0192aaron aand then it passed the responsess the response to all the things .",
+        "tones": [
+          {
+            "score": 0.775702,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.874319,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-19T15:04:56.669974"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.570674,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.61868,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "oopms, sent before I was finished relieving my stress  it's harder that it looks1somehow  it    `  c3 .",
+        "tones": [
+          {
+            "score": 0.511769,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Saw I saw your e-mail on thproproblpublica\u2020nerds\u2211the Electpage for Electionland   the fellowshipss application_IiI'm suuper asad to have missed the deadline, but though t I I wouhought I maight pass my resume information along to you for ffor you to keep on file.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "for future opportuntities.  .",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "I'm currently a grad student at NYU 's inInteractive Telecommunications Progra m (ITP), and am presently working on a system that trcaks a acks a host of potential/evidences metrics of depression, in order to monitor its cyclical nature and eventually recognize its onset_but also partly as an excuse to imrpve oprove my d3 chops.  .",
+        "tones": [
+          {
+            "score": 0.642963,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.505247,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "I evenould love to work in data journalism in, esparespecially in the non-profit csector, ie , ie a plea place exactly like Propubilica.. ,, soo wouso would really appreciate if you could keep me in mind for fin causese you ever need more help. .",
+        "tones": [
+          {
+            "score": 0.674859,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.670204,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-19T16:04:57.587226"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.676916,
+          "tone_id": "anger",
+          "tone_name": "Anger"
+        },
+        {
+          "score": 0.518875,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.629995,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "god, i'm literally siltill crecovering from from it .",
+        "tones": [
+          {
+            "score": 0.506763,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "are you doing the spring show/ .",
+        "tones": [
+          {
+            "score": 0.6264,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "Oomg hwhat an asshole!",
+        "tones": [
+          {
+            "score": 0.916324,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "thank god your supervisor is is a gis is sympathetica reasonsympathetic/reasonable human being.",
+        "tones": [
+          {
+            "score": 0.740445,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.801827,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "statisticians are the worst4343 .",
+        "tones": [
+          {
+            "score": 0.630778,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "finished ded neenough o myf of my homework, taking a break .",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "2.525.5.45\u00df\u2211t, i'm sorry you had to deal with a robot a robot tfyou had a orrobot for a censor .",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "hopefully the next fingers crossed you'll hae ve more luck with the next one! .",
+        "tones": [
+          {
+            "score": 0.91961,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "such great 're feeling so much better11 though11111 i'm so excitedd.",
+        "tones": [
+          {
+            "score": 0.803112,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "and ham hoping you'll be able to travel this mayvisit.",
+        "tones": [
+          {
+            "score": 0.822231,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "i really need a break .",
+        "tones": [
+          {
+            "score": 0.620258,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.882284,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "school ,isisi is fine, i;ve  was kind of in a funk thi s entire semester and can't wait for it to be oever .",
+        "tones": []
+      },
+      {
+        "sentence_id": 12,
+        "text": "just not totally clear what i should be doing with my life lol .",
+        "tones": [
+          {
+            "score": 0.760388,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.513787,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "kevin is fine, just constantly dealing with family drama.",
+        "tones": [
+          {
+            "score": 0.5538,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "good news is that our therapcouple's therapis t believes in us enough to let us go go down to meet every other week (instea d of every week, as we've been doing for a few months now) h) haha .",
+        "tones": [
+          {
+            "score": 0.831734,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 15,
+        "text": "how are you abnd sebastian doin/g/ he must be so worries d all t . of course you do lol .",
+        "tones": [
+          {
+            "score": 0.501785,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          },
+          {
+            "score": 0.935688,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-19T17:04:58.286362"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.908578,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.626216,
+          "tone_id": "confident",
+          "tone_name": "Confident"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "you now \u00e5you have perspersnow have some perspective lol .",
+        "tones": [
+          {
+            "score": 0.722026,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "New York, NYVox MediaThe Vergein development and visual journalism, interaction design an/development,sspecificallyf for a course at Metis for VisuDData Visualization for with d3js with, and absolteutely .n",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "editordiial   I , and so began decided to \u00df\u03a9\u00dftoo , \u03a9\u03a9o.",
+        "tones": [
+          {
+            "score": 0.581623,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.724236,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.874372,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "Now , I'm continuing my studies at at NYU, combining my love for design with  ,  because ITPits interdisciplinary  n and frewewheeling ethos gives me tohe freedom to do all of these things.affordss.\u03a9s!My goal is presentlyworking on a system that collects \u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9partparitticularly interested in\u03a9\u00b8.I readad both the Vox and the The Verge regularlyon a eregular basis, and today onwas excited to see findind this internship oppor position on your website af after sslooking at yyour Jobs page on a whim.peaking at itsthee after peaking at it deciding to peak I'Coming from the mediaeditorial industry, I'm    use d to working in a fast-paced media environment, and would love to work at The Verge an opportunity to.;",
+        "tones": [
+          {
+            "score": 0.898341,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "I can also provide more recent samples of work upon request.\u00df\u00dftheverge_tehhevejenJennaXu_coverletter_theVerge .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-19T18:27:08.993492"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.62945,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.698379,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u2211\u2211, undtil before the urure desire to build things became unberablearable.",
+        "tones": [
+          {
+            "score": 0.803388,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.735673,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Voxnuyu.edu",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "chttp:www\u2211//www.xujenna.com\u00e5SearBy",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "visitng ing Vox.com\u2211Nod\u03a9Node.js .",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "\u221a  This esemester, I've been learning more about Node.js,  .",
+        "tones": [
+          {
+            "score": 0.724236,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.5538,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "server-side JAvadevelopment, particularly .",
+        "tones": [
+          {
+            "score": 0.842108,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "\u00dfBeing a daily reader of Vox.comtI\u00df_sSummerEngineering .",
+        "tones": [
+          {
+            "score": 0.607586,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-19T19:27:35.502198"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.827288,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        },
+        {
+          "score": 0.573521,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "inlots of material being covered in class .",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "lack of sleep, too muliterally cannot learn any more server-side js, also lsleep-deprived .",
+        "tones": [
+          {
+            "score": 0.716301,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.821913,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "call function that posts the data through AJAX to   .",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "at flyby about nextout of class ,  and at flyby aboutt  next semester's classes .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-19T22:32:53.850556"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.550829,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.761129,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "sorry i didn't even see your your soba messages lol .",
+        "tones": [
+          {
+            "score": 0.549444,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.822231,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "also yes, f. our our fall show piece can be a boba popup ,. .",
+        "tones": [
+          {
+            "score": 0.589295,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "although thursday is best for me.",
+        "tones": [
+          {
+            "score": 0.658424,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.842108,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "too mui've got finals netxt week  .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-20T00:16:35.347782"
   }
 ]

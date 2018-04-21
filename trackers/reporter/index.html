@@ -229,28 +229,28 @@ console.log(newResponses)
       .domain([0, 5]);
 
 var moodArea = d3.svg.area()
-    .interpolate("basis")
+    .interpolate("monotone")
     .x(function(d) { return xScale(d.time); })
     .y1(function(d) { return yScale(d.mood); })
     .y0(yScale(0))
       .defined(function(d){return d.mood!=null;});
 
 var fatigueArea = d3.svg.area()
-    .interpolate("basis")
+    .interpolate("monotone")
     .x(function(d) { return xScale(d.time); })
     .y1(function(d) { return yScale(d.fatigue); })
     .y0(yScale(0))
       .defined(function(d){return d.fatigue!=null;});
 
 var stressArea = d3.svg.area()
-    .interpolate("basis")
+    .interpolate("monotone")
     .x(function(d) { return xScale(d.time); })
     .y1(function(d) { return yScale(d.stress); })
     .y0(yScale(0))
       .defined(function(d){return d.stress!=null;});
 
 var moraleArea = d3.svg.area()
-    .interpolate("basis")
+    .interpolate("monotone")
     .x(function(d) { return xScale(d.time); })
     .y1(function(d) { return yScale(d.morale); })
     .y0(yScale(0))
@@ -264,26 +264,26 @@ var moraleArea = d3.svg.area()
     .attr("class","title");
 
   var moodLine = d3.svg.line()
-  .interpolate("basis")
+  .interpolate("monotone")
   .defined(function(d){return d.mood!=null})
     .x(function(d) {return xScale(d.time);})
     .y(function(d){return yScale(d.mood) - 1.5;});
 
 
   var fatigueLine = d3.svg.line()
-  .interpolate("basis")
+  .interpolate("monotone")
   .defined(function(d){return d.fatigue!=null})
     .x(function(d) {return xScale(d.time);})
     .y(function(d){return yScale(d.fatigue);});
 
   var moraleLine = d3.svg.line()
-  .interpolate("basis")
+  .interpolate("monotone")
   .defined(function(d){return d.fatigue!=null})
     .x(function(d) {return xScale(d.time);})
     .y(function(d){return yScale(d.morale);});
 
   var stressLine = d3.svg.line()
-  .interpolate("basis")
+  .interpolate("monotone")
   .defined(function(d){return d.stress!=null})
     .x(function(d) {return xScale(d.time);})
     .y(function(d){return yScale(d.stress);});
@@ -306,17 +306,42 @@ var yAxis = d3.svg.axis()
     .style("stroke", "#e0e0e0")
     .style("stroke-dasharray", ("5,5"))
     .attr("x1", 0)
-    .attr("y1", yScale(100))
+    .attr("y1", yScale(1))
     .attr("x2", width)
-    .attr("y2", yScale(100))
+    .attr("y2", yScale(1))
 
     svg.append("line")
       .style("stroke", "#e0e0e0")
       .style("stroke-dasharray", ("5,5"))
       .attr("x1", 0)
-      .attr("y1", yScale(50))
+      .attr("y1", yScale(2))
       .attr("x2", width)
-      .attr("y2", yScale(50))
+      .attr("y2", yScale(2))
+
+
+    svg.append("line")
+      .style("stroke", "#e0e0e0")
+      .style("stroke-dasharray", ("5,5"))
+      .attr("x1", 0)
+      .attr("y1", yScale(3))
+      .attr("x2", width)
+      .attr("y2", yScale(3))
+
+    svg.append("line")
+      .style("stroke", "#e0e0e0")
+      .style("stroke-dasharray", ("5,5"))
+      .attr("x1", 0)
+      .attr("y1", yScale(4))
+      .attr("x2", width)
+      .attr("y2", yScale(4))
+
+    svg.append("line")
+      .style("stroke", "#e0e0e0")
+      .style("stroke-dasharray", ("5,5"))
+      .attr("x1", 0)
+      .attr("y1", yScale(5))
+      .attr("x2", width)
+      .attr("y2", yScale(5))
 
 svg.append("g")
   .attr("class", "Axis")

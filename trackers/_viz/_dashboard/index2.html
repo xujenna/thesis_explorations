@@ -153,16 +153,13 @@
   <script src="https://d3js.org/d3-time.v1.min.js"></script>
   <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
+
+
+
   <script>
 
-
-  var margin = {top: 100, right: 30, bottom: 50, left: 50};
-
-  var width = 1000 - margin.left - margin.right,
-      height = 700 - margin.top - margin.bottom;
-
-
-
+var xMin = new Date("2018-04-17")
+var xMax = new Date("2018-04-18")
 
   d3.json("log.json", ready);
 
@@ -171,6 +168,11 @@
   function ready(err, data) {
       if (err) console.warn(err, "error loading data");
 
+
+      var margin = {top: 100, right: 30, bottom: 50, left: 50};
+
+      var width = 1000 - margin.left - margin.right,
+      height = 700 - margin.top - margin.bottom;
 
 
 
@@ -278,8 +280,8 @@
 
 
 
-  var xMin = new Date("Tue Mar 27 2018 09:00:00 GMT-0400 (EDT)");
-  var xMax = new Date("Wed Mar 28 2018 00:00:00 GMT-0400 (EDT)");
+  // var xMin = new Date("Tue Mar 27 2018 09:00:00 GMT-0400 (EDT)");
+  // var xMax = new Date("Wed Mar 28 2018 00:00:00 GMT-0400 (EDT)");
 
 
 
@@ -524,6 +526,7 @@
 
 <script>
 
+
 d3.json("merged_file.json", function (err, affectiva) {
   d3.json("productivity.json", function(err, rescuetime){
       if (err) console.warn(err, "error loading data");
@@ -593,8 +596,8 @@ affectiva.forEach(function(d){
 console.log(affectiva)
 
 
-var xMin = new Date("Thu Apr 12 2018 09:00:00 GMT-0400 (EDT)");
-var xMax = new Date("Fri Apr 13 2018 00:00:00 GMT-0400 (EDT)");
+// var xMin = new Date("Thu Apr 12 2018 09:00:00 GMT-0400 (EDT)");
+// var xMax = new Date("Fri Apr 13 2018 00:00:00 GMT-0400 (EDT)");
 
 var yMin = d3.min(affectiva,function(d){return d.min_valence;});
 
@@ -602,7 +605,7 @@ var yMin = d3.min(affectiva,function(d){return d.min_valence;});
     var margin = {top: 50, right: 20, bottom: 50, left: 40};
 
     var width = 1000 - margin.left - margin.right,
-        height = 700 - margin.top - margin.bottom;
+    height = 700 - margin.top - margin.bottom;
 
 
       var svg = d3.select("body").append("div")
@@ -657,7 +660,7 @@ var yMin = d3.min(affectiva,function(d){return d.min_valence;});
     .defined(function(d){return d[4]!=null;})
     .x(function(d) {return xScale(d[0]);})
     .y(function(d){return yScale(d[4]);})
-    .interpolate("basis");
+    .interpolate("cardinal");
     // .defined(function(d){return !isNaN(d[4]);});
 
   var blinkLine = d3.svg.line()
@@ -741,7 +744,7 @@ var yMin = d3.min(affectiva,function(d){return d.min_valence;});
       // .data(newProductivity)
       .attr("d", area(newProductivity))
       .attr("fill", "gold")
-      .attr("opacity", 0.35);
+      .attr("opacity", 0.3);
 
     // var productivitycontainer = svg.append("path")
     //   .attr("d", productivityline(newProductivity))
@@ -868,13 +871,14 @@ var blinksCircles = svg.selectAll(".blinks-circle")
 
 <script>
 
+
 d3.tsv("responses.tsv", function (err, responses) {
     if (err) console.warn(err, "error loading data");
 
   var margin = {top: 30, right: 100, bottom: 50, left: 40};
 
   var width = 1000 - margin.left - margin.right,
-      height = 500 - margin.top - margin.bottom;
+  height = 500 - margin.top - margin.bottom;
 
 
     var svg = d3.select("body").append("div")
@@ -929,9 +933,9 @@ responses.forEach(function(d, i){
 
 });
 
-
-    var xMin = new Date("Wed Apr 11 2018 09:00:00 GMT-0400 (EDT)");
-    var xMax = new Date("Thu Apr 12 2018 00:00:00 GMT-0400 (EDT)");
+    //
+    // var xMin = new Date("Wed Apr 11 2018 09:00:00 GMT-0400 (EDT)");
+    // var xMax = new Date("Thu Apr 12 2018 00:00:00 GMT-0400 (EDT)");
 
 console.log(newResponses)
     var xScale = d3.time.scale()
@@ -943,28 +947,28 @@ console.log(newResponses)
       .domain([0, 5]);
 
 var moodArea = d3.svg.area()
-    .interpolate("basis")
+    .interpolate("cardinal")
     .x(function(d) { return xScale(d.time); })
     .y1(function(d) { return yScale(d.mood); })
     .y0(yScale(0))
       .defined(function(d){return d.mood!=null;});
 
 var fatigueArea = d3.svg.area()
-    .interpolate("basis")
+    .interpolate("cardinal")
     .x(function(d) { return xScale(d.time); })
     .y1(function(d) { return yScale(d.fatigue); })
     .y0(yScale(0))
       .defined(function(d){return d.fatigue!=null;});
 
 var stressArea = d3.svg.area()
-    .interpolate("basis")
+    .interpolate("cardinal")
     .x(function(d) { return xScale(d.time); })
     .y1(function(d) { return yScale(d.stress); })
     .y0(yScale(0))
       .defined(function(d){return d.stress!=null;});
 
 var moraleArea = d3.svg.area()
-    .interpolate("basis")
+    .interpolate("cardinal")
     .x(function(d) { return xScale(d.time); })
     .y1(function(d) { return yScale(d.morale); })
     .y0(yScale(0))
@@ -978,26 +982,26 @@ var moraleArea = d3.svg.area()
     .attr("class","title");
 
   var moodLine = d3.svg.line()
-  .interpolate("basis")
+  .interpolate("cardinal")
   .defined(function(d){return d.mood!=null})
     .x(function(d) {return xScale(d.time);})
     .y(function(d){return yScale(d.mood) - 1.5;});
 
 
   var fatigueLine = d3.svg.line()
-  .interpolate("basis")
+  .interpolate("cardinal")
   .defined(function(d){return d.fatigue!=null})
     .x(function(d) {return xScale(d.time);})
     .y(function(d){return yScale(d.fatigue);});
 
   var moraleLine = d3.svg.line()
-  .interpolate("basis")
+  .interpolate("cardinal")
   .defined(function(d){return d.fatigue!=null})
     .x(function(d) {return xScale(d.time);})
     .y(function(d){return yScale(d.morale);});
 
   var stressLine = d3.svg.line()
-  .interpolate("basis")
+  .interpolate("cardinal")
   .defined(function(d){return d.stress!=null})
     .x(function(d) {return xScale(d.time);})
     .y(function(d){return yScale(d.stress);});
