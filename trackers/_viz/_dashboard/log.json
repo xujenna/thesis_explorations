@@ -24462,5 +24462,51 @@
       }
     ],
     "time": "2018-04-20T00:16:35.347782"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.529279,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.965157,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "i'll put it in my preferences makrrk it as a preference ;) .",
+        "tones": [
+          {
+            "score": 0.862286,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "making good progress on dashboard .",
+        "tones": [
+          {
+            "score": 0.789921,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.882284,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-21T18:43:05.116284"
   }
 ]
