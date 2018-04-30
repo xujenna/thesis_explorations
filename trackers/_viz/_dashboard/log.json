@@ -24508,5 +24508,2777 @@
       }
     ],
     "time": "2018-04-21T18:43:05.116284"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.891742,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.869578,
+          "tone_id": "confident",
+          "tone_name": "Confident"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "o\u00df\u2211\u2211cacan't link to local files from local host .",
+        "tones": [
+          {
+            "score": 0.724236,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "happy but sleepy, super sleepy but have to do homework fo r makeup class t tomorrow .",
+        "tones": [
+          {
+            "score": 0.745603,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.618451,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "\u203a   \u2211\u00e5\u221adino\u00dfThanks11 Totally forgot to about this haha .",
+        "tones": [
+          {
+            "score": 0.829393,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.704642,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "Those photos are hilariously and d and delightful .",
+        "tones": [
+          {
+            "score": 0.734771,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-22T11:33:45.850350"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.566802,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.928648,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "No worries :) the Cory isn't even here yet.\u0192width .",
+        "tones": [
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "at makeup class on a sunday _-_-sunday -_- .",
+        "tones": [
+          {
+            "score": 0.764518,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-22T14:06:23.396510"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.537891,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.613149,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "sitting in classfine but can't concentrate in class  .",
+        "tones": [
+          {
+            "score": 0.511925,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "too obssessed with essed with projedashboadebuggin dahshgashboard .",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "ohh i just debugged that weird d fat thweird behavior from last night .",
+        "tones": [
+          {
+            "score": 0.716301,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "i guess is it's omsomething that the browser can send to websites .",
+        "tones": [
+          {
+            "score": 0.75152,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "sso when you visit a website you have a n account for .",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "you the br\u00e5pwowser cangives them your info an d they let you in to your account .",
+        "tones": [
+          {
+            "score": 0.562568,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "this chrome extension uses headers to get past paywealls .",
+        "tones": [
+          {
+            "score": 0.724236,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "inweird, it looks like one emoji on my phone  .",
+        "tones": [
+          {
+            "score": 0.5538,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "Do you have a friend who really wants to participate today at 4pm/ cute .",
+        "tones": [
+          {
+            "score": 0.569284,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.560098,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "I'm  dont m'm not feeling great today an d wouldn't midn nd giving up my spot.",
+        "tones": [
+          {
+            "score": 0.562568,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "Let me know, otherwise I'll be threere1!i'm",
+        "tones": [
+          {
+            "score": 0.888278,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "gjealous .",
+        "tones": []
+      },
+      {
+        "sentence_id": 12,
+        "text": "i dni' to be here lol .",
+        "tones": [
+          {
+            "score": 0.745757,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-22T15:22:46.317190"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.8005,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "pYou'll have present this for thesis, right/ IiI loved the demo oyou did in Rest of You and can't wait to see the final :)i got out of the thesis performance so i'll be heading back soon :):) .",
+        "tones": [
+          {
+            "score": 0.679363,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "playing gmames with kevinplaying snes with k, doing working and watching k play snes .",
+        "tones": [
+          {
+            "score": 0.50089,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": ",lazytrying to workkind of unmotivated for to work on my final,\u00df\u2211\u0192moodline .",
+        "tones": [
+          {
+            "score": 0.589295,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "k his having a nother conenttentious phone conversation with his mother about bhis brother .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-23T01:03:20.717110"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.76145,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.833659,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "just woke upgslept a lot .",
+        "tones": [
+          {
+            "score": 0.991756,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "\u221amoodNotestrigger\u00e7\u221areporterT\u00e7\u221a\u221a\u221a\u00f7\u00df\u2211show to skip \u00e5null povaleuues when drawing circles d3 .",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "working k is working reomotelyk's birthday sand it's k's birthday andh  ehes s's working from homesconvinced k to work from hoemme for his bday .",
+        "tones": [
+          {
+            "score": 0.720311,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-23T13:52:02.571759"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.852901,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.517204,
+          "tone_id": "confident",
+          "tone_name": "Confident"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "-\u00df\u00df-5-5-5\u00df22\u00df4\u00df\u00e7\u00f7\u00e7\u221aViewing from: ctext-cotntext id =\"context-description(d.time[function(d{return xScale(d.\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u00b8\u03a9\u03a9\u00b8\u00b8\u00b8\u03a9\u03a9\u03a9\u03a9\u03a9\u2020hwow to reutnturn one incredemement of xScale domain d3 .",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "making good progress but feel productive ing productive, bu t still have a lo honestly not working won what i need to lolnot working on what I actually need to lol .",
+        "tones": [
+          {
+            "score": 0.660131,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "good progress  progress on wstyling dashboard .",
+        "tones": [
+          {
+            "score": 0.812643,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-23T14:59:29.811043"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.57102,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.633147,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.742727,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u2211Here, my firstThis seeesmester, I built I  , ster (sSpring 2018, I ggathered identified     metrics evidencesbtoh eoth evidenced and personally  suseievidenced .",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "\u2211\u00e7I began work on \u221aof trackers for a whole;, ultimately in hopes ofingin hopes of ultimately\u03a9\u03a9ingpredicting_ultimately__utl, ultimately, by efeeding this data into a neural networkwork.",
+        "tones": [
+          {
+            "score": 0.733853,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "nenea neural network.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "While the lattere latter goal was outside of tthe scope o scope  , and preventing , and ula .",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "My goal , in order ho hopes of .Ultimately, I hope to predictprehapserhaps even preempt\u00e5preempt it t by teaching the neneural net to recommend interventionsthe onset of depression< While the last two tter two BeBelow is a visualization are visualizations of the data I colletcted with homemade python trackers and vaassovarious APIs services./or,",
+        "tones": [
+          {
+            "score": 0.663114,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.70758,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "often intrackers, often in conjunwchiich hich often employ also<rbr> WWhile the latter gogoals are outside the scope of this semester, b two\u03a9//enforce my\u00dfI was motivated to do this /p<p>To begin, filter the data :\u00dfSpeak, Random Access Memory\u00df\u2020random access  .",
+        "tones": [
+          {
+            "score": 0.741413,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "\u2211 and identifying correlations with ymy behavior and environmentI was s  motivated tto do this for several reasons, : fisrst, 1) I have a horrible memory and therefore tend to be totally unwaware of my long-term activitybehavior, 32) I 'm slightly impulsive and therefore tend to be totally a\u2020m-w .",
+        "tones": [
+          {
+            "score": 0.69133,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.868982,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "\u2211\u2211unconcerned with the repercussionsrepercussions of my ehbehavior, 3) a and 3) wee.",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "I have a terribleterrible memory and therefore, which makes it difficult to report the necnecnaccurately report necessary information t in weekly httherapy sessions, 2) 3three main,,and long-term  <p> these e foregoing se the\u00df thi;these, detailedas detailed below\u00df\u00df75\u00df5\u00df\u03a9360\u00df8 .",
+        "tones": [
+          {
+            "score": 0.628634,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.69672,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-23T15:59:30.449784"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.586872,
+          "tone_id": "anger",
+          "tone_name": "Anger"
+        },
+        {
+          "score": 0.520789,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "Passychiatry traditionally usesueemploys eself-self-adminisadministered iajosidj  questionnaires as a diagnostic tools for cmenmood disorders_PH!~!Q-9; the PH-Q-9 ,;is the standard module for depression.,,",
+        "tones": [
+          {
+            "score": 0.533805,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "commusua, which , ___ about the prescenence ence of DSM-IV   these attemusually teattempt to quantify the severity of DSM-IV criteria.T is called the PHQ-9Because affect is nis notidifficult to measure, p\u03a9,  and I've adapted several of the questions  its cquestions into my pera self-reported  questionnaire relevant to my y experience.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "tailored with de.my own questionnaire, which deploypython deploys every hour via the terminalcommand line.",
+        "tones": [
+          {
+            "score": 0.752627,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "In the vissualization to the left, yT includes mood, ratings for mood, stresress (magenfuchsia, stmorale (gold, stress (fblue, and fatigue (grey) from 1-5.",
+        "tones": [
+          {
+            "score": 0.503373,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "IIt also Hovering over the red fuchisia points on the mood line will display qualitative explanations for the qu its respective qualntitative scorescore.",
+        "tones": [
+          {
+            "score": 0.598467,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "The blue x's deonnote the cothe aoccurence of compulsions.occurence\u00e5\u00df\u00df\u0192h2 .",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "The main goal for this This tracker empluttuutilizes the Affectiva API to aattentioemotion recognition capabilites of the \u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9, an emotion re and fiacial recognition model.",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "Every hour , MEvery hourIt analyzes my face Through the browser, it analya locaally -hosted  webIt analyses my face for a minute every hourTVia my my laptop's webcam, tit, and grabs ; a py pytho nn script grabs the mrange min and max attention and valence values (plotted in with fuchsia and vyacyan lines, respectively, as well as the blinksexpressions made (plotted with emoji and number of blinksfthe amount of times I blinked  (eyeClosure valuescalculated by dividing the \u03a9\u03a9\u03a9 the eyeClosure values by 2.amount number of times the variable hit 99%.9%.9%,",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "deivdeided  The goal here  here was I choose these variables becauas an attempt to get ao meaasure mindwandering .",
+        "tones": [
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "; , aa marker strongly correlated with depression.",
+        "tones": [
+          {
+            "score": 0.842108,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "BB (. (Research shows that \u2020blinks aning and attention .",
+        "tones": [
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "<p></p>\u00df The emojisHowever, the emojis The emojisThe emojis were icncluded to illustrate the concept of valence.\u00df",
+        "tones": []
+      },
+      {
+        "sentence_id": 12,
+        "text": "(and for funsialso just for funsies\u00df\u00e7\u221a</b></span>\u0192cyan .",
+        "tones": [
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-23T16:59:31.356077"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.571659,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.618701,
+          "tone_id": "fear",
+          "tone_name": "Fear"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "This tracker uFor this ThisI  built a keylogger in pythonII wrote This idea simply e idea for this is to is simpyly to measure the sentsure the sentimendiscern the sentiment of everything I type.",
+        "tones": [
+          {
+            "score": 0.630729,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.779757,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I wrote a keylogger in python, which sends any coherent phrasecoherent phrsase to IBM Watson's Tone Analyzer .collectsbe",
+        "tones": [
+          {
+            "score": 0.5538,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.85365,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "sent to every hour.",
+        "tones": [
+          {
+            "score": 0.97759,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "\u00df\u00dfThe API provides several sentiment categories:: 3 .",
+        "tones": [
+          {
+            "score": 0.93884,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "Hope all is you're all isall is well1!!",
+        "tones": [
+          {
+            "score": 0.898327,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "I a.! .",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "IWould it be possible to meet a little earlier Wednesday/t  ,/ AltAltnerernatively , do you haeave any availableility Thuon Thursday or Friday/ I have a class I need to attentiond at 4pm in Brooklnyn this Thursday.",
+        "tones": [
+          {
+            "score": 0.550575,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.763337,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "W\u03a9WednesdaySorry for the inconvenieience!",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": ", .",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "JenanaOhh, do you know do you know people at theThe Pudding/ HCan you conivince them somehow to gilet me intern for themsomehow convince them to create a n internship position for meeee/ \u03a9sdo you have an in atlet  let me kbe in an intern plesase fI Can you soemehoweho ww convince them to let me intern there/   I accidenlyttly \u2211So obsessed Embassarassingly robsessed with that website right now but they're not hiring  interns right now I mat omay have accidently pally spammed their inboxes with my reussume... and fear I may be ba \u2020shit list .",
+        "tones": []
+      },
+      {
+        "sentence_id": 10,
+        "text": "Thanks f for I  promise I won't embarrass you tomorrow though.h.",
+        "tones": [
+          {
+            "score": 0.629833,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "Thanks for finding such a cool guest speaker1 right nowJust ldisovcoverede  that website lalast  week adnd am now e,  witotallyp\u2020maps .",
+        "tones": [
+          {
+            "score": 0.794816,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-23T19:44:14.735818"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.503809,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.555449,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "Hey1 Sorry, was cscrambling to finish a final for tonight and just saw this e-mail.",
+        "tones": [
+          {
+            "score": 0.647986,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I'mDo you still nneed help/ I' im in class but can bmeet up if you're on the floor!4.5 .",
+        "tones": [
+          {
+            "score": 0.524518,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "do you still want\u00e5you can just order whatever lol .",
+        "tones": [
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "i can't walk through this floor without talking to 20 people .",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "Yes1 Sorry for the late response .",
+        "tones": [
+          {
+            "score": 0.842108,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "Let me know if it's too short notice; otherwise I will see you at 3:045pm tomorrow. .",
+        "tones": [
+          {
+            "score": 0.895772,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "Thanks for your acommcommodation!",
+        "tones": [
+          {
+            "score": 0.608851,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "listitp oof[take my] office hours with shiffman tomorrow3pm It hurts t, but I had AS mus much as it thhurts, I had to reallease it.",
+        "tones": [
+          {
+            "score": 0.625975,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "Please   {ePlease grab it!p\u2211\u2211Yeah,",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "I totallyThanksYeah, I totally get that, but the problem is still that that makes and it matill that  actually, , actually \u03a9\u03a9\u03a9\u03a9\u03a9\u03a9there isn't anyone erewou wouldn't be anyone to build d it on SquareSpace.",
+        "tones": [
+          {
+            "score": 0.67103,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "Kyle's frienddeveloprer friend broouched ached braoachedthat idea as well, but wsnasn't willing to do it herslfeseelf.",
+        "tones": [
+          {
+            "score": 0.711887,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "isnisn'trspearhaedead tead that effort .",
+        "tones": []
+      },
+      {
+        "sentence_id": 12,
+        "text": "s a good idea to bring it oup during the call wtih Mith MAtthatthew, since he's put in a lot of man hours trying to develop the site.  .",
+        "tones": [
+          {
+            "score": 0.594025,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "Do you thihopeless// that UI know it's a mess right :(I'm available at 45pm tomorrow, but I believe Joe said he wasn't avilaailable until after 7ypmpm.3:05pmcongrats111",
+        "tones": [
+          {
+            "score": 0.787145,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "kyle111   .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-24T10:32:44.959507"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.652741,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.539154,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.610897,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.861604,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "got good feedback on final last night, had a fun night with k afterwards .",
+        "tones": [
+          {
+            "score": 0.848331,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "To think critically about maps  as they are, and explore  speculate abon how they could be (ie, more einclusive).",
+        "tones": [
+          {
+            "score": 0.840825,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.901841,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "\u2020\u2211\u2020git .",
+        "tones": [
+          {
+            "score": 0.658924,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "TThe techLearningExperimenting with mapbox GL.hacking the web .",
+        "tones": [
+          {
+            "score": 0.628739,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "\u00e7kilana bonder \u00e7ilana\u221ahacking the browser syllabusProbably should be longer.",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "\u2211\u2020mapstich .",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "\u00e7\u00e7\u2211willi\u221acity surveillance \u2020boy with the red .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-24T13:51:17.378555"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.641287,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.706217,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "still feeling good .",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "\u2211nice warm weather, good good convos with classmates, ginteresting an/fun therapy session before and after class\u00df\u2211\u2211\u2020mapsbox .",
+        "tones": [
+          {
+            "score": 0.919047,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "\u0192intern\u2211a:((\u00e5lol people are obsessed with cjob titles .",
+        "tones": [
+          {
+            "score": 0.879308,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "You took A2to to Z, Koji/ Wasn't it too eas y for you/  .",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "I'm thinkout taking it for at because I need want to take a foundations course for programming.",
+        "tones": [
+          {
+            "score": 0.743104,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "need a I've been doing a lot of defront-end dev this esemester, but it's all messy spaghetti code.",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "Do you think A oto Z would be a good, ro/rigorous course/ for that/\u00e7\u00e7\u221a\u00e7\u221a\u00e7\u221axujenna@nyu.edu\u2020girlapproved .",
+        "tones": [
+          {
+            "score": 0.600339,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "\u2020how to call on google hangoutssoma phone  .",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "joe gYes1 Let me ktry to set it u Just sent you an invite to chat.",
+        "tones": [
+          {
+            "score": 0.615352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "Let me know i  f you didn't didn't get it.okay,",
+        "tones": [
+          {
+            "score": 0.929143,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "hopefully this works \u00e5hey guys1  hopefull .",
+        "tones": [
+          {
+            "score": 0.994446,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "hope ffulalk to you in 10 .",
+        "tones": [
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "let\u00e5we ca\u00e5just let us know when you're ready .",
+        "tones": []
+      },
+      {
+        "sentence_id": 13,
+        "text": "\u2211\u2211i t\u00e5no worries, i think matthew is headheading to his computer rright noat the moment .",
+        "tones": [
+          {
+            "score": 0.532616,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "finally on this call lol\u00e5                                                                    \u00e7\u221a\u221ajoejoe is the niceste person lololhuman .",
+        "tones": [
+          {
+            "score": 0.830659,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 15,
+        "text": "thank you \u00e5betroebbestow\u00e5thank you for bestowing him on our ef our website endeavours effort-building .",
+        "tones": [
+          {
+            "score": 0.765287,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 16,
+        "text": "haha YOU're awesome too1 thanks joe1 havhope you have a luxurious commute on the PATHwonder home  .",
+        "tones": [
+          {
+            "score": 0.874245,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 17,
+        "text": "yet more good feels .",
+        "tones": [
+          {
+            "score": 0.688252,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 18,
+        "text": "had  a positive, optimistic call wtih tih Aith ASH's website devdevs .",
+        "tones": [
+          {
+            "score": 0.615387,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.825035,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 19,
+        "text": ",eating everyone was supportive and encouraging, \u00df  (fetllt inlilike I belon   ,  (felt like I belongged at ITP), belong\u00df\u2211\u2211\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u0192kevink\u03a9K\u00df\u00df\u2211\u001f\u001f\u001f\u0192d3.tip .",
+        "tones": [
+          {
+            "score": 0.52795,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 20,
+        "text": "pablo pr\u00e5i fehave a feeling pablo feels like that about a lot of things .",
+        "tones": [
+          {
+            "score": 0.91961,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 21,
+        "text": "\u221a\u221a\u221aoh sorry did i type that ou .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-24T18:09:50.843281"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.603757,
+          "tone_id": "fear",
+          "tone_name": "Fear"
+        },
+        {
+          "score": 0.609227,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.885806,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u00f7 The actual keyloggged content loggedhas been redacted for publication.\u00df\u2211",
+        "tones": [
+          {
+            "score": 0.849827,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "\u2211\u0192d3.tip .",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "\u03a9\u2020how to get all\u00e5how to get file list in directory .",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "<li><a href=\"\u221a tagrget=\"new\">Speak, (Random Access Memory</a></li>\u00df\u2211SentarureJust submitted the link to the repo to th e issurepo1 Can you dguys do bme a huge favor and let me know if it looks funky on your browserend/ /acts justI'm such a crap web dev.  .",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "Thanks so an enlightening class11  Hope to see you both around the floor next semester!don\u2020\u221a\u2211 .",
+        "tones": [
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.506763,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "Thanks for svisiting our class today.",
+        "tones": [
+          {
+            "score": 0.679502,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "!",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "I actuallyncidentally , I had just discovered The Pudding only a week ago, an d was became instantly enamored and (and may or may not have spammed  every e-mail I could find with my resume...)).",
+        "tones": [
+          {
+            "score": 0.946308,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.698008,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "and and showing giving vingy, so it was aweosome to get a peak glimpse into your process .",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "really acoincidence.",
+        "tones": [
+          {
+            "score": 0.982476,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "amazing, and such a treat t and.",
+        "tones": [
+          {
+            "score": 0.953988,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "not \u03a9, and for giving your -emaie-mail out publicly ;\u03a9\u03a9\u00b8 .",
+        "tones": []
+      },
+      {
+        "sentence_id": 12,
+        "text": "before you leftMimi'sand immediately_basicallysorry, ysorry, and I'msorry, but I'm afraid you're next!. .",
+        "tones": [
+          {
+            "score": 0.821795,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "It's ju that thThe puPudding is so cool that I couldn't/can't resist.",
+        "tones": [
+          {
+            "score": 0.773528,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "I'm not susually this obcnoxious ;, ; it soso here we are!and here we are again1so, hi.., perhaps aga (perhaps again//).",
+        "tones": [
+          {
+            "score": 0.822231,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 15,
+        "text": "I\u0192facial aanalysis .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-24T19:09:49.881767"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.57473,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u00e5and <<<p>/<p><p></p>The yellow area chart resppresents my productivity scores as calculated by the RecscutimeeTime API., and incwhich considered bs both complaptop and mphone activity.<p>\u00df\u2211\u2211 .",
+        "tones": [
+          {
+            "score": 0.64237,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "My goal after ITP is to weasel my way into visual journalisma  gig , so so I'm going hard on my d3 work\u2211theI'veb been.\u00e7\u00e7\u2211how",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "does this look on your end/ \u221a .",
+        "tones": [
+          {
+            "score": 0.944551,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "tshhis semester.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "(here's an exampl e I just wrapped up).presented latst night\u221a .",
+        "tones": [
+          {
+            "score": 0.786991,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "\u00e7 If you're ever looking for interns, l and like my w/think I h, please let me know1 .",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "The rest of my work can be found here: \u221a .",
+        "tones": [
+          {
+            "score": 0.769135,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "pretty good but feeling lazy a little lazy .",
+        "tones": [
+          {
+            "score": 0.645813,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "yet more work to be done .",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "\u221atCommand Linewwt,wwtwtwtd3D3p5w\u00df\u2211\u2211\u00df  JennaXuxujennanyu.eduCreative",
+        "tones": []
+      },
+      {
+        "sentence_id": 10,
+        "text": "DirectorAmbassadors for Sustained Heatlhlth Art DirectrorBloomingdale'sNew York, NY102016062017\u00e7\u221aFreelance DesignerNew York MagazineNew York, NY032015082015\u00e7\u00e5\u221a\u00e5Art and Design DrirectorEssential Homme MagazineNew York, NY03082015\u00e7\u00e5\u221aSenior DesignerEditorial Development Group at Conde NastNew York, NEY022013112014\u00e7\u221a nNe Yoww York Universityhuman computer interaction\u00e5technology .",
+        "tones": [
+          {
+            "score": 0.60971,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "The CSchool of the Art Intstitute of Chicago200820122009ADobe Cdobe Creative Suite, JFfront-end development (, Javascript, D3.js, jQuery, p4.5.hsjs,",
+        "tones": [
+          {
+            "score": 0.602288,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "HTML, CSS, Python, command line, nnodeNode.hsjs,",
+        "tones": [
+          {
+            "score": 0.576844,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.795969,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "physcical computingtypography, dedesign, http://www.xujenna.comJenna",
+        "tones": []
+      },
+      {
+        "sentence_id": 14,
+        "text": "Xup1nkKIRBY9p1nkKIRBY9P#3uCDYZ7710P#3uCDYZ7710xujenna@nyu.edu\u2211\u2211\u2211xujenna@nyu.eduP#3uCDYZ7710 .",
+        "tones": []
+      },
+      {
+        "sentence_id": 15,
+        "text": "umm i donyou're not we're on a different call lol .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-24T20:11:51.598864"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.519673,
+          "tone_id": "anger",
+          "tone_name": "Anger"
+        },
+        {
+          "score": 0.640854,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.711696,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.586281,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "sitting on an ASH call, can't do anything else because it freezes my the ivideo :P .",
+        "tones": [
+          {
+            "score": 0.723064,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.664451,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.615352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "patagoniaLOL i've bmet him at lalso eseen him at tw o donut dashes  .",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "tell him i'm super upset and offended lhahahahha .",
+        "tones": [
+          {
+            "score": 0.643521,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "okay don't dy right, maybe not then.",
+        "tones": [
+          {
+            "score": 0.560098,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.91961,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "unless you think guilt is a motivating factor will be a  =strongto ... .",
+        "tones": [
+          {
+            "score": 0.719981,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.946087,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.80026,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-24T21:11:52.638973"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.756719,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.706892,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "dprbobably because I don't care about chrome extensinons that much .",
+        "tones": [
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "\u00e7\u2211This is the API you'll want to use: \u221aI think this\u0192rtabs .",
+        "tones": [
+          {
+            "score": 0.620279,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "For tmy my Hacking the Browser final, I wu would like to bcreate a CcChrome extension tathat sam slover .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-24T22:11:53.979401"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.53231,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u2211can can mcan wmonitor my browseract actiitvity: how often many tabs are open_, how  many tabs get and produce values for thee fl: how many hourly values for: how mayn tny tabs are open,  2)1)the number  of tabs open, 32) total at end of hourtotathe total the number of number of tabs wthat were opened that hour, 3) the totaland  numebr of ber of windows open\u03a9\u00e7\u221a 2 at end of the hour, 3 and 4) the total number of windows opopened during the hourduring the. .",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "the the the  .",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "To accomplish this, I will need to use the tabs API \u00e7 for the  (tabs.events\u00e7\u221a\u03a9\u221a .",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "the total number of tabs \"focused\" during the horur .",
+        "tones": [
+          {
+            "score": 0.660207,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "jfinally wrkorking on homework n and it's not painful .",
+        "tones": [
+          {
+            "score": 0.536715,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "\u2020the favicon of eaeach urURL from every updated tab .",
+        "tones": [
+          {
+            "score": 0.874372,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "\u2211  I'll only require a background script for this project, as I won't be writing anything to inserting any code into the  the browser pages I visit.",
+        "tones": [
+          {
+            "score": 0.716301,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.53644,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": ", and won't need a \u0192brwoowser\u00e5browser aor page action.",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "The difficult part will be figuring out how to access the data once every hour, after it's collected.",
+        "tones": [
+          {
+            "score": 0.677275,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.660207,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.515576,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "I suspect I'll need to post a do an AJAX pospost/There must be an easier way, but my only idea at the moment is   to \u2020mongodb .",
+        "tones": [
+          {
+            "score": 0.681087,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-24T23:11:54.763902"
+  },
+  {
+    "document_tone": {
+      "tones": []
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u00e7\u2211I(to add to my suite of trcackers) \u221a\u00e7\u2211xujen\u221aOIt submits request haeaders that look like \u00e5It makes the request look header look like it's from Twitter, which is not blockedwhich does not reqthe WSJ does not require to logo to loginthe users of which are nots they're, whose users are not required to log in to WSJmobile \u00e7\u221ainnocuous chrome extentision .",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "had  gitfigfought with k alast night, early lclass this morning .",
+        "tones": [
+          {
+            "score": 0.670234,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "how to find correlations .",
+        "tones": [
+          {
+            "score": 0.982476,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-25T09:29:52.652686"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.542467,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.592138,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u2211  pyou aren't \u00e5yyou're too far away, so i asked hijim how to find correlation with python.",
+        "tones": [
+          {
+            "score": 0.511945,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "h .",
+        "tones": [
+          {
+            "score": 0.8152,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "this is what \u00e5this is how he responded lol .",
+        "tones": [
+          {
+            "score": 0.614423,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "\u2211\u2211\u2211\u2211he said to use numpy or pandas .",
+        "tones": [
+          {
+            "score": 0.91961,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "caseyand then\u00e5 he was like, you should come to my flyby tomorrow rnight, i'm going to go over data analysis with python .",
+        "tones": [
+          {
+            "score": 0.842108,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "i was like, of course you are jim lol .",
+        "tones": [
+          {
+            "score": 0.706593,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.898327,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "\u2211i sa w a headline about how gmail's redesign was released today .",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "but it looks the same for me .",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "i like how ridwan only made fthe cut for \"ccute ass boys\"  .",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "\u2211Jim SmchjJames is a n ITP treasure.",
+        "tones": []
+      },
+      {
+        "sentence_id": 10,
+        "text": "10AM stats lesson from  ITP rtreasure am.",
+        "tones": [
+          {
+            "score": 0.801827,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "\u2211343.5 .",
+        "tones": []
+      },
+      {
+        "sentence_id": 12,
+        "text": "jim just gave me a svery thorougug hh sttats lesson! .",
+        "tones": [
+          {
+            "score": 0.822231,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": ",,../,,/../affectiva/photos\u00df\u2020local path address up two levels .",
+        "tones": []
+      },
+      {
+        "sentence_id": 14,
+        "text": "\u00df\u02dc\u2211\u2211\u221a\u03a9\u221a\u00df!~\u00df\u00df\u2020\u2211linking to local fdirectoyry from local host .",
+        "tones": [
+          {
+            "score": 0.546022,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.653099,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-25T10:42:31.578833"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.508206,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.887344,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.704699,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u00e7\u00e7apr 225\u02dc\u221a../..\u00df\u00df\u03a9\u00df\u00df\u00df\u03a9\u03a9\u03a9\u00df\u03a9\u00b8\u00b8\u00df\u2020how to locally l\u00e5how to link to local file from local host .",
+        "tones": [
+          {
+            "score": 0.506763,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "jx603\u2211linking to local files from local hostlly hosted webpagelocal host\u221a .",
+        "tones": [
+          {
+            "score": 0.514933,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.653099,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "\u221aHey [halp] me linkAnyone know what the trciick to this is/ I'm trying to access a bunch of files outside of the prentarent directorywebpage's  my index.hmlhtml''s,",
+        "tones": [
+          {
+            "score": 0.588596,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "and the ,linking it \u00e7normally wi..../../file..e\u2020../../ .",
+        "tones": [
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "\u2211\u2211using relative file bpahths yields a 404 (fielle not found) error .  .",
+        "tones": [
+          {
+            "score": 0.950868,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "\u221a\u03a9\u00e7After Googling GooIMany suOn googI've tried using file:///full along with te he pfull path, \u00e7which yireturbut the brChrome complains \u221a\"\" logs this complaingt: .",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "I triedd launching hChrome from terterminal with th fe following flag,,, whiThe internet sseems to believe the claims that launching Chrome from tterminal with the following flag solves this pproblem:ubuuuut it doesn't (at least not for me).",
+        "tones": [
+          {
+            "score": 0.599421,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "\u2211 .",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "\u03a9I feel like I've be'm out of leads at this pointAt this point, I'm out of leads.",
+        "tones": [
+          {
+            "score": 0.589797,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.899126,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "Anyone have any ideas// Please help1 .",
+        "tones": [
+          {
+            "score": 0.842108,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.994446,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "link tobut\u03a9ubbut I'm still getting the same error message.",
+        "tones": [
+          {
+            "score": 0.576852,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.842108,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "\u00e7 .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-25T11:44:03.392005"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.567508,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.591717,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.752665,
+          "tone_id": "confident",
+          "tone_name": "Confident"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "this is really bizarre .",
+        "tones": [
+          {
+            "score": 0.920855,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "so i moved my dashboard's index file to the parent of all my other data files.",
+        "tones": [
+          {
+            "score": 0.704642,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "so it would have access to them.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "because remember i was getting that CORS error .",
+        "tones": [
+          {
+            "score": 0.871326,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.948998,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "and then i fired up a python server in the parent director.",
+        "tones": [
+          {
+            "score": 0.788547,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "and i relinked one file path and refreshed the browser to test it.",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "and it worked.",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "but everything else always worked lol.",
+        "tones": [
+          {
+            "score": 0.506321,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.942582,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "every else also worked*.",
+        "tones": [
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.97759,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "which is insane because the file paths are wrong.",
+        "tones": [
+          {
+            "score": 0.540999,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.793846,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "wowwww.",
+        "tones": []
+      },
+      {
+        "sentence_id": 11,
+        "text": "congratulations!",
+        "tones": [
+          {
+            "score": 0.710526,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "okay finally the data is live.",
+        "tones": [
+          {
+            "score": 0.86275,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.620279,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "so satisfying ^_^.",
+        "tones": [
+          {
+            "score": 0.837732,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "i just had my advisement appointment with dan. he was telling me again how much he liked my final ^_^.",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-25T14:44:21.338502"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.518793,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.729893,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u00dfsamsamoffice hours \u2020office \u0192shawn\u0192shiff\u2211residents' officeDo you know ho tw to oppost \u0192post .",
+        "tones": [
+          {
+            "score": 0.821913,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "\u00e7to a RESTful API to a mongoDBherolu/ku/ app/ If not, you can cjust cancel this apopintppointmetnt:) :) .",
+        "tones": [
+          {
+            "score": 0.554387,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "Thank you1\u00e7 set up a  () to receive posts from the web\u00e5\u00e7\u00df .",
+        "tones": [
+          {
+            "score": 0.561355,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.8152,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "wostill working on hacking the browser hw .",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "neuroscience and mindreading ttalklecture1 input is \u00e5external input is processed witin occipital lobe .",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "neurons alrbrain waves are subthreholdeshold things happening in cells; some are action potentials activity- .",
+        "tones": [
+          {
+            "score": 0.681699,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "subthreshold potentials: smaller change in voltage in neuron: from neur neurotransmitters .",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "aggregate signal is picked up by EEG .",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "\u2211\u2211closing eyes > depriving brain of inputs > alpha ways .",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "vexternal stimuli  > different neurons > inputs ant different times > activity ves  at different frequencies >(higher ampliturde because neurons are firing together), signal adds up > > beta waves because because lsshorter amplitude  .",
+        "tones": [
+          {
+            "score": 0.75131,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-25T16:41:42.418980"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.503083,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.691795,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "a range of with less vsmsmaller range of frequencies/eeg lecture at 6 metrotechclosedopen eyes > , > beta waves\u00e7\u2211speak of the fuckin evildevil \u221a .",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "cheerfuleerfulnot bad, a bit b bored and sleepy .",
+        "tones": [
+          {
+            "score": 0.832812,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "sitting in a workshopshop at t 6  Makersphace that's not going very smoothly  .",
+        "tones": [
+          {
+            "score": 0.589295,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.513787,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "\u2020facebook cat st  lllearnvirbrations rread learn words .",
+        "tones": [
+          {
+            "score": 0.838593,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.681699,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-25T17:48:15.928428"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.643245,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.834238,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u2211\u2211\u2211\u2211Thanks :) Re your rprevious question: I'm trying to link to files outside of the parents  directory (wehre there the local host is deepoloyed) , so I was using ../../file.htmlfolder/folder./file.jpg",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "apatttrying to use paths like .",
+        "tones": [
+          {
+            "score": 0.612312,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.822231,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "I'l find you on the fom in class now  , but I'll try to find one of you on the floorW!\u2020f .",
+        "tones": [
+          {
+            "score": 0.727988,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.705784,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "Thanks Joey1 For srure  Ypi ou guys shoudld start an RSS feed for ufor us to subscribe to, as you're both an inexhaustible Please just send me alevery ilink y  you read_you guys aurare inexhustaustible sources of interesting information.thing\u03a9\u03a9visit .",
+        "tones": [
+          {
+            "score": 0.611737,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "Let's definitely catch up sometime this summer when !!so much  I'm much better company when I'm not a crazed grad student ...\u2020just not sorry .",
+        "tones": [
+          {
+            "score": 0.845248,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "love you \u00e5you need this \u221a .",
+        "tones": [
+          {
+            "score": 0.943869,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "lack of sleep .",
+        "tones": [
+          {
+            "score": 0.955445,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "Yeah no worries1 Tomorrow is fine.",
+        "tones": [
+          {
+            "score": 0.611839,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "I have class tehhe same timein the evening.",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "I'm using a server just using a python server.",
+        "tones": [
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.901894,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "; .",
+        "tones": []
+      }
+    ],
+    "time": "2018-04-25T20:07:02.310311"
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.917082,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "Yeah, that's what I meant by local host :)\u2020chrome:// .",
+        "tones": [
+          {
+            "score": 0.745238,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "fun in classhacking the browserclass .",
+        "tones": [
+          {
+            "score": 0.976043,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-04-25T21:49:01.052970"
   }
 ]

@@ -92,3 +92,33 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-21T11:40:24.133980	4	productive	having fun building my dashboard	schoolwork	0	True	Home	3.5	3	2	False
 2018-04-21T16:38:12.757120	4	pretty good	had nice birthday lunch with k and his mom, then a nice walk home, warm weather today	leisure	3	True	Home	4	2.5	1.5	False
 2018-04-21T17:38:56.098531	4	productive	obsessed with dashboard	schoolwork	2	True	Home	4.5	2	2	False
+2018-04-21T18:43:13.335058	4	feeling good	making good progress on dashboard	schoolwork	1	True	Home	4	2.5	2	False
+2018-04-21T23:48:06.892028	5	happy	fun with k	schoolwork, with Kevin	1	False	Kevin Home	4	2	3.5	True
+2018-04-22T00:49:22.784766	4.5	happy, super sleepy but have to do homework for makeup class tomorrow	happy, super sleepy but have to do homework for makeup class tomorrow	schoolwork, with kevin	1	False	Kevin Home	3	2.5	5	True
+2018-04-22T13:23:49.599772	3	neutral, a bit sleepy	at makeup class on a sunday -_-	in class	3	False	School	3.5	2	3.5	True
+2018-04-22T14:46:00.226472	3.5	fine but can't concentrate in class	too obsessed with dashboard	in class	3	False	School	3	2	3	False
+2018-04-22T21:13:51.835913	4	cheerful,lazy	kind of unmotivated to work on my final, watching k play snes	schoolwork, leisure, with kevin	1	False	Kevin Home	2.5	3.5	2.5	False
+2018-04-22T22:35:26.112439	2.5	apprehensive	k is having another contentious phone conversation with his mother about his brother	schoolwork	1	False	Kevin Home	3	4	2.5	False
+2018-04-23T10:55:55.127095	4	good enough	slept a lot	resting, just woke up, email	1	False	Kevin Home	3.5	3	1	True
+2018-04-23T12:39:13.178737	3.5	happyish	convinced k to work from home for his bday	schoolwork, with kevin	1	False	Kevin Home	3.5	3	1.5	False
+2018-04-23T13:40:01.043825	3	slightly frustrated	trying to debug	schoolwork, with kevin	1	False	Kevin Home	3	3.5	1.5	False
+2018-04-23T14:42:12.035807	3.5	feeling productive, but not working on what I actually need to lol	good progress on styling dashboard	schoolwork, with kevin	1	False	Kevin Home	3.5	3	1.5	False
+2018-04-23T15:59:23.999932	4	productive	jamming on QH final	schoolwork, with kevin	1	False	Kevin Home	4	2.5	1	False
+2018-04-23T16:59:58.408849	3	stressed	almost time for class	schoolwork, with kevin	1	False	Kevin Home	3.5	4.5	1	False
+2018-04-23T19:50:47.869858	4	relieved	just finished presenting QH final	in class	5	False	School	4	2	1.5	True
+2018-04-24T12:53:08.957482	4.5	feeling good	got good feedback on final last night, everyone was supportive and encouraging, had a fun night with k afterwards	in class	5	False	School	4	2	2	False
+2018-04-24T16:30:48.348500	4.5	still feeling good	warm weather, good convos with classmates before and after class (felt like I belong at ITP), interesting/fun therapy session	therapy	5	True	Home	4	2.5	1.5	True
+2018-04-24T17:40:22.006398	4.5	yet more good feels	had a positive, optimistic call with ASH's devs	schoolwork, ASH stuff, eating	2	True	Home	4	2	1	False
+2018-04-24T19:23:37.187591	4	pretty good but feeling a little lazy	yet more work to be done	schoolwork, email	2	True	Home	3.5	3	1.5	False
+2018-04-24T20:26:55.898215	3.5	fine, a little bored	sitting on an ASH call, can't do anything else because it freezes the video :P	ASH stuff	4	True	Home	3	3.5	2	False
+2018-04-24T21:30:59.773387	3	lazy, unmotivated	probably because I don't care about chrome extensions that much	leisure	1	True	Home	2.5	3.5	2	True
+2018-04-24T22:32:39.304067	3	fine	finally working on homework and it's not painful	schoolwork	0	True	Home	3.5	3	2	True
+2018-04-25T09:06:13.531754	2	super sleepy	fought with k last night, early class this morning	in class	3	False	School	2.5	2	4.5	False
+2018-04-25T10:23:58.364701	3.5	grateful	jim just gave me a very thorough stats lesson!	in class	3	False	School	3.5	2.5	4	False
+2018-04-25T11:26:47.566921	2.5	so sleepy and lazy	sleep deprivation	in class	3	False	School	3	3	4.5	False
+2018-04-25T12:32:36.175990	5	happy	had some fun convos, lots of responses to my call for help on listserv, Shiffman complimented my QH final again during advisement!	schoolwork	6	False	School	3.5	2.5	3.5	False
+2018-04-25T14:01:50.331694	3.5	not bad	just working on hw	schoolwork	3	True	Home	4	2	3.5	False
+2018-04-25T15:02:33.024393	3	neutral	still working on hacking the browser hw	schoolwork	1	True	Home	3.5	2	4	False
+2018-04-25T17:09:27.090474	3.5	not bad, a bit bored and sleepy	sitting in a workshop at Makerspace that's not going very smoothly 	leisure, with friends	2	False	School (Makerspace)	3	1.5	4	False
+2018-04-25T19:30:32.589290	2.5	very sleepy	lack of sleep	in class	3	False	School	2	1.5	5	True
+2018-04-25T21:00:05.847210	4	cheerful	fun in class	in class	4	False	School	3	1	4.5	False

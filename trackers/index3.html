@@ -292,8 +292,8 @@
 <body>
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://d3js.org/d3-time.v1.min.js"></script>
-  <script src="d3-tip.js"></script>
-  <script src="jquery-3.3.1.js"></script>
+  <script src="_viz/_dashboard/d3-tip.js"></script>
+  <script src="_viz/_dashboard/jquery-3.3.1.js"></script>
 
   <link rel="stylesheet" href="https://use.typekit.net/fao6qlb.css">
 
@@ -334,25 +334,26 @@
     <svg id="keylogger"></svg>
   </div>
 
-  <div class="container" id="comparison-container">
+  <!-- <div class="container" id="comparison-container">
     <div class="description"><h2>Compare the Data</h2>
     text tk
     </div>
     <svg id="comparison"></svg>
-  </div>
+  </div> -->
 
 <script>
 
 // var dir = "file:///Users/jxu2/github/thesis_explorations/trackers/affectiva/photos/";
-var dir = "imgs/";
-
+var dir = "affectiva/photos/";
 var fileextension = ".jpg";
 $.ajax({
     //This will retrieve the contents of the folder if the folder is configured as 'browsable'
     url: dir,
     success: function (data) {
         //List all .png file names in the page
-        $(data).find("a:contains(" + fileextension + ")").each(function () {
+        var fileList = $(data).find("a:contains(" + fileextension + ")").slice(-13);
+        console.log(fileList)
+        fileList.each(function () {
             var filename = this.href.replace(window.location.host, "").replace("http://", "");
             $("#intro-container").append("<div class='hero-imgs'><img src='" + dir + filename + "'></div>");
         });
@@ -461,7 +462,7 @@ var newResponses = [];
 
 
 
-d3.tsv("responses.tsv", function (err, responses) {
+d3.tsv("reporter/responses.tsv", function (err, responses) {
     if (err) console.warn(err, "error loading data");
 
 
@@ -713,7 +714,7 @@ var yAxisKeylogger = d3.axisLeft(yScaleKeylogger).tickSize(-width).ticks(4).tick
 
 
 
-  d3.json("log.json", ready);
+  d3.json("keylogger/logs/log.json", ready);
 
   function ready(err, data) {
       if (err) console.warn(err, "error loading data");
@@ -979,19 +980,19 @@ var productivityArea = d3.area()
       .defined(function(d){return d[4]!=null;});
 
 
-d3.json("merged_file.json", function (err, affectiva) {
-  d3.json("productivity.json", function(err, rescuetime){
+d3.json("affectiva/analyses/merged_file.json", function (err, affectiva) {
+  d3.json("rescuetime/productivity.json", function(err, rescuetime){
       if (err) console.warn(err, "error loading data");
 
 
-var productivity = rescuetime.rows;
+productivity = rescuetime.rows;
 
 productivity.forEach(function(d){
   var dateTime = new Date(String(d[0]));
   d[0] = dateTime;
 })
 
-var newProductivity = [];
+newProductivity = [];
 
 productivity.forEach(function(d, i){
 
@@ -1293,95 +1294,4 @@ affectiva.forEach(function(d){
 
 </script>
 
-<script>
-
-var comparisonWidth = 1100 - margin.left - margin.right;
-var comparisonHeight = 500 - margin.top - margin.bottom;
-
-
-var comparisonSVG = d3.select("#comparison")
-      .attr("width", comparisonWidth + margin.left + margin.right)
-      .attr("height", comparisonHeight + margin.top + margin.bottom)
-var comparisonChart = comparisonSVG.append("g")
-        .attr("class", "comparisonG")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-
-var yScaleComparison = d3.scaleLinear()
-  .range([height, 0]);
-
-
-
-var filterData = {
-  "mood": true,
-  "morale": true,
-  "fatigue": true,
-  "stress": true,
-  "blinks": true,
-  "productivity":true,
-  "attention": true,
-  "valence": true,
-  "keylogger": true
-}
-
-var color = d3.schemeCategory10;
-
-
-d3.select("#comparison-container").selectAll(".buttons")
-  .data(filterData)
-  .enter().append("button")
-  .attr("class", "buttons")
-  .text(function(d,i) {console.log(d);return d[i];})
-  .on("click", function(d) {
-    // title(d);
-    // drawRects(d.values);
-    console.log("d", d);
-  });
-
-
-function drawChart(filterData){
-
-
-
-yScaleComparison.domain([0,5]);
-
-
-comparisonChart.append("g")
-  .attr("class", "axis axis--x")
-  .attr("transform","translate(0, "+comparisonHeight+")")
-  .call(xAxis);
-
-
-var legend = comparisonSVG.selectAll('g')
-    .data(filterData)
-    .enter()
-  .append('g')
-    .attr('class', 'legend');
-
-legend.append('rect')
-    .attr('x', width - 20)
-    .attr('y', function(d, i){ return i *  20;})
-    .attr('width', 10)
-    .attr('height', 10);
-    // .style('fill', function(d) {
-    //   return color(d.key);
-    // });
-
-legend.append('text')
-    .attr('x', width - 8)
-    .attr('y', function(d, i){ return (i *  20) + 9;})
-    .text(function(d){ return d.key; });
-
-legend
-		.on("click",function(d){
-				//filter data
-				//filterData[d.name]=!filterData[d.name];
-				reDraw(d.key);
-  });
-
-
-}
-drawChart(filterData);
-
-</script>
 </body>
