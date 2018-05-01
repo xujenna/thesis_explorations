@@ -1,7 +1,7 @@
 import webbrowser
 import time
 
-url = 'http://localhost:8888/index2.html'
+url = 'http://localhost:9090/index2.html'
 chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
 
 while True:

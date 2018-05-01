@@ -17,7 +17,8 @@ def roundTime(dt):
 
 #keylogger DF
 
-keyloggerData = json.loads(log.json)
+with open('../keylogger/logs/log.json', 'r') as f:
+	keyloggerData = json.load(f)
 
 tzinfos = { "EDT" : gettz("America/New_York") }
 
@@ -46,7 +47,8 @@ local_tz = gettz('America/New_York')
 def utc_to_local(utc_dt):
 	return utc_dt.replace(tzinfo=local_tz)
 
-affectivaData = json.loads(merged_file.json)
+with open('../affectiva/analyses/merged_file.json', 'r') as f:
+	affectivaData = json.load(f)
 
 for x in range(0, len(affectivaData)):
 	affectivaData[x]['time'] = utc_to_local(datetime.datetime.fromtimestamp((affectivaData[x]['time']/ 1e3)))
@@ -55,23 +57,18 @@ affectivaDF = DataFrame(affectivaData)
 affectivaDF.time = affectivaDF.time.apply(roundTime)
 affectivaDF.time.apply(roundTime)
 affectivaDF.emoji = affectivaDF.emoji.apply(lambda x: ",".join(x))
-affectivaDF.emotions = affectivaDF.emotions.apply(lambda x: ",'".join(x))
+affectivaDF.emotions = affectivaDF.emotions.apply(lambda x: ",".join(x))
 
 
 #mood reporter DF
 
-responsesData = pd.read_csv(responses.tsv, sep='\t', header=0)
+responsesData = pd.read_csv("../reporter/responses.tsv", sep='\t', header=0)
 
 timeValues = responsesData.time.values
 
 for x in range(0, len(timeValues)):
 	timeValues[x] = dateutil.parser.parse(timeValues[x] + " EDT", tzinfos=tzinfos)
 
-
-timeValues = responsesData.time.values
-
-for x in range(0, len(timeValues)):
-	timeValues[x] = dateutil.parser.parse(timeValues[x] + " EDT", tzinfos=tzinfos)
 
 # responsesData.time = timeValues
 responsesData.time = responsesData.time.apply(roundTime)
@@ -82,7 +79,8 @@ responsesData.time.apply(roundTime)
 
 #productivity DF
 
-productivityFile = json.loads(productivity.json)
+with open('../rescuetime/productivity.json', 'r') as f:
+	productivityFile = json.load(f)
 
 productivityData = productivityFile['rows']
 
@@ -104,5 +102,7 @@ productivityDF.time.apply(roundTime)
 
 dfs = [keyloggerDF, affectivaDF, responsesData, productivityDF]
 df_final = reduce(lambda left, right: pd.merge(left,right,on='time', how='inner'), dfs)
+
+print(df_final)
 
 
