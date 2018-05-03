@@ -154,3 +154,18 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-30T21:15:15.858797	4	lazy	had dinner/dessert with k, feel reluctant to start working again	schoolwork, eating, with k	1	False	Home	3	3	3	True
 2018-04-30T22:28:27.522694	4.5	happy	k helping me with pandas and it's fun	schoolwork, with k	1	False	Home	3.5	2.5	3	False
 2018-05-01T00:44:41.700091	5	happy	k did all my work for me lol, good learning experience	schoolwork, with k	1	False	Home	4	1.5	4	True
+2018-05-01T12:08:52.178700	5	cheerful	talked to some friends at school, helped someone debug their final	in class, school work	7	False	School	4	1.5	3	False
+2018-05-01T16:00:08.559133	3.5	sleepy, confused	slept late last night, got up early for couple's therapy; pandas is not working	schoolwork	5	True	Home	3	2.5	4	False
+2018-05-01T17:01:36.128844	4	pretty good	figured out pandas stuff	schoolwork	0	True	Home	3.5	2.5	3.5	False
+2018-05-01T18:03:36.971841	3.5	super lazy	finals burnout	schoolwork	2	True	Home	3	3	4	False
+2018-05-01T19:34:03.933241	3	burned out (or maybe just very sleepy)	lack of sleep last night? too much nonstop work?	schoolwork, leisure	1	True	Home	2.5	3.5	4.5	False
+2018-05-01T23:15:56.087689	4	pretty good	took a nap with k, now we're training machine learning models!	schoolwork, with k	1	False	Kevin Home	3.5	2.5	3	False
+2018-05-02T00:35:25.174200	3.5	fine	just finishing up this documentation for my presentation tomorrow am	schoolwork, with k	1	False	Kevin Home	3	2	4	False
+2018-05-02T12:49:14.769133	4	motivated	got good feedback on final in class, now back to work on my last final for tonight	schoolwork	6	False	School	3.5	2.5	4.5	True
+2018-05-02T14:19:09.157708	4.5	in the flow	visualizing data from my new browser activity-tracking extension	schoolwork, chatting, eating	3	False	School	4	2.5	4	False
+2018-05-02T17:17:50.220194	4	accomplished	banged out a viz for hacking the browser in less than 4 hours, despite  having to work around new data weirdness	schoolwork, eating, therapy	1	False	School	4	2	3.5	True
+2018-05-02T18:32:24.435099	3.5	exhausted	not enough sleep last night, been working all day, weather is a bit too warm	schoolwork, in class	4	False	School	3	1.5	4.5	True
+2018-05-03T12:14:23.394239	4	excited	done with the semester! was talking to k about project(s)	leisure, with kevin	1	True	Home	4	0	2	False
+2018-05-03T13:26:10.134426	2.5	super sleepy and lazy	letting myself crash after a long semester	leisure	0	True	Home	2	0	4	False
+2018-05-03T14:34:06.711695	3	neutral	working on project	schoolwork	0	True	Home	3	0	3.5	False
+2018-05-03T15:45:46.722372	2.5	hungry, unfocussed, lethargic	been sitting here working, too lazy to move	schoolwork	0	True	Home	2	0	4	False

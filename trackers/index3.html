@@ -334,12 +334,12 @@
     <svg id="keylogger"></svg>
   </div>
 
-  <!-- <div class="container" id="comparison-container">
-    <div class="description"><h2>Compare the Data</h2>
-    text tk
+  <div class="container" id="tabCounter-container">
+    <div class="description"><h2>Browser Activity</h2>
+    This tracker is a Chrome Extension, and counts the number of tabs as they're <span style="color:rgb( 0, 255, 127)"><b>created</b></span> and <span style="color:rgb(245, 205, 0)"><b>activated</b></span>, as well as the final, hourly count of <span style="color:rgb(255, 0, 255)"><b>tabs</b></span> and <span style="color:rgb(0, 0, 225)"><b>windows</b></span> left open. I wanted to track my browser activity because I've noticed a relationship between all of these variables and my motivation and stress levels. I'm a tab hoarder in general, but if I'm feeling either especially overwhelmed or lethargic, I'm even more likely to open tabs but not actually consume their content, thus leaving them open indefinitely. The number of tabs in the browser graveyard then contributes to this underlying stress/anxiety, effectively creating a positive feedback loop of mounting existential dread.
     </div>
-    <svg id="comparison"></svg>
-  </div> -->
+    <svg id="tabCounter"></svg>
+  </div>
 
 <script>
 
@@ -352,7 +352,7 @@ $.ajax({
     success: function (data) {
         //List all .png file names in the page
         var fileList = $(data).find("a:contains(" + fileextension + ")").slice(-13);
-        console.log(fileList)
+        // console.log(fileList)
         fileList.each(function () {
             var filename = this.href.replace(window.location.host, "").replace("http://", "");
             $("#intro-container").append("<div class='hero-imgs'><img src='" + dir + filename + "'></div>");
@@ -586,7 +586,7 @@ var moodCircles = reporterChart.selectAll(".moodCircle")
   .attr("class","moodCircle")
   .attr("cx", function(d) {return xScale(d.time)})
   .attr("r", function(d) {return d.mood == null ? 0 : 3; })
-  .attr("cy", function(d) { return yScale(d.mood) - 2;})
+  .attr("cy", function(d) { return yScale(d.mood);})
   .attr("opacity", 0.7)
   .attr("fill", "magenta");
 
@@ -664,37 +664,42 @@ function brushed() {
   expressionsChart.selectAll(".attentionLines").attr("x1", function(d){ return xScale(d.time);}).attr("x2", function(d) {return xScale(d.time);});
   expressionsChart.selectAll(".valenceLines").attr("x1", function(d){ return xScale(d.time);}).attr("x2", function(d) {return xScale(d.time);});
   emojiChart.selectAll(".emoji").attr("transform", function(d) {return "translate(" + (xScale(d.time)-7) + ")";});
+  tabCounterChart.select(".tabLine").attr("d", tabLine);
+  tabCounterChart.select(".windowLine").attr("d", windowLine);
+  tabCounterChart.selectAll("rect").attr("x", function(d) { return xScale(dataset[d].timestamp); });
+  tabCounterChart.selectAll(".tabCircle").attr("cx", function(d) {return xScale(dataset[d].timestamp)});
+  tabCounterChart.selectAll(".windowCircle").attr("cx", function(d) {return xScale(dataset[d].timestamp)});
   body.selectAll(".axis--x").call(xAxis);
 }
 
 
-function zoomed() {
-  if (d3.event.sourceEvent && d3.event.sourceEvent.type === "brush") return; // ignore zoom-by-brush
-  var t = d3.event.transform;
-  xScale.domain(t.rescaleX(xScale2).domain());
-  reporterChart.select(".moodArea").attr("d", moodArea);
-  reporterChart.select(".moodLine").attr("d", moodLine);
-  reporterChart.select(".moraleArea").attr("d", moraleArea);
-  reporterChart.selectAll(".moodCircle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScale(d.mood)});
-  reporterChart.select(".stressArea").attr("d", stressArea);
-  reporterChart.select(".fatigueArea").attr("d", fatigueArea);
-  reporterChart.selectAll(".compulsion-x").attr("x", function(d) {return xScale(d.time)});
-  keyloggerChart.selectAll(".joy-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-  keyloggerChart.selectAll(".sad-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-  keyloggerChart.selectAll(".tentative-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-  keyloggerChart.selectAll(".angry-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-  keyloggerChart.selectAll(".confident-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-  keyloggerChart.selectAll(".analytical-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-  keyloggerChart.selectAll(".disgust-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-  keyloggerChart.selectAll(".fear-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-  blinksChart.selectAll(".blink-circle").attr("cx", function(d) {return xScale(d.time)});
-  expressionsChart.select(".productivityArea").attr("d", productivityArea);
-  expressionsChart.selectAll(".attentionLines").attr("x1", function(d){ return xScale(d.time);}).attr("x2", function(d) {return xScale(d.time);});
-  expressionsChart.selectAll(".valenceLines").attr("x1", function(d){ return xScale(d.time);}).attr("x2", function(d) {return xScale(d.time);});
-  emojiChart.selectAll(".emoji").attr("transform", function(d) {return "translate(" + (xScale(d.time)-7) + ")";});
-  body.selectAll(".axis--x").call(xAxis);
-  contextChart.select(".brush").call(brush.move, xScale.range().map(t.invertX, t));
-}
+// function zoomed() {
+//   if (d3.event.sourceEvent && d3.event.sourceEvent.type === "brush") return; // ignore zoom-by-brush
+//   var t = d3.event.transform;
+//   xScale.domain(t.rescaleX(xScale2).domain());
+//   reporterChart.select(".moodArea").attr("d", moodArea);
+//   reporterChart.select(".moodLine").attr("d", moodLine);
+//   reporterChart.select(".moraleArea").attr("d", moraleArea);
+//   reporterChart.selectAll(".moodCircle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScale(d.mood)});
+//   reporterChart.select(".stressArea").attr("d", stressArea);
+//   reporterChart.select(".fatigueArea").attr("d", fatigueArea);
+//   reporterChart.selectAll(".compulsion-x").attr("x", function(d) {return xScale(d.time)});
+//   keyloggerChart.selectAll(".joy-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+//   keyloggerChart.selectAll(".sad-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+//   keyloggerChart.selectAll(".tentative-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+//   keyloggerChart.selectAll(".angry-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+//   keyloggerChart.selectAll(".confident-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+//   keyloggerChart.selectAll(".analytical-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+//   keyloggerChart.selectAll(".disgust-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+//   keyloggerChart.selectAll(".fear-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
+//   blinksChart.selectAll(".blink-circle").attr("cx", function(d) {return xScale(d.time)});
+//   expressionsChart.select(".productivityArea").attr("d", productivityArea);
+//   expressionsChart.selectAll(".attentionLines").attr("x1", function(d){ return xScale(d.time);}).attr("x2", function(d) {return xScale(d.time);});
+//   expressionsChart.selectAll(".valenceLines").attr("x1", function(d){ return xScale(d.time);}).attr("x2", function(d) {return xScale(d.time);});
+//   emojiChart.selectAll(".emoji").attr("transform", function(d) {return "translate(" + (xScale(d.time)-7) + ")";});
+//   body.selectAll(".axis--x").call(xAxis);
+//   contextChart.select(".brush").call(brush.move, xScale.range().map(t.invertX, t));
+// }
 
 </script>
 <script>
@@ -981,7 +986,7 @@ var productivityArea = d3.area()
 
 
 d3.json("affectiva/analyses/merged_file.json", function (err, affectiva) {
-  d3.json("rescuetime/productivity.json", function(err, rescuetime){
+  d3.json("getAPIdata/productivity.json", function(err, rescuetime){
       if (err) console.warn(err, "error loading data");
 
 
@@ -1169,13 +1174,12 @@ affectiva.forEach(function(d){
 
 
 
-    var productivity = expressionsChart.append("path")
-      .datum(newProductivity)
-      .attr("d", productivityArea)
-      .attr("fill", "gold")
-      .attr("opacity", 0.35)
-      .attr("class", "productivityArea");
-
+ expressionsChart.append("path")
+    .datum(newProductivity)
+    .attr("d", productivityArea)
+    .attr("fill", "gold")
+    .attr("opacity", 0.35)
+    .attr("class", "productivityArea");
 
 
 
@@ -1291,6 +1295,307 @@ affectiva.forEach(function(d){
 
 })
 });
+
+</script>
+
+
+<script>
+
+var dataset; 
+// var tabCounterChartHeight = 800;
+// var tabCounterHeight = 500;
+// var faviconHeight = 300;
+
+var tabCounterSVG = d3.select("#tabCounter")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom);
+var tabCounterChart = tabCounterSVG.append("g")
+      .attr("class", "tabCounterG")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      // .attr("height", tabCounterHeight);
+// var faviconChart = tabCounterSVG.append("g")
+//       .attr("class", "faviconG")
+//       .attr("transform", "translate(" + margin.left + "," + (margin.top + faviconHeight) + ")")
+//       .attr("height", faviconHeight);
+
+
+var yScaleTabCounter = d3.scaleLinear()
+  .range([height,0]);
+  // .domain([0.45,1]);
+var yAxisTabCounter = d3.axisLeft(yScaleTabCounter).tickSize(-width).ticks(4).tickPadding(10);
+
+
+var tabLine = d3.line()
+.defined(function(d){return dataset[d].current_tabCount!=null})
+  .x(function(d) {return xScale(dataset[d].timestamp);})
+  .y(function(d){return yScaleTabCounter(dataset[d].current_tabCount);});
+
+var windowLine = d3.line()
+.defined(function(d){return dataset[d].current_windowCount!=null})
+  .x(function(d) {return xScale(dataset[d].timestamp);})
+  .y(function(d){return yScaleTabCounter(dataset[d].current_windowCount);});
+
+
+d3.json("getAPIdata/chromeactivity.json", ready);
+
+function ready(err, data) {
+    if (err) console.warn(err, "error loading data");
+
+
+dataset = data;
+
+console.log(dataset[1524982083090])
+var keyLookup = [];
+
+for(var key in dataset){
+  // console.log(dataset[key])
+  var dateTime = new Date(dataset[key].timestamp)
+  dataset[key].timestamp = dateTime;
+  keyLookup.push(key);
+
+  if(!dataset[key].favicons){
+    dataset[key]["favicons"] = [];
+  }
+}
+
+
+for(var key in dataset){
+
+  var currentIndex = keyLookup.indexOf(key);
+
+  if(currentIndex < keyLookup.length - 1){
+    var currentTime = dataset[key].timestamp;
+    var nextTime = dataset[keyLookup[currentIndex+1]].timestamp;
+
+
+    if (currentTime < (nextTime - 24000000)) {
+      var nullTime = nextTime - 24000000;
+      var nullItems = {};
+
+      nullItems["timestamp"] = new Date(nullTime);
+      nullItems["current_windowCount"] = null;
+      nullItems["current_tabCount"] = null;
+      nullItems["favicons"] = [];
+      nullItems["tabs_activated"] = null;
+      nullItems["tabs_created"] = null;
+      nullItems["windows_created"] = null;
+
+      dataset[nullTime] = nullItems;
+    }
+
+    else if (currentTime > (nextTime - 1800000)) {
+      var currentTimeMs = currentTime.getTime();
+      var nextTimeMs = nextTime.getTime();
+      dataset[currentTimeMs].tabs_activated += dataset[nextTimeMs].tabs_activated;
+      dataset[currentTimeMs].tabs_created += dataset[nextTimeMs].tabs_created;
+      dataset[currentTimeMs].windows_created += dataset[nextTimeMs].windows_created;
+      delete dataset[nextTimeMs];
+    }
+  }
+}
+
+
+keyLookup = [];
+
+for(var key in dataset){
+    keyLookup.push(key);
+}
+
+
+// console.log(dataset)
+
+  var yMax = d3.extent(keyLookup, function(d) {return dataset[d].tabs_activated;})[1];
+  yScaleTabCounter.domain([0,yMax]);
+  // xScale2.domain(xScale.domain());
+  // yScale2.domain(yScale.domain());
+
+
+  var tabTip = d3.tip()
+    .attr("class", "tooltip")
+    .offset([-22,-5])
+    .direction("n")
+    .html(function(d) {
+      var imgString = "";
+      for(var i = 0; i < dataset[d].favicons.length; i++){
+        var jnURL = "http://localhost:8888/static/base/images/"
+        if(dataset[d].favicons[i].includes(jnURL)){
+        imgString += "<img src='tabcounter/"+dataset[d].favicons[i].slice(jnURL.length)+"' width='13px' height='13px'>"
+        }
+        else{
+        imgString += "<img src='"+dataset[d].favicons[i]+"' width='13px' height='13px'>"
+        }
+      }
+      return "<b>Tabs Activated:</b> "+dataset[d].tabs_activated+"<br><br>" + imgString;
+    });
+
+  var tabCreatedTip = d3.tip()
+    .attr("class", "tooltip")
+    .offset([-22,-5])
+    .direction("n")
+    .html(function(d) {
+      return "<b>Tabs Created:</b> "+dataset[d].tabs_created;
+    });
+
+  var tabCountTip = d3.tip()
+    .attr("class", "tooltip")
+    .offset([-22,-5])
+    .direction("n")
+    .html(function(d) {
+      return "<b>Tabs Left Open:</b> "+dataset[d].current_tabCount;
+    });
+
+  var windowCountTip = d3.tip()
+    .attr("class", "tooltip")
+    .offset([-22,-5])
+    .direction("n")
+    .html(function(d) {
+      return "<b>Windows Left Open:</b> "+dataset[d].current_windowCount;
+    });
+
+
+
+  tabCounterChart.append("g")
+    .attr("class", "axis axis--x")
+    .attr("transform","translate(0, "+(height)+")")
+    .call(xAxis);
+
+  tabCounterChart.append("g")
+  .attr("class", "axis axis--y")
+    .call(yAxisTabCounter);
+
+ tabCounterChart.selectAll(".activated-bar")
+      .data(keyLookup)
+    .enter().append("rect")
+      .attr("class", "activated-bar")
+      .style("fill", "gold")
+      .style("opacity", 0.5)
+      .attr("x", function(d) { return xScale(dataset[d].timestamp); })
+      .attr("width", function(d){ return xScale(dataset[d].timestamp)/ keyLookup.length})
+      .attr("y", function(d) { return yScaleTabCounter(dataset[d].tabs_activated); })
+      .attr("height", function(d) { return height - yScaleTabCounter(dataset[d].tabs_activated); });
+
+tabCounterChart.selectAll(".created-bar")
+    .data(keyLookup)
+  .enter().append("rect")
+    .attr("class", "created-bar")
+    .style("fill", "cyan")
+    .style("opacity", 0.5)
+    .attr("x", function(d) { return xScale(dataset[d].timestamp); })
+    .attr("width", function(d){ return xScale(dataset[d].timestamp)/ keyLookup.length})
+    .attr("y", function(d) { return yScaleTabCounter(dataset[d].tabs_created); })
+    .attr("height", function(d) { return height - yScaleTabCounter(dataset[d].tabs_created); });
+
+tabCounterChart.append("path")
+  .datum(keyLookup)
+  .attr("d", tabLine)
+  .attr("stroke", "magenta")
+  .attr("stroke-width", 2)
+  .attr("fill", "none")
+  .attr("class", "tabLine")
+  .attr("opacity", 0.6);
+
+// tabCounterChart.append("path")
+//   .datum(keyLookup)
+//   .attr("d", windowLine)
+//   .attr("stroke", "blue")
+//   .attr("stroke-width", 2)
+//   .attr("fill", "none")
+//   .attr("class", "windowLine")
+//   .attr("opacity", 0.6);
+
+tabCounterChart.selectAll(".tabCircle")
+  .data(keyLookup)
+  .enter()
+  .append("circle")
+  .attr("class","tabCircle")
+  .attr("cx", function(d) {return xScale(dataset[d].timestamp)})
+  .attr("r", function(d) {return dataset[d].current_tabCount == null ? 0 : 3; })
+  .attr("cy", function(d) { return yScaleTabCounter(dataset[d].current_tabCount);})
+  .attr("opacity", 0.7)
+  .attr("fill", "magenta");
+
+
+// tabCounterChart.selectAll(".windowCircle")
+//   .data(keyLookup)
+//   .enter()
+//   .append("circle")
+//   .attr("class","windowCircle")
+//   .attr("cx", function(d) {return xScale(dataset[d].timestamp)})
+//   .attr("r", function(d) {return dataset[d].current_windowCount == null ? 0 : 3; })
+//   .attr("cy", function(d) { return yScaleTabCounter(dataset[d].current_windowCount);})
+//   .attr("opacity", 0.65)
+//   .attr("fill", "blue");
+
+// faviconChart.selectAll(".chromeIcons")
+//   .data(keyLookup)
+//   .enter()
+//   .append("g")
+//   .attr("transform", function(d){return "translate(" + xScale(dataset[d].timestamp) +")"})
+//   .selectAll(".icons")
+//   .data(function(d) {return dataset[d].favicons;})
+//   .enter()
+//   .append("svg:image")
+//   // .attr("class", "logo")
+//   // .attr("cx", function(d){return xScale(d.time)})
+//   // .attr("cy", height)
+//   .attr("xlink:href", function(d,i){return d;})
+//   .attr("transform", function(d,j){return "translate(0," + yScaleTabCounter((j+2)*2) + ")";})
+//   .attr("height", 10)
+//   .attr("width", 10);
+
+
+tabCounterChart.selectAll(".activated-bar")
+.call(tabTip)
+
+.on("mouseover", function(d) {
+  tabTip.show(d);
+})
+
+.on("mouseout", function(d) {
+  tabTip.hide(d);
+})
+
+
+tabCounterChart.selectAll(".created-bar")
+.call(tabCreatedTip)
+
+.on("mouseover", function(d) {
+  tabCreatedTip.show(d);
+})
+
+.on("mouseout", function(d) {
+  tabCreatedTip.hide(d);
+})
+
+
+tabCounterChart.selectAll(".tabCircle")
+.call(tabCountTip)
+
+.on("mouseover", function(d) {
+  tabCountTip.show(d);
+})
+
+.on("mouseout", function(d) {
+  tabCountTip.hide(d);
+})
+
+
+// tabCounterChart.selectAll(".windowCircle")
+// .call(windowCountTip)
+
+// .on("mouseover", function(d) {
+//   windowCountTip.show(d);
+// })
+
+// .on("mouseout", function(d) {
+//   windowCountTip.hide(d);
+// })
+
+}
+
+// });
+
+
 
 </script>
 

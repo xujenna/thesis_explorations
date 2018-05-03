@@ -334,11 +334,11 @@
     <svg id="keylogger"></svg>
   </div>
 
-  <div class="container" id="comparison-container">
-    <div class="description"><h2>Compare the Data</h2>
+  <div class="container" id="tabCounter-container">
+    <div class="description"><h2>Browser Activity</h2>
     text tk
     </div>
-    <svg id="comparison"></svg>
+    <svg id="tabCounter"></svg>
   </div>
 
 <script>
@@ -1384,4 +1384,121 @@ legend
 drawChart(filterData);
 
 </script>
+
+
+
+<script>
+
+var dataset; 
+var tabCounterSVG = d3.select("#tabCounter")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom);
+var tabCounterChart = tabCounterSVG.append("g")
+        .attr("class", "tabCounterG")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+var yScaleTabCounter = d3.scaleLinear()
+  .range([height,0]);
+  // .domain([0.45,1]);
+var yAxisTabCounter = d3.axisLeft(yScaleTabCounter).tickSize(-width).ticks(4).tickPadding(10);
+
+
+var tabLine = d3.line()
+.defined(function(d){return dataset[d].current_tabCount!=null})
+  .x(function(d) {return xScale(dataset[d].timestamp);})
+  .y(function(d){return yScale(dataset[d].current_tabCount);});
+
+var windowLine = d3.line()
+.defined(function(d){return dataset[d].current_windowCount!=null})
+  .x(function(d) {return xScale(dataset[d].timestamp);})
+  .y(function(d){return yScale(dataset[d].current_windowCount);});
+
+
+d3.json("tabcounter-3aab1-export.json", ready);
+
+function ready(err, data) {
+    if (err) console.warn(err, "error loading data");
+
+dataset = data.users.xujenna.metrics;
+
+var keyLookup = [];
+
+for(var key in dataset){
+  // console.log(dataset[key])
+  var dateTime = new Date(dataset[key].timestamp)
+  dataset[key].timestamp = dateTime;
+  keyLookup.push(key);
+}
+
+
+for(var key in dataset){
+
+  var currentIndex = keyLookup.indexOf(key);
+
+  if(currentIndex < keyLookup.length - 1){
+    var currentTime = dataset[key].timestamp;
+    var nextTime = dataset[keyLookup[currentIndex+1]].timestamp;
+
+    if(currentTime < (nextTime - 24000000)) {
+      var nullTime = nextTime - 24000000;
+      var nullItems = {};
+
+      nullItems["timestamp"] = new Date(nullTime);
+      nullItems["current_tabCount"] = null;
+      nullItems["favicons"] = null;
+      nullItems["tabs_activated"] = null;
+      nullItems["tabs_created"] = null;
+      nullItems["windows_created"] = null;
+
+      dataset[nullTime] = nullItems;
+    }
+  }
+}
+
+keyLookup = [];
+
+for(var key in dataset){
+    keyLookup.push(key);
+}
+
+  var yMax = d3.extent(keyLookup, function(d) {return dataset[d].tabs_activated;})
+  yScaleTabCounter.domain([0,125]);
+  // xScale2.domain(xScale.domain());
+  // yScale2.domain(yScale.domain());
+
+  tabCounterChart.append("g")
+    .attr("class", "axis axis--x")
+    .attr("transform","translate(0, "+(height)+")")
+    .call(xAxis);
+
+  tabCounterChart.append("g")
+  .attr("class", "axis axis--y")
+    .call(yAxisTabCounter);
+
+
+tabCounterChart.append("path")
+  .datum(keyLookup)
+  .attr("d", tabLine)
+  .attr("stroke", "magenta")
+  .attr("stroke-width", 2)
+  .attr("fill", "none")
+  .attr("class", "tabLine")
+  .attr("opacity", 0.7);
+
+tabCounterChart.append("path")
+  .datum(keyLookup)
+  .attr("d", windowLine)
+  .attr("stroke", "magenta")
+  .attr("stroke-width", 2)
+  .attr("fill", "none")
+  .attr("class", "tabLine")
+  .attr("opacity", 0.7);
+
+}
+
+
+</script>
+
 </body>
+

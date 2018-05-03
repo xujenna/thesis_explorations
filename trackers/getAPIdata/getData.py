@@ -21,11 +21,24 @@ def checkProductivity():
     # isolate "Efficiency (percent)" value of last array: rows > index number (by hour) > 4
     rows = data['rows']
     efficiency = rows[-1][4]
-    print(efficiency)
-    # if efficiency value is less than 50, open xujenna.com/focus
-    if efficiency < 50:
-        webbrowser.open_new('http://www.xujenna.com/focus')
+    print("efficiency score:", efficiency)
+
+
+def getChromeActivity():
+    url = "https://tabcounter-3aab1.firebaseio.com/users/xujenna/metrics.json"
+    r = requests.get(url=url)
+
+    chromeData = r.json()
+
+    with open('chromeactivity.json', 'w+') as f:
+        json.dump(chromeData, f, indent=4, sort_keys=True)
+
+    lastTime = list(chromeData.keys())[-1]
+    print("tabs created: ", chromeData[lastTime]['tabs_created'])
+    print("tabs activated: ", chromeData[lastTime]['tabs_activated'])
+
 
 while True:
     checkProductivity()
+    getChromeActivity()
     time.sleep(3600)

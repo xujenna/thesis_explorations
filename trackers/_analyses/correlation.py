@@ -11,29 +11,29 @@ from functools import reduce
 
 
 def roundTime(dt):
-	dt = dt - datetime.timedelta(minutes=dt.minute, seconds=dt.second, microseconds=dt.microsecond)
-	return dt
+    dt = dt - datetime.timedelta(minutes=dt.minute, seconds=dt.second, microseconds=dt.microsecond)
+    return dt
 
 
 #keylogger DF
 
 with open('../keylogger/logs/log.json', 'r') as f:
-	keyloggerData = json.load(f)
+    keyloggerData = json.load(f)
 
 tzinfos = { "EDT" : gettz("America/New_York") }
 
 def extract_keyloggerData(data):
-	result = []
+    result = []
 
-	for d in data:
-		tones = d['document_tone']['tones']
-		if len(tones):
-			for x in range(0, len(tones)):
-				score = tones[x]['score']
-				tone_name = tones[x]['tone_name']
-				time = dateutil.parser.parse(d['time'] + " EDT", tzinfos=tzinfos)
-				result.append((tone_name, score, time))
-	return result
+    for d in data:
+        tones = d['document_tone']['tones']
+        if len(tones):
+            for x in range(0, len(tones)):
+                score = tones[x]['score']
+                tone_name = tones[x]['tone_name']
+                time = dateutil.parser.parse(d['time'] + " EDT", tzinfos=tzinfos)
+                result.append((tone_name, score, time))
+    return result
 
 keyloggerDF = DataFrame(extract_keyloggerData(keyloggerData), columns=['tone_name', 'score', 'time'])
 keyloggerDF.time = keyloggerDF.time.apply(roundTime)
@@ -45,13 +45,13 @@ keyloggerDF.time.apply(roundTime)
 local_tz = gettz('America/New_York')
 
 def utc_to_local(utc_dt):
-	return utc_dt.replace(tzinfo=local_tz)
+    return utc_dt.replace(tzinfo=local_tz)
 
 with open('../affectiva/analyses/merged_file.json', 'r') as f:
-	affectivaData = json.load(f)
+    affectivaData = json.load(f)
 
 for x in range(0, len(affectivaData)):
-	affectivaData[x]['time'] = utc_to_local(datetime.datetime.fromtimestamp((affectivaData[x]['time']/ 1e3)))
+    affectivaData[x]['time'] = utc_to_local(datetime.datetime.fromtimestamp((affectivaData[x]['time']/ 1e3)))
 
 affectivaDF = DataFrame(affectivaData)
 affectivaDF.time = affectivaDF.time.apply(roundTime)
@@ -67,7 +67,7 @@ responsesData = pd.read_csv("../reporter/responses.tsv", sep='\t', header=0)
 timeValues = responsesData.time.values
 
 for x in range(0, len(timeValues)):
-	timeValues[x] = dateutil.parser.parse(timeValues[x] + " EDT", tzinfos=tzinfos)
+    timeValues[x] = dateutil.parser.parse(timeValues[x] + " EDT", tzinfos=tzinfos)
 
 
 # responsesData.time = timeValues
@@ -80,17 +80,17 @@ responsesData.time.apply(roundTime)
 #productivity DF
 
 with open('../rescuetime/productivity.json', 'r') as f:
-	productivityFile = json.load(f)
+    productivityFile = json.load(f)
 
 productivityData = productivityFile['rows']
 
 final_productivityData = [];
 
 for x in range(0, len(productivityData)):
-	if(productivityData[x][0] > '2018-04-09T90:00:00'):
-		time = dateutil.parser.parse(productivityData[x][0] + " EDT", tzinfos=tzinfos)
-		prod_score = productivityData[x][4]
-		final_productivityData.append((time, prod_score))
+    if(productivityData[x][0] > '2018-04-09T90:00:00'):
+        time = dateutil.parser.parse(productivityData[x][0] + " EDT", tzinfos=tzinfos)
+        prod_score = productivityData[x][4]
+        final_productivityData.append((time, prod_score))
 
 productivityDF = DataFrame(final_productivityData, columns=['time', 'productivity_score'])
 productivityDF.time = productivityDF.time.apply(roundTime)
