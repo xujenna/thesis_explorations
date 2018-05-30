@@ -1,0 +1,19 @@
+{
+  "name": "Face_tab",
+  "manifest_version": 2,
+  "version": "0.1",
+  "browser_action": {
+    "default_title": "Open new tab using facial expressions"
+  },
+  "permissions": [
+    "tabs",
+    "contentSettings",
+    "system.display"
+  ],
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
