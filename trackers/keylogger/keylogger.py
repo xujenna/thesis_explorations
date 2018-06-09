@@ -141,6 +141,7 @@ def analyser():
 	global wordcount
 	global charcount
 	global unique_words
+	global backspaceCount
 
 	dateTimeNum = datetime.datetime.now().timestamp()
 	timestamp = datetime.datetime.fromtimestamp(dateTimeNum).isoformat()
@@ -171,14 +172,17 @@ def analyser():
 	print("Word Count: ", wordcount)
 	print("Unique Word Count: ", len(unique_words))
 	print("Character Count: ", charcount)
+	print("backspace count: ", backspaceCount)
 	print("Average Dwell Time: ", sum(dwellTimes) / len(dwellTimes))
 	print("Average Flight Time: ", sum(flightTimes) / len(flightTimes))
+
 	log = []
 	dwellTimes = []
 	flightTimes = []
 	wordcount = 0
 	unique_words = []
 	charcount = 0
+	backspaceCount = 0
 
 def keylogger():
 	with keyboard.Listener(

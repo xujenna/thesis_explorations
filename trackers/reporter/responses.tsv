@@ -267,13 +267,62 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-05-29T19:49:07.174647	2.5	unfocused	wasting time	leisure	1	True	Home	2.5	0	3.5	False
 2018-05-29T23:20:17.800829	3.5	content	had a nice evening	leisure, with k	1	False	Kevin Home	2.5	0	3	True
 2018-05-30T11:52:55.641396	3	fine	annoyed with k but having nice chat with shaon	chatting, eating, email	1	True	Kevin Home	2.5	0	2	False
-2018-05-30T12:54:38.158752	3	neutral	getting ready to leave	leisure, chatting, errands	5	True	Kevin Home	3	0	1.5	True
+2018-05-30T12:54:38.158752	3	neutral	getting ready to leave	leisure, feedly, chatting, errands	5	True	Kevin Home	3	0	1.5	True
 2018-05-30T15:51:19.540609	4	cheerful	chatted with a bunch of classmates at school	schoolwork, with friends	9	False	School	4	0	1	False
 2018-05-30T16:54:24.213500	3.5	cold but focused	working on keylogger	schoolwork	4	False	School	4.5	0	1	False
 2018-05-30T18:04:02.667050	3.5	still cold but still focused	organizing research	schoolwork	3	False	School	4	0	1	True
-2018-05-30T20:03:48.277438	3	neutral	just ate and now am wasting time on feedly	leisure, eating	1	True	Home	3	0	1.5	False
+2018-05-30T20:03:48.277438	3	neutral	just ate and now am wasting time on feedly	leisure, feedly, eating	1	True	Home	3	0	1.5	False
 2018-05-30T22:10:27.084508	3	focused	fixing keylogger again	schoolwork	0	True	Home	4	0	1.5	True
 2018-05-30T23:43:50.779943	3.5	still focused	i think i just fixed the keylogger	schoolwork	0	True	Home	3.5	0	3	True
-2018-05-31T00:54:24.027759	3	fine	watched an episode of SATC and took a shower	leisure	0	True	Home	2	0	3.5	True
-2018-06-02T15:37:29.052293	2.5	disappointed	i don't think this relationship is going to work out	commuting	0	True	Home	2	2.5	2.5	True
-2018-06-02T16:40:40.727517	2.5	meh	trying to get out but moving slow	chatting, leisure, eating	3	True	Home	2	2	1.5	False
+2018-05-31T00:54:24.027759	3	fine	watched an episode of SATC and took a shower	leisure, tv	0	True	Home	2	0	3.5	True
+2018-06-02T15:37:29.052293	2.5	disappointed	i don't think this relationship is going to work out	commuting, feedly	0	True	Home	2	3.5	2.5	True
+2018-06-02T16:40:40.727517	2.5	meh	trying to get out but moving slow	chatting, feedly, eating	3	True	Home	2	2	1.5	False
+2018-06-02T19:08:28.065821	3	fine	watching SATC	leisure, tv	1	True	Home	2.5	1	1	False
+2018-06-02T20:19:14.888844	3	neutral	sewing up clothes and watching a video about citizen (medical) science	errands	0	True	Home	3	0	1.5	False
+2018-06-02T21:25:25.471260	3	fine	back to watching SATC	leisure, tv	0	True	Home	2.5	0	1.5	True
+2018-06-02T22:25:59.244113	2.5	meh	feeling a little guilty about watching so much SATC	leisure, tv	0	True	Home	2	0	2	True
+2018-06-02T23:26:34.387373	3	somewhat productive	did some housework	errands	0	True	Home	3	0	2.5	False
+2018-06-03T00:28:02.113987	2.5	lazy	don't want to wash up	errands, feedly	1	True	Home	2	0	3	False
+2018-06-03T11:41:26.987131	3	moving slow	just got up	chatting, feedly	2	True	Home	3	0	2	False
+2018-06-03T15:01:05.512635	3.5	accomplished	made good progress on housework	errands, leisure	2	True	Home	3.5	0	1.5	False
+2018-06-03T16:05:10.222202	3.5	focused	working on positive psych class, cortisol research	studying	0	True	Home	3.5	0	2	True
+2018-06-03T17:06:07.752847	3.5	pretty productive	did more housework	errands	0	True	Home	4	0.5	2	False
+2018-06-03T21:33:15.274811	2	exhausted by workout and k	k was giving me shit on the phone before yoga	leisure	2	True	Home	2	3	4	False
+2018-06-03T22:34:50.265445	2.5	better	enjoying SATC	leisure, tv	1	True	Home	2	0	4.5	True
+2018-06-03T23:36:03.059630	2.5	lazy	tired	leisure, tv	0	True	Home	1.5	0.5	4.5	False
+2018-06-04T01:08:00.813776	2	disappointed	relationship issues	leisure, tv	0	True	Home	1	2.5	4.5	True
+2018-06-04T12:05:47.445064	2.5	fine, still a little upset	just woke up	eating, studying, feedly	0	True	Home	3	2	1	False
+2018-06-04T13:07:09.689390	3	a little lazy	taking a break from coursera videos	leisure, studying, feedly	1	True	Home	2.5	0.5	1.5	False
+2018-06-04T14:10:16.359376	3	pretty neutral	took a break, had a snack, now back to coursera	feedly, leisure, eating, studying	0	True	Home	3	0	1.5	True
+2018-06-04T15:11:17.590006	3.5	accomplished	finally finished unpacking	errands	1	True	Home	4	0	2	False
+2018-06-04T16:12:55.318465	3.5	a little restless	wondering what i should do the rest of the day	leisure, tv, eating, errands	2	True	Home	3	1	2	False
+2018-06-04T17:13:50.572441	3	fine	just watched some SATC, about to go out	leisure, tv	1	True	Home	3	0.5	1.5	False
+2018-06-04T20:05:11.112045	3	tired	went out to run errands	errands, resting	3	True	Home	3	0.5	2.5	False
+2018-06-04T21:07:53.273591	3.5	somewhat contemplative, amused	texting with steve, microdosed some old A	chatting	3	True	Home	3	0.5	2.5	False
+2018-06-04T22:08:39.701324	3	neutral	just reading an article	feedly	3	True	Home	3	0.5	3	False
+2018-06-04T23:21:37.555581	3	lagging a little	wasting time on feedly, just bought moviepass subscription for father's day	feedly	0	True	Home	2	0.5	4	False
+2018-06-05T00:22:37.274462	2.5	lazy/tired	it's late and i'm watching tv	leisure, tv	0	True	Home	1	0	4.5	False
+2018-06-05T01:29:23.293978	2	tired	it's late	washing up	0	True	Home	1	0	4.5	False
+2018-06-05T12:09:32.847070	4	excited, nervous, proud, tentative	gigs at l'officiel and mozilla festival in londonnnnnn	email, chatting	2	True	Home	3.5	2	3.5	False
+2018-06-05T13:11:45.711570	3	interested	reading psychology articles about conflict management	reading	2	True	Home	3	1	3.5	False
+2018-06-05T15:45:10.598590	2	tired	didn't sleep well last night, walked to chinatown for mat	leisure	2	True	Home	2	0	4	True
+2018-06-05T16:52:33.391237	2	lethargic	lack of sleep	leisure, tv	0	True	Home	2	0	4.5	False
+2018-06-05T17:53:35.761901	2	sleepy	lack of sleep	studying	1	True	Home	2	0	4.5	True
+2018-06-05T19:34:00.970968	2	dead tired and unfocused	lack of sleep	chatting, feedly	2	True	Home	1	0	4.5	True
+2018-06-05T20:34:40.677602	3	a little more awake	had ASH call	ash stuff	3	True	Home	2	1	4.5	False
+2018-06-05T21:49:40.132072	2.5	meh	ready for bed	washing up	3	True	Home	1	0.5	5	False
+2018-06-06T09:49:14.129945	3	rested	got some decent sleep last night	eating	0	True	Home	3	0	2	False
+2018-06-06T13:36:16.182093	3	interested	started a new postive psych class on coursera, now reading about EMG devices	studying, feedly	0	True	Home	3	0	1.5	False
+2018-06-06T18:40:58.814806	3	tired	went to therapy and yoga	eating, leisure	2	True	Home	2	0	3	True
+2018-06-06T19:42:17.945447	3	indulgent	still watching tv	leisure, tv	0	True	Home	2	0	3	True
+2018-06-06T21:02:17.457290	3	fine i guess	just washed up, watching more tv	leisure, tv	0	True	Home	2	0	3	True
+2018-06-06T22:05:20.078759	2.5	pretty blah	didn't do very much today	leisure, feedly	0	True	Home	1	0	4	True
+2018-06-06T23:09:07.211894	2	sad	i miss k	email, ash stuff	3	True	Home	2	0	4.5	True
+2018-06-07T17:01:24.926980	3.5	pretty good but tired	running errands with jody and baby all day	leisure, feedly	2	True	Home	2	0	3	True
+2018-06-07T18:10:57.792308	3	tired	TV is not energizing	leisure, tv	0	True	Home	2	0	3.5	True
+2018-06-08T12:36:16.133738	3	apprehensive	k and i made up but not sure if he is willing/able to do this CBT thing. he asked for another night off to think.	leisure, feedly	1	True	Home	2.5	0.5	2	False
+2018-06-08T13:45:46.979180	3.5	optimistic	having an afternoon museum date with casey	leisure	0	True	Home	3	0	1.5	False
+2018-06-08T23:08:22.042774	4	content	had a fun day with friends	leisure, tv	2	True	Home	3	0	2.5	True
+2018-06-09T00:10:08.384103	3	fine	still watching SATC	leisure, tv	0	True	Home	3	0	3	True
+2018-06-09T09:57:43.701222	2	sleepy	woke up too early this morning	leisure, feedly	1	True	Home	2	1	4.5	False
+2018-06-09T11:37:53.727351	1.5	hella sleepy and upset with k	lack of sleep, unresolved issue	schoolwork, ash stuff, eating	1	True	Home	3	2	4.5	True

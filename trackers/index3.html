@@ -729,7 +729,7 @@ var yAxisKeylogger = d3.axisLeft(yScaleKeylogger).tickSize(-width).ticks(4).tick
 
 
 
-  d3.json("keylogger/logs/log.json", ready);
+  d3.json("keylogger/logs/log_new.json", ready);
 
   function ready(err, data) {
       if (err) console.warn(err, "error loading data");
