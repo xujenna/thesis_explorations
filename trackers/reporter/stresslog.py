@@ -9,8 +9,7 @@ def writeToCSV(response):
         writer.writerow(response)
 
 while True:
-    os.system("osascript -e \'display notification \"Stress Log Time!\" with title \"Stress Log Time!\" sound name \"Pop\"\' -e \'activate application \"Terminal\"\'")
-
+    # os.system("osascript -e \'display notification \"Stress Log Time!\" with title \"Stress Log Time!\" sound name \"Pop\"\' -e \'activate application \"Terminal\"\'")
 
     depletion = input("Depletion: ")
     concentration = input("Concentration: ")
@@ -28,4 +27,3 @@ while True:
 
     writeToCSV(response)
     print("\nRecorded responses at " + timestamp + "\n")
-    time.sleep(3600)
