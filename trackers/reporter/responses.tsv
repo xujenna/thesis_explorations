@@ -30,7 +30,7 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-12T17:57:38.743968	3	accomplished	midterm is in pretty good shape	Schoolwork, in class	1	False	School	3	2	3	False
 2018-04-12T21:00:10.756322	3	tired	long day, jet lag	in class, leisure	1	False	School	3	2	4	False
 2018-04-13T09:07:26.361488	5	cheerful, energetic, excited	warm weather, had breakfast at la bonbonniere with k, about to attend yoga, njet lag woke us up early, nyc is nice in the mornings	Eating, with k	2	False	School	4	1	1	False
-2018-04-13T14:26:12.496000	4	content, happy, a bit tired	warm weather, active morning	Leisure, Eating, Reading, Resting, Email, Errands	5	True	Home	4	2	3	True
+2018-04-13T14:26:12.496000	4	content, happy, a bit tired	warm weather, active morning	working out, Leisure, Eating, Reading, Resting, Email, Errands	5	True	Home	4	2	3	True
 2018-04-13T15:27:43.578694	4	content, physically tired	so much exercise 	Errands, Resting, Leisure, Schoolwork	0	True	Home	4	2	3	False
 2018-04-13T16:29:00.230369	3	a bit frustrated	can't debug code	Schoolwork	1	True	Home	3	2	3	True
 2018-04-13T18:02:39.450067	3	drowsy	finally debugged code, want to nap	Schoolwork, Leisure	1	True	Home	3	2	4	True
@@ -287,7 +287,7 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-06-03T15:01:05.512635	3.5	accomplished	made good progress on housework	errands, leisure	2	True	Home	3.5	0	1.5	False
 2018-06-03T16:05:10.222202	3.5	focused	working on positive psych class, cortisol research	studying	0	True	Home	3.5	0	2	True
 2018-06-03T17:06:07.752847	3.5	pretty productive	did more housework	errands	0	True	Home	4	0.5	2	False
-2018-06-03T21:33:15.274811	2	exhausted by workout and k	k was giving me shit on the phone before yoga	leisure	2	True	Home	2	3	4	False
+2018-06-03T21:33:15.274811	2	exhausted by workout and k	k was giving me shit on the phone before yoga	leisure, working out	2	True	Home	2	3	4	False
 2018-06-03T22:34:50.265445	2.5	better	enjoying SATC	leisure, tv	1	True	Home	2	0	4.5	True
 2018-06-03T23:36:03.059630	2.5	lazy	tired	leisure, tv	0	True	Home	1.5	0.5	4.5	False
 2018-06-04T01:08:00.813776	2	disappointed	relationship issues	leisure, tv	0	True	Home	1	2.5	4.5	True
@@ -313,7 +313,7 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-06-05T21:49:40.132072	2.5	meh	ready for bed	washing up	3	True	Home	1	0.5	5	False
 2018-06-06T09:49:14.129945	3	rested	got some decent sleep last night	eating	0	True	Home	3	0	2	False
 2018-06-06T13:36:16.182093	3	interested	started a new postive psych class on coursera, now reading about EMG devices	studying, feedly	0	True	Home	3	0	1.5	False
-2018-06-06T18:40:58.814806	3	tired	went to therapy and yoga	eating, leisure	2	True	Home	2	0	3	True
+2018-06-06T18:40:58.814806	3	tired	went to therapy and yoga	working out, eating, leisure	2	True	Home	2	0	3	True
 2018-06-06T19:42:17.945447	3	indulgent	still watching tv	leisure, tv	0	True	Home	2	0	3	True
 2018-06-06T21:02:17.457290	3	fine i guess	just washed up, watching more tv	leisure, tv	0	True	Home	2	0	3	True
 2018-06-06T22:05:20.078759	2.5	pretty blah	didn't do very much today	leisure, feedly	0	True	Home	1	0	4	True
@@ -337,7 +337,7 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-06-11T19:15:17.607349	3	neutral	still working on ash stuff and watching SATC	ash stuff, leisure	0	True	Home	3	0	1	True
 2018-06-11T20:15:51.604540	2.5	hungry	can't stop working	ash stuff	0	True	Home	2.5	0	2	True
 2018-06-11T21:19:01.307853	3	good enough	just ate, watching SATC	eating, leisure, tv	1	True	Home	3	0	2	True
-2018-06-12T14:38:20.545249	3.5	refreshed	had good couples therapy session, went to yoga, just finished showering	leisure	0	True	Home	4	0	2	False
+2018-06-12T14:38:20.545249	3.5	refreshed	had good couples therapy session, went to yoga, just finished showering	working out, leisure	0	True	Home	4	0	2	False
 2018-06-12T15:41:48.732134	3	neutral	just working on ash stuff and watching SATC	ash stuff, leisure, tv	1	True	Home	3	0	2	False
 2018-06-13T09:51:40.178817	3	kind of sleepy but otherwise productive	woke up early	ash stuff	2	True	Home	3.5	0	2.5	False
 2018-06-13T11:24:17.519964	3	pretty productive	finished donut dash website	ash stuff	0	True	Home	3.5	0	2	False
@@ -363,3 +363,6 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-06-19T12:41:40.741966	3.5	content	relatively productive, obsessing over mozfest image	schoolwork	1	True	vacation, mountain view	3.5	0	1	False
 2018-06-19T14:06:54.244025	3.5	content, productive	now obsessing over speak memory on behalf of mozfest	schoolwork	0	True	vacation, mountain view	3.5	1	1	True
 2018-06-19T15:07:59.454030	4	excited	pretty happy with my mozfest online gallery entry (for now)	working	1	True	vacation, mountain view	4	1.5	1	True
+2018-06-19T16:50:01.181026	3	tired	did a 7ish minute workout and now am sore, have to jump on the ASH call soon	working out	2	True	vacation, mountain view	3	1	2	True2018-06-19T18:02:41.094567	3.5	motivated	ASH call 	ash stuff	4	True	vacation, mountain view	4	1	1.5	True
+2018-06-20T11:47:53.763922	3	distracted	stephen miller's phone number was published	leisure	1	True	vacation, mountain view	3	0	1.5	False
+2018-06-20T12:48:49.785712	2.5	guilty	watching SATC	leisure, tv	1	True	vacation, mountain view	2.5	0	1.5	False
