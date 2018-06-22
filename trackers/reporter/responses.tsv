@@ -363,6 +363,20 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-06-19T12:41:40.741966	3.5	content	relatively productive, obsessing over mozfest image	schoolwork	1	True	vacation, mountain view	3.5	0	1	False
 2018-06-19T14:06:54.244025	3.5	content, productive	now obsessing over speak memory on behalf of mozfest	schoolwork	0	True	vacation, mountain view	3.5	1	1	True
 2018-06-19T15:07:59.454030	4	excited	pretty happy with my mozfest online gallery entry (for now)	working	1	True	vacation, mountain view	4	1.5	1	True
-2018-06-19T16:50:01.181026	3	tired	did a 7ish minute workout and now am sore, have to jump on the ASH call soon	working out	2	True	vacation, mountain view	3	1	2	True2018-06-19T18:02:41.094567	3.5	motivated	ASH call 	ash stuff	4	True	vacation, mountain view	4	1	1.5	True
+2018-06-19T16:50:01.181026	3	tired	did a 7ish minute workout and now am sore, have to jump on the ASH call soon	working out	2	True	vacation, mountain view	3	1	2	True
+2018-06-19T18:02:41.094567	3.5	motivated	ASH call 	ash stuff	4	True	vacation, mountain view	4	1	1.5	True
 2018-06-20T11:47:53.763922	3	distracted	stephen miller's phone number was published	leisure	1	True	vacation, mountain view	3	0	1.5	False
 2018-06-20T12:48:49.785712	2.5	guilty	watching SATC	leisure, tv	1	True	vacation, mountain view	2.5	0	1.5	False
+2018-06-20T13:50:30.074169	3	more focused	starting to work	schoolworrk	2	True	vacation, mountain view	3	0.5	1	False
+2018-06-20T14:54:54.292349	3	content	had lunch and am watching SATC	leisure, tv, eating	1	True	vacation, mountain view	2.5	0	1.5	False
+2018-06-20T19:16:57.533568	3	fine	have been struggling with dataframes for forever	schoolwork	1	True	vacation, mountain view	3	1	2	True
+2018-06-20T20:18:05.896190	3	focused	working on viz/mozfest thing	schoolwork, leisure, tv	0	True	vacation, mountain view	3.5	1.5	2.5	True
+2018-06-20T22:25:00.367234	4	cheerful	k came home and helped me with my work	schoolwork, with k	1	False	vacation, mountain view	4	0	3	False
+2018-06-21T11:08:45.288181	3.5	awake, ready to start the day	just ate breakfast, need to finish mozfest cover img	eating	1	True	vacation, mountain view	4	0.5	0.5	False
+2018-06-21T12:10:01.279960	3.5	focused	working on viz	schoolwork, leisure, tv	1	True	Home	3.5	1	0.5	True
+2018-06-21T14:38:04.493030	2.5	frustrated	nothing is workingggg	schoolwork	2	True	vacation, mountain view	3	1.5	1	True
+2018-06-21T15:40:04.137062	3	content	just cooked lunch, watching SATC	eating, leisure	3	True	vacation, mountain view	3.5	1	1.5	True
+2018-06-21T17:12:03.268031	4	accomplished	finally figured out the trendline thing	schoolwork	2	True	vacation, mountain view	4	0.5	1	True
+2018-06-22T10:49:24.817517	3.5	excited	researching point reyes trip	leisure, errands, eating	0	True	vacation, mountain view	4	0	1	True
+2018-06-22T11:50:12.405047	3	focused	back to work on correlation matrix viz	schoolwork	0	True	vacation, mountain view	4	0	1	True
+2018-06-22T13:01:38.441326	3	still focused	still working on correlation viz	schoolwork	0	True	vacation, mountain view	4	0	1.5	True

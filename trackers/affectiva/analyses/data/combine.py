@@ -1,5 +1,6 @@
 import json
 import glob
+import math
 
 result = []
 range_results = {}
@@ -41,6 +42,8 @@ for f in glob.glob("*.json"):
 
         blink_values = list(filter(lambda x: x!=0, map(lambda x: x.get('eyeClosure', 0), j)))
         blinks = int(len(blink_values) / 2)
+        if(blinks > 70):
+            blinks = int(math.sqrt(blinks))
         range_results["blinks"] = blinks
 
         anger_values = list(filter(lambda x: x!=0, map(lambda x: x.get('anger', 0), j)))
