@@ -8,8 +8,8 @@
 <style>
 
 body {
-/*  background-color:#f3f2f7;
-*/}
+  background-color:#f3f2f7;
+}
 
 .label {
   font-size:8px;
@@ -36,6 +36,14 @@ body {
     text-transform: uppercase;
     font-size: 6px;
 }
+
+.label_title {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5;
+    font-family: europa, sans-serif;
+
+}
 </style>
 </head>
 <body>
@@ -61,6 +69,7 @@ function small_scatterplots(data) {
   // attributes = d3.keys(data[0])
   // attributes = ["mood", "social", "alone", "morale", "stress", "fatigue", "compulsions", "leisure_activity", "feedly_activity", "with_friends_activity", "errands_activity", "ash_stuff_activity", "chatting_activity", "with_k_activity", "in_class_activity", "therapy_activity", "home_location", "school_location", "kevin_home_location", "Sadness_score", "Analytical_score", "Joy_score", "Fear_score", "Tentative_score", "Anger_score", "Confident_score", "blinks", "max_attention", "max_valence", "productivity_score"]
     attributes = ["mood", "social", "morale", "stress", "fatigue", "compulsions", "productivity_score", "blinks", "Sadness_score", "Joy_score", "Tentative_score", "Confident_score", "min_attention", "min_valence", "feedly_activity", "with_k_activity", "with_friends_activity"]
+    
   attributeMatrix = [];
 
   attributes.forEach(function(a,x) {
@@ -104,28 +113,38 @@ function small_scatterplots(data) {
   .enter()
   .append("g")
   .attr("transform", function (d,i) {
-    if(d.a == d.b) {
-      shift = true;
-      dx = d.x;
-    return
-    }
-    else if (shift == true && d.x == dx){
-      return "translate(" + ((d.x * 130) + margin.left) + "," + (((d.y -1) * 130) + margin.top) + ")"
-    }
-    else {
-      shift = false;
-      dx = d.x;
-    return "translate(" + ((d.x * 130) + margin.left) + "," + ((d.y * 130) + margin.top) + ")" };
+    // if(d.a == d.b) {
+    //   shift = true;
+    //   dx = d.x;
+    // return
+    // }
+    // else if (shift == true && d.x == dx){
+    //   return "translate(" + ((d.x * 130) + margin.left) + "," + (((d.y -1) * 130) + margin.top) + ")"
+    // }
+    // else {
+    //   shift = false;
+    //   dx = d.x;
+    return "translate(" + ((d.x * 130) + margin.left) + "," + ((d.y * 130) + margin.top) + ")" 
   });
 
   d3.selectAll("g")
   .each(function (pair, i) {
 
+
   scale[pair.a].range([0,100]);
   scale[pair.b].range([100,0]);
 
   if(pair.a == pair.b){
-    return
+    d3.select(this).append("rect").style("fill", "none").style("stroke", "silver").style("stroke-width", 0.5)
+    .attr("height", 100)
+    .attr("width", 100)
+    d3.select(this).append("text")
+    .attr("class", "label_title")
+    .attr("x", 50)
+    .style("text-anchor", "middle")
+    .attr("y", 50)
+    .attr("fill", "black")
+    .text(pair.a.toUpperCase())  
   }
   else {
     d3.select(this).append("rect").style("fill", "none").style("stroke", "none").style("stroke-width", 0)
@@ -184,8 +203,10 @@ function small_scatterplots(data) {
       }
     });
 
-
-    var lg = calcLinear(data, pair.a, pair.b, d3.min(data, function(d){ return d[pair.a]}), d3.min(data, function(d){ return d[pair.b]}), d3.max(data, function(d){return d[pair.a]}));
+    var lg = calcLinear(data, pair.a, pair.b, 
+      d3.min(data, function(d){ return d[pair.a] }), 
+      d3.min(data, function(d){ return d[pair.b] }), 
+      d3.max(data, function(d){ return d[pair.a] }));
 
 var circleclass;
     // console.log("lg", lg)
@@ -230,7 +251,7 @@ var circleclass;
     })
     .attr("cy", function (d) {return scale[pair.b](d[pair.b])});
 
-}
+ }
   })
    // Calculate a linear regression from the data
 

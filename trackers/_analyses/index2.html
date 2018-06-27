@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Correlation Matrix</title>
+<style>
+
+body {
+  background-color:#fcf9ef;
+}
+
+.label {
+  font-size:8px;
+  font-family: europa, sans-serif;
+}
+
+.regression {
+  stroke-width: 2px;
+/*  stroke: black;
+*/  stroke-dasharray: 3.5,1.5;
+}
+
+.axis line,
+  .axis path {
+    fill:none;
+    stroke:silver;
+    stroke-width:1;
+  }
+
+  .axis text {
+    fill: black;
+    font-family: europa, sans-serif;
+    font-style: light;
+    text-transform: uppercase;
+    font-size: 6px;
+}
+
+.label_title {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5;
+    font-family: europa, sans-serif;
+
+}
+
+#correlationintro-container {
+  height:100%;
+  width:100%;
+  /*display:block;*/
+  overflow: auto;
+  /*background-color: silver;*/
+  padding: 105px 0 0 0;
+  text-align: center;
+}
+
+#intro-text {
+  width:60%;
+  margin:auto;
+  column-count: 3;
+  column-gap: 30px;
+  text-align: left;
+  line-height: 22px;
+}
+
+#correlation-container {
+  width:100%;
+  /*display:block;*/
+/*  overflow: auto;
+*/  /*background-color: silver;*/
+  margin:auto;
+  padding: 105px 0 0 0;
+  text-align: center;
+}
+
+.dropdown {
+  margin: auto;
+  display: inline-block;
+  width:300px;
+  margin-top: 100px;
+}
+
+</style>
+</head>
+<body>
+    <link rel="stylesheet" href="https://use.typekit.net/fao6qlb.css">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+  <div id="correlationintro-container">
+    <div id = "intro-text">
+    <h2>Correlations</h2>
+    This tracker is a Chrome Extension, and counts the number of tabs as they're <span style="color:rgb( 0, 255, 127)"><b>created</b></span> and <span style="color:rgb(245, 205, 0)"><b>activated</b></span>, as well as the final, hourly count of <span style="color:rgb(255, 0, 255)"><b>tabs</b></span> and <span style="color:rgb(0, 0, 225)"><b>windows</b></span> left open. I wanted to track my browser activity because I've noticed a relationship between all of these variables and my motivation and stress levels. I'm a tab hoarder in general, but if I'm feeling either especially overwhelmed or lethargic, I'm even more likely to open tabs but not actually consume their content, thus leaving them open indefinitely. The number of tabs in the browser graveyard then contributes to this underlying stress/anxiety, effectively creating a positive feedback loop of mounting existential dread.
+    </div>
+<div class="dropdown">
+    <p>Select an x-axis variable:<br>
+  <form>
+  <select id = "selection1">
+  </select>
+</form>
+</p>
+</div>
+<div class="dropdown">
+<p>Select a y-axis variable:<br>
+<form>
+  <select id = "selection2">
+  </select>
+</form>
+</p>
+</div>
+    </div>
+</div>
+<div id="correlation-container">
+  <svg id="correlations"></svg>
+</div>
+
+
+<script>
+
+// correlation matrix adapted from https://bl.ocks.org/emeeks/671c0e7adfb1ce7060b8
+// linear regression adapted from https://bl.ocks.org/HarryStevens/be559bed98d662f69e68fc8a7e0ad097
+
+// colors = d3.scale.ordinal().range(["gold", "springgreen", "magenta", "blue", "deeppink", "cyan"]);
+
+// colors = d3.scale.ordinal().range(["#827abf", "#f62150", "#6f89b6", "#f5e0b7", "#5b1e37", "#b9e3c5"]);
+
+d3.tsv("mergedDF.tsv", small_scatterplots);
+
+
+var correlationSVG = d3.select("#correlations")
+var margin = {top: 30, right: 30, left:30, bottom: 30}
+
+var windowWidth = window.innerWidth;
+
+function small_scatterplots(data) {
+
+  // attributes = d3.keys(data[0])
+  // attributes = ["mood", "social", "alone", "morale", "stress", "fatigue", "compulsions", "leisure_activity", "feedly_activity", "with_friends_activity", "errands_activity", "ash_stuff_activity", "chatting_activity", "with_k_activity", "in_class_activity", "therapy_activity", "home_location", "school_location", "kevin_home_location", "Sadness_score", "Analytical_score", "Joy_score", "Fear_score", "Tentative_score", "Anger_score", "Confident_score", "blinks", "max_attention", "max_valence", "productivity_score"]
+    attributes = ["mood", "social", "morale", "stress", "fatigue", "compulsions", "productivity_score", "blinks", "Sadness_score", "Joy_score", "Tentative_score", "Confident_score", "min_attention", "min_valence", "feedly_activity", "with_k_activity", "with_friends_activity", "leisure_activity", "home_location", "school_location", "All"]
+
+  d3.select("#selection1").selectAll("option")
+    .data(attributes)
+    .enter().append("option")
+    .text(function(d){console.log(d);return d})
+
+  d3.select("#selection2").selectAll("option")
+    .data(attributes)
+    .enter().append("option")
+    .text(function(d){return d})
+
+  attributeMatrix = [];
+
+  attributes.forEach(function(a,x) {
+    attributes.forEach(function(b,y){
+      if(y == attributes.length || x == attributes.length){
+        return
+      }
+      else{
+      attributeMatrix.push({a: a, b:b, x:x, y:y})
+    }
+    })
+  })
+
+  // attributeMatrix.slice(-1)
+    console.log(attributeMatrix)
+
+  //d3.csv pulls in data as strings so they need to be formatted as numbers
+  data.forEach(function (d) {
+    attributes.forEach(function (att) {
+      if(d[att] == "False"){
+        d[att] = 0;
+      }
+      else if (d[att] == "True") {
+        d[att] = 1;
+      }
+      else {
+        d[att] = parseFloat(d[att])
+      }
+    })
+  })
+
+  //create scales dynamically for each attribute's extent
+
+  scale = {};
+  attributes.forEach(function (att) {
+    scale[att] = d3.scaleLinear();
+    attExtent = d3.extent(data, function (d) {return d[att]});
+    scale[att].domain(attExtent);
+  })
+
+
+
+var selection1 = document.querySelector('#selection1');
+selection1.addEventListener('input', getInput)
+
+var selection2 = document.querySelector('#selection2');
+selection2.addEventListener('input', getInput)
+
+function getInput() {
+
+  var input1 = document.getElementById("selection1").value
+  var input2 = document.getElementById("selection2").value
+
+console.log("input1", input1)
+console.log("input2", input2)
+
+  var newMatrix = [];
+
+
+  if(input1 == "All" && input2 =="All"){
+    attributeMatrix.forEach(function(d){
+      if(d.a != "All" && d.b !="All") {
+        newMatrix.push(d)
+      }
+      // scale[d.a].range([0,180]);
+      // scale[d.b].range([180,0]);
+
+    })
+  }
+  else if(input1 == "All") {
+    attributeMatrix.forEach(function(d){
+      if(d.b == input2) { 
+        if(d.a != "All" && d.a != d.b) {
+          newMatrix.push(d)
+        }        
+      // scale[d.a].range([0,180]);
+        // scale[input2].range([180,0]);
+      }
+    })
+  }
+  else if (input2 == "All"){
+    attributeMatrix.forEach(function(d){
+      if(d.a == input1) {
+        if(d.b != "All" && d.b != d.a) {
+          newMatrix.push(d)
+        }        
+      // scale[input1].range([0,180]);
+        // scale[d.b].range([180,0]);
+      }
+    })
+  }
+  else {
+    newMatrix.push({a: input1, b:input2})
+    // newMatrix.push({a: input2, b:input1})
+    // scale[input1].range([0,180]);
+    // scale[input2].range([180,0]);
+  }
+
+var chartWidth;
+var chartHeight;
+var containerWidth;
+var containerHeight;
+
+if(newMatrix.length > 300) {
+  containerWidth = windowWidth/21;
+  containerHeight = windowWidth/21;
+  chartHeight = windowWidth/23;
+  chartWidth = windowWidth/23;
+  rowLength = 20;
+}
+else if(newMatrix.length < 300 && newMatrix.length > 2){
+  containerWidth = windowWidth/8.5;
+  containerHeight = windowWidth/8.5;
+  chartHeight = windowWidth/11;
+  chartWidth = windowWidth/11;
+  rowLength = 7;
+}
+else if (newMatrix.length <=2){
+  containerWidth = windowWidth/2;
+  containerHeight = windowWidth/4;
+  chartHeight = containerHeight - 50;
+  chartWidth = containerWidth- 50;
+  rowLength = 1;
+}
+
+var innerMargins = (windowWidth - (rowLength * containerWidth)) / 2;
+
+// d3.select("svg")
+correlationSVG
+.html("")
+.attr("height", (Math.ceil(newMatrix.length / rowLength)  * containerHeight) + margin.top + margin.bottom)
+// .attr("width", windowWidth - margin.left - margin.right)
+.attr("width", windowWidth - innerMargins - innerMargins)
+
+
+var rows = 0;
+var j = -1;
+
+correlationSVG  
+  .selectAll("g")
+  .data(newMatrix)
+  .enter()
+  .append("g")
+  .attr("transform", function (d,i) {
+    // if(d.a == d.b && newMatrix.length < 300) {
+    //   shift = true;
+    //   dx = d.x;
+    // return
+    // }
+    // else if (shift == true && d.x == dx){
+    //   return "translate(" + ((d.x * 130) + margin.left) + "," + (((d.y -1) * 130) + margin.top) + ")"
+    // }
+    // else {
+    //   shift = false;
+    //   dx = d.x;
+    // if(newMatrix.length > 2) {
+
+
+      if(i > 0 && i%rowLength == 0){
+        rows += 1;
+        j=0;
+        return "translate(" + ((j * containerWidth) + margin.left) + "," + ((rows * containerHeight) + margin.top) + ")" 
+      }
+      else{
+        j +=1;
+        return "translate(" + ((j * containerWidth) + margin.left) + "," + ((rows * containerHeight) + margin.top) + ")" 
+
+      }
+    // }
+    // else {
+    //   return "translate(" + ((i * 500) + margin.left) + "," + margin.top + ")" 
+    // }
+  });
+
+console.log(newMatrix)
+
+d3.selectAll("g").each(function(pair,i){
+
+  scale[pair.a].range([0,chartWidth]);
+  scale[pair.b].range([chartHeight,0]);
+
+
+
+  if(pair.a == pair.b && newMatrix.length > 300){
+    d3.select(this).append("rect").style("fill", "none").style("stroke", "silver").style("stroke-width", 0.5)
+    .attr("height", chartHeight)
+    .attr("width", chartWidth)
+    d3.select(this).append("text")
+    .attr("class", "label_title")
+    .attr("x", chartWidth/2)
+    .style("text-anchor", "middle")
+    .attr("y", chartHeight/2)
+    .attr("fill", "black")
+    .text(pair.a.toUpperCase())  
+  }
+  // else if (pair.a == pair.b && newMatrix.length < 300) {
+  //   // var child = d3.select(this);
+  //   // correlationSVG.removeChild(child);
+  //   // console.log("removed child")
+  //   this.parentNode.removeChild(this)
+  // }
+  else {
+
+      if(newMatrix.length < 300) {
+
+        d3.select(this).append("rect").style("fill", "none").style("stroke", "none").style("stroke-width", 0)
+        .attr("height", chartHeight)
+        .attr("width", chartWidth)
+
+          var xAxis = d3.axisBottom()
+              .scale(scale[pair.a])
+              .tickSize(2)
+              .ticks(4);
+
+          var yAxis = d3.axisLeft()
+              .scale(scale[pair.b])
+              .tickSize(2)
+              .ticks(4);
+
+
+          d3.select(this).append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(0," + chartHeight+ ")")
+            .call(xAxis)
+
+          d3.select(this).append("g")
+              .attr("class", "axis")
+              .call(yAxis);
+        }
+        else if (newMatrix.length > 300) {
+
+        d3.select(this).append("rect").style("fill", "none").style("stroke", "silver").style("stroke-width", 0.5)
+        .attr("height", containerHeight)
+        .attr("width", containerWidth)
+
+        }
+        // label
+        d3.select(this).append("text")
+        .attr("class", "label")
+        .attr("x", chartWidth/2)
+        .style("text-anchor", "middle")
+        .attr("y", 5)
+        .attr("fill", "black")
+
+        .text(function(d){
+          var string = pair.a + pair.b;
+
+          if(string.length <= 25){
+            return pair.a.toUpperCase() + " - " + pair.b.toUpperCase();
+          }
+          else if(string.length > 25){
+            return pair.a.toUpperCase() + " -";
+          }
+        })
+        d3.select(this).append("text")
+        .attr("class", "label")
+        .attr("x", chartWidth/2)
+        .style("text-anchor", "middle")
+        .attr("y", 15)
+        .attr("fill", "black")
+        .text(function(d){
+          var string = pair.a + pair.b;
+          if(string.length > 25){
+            return pair.b.toUpperCase()
+          }
+        });
+
+
+    var lg = calcLinear(data, pair.a, pair.b, 
+          d3.min(data, function(d){ return d[pair.a] }), 
+          d3.min(data, function(d){ return d[pair.b] }), 
+          d3.max(data, function(d){ return d[pair.a] }));
+
+    var circleclass;
+        // console.log("lg", lg)
+
+        d3.select(this).append("line")
+              .attr("class", "regression")
+              .attr("x1", scale[pair.a](lg.ptA.x))
+              .attr("y1", scale[pair.b](lg.ptA.y))
+              .attr("x2", scale[pair.a](lg.ptB.x))
+              .attr("y2", scale[pair.b](lg.ptB.y))
+              .attr("stroke", function(d){
+                if (pair.b == pair.a){
+                  circleclass = "silver";
+                  return "silver";
+                }
+                else if((scale[pair.b](lg.ptA.y)) >(scale[pair.b](lg.ptB.y))){
+                  circleclass = "magenta";
+                  return "magenta";
+                }
+                else {
+                  circleclass = "blue";
+                  return "blue";
+                }
+              });
+              // .attr("x1", function(d) {console.log(scale[pair.a](lg.ptA.d[pair.a]))})
+              // .attr("y1", function(d) {return scale[pair.b](lg.ptA.d[pair.b]) })
+              // .attr("x2", function(d) {return scale[pair.a](lg.ptB.d[pair.a]) })
+              // .attr("y2", function(d) {return scale[pair.b](lg.ptB.d[pair.b]) });
+        // scatterplot points
+        d3.select(this).selectAll("circle")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("r", containerHeight/90)
+        .style("fill", circleclass)
+        // .style("fill", colors(i))
+        .style("opacity", 0.11)
+        .attr("cx", function (d) {
+          // if ((pair.a == "Sadness_score") && (pair.b == "mood")) {
+          //   console.log("data looks like: " + d[pair.a] + "," + d[pair.b]);
+          // }
+          return scale[pair.a](d[pair.a])
+        })
+        .attr("cy", function (d) {return scale[pair.b](d[pair.b])});
+
+     }
+      })
+   // Calculate a linear regression from the data
+
+    // Takes 5 parameters:
+    // (1) Your data
+    // (2) The column of data plotted on your x-axis
+    // (3) The column of data plotted on your y-axis
+    // (4) The minimum value of your x-axis
+    // (5) The minimum value of your y-axis
+
+    // Returns an object with two points, where each point is an object with an x and y coordinate
+
+    function calcLinear(data, x, y, minX, minY, maxX){
+      /////////
+      //SLOPE//
+      /////////
+
+      // Let n = the number of data points
+      var n = data.length;
+
+      // Get just the points
+      var pts = [];
+      data.forEach(function(d,i){
+        // console.log("+d[x]", +d[x])
+        var obj = {};
+        obj.x = +d[x];
+        obj.y = +d[y];
+        obj.mult = obj.x*obj.y;
+        pts.push(obj);
+      });
+
+      // console.log("pts", pts)
+      // Let a equal n times the summation of all x-values multiplied by their corresponding y-values
+      // Let b equal the sum of all x-values times the sum of all y-values
+      // Let c equal n times the sum of all squared x-values
+      // Let d equal the squared sum of all x-values
+      var sum = 0;
+      var xSum = 0;
+      var ySum = 0;
+      var sumSq = 0;
+      pts.forEach(function(pt){
+        // console.log(pt)
+        sum = sum + pt.mult;
+        xSum = xSum + pt.x;
+        ySum = ySum + pt.y;
+        sumSq = sumSq + (pt.x * pt.x);
+      });
+
+      var a = sum * n;
+      var b = xSum * ySum;
+      var c = sumSq * n;
+      var d = xSum * xSum;
+
+
+      // Plug the values that you calculated for a, b, c, and d into the following equation to calculate the slope
+      // slope = m = (a - b) / (c - d)
+      var m = (a - b) / (c - d);
+      /////////////
+      //INTERCEPT//
+      /////////////
+
+      // Let e equal the sum of all y-values
+      var e = ySum;
+      // Let f equal the slope times the sum of all x-values
+      var f = m * xSum;
+      // Plug the values you have calculated for e and f into the following equation for the y-intercept
+      // y-intercept = b = (e - f) / n
+      var b = (e - f) / n;
+
+      // return an object of two points
+      // each point is an object with an x and y coordinate
+      return {
+        ptA : {
+          x:minX,
+          y: m * minX + b
+          // x: minX,
+          // y: m * minX + b
+        },
+        ptB : {
+          x: maxX,
+          y: m * maxX + b
+          // y: minY,
+          // x: (minY - b) / m
+        }
+      }
+    }
+}
+}
+
+
+</script>
+</body>
+</html>

@@ -380,3 +380,15 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-06-22T10:49:24.817517	3.5	excited	researching point reyes trip	leisure, errands, eating	0	True	vacation, mountain view	4	0	1	True
 2018-06-22T11:50:12.405047	3	focused	back to work on correlation matrix viz	schoolwork	0	True	vacation, mountain view	4	0	1	True
 2018-06-22T13:01:38.441326	3	still focused	still working on correlation viz	schoolwork	0	True	vacation, mountain view	4	0	1.5	True
+2018-06-22T14:22:16.194080	2.5	still focused but hungry	still working on correlation viz	schoolwork	1	True	vacation, mountain view	3.5	0	2	True
+2018-06-22T15:23:45.285316	2.5	slightly scatterbrained	finished correlation viz and am doing like 10 random things	schoolwork, eating, ash stuff, errands, chatting	3	True	vacation, mountain view	3	0.5	2	False
+2018-06-22T21:47:10.533224	4	pretty good	planning our trip to sequoia ntl park with k	leisure	1	False	vacation, mountain view	3.5	0	2.5	False
+2018-06-25T12:04:51.916638	3	pretty good yet slightly grumpy at the same time	sitting at a beautiful cafe in LA, the weather's nice, but annoyed witth k for planning dinner with his ex's cousin	schoolwork, email	2	False	vacation, LA, cafe	4	1.5	2	True
+2018-06-25T13:31:49.259013	3	focused	working on correlation viz for webpage	schoolwork	1	False	vacation, LA, cafe	4	1	2	True
+2018-06-25T15:44:42.291730	3	still focused	still working on correlation viz	schoolwork	0	True	vacation, LA, home	3.5	0.5	3	False
+2018-06-25T18:29:40.882901	3	tired	been working for a while, had a lunch break	schoolwork, leisure, feedly, eating	1	True	vacation, LA, home	3	0	3.5	False
+2018-06-26T11:12:09.899368	2.5	sleepy, slow	didn't sleep that well	eating, schoolwork	2	True	vacation, LA, home	3	0.5	3.5	True
+2018-06-26T12:44:21.184955	3	focused	working on correlation viz	schoolwork	1	True	vacation, LA, home	3.5	0	3	True
+2018-06-26T14:00:49.643546	2	upset about having dinner with k's ex's cousin again	just, why	schoolwork, eating	1	True	vacation, LA, home	2.5	2	3.5	True
+2018-06-26T17:15:56.362366	3	focused	working on correlation viz again	schoolwork, ash stuff	7	True	vacation, LA, home	3.5	1	3	True
+2018-06-26T18:20:15.782996	2.5	annoyed	now k doesn't want me to go to dinner with his ex's cousin	schoolwork, ash stuff	2	True	vacation, LA, home	3	1.5	3	True
