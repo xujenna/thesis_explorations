@@ -34,7 +34,7 @@
 
 
   .axis text {
-    fill: black;
+    fill: silver;
     font-family: europa, sans-serif;
     font-style: light;
     text-transform: uppercase;
@@ -1018,28 +1018,8 @@ affectiva.forEach(function(d){
 })
 
 
-
-    // var attentionLine = d3.svg.line()
-    //   .x(function(d) {return xScale(d.time);})
-    //   .y(function(d){return yScale(d.attention);});
-    //
-
-
-// xScale.domain(d3.extent(newResponses, function(d) {return d.time;}));
   yScaleExpressions.domain([-100,100]);
-  // xScale2.domain(xScale.domain());
-  // yScale2.domain(yScale.domain());
 
-
-  // var productivityline = d3.line()
-  //   .defined(function(d){return d[4]!=null;})
-  //   .x(function(d) {return xScale(d[0]);})
-  //   .y(function(d){return yScaleExpressions(d[4]);});
-
-  // var blinkLine = d3.svg.line()
-  //   .defined(function(d){return d.blinks!=null;})
-  //   .x(function(d) {return xScale(d.time);})
-  //   .y(function(d){return yScale(d.blinks);});
 
 
   var blinksTip = d3.tip()
@@ -1446,16 +1426,7 @@ for(var key in dataset){
   .attr("class", "axis axis--y")
     .call(yAxisTabCounter);
 
-
-// var numTicks = xScale.ticks().length;
-// var ticks = xScale.ticks(numTicks);
-// var spaceInterval = ticks[1] - ticks[0];
-// var spaceInterval = Sun Apr 29 2018 02:00:00 GMT-0500 (CDT) - Sun Apr 29 2018 01:00:00 GMT-0500 (CDT);
 var pixelInterval = xScale(new Date("Sun Apr 29 2018 02:00:00 GMT-0500 (CDT)")) - xScale( new Date("Sun Apr 29 2018 01:00:00 GMT-0500 (CDT)"));
-// console.log(numTicks)
-// console.log(ticks)
-// console.log(spaceInterval)
-console.log(pixelInterval)
 
 
 
@@ -1513,35 +1484,6 @@ tabCounterChart.selectAll(".tabCircle")
   .attr("fill", "magenta");
 
 
-// tabCounterChart.selectAll(".windowCircle")
-//   .data(keyLookup)
-//   .enter()
-//   .append("circle")
-//   .attr("class","windowCircle")
-//   .attr("cx", function(d) {return xScale(dataset[d].timestamp)})
-//   .attr("r", function(d) {return dataset[d].current_windowCount == null ? 0 : 3; })
-//   .attr("cy", function(d) { return yScaleTabCounter(dataset[d].current_windowCount);})
-//   .attr("opacity", 0.65)
-//   .attr("fill", "blue");
-
-// faviconChart.selectAll(".chromeIcons")
-//   .data(keyLookup)
-//   .enter()
-//   .append("g")
-//   .attr("transform", function(d){return "translate(" + xScale(dataset[d].timestamp) +")"})
-//   .selectAll(".icons")
-//   .data(function(d) {return dataset[d].favicons;})
-//   .enter()
-//   .append("svg:image")
-//   // .attr("class", "logo")
-//   // .attr("cx", function(d){return xScale(d.time)})
-//   // .attr("cy", height)
-//   .attr("xlink:href", function(d,i){return d;})
-//   .attr("transform", function(d,j){return "translate(0," + yScaleTabCounter((j+2)*2) + ")";})
-//   .attr("height", 10)
-//   .attr("width", 10);
-
-
 tabCounterChart.selectAll(".activated-bar")
 .call(tabTip)
 
@@ -1577,17 +1519,6 @@ tabCounterChart.selectAll(".tabCircle")
   tabCountTip.hide(d);
 })
 
-
-// tabCounterChart.selectAll(".windowCircle")
-// .call(windowCountTip)
-
-// .on("mouseover", function(d) {
-//   windowCountTip.show(d);
-// })
-
-// .on("mouseout", function(d) {
-//   windowCountTip.hide(d);
-// })
 
 }
 
