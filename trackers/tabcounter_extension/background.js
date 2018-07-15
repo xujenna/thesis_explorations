@@ -100,7 +100,10 @@ function saveMetrics(){
 	};
 
 	console.log("METRICS", hourlyData)
-	database.ref(key).set(hourlyData);
+
+	if(tabs_activated > 1){
+		database.ref(key).set(hourlyData);
+	}
 
 	current_tabCount = 0;
 	current_windowCount = 0;

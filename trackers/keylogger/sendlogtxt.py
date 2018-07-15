@@ -22,10 +22,10 @@ with open('logs/log.txt') as log_txt:
 	tone = tone_analyzer.tone(log_txt.read(), content_type="text/plain;charset=utf-8")
 	tone["time"] = timestamp
 
-with open('logs/log.json', 'r') as f:
+with open('logs/log_new.json', 'r') as f:
 	brackets = json.load(f)
 
-with open('logs/log.json', 'w') as f:
+with open('logs/log_new.json', 'w') as f:
 	brackets.append(tone)
 	json.dump(brackets, f, indent=2)
 
