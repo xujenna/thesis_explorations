@@ -425,3 +425,92 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-07-14T19:55:17.330354	4.5	cheerful	had a productive argumenet with k using my fighting game ideas	leisure, resting, with k	1	False	Kevin Home	4	0	1	True
 2018-07-14T22:50:18.029098	4.5	content	cooked a nice dinner, having fun with k	eating, schoolwork, studying, with k	2	False	Kevin Home	4	0	2.5	True
 2018-07-14T23:50:46.271305	4	content, focused	working on fighting game	schoolwork, with k, studying	1	False	Kevin home	4	0	2.5	True
+2018-07-15T00:55:15.927585	3.5	content, sleepy	finished content for fighting game, k approved	errands, resting, with k	1	False	Kevin Home	3	0	4	False
+2018-07-15T13:12:28.806070	3	lazy	just had breakfast with k, work up late	cooking, eating, leisure, with k	1	False	Kevin Home	2	0	2	True
+2018-07-16T21:35:16.669721	4	cheerful	cooked dinner with k	cooking, eating, errands, leisure	1	False	Kevin Home	3	0	3	True
+2018-07-17T00:24:00.921498	3	loved, content, but exhausted	played the fighting game with k until late	studying, with k	2	False	Kevin Home	2	0	5	True
+2018-07-17T19:55:10.058460	2	tired, unfocused	heat, long day at work, watched SATC	leisure, tv	0	True	Home	2	0	4	True
+2018-07-17T21:16:14.022331	3.5	still tired but amused/motivated	during the ash call we decided to scrap the website and go squarespace	ash stuff	4	True	Home	3	1	3.5	True
+2018-07-17T22:23:40.908696	3	randomly motivated	just started a new MOOC to build the fighting game	studying	2	True	Home	4	1	3.5	True
+2018-07-17T23:24:24.353281	2.5	sleepy	it's late	schoolwork, studying	1	True	Home	2	0	4	True
+2018-07-18T19:24:00.531668	3.5	optimistic, inspired	had good therapy session, which gave me a project idea	therapy, eating	2	True	Home	3.5	0	2	True
+2018-07-18T20:24:00.531668	2.5	bemused, frustrated	no progress to talk about on ash call with dev	ash stuff	2	True	Home	3	1	2	False
+2018-07-18T21:25:37.800336	3	tired	long day i guess	schoolwork, leisure, feedly	3	True	Home	2	1	4	True
+2018-07-18T23:19:05.402436	4	content	cuddling and talking with k	leisure, with k	1	False	Home	3	0	3.5	True
+2018-07-23T14:16:19.914832	2.5	exhausted	running errands, lugged groceries back to my place, incredibly humid outside	errandss, resting	1	True	Home	2	1	4	False
+2018-07-23T15:51:27.074293	2.5	slightly annoyed	squarespace is annoying and no one is helping like they promised	ash stuff	3	True	Home	3	1.5	3	True
+2018-07-23T19:38:19.704747	3.5	physically exhausted	went to yoga	working out, eating	2	True	Home	3.5	1	3.5	False
+2018-07-23T20:39:00.039009	2.5	bored	working on ash stuff	ash stuff	1	True	Home	3	1	3	True
+2018-07-23T21:40:17.810002	2.5	bored and really sleepy	working on ash stuff, tired from yoga	ash stuff	2	True	Home	2	1	4.5	True
+2018-07-23T22:40:51.609198	2.5	still bored and tired	still working on ash stuff	ash stuff	1	True	Home	2	0.5	4.5	True
+2018-07-24T10:48:41.558646	3	focussed	working on ash ss website	ash stuff	0	True	Home	3	1	3	True
+2018-07-24T11:49:08.459457	3	still focused	still working on ash ss website	ash stuff	1	True	Home	3	1	3.5	True
+2018-07-24T12:50:38.648202	2.5	languishing	haven't eaten breakfast yet	ash stuff	1	True	Home	2	1	3	True
+2018-07-24T14:43:20.847661	2.5	annoyed	squarespace is too much work	ash stuff	2	True	Home	2	1.5	3	False
+2018-07-24T15:44:39.994635	2	tired, languishing again	still working on ash site	ash stuff	1	True	Home	2	2	3.5	True
+2018-07-25T12:46:18.452895	2.5	starving, focused	became too obsessed with fixing the ash site since I woke up and haven't eaten	ash stuff	1	True	Home	3.5	1	3	False
+2018-07-25T13:47:28.309243	3	a bit unfocused and sleepy	procrastinating on getting ready to go out, slept late last night	leisure, feedly	1	True	Home	2	0	3	True
+2018-07-25T18:05:29.073702	2.5	nervous, anxious	just told ash dev that we're using squarespace...	schoolwork, ash stuff, errands	2	True	Kevin Home	3	3	3.5	True
+2018-07-25T22:41:58.122484	4	cheerful, content	having a good evening with k	leisure, with k	2	False	Kevin Home	3	0.5	4	True
+2018-07-26T00:09:53.466154	3	sleepy and unfocused	didn't sleep enough last night, uninterested in doing any work, k is on his new laptop	leisure, feedlyy	1	False	Kevin Home	1	0	4.5	False
+2018-07-26T13:58:10.927110	2.5	betrayed, focused	k lied about stupid shit for no reason, working on my cbt app	schoolwork, eating	1	True	Home	3.5	1	2	True
+2018-07-26T14:58:39.997080	2.5	still focused	still working on my cbt app	schoolwork	1	True	Home	3.5	1	2	True
+2018-07-26T17:59:27.296668	3.5	cheerful	am on the floor for a bit and having fun	in class, with friends, schoolwork	2	False	School	4	0.5	2	False
+2018-07-26T22:27:06.892689	2	a little anxious, unfocussed	I ignored k's chat but am still expecting him to try to talk	leisure, tv, feedly	0	True	Home	2	1	3	True
+2018-07-26T23:27:06.892689	2.5	focused again	working on app	schoolwork, chatting	1	True	Home	3.5	0.5	3	False
+2018-07-27T00:28:46.981847	2	betrayed, disappointed	just when i think we're making progress repairing our relationship, of course there's  always more bullshit	schoolwork	0	True	Home	3	2	3.5	True
+2018-07-27T02:01:10.916176	2	sleepy	wasting time watching SATC to distract from my feelings lol	leisure, tv	0	True	Home	1	3	5	True
+2018-07-27T12:11:15.962907	2	inadequate	unsure about CBT app design 	schoolwork	0	True	Home	2	0	2	True
+2018-07-27T13:11:15.962907	3	focused, hopeful	have promising idea	eating, schoolwork	0	True	Home	3	0	2	True
+2018-07-27T15:11:15.962907	3	still focused	still working on CBT app	eating, schoolwork	1	True	Home	3.5	1	2.5	True
+2018-07-27T16:13:11.536474	2	despondent	k is pathologically insecure	schoolwork	0	True	Home	3	1	2.5	False
+2018-07-27T23:43:18.804575	3.5	focused	working on app while k naps	schoolwork, with k	3	False	Kevin Home	3.5	0	3	True
+2018-07-28T00:45:11.529657	4	cheerful, losing steam	k woke up and it's getting late, so can't do much else but relax :)	schoolwork, with k	1	False	Kevin Home	2.5	0	4	True
+2018-07-28T14:40:50.023199	3.5	content	had finished breakfast, working next to k	schoolwork, with k, leisure, eating	3	False	Kevin Home	3.5	0	2.5	False
+2018-07-29T14:08:38.500863	3.5	content	had a big breakfast with k, did errands, now working on cbt	eating, errands, schoolwork, with k	1	False	Kevin Home	4	0	3	True
+2018-07-29T16:54:04.222837	4.5	excited	k and i are working in a beautiful new stumptown that opened near his apartment	schoolwork, leisure	2	False	cafe	4	0	1	True
+2018-07-29T17:54:39.712654	4	focused	finishing up app mockups	schoolwork, with k	2	False	cafe	4	0	1.5	True
+2018-07-29T21:26:55.047910	3	focused	working on poster	schoolwork, with k	2	False	Kevin Home	3.5	1	2	False
+2018-07-29T22:27:18.036060	3	still focused	still working on poster	schoolwork, with k	1	False	Kevin Home	3.5	1	2.5	False
+2018-07-29T23:59:18.238276	3.5	still focused	working on poster and eating watermelon with k	schoolwork, eating, with k	1	False	Kevin Home	3	1	3	True
+2018-07-30T12:13:44.520891	3	focused	working on application	schoolwork	0	True	Kevin Home	3	1	2.5	False
+2018-07-30T13:14:04.026621	3	still focused	still working on application	schoolwork	0	True	Kevin Home	3	2	3	True
+2018-07-30T14:57:00.587886	3.5	relieved	just submitted the application	schoolwork, email	1	True	Kevin HOme	3	0	3	False
+2018-07-30T19:50:45.662708	4	tired but happy	had a good dinner with isabella at our fav restaurant	eating, with friends	2	True	Home	3	0	3.5	True
+2018-07-30T21:00:02.547758	3	lazy	i guess i'm just tired from carrying around so much stuff from bk to chinatown to home	leisure, tv, feedly	0	True	Home	1.5	0	4	True
+2018-07-30T23:14:25.935937	2	annoyed	can't stop picking at my feet	leisure, tv, feedly	1	True	Home	1	0	4.5	True
+2018-07-31T12:20:47.119395	2.5	frustrated	wrangling with squarespace again	ash stuff	0	True	Home	3	1	3	False
+2018-07-31T13:30:26.715056	2	still frustrated	squarespace	ash stuff	0	True	Home	2	3	2.5	False
+2018-07-31T16:12:38.462848	2.5	bored, tired	ran errands, now back to working on website	errands, ash stuff	3	True	Home	2.5	1	3.5	True
+2018-08-01T10:32:36.726729	3	neutral	just waking up	email	2	True	Home	3	0	1.5	False
+2018-08-01T15:09:08.725860	5	cheerful	having fun at school	chatting, with friends, eating	3	False	School	3	0	1	True
+2018-08-01T16:09:58.923990	4	focused	working on ash website	ash stuff	3	False	School	4	0	1.5	False
+2018-08-01T17:25:35.543490	4	still focused, cheerful	working on ash site and talking to people	ash stuff, with friends	3	False	School	4	0	1	False
+2018-08-02T12:50:09.189406	2	numb or just desolate	broke up with k last night	leisure, tv	2	True	Home	1	1	3	True
+2018-08-02T14:06:31.754208	2.5	still numb but looking forward to plans with friends	chatting	leisure, tv, chatting	5	True	Home	2	1	3	True
+2018-08-02T15:16:49.778920	2	bummed and feeling guilty 	just finished the entire first season of SATC	leisure, tv	1	True	Home	1	1	3.5	True
+2018-08-02T16:57:20.440003	3.5	cheerfulish	played ping pong with mo at school	leisure, witith friends, schoolwork	2	False	School	2	1	3	False
+2018-08-02T17:58:32.244100	2	i might be despairing a little bit	the break up	leisure, feedly	1	True	School	1	4	3.5	False
+2018-08-02T22:26:08.979966	4	loved and supported	lots of support from my friends today; dan and yina stuffed me with foodd tonight	leisure, tv	4	True	Home	2	1	4	True
+2018-08-02T23:33:00.473536	2.5	restless and guilty	binging on SATC again	leisure, tv	1	True	Home	1	1	4.5	True
+2018-08-03T12:21:47.070256	3	fine	taking care of some things online before i meet casey for a museum date	email, errands	4	True	Home	3	1	4	False
+2018-08-03T21:51:14.641815	1	lonely, fragile, overwhelmed	terrified by the loss of constant companionship. not sure how to be  alone anymore	leisure, tv, chatting	3	True	Home	0	5	3	True
+2018-08-03T22:54:34.693898	3	loved, supported, grateful	was feeling panicky so i contacted a few friends for advice. michelle called and we had a good chat, made plans	chattingg	5	True	Home	2	3	3.5	False
+2018-08-04T00:09:23.849942	3	content	planning some trips	leisure, tv, chatting	2	True	Home	2	2	4	True
+2018-08-04T01:13:10.811649	2	sleepy	staying up late again watching TV	leisure, tv	0	True	Home	2.5	1	5	True
+2018-08-04T12:39:47.849755	1.5	a little heartbroken	text from k this morning about returning my stuff	email, errands	2	True	Home	1	4	3	False
+2018-08-04T13:42:27.795666	3	calm	talked to friends and made afternoon plans	leisure, tv	5	True	Home	2	3	3	False
+2018-08-05T00:36:27.715587	4	cheerful	just got back from movies with ITP people	leisure, with friends	5	True	Home	2	1	4	False
+2018-08-05T02:41:21.775010	2	tired	staying up late watching SATC	leisure, tv	0	True	Home	1	2	4.5	True
+2018-08-05T11:32:48.032837	1.5	disappointed, empty, numb	task rabbit brought my stuff over from k's place	errands	3	True	Home	1	3	4	False
+2018-08-05T12:34:02.097806	2	just numb	had a little cry	errands, leisure, tv	0	True	Home	1	3	4	True
+2018-08-05T13:35:33.924693	2.5	annoyed	didn't get all my stuff from the taskrabbit so have to pick up from google tomorrow	chatting, leisure, tv, errands	4	True	Home	2	4	4	True
+2018-08-05T14:51:36.452656	2	empty	unpacking all my stuff from k's	errands, chatting	3	True	Home	1	4	3.5	True
+2018-08-05T16:43:31.799477	4	encouraged	cafe date with michelle	schoolwork, ash stuff, with friends	2	False	cafe	3.5	1	3	True
+2018-08-05T19:53:51.599544	2	empty	i miss having someone to talk to at all times	leisure, tv, ash stuff	2	True	Home	2	2	3	False
+2018-08-05T23:49:34.506112	3.5	supported and cared for	spending the night at michelle's place because i was panicking	ash stuff, with friends	2	False	Michelle Home	3	1	4	False
+2018-08-06T01:20:44.992588	3	exhausted	emotional day	ash stuff	1	False	Michelle Home	3	2	5	True
+2018-08-06T11:58:16.033140	2.5	stunned	just realized that k was codependent, and bailed because I wouldn't let him be this way	email, leisure, chatting	4	True	Michelle Home	2	2.5	3	False
+2018-08-06T14:45:42.224695	3	pretty okay albeit restless	waiting at the airport for my flight	leisure, feedly, email	2	False	Airport	3	1	3	True
+2018-08-06T20:58:57.704651	3.5	supported	parents were okay with breakup, chatting with friends	email, chatting	4	False	Parents Home	3	0	3	False
+2018-08-07T00:14:05.711789	3	focused	working on gratitude log	schoolwork	0	False	Parents Home	4	2	5	False
