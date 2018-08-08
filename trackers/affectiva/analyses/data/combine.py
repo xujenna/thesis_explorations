@@ -42,7 +42,7 @@ for f in glob.glob("*.json"):
 
         blink_values = list(filter(lambda x: x!=0, map(lambda x: x.get('eyeClosure', 0), j)))
         blinks = int(len(blink_values) / 2)
-        if(blinks > 70):
+        if(blinks > 35):
             blinks = int(math.sqrt(blinks))
         range_results["blinks"] = blinks
 
