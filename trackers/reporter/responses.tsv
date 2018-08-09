@@ -154,7 +154,7 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-30T21:15:15.858797	4	lazy	had dinner/dessert with k, feel reluctant to start working again	schoolwork, eating, with k	1	False	Home	3	3	3	True
 2018-04-30T22:28:27.522694	4.5	happy	k helping me with pandas and it's fun	schoolwork, with k	1	False	Home	3.5	2.5	3	False
 2018-05-01T00:44:41.700091	5	happy	k did all my work for me lol, good learning experience	schoolwork, with k	1	False	Home	4	1.5	4	True
-2018-05-01T12:08:52.178700	5	cheerful	talked to some friends at school, helped someone debug their final	in class, school work	7	False	School	4	1.5	3	False
+2018-05-01T12:08:52.178700	5	cheerful	talked to some friends at school, helped someone debug their final	in class, schoolwork	7	False	School	4	1.5	3	False
 2018-05-01T16:00:08.559133	3.5	sleepy, confused	slept late last night, got up early for couple's therapy; pandas is not working	schoolwork	5	True	Home	3	2.5	4	False
 2018-05-01T17:01:36.128844	4	pretty good	figured out pandas stuff	schoolwork	0	True	Home	3.5	2.5	3.5	False
 2018-05-01T18:03:36.971841	3.5	super lazy	finals burnout	schoolwork	2	True	Home	3	3	4	False
@@ -437,7 +437,7 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-07-18T20:24:00.531668	2.5	bemused, frustrated	no progress to talk about on ash call with dev	ash stuff	2	True	Home	3	1	2	False
 2018-07-18T21:25:37.800336	3	tired	long day i guess	schoolwork, leisure, feedly	3	True	Home	2	1	4	True
 2018-07-18T23:19:05.402436	4	content	cuddling and talking with k	leisure, with k	1	False	Home	3	0	3.5	True
-2018-07-23T14:16:19.914832	2.5	exhausted	running errands, lugged groceries back to my place, incredibly humid outside	errandss, resting	1	True	Home	2	1	4	False
+2018-07-23T14:16:19.914832	2.5	exhausted	running errands, lugged groceries back to my place, incredibly humid outside	errands, resting	1	True	Home	2	1	4	False
 2018-07-23T15:51:27.074293	2.5	slightly annoyed	squarespace is annoying and no one is helping like they promised	ash stuff	3	True	Home	3	1.5	3	True
 2018-07-23T19:38:19.704747	3.5	physically exhausted	went to yoga	working out, eating	2	True	Home	3.5	1	3.5	False
 2018-07-23T20:39:00.039009	2.5	bored	working on ash stuff	ash stuff	1	True	Home	3	1	3	True
@@ -536,3 +536,4 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-08-09T11:44:39.889044	2	empty, stressed out	breakup and weird situation with donut dash and upstate trip	errands	3	True	Parents Home	1.5	3.5	2.5	True
 2018-08-09T13:18:28.683053	2.5	okay	keeping physically busy to distract myself	working out, meditation, errands	3	True	Parents Home	2.5	2	3	False
 2018-08-09T14:44:05.162534	3	focused, proud	doing well on project	schoolwork	0	True	Parents Home	3.5	1	2.5	True
+2018-08-09T16:23:43.337939	3	still focused	still working on project	schoolwork	3	False	Parents Home	3.5	1	2.5	True
