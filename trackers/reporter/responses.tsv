@@ -1,10 +1,10 @@
 time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue	compulsions
-2018-04-09T10:03:18.315716	4	Feeling pretty good	Making good progress with project (this questionnaire!)	Schoolwork	1	True	Kevin Home	4	3	1	True
-2018-04-09T11:03:48.939009	4	Productive	Making progress on project	Schoolwork, Errands, Chatting	1	True	Kevin Home	4	3	1	True
-2018-04-09T12:00:17.159027	3	Neutral	Taking a break	Leisure	1	True	Kevin Home	3	2	1	False
-2018-04-09T14:34:53.010916	3	Tired	Jet lag, chores	Leisure, Errands, Eating, Reading, Chatting, Email	2	True	Kevin Home	3	2	4	False
-2018-04-09T16:56:31.979721	3	drowsy	jet lagged but unable to sleep	Schoolwork, Resting	0	True	Kevin Home	3	2	3	False
-2018-04-09T18:00:51.257329	3	drowsy	jet lagged but unable to sleep	Schoolwork	0	True	Kevin Home	3	2	4	False
+2018-04-09T10:03:18.315716	4	Feeling pretty good	Making good progress with project (this questionnaire!)	Schoolwork	1	True	K Home	4	3	1	True
+2018-04-09T11:03:48.939009	4	Productive	Making progress on project	Schoolwork, Errands, Chatting	1	True	K Home	4	3	1	True
+2018-04-09T12:00:17.159027	3	Neutral	Taking a break	Leisure	1	True	K Home	3	2	1	False
+2018-04-09T14:34:53.010916	3	Tired	Jet lag, chores	Leisure, Errands, Eating, Reading, Chatting, Email	2	True	K Home	3	2	4	False
+2018-04-09T16:56:31.979721	3	drowsy	jet lagged but unable to sleep	Schoolwork, Resting	0	True	K Home	3	2	3	False
+2018-04-09T18:00:51.257329	3	drowsy	jet lagged but unable to sleep	Schoolwork	0	True	K Home	3	2	4	False
 2018-04-09T19:58:39.830408	4	tired	jet lagged	 in class, schoolwork, chatting	2	False	School	3	2	4	True
 2018-04-10T02:00:04.219220	4	content	good couple's therapy session	Therapy	2	False	School	4	2	2	True
 2018-04-10T12:47:00.108283	3	neutral	in class	in class, schoolwork, email	2	False	School	3	3	3	True
@@ -19,9 +19,9 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-11T12:04:12.017554	5	cheerful	fun at school	Schoolwork, with friends	3	False	School	4	3	2	True
 2018-04-11T15:02:45.011706	5	cheerful	fun at school and therapy	Chatting, therapy	6	False	School, Therapy	4	2	2	False
 2018-04-11T18:08:44.805924	4	productive	catching up on homework	Schoolwork	1	False	School	4	3	2	False
-2018-04-11T20:59:37.102652	3	tired	long day, lingering jet lag	Schoolwork, with k	2	False	Kevin Home	3	3	5	True
-2018-04-12T00:37:41.151981	3	sleepy but restless	jet lag	Resting, with k, chatting	1	False	Kevin Home	3	2	3	False
-2018-04-12T09:18:01.240432	4	motivated	making progress with homework, had breakfast with k	Schoolwork, Eating, Chatting, with k	1	False	Kevin Home	3	2	2	True
+2018-04-11T20:59:37.102652	3	tired	long day, lingering jet lag	Schoolwork, with k	2	False	K Home	3	3	5	True
+2018-04-12T00:37:41.151981	3	sleepy but restless	jet lag	Resting, with k, chatting	1	False	K Home	3	2	3	False
+2018-04-12T09:18:01.240432	4	motivated	making progress with homework, had breakfast with k	Schoolwork, Eating, Chatting, with k	1	False	K Home	3	2	2	True
 2018-04-12T11:34:36.320323	3	stressed	just realized that I'm actually still a week behind in homework and the midterm is due tonight!!	Schoolwork, Commuting	1	True	Home	3	4	2	True
 2018-04-12T12:39:29.819958	2	stressed	still stressed about the midterm	Schoolwork	0	True	Home	3	4	2	False
 2018-04-12T13:40:07.405005	2	stressed	still stressed about midterm	Schoolwork	0	True	Home	2	4	2	False
@@ -34,17 +34,17 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-13T15:27:43.578694	4	content, physically tired	so much exercise 	Errands, Resting, Leisure, Schoolwork	0	True	Home	4	2	3	False
 2018-04-13T16:29:00.230369	3	a bit frustrated	can't debug code	Schoolwork	1	True	Home	3	2	3	True
 2018-04-13T18:02:39.450067	3	drowsy	finally debugged code, want to nap	Schoolwork, Leisure	1	True	Home	3	2	4	True
-2018-04-14T16:22:02.472148	4	cheerful, lazy	too much sleep, lazy Saturday with k, nice weather	Schoolwork, Resting, Leisure, with k	1	False	Kevin Home	4	3	2	False
-2018-04-14T17:32:10.595708	4	accomplished	cleaned up affectiva data collection	Schoolwork	1	False	Kevin Home	4	2	2	True
-2018-04-14T20:10:53.490546	3	content	had a walk with k	Schoolwork, Leisure, Eating, with k	1	False	Kevin Home	3	3	3	True
-2018-04-14T22:14:03.200857	4	content	leisurely sunday morning with k	Resting, Leisure, Eating, Schoolwork, with k	1	False	Kevin Home	3	3	2	True
-2018-04-15T14:11:40.131009	5	cheerful	k cooked lunch, helped me with coding	Schoolwork, Eating, with k	1	False	Kevin Home	4	3	2	False
-2018-04-15T16:52:01.287242	4	productive	working on project	Schoolwork	1	False	Kevin Home	4	3	2	True
-2018-04-15T19:52:48.102348	4	cheerful	had break and dinner with k	Eating, Leisure, Resting, with k	1	False	Kevin Home	4	3	2	True
-2018-04-15T21:32:04.116113	4	happy	getting some work done, chilling with k	Schoolwork, with k	1	False	Kevin Home	4	2	3	True
-2018-04-15T22:32:56.023039	3	tired	jet lag	Schoolwork	1	False	Kevin Home	3	2	4	False
-2018-04-16T11:07:50.535380	4	content	had nice breakfast, k working from home this morning	Schoolwork, with k	1	False	Kevin Home	3	4	2	False
-2018-04-16T12:11:50.100342	2	frustrated	can't figure out this emoji thing	Schoolwork	1	False	Kevin Home	2	4	2	False
+2018-04-14T16:22:02.472148	4	cheerful, lazy	too much sleep, lazy Saturday with k, nice weather	Schoolwork, Resting, Leisure, with k	1	False	K Home	4	3	2	False
+2018-04-14T17:32:10.595708	4	accomplished	cleaned up affectiva data collection	Schoolwork	1	False	K Home	4	2	2	True
+2018-04-14T20:10:53.490546	3	content	had a walk with k	Schoolwork, Leisure, Eating, with k	1	False	K Home	3	3	3	True
+2018-04-14T22:14:03.200857	4	content	leisurely sunday morning with k	Resting, Leisure, Eating, Schoolwork, with k	1	False	K Home	3	3	2	True
+2018-04-15T14:11:40.131009	5	cheerful	k cooked lunch, helped me with coding	Schoolwork, Eating, with k	1	False	K Home	4	3	2	False
+2018-04-15T16:52:01.287242	4	productive	working on project	Schoolwork	1	False	K Home	4	3	2	True
+2018-04-15T19:52:48.102348	4	cheerful	had break and dinner with k	Eating, Leisure, Resting, with k	1	False	K Home	4	3	2	True
+2018-04-15T21:32:04.116113	4	happy	getting some work done, chilling with k	Schoolwork, with k	1	False	K Home	4	2	3	True
+2018-04-15T22:32:56.023039	3	tired	jet lag	Schoolwork	1	False	K Home	3	2	4	False
+2018-04-16T11:07:50.535380	4	content	had nice breakfast, k working from home this morning	Schoolwork, with k	1	False	K Home	3	4	2	False
+2018-04-16T12:11:50.100342	2	frustrated	can't figure out this emoji thing	Schoolwork	1	False	K Home	2	4	2	False
 2018-04-16T14:27:29.932109	3	neutral	left k's, had lunch, now at library	Schoolwork, Eating	1	False	School, Library	3	3	2	False
 2018-04-16T15:28:46.623225	3	productive	jamming on hw for class tonight	Schoolwork, Chatting	1	False	School, Library	3	3	2	False
 2018-04-16T16:29:39.198534	3	productive	working on hw	Schoolwork	1	False	School, Library	3	4	2	True
@@ -59,9 +59,9 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-17T13:32:36.023295	4	cheerful but drowsy	group work	in class	7	False	School	3	3	4	True
 2018-04-17T15:35:57.809634	3	neutral	out of class, working now	schoolwork, eating	4	False	School	3	4	4	True
 2018-04-17T16:36:59.385299	3.5	productive	working on project	schoolwork	1	False	School	3	3	4	False
-2018-04-17T20:10:33.836753	1	disappointed, annoyed	didn't get the google internship!!	ash stuff	5	False	Kevin Home	1	4	5	False
-2018-04-17T21:24:50.885383	2	discouraged	getting rejected from the internship makes me question everything lol	Email, Schoolwork	4	False	Kevin Home	1	4	4	False
-2018-04-17T22:27:56.891255	1.5	demoralized, apathetic	what's the point ugh	Schoolwork	1	False	Kevin Home	1	3	4	False
+2018-04-17T20:10:33.836753	1	disappointed, annoyed	didn't get the google internship!!	ash stuff	5	False	K Home	1	4	5	False
+2018-04-17T21:24:50.885383	2	discouraged	getting rejected from the internship makes me question everything lol	Email, Schoolwork	4	False	K Home	1	4	4	False
+2018-04-17T22:27:56.891255	1.5	demoralized, apathetic	what's the point ugh	Schoolwork	1	False	K Home	1	3	4	False
 2018-04-18T00:39:25.251289	2.5	weary	woke up early, bad commute from bk, bad day yesterday	in class, schoolwork	5	False	School	2	3	3	False
 2018-04-18T11:26:39.214208	3	fine	getting back into the swing of things	schoolwork, in class	0	False	School	3	3	2	True
 2018-04-18T13:04:26.595564	3	fine	just working	schoolwork, leisure	0	True	Home	3	3	4	False
@@ -93,18 +93,18 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-21T16:38:12.757120	4	pretty good	had nice birthday lunch with k and his mom, then a nice walk home, warm weather today	leisure	3	True	Home	4	2.5	1.5	False
 2018-04-21T17:38:56.098531	4	productive	obsessed with dashboard	schoolwork	2	True	Home	4.5	2	2	False
 2018-04-21T18:43:13.335058	4	feeling good	making good progress on dashboard	schoolwork	1	True	Home	4	2.5	2	False
-2018-04-21T23:48:06.892028	5	happy	fun with k	schoolwork, with k	1	False	Kevin Home	4	2	3.5	True
-2018-04-22T00:49:22.784766	4.5	happy, super sleepy but have to do homework for makeup class tomorrow	happy, super sleepy but have to do homework for makeup class tomorrow	schoolwork, with k	1	False	Kevin Home	3	2.5	5	True
+2018-04-21T23:48:06.892028	5	happy	fun with k	schoolwork, with k	1	False	K Home	4	2	3.5	True
+2018-04-22T00:49:22.784766	4.5	happy, super sleepy but have to do homework for makeup class tomorrow	happy, super sleepy but have to do homework for makeup class tomorrow	schoolwork, with k	1	False	K Home	3	2.5	5	True
 2018-04-22T13:23:49.599772	3	neutral, a bit sleepy	at makeup class on a sunday -_-	in class	3	False	School	3.5	2	3.5	True
 2018-04-22T14:46:00.226472	3.5	fine but can't concentrate in class	too obsessed with dashboard	in class	3	False	School	3	2	3	False
-2018-04-22T21:13:51.835913	4	cheerful,lazy	kind of unmotivated to work on my final, watching k play snes	schoolwork, leisure, with k	1	False	Kevin Home	2.5	3.5	2.5	False
-2018-04-22T22:35:26.112439	2.5	apprehensive	k is having another contentious phone conversation with his mother about his brother	schoolwork, with k	1	False	Kevin Home	3	4	2.5	False
-2018-04-23T10:55:55.127095	4	good enough	slept a lot	resting, just woke up, email	1	False	Kevin Home	3.5	3	1	True
-2018-04-23T12:39:13.178737	3.5	happyish	convinced k to work from home for his bday	schoolwork, with k	1	False	Kevin Home	3.5	3	1.5	False
-2018-04-23T13:40:01.043825	3	slightly frustrated	trying to debug	schoolwork, with k	1	False	Kevin Home	3	3.5	1.5	False
-2018-04-23T14:42:12.035807	3.5	feeling productive, but not working on what I actually need to lol	good progress on styling dashboard	schoolwork, with k	1	False	Kevin Home	3.5	3	1.5	False
-2018-04-23T15:59:23.999932	4	productive	jamming on QH final	schoolwork, with k	1	False	Kevin Home	4	2.5	1	False
-2018-04-23T16:59:58.408849	3	stressed	almost time for class	schoolwork, with k	1	False	Kevin Home	3.5	4.5	1	False
+2018-04-22T21:13:51.835913	4	cheerful,lazy	kind of unmotivated to work on my final, watching k play snes	schoolwork, leisure, with k	1	False	K Home	2.5	3.5	2.5	False
+2018-04-22T22:35:26.112439	2.5	apprehensive	k is having another contentious phone conversation with his mother about his brother	schoolwork, with k	1	False	K Home	3	4	2.5	False
+2018-04-23T10:55:55.127095	4	good enough	slept a lot	resting, just woke up, email	1	False	K Home	3.5	3	1	True
+2018-04-23T12:39:13.178737	3.5	happyish	convinced k to work from home for his bday	schoolwork, with k	1	False	K Home	3.5	3	1.5	False
+2018-04-23T13:40:01.043825	3	slightly frustrated	trying to debug	schoolwork, with k	1	False	K Home	3	3.5	1.5	False
+2018-04-23T14:42:12.035807	3.5	feeling productive, but not working on what I actually need to lol	good progress on styling dashboard	schoolwork, with k	1	False	K Home	3.5	3	1.5	False
+2018-04-23T15:59:23.999932	4	productive	jamming on QH final	schoolwork, with k	1	False	K Home	4	2.5	1	False
+2018-04-23T16:59:58.408849	3	stressed	almost time for class	schoolwork, with k	1	False	K Home	3.5	4.5	1	False
 2018-04-23T19:50:47.869858	4	relieved	just finished presenting QH final	in class	5	False	School	4	2	1.5	True
 2018-04-24T12:53:08.957482	4.5	feeling good	got good feedback on final last night, everyone was supportive and encouraging, had a fun night with k afterwards	in class	5	False	School	4	2	2	False
 2018-04-24T16:30:48.348500	4.5	still feeling good	warm weather, good convos with classmates before and after class (felt like I belong at ITP), interesting/fun therapy session	therapy	5	True	Home	4	2.5	1.5	True
@@ -132,20 +132,20 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-04-27T10:41:20.477804	3.5	a bit groggy but looking forward to the day	meeting up with friends for lunch and dinner, workshop at tandon later	leisure, email	5	True	Home	3.5	2	3	False
 2018-04-27T13:55:02.287060	3.5	super sleepy still	woke up groggy, had a big lunch with barak and oren	leisure, with friends, workshop	3	False	School	3.5	2	4	False
 2018-04-27T14:56:19.652225	3	neutral	just sitting in on a makerspace nlp chatbot workshop	workshop	1	False	School	4	2	3.4	True
-2018-04-27T16:11:34.700378	3	sleepy	woke up badly i guess	leisure	1	True	Kevin Home	3	1.5	4	False
-2018-04-28T19:35:08.295010	4	cheerful but lazy	nice weather, just got ice cream with k, don't want to work on finals	schoolwork, leisure, with k	1	False	Kevin Home	2.5	3	2.5	False
-2018-04-28T20:39:01.528478	3.5	focused	working on hacking the browser final	schoolwork	1	False	Kevin Home	3	3	2.5	False
-2018-04-28T22:36:41.524274	4	cheerful, focused	had some dinner w k, watched some videos, now back to work	schoolwork, eating, with k	1	False	Kevin Home	3.5	2.5	3	True
-2018-04-28T23:37:20.675196	3.5	focused	working on 3 finals at once	schoolwork	1	False	Kevin Home	3	3	3.5	False
-2018-04-29T01:53:27.440789	3	sleepy but can't stop working	too focused	schoolwork	1	False	Kevin Home	3	2	4	True
-2018-04-29T14:49:43.954731	3.5	pretty good	just doing some work, had breakfast with k	schoolwork, eating, with k	2	False	Kevin Home	3	3	2.5	False
-2018-04-29T15:51:12.368960	3.5	still pretty good	finalizing fall 2018 course preferences	schoolwork, with k	1	False	Kevin Home	3.5	3	2.5	False
-2018-04-29T18:53:16.544943	4	good	had early dinner, did laundry, now back to work	schoolwork, errands, with k, eating	2	False	Kevin Home	3	3.5	3	True
-2018-04-29T20:01:11.232706	4	focused	finished laundry, still working on finals	schoolwork, with k	1	False	Kevin Home	3.5	3	3	True
-2018-04-29T21:03:09.639101	4	good, focused	k helped me with converting time zones, among many other things	schoolwork, with k	2	False	Kevin Home	3.5	3.5	3.5	False
-2018-04-30T00:26:18.355994	4.5	a little excited	k and i talked about near future steps for my project!	schoolwork, eating, leisure, with k	1	False	Kevin Home	4	3.5	4	False
-2018-04-30T11:16:58.492253	3	groggy	was awoken suddenly by k exclaiming how late it was lol	schoolwork, with k	1	False	Kevin Home	3.5	3	3	False
-2018-04-30T12:23:14.169347	3.5	waking up	getting somewhere data analysis?	schoolwork, eating	4	False	Kevin Home	3.5	3	2.5	False
+2018-04-27T16:11:34.700378	3	sleepy	woke up badly i guess	leisure	1	True	K Home	3	1.5	4	False
+2018-04-28T19:35:08.295010	4	cheerful but lazy	nice weather, just got ice cream with k, don't want to work on finals	schoolwork, leisure, with k	1	False	K Home	2.5	3	2.5	False
+2018-04-28T20:39:01.528478	3.5	focused	working on hacking the browser final	schoolwork	1	False	K Home	3	3	2.5	False
+2018-04-28T22:36:41.524274	4	cheerful, focused	had some dinner w k, watched some videos, now back to work	schoolwork, eating, with k	1	False	K Home	3.5	2.5	3	True
+2018-04-28T23:37:20.675196	3.5	focused	working on 3 finals at once	schoolwork	1	False	K Home	3	3	3.5	False
+2018-04-29T01:53:27.440789	3	sleepy but can't stop working	too focused	schoolwork	1	False	K Home	3	2	4	True
+2018-04-29T14:49:43.954731	3.5	pretty good	just doing some work, had breakfast with k	schoolwork, eating, with k	2	False	K Home	3	3	2.5	False
+2018-04-29T15:51:12.368960	3.5	still pretty good	finalizing fall 2018 course preferences	schoolwork, with k	1	False	K Home	3.5	3	2.5	False
+2018-04-29T18:53:16.544943	4	good	had early dinner, did laundry, now back to work	schoolwork, errands, with k, eating	2	False	K Home	3	3.5	3	True
+2018-04-29T20:01:11.232706	4	focused	finished laundry, still working on finals	schoolwork, with k	1	False	K Home	3.5	3	3	True
+2018-04-29T21:03:09.639101	4	good, focused	k helped me with converting time zones, among many other things	schoolwork, with k	2	False	K Home	3.5	3.5	3.5	False
+2018-04-30T00:26:18.355994	4.5	a little excited	k and i talked about near future steps for my project!	schoolwork, eating, leisure, with k	1	False	K Home	4	3.5	4	False
+2018-04-30T11:16:58.492253	3	groggy	was awoken suddenly by k exclaiming how late it was lol	schoolwork, with k	1	False	K Home	3.5	3	3	False
+2018-04-30T12:23:14.169347	3.5	waking up	getting somewhere data analysis?	schoolwork, eating	4	False	K Home	3.5	3	2.5	False
 2018-04-30T14:34:31.534961	3	frustrated	can't merge dataframes, can't decide on classes	schoolwork, chatting	2	True	Home	3	3.5	2.5	True
 2018-04-30T15:35:22.181766	3	neutral	just working on impossible maps final	schoolwork	0	True	Home	3	3	2	False
 2018-04-30T16:40:17.544072	2.5	frustrated again	struggling with mapbox gl	schoolwork	0	True	Home	3	3.5	2	False
@@ -159,13 +159,13 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-05-01T17:01:36.128844	4	pretty good	figured out pandas stuff	schoolwork	0	True	Home	3.5	2.5	3.5	False
 2018-05-01T18:03:36.971841	3.5	super lazy	finals burnout	schoolwork	2	True	Home	3	3	4	False
 2018-05-01T19:34:03.933241	3	burned out (or maybe just very sleepy)	lack of sleep last night? too much nonstop work?	schoolwork, leisure	1	True	Home	2.5	3.5	4.5	False
-2018-05-01T23:15:56.087689	4	pretty good	took a nap with k, now we're training machine learning models!	schoolwork, with k	1	False	Kevin Home	3.5	2.5	3	False
-2018-05-02T00:35:25.174200	3.5	fine	just finishing up this documentation for my presentation tomorrow am	schoolwork, with k	1	False	Kevin Home	3	2	4	False
+2018-05-01T23:15:56.087689	4	pretty good	took a nap with k, now we're training machine learning models!	schoolwork, with k	1	False	K Home	3.5	2.5	3	False
+2018-05-02T00:35:25.174200	3.5	fine	just finishing up this documentation for my presentation tomorrow am	schoolwork, with k	1	False	K Home	3	2	4	False
 2018-05-02T12:49:14.769133	4	motivated	got good feedback on final in class, now back to work on my last final for tonight	schoolwork	6	False	School	3.5	2.5	4.5	True
 2018-05-02T14:19:09.157708	4.5	in the flow	visualizing data from my new browser activity-tracking extension	schoolwork, chatting, eating	3	False	School	4	2.5	4	False
 2018-05-02T17:17:50.220194	4	accomplished	banged out a viz for hacking the browser in less than 4 hours, despite  having to work around new data weirdness	schoolwork, eating, therapy	1	False	School	4	2	3.5	True
 2018-05-02T18:32:24.435099	3.5	exhausted	not enough sleep last night, been working all day, weather is a bit too warm	schoolwork, in class	4	False	School	3	1.5	4.5	True
-2018-05-03T12:14:23.394239	4	excited	done with the semester! was talking to k about project(s)	leisure, with kevin	1	True	Home	4	0	2	False
+2018-05-03T12:14:23.394239	4	excited	done with the semester! was talking to k about project(s)	leisure, with k	1	True	Home	4	0	2	False
 2018-05-03T13:26:10.134426	2.5	super sleepy and lazy	letting myself crash after a long semester	leisure	0	True	Home	2	0	4	False
 2018-05-03T14:34:06.711695	3	neutral	working on project	schoolwork	0	True	Home	3	0	3.5	False
 2018-05-03T15:45:46.722372	2.5	hungry, unfocussed, lethargic	been sitting here working, too lazy to move	schoolwork	0	True	Home	2	0	4	False
@@ -174,12 +174,12 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-05-04T10:54:00.969929	3.5	not bad	just woke up; had a big fight with k last night but we resolved it	leisure	1	True	Home	3	1.5	1.5	False
 2018-05-04T14:05:12.591163	2.5	frustrated	mobile is ugly	leisure	2	False	School	2	3.5	1.5	True
 2018-05-04T15:58:18.574029	3.5	better	mobile doesn't look too bad, talked to some friends	leisure	6	False	School	3	2.5	1	True
-2018-05-06T01:18:20.091160	3	okay	had a big fight last night, spent the day recovering and relaxing	with k, leisure, eating	3	False	Kevin Home	3	1	3	True
-2018-05-06T18:38:32.443905	3.5	not bad	had some fun shooting hoops with k, but some asshole dad came and tried to strongarm us off the court. they only left after his asshole kid accidentally threw their ball at my head, without apologizing	leisure, with k	1	False	Kevin Home	3	0	2	True
-2018-05-06T20:00:09.067334	4	content	relaxing with k	leisure, with k	1	False	Kevin Home	3	0	2	True
-2018-05-06T21:08:13.997763	3	feel bad for k	he can't eat	with k, leisure	1	False	Kevin Home	3.5	0	2	False
-2018-05-06T23:15:22.227657	4	pretty good	playing snes with k	leisure, with k, email	3	False	Kevin Home	3	0	2.5	False
-2018-05-07T13:19:05.547353	3	leisurely	no more deadlines!	leisure	1	True	Kevin Home	3	0	1	False
+2018-05-06T01:18:20.091160	3	okay	had a big fight last night, spent the day recovering and relaxing	with k, leisure, eating	3	False	K Home	3	1	3	True
+2018-05-06T18:38:32.443905	3.5	not bad	had some fun shooting hoops with k, but some asshole dad came and tried to strongarm us off the court. they only left after his asshole kid accidentally threw their ball at my head, without apologizing	leisure, with k	1	False	K Home	3	0	2	True
+2018-05-06T20:00:09.067334	4	content	relaxing with k	leisure, with k	1	False	K Home	3	0	2	True
+2018-05-06T21:08:13.997763	3	feel bad for k	he can't eat	with k, leisure	1	False	K Home	3.5	0	2	False
+2018-05-06T23:15:22.227657	4	pretty good	playing snes with k	leisure, with k, email	3	False	K Home	3	0	2.5	False
+2018-05-07T13:19:05.547353	3	leisurely	no more deadlines!	leisure	1	True	K Home	3	0	1	False
 2018-05-07T20:25:28.842194	3.5	content	had dinner with k at nyonya, napped afterward, now working on ash QA	ASH stuff, with k	5	False	Home	3	0	1	True
 2018-05-07T22:33:20.416170	4	cheerful	watching john mulaney with k	leisure, with k	1	False	Home	3	0	1.5	False
 2018-05-08T12:45:10.996055	3	slightly annoyed	have had trouble sleeping since school ended	email, chatting	1	True	Home	3	0	1	False
@@ -189,7 +189,7 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-05-09T10:47:36.903023	3	a bit groggy	just woke up (at a reasonable time for once)	email, chatting	2	True	Home	3	0	2	False
 2018-05-09T11:49:07.654277	3	a little unfocussed and slow-moving	lazy	cooking, eating	0	True	Home	2	0.5	2.5	True
 2018-05-09T17:34:31.843994	3.5	cheerful but hungry	enjoyed talking to friends at ITP and watching thesis presentations, but i haven't eaten since breakfast so am very low on energy	leisure, with friends, chatting, therapy	5	False	School	3	1	3	False
-2018-05-10T12:11:45.387700	2.5	frazzled	woke up late again, just realized i was paying my old coned account	chatting, errands	2	True	Kevin Home	2	3	1	False
+2018-05-10T12:11:45.387700	2.5	frazzled	woke up late again, just realized i was paying my old coned account	chatting, errands	2	True	K Home	2	3	1	False
 2018-05-10T22:52:16.194205	3	cheerful but physically bad	k and i are sick; working through ML class	studying, with k	1	False	Home	2.5	0	5	True
 2018-05-13T11:41:29.872088	4.5	cheerful	dad finished the eeg board, installing firmware now	schoolwork, chatting	3	False	Parents Home	4	0	1	False
 2018-05-13T12:48:01.529380	3.5	a little frustrated	trying to troubleshoot with dad	schoolwork, with parents	3	False	Parents Home	3.5	0.5	1.5	True
@@ -218,7 +218,7 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-05-16T13:24:40.534133	3	fine	just questioning why I keep applying for work when I don't want it!!	leisure	0	True	Parents Home	3	1	1	True
 2018-05-16T14:26:26.893960	3.5	trying to concentrate	watching shiffman's livestream of the show, trying to congratulate everyone	leisure	7	False	Parents Home	3	1	1	False
 2018-05-16T15:32:28.799677	4	cheerful	watching the livestream and congratulating everyone	leisure, chatting	11	False	Parents Home	3	0	1	False
-2018-05-17T11:49:37.701940	3	lazy	don't want to go out	leisure	2	True	Kevin Home	2	0.5	1	False
+2018-05-17T11:49:37.701940	3	lazy	don't want to go out	leisure	2	True	K Home	2	0.5	1	False
 2018-05-17T22:45:53.683152	4	cheerful	reworking resume with k	errands, with k	1	False	Home	4	0	2	False
 2018-05-17T23:49:14.853957	4.5	happy	k help	errands, with k	1	False	Home	4	1	3	False
 2018-05-18T14:58:21.794635	2.5	sleepy, unmotivated, unfocussed	a little tired from my interview maybe	leisure	2	True	Home	3.5	0	3	False
@@ -226,11 +226,11 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-05-18T16:58:21.794635	3	somewhat more productive, hungry	finessed resume, haven't eaten lunch	work	0	True	Home	3	0	2	False
 2018-05-19T14:37:27.396735	4.5	content	cooked breakfast and watched one mississippi with k	leisure, eating, with k	2	False	Home	3	0	1	False
 2018-05-19T15:46:35.727195	4	content	planning CA with k	leisure, with k	2	False	Home	3	0	1.5	False
-2018-05-19T23:32:42.098260	4	content	ML course with k	schoolwork, with k	1	False	Kevin Home	3	0	3	True
-2018-05-20T00:59:20.862440	3.5	sleepy	it's late	leisure, with k	1	False	Kevin Home	3	0	5	False
-2018-05-20T22:37:54.017424	4	cheerful, lazy	had fun sunday with k	leisure, with k	1	False	Kevin Home	3	0	3	True
-2018-05-20T23:38:36.117814	3.5	lazy	it's late so am unmotivated to do anything	email, leisure, with k	2	False	Kevin Home	2	0	4	True
-2018-05-21T12:00:10.827483	3	still lazy	don't want to leave the house	email, chatting	2	True	Kevin Home	2	0	3	True
+2018-05-19T23:32:42.098260	4	content	ML course with k	schoolwork, with k	1	False	K Home	3	0	3	True
+2018-05-20T00:59:20.862440	3.5	sleepy	it's late	leisure, with k	1	False	K Home	3	0	5	False
+2018-05-20T22:37:54.017424	4	cheerful, lazy	had fun sunday with k	leisure, with k	1	False	K Home	3	0	3	True
+2018-05-20T23:38:36.117814	3.5	lazy	it's late so am unmotivated to do anything	email, leisure, with k	2	False	K Home	2	0	4	True
+2018-05-21T12:00:10.827483	3	still lazy	don't want to leave the house	email, chatting	2	True	K Home	2	0	3	True
 2018-05-21T14:48:05.444145	3.5	pretty good	enjoyed talking to people at school	leisure	5	True	Home	3	0	2.5	False
 2018-05-21T15:48:35.377086	3	neutral	just cleaning up	errands	0	True	Home	3	0	2.5	False
 2018-05-21T16:49:48.449736	3	fine	still cleaning up 	leisure, errands	1	True	Home	3	0	2	False
@@ -257,7 +257,7 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-05-24T16:46:03.133409	3	obsessed with map viz	wework thing was enough motivation to pick it back up	schoolwork	3	True	Home	4	1	3	False
 2018-05-24T17:47:01.866590	2.5	tired and hungry	have been focusing so hard on this stupid map that i haven't moved or eaten all day	schoolwork	3	True	Home	3.5	0.5	3.5	True
 2018-05-24T19:15:38.710480	2.5	moving slow	tired and hungry?	trying to leave apt	1	True	Home	3	1	3.5	True
-2018-05-25T12:42:11.681517	3	content	leisurely morning with k	schoolwork, with k	2	False	Kevin Home	3.5	0	2	False
+2018-05-25T12:42:11.681517	3	content	leisurely morning with k	schoolwork, with k	2	False	K Home	3.5	0	2	False
 2018-05-25T15:14:49.747166	3	neutral	home now, eating and getting ready to meet mo at school	schoolwork, leisure, errands	4	True	Home	3.5	0	1.5	False
 2018-05-25T17:28:34.368058	4	cheerful	at school	schoolwork, with friends	6	False	School	4	0	1	False
 2018-05-25T19:07:02.871688	3.5	cheerful but hungry	at school, haven't eaten for a while	schoolwork, email	4	False	School	3.5	9	1.5	False
@@ -265,9 +265,9 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-05-29T17:46:04.957384	3	lazy	procrastinating unpacking	errands, leisure	1	True	Home	2	0.5	2	True
 2018-05-29T18:48:16.198917	3	unfocused but completed my task	woke up early this morning?	errands	0	True	Home	2.5	0	3	True
 2018-05-29T19:49:07.174647	2.5	unfocused	wasting time	leisure	1	True	Home	2.5	0	3.5	False
-2018-05-29T23:20:17.800829	3.5	content	had a nice evening	leisure, with k	1	False	Kevin Home	2.5	0	3	True
-2018-05-30T11:52:55.641396	3	fine	annoyed with k but having nice chat with shaon	chatting, eating, email	1	True	Kevin Home	2.5	0	2	False
-2018-05-30T12:54:38.158752	3	neutral	getting ready to leave	leisure, feedly, chatting, errands	5	True	Kevin Home	3	0	1.5	True
+2018-05-29T23:20:17.800829	3.5	content	had a nice evening	leisure, with k	1	False	K Home	2.5	0	3	True
+2018-05-30T11:52:55.641396	3	fine	annoyed with k but having nice chat with shaon	chatting, eating, email	1	True	K Home	2.5	0	2	False
+2018-05-30T12:54:38.158752	3	neutral	getting ready to leave	leisure, feedly, chatting, errands	5	True	K Home	3	0	1.5	True
 2018-05-30T15:51:19.540609	4	cheerful	chatted with a bunch of classmates at school	schoolwork, with friends	9	False	School	4	0	1	False
 2018-05-30T16:54:24.213500	3.5	cold but focused	working on keylogger	schoolwork	4	False	School	4.5	0	1	False
 2018-05-30T18:04:02.667050	3.5	still cold but still focused	organizing research	schoolwork	3	False	School	4	0	1	True
@@ -367,7 +367,7 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-06-19T18:02:41.094567	3.5	motivated	ASH call 	ash stuff	4	True	vacation, mountain view	4	1	1.5	True
 2018-06-20T11:47:53.763922	3	distracted	stephen miller's phone number was published	leisure	1	True	vacation, mountain view	3	0	1.5	False
 2018-06-20T12:48:49.785712	2.5	guilty	watching SATC	leisure, tv	1	True	vacation, mountain view	2.5	0	1.5	False
-2018-06-20T13:50:30.074169	3	more focused	starting to work	schoolworrk	2	True	vacation, mountain view	3	0.5	1	False
+2018-06-20T13:50:30.074169	3	more focused	starting to work	schoolwork	2	True	vacation, mountain view	3	0.5	1	False
 2018-06-20T14:54:54.292349	3	content	had lunch and am watching SATC	leisure, tv, eating	1	True	vacation, mountain view	2.5	0	1.5	False
 2018-06-20T19:16:57.533568	3	fine	have been struggling with dataframes for forever	schoolwork	1	True	vacation, mountain view	3	1	2	True
 2018-06-20T20:18:05.896190	3	focused	working on viz/mozfest thing	schoolwork, leisure, tv	0	True	vacation, mountain view	3.5	1.5	2.5	True
@@ -422,13 +422,13 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-07-12T09:14:59.034279	3	pretty sleepy	just got up	errands, email	1	True	Home	2	1	4	False
 2018-07-12T22:59:10.826804	3.5	annoyed with k but otherwise content	had a nice date with casey, saw steve for his bday; annoyed with k for not talking to me	with friends, resting	4	True	Home	2.5	1	3.5	True
 2018-07-13T00:53:55.752439	3	tired physically and emotionally	staying up late talking to k about his problems	chatting	1	True	Home	1	3	4.5	True
-2018-07-14T19:55:17.330354	4.5	cheerful	had a productive argumenet with k using my fighting game ideas	leisure, resting, with k	1	False	Kevin Home	4	0	1	True
-2018-07-14T22:50:18.029098	4.5	content	cooked a nice dinner, having fun with k	eating, schoolwork, studying, with k	2	False	Kevin Home	4	0	2.5	True
-2018-07-14T23:50:46.271305	4	content, focused	working on fighting game	schoolwork, with k, studying	1	False	Kevin home	4	0	2.5	True
-2018-07-15T00:55:15.927585	3.5	content, sleepy	finished content for fighting game, k approved	errands, resting, with k	1	False	Kevin Home	3	0	4	False
-2018-07-15T13:12:28.806070	3	lazy	just had breakfast with k, work up late	cooking, eating, leisure, with k	1	False	Kevin Home	2	0	2	True
-2018-07-16T21:35:16.669721	4	cheerful	cooked dinner with k	cooking, eating, errands, leisure	1	False	Kevin Home	3	0	3	True
-2018-07-17T00:24:00.921498	3	loved, content, but exhausted	played the fighting game with k until late	studying, with k	2	False	Kevin Home	2	0	5	True
+2018-07-14T19:55:17.330354	4.5	cheerful	had a productive argumenet with k using my fighting game ideas	leisure, resting, with k	1	False	K Home	4	0	1	True
+2018-07-14T22:50:18.029098	4.5	content	cooked a nice dinner, having fun with k	eating, schoolwork, studying, with k	2	False	K Home	4	0	2.5	True
+2018-07-14T23:50:46.271305	4	content, focused	working on fighting game	schoolwork, with k, studying	1	False	K home	4	0	2.5	True
+2018-07-15T00:55:15.927585	3.5	content, sleepy	finished content for fighting game, k approved	errands, resting, with k	1	False	K Home	3	0	4	False
+2018-07-15T13:12:28.806070	3	lazy	just had breakfast with k, work up late	cooking, eating, leisure, with k	1	False	K Home	2	0	2	True
+2018-07-16T21:35:16.669721	4	cheerful	cooked dinner with k	cooking, eating, errands, leisure	1	False	K Home	3	0	3	True
+2018-07-17T00:24:00.921498	3	loved, content, but exhausted	played the fighting game with k until late	studying, with k	2	False	K Home	2	0	5	True
 2018-07-17T19:55:10.058460	2	tired, unfocused	heat, long day at work, watched SATC	leisure, tv	0	True	Home	2	0	4	True
 2018-07-17T21:16:14.022331	3.5	still tired but amused/motivated	during the ash call we decided to scrap the website and go squarespace	ash stuff	4	True	Home	3	1	3.5	True
 2018-07-17T22:23:40.908696	3	randomly motivated	just started a new MOOC to build the fighting game	studying	2	True	Home	4	1	3.5	True
@@ -450,9 +450,9 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-07-24T15:44:39.994635	2	tired, languishing again	still working on ash site	ash stuff	1	True	Home	2	2	3.5	True
 2018-07-25T12:46:18.452895	2.5	starving, focused	became too obsessed with fixing the ash site since I woke up and haven't eaten	ash stuff	1	True	Home	3.5	1	3	False
 2018-07-25T13:47:28.309243	3	a bit unfocused and sleepy	procrastinating on getting ready to go out, slept late last night	leisure, feedly	1	True	Home	2	0	3	True
-2018-07-25T18:05:29.073702	2.5	nervous, anxious	just told ash dev that we're using squarespace...	schoolwork, ash stuff, errands	2	True	Kevin Home	3	3	3.5	True
-2018-07-25T22:41:58.122484	4	cheerful, content	having a good evening with k	leisure, with k	2	False	Kevin Home	3	0.5	4	True
-2018-07-26T00:09:53.466154	3	sleepy and unfocused	didn't sleep enough last night, uninterested in doing any work, k is on his new laptop	leisure, feedlyy	1	False	Kevin Home	1	0	4.5	False
+2018-07-25T18:05:29.073702	2.5	nervous, anxious	just told ash dev that we're using squarespace...	schoolwork, ash stuff, errands	2	True	K Home	3	3	3.5	True
+2018-07-25T22:41:58.122484	4	cheerful, content	having a good evening with k	leisure, with k	2	False	K Home	3	0.5	4	True
+2018-07-26T00:09:53.466154	3	sleepy and unfocused	didn't sleep enough last night, uninterested in doing any work, k is on his new laptop	leisure, feedly	1	False	K Home	1	0	4.5	False
 2018-07-26T13:58:10.927110	2.5	betrayed, focused	k lied about stupid shit for no reason, working on my cbt app	schoolwork, eating	1	True	Home	3.5	1	2	True
 2018-07-26T14:58:39.997080	2.5	still focused	still working on my cbt app	schoolwork	1	True	Home	3.5	1	2	True
 2018-07-26T17:59:27.296668	3.5	cheerful	am on the floor for a bit and having fun	in class, with friends, schoolwork	2	False	School	4	0.5	2	False
@@ -464,18 +464,18 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-07-27T13:11:15.962907	3	focused, hopeful	have promising idea	eating, schoolwork	0	True	Home	3	0	2	True
 2018-07-27T15:11:15.962907	3	still focused	still working on CBT app	eating, schoolwork	1	True	Home	3.5	1	2.5	True
 2018-07-27T16:13:11.536474	2	despondent	k is pathologically insecure	schoolwork	0	True	Home	3	1	2.5	False
-2018-07-27T23:43:18.804575	3.5	focused	working on app while k naps	schoolwork, with k	3	False	Kevin Home	3.5	0	3	True
-2018-07-28T00:45:11.529657	4	cheerful, losing steam	k woke up and it's getting late, so can't do much else but relax :)	schoolwork, with k	1	False	Kevin Home	2.5	0	4	True
-2018-07-28T14:40:50.023199	3.5	content	had finished breakfast, working next to k	schoolwork, with k, leisure, eating	3	False	Kevin Home	3.5	0	2.5	False
-2018-07-29T14:08:38.500863	3.5	content	had a big breakfast with k, did errands, now working on cbt	eating, errands, schoolwork, with k	1	False	Kevin Home	4	0	3	True
+2018-07-27T23:43:18.804575	3.5	focused	working on app while k naps	schoolwork, with k	3	False	K Home	3.5	0	3	True
+2018-07-28T00:45:11.529657	4	cheerful, losing steam	k woke up and it's getting late, so can't do much else but relax :)	schoolwork, with k	1	False	K Home	2.5	0	4	True
+2018-07-28T14:40:50.023199	3.5	content	had finished breakfast, working next to k	schoolwork, with k, leisure, eating	3	False	K Home	3.5	0	2.5	False
+2018-07-29T14:08:38.500863	3.5	content	had a big breakfast with k, did errands, now working on cbt	eating, errands, schoolwork, with k	1	False	K Home	4	0	3	True
 2018-07-29T16:54:04.222837	4.5	excited	k and i are working in a beautiful new stumptown that opened near his apartment	schoolwork, leisure	2	False	cafe	4	0	1	True
 2018-07-29T17:54:39.712654	4	focused	finishing up app mockups	schoolwork, with k	2	False	cafe	4	0	1.5	True
-2018-07-29T21:26:55.047910	3	focused	working on poster	schoolwork, with k	2	False	Kevin Home	3.5	1	2	False
-2018-07-29T22:27:18.036060	3	still focused	still working on poster	schoolwork, with k	1	False	Kevin Home	3.5	1	2.5	False
-2018-07-29T23:59:18.238276	3.5	still focused	working on poster and eating watermelon with k	schoolwork, eating, with k	1	False	Kevin Home	3	1	3	True
-2018-07-30T12:13:44.520891	3	focused	working on application	schoolwork	0	True	Kevin Home	3	1	2.5	False
-2018-07-30T13:14:04.026621	3	still focused	still working on application	schoolwork	0	True	Kevin Home	3	2	3	True
-2018-07-30T14:57:00.587886	3.5	relieved	just submitted the application	schoolwork, email	1	True	Kevin HOme	3	0	3	False
+2018-07-29T21:26:55.047910	3	focused	working on poster	schoolwork, with k	2	False	K Home	3.5	1	2	False
+2018-07-29T22:27:18.036060	3	still focused	still working on poster	schoolwork, with k	1	False	K Home	3.5	1	2.5	False
+2018-07-29T23:59:18.238276	3.5	still focused	working on poster and eating watermelon with k	schoolwork, eating, with k	1	False	K Home	3	1	3	True
+2018-07-30T12:13:44.520891	3	focused	working on application	schoolwork	0	True	K Home	3	1	2.5	False
+2018-07-30T13:14:04.026621	3	still focused	still working on application	schoolwork	0	True	K Home	3	2	3	True
+2018-07-30T14:57:00.587886	3.5	relieved	just submitted the application	schoolwork, email	1	True	K HOme	3	0	3	False
 2018-07-30T19:50:45.662708	4	tired but happy	had a good dinner with isabella at our fav restaurant	eating, with friends	2	True	Home	3	0	3.5	True
 2018-07-30T21:00:02.547758	3	lazy	i guess i'm just tired from carrying around so much stuff from bk to chinatown to home	leisure, tv, feedly	0	True	Home	1.5	0	4	True
 2018-07-30T23:14:25.935937	2	annoyed	can't stop picking at my feet	leisure, tv, feedly	1	True	Home	1	0	4.5	True
@@ -489,13 +489,13 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-08-02T12:50:09.189406	2	numb or just desolate	broke up with k last night	leisure, tv	2	True	Home	1	1	3	True
 2018-08-02T14:06:31.754208	2.5	still numb but looking forward to plans with friends	chatting	leisure, tv, chatting	5	True	Home	2	1	3	True
 2018-08-02T15:16:49.778920	2	bummed and feeling guilty 	just finished the entire first season of SATC	leisure, tv	1	True	Home	1	1	3.5	True
-2018-08-02T16:57:20.440003	3.5	cheerfulish	played ping pong with mo at school	leisure, witith friends, schoolwork	2	False	School	2	1	3	False
+2018-08-02T16:57:20.440003	3.5	cheerfulish	played ping pong with mo at school	leisure, with friends, schoolwork	2	False	School	2	1	3	False
 2018-08-02T17:58:32.244100	2	i might be despairing a little bit	the break up	leisure, feedly	1	True	School	1	4	3.5	False
 2018-08-02T22:26:08.979966	4	loved and supported	lots of support from my friends today; dan and yina stuffed me with foodd tonight	leisure, tv	4	True	Home	2	1	4	True
 2018-08-02T23:33:00.473536	2.5	restless and guilty	binging on SATC again	leisure, tv	1	True	Home	1	1	4.5	True
 2018-08-03T12:21:47.070256	3	fine	taking care of some things online before i meet casey for a museum date	email, errands	4	True	Home	3	1	4	False
 2018-08-03T21:51:14.641815	1	lonely, fragile, overwhelmed	terrified by the loss of constant companionship. not sure how to be  alone anymore	leisure, tv, chatting	3	True	Home	0	5	3	True
-2018-08-03T22:54:34.693898	3	loved, supported, grateful	was feeling panicky so i contacted a few friends for advice. michelle called and we had a good chat, made plans	chattingg	5	True	Home	2	3	3.5	False
+2018-08-03T22:54:34.693898	3	loved, supported, grateful	was feeling panicky so i contacted a few friends for advice. michelle called and we had a good chat, made plans	chatting	5	True	Home	2	3	3.5	False
 2018-08-04T00:09:23.849942	3	content	planning some trips	leisure, tv, chatting	2	True	Home	2	2	4	True
 2018-08-04T01:13:10.811649	2	sleepy	staying up late again watching TV	leisure, tv	0	True	Home	2.5	1	5	True
 2018-08-04T12:39:47.849755	1.5	a little heartbroken	text from k this morning about returning my stuff	email, errands	2	True	Home	1	4	3	False
@@ -523,3 +523,14 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-08-07T21:36:14.970786	2	sad	reusing k's old code	schoolwork, meditation, working out	3	True	Parents Home	2.5	2	3	True
 2018-08-07T22:36:55.805994	3	focused	working on project	schoolwork, eating	2	False	Parents Home	3	1	3.5	True
 2018-08-07T23:54:21.538832	2.5	focused and sad	working on correlation stuff and missing him	schoolwork	0	False	Parents Home	3	2	4	False
+2018-08-08T00:56:16.615992	3	fine i guess	i seem to have snapped out of it for the most part	schoolwork	0	False	Parents Home	2	1	4.5	False
+2018-08-08T11:48:45.845549	3	more or less content	did some meditation and now back to work	eating, meditation, schoolwork	4	True	Parents Home	3	0	3	False
+2018-08-08T12:58:24.180055	3	focused	working on project	schoolwork	0	True	Parents Home	3.5	0	2.5	True
+2018-08-08T14:01:43.660395	3	still focused	still wrestling with pandas	schoolwork	1	True	Parents Home	3.5	1	2	True
+2018-08-08T15:59:16.490651	3.5	encouraged, empowered	had therapy session over google hangout	therapy	1	True	Parents Home	4	1	2	True
+2018-08-08T20:43:24.560360	2	a little empty, restless, and/or anxious	talking to my mom about plans, thinking about family makes me miss having a boyfriend	leisure	3	False	Parents Home	1.5	2.5	3	True
+2018-08-08T21:45:46.496490	2	still blah	watching tv to distract myself	leisure, tv	3	False	Parents Home	1	2	3.5	True
+2018-08-08T23:31:12.582192	2.5	frustrated but focused	working on proj again	schoolwork	3	False	Parents Home	2.5	1.5	4	True
+2018-08-09T00:32:40.848151	2	a bit annoyed	finally figured out the problem i was working on all day, abut the payoff was underwhelming	schoolwork	0	False	Parents Home	2	2	4.5	False
+2018-08-09T10:03:57.265661	3	focused	back to the project	schoolwork, email	0	True	Parents Home	3	0	3.5	False
+2018-08-09T11:44:39.889044	2	empty, stressed out	breakup and weird situation with donut dash and upstate trip	errands	3	True	Parents Home	1.5	3.5	2.5	True

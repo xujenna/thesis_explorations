@@ -1,4 +1,3 @@
-com.samsung.health.oxygen_saturation,5802009,7
 create_time,time_offset,custom,end_time,heart_rate,deviceuuid,start_time,pkg_name,update_time,datauuid,spo2,comment
 2018-06-10 20:51:33.378,UTC-0300,,2018-06-10 20:51:18.533,80.0,avnWu77KPA,2018-06-10 20:51:18.533,com.sec.android.app.shealth,2018-06-10 20:51:33.378,0247530a-1a86-4a18-ba04-b141e9cf3979,92.0,
 2018-05-25 23:10:57.332,UTC-0300,,2018-05-25 23:10:53.044,69.0,avnWu77KPA,2018-05-25 23:10:53.044,com.sec.android.app.shealth,2018-05-25 23:10:57.332,035523f8-8406-4de6-87e9-2ebd59a36992,100.0,

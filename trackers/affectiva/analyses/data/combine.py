@@ -15,19 +15,22 @@ for f in glob.glob("*.json"):
         attention_values = list(map(lambda x: x.get('attention',0), j))
         max_attenion = max(attention_values)
         min_attention = min(attention_values)
-        # avg_attention = sum(attention_values)/len(attention_values)
+        avg_attention = sum(attention_values)/len(attention_values)
+        range_results["avg_attention"] = avg_attention
         range_results["max_attention"] = max_attenion
         range_results["min_attention"] = min_attention
 
         valence_values = list(map(lambda x: x.get('valence',0), j))
         max_valence = max(valence_values)
         min_valence = min(valence_values)
-        # avg_attention = sum(attention_values)/len(attention_values)
+        avg_valence = sum(valence_values)/len(valence_values)
+        range_results["avg_valence"] = avg_valence
         range_results["max_valence"] = max_valence
         range_results["min_valence"] = min_valence
 
         engagement_values = list(map(lambda x: x.get('engagement',0), j))
-        # avg_engagement = sum(engagement_values)/len(engagement_values)
+        avg_engagement = sum(engagement_values)/len(engagement_values)
+        range_results["avg_engagement"] = avg_engagement
         max_engagement = max(engagement_values)
         min_engagement = min(engagement_values)
         range_results["max_engagement"] = max_engagement

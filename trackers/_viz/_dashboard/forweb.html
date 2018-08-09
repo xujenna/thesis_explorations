@@ -157,7 +157,7 @@
     /*background-color: silver;*/
     color: white;
     margin-bottom: 170px;
-    padding: 105px 0 0 0;
+    padding: 8% 0 0 0;
   }
 
   .hero-imgs {
@@ -180,19 +180,21 @@
   #intro-text {
     width:60%;
     margin:auto;
-    column-count: 3;
+    column-count: 2;
     column-gap: 30px;
     text-align: left;
     line-height: 22px;
+    margin-bottom:7%;
   }
 
+
   #hed h1 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-top: 0px;
   }
 
   #hed p {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 
   h1 {
@@ -201,7 +203,6 @@
     font-style: regular;
     font-weight: 400;
     margin-bottom: 25px;
-    line-height:100px;
     margin-top:25px;
   }
   h2 {
@@ -373,6 +374,33 @@
   border-width: 90%;
 }
 
+@media screen and (max-width: 1330px){
+  #intro-text {
+      margin:auto;
+      column-count: 1;
+      text-align: left;
+      line-height: 21px;
+  }
+
+  .description {
+    display:inline-block;
+    width:80%;
+    text-align: left;
+    margin-top: 30px;
+    padding-right: 60px;
+    vertical-align:top;
+  }
+
+  h1 {
+    font-size:40px;
+    font-family: fanwood, serif;
+    font-style: regular;
+    font-weight: 400;
+    margin-bottom: 25px;
+    margin-top:25px;
+  }
+
+}
   </style>
 
 
@@ -405,7 +433,7 @@
   <div id = "intro-text">
     This semester, I began work on a system of trackers for a whole host of potential/evidenced metrics of depression, in hopes of monitoring its cyclical nature and identifying correlations with my activity and environment. I was motivated to do this for three main reasons: 1) I have a terrible memory, which makes it difficult to accurately report necessary information in weekly therapy sessions, 2) I have a terrible memory, and therefore tend to be totally unaware of my long-term behavior, and 3) I'm slightly impulsive, and therefore tend to be totally unconcerned with the repercussions of my long-term behavior.<p>Ultimately, I hope to predict the onset of depression by feeding this data into a neural network, and perhaps even preempt it by teaching the NN to recommend/enforce interventions. As a preliminary exercise, I've trained a couple ML models to predict mood with only a month of data; <a href="http://www.xujenna.com/itp_blog/2018/05/02/final-pt-2-data-analysis/" target="new">see the documentation here</a>.</p><p>Below are visualizations of a week's worth of data collected by my <a href="http://www.xujenna.com/itp_blog/2018/04/26/final/" target="new">homemade python trackers</a>. The brush at the bottom of the page controls the time domain of all charts.</p>
   </div>
-    <br><br><br><br><p><h5>To begin, filter the data by date:</h5><span class="arrow"></span></p>
+ <p><h5>To begin, filter the data by date:</h5><span class="arrow"></span></p>
   </div>
   </div>
 
