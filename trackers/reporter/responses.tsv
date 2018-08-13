@@ -551,3 +551,7 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-08-11T14:26:10.235595	3.5	frustrated	can't figure out this ig thing	schoolwork, chatting, with friends	2	False	cafe	2.5	1	2	True
 2018-08-11T16:41:40.369084	3.5	still frustrated	gave up on ig thing and now datetime is giving me trouble again	schoolwork, with friends	2	False	Dawn Home	3	1.5	2	True
 2018-08-11T18:00:48.227264	3	focused	finally got my QualityTime data in jupter notebook	schoolwork, with friends	2	False	Dawn Home	3	2.5	3	False
+2018-08-12T14:46:24.055002	3.5	sleepy, unmotivated	not sure, big brunch?	eating, with friends	3	False	Dawn Home	1.5	0	3.5	False
+2018-08-12T15:47:37.436807	3.5	still sleepy but accomplished	got keystroke dynamics data into jupyter notebook	schoolwork, with friends	1	False	Dawn Home	3	0	3.5	False
+2018-08-12T17:04:16.941026	3.5	a little more alive	taking a break from work	leisure, feedly, with friends	3	False	Dawn Home	3	0	3	False
+2018-08-12T18:25:55.727144	4	accomplished	figured out how to compress the QualityTime data	schoolwork, with friends	2	False	Dawn Home	3.5	0	2.5	True
