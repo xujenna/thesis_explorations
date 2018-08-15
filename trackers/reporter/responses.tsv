@@ -555,3 +555,12 @@ time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue
 2018-08-12T15:47:37.436807	3.5	still sleepy but accomplished	got keystroke dynamics data into jupyter notebook	schoolwork, with friends	1	False	Dawn Home	3	0	3.5	False
 2018-08-12T17:04:16.941026	3.5	a little more alive	taking a break from work	leisure, feedly, with friends	3	False	Dawn Home	3	0	3	False
 2018-08-12T18:25:55.727144	4	accomplished	figured out how to compress the QualityTime data	schoolwork, with friends	2	False	Dawn Home	3.5	0	2.5	True
+2018-08-13T22:58:26.940486	3.5	tired	long day of travel	leisure, tv, with friends	1	False	Maryl Home	2	0	4.5	True
+2018-08-14T10:34:52.441047	3	groggy	slept too much or something	email, leisure, feedly	2	True	Maryl Home	2.5	0	3	True
+2018-08-14T11:43:44.703006	3.5	still groggy but cheerful	just doing some work with Maryl	Errands, with friends	2	False	Maryl Home	3	0	3.5	False
+2018-08-14T12:46:55.271155	4	content	good convos with maryl	errands, with friends	1	False	Maryl Home	3	0	3	True
+2018-08-14T16:07:18.019189	3.5	content	just took a nap	leisure, feedly	1	True	Maryl Home	3	0	2.5	False
+2018-08-14T17:11:18.303898	3	focused	working on corr again	schoolwork	2	True	Maryl Home	3.5	0	2	False
+2018-08-14T21:41:40.642220	2.5	sleepy and bummed out	all this codependency talk makes me sad	eating, with friends, leisure	1	False	Maryl Home	2.5	0	3.5	False
+2018-08-14T23:44:26.872516	1.5	sad	probably talked too much about him today	leisure, tv	0	False	Maryl Home	1	1	4	True
+2018-08-15T00:48:36.345665	2.5	focused	working on corr stuff again	schoolwork	0	False	Maryl Home	3	0	4	True
