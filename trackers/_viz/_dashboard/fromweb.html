@@ -374,7 +374,7 @@
   border-width: 90%;
 }
 
-@media screen and (max-width: 1330px){
+@media screen and (max-width: 1393px){
   #intro-text {
       margin:auto;
       column-count: 1;
@@ -494,14 +494,14 @@
 </div>
 
 <div id="footer">
-  A project by <a href="http://www.xujenna.com" target="new">Jenna Xu</a>, created during the Spring 2018 semester at ITP. Featured in Mozilla's <a href="https://foundation.mozilla.org/opportunity/artists-open-web/" target="new"><i>Artists Open Web</i></a>. Special thanks to <a href="https://www.quora.com/profile/Kevin-Lin" target="new">Kevin Lin</a> for being a genius.</div>
+  A project by <a href="http://www.xujenna.com" target="new">Jenna Xu</a>, created during the Spring 2018 semester at ITP. Featured in Mozilla's <a href="https://foundation.mozilla.org/opportunity/artists-open-web/" target="new"><i>Artists Open Web</i></a> and <a href="https://mozillafestival.org/" target="new">Mozfest 2018</a>. Special thanks to <a href="https://www.quora.com/profile/Kevin-Lin" target="new">Kevin Lin</a> for being a genius.</div>
 <script>
 
 
 var margin = {top: 50, right: 30, bottom: 50, left: 50};
 var margin2 = {top: 5, right:30, bottom:20, left:50};
 
-var width = 1000 - margin.left - margin.right,
+var width = 1050 - margin.left - margin.right,
 height = 500 - margin.top - margin.bottom;
 
 var height2 = 80 - margin2.top - margin2.bottom;
@@ -1683,10 +1683,10 @@ d3.tsv("mergedDF.tsv", function(err, data) {
 var correlationSVG = d3.select("#correlations")
       .attr("width", width + margin.left + margin.right)
 
-  attributes = ["All", "mood", "social", "alone", "morale", "stress", "fatigue", "compulsions", "tv_activity", "chatting_activity", "in_class_activity", "schoolwork_activity", "feedly_activity", "with_friends_activity", "leisure_activity", "vacation_location", "home_location", "school_location", "Sadness_score", "Analytical_score", "Joy_score", "Fear_score", "Tentative_score", "Anger_score", "Confident_score", "avg_attention", "avg_engagement", "avg_valence", "blinks","productivity_score", "current_tabCount", "current_windowCount", "tabs_activated", "tabs_created", "windows_created", "calorie", "distance", "mean_speed"]
+  attributes = ["All", "mood", "social", "alone", "morale", "stress", "fatigue", "compulsions", "with_friends_activity", "schoolwork_activity", "feedly_activity", "tv_activity", "home_location", "vacation_location", "school_location", "Sadness_score", "Joy_score", "Fear_score", "Tentative_score", "Anger_score", "Confident_score", "word_count", "uniqueword_count", "char_count", "backspace_count", "avg_dwelltime", "avg_flighttime", "avg_attention", "avg_engagement", "avg_valence", "blinks", "productivity_score", "current_tabCount", "current_windowCount", "tabs_activated", "tabs_created", "windows_created", "phone_unlocks", "phone_use_secs"]
 
 
-  attribute_descriptions = {All: "All variables", mood: "Mood Reporter data on scale of 0-5", social: "Mood Reporter data on number of social interactions", alone: "Mood Reporter data (T/F)", morale: "Mood Reporter data on scale of 0-5", stress: "Mood Reporter data on scale of 0-5", fatigue: "Mood Reporter data on scale of 0-5", compulsions: "Mood Reporter data on compulsions (T/F)", tv_activity: "Mood reporter data on time spent watching TV (T/F)", chatting_activity: "Mood Reporter data on time spent chatting (T/F)", in_class_activity: "Mood Reporter data on time spent in class (T/F)", schoolwork_activity: "Mood Reporter data on time spent on schoolwork (T/F)", feedly_activity: "Mood Reporter data on usage of Feedly (T/F)", with_friends_activity: "Mood Reporter data on time with friends (T/F)", leisure_activity: "Mood Reporter data on leisure time (T/F)", vacation_location: "Mood Reporter data on time spent on vacation (T/F)", home_location: "Mood Reporter data on time spent at home (T/F)", school_location: "Mood Reporter data on time spent at school (T/F)", productivity_score: "Productivity_score, calculated by the RescueTime App on scale of 0-100%", blinks: "Count per minute, calculated with Facial Analysis data", Sadness_score: "Sentiment analysis score from Keylogger data", Joy_score: "Sentiment analysis score from Keylogger data", Tentative_score: "Sentiment analysis score from Keylogger data", Confident_score: "Sentiment analysis score from Keylogger data", Analytical_score: "Sentiment analysis score from Keylogger data", Fear_score: "Sentiment analysis score from Keylogger data", Anger_score: "Sentiment analysis score from Keylogger data", avg_attention: "Average attention score calculated from one minute of Facial Analysis data", avg_valence: "Average valence score calculated from one minute of Facial Analysis data", current_tabCount: "Browser Activity Tracker count of tabs open", current_windowCount: "Browser Activity Tracker count of windows open", tabs_activated: "Browser Activity Tracker count of tabs activated over an hour", tabs_created: "Browser Activity Tracker count of tabs created over an hour", windows_created: "Browser Activity Tracker count of windows created over an hour", calorie: "Samsung Health App data on amount of calories burned in an hour", distance: "Samsung Health App data on distance travelled in an hour", mean_speed: "Samsung Health App data on average speed traveled in an hour"}
+  attribute_descriptions = {All: "All variables", mood: "Mood Reporter data on scale of 0-5", social: "Mood Reporter data on number of social interactions", alone: "Mood Reporter data (T/F)", morale: "Mood Reporter data on scale of 0-5", stress: "Mood Reporter data on scale of 0-5", fatigue: "Mood Reporter data on scale of 0-5", compulsions: "Mood Reporter data on compulsions (T/F)", tv_activity: "Mood reporter data on time spent watching TV (T/F)", schoolwork_activity: "Mood Reporter data on time spent on schoolwork (T/F)", feedly_activity: "Mood Reporter data on usage of Feedly (T/F)", with_friends_activity: "Mood Reporter data on time with friends (T/F)", vacation_location: "Mood Reporter data on time spent on vacation (T/F)", home_location: "Mood Reporter data on time spent at home (T/F)", school_location: "Mood Reporter data on time spent at school (T/F)", productivity_score: "Productivity_score, calculated by the RescueTime App on scale of 0-100%", blinks: "Count per minute, calculated with Facial Analysis data", Sadness_score: "Sentiment analysis score from Keylogger data", Joy_score: "Sentiment analysis score from Keylogger data", Tentative_score: "Sentiment analysis score from Keylogger data", Confident_score: "Sentiment analysis score from Keylogger data", Fear_score: "Sentiment analysis score from Keylogger data", Anger_score: "Sentiment analysis score from Keylogger data", word_count: "Keylogger data on number of words typed per hour", uniqueword_count: "Keylogger data on number of unique words typed per hour", char_count: "Keylogger data on number of characters typed per hour", backspace_count: "Keylogger data on number of backspaces typed per hour", avg_dwelltime: "Keylogger data on hourly average keypress duration", avg_flighttime: "Keylogger data on hourly average duration between keystrokes", avg_attention: "Average attention score calculated from one minute of Facial Analysis data", avg_valence: "Average valence score calculated from one minute of Facial Analysis data", current_tabCount: "Browser Activity Tracker count of tabs open", current_windowCount: "Browser Activity Tracker count of windows open", tabs_activated: "Browser Activity Tracker count of tabs activated over an hour", tabs_created: "Browser Activity Tracker count of tabs created over an hour", windows_created: "Browser Activity Tracker count of windows created over an hour", phone_unlocks: "QualityTime App data on numbers of phone unlocks per hour", phone_use_secs: "QualityTime App data on time spent on phone per hour (in seconds)"}
     
 
   d3.select("#selection1").selectAll("options")
@@ -1819,13 +1819,13 @@ attributeSet.clear()
 
 
 if(newMatrix.length > 300) {
-  var containerWidth = width/38.5;
-  var containerHeight = width/38.5;
-  var chartHeight = width/41.5;
-  var chartWidth = width/41.5;
-  var rowLength = 37;
-  margin.left += 37;
-  margin.top +=37;
+  var containerWidth = width/39;
+  var containerHeight = width/39;
+  var chartHeight = width/42;
+  var chartWidth = width/42;
+  var rowLength = 38;
+  margin.left += 38;
+  margin.top +=38;
 }
 else if(newMatrix.length < 300 && newMatrix.length > 2){
   var containerWidth = width/4.75;
@@ -2006,7 +2006,7 @@ correlationSVG.selectAll("g").each(function(pair,i){
         .style("text-anchor", "end")
         .text(pair.a.toUpperCase())
       }
-      else if(i < 37){
+      else if(i < rowLength){
         d3.select(this).append("text")
         .attr("class", "matrix-label")
         .attr("x", 10)
@@ -2014,7 +2014,7 @@ correlationSVG.selectAll("g").each(function(pair,i){
         .attr("fill", "black")
         .text(pair.b.toUpperCase())  
       }
-      else if(i%37 == 0){
+      else if(i%rowLength == 0){
         d3.select(this).append("text")
         .attr("class", "matrix-label")
         .attr("x", -10)
