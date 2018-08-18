@@ -153,6 +153,7 @@ def analyser():
 	with open('logs/log.txt') as log_txt:
 		tone = tone_analyzer.tone(log_txt.read(), content_type="text/plain;charset=utf-8")
 		tone["time"] = timestamp
+		tone["unix_time"] = dateTimeNum
 		tone["word_count"] = wordcount
 		tone["uniqueword_count"] = len(unique_words)
 		tone["char_count"] = charcount

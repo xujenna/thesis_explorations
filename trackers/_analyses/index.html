@@ -62,13 +62,11 @@ body {
 d3.tsv("mergedDF.tsv", small_scatterplots);
 
 var margin = {top: 20, right: 20, left:30, bottom: 20}
-d3.select("body").append("svg").attr("height", 2400 + margin.top + margin.bottom).attr("width", 2400 + margin.left + margin.right)
+d3.select("body").append("svg").attr("height", 4400 + margin.top + margin.bottom).attr("width", 4400 + margin.left + margin.right)
 
 function small_scatterplots(data) {
 
-  // attributes = d3.keys(data[0])
-  // attributes = ["mood", "social", "alone", "morale", "stress", "fatigue", "compulsions", "leisure_activity", "feedly_activity", "with_friends_activity", "errands_activity", "ash_stuff_activity", "chatting_activity", "with_k_activity", "in_class_activity", "therapy_activity", "home_location", "school_location", "kevin_home_location", "Sadness_score", "Analytical_score", "Joy_score", "Fear_score", "Tentative_score", "Anger_score", "Confident_score", "blinks", "max_attention", "max_valence", "productivity_score"]
-    attributes = ["mood", "social", "morale", "stress", "fatigue", "compulsions", "productivity_score", "blinks", "Sadness_score", "Joy_score", "Tentative_score", "Confident_score", "min_attention", "min_valence", "feedly_activity", "with_k_activity", "with_friends_activity"]
+    attributes = ["mood", "social", "alone", "morale", "stress", "fatigue", "compulsions", "studying_activity", "eating_activity", "ash_stuff_activity", "with_friends_activity", "working_activity", "working_out_activity", "shopping_activity", "meditation_activity", "schoolwork_activity", "therapy_activity", "in_class_activity", "chatting_activity", "resting_activity", "reading_activity", "with_parents_activity", "feedly_activity", "tv_activity", "errands_activity", "leisure_activity", "work_activity", "email_activity", "home_location", "vacation_location", "cafe_location", "parents_home_location", "friend_home_location", "school_location", "library_location", "Sadness_score", "Analytical_score", "Joy_score", "Fear_score", "Tentative_score", "Anger_score", "Confident_score", "word_count", "uniqueword_count", "char_count", "backspace_count", "avg_dwelltime", "avg_flighttime", "avg_attention", "avg_engagement", "avg_valence", "blinks", "productivity_score", "current_tabCount", "current_windowCount", "tabs_activated", "tabs_created", "windows_created", "phone_unlocks", "phone_use_in_secs"]
     
   attributeMatrix = [];
 

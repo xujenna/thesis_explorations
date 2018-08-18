@@ -25,7 +25,7 @@ while True:
     compulsions = input("Compulsion (True/False): ")
     dateTimeNum = datetime.datetime.now().timestamp()
     timestamp = datetime.datetime.fromtimestamp(dateTimeNum).isoformat()
-    response = [timestamp, mood, moodNotes, trigger, activity, social, alone, location, morale, stress, fatigue, compulsions]
+    response = [timestamp, dateTimeNum, mood, moodNotes, trigger, activity, social, alone, location, morale, stress, fatigue, compulsions]
 
     writeToCSV(response)
     print("\nRecorded responses at " + timestamp + "\n")
