@@ -35,14 +35,14 @@ while True:
     entry = input("I'm grateful for ")
 
     dateTimeNum = datetime.datetime.now().timestamp()
-    timestamp = datetime.datetime.fromtimestamp(dateTimeNum).isoformat()
+    # timestamp = datetime.datetime.fromtimestamp(dateTimeNum).isoformat()
     date = datetime.datetime.fromtimestamp(dateTimeNum).date().isoformat()
 
     response = {}
     response['date'] = date
     response['gratitude_entries'] = []
     response['gratitude_entries'].append({
-        'timestamp': timestamp,
+        'timestamp': dateTimeNum,
         'entry': entry
         })
 

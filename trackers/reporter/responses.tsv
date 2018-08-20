@@ -578,3 +578,16 @@ time	unix_time	mood	moodNotes	trigger	activity	social	alone	location	morale	stre
 2018-08-17T12:25:38.990113	0	4	cheerful	talking to maryl	errands, with friends	1	False	Friend Home	3	0	2	True
 2018-08-17T14:00:43.051302	0	2	resentful, hurt	got a text this morning from k about my stuff	errands, leisure, tv	1	True	Friend Home	2	3	1.5	True
 2018-08-17T22:33:46.120058	0	2.5	panicking	just realized i fucked up the timestamps for my trackers	schoolwork	2	False	airport	2.5	4.5	2	False
+2018-08-18T12:04:24.768624	1534615464.768624	3	groggy	took a redeye back to ny, just woke up	email, chatting	3	True	Home	3	1	2	False
+2018-08-18T21:37:46.655454	1534642666.655454	4.5	happy, excited	had a great day at the beach with lauren and sandy, excited about the year to come	leisure, with friends	2	True	Home	3.5	0	2	False
+2018-08-18T23:06:46.853323	1534648006.853323	3	content	watching a MOOC video	studying, leisure	1	True	Home	3	0	3	True
+2018-08-19T00:08:10.516437	1534651690.516437	2	sleepy, a little lonely	trying to stay busy	schoolwork, leisure	2	True	Home	2.5	0	4	True
+2018-08-19T01:12:26.703379	1534655546.703379	2.5	fine i guess	just watched an episode of SATC	leisure, tv	1	True	Home	2	0	4.5	True
+2018-08-19T13:58:25.180659	1534701505.180659	3	pretty good	chatting and planning the day	leisure, chatting	5	True	Home	3	0.5	3	False
+2018-08-19T19:49:08.673179	1534722548.673179	3	good but tired	went to park slope to hang out with jody and iris	leisure, with friends, errands	2	True	Home	2	0	4	True
+2018-08-19T20:50:07.186185	1534726207.186185	2.5	lazy	watching SATC	leisure, tv	0	True	Home	2	0	4	True
+2018-08-19T21:53:52.731291	1534730032.731291	2.5	a little restless	not doing anything in particular	leisure, feedly, errands	0	True	Home	2.5	0	3.5	True
+2018-08-19T22:55:53.072263	1534733753.072263	4	excited	looking forward to socializing this semester; shroom weekend; barak and gunvor said they might join me in london for mozfest!	leisure, chatting, errands	9	True	Home	3	0	3	True
+2018-08-20T10:41:36.414756	1534776096.414756	3	groggy	just waking up	email, chatting	6	True	Home	3	0	3.5	False
+2018-08-20T11:43:30.699944	1534779810.699944	3	pretty okay, considering i have to see k today	figuring out this datetime conversion stuff	schoolwork, chatting	3	True	Home	3	1	3	False
+2018-08-20T16:00:49.206203	1534795249.206203	4	refreshed and optimistic	i may have just let go of my resentment and forgiven k; i know i'm fine	schoolwork, leisure, tv	2	True	Home	3.5	0	2	True
