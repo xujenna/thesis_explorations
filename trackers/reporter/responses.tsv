@@ -592,3 +592,11 @@ time	unix_time	mood	moodNotes	trigger	activity	social	alone	location	morale	stre
 2018-08-20T11:43:30.699944	1534779810.699944	3	pretty okay, considering i have to see k today	figuring out this datetime conversion stuff	schoolwork, chatting	3	True	Home	3	1	3	False
 2018-08-20T16:00:49.206203	1534795249.206203	4	refreshed and optimistic	i may have just let go of my resentment and forgiven k; i know i'm fine	schoolwork, leisure, tv	2	True	Home	3.5	0	2	True
 2018-08-20T17:01:37.146449	1534798897.146449	3.5	focused	working on timezone conversions	schoolwork	1	True	Home	3.5	0	1.5	False
+2018-08-20T18:02:47.095548	1534802567.095548	3	a little frantic	running around getting ready to leave	eating, schoolwork	1	True	Home	3	2	1.5	False
+2018-08-20T23:17:08.648662	1534821428.648662	3.5	fine	just watching SATC	leisure, tv, with friends	2	True	Home	2.5	0	2.5	True
+2018-08-21T00:38:33.259379	1534826313.259379	3	focused	working on timezones again	schoolwork	1	True	Home	3	0	3	True
+2018-08-21T01:47:02.423039	1534830422.423039	3	still focused, missing him a little	still working on timezones	schoolwork	1	True	Home	3	0	3.5	True
+2018-08-21T12:26:24.284688	1534868784.284688	3.5	cheerful	it's a beautiful day today and i can feel autumn in the air	email	0	True	Home	3.5	0	2	False
+2018-08-21T13:30:44.778319	1534872644.778319	3	hungry	haven't eaten, getting ready to leave	errands	1	True	Home	3	1	2	False
+2018-08-21T15:40:17.288879	1534880417.288879	4	cheerful	hanging out and working at school	schoolwork, with friends	4	False	School	3	0	1.5	True
+2018-08-21T16:43:14.919880	1534884194.91988	4	accomplished	finally done converting time zones in data	schoolwork, with friends	1	False	School	4	0	2	False
