@@ -600,3 +600,7 @@ time	unix_time	mood	moodNotes	trigger	activity	social	alone	location	morale	stre
 2018-08-21T13:30:44.778319	1534872644.778319	3	hungry	haven't eaten, getting ready to leave	errands	1	True	Home	3	1	2	False
 2018-08-21T15:40:17.288879	1534880417.288879	4	cheerful	hanging out and working at school	schoolwork, with friends	4	False	School	3	0	1.5	True
 2018-08-21T16:43:14.919880	1534884194.91988	4	accomplished	finally done converting time zones in data	schoolwork, with friends	1	False	School	4	0	2	False
+2018-08-21T21:25:15.163107	1534901115.163107	4.5	happy	had a nice dinner date with casey; nice day with friends	leisure, with friends, eating	1	True	Home	3	0	3	False
+2018-08-21T22:28:49.482395	1534904929.482395	3.5	content but lazy	watching SATC	leisure, tv	0	True	Home	2.5	0	3.5	True
+2018-08-22T12:44:42.270661	1534956282.270661	3	tired	just got to school	errands	2	False	School	3	0	2.5	True
+2018-08-22T18:58:17.018268	1534978697.018268	4	physically tired but cheerful	back at school after yoga	working out, with friends, email	4	False	School	3	0	3	True

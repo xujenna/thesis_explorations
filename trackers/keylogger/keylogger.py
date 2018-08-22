@@ -7,6 +7,7 @@ import json
 from watson_developer_cloud import ToneAnalyzerV3
 import time
 import threading
+from watson_developer_cloud import WatsonApiException
 
 newKeys = ""
 log = []
@@ -151,11 +152,24 @@ def analyser():
 			text.write(elem + '. ')
 
 	with open('logs/log.txt') as log_txt:
-		tone = tone_analyzer.tone(log_txt.read(), content_type="text/plain;charset=utf-8")
+		# tone = tone_analyzer.tone(log_txt.read(), content_type="text/plain;charset=utf-8")
+		success = False
+
+		while success is False:
+			try:
+				tone = tone_analyzer.tone(log_txt.read(), content_type="text/plain;charset=utf-8")
+				# if WatsonApiException.code() == 200:
+				success = True
+			except WatsonApiException as ex:
+				success = False
+				print(str(ex.code))
+				time.sleep(5)
+
 		tone["time"] = timestamp
 		tone["unix_time"] = dateTimeNum
 		tone["word_count"] = wordcount
 		tone["uniqueword_count"] = len(unique_words)
+		tone["uniqueword_ratio"] = len(unique_words) / wordcount
 		tone["char_count"] = charcount
 		tone["backspace_count"] = backspaceCount
 		tone["avg_dwelltime"] = sum(dwellTimes) / len(dwellTimes)
@@ -194,7 +208,7 @@ def keylogger():
 def analyser_every_hour():
     while True:
         global log
-        time.sleep(3600)
+        # time.sleep(3600)
         if (len(log) > 1):
             analyser()
         else:
