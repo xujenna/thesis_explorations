@@ -162,7 +162,9 @@ def analyser():
 				success = True
 			except WatsonApiException as ex:
 				success = False
+				print("ERROR NUMBER:")
 				print(str(ex.code))
+				print("RETRYING...")
 				time.sleep(5)
 
 		tone["time"] = timestamp
