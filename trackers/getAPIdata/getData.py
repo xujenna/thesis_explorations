@@ -8,15 +8,36 @@ import datetime
 def checkProductivity():
     dt = datetime.datetime.now()
     currentDate = str(dt.year) + "-" + str(dt.month) + "-" + str(dt.day)
-    url = "https://www.rescuetime.com/anapi/data?key=B63X_PtvpSERKQwozOFH_6oXpXwlXTcWh3c3OxfE&perspective=interval&restrict_kind=efficiency&interval=hour&restrict_begin=2018-03-01&restrict_end=" + currentDate + "&format=json"
+    url = "https://www.rescuetime.com/anapi/data?key=B63X_PtvpSERKQwozOFH_6oXpXwlXTcWh3c3OxfE&perspective=interval&restrict_kind=efficiency&interval=hour&restrict_begin=" + currentDate + "&restrict_end=" + currentDate + "&format=json"
+    
     # get updated json from rescue time
-    r = requests.get(url=url)
 
-    data = r.json()
+    success = False
+    global r
+    global data
+
+    while success is False:
+        try:
+            r = requests.get(url=url)
+            data = r.json()
+            success = True
+        except Exception as e:
+            print("Error:")
+            print(e)
+            time.sleep(10)
+            print("retrying...")
 
     #save json to file
+
+    newData = data['rows'][-1]
+    print(newData)
+
+    with open('productivity.json', 'r') as f:
+        allData = json.load(f)
+
     with open('productivity.json', 'w') as f:
-        json.dump(data, f, indent=4, sort_keys=True)
+        allData['rows'].append(newData)
+        json.dump(allData, f, indent=4, sort_keys=True)
 
     # isolate "Efficiency (percent)" value of last array: rows > index number (by hour) > 4
     rows = data['rows']
