@@ -164,8 +164,9 @@ def analyser():
 				success = False
 				print("ERROR NUMBER:")
 				print(str(ex.code))
+				print(str(ex.message))
 				print("RETRYING...")
-				time.sleep(5)
+				time.sleep(30)
 
 		tone["time"] = timestamp
 		tone["unix_time"] = dateTimeNum
