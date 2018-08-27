@@ -612,14 +612,22 @@ contextChart.append("g")
     .call(brush)
     .call(brush.move, xScale.range());
 
-contextChart.append("path")
-  .attr("d", moodLine2(newResponses))
-  .attr("stroke", "black")
-  .attr("stroke-width", 2)
-  .attr("fill", "none")
-  .attr("class", "line");
+// contextChart.append("path")
+//   .attr("d", moodLine2(newResponses))
+//   .attr("stroke", "black")
+//   .attr("stroke-width", 2)
+//   .attr("fill", "none")
+//   .attr("class", "line");
 
-
+contextChart.selectAll(".mood-bars")
+  .data(newResponses)
+  .enter().append("rect")
+  .attr("class", "mood-bars")
+  .style("fill", "grey")
+  .attr("x", function(d) {return xScale2(d.time)})
+  .attr("width", "5px")
+  .attr("y", function(d) {return yScale2(d.mood)})
+  .attr("height", function(d) {return height2 - yScale2(d.mood)})
 
 
   var reporterTip = d3.tip()
