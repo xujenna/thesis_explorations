@@ -1435,7 +1435,8 @@ var yAxisTabCounter = d3.axisLeft(yScaleTabCounter).tickSize(-width).ticks(4).ti
 
 
 var tabLine = d3.line()
-.defined(function(d){return dataset[d].current_tabCount!=null})
+.defined(function(d){return (dataset[d].current_tabCount!==null) && (dataset[d].tabs_activated > 0 || dataset[d].tabs_created > 0)
+})
   .x(function(d) {return xScale(dataset[d].timestamp);})
   .y(function(d){return yScaleTabCounter(dataset[d].current_tabCount);});
 
@@ -1510,8 +1511,9 @@ for(var key in dataset){
     keyLookup.push(key);
 }
 
-
-// console.log(dataset)
+keyLookup.sort(function(a,b){
+  return a - b;
+})
 
   var yMax = d3.extent(keyLookup, function(d) {return dataset[d].tabs_activated;})[1];
   yScaleTabCounter.domain([0,yMax]);
@@ -1624,7 +1626,7 @@ tabCounterChart.selectAll(".tabCircle")
   .append("circle")
   .attr("class","tabCircle")
   .attr("cx", function(d) {return xScale(dataset[d].timestamp)})
-  .attr("r", function(d) {return dataset[d].current_tabCount == null ? 0 : 3; })
+  .attr("r", function(d) {return (dataset[d].current_tabCount == null || dataset[d].tabs_activated == 0) ? 0 : 3; })
   .attr("cy", function(d) { return yScaleTabCounter(dataset[d].current_tabCount);})
   .attr("opacity", 0.7)
   .attr("fill", "magenta");

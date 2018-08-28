@@ -630,3 +630,11 @@ time	unix_time	mood	moodNotes	trigger	activity	social	alone	location	morale	stre
 2018-08-27T14:44:48.802106	1535395488.802106	3	a little more alive	starting to do work	schoolwork	2	True	Home	3	1	3	True
 2018-08-27T16:10:52.826640	1535400652.82664	3	focused	working on viz	schoolwork	1	True	Home	3	0	2.5	True
 2018-08-27T17:15:59.831152	1535404559.831152	2.5	lazy	physically tired from illness	schoolwork, leisure, tv	0	True	Home	2	0	3	True
+2018-08-27T18:17:23.200701	1535408243.200701	3	better	food, rest	leisure, tv, eating, schoolwork	0	True	Home	3	0	2.5	True
+2018-08-27T19:27:29.184676	1535412449.184676	2.5	restless	don't want to work	schoolwork	0	True	Home	2.5	1	2	True
+2018-08-27T21:27:21.064931	1535419641.064931	3	focused	working on dashboard	schoolwork	0	True	Home	3	0	2.5	True
+2018-08-27T22:28:40.980436	1535423320.980436	3	still focused	still working on dashboard	schoolwork	0	True	Home	3	1	3	True
+2018-08-28T00:05:23.770702	1535429123.770702	2.5	lazy	taking a break from work to watch tv	leisure, tv	0	True	Home	2	0	3.5	True
+2018-08-28T01:35:37.286804	1535434537.286804	2.5	tired, frustrated	it's late and i can't figure out this tabcounter viz	schoolwork	0	True	Home	2.5	0	4	True
+2018-08-28T11:21:49.012380	1535469709.01238	3	neutral	recovering from illness	schoolwork	0	True	Home	3	1	2.5	True
+2018-08-28T14:08:47.854307	1535479727.854307	3	focused, a little weak	still recovering from illness but also a little hungry	schoolwork	3	False	School	3	0	3	True

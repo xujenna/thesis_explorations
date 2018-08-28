@@ -215,8 +215,8 @@
     width:100%;
     position: fixed;
     bottom:0%;
-    padding-bottom:6px;
-    padding-top: 16px;
+    padding-bottom:16px;
+    padding-top: 20px;
     background-color: white;
     margin-bottom:0;
     margin-left:0;
@@ -295,6 +295,11 @@
     color:white;
   }
 
+.selection {
+  fill: orangered;
+  stroke-width:1.5;
+  stroke:orangered;
+}
 
   </style>
 
@@ -320,8 +325,8 @@
   </div>
   </div>
   <div class="container" id="context-container">
-    <div class="description" id="context-description"></div>
-    <svg id="context"></svg>
+<!--     <div class="description" id="context-description"></div>
+ -->    <svg id="context"></svg>
   </div>
 
   <div class="container" id="reporter-container">
@@ -350,7 +355,7 @@
     This tracker is a Chrome Extension, and counts the number of tabs as they're <span style="color:rgb( 0, 255, 127)"><b>created</b></span> and <span style="color:rgb(245, 205, 0)"><b>activated</b></span>, as well as the final, hourly count of <span style="color:rgb(255, 0, 255)"><b>tabs</b></span> and <span style="color:rgb(0, 0, 225)"><b>windows</b></span> left open. I wanted to track my browser activity because I've noticed a relationship between all of these variables and my motivation and stress levels. I'm a tab hoarder in general, but if I'm feeling either especially overwhelmed or lethargic, I'm even more likely to open tabs but not actually consume their content, thus leaving them open indefinitely. The number of tabs in the browser graveyard then contributes to this underlying stress/anxiety, effectively creating a positive feedback loop of mounting existential dread.
     </div>
     <svg id="tabCounter"></svg>
-  </div>
+  </div> 
 
 <script>
 
@@ -375,18 +380,18 @@ $.ajax({
 
 <script>
 
-var margin = {top: 50, right: 30, bottom: 50, left: 50};
-var margin2 = {top: 5, right:30, bottom:20, left:50};
+var margin = {top: 50, right: 50, bottom: 50, left: 50};
+var margin2 = {top: 5, right:50, bottom:20, left:50};
 
-var width = 1000 - margin.left - margin.right,
-height = 500 - margin.top - margin.bottom;
+var width = (window.innerWidth - 300) - margin2.right - margin2.left,
+height = 600 - margin.top - margin.bottom;
 
 var height2 = 80 - margin2.top - margin2.bottom;
-
+var width2 = window.innerWidth - margin2.right - margin2.left;
 var body = d3.select("body");
 
 var contextSVG = d3.select("#context")
-      .attr("width", width + margin.left + margin.right)
+      .attr("width", width2 + margin.left + margin.right)
       .attr("height", height2 + margin2.top + margin2.bottom);
 
 
@@ -400,7 +405,7 @@ var xScale = d3.scaleTime()
   // .domain([xMin, xMax]);
 
 var xScale2 = d3.scaleTime()
-.range([0,width]);
+.range([0,width2]);
 
 var yScale = d3.scaleLinear()
   .range([height,0]);
@@ -425,7 +430,7 @@ var contextChart = contextSVG.append("g")
 
 
   var brush = d3.brushX()
-    .extent([[0,0], [width, height2]])
+    .extent([[0,0], [width2, height2]])
     .on("brush end", brushed);
 
 
@@ -478,7 +483,7 @@ d3.tsv("reporter/responses.tsv", function (err, responses) {
 
 
 responses.forEach(function(d){
-  var dateTime = new Date(String(d.time));
+  var dateTime = new Date(d.unix_time * 1e3);
   d.time = dateTime;
   d.mood = +d.mood;
   d.fatigue = +d.fatigue;
@@ -607,10 +612,6 @@ contextChart.append("g")
     .attr("transform", "translate(0," + height2 + ")")
     .call(xAxis2);
 
-contextChart.append("g")
-    .attr("class", "brush")
-    .call(brush)
-    .call(brush.move, xScale.range());
 
 // contextChart.append("path")
 //   .attr("d", moodLine2(newResponses))
@@ -624,10 +625,36 @@ contextChart.selectAll(".mood-bars")
   .enter().append("rect")
   .attr("class", "mood-bars")
   .style("fill", "grey")
+  .style("opacity", "0.12")
   .attr("x", function(d) {return xScale2(d.time)})
-  .attr("width", "5px")
+  .attr("width", "4px")
   .attr("y", function(d) {return yScale2(d.mood)})
   .attr("height", function(d) {return height2 - yScale2(d.mood)})
+
+var dataLength = newResponses.length
+var maxDate = newResponses[dataLength-1]['time']
+var maxDateWeek = new Date()
+maxDateWeek.setDate(maxDate.getDate() - 7)
+
+var contextBrush = contextChart.append("g")
+    .attr("class", "brush")
+    .call(brush)
+    .call(brush.move, [maxDateWeek, maxDate].map(xScale2));
+
+// var handle = contextBrush.selectAll(".handle--custom")
+//   .data([{type: "w"}, {type: "e"}])
+//   .enter().append("path")
+//     .attr("class", "handle--custom")
+//     .attr("fill", "#666")
+//     .attr("fill-opacity", 1)
+//     .attr("stroke", "#000")
+//     .attr("stroke-width", 1)
+//     .attr("cursor", "ew-resize")
+//     .attr("d", d3.arc()
+//         .innerRadius(0)
+//         .outerRadius(height2/2)
+//         .startAngle(0)
+//         .endAngle(function(d, i) { return i ? Math.PI : -Math.PI; }));
 
 
   var reporterTip = d3.tip()
@@ -636,7 +663,6 @@ contextChart.selectAll(".mood-bars")
     .html(function(d,i) {
     return "<b>" + d.moodNotes + "</b>: " + d.trigger;
     });
-
 
   reporterChart.selectAll(".moodCircle")
   .call(reporterTip)
@@ -650,13 +676,40 @@ contextChart.selectAll(".mood-bars")
   })
 
 
+
+  var contextTip = d3.tip()
+    .attr("class", "tooltip")
+    .offset([-20,-5])
+    .html(function(d,i) {
+    var brushSelection = d3.brushSelection(contextBrush.node())
+var formatTime = d3.timeFormat("%b %d %I:%M%p");
+
+  return "Viewing " + formatTime(xScale2.invert(brushSelection[0])) + " — <br>" + formatTime(xScale2.invert(brushSelection[1]))
+    });
+
+  contextChart.selectAll(".selection")
+  .call(contextTip)
+
+  .on("mousedown", function(d) {
+    contextTip.hide(d);
+  })
+
+  .on("mouseover", function(d) {
+    contextTip.show(d);
+  })
+
+  .on("mouseout", function(d) {
+    contextTip.hide(d);
+  })
+
+
 });
 
-var formatTime = d3.timeFormat("%b %d %I:%M%p");
 
 function brushed() {
   if (d3.event.sourceEvent && d3.event.sourceEvent.type === "zoom") return; // ignore brush-by-zoom
   var s = d3.event.selection || xScale2.range();
+  var formatTime = d3.timeFormat("%b %d %I:%M%p");
   var newDateRange = s.map(xScale2.invert, xScale2);
   for(var i = 0; i < newDateRange.length; i++) {
     newDateRange[i] = formatTime(newDateRange[i])
@@ -743,7 +796,7 @@ var yAxisKeylogger = d3.axisLeft(yScaleKeylogger).tickSize(-width).ticks(4).tick
       if (err) console.warn(err, "error loading data");
 
   data.forEach(function(d){
-    var dateTime = new Date(String(d.time));
+    var dateTime = new Date(d.unix_time * 1e3);
     d.time = dateTime;
   })
 
@@ -1011,7 +1064,7 @@ d3.json("affectiva/analyses/merged_file.json", function (err, affectiva) {
 productivity = rescuetime.rows;
 
 productivity.forEach(function(d){
-  var dateTime = new Date(String(d[0]));
+  var dateTime = new Date(String(d[0]) + "-04:00");
   d[0] = dateTime;
 })
 
@@ -1344,14 +1397,15 @@ var yAxisTabCounter = d3.axisLeft(yScaleTabCounter).tickSize(-width).ticks(4).ti
 
 
 var tabLine = d3.line()
-.defined(function(d){return dataset[d].current_tabCount!=null})
+// .defined(function(d) { return (typeof dataset[d].current_tabCount !== 'string'); })
+.defined(function(d){
+    // return dataset[d].current_tabCount!==null ? d : console.log("null")
+  return (dataset[d].current_tabCount!==null) && (dataset[d].tabs_activated > 0 || dataset[d].tabs_created > 0)
+})
   .x(function(d) {return xScale(dataset[d].timestamp);})
   .y(function(d){return yScaleTabCounter(dataset[d].current_tabCount);});
 
-var windowLine = d3.line()
-.defined(function(d){return dataset[d].current_windowCount!=null})
-  .x(function(d) {return xScale(dataset[d].timestamp);})
-  .y(function(d){return yScaleTabCounter(dataset[d].current_windowCount);});
+
 
 
 d3.json("getAPIdata/chromeactivity.json", ready);
@@ -1362,7 +1416,7 @@ function ready(err, data) {
 
 dataset = data;
 
-console.log(dataset[1524982083090])
+// console.log(dataset[1524982083090])
 var keyLookup = [];
 
 for(var key in dataset){
@@ -1386,8 +1440,9 @@ for(var key in dataset){
     var nextTime = dataset[keyLookup[currentIndex+1]].timestamp;
 
 
-    if (currentTime < (nextTime - 24000000)) {
-      var nullTime = nextTime - 24000000;
+    if (currentTime < (nextTime - 14000000)) {
+      var nullTime = nextTime - 14000000
+
       var nullItems = {};
 
       nullItems["timestamp"] = new Date(nullTime);
@@ -1401,14 +1456,14 @@ for(var key in dataset){
       dataset[nullTime] = nullItems;
     }
 
-    else if (currentTime > (nextTime - 1800000)) {
-      var currentTimeMs = currentTime.getTime();
-      var nextTimeMs = nextTime.getTime();
-      dataset[currentTimeMs].tabs_activated += dataset[nextTimeMs].tabs_activated;
-      dataset[currentTimeMs].tabs_created += dataset[nextTimeMs].tabs_created;
-      dataset[currentTimeMs].windows_created += dataset[nextTimeMs].windows_created;
-      delete dataset[nextTimeMs];
-    }
+    // else if (currentTime > (nextTime - 1800000)) {
+    //   var currentTimeMs = currentTime.getTime();
+    //   var nextTimeMs = nextTime.getTime();
+    //   dataset[currentTimeMs].tabs_activated += dataset[nextTimeMs].tabs_activated;
+    //   dataset[currentTimeMs].tabs_created += dataset[nextTimeMs].tabs_created;
+    //   dataset[currentTimeMs].windows_created += dataset[nextTimeMs].windows_created;
+    //   delete dataset[nextTimeMs];
+    // }
   }
 }
 
@@ -1419,13 +1474,15 @@ for(var key in dataset){
     keyLookup.push(key);
 }
 
+keyLookup.sort(function(a,b){
+  return a - b;
+})
 
-// console.log(dataset)
 
-  var yMax = d3.extent(keyLookup, function(d) {return dataset[d].tabs_activated;})[1];
-  yScaleTabCounter.domain([0,yMax]);
-  // xScale2.domain(xScale.domain());
-  // yScale2.domain(yScale.domain());
+var yMax = d3.extent(keyLookup, function(d) {return dataset[d].tabs_activated;})[1];
+yScaleTabCounter.domain([0,yMax]);
+// xScale2.domain(xScale.domain());
+// yScale2.domain(yScale.domain());
 
 
   var tabTip = d3.tip()
@@ -1531,7 +1588,7 @@ tabCounterChart.selectAll(".tabCircle")
   .append("circle")
   .attr("class","tabCircle")
   .attr("cx", function(d) {return xScale(dataset[d].timestamp)})
-  .attr("r", function(d) {return dataset[d].current_tabCount == null ? 0 : 3; })
+  .attr("r", function(d) {return (dataset[d].current_tabCount == null || dataset[d].tabs_activated == 0) ? 0 : 2; })
   .attr("cy", function(d) { return yScaleTabCounter(dataset[d].current_tabCount);})
   .attr("opacity", 0.7)
   .attr("fill", "magenta");
