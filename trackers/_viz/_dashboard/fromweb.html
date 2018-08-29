@@ -286,7 +286,6 @@
     height:100px;
     background-color:white;
     margin: auto;
-    margin-top:
   }
   .arrow::after {
     content: "\25BE";
@@ -535,7 +534,7 @@ var yScale2 = d3.scaleLinear()
 
 var xAxis = d3.axisBottom(xScale).tickPadding(10);
 var xAxis2 = d3.axisBottom(xScale2).tickSize(-height2).tickPadding(10);
-var yAxis = d3.axisLeft(yScale).tickSize(-width).ticks(5).tickPadding(10);
+var yAxis = d3.axisLeft(yScale).tickSize(-width).ticks(5).tickPadding(10).tickSizeOuter(0);
 
 
 var reporterChart = reporterSVG.append("g")
@@ -844,7 +843,7 @@ var keyloggerChart = keyloggerSVG.append("g")
 var yScaleKeylogger = d3.scaleLinear()
   .range([height,0]);
   // .domain([0.45,1]);
-var yAxisKeylogger = d3.axisLeft(yScaleKeylogger).tickSize(-width).ticks(4).tickPadding(10).tickFormat(function(d) { return d*100 + "%"; });
+var yAxisKeylogger = d3.axisLeft(yScaleKeylogger).tickSize(-width).ticks(4).tickPadding(10).tickSizeOuter(0).tickFormat(function(d) { return d*100 + "%"; });
 
 
 
@@ -1104,7 +1103,7 @@ var emojiChart = affectivaSVG.append("g")
 
 var yScaleExpressions = d3.scaleLinear()
   .range([expressionsHeight,0]);
-var yAxisExpressions = d3.axisLeft(yScaleExpressions).tickSize(-width).ticks(4).tickPadding(10).tickFormat(function(d) { return d + "%"; });
+var yAxisExpressions = d3.axisLeft(yScaleExpressions).tickSize(-width).ticks(4).tickPadding(10).tickSizeOuter(0).tickFormat(function(d) { return d + "%"; });
 
 
 var productivityArea = d3.area()
@@ -1223,9 +1222,9 @@ affectiva.forEach(function(d){
 
 
   blinksChart.append("line")
-    .style("stroke", "#e0e0e0")
-    .style("stroke-dasharray", ("5,5"))
-    .attr("x1", -30)
+    .style("stroke", "silver")
+    .style("stroke-width", 1)
+    .attr("x1", 40)
     .attr("y1", 60)
     .attr("x2", width)
     .attr("y2", 60);
@@ -1350,10 +1349,10 @@ affectiva.forEach(function(d){
   })
 
 
-  emojiChart.append("line")
-    .style("stroke", "#e0e0e0")
-    .style("stroke-dasharray", ("5,5"))
-    .attr("x1", -30)
+   emojiChart.append("line")
+    .style("stroke", "silver")
+    .style("stroke-width", 1)
+    .attr("x1", 50)
     .attr("y1", 110)
     .attr("x2", width)
     .attr("y2", 110);
@@ -1431,7 +1430,7 @@ var tabCounterChart = tabCounterSVG.append("g")
 var yScaleTabCounter = d3.scaleLinear()
   .range([height,0]);
   // .domain([0.45,1]);
-var yAxisTabCounter = d3.axisLeft(yScaleTabCounter).tickSize(-width).ticks(4).tickPadding(10);
+var yAxisTabCounter = d3.axisLeft(yScaleTabCounter).tickSize(-width).ticks(4).tickPadding(10).tickSizeOuter(0);
 
 
 var tabLine = d3.line()
