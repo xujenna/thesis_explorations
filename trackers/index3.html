@@ -9,7 +9,7 @@
     body {
       background-color:#f3f2f7;
       font-family: fanwood, serif;
-      font-size:17px;
+      font-size:16px;
       font-style: text;
       text-align: center;
       letter-spacing: 0.5px;
@@ -28,20 +28,26 @@
 
 
   .axis line,
-  .axis path {
+  .axis path,
+  .smallAxis line,
+  .smallAxis path {
     fill:none;
     stroke:silver;
     stroke-width:1;
   }
 
-
-  .axis text {
+  .axisLabel, .axis text {
     fill: black;
     font-family: europa, sans-serif;
     font-style: light;
     text-transform: uppercase;
     font-size: 10px;
     letter-spacing: 1px;
+}
+
+.axisLabel {
+ letter-spacing: 2.5px;
+ font-weight: bold;
 }
 
   .tick line {
@@ -54,6 +60,21 @@
   }
 
 
+.smallAxisLabel, .smallAxis text {
+  font-size:8.5px;
+  font-family: europa, sans-serif;
+}
+
+.matrix-label {
+  font-size:8.5px;
+  font-family: europa, sans-serif;
+  transform:rotate(-45deg);
+}
+.regression {
+  stroke-width: 2px;
+/*  stroke: black;
+*/  stroke-dasharray: 3.5,1.5;
+}
 
   .time-title {
     display:inline;
@@ -124,7 +145,7 @@
     margin-top: 70px;
     margin-bottom: 150px;
     display:block;
-    width:100%;
+    width:100vw;
   }
 
 
@@ -136,41 +157,50 @@
     overflow: auto;
     /*background-color: silver;*/
     color: white;
-    margin-bottom: 170px;
-    padding: 105px 0 0 0;
+/*    margin-bottom: 170px;
+*/    padding: 5%;
+    display:flex;
+    align-items:center;
   }
 
-  .hero-imgs {
+  #hero-img {
     overflow: auto;
     position:absolute;
     left:0px;
     top:0px;
     width:100%;
     z-index:-10;
-    opacity:0.15;
+    opacity: .7;
   }
 
-  .hero-imgs img {
-    opacity:0.7;
+  #hero-img img {
     min-width:100%;
     min-height: 100%;
-
   }
 
   #intro-text {
-    width:60%;
-    margin:auto;
-  -webkit-columns: 2;
+    width:25%;
+/*    margin:auto;
+*/ /* -webkit-columns: 2;
      -moz-columns: 2;
           columns: 2;
   -moz-column-fill: balance;
        column-fill: balance;    
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
-          column-gap: 30px;    
+          column-gap: 30px;    */
     text-align: left;
     line-height: 22px;
-    margin-bottom:7%;
+    display:inline-block;
+    margin-top: -10%;
+
+  }
+
+  #hed {
+    width: 40%;
+    line-height:60px;
+    text-align: left;
+    padding-left: 10%;
   }
 
   #hed h1 {
@@ -179,11 +209,12 @@
   }
 
   #hed p {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    font-size:15px;
   }
 
   h1 {
-    font-size:58px;
+    font-size:40px;
     font-family: fanwood, serif;
     font-style: regular;
     font-weight: 400;
@@ -238,7 +269,7 @@
   .description{
     display:flex;
     align-items:center;
-    margin: 0% 20%;
+    margin: 5% 20%;
   }
 
   .description-body {
@@ -262,7 +293,7 @@
     font-size:10px;
     text-transform: uppercase;
     text-align:left;
-    width:45%;
+    width:50%;
   }
   .description-key p {
     line-height: 22px;
@@ -278,40 +309,6 @@
   }
 
 
-  #affectiva-container .description{
-    margin-top: 75px;
-  }
-  #context-description {
-    width:360px;
-    padding-right: 0px;
-    margin-top: 0px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    margin-left: -20px;
-    font-family: europa, sans-serif;
-    font-size:15px;
-    letter-spacing: 1px;
-    /*text-transform: uppercase;*/
-    font-weight:600;
-  }
-
-  .arrow {
-    display:block;
-    width: 1px;
-    height:100px;
-    background-color:white;
-    margin: auto;
-  }
-  .arrow::after {
-    content: "\25BE";
-    display:block;
-    position:relative;
-    top:100px;
-    text-align: center;
-    margin-left:-4px;
-    line-height:2px;
-
-  }
 
   .alt-axis {
     font-family: europa, sans-serif;
@@ -331,6 +328,63 @@
   #intro-text a {
     color:white;
   }
+
+  #correlation-container {
+  overflow: visible;
+  width:100%;
+  display:inline-block;
+  margin:auto;
+  padding-top: 120px;
+  padding-bottom: 150px;
+/*  padding: 0 0 0 0;
+*/  text-align: center;
+  background-color:#fcf9ef;
+}
+
+#variable-description-container{
+  width:100%;
+  display: inline-block;
+  margin:auto;
+  margin-top:50px;
+  font-size: 11px;
+  font-family: europa, sans-serif;
+  text-align: left;
+  padding:14px;
+  border: 1px solid black;
+}
+#variable-description-title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#variable-description {
+  column-count: 2;
+  column-gap: 7px;
+}
+#variable-description p {
+  margin:5px;
+  -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
+}
+
+#footer{
+  background-color:#fcf9ef;
+  margin:auto;
+  font-family: europa, sans-serif;
+  width:100%;
+  height: 25px;
+  padding: 20px 0 20px 0;
+  vertical-align: middle;
+  font-size:10.5px;
+  text-align: center;
+  border-top: 1px solid black;
+  border-width: 90%;
+}
+
 
 .selection {
   fill: orangered;
@@ -356,11 +410,41 @@
   top:50px;
 
 }
+
+
+@media screen and (max-width: 1393px){
+  #intro-text {
+      margin:auto;
+      column-count: 1;
+      text-align: left;
+      line-height: 21px;
+  }
+
+/*  .description {
+    display:inline-block;
+    width:60%;
+    text-align: left;
+    margin-top: 30px;
+    padding-right: 60px;
+    vertical-align:top;
+  }*/
+
+  h1 {
+    font-size:36px;
+    font-family: fanwood, serif;
+    font-style: regular;
+    font-weight: 400;
+    margin-bottom: 25px;
+    margin-top:25px;
+  }
+
+}
   </style>
 
 
 </head>
 <body>
+  <title>Speak, (Random Access) Memory</title>
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://d3js.org/d3-time.v1.min.js"></script>
   <script src="_viz/_dashboard/d3-tip.js"></script>
@@ -369,16 +453,17 @@
   <link rel="stylesheet" href="https://use.typekit.net/fao6qlb.css">
 
   <div id="intro-container">
+    <div id="hero-img"><img src="affectiva/composite3.jpg"></div>
     <div id="hed">
-    <p>😐😐😐😐😱</p>
+    <p>😐😐😐😱</p>
     <h1>Speak, (Random Access) Memory</h1>
   </div>
   <div id = "intro-text">
-     As a professional graphic designer, a grad student in a technology program, and a single person who lives alone in NYC, I probably get more facetime with my computer than with all of humanity combined. So during the fall of 2018, when I began work on a system of trackers for a host of potential/evidenced metrics of depression, it was clear that my laptop would be my best data collector.
-    <p>Speak, (Random Access) Memory is a project that hopes to monitor depression's cyclical nature, identify correlations between mood and my activity/environment, predict the onset of depression by feeding this data into a machine-learned model/neural network, and ultimately preempt it by teaching the system to recommend and enforce interventions. As a preliminary exercise, I've trained a couple ML models to predict mood with only a month of data; <a href="http://www.xujenna.com/itp_blog/2018/05/02/final-pt-2-data-analysis/" target="new">see the documentation here</a>.</p><p>Presently, there are seven trackers collecting data on 45 metrics; below are visualizations of the data collected by my <a href="http://www.xujenna.com/itp_blog/2018/04/26/final/" target="new">homemade python trackers</a>. The last chart visualizes correlations among 40 select metrics. Use the brush at the bottom of the window to navigate through my entire archive of data.</p>
+     As a professional graphic designer, a grad student in a technology program, a handheld-device-phobe, and a single person who lives alone in NYC, I probably get more facetime with my computer than with all of humanity combined. So during the fall of 2018, when I began work on a system of trackers for a host of potential/evidenced metrics of depression, it was pretty clear that my laptop would be my best data collector.
+    <p>Speak, (Random Access) Memory is a project that hopes to monitor depression's cyclical nature, identify correlations between mood and my activity/environment, predict the onset of depression by feeding this data into a machine-learned model/neural network, and ultimately preempt it by teaching the system to recommend and enforce interventions. As a preliminary exercise, I've trained a couple ML models to predict mood with only a month of data; <a href="http://www.xujenna.com/itp_blog/2018/05/02/final-pt-2-data-analysis/" target="new">see the documentation here</a>.</p><p>Presently, there are seven trackers collecting data on 45 metrics; below are visualizations of the data collected by four of them: my <a href="http://www.xujenna.com/itp_blog/2018/04/26/final/" target="new">homemade python trackers</a>. The last chart visualizes correlations among 40 select metrics. </p><p>Use the brush at the bottom of the window to filter and navigate through my entire history of data.</p>
   </div>
-  <h5>To begin, filter the data by date:</h5><span class="arrow"></span></p>
-  </div>
+<!--   <h5>To begin, filter the data by date:</h5><span class="arrow"></span></p>
+ -->  </div>
   </div>
   <div class="container" id="context-container">
     <div class="viewport-nav" id="viewport-back">&ltrif; prev</div>
@@ -389,9 +474,9 @@
 
   <div class="container" id="reporter-container">
     <div class="description">
-      <div class="description-hed"><h2>Mood Reporter</h2></div>
+      <div class="description-hed"><h2>Mood Reports</h2></div>
       <div class="description-body">
-        Because affect is difficult to measure, psychiatry traditionally employs self-administered questionnaires as diagnostic tools for mood disorders; these usually attempt to quantify the severity of DSM-IV criteria. The module for depression is called the PHQ-9, and I've adapted several of its questions into my own questionnaire, which python deploys every hour via the command line. All variables are rated on a scale of 1-5.
+        Psychiatry traditionally employs self-administered questionnaires as diagnostic tools for mood disorders; these usually attempt to quantify the severity of DSM-IV criteria. The module for depression is called the PHQ-9, and I've adapted several of its questions into my own questionnaire, which python deploys every hour via the command line.
       </div>
       <div class="description-key">
         <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span> Mood</p>
@@ -406,46 +491,59 @@
   </div>
 
   <div class="container" id="affectiva-container">
-    <div class="description"><h2>Facial Analysis</h2>
-      This tracker utilizes the Affectiva API, an emotion and facial recognition model. Via my laptop's webcam, it analyses my face for a minute every hour; a python script grabs the min and max <span style="color:rgb(255, 0, 255)"><b>attention</b></span> and <span style="color:rgb(0, 225, 225)"><b>valence</b></span> values, as well as the expressions made (plotted with emoji) and the amount of times I <span style="color:rgb(0, 0, 255)"><b>blinked</b></span> (calculated by dividing the number of times the eyeClosure variable hit 99.9%, divided by 2).<p>I choose these variables as <a href="http://www.xujenna.com/itp_blog/2018/02/01/blinking-mind-wandering/" target="new">an attempt to measure mindwandering</a>, a marker strongly correlated with depression. The emojis were included to illustrate the concept of valence (also just for funsies).</p>
+    <div class="description">
+      <div class="description-hed"><h2>Facial Analysis</h2></div>
+      <div class="description-body">
+      This tracker utilizes the Affectiva API, an emotion and facial recognition model. Via my laptop's webcam, it analyses my face for a minute every hour; a python script counts blinks and calculates the averages for attention and valence scores. The yellow area chart in the background are my productivity scores via the Rescuetime API. I choose these variables as <a href="http://www.xujenna.com/itp_blog/2018/02/01/blinking-mind-wandering/" target="new">an attempt to measure mindwandering</a>, a marker strongly correlated with depression.
+      </div>
+      <div class="description-key">
+        <p><span style="color:rgb(0, 0, 255)">&block; &nbsp;</span> Blinks</p>
+        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span> Attention</p>
+        <p><span style="color:rgb(0, 225, 225)">&block; &nbsp;</span> Valence</p>
+        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span> Productivity</p>
+      </div>
     </div>
     <svg id="affectiva"></svg>
   </div>
 
   <div class="container" id="keylogger-container">
-    <div class="description"><h2>Keylogger Sentiments</h2>
-      The idea for this is simply to discern the sentiment of everything I type. I wrote a keylogger in python, which collects any coherent phrase to be sent to IBM Watson's Tone Analyzer every hour. The API provides several sentiment categories: <span style="color:rgb(255, 0, 255)"><b>joy</b></span>, <span style="color:rgb( 0, 255, 127)"><b>confidence</b></span>, <span style="color:rgb(245, 205, 0)"><b>analysis</b></span>, <span style="color:rgb(200, 200, 220)"><b>tentativeness</b></span>, <span style="color:rgb(0, 225, 225)"><b>sadness</b></span>, <span style="color:rgb(0, 0, 225)"><b>fear</b></span>, and <span style="color:rgb(255, 105, 180)"><b>anger</b></span>.
+    <div class="description">
+      <div class="description-hed">
+      <h2>Keylogged Sentiments</h2>
+      </div>
+      <div class="description-body">
+      As an attempt to automatically measure mood, I created a sentiment analysis keylogger for my computer. Written in python, the keylogger collects any coherent phrase I type, and sends the log every hour to IBM's Tone Analyzer API, which returns sentiment scores for each sentence; below, only scores over 50% are visualized. The logs themselves have also been redacted, but the length of the analyzed sentence is encoded in each circle's diameter. At the end of May, I added keystroke dynamics and simple text analysis to this keylogger, which I hope to visualize soon.
+      </div>
+      <div class="description-key">
+        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span> Joy</p>
+        <p><span style="color:rgb( 0, 255, 127)">&block; &nbsp;</span> Confidence</p>
+        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span> Analysis</p>
+        <p><span style="color:rgb(200, 200, 220)">&block; &nbsp;</span> Tentativeness</p>
+        <p><span style="color:rgb(0, 225, 225)">&block; &nbsp;</span> Sadness</p>
+        <p><span style="color:rgb(0, 0, 225)">&block; &nbsp;</span> Fear</p>
+        <p><span style="color:rgb(255, 105, 180)">&block; &nbsp;</span> Anger</p>
+    </div>
     </div>
     <svg id="keylogger"></svg>
   </div>
 
   <div class="container" id="tabCounter-container">
-    <div class="description"><h2>Browser Activity</h2>
-    This tracker is a Chrome Extension, and counts the number of tabs as they're <span style="color:rgb( 0, 255, 127)"><b>created</b></span> and <span style="color:rgb(245, 205, 0)"><b>activated</b></span>, as well as the final, hourly count of <span style="color:rgb(255, 0, 255)"><b>tabs</b></span> and <span style="color:rgb(0, 0, 225)"><b>windows</b></span> left open. I wanted to track my browser activity because I've noticed a relationship between all of these variables and my motivation and stress levels. I'm a tab hoarder in general, but if I'm feeling either especially overwhelmed or lethargic, I'm even more likely to open tabs but not actually consume their content, thus leaving them open indefinitely. The number of tabs in the browser graveyard then contributes to this underlying stress/anxiety, effectively creating a positive feedback loop of mounting existential dread.
+    <div class="description">
+      <div class="description-hed">
+        <h2>Browser Activity</h2>
+      </div>
+      <div class="description-body">
+        I'm an incorrigible tab hoarder, but if I'm feeling especially restless or unmotivated, I'm even more likely to open new—or activate existing—tabs but not actually consume their content, oftentimes leaving them open indefinitely. Inspired by the relationship between my mental states and my browser activity, I created a Chrome Extension that tracks tabs as they're created and activated, their corresponding favicons, and the final hourly count of tabs and windows left open.
+      </div>
+      <div class="description-key">
+        <p><span style="color:rgb(0, 255, 127)">&block; &nbsp;</span> Created</p>
+        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span> Activated</p>
+        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span> Final Count</p>
+    </div>
     </div>
     <svg id="tabCounter"></svg>
   </div> 
 
-<script>
-
-// var dir = "file:///Users/jxu2/github/thesis_explorations/trackers/affectiva/photos/";
-var dir = "affectiva/photos/";
-var fileextension = ".jpg";
-$.ajax({
-    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-    url: dir,
-    success: function (data) {
-        //List all .png file names in the page
-        var fileList = $(data).find("a:contains(" + fileextension + ")").slice(-13);
-        // console.log(fileList)
-        fileList.each(function () {
-            var filename = this.href.replace(window.location.host, "").replace("http://", "");
-            $("#intro-container").append("<div class='hero-imgs'><img src='" + dir + filename + "'></div>");
-        });
-    }
-});
-
-</script>
 
 <script>
 
@@ -850,22 +948,6 @@ contextNavForward.text(" ").style("cursor", "pointer").on("mousedown", function(
 
 
 
-// var handle = contextBrush.selectAll(".handle--custom")
-//   .data([{type: "w"}, {type: "e"}])
-//   .enter().append("path")
-//     .attr("class", "handle--custom")
-//     .attr("fill", "#666")
-//     .attr("fill-opacity", 1)
-//     .attr("stroke", "#000")
-//     .attr("stroke-width", 1)
-//     .attr("cursor", "ew-resize")
-//     .attr("d", d3.arc()
-//         .innerRadius(0)
-//         .outerRadius(height2/2)
-//         .startAngle(0)
-//         .endAngle(function(d, i) { return i ? Math.PI : -Math.PI; }));
-
-
   var reporterTip = d3.tip()
     .attr("class", "tooltip")
     .offset([-20,-5])
@@ -953,33 +1035,20 @@ function brushed() {
 }
 
 
-// function zoomed() {
-//   if (d3.event.sourceEvent && d3.event.sourceEvent.type === "brush") return; // ignore zoom-by-brush
-//   var t = d3.event.transform;
-//   xScale.domain(t.rescaleX(xScale2).domain());
-//   reporterChart.select(".moodArea").attr("d", moodArea);
-//   reporterChart.select(".moodLine").attr("d", moodLine);
-//   reporterChart.select(".moraleArea").attr("d", moraleArea);
-//   reporterChart.selectAll(".moodCircle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScale(d.mood)});
-//   reporterChart.select(".stressArea").attr("d", stressArea);
-//   reporterChart.select(".fatigueArea").attr("d", fatigueArea);
-//   reporterChart.selectAll(".compulsion-x").attr("x", function(d) {return xScale(d.time)});
-//   keyloggerChart.selectAll(".joy-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-//   keyloggerChart.selectAll(".sad-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-//   keyloggerChart.selectAll(".tentative-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-//   keyloggerChart.selectAll(".angry-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-//   keyloggerChart.selectAll(".confident-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-//   keyloggerChart.selectAll(".analytical-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-//   keyloggerChart.selectAll(".disgust-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-//   keyloggerChart.selectAll(".fear-circle").attr("cx", function(d) {return xScale(d.time)}).attr("cy", function(d) {return yScaleKeylogger(d.score)});
-//   blinksChart.selectAll(".blink-circle").attr("cx", function(d) {return xScale(d.time)});
-//   expressionsChart.select(".productivityArea").attr("d", productivityArea);
-//   expressionsChart.selectAll(".attentionLines").attr("x1", function(d){ return xScale(d.time);}).attr("x2", function(d) {return xScale(d.time);});
-//   expressionsChart.selectAll(".valenceLines").attr("x1", function(d){ return xScale(d.time);}).attr("x2", function(d) {return xScale(d.time);});
-//   emojiChart.selectAll(".emoji").attr("transform", function(d) {return "translate(" + (xScale(d.time)-7) + ")";});
-//   body.selectAll(".axis--x").call(xAxis);
-//   contextChart.select(".brush").call(brush.move, xScale.range().map(t.invertX, t));
-// }
+
+let scrub = document.getElementById("context-container")
+
+window.addEventListener("scroll", function(){
+  var targetElement = document.getElementById("tabCounter-container");
+
+  if(window.scrollY > (targetElement.offsetTop)){
+    scrub.style.position = "inherit"
+  }
+  else if(window.scrollY <= (targetElement.offsetTop)){
+    scrub.style.position = "fixed"
+
+  }
+})
 
 </script>
 <script>

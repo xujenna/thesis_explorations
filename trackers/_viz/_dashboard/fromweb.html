@@ -819,10 +819,26 @@ function brushed() {
 let scrub = document.getElementById("context-container")
 
 window.addEventListener("scroll", function(){
-  if(window.scrollY > 3375){
+  var targetElement = document.getElementById("tabCounter-container");
+
+  if(window.scrollY > (targetElement.offsetTop)){
     scrub.style.position = "inherit"
   }
-  else if(window.scrollY <= 3375){
+  else if(window.scrollY <= (targetElement.offsetTop)){
+    scrub.style.position = "fixed"
+
+  }
+})
+
+let introbg = document.getElementById("context-container")
+
+window.addEventListener("scroll", function(){
+  var targetElement = document.getElementById("tabCounter-container");
+
+  if(window.scrollY > (targetElement.offsetTop)){
+    scrub.style.position = "inherit"
+  }
+  else if(window.scrollY <= (targetElement.offsetTop)){
     scrub.style.position = "fixed"
 
   }
