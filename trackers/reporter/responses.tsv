@@ -1,4 +1,4 @@
-time	unix_time	mood	moodNotes	trigger	activity	social	alone	location	morale	stress	fatigue	compulsions
+time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	location	morale	stress	fatigue	compulsions
 2018-04-09T10:03:18.315716	1523282598.315716	4	Feeling pretty good	Making good progress with project (this questionnaire!)	Schoolwork	1	True	K Home	4	3	1	True
 2018-04-09T11:03:48.939009	1523286228.939009	4	Productive	Making progress on project	Schoolwork, Errands, Chatting	1	True	K Home	4	3	1	True
 2018-04-09T12:00:17.159027	1523289617.159027	3	Neutral	Taking a break	Leisure	1	True	K Home	3	2	1	False
@@ -621,7 +621,8 @@ time	unix_time	mood	moodNotes	trigger	activity	social	alone	location	morale	stre
 2018-08-24T13:21:20.364664	1535131280.364664	2	super sleepy for some reason	no idea	errands	2	True	Home	2	0	4	True
 2018-08-24T14:23:45.053684	1535135025.053684	3	content	finally got my shit together	errands, eating, leisure, tv	2	True	Home	2.5	0	3.5	False
 2018-08-24T15:27:12.004293	1535138832.004293	3	super sleepy but proud of myself	figured out an easy fix for productivity api crap	schoolwork, errands, leisure, tv	1	True	Home	3	0	4	False
-2018-08-24T16:27:12.004293	1535142432.004293	2.5	still groggy, a little anxious	just waiting around to go upstate	leisure, tv	1	True	Home	2.5	0	4	False2018-08-26T21:15:09.736031	1535332509.736031	2.5	exhausted	just got back from weekend upstate with 8 ITP classmates, during which  i got sick	errands, with friends	2	True	Home	1.5	1	4.5	False
+2018-08-24T16:27:12.004293	1535142432.004293	2.5	still groggy, a little anxious	just waiting around to go upstate	leisure, tv	1	True	Home	2.5	0	4	False
+2018-08-26T21:15:09.736031	1535332509.736031	2.5	exhausted	just got back from weekend upstate with 8 ITP classmates, during which  i got sick	errands, with friends	2	True	Home	1.5	1	4.5	False
 2018-08-26T22:21:33.788919	1535336493.788919	2	still exhausted	just watching SATC	leisure, tv	0	True	Home	1	1	5	True
 2018-08-26T23:30:28.821062	1535340628.821062	1.5	sick	caught a cold or something	leisure, tv	0	True	Home	1	2	5	True
 2018-08-27T00:52:07.617502	1535345527.617502	1.5	terrible	still sick	leisure, tv	0	True	Home	0.5	2.5	5	True
@@ -656,3 +657,12 @@ time	unix_time	mood	moodNotes	trigger	activity	social	alone	location	morale	stre
 2018-08-29T19:33:38.402555	1535585618.402555	3	fine	back to work	schoolwork	1	True	Home	3	0	3	True
 2018-08-29T20:57:11.866452	1535590631.866453	3	focused	still working on viz	schoolwork	0	True	Home	3	0	3.5	True
 2018-08-29T21:57:11.866452	1535594231.866452	2.5	tired	didn't sleep well last night	schoolwork	0	True	Home	2	0	4.5	True
+2018-08-29T23:27:46.674540	1535599666.67454	2.5	still tired	too lazy to wash up and go to sleep	schoolwork	1	True	Home	2	0	4.5	True
+2018-08-30T10:56:29.731845	1535640989.731845	3	content	slept pretty well last night	 email	0	True	Home	3	0	3	False
+2018-08-30T12:29:59.734702	1535646599.734702	3	focused	working	schoolwork	0	True	Home	3.5	0	2.5	False
+2018-08-30T14:00:40.083304	1535652040.083304	3	still focused	still working	schoolwork	0	True	Home	3	0.5	2.5	False
+2018-08-30T16:01:03.357091	1535659263.357091	3	still focused	finishing up big viz	schoolwork	2	False	School, Library	3.5	0	2	False
+2018-08-30T17:06:19.381755	1535663179.381755	3	still focused	tweaking viz	schoolwork	1	False	School, Library	3	0	2	False
+2018-08-30T21:54:34.959126	1535680474.959126	5	happy	had a fun phone convo with shaon	chatting	2	True	Home	3.5	0	2	False
+2018-08-30T23:00:32.439413	1535684432.439413	4	cheerful	happy to talk to friends	schoolwork	2	True	Home	3	0	2	False
+2018-08-31T00:01:23.890486	1535688083.890486	3.5	focused	still working on viz	schoolwork	1	True	Home	3	0	3	True
