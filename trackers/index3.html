@@ -456,8 +456,8 @@ letter-spacing: 1px;
   <title>Speak, (Random Access) Memory</title>
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://d3js.org/d3-time.v1.min.js"></script>
-  <script src="_viz/_dashboard/d3-tip.js"></script>
-  <script src="_viz/_dashboard/jquery-3.3.1.js"></script>
+  <script src="_viz/final_dashboard/d3-tip.js"></script>
+  <script src="_viz/final_dashboard/jquery-3.3.1.js"></script>
 
   <link rel="stylesheet" href="https://use.typekit.net/fao6qlb.css">
 
@@ -2000,8 +2000,8 @@ tabCounterChart.selectAll(".tabCircle")
 // linear regression adapted from https://bl.ocks.org/HarryStevens/be559bed98d662f69e68fc8a7e0ad097
 
 
-d3.tsv("_viz/_dashboard/mergedDF.tsv", function(err, data) {
-  d3.tsv("_viz/_dashboard/correlationmatrix.tsv", function(err, correlationData) {
+d3.tsv("_viz/final_dashboard/mergedDF.tsv", function(err, data) {
+  d3.tsv("_viz/final_dashboard/correlationmatrix.tsv", function(err, correlationData) {
       if (err) console.warn(err, "error loading data");
 
 var correlationSVG = d3.select("#correlations")
