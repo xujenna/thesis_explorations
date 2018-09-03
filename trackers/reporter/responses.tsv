@@ -695,3 +695,8 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-09-02T23:14:29.250458	1535944469.250458	3	motivated	working on predictor	schoolwork	0	True	Home	3.5	0	3.5	True
 2018-09-03T00:16:03.970906	1535948163.970906	3.5	accomplished	figured out a ML thing and am rewarding myself with tv	schoolwork, leisure, tv	1	True	Home	3	0	4	True
 2018-09-03T01:36:21.218401	1535952981.218401	3	focused	continuing work on ML thing	schoolwork	1	True	Home	3.5	0	4	True
+2018-09-03T02:36:53.133180	1535956613.13318	3.5	accomplished, focused	figured out the ML thing	schoolwork	1	True	Home	4	0	4.5	False
+2018-09-03T11:11:24.227927	1535987484.227927	3	groggy	just woke up, didn't sleep much	washing up, email	0	True	Home	3.5	0.5	3.5	True
+2018-09-03T12:15:04.225701	1535991304.225701	3.5	focused	working on a million things at once	schoolwork	1	True	Home	3.5	1	3.5	False
+2018-09-03T13:15:45.974271	1535994945.974271	3.5	still focused	trying to get firebase to work for affectiva	schoolwork	1	True	Home	4	2	3.5	False
+2018-09-03T14:30:31.164889	1535999431.164889	3	frantic	trying to finish affectiva thing before i leave	schoolwork, eating	1	True	Home	4	3	4	False

@@ -44,7 +44,7 @@ for f in glob.glob("*.json"):
         range_results["emoji"] = unique_emoji
 
         blink_values = list(filter(lambda x: x!=0, map(lambda x: x.get('eyeClosure', 0), j)))
-        blinks = int(len(blink_values) / 2)
+        blinks = int(len(blink_values))
         if(blinks > 35):
             blinks = int(math.sqrt(blinks))
         range_results["blinks"] = blinks

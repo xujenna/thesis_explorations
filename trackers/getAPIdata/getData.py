@@ -36,8 +36,9 @@ def checkProductivity():
         allData = json.load(f)
 
     with open('productivity.json', 'w') as f:
+
         for row in newData:
-            if(row not in allData['rows']):
+            if(row[0] not in allData['rows']):
                 allData['rows'].append(row)
                 print(row)
             else:
@@ -65,7 +66,36 @@ def getChromeActivity():
     print("tabs activated: ", chromeData[lastTime]['tabs_activated'])
 
 
+
+def getAffectivaData():
+    url = "https://faceanalyzer-73537.firebaseio.com/users/xujenna/metrics.json"
+    r = requests.get(url=url)
+
+    affectivaData = r.json()
+    # affectivaDataNoKey = affectivaData[]
+
+    with open('merged_file.json', 'r') as f:
+        allData = json.load(f)
+
+    with open('merged_file.json', 'w') as f:
+        for obj in affectivaData:
+            if(obj not in allData):
+                # print(affectivaData[obj])
+                allData.append(affectivaData[obj])
+            else:
+                continue
+        json.dump(allData, f, indent=4, sort_keys=True)
+    # with open('new_merged_file.json', 'w+') as f:
+    #     json.dump(affectivaData, f, indent=4, sort_keys=True)
+
+    lastTime = list(affectivaData.keys())[-1]
+    print("blinks: ", lastTime)
+
+
+
+
 while True:
     checkProductivity()
     getChromeActivity()
+    getAffectivaData()
     time.sleep(3600)

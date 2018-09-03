@@ -377,6 +377,7 @@ while True:
         makePrediction(mergedDF)
         time.sleep(3600)
     elif (previousDFlength == currentDFlength):
+        print("waiting 600 seconds")
         time.sleep(600)
 
 
