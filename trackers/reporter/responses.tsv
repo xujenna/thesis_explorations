@@ -691,4 +691,7 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-09-02T18:06:18.922431	1535925978.922431	3	motivated again	took a long enough break	schoolwork	1	True	Home	3	0	3	False
 2018-09-02T19:13:02.613355	1535929982.613355	2.5	still motivated but hungry	didn't eat much today	schoolwork	0	True	Home	3	1	3.5	False
 2018-09-02T20:13:02.613355	1535933582.613355	2.5	lazy	taking a break	eating, leisure, tv	1	True	Home	2.5	0	3.5	False
-2018-09-02T22:13:37.504871	1535940817.504871	3	refreshed	power-walked outside to meet my step count, had a shower afterwards	leisure	1	True	Home	3	0	4	False
+2018-09-02T22:13:37.504871	1535940817.504871	3.5	refreshed	power-walked outside to meet my step count, had a shower afterwards	leisure, working out	1	True	Home	3	0	4	False
+2018-09-02T23:14:29.250458	1535944469.250458	3	motivated	working on predictor	schoolwork	0	True	Home	3.5	0	3.5	True
+2018-09-03T00:16:03.970906	1535948163.970906	3.5	accomplished	figured out a ML thing and am rewarding myself with tv	schoolwork, leisure, tv	1	True	Home	3	0	4	True
+2018-09-03T01:36:21.218401	1535952981.218401	3	focused	continuing work on ML thing	schoolwork	1	True	Home	3.5	0	4	True

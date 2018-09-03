@@ -1,0 +1,14 @@
+[
+  {
+    "actual_mood": 3.0,
+    "time": 1535952981.218401,
+    "linear_model": {
+      "prediction": 3.4714984161895837,
+      "mean_abs_error": 0.25455592595228904
+    },
+    "random_forest": {
+      "prediction": 3.15,
+      "mean_abs_error": 0.3403225806451613
+    }
+  }
+]
