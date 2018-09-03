@@ -667,3 +667,28 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-08-30T23:00:32.439413	1535684432.439413	4	cheerful	happy to talk to friends	schoolwork	2	True	Home	3	0	2	False
 2018-08-31T00:01:23.890486	1535688083.890486	3.5	focused	still working on viz	schoolwork	1	True	Home	3	0	3	True
 2018-08-31T01:04:23.626295	1535691863.626295	3.5	accomplished	just finished my masterpiece	schoolwork	2	True	Home	3.5	0	3.5	True
+2018-08-31T11:01:16.461323	1535727676.461323	3	focused	working on application	schoolwork	0	True	Home	3	4.5	2.5	False
+2018-08-31T12:09:33.144747	1535731773.144747	3	exhausted	was so stressed about the deadline	schoolwork, email	1	True	Home	3	2	3	False
+2018-08-31T13:11:13.978613	1535735473.978613	2.5	tired and lazy	dead after scrambling this morning	leisure, tv	4	True	Home	1.5	0	3	True
+2018-08-31T14:12:32.614352	1535739152.614352	3	feeling a little light headed/nauseated, but otherwise fine	microdosed shrooms this afternoon	leisure, tv, schoolwork	2	True	Home	2.5	0	3.5	False
+2018-08-31T15:20:19.672594	1535743219.672594	3	content	just had lunch, watching SATC	leisure, tv, eating	1	True	Home	2.5	0	3.5	False
+2018-08-31T17:34:30.553247	1535751270.553247	3	fine	just getting laundry together, not doing anything in particular	leisure, feedly, errands	2	True	Home	2.5	0	3.5	False
+2018-08-31T18:36:48.395688	1535755008.395688	2.5	guilty	so lazy today	leisure, tv	0	True	Home	2	0.5	4	True
+2018-09-01T01:27:28.608629	1535779648.608629	4	cheerful	had a nice night with james	leisure, with friends	2	True	Home	2	0	4.5	True
+2018-09-01T11:54:50.238744	1535817290.238744	3	neutral	just having some breakfast	cooking, eating, email	2	True	Home	3	0	3	False
+2018-09-01T11:54:50.238744	1535817290.238744	3	neutral	 doing errands	errands	2	True	Home	3	0	3	True
+2018-09-01T14:57:00.339346	1535828220.339346	2.5	lazy	didn't get enough sleep last night	leisure, tv, eating	1	True	Home	2	0	3.5	True
+2018-09-01T20:23:49.610229	1535847829.610229	3	content	had a surprise meetup with maryl	eating, with friends	1	True	Home	2	0	4	False
+2018-09-01T21:25:25.575871	1535851525.575871	2.5	still unmotivated	maybe i'm burnt out, or sleep deprived, or scared of starting an application, or starting the new phase of my project	leisure	2	True	Home	2	0	4	True
+2018-09-01T22:27:39.714361	1535855259.714361	3	a little more motivated	gathered some energy while laying around	errands	2	True	Home	2.5	0	4	False
+2018-09-02T00:04:58.036541	1535861098.036541	3	content	finished putting away laundry	errands, leisure, tv	1	True	Home	2	0	4.5	True
+2018-09-02T01:25:14.412262	1535865914.412262	2	sleepy	2 sleepytime teabags, not enough sleep last night	leisure, tv	1	True	Home	1.5	0	5	False
+2018-09-02T12:33:39.368333	1535906019.368333	3	neutral	just got out of bed	leisure, feedly, email	2	True	Home	3	1	2.5	False
+2018-09-02T13:47:40.137644	1535910460.137644	2.5	blah	trying to find a good reference for my bangs	leisure	1	True	Home	2	1	2.5	False
+2018-09-02T14:48:39.065945	1535914119.065945	3	inspired	got another intervention from the positive psych MOOC	schoolwork, errands	2	True	Home	3	0	2	False
+2018-09-02T15:57:42.971432	1535918262.971432	3	content	finally working on bamboo mat for bathroom	errands	0	True	Home	3	1	3	False
+2018-09-02T17:01:06.507457	1535922066.507457	2.5	lazy	taking a break	eating, leisure, tv	1	True	Home	2.5	0	3	True
+2018-09-02T18:06:18.922431	1535925978.922431	3	motivated again	took a long enough break	schoolwork	1	True	Home	3	0	3	False
+2018-09-02T19:13:02.613355	1535929982.613355	2.5	still motivated but hungry	didn't eat much today	schoolwork	0	True	Home	3	1	3.5	False
+2018-09-02T20:13:02.613355	1535933582.613355	2.5	lazy	taking a break	eating, leisure, tv	1	True	Home	2.5	0	3.5	False
+2018-09-02T22:13:37.504871	1535940817.504871	3	refreshed	power-walked outside to meet my step count, had a shower afterwards	leisure	1	True	Home	3	0	4	False

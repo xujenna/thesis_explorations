@@ -29,20 +29,26 @@ def checkProductivity():
 
     #save json to file
 
-    newData = data['rows'][-1]
-    print(newData)
+    newData = data['rows']
+
 
     with open('productivity.json', 'r') as f:
         allData = json.load(f)
 
     with open('productivity.json', 'w') as f:
-        allData['rows'].append(newData)
+        for row in newData:
+            if(row not in allData['rows']):
+                allData['rows'].append(row)
+                print(row)
+            else:
+                continue
+                
         json.dump(allData, f, indent=4, sort_keys=True)
 
     # isolate "Efficiency (percent)" value of last array: rows > index number (by hour) > 4
-    rows = data['rows']
-    efficiency = rows[-1][4]
-    print("efficiency score:", efficiency)
+    # rows = data['rows']
+    # efficiency = rows[-1][4]
+    # print("efficiency score:", efficiency)
 
 
 def getChromeActivity():

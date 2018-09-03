@@ -209,13 +209,60 @@ def keylogger():
 		listener.join()
 
 def analyser_every_hour():
-    while True:
-        global log
-        # time.sleep(3600)
-        if (len(log) > 1):
-            analyser()
-        else:
-            time.sleep(3600)
+	while True:
+		global log
+		global dwellTimes
+		global flightTimes
+		global wordcount
+		global charcount
+		global unique_words
+		global backspaceCount
+
+		dateTimeNum = datetime.datetime.now().timestamp()
+		timestamp = datetime.datetime.fromtimestamp(dateTimeNum).isoformat()
+		
+		time.sleep(3600)
+
+		if (len(log) > 1):
+			analyser()
+		else:
+			tone = {}
+			tone["document_tone"] = {"tones" : []}
+			tone["sentences_tone"] = []
+			tone["time"] = timestamp
+			tone["unix_time"] = dateTimeNum
+			tone["word_count"] = wordcount
+			tone["uniqueword_count"] = len(unique_words)
+			tone["uniqueword_ratio"] = len(unique_words) / wordcount
+			tone["char_count"] = charcount
+			tone["backspace_count"] = backspaceCount
+			tone["avg_dwelltime"] = sum(dwellTimes) / len(dwellTimes)
+			tone["avg_flighttime"] = sum(flightTimes) / len(flightTimes)
+
+			with open('logs/log_new.json', 'r') as f:
+				brackets = json.load(f)
+
+			with open('logs/log_new.json', 'w') as f:
+				brackets.append(tone)
+				json.dump(brackets, f, indent=2)
+
+			print("analyzed", log)
+			print("Word Count: ", wordcount)
+			print("Unique Word Count: ", len(unique_words))
+			print("Character Count: ", charcount)
+			print("backspace count: ", backspaceCount)
+			print("Average Dwell Time: ", sum(dwellTimes) / len(dwellTimes))
+			print("Average Flight Time: ", sum(flightTimes) / len(flightTimes))
+
+			log = []
+			dwellTimes = []
+			flightTimes = []
+			wordcount = 0
+			unique_words = []
+			charcount = 0
+			backspaceCount = 0
+
+			time.sleep(3600)
 
 t1 = threading.Thread(target=keylogger)
 t2 = threading.Thread(target=analyser_every_hour)

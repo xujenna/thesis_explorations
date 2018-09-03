@@ -952,7 +952,7 @@ month[11] = "December";
 
 var dataLength = newResponses.length
 var maxDate = newResponses[dataLength-1]['time']
-var maxDateDay = new Date()
+var maxDateDay = new Date(newResponses[dataLength-1]['time'])
 maxDateDay.setDate(maxDate.getDate() - 1)
 
 
@@ -960,7 +960,6 @@ var contextNavBack = d3.select("#viewport-back");
 var contextNavForward = d3.select("#viewport-forward");
 var currentDisplayDate = new Date(parseInt(newResponses[newResponses.length-1].unix_time * 1000));
 var currentDisplayIndex = currentDisplayDate.getMonth();
-
 
 // var firstDate = new Date(1524982083090);
 
