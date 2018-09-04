@@ -38,7 +38,7 @@ def checkProductivity():
     with open('productivity.json', 'w') as f:
 
         for row in newData:
-            if(row[0] not in allData['rows']):
+            if(row not in allData['rows']):
                 allData['rows'].append(row)
                 print(row)
             else:
@@ -79,17 +79,14 @@ def getAffectivaData():
 
     with open('merged_file.json', 'w') as f:
         for obj in affectivaData:
-            if(obj not in allData):
-                # print(affectivaData[obj])
+            if(affectivaData[obj] not in allData):
+                print(affectivaData[obj])
                 allData.append(affectivaData[obj])
             else:
                 continue
         json.dump(allData, f, indent=4, sort_keys=True)
     # with open('new_merged_file.json', 'w+') as f:
     #     json.dump(affectivaData, f, indent=4, sort_keys=True)
-
-    lastTime = list(affectivaData.keys())[-1]
-    print("blinks: ", lastTime)
 
 
 
