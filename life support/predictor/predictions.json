@@ -58,5 +58,113 @@
       "prediction": 3.4,
       "mean_abs_error": 0.3928571428571429
     }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1536022332.646704,
+    "linear_model": {
+      "prediction": 3.228838302040509,
+      "mean_abs_error": 0.22829337952660653
+    },
+    "random_forest": {
+      "prediction": 3.05,
+      "mean_abs_error": 0.39047619047619053
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1536026124.9290302,
+    "linear_model": {
+      "prediction": 2.7976720546048184,
+      "mean_abs_error": 0.24905413157073902
+    },
+    "random_forest": {
+      "prediction": 3.05,
+      "mean_abs_error": 0.38828125
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1536029882.321591,
+    "linear_model": {
+      "prediction": 2.6262743186892017,
+      "mean_abs_error": 0.2222399142984231
+    },
+    "random_forest": {
+      "prediction": 2.5,
+      "mean_abs_error": 0.39296875
+    }
+  },
+  {
+    "actual_mood": 2.0,
+    "time": 1536033533.0235472,
+    "linear_model": {
+      "prediction": 2.3449748526075638,
+      "mean_abs_error": 0.23969328666528594
+    },
+    "random_forest": {
+      "prediction": 2.8,
+      "mean_abs_error": 0.403125
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1536037655.636719,
+    "linear_model": {
+      "prediction": 2.9103775657326096,
+      "mean_abs_error": 0.25425586654579746
+    },
+    "random_forest": {
+      "prediction": 2.95,
+      "mean_abs_error": 0.40546875
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1536075152.135256,
+    "linear_model": {
+      "prediction": 2.7137777051401364,
+      "mean_abs_error": 0.24805200570744235
+    },
+    "random_forest": {
+      "prediction": 2.95,
+      "mean_abs_error": 0.36171875
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1536079138.95355,
+    "linear_model": {
+      "prediction": 2.4667332410277703,
+      "mean_abs_error": 0.26942808076332647
+    },
+    "random_forest": {
+      "prediction": 2.4,
+      "mean_abs_error": 0.38846153846153847
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1536082961.1736119,
+    "linear_model": {
+      "prediction": 3.0653927607306444,
+      "mean_abs_error": 0.24807788338443412
+    },
+    "random_forest": {
+      "prediction": 3.35,
+      "mean_abs_error": 0.4223076923076923
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1536082961.1736119,
+    "linear_model": {
+      "prediction": 3.1272566197218747,
+      "mean_abs_error": 0.24597341794367805
+    },
+    "random_forest": {
+      "prediction": 3.9,
+      "mean_abs_error": 0.4138461538461538
+    }
   }
 ]

@@ -125,7 +125,7 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-04-26T13:34:32.944406	1524764072.944406	2.5	sleepy, grumpy	woke up groggy this am, had fight with k during commute	schoolwork	1	True	Home	2.5	3.5	4.5	False
 2018-04-26T14:56:00.824219	1524768960.824219	2	frustrated	not making any progress	schoolwork	0	True	Home	2	4	4	False
 2018-04-26T16:08:09.079846	1524773289.079846	2.5	bleh	working on final presentation for API of You	schoolwork	1	True	Home	2.5	3	4	False
-2018-04-26T17:09:02.465878	1524776942.465878	3	neutral	just finishing up the blog post for the final	schoolwork	0	True	Home	3	3	3.5	False
+2018-04-26T17:09:02.465878	1524776942.465878	3	neutral	just finishing up the blog post for the final	schoolwork	0	True	Home	3	3.5	3.5	False
 2018-04-26T19:35:47.513196	1524785747.513196	3.5	relieved, hungry	finished presenting final, no longer anxious, got positive feedback	in class	5	False	School	3	2	3.5	True
 2018-04-26T22:03:13.908429	1524794593.908429	4	attentive	at jim's python flyby	leisure, workshop	7	False	School	3	1	4	False
 2018-04-26T23:57:26.985583	1524801446.985583	4.5	motivated	got a lot of good help from jim and k	with k	4	False	Home	4	1.5	4	True
@@ -261,7 +261,7 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-05-25T15:14:49.747166	1527275689.747166	3	neutral	home now, eating and getting ready to meet mo at school	schoolwork, leisure, errands	4	True	Home	3.5	0	1.5	False
 2018-05-25T17:28:34.368058	1527283714.368058	4	cheerful	at school	schoolwork, with friends	6	False	School	4	0	1	False
 2018-05-25T19:07:02.871688	1527289622.871688	3.5	cheerful but hungry	at school, haven't eaten for a while	schoolwork, email	4	False	School	3.5	9	1.5	False
-2018-05-29T12:43:09.578705	1527612189.578705	2.5	anxious, drowsy	woke up early for couple's therapy, k threw a temper tantrum afterward, am avoiding writing an email declining wework interview, am generally procrastinating and unmotivated	leisure, email, eating	3	True	Home	2	3	3.5	True
+2018-05-29T12:43:09.578705	1527612189.578705	2.5	anxious, drowsy	woke up early for couple's therapy, k threw a temper tantrum afterward, am avoiding writing an email declining wework interview, am generally procrastinating and unmotivated	leisure, email, eating	3	True	Home	2	4	3.5	True
 2018-05-29T17:46:04.957384	1527630364.957384	3	lazy	procrastinating unpacking	errands, leisure	1	True	Home	2	0.5	2	True
 2018-05-29T18:48:16.198917	1527634096.198917	3	unfocused but completed my task	woke up early this morning?	errands	0	True	Home	2.5	0	3	True
 2018-05-29T19:49:07.174647	1527637747.174647	2.5	unfocused	wasting time	leisure	1	True	Home	2.5	0	3.5	False
@@ -295,7 +295,7 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-06-04T13:07:09.689390	1528132029.68939	3	a little lazy	taking a break from coursera videos	leisure, studying, feedly	1	True	Home	2.5	0.5	1.5	False
 2018-06-04T14:10:16.359376	1528135816.359376	3	pretty neutral	took a break, had a snack, now back to coursera	feedly, leisure, eating, studying	0	True	Home	3	0	1.5	True
 2018-06-04T15:11:17.590006	1528139477.590006	3.5	accomplished	finally finished unpacking	errands	1	True	Home	4	0	2	False
-2018-06-04T16:12:55.318465	1528143175.318465	3.5	a little restless	wondering what i should do the rest of the day	leisure, tv, eating, errands	2	True	Home	3	1	2	False
+2018-06-04T16:12:55.318465	1528143175.318465	3.5	a little restless	wondering what i should do the rest of the day	leisure, tv, eating, errands	2	True	Home	3	1.5	2	False
 2018-06-04T17:13:50.572441	1528146830.572441	3	fine	just watched some SATC, about to go out	leisure, tv	1	True	Home	3	0.5	1.5	False
 2018-06-04T20:05:11.112045	1528157111.112045	3	tired	went out to run errands	errands, resting	3	True	Home	3	0.5	2.5	False
 2018-06-04T21:07:53.273591	1528160873.273591	3.5	somewhat contemplative, amused	texting with steve, microdosed some old A	chatting	3	True	Home	3	0.5	2.5	False
@@ -416,7 +416,7 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-07-10T00:20:04.023613	1531196404.023613	3	better, hopeful	talked with friends and k	chatting	6	True	Home	1	1.5	4.5	True
 2018-07-10T08:45:40.169110	1531226740.16911	2	tired af	woke up at 6:30am	chatting, resting	2	True	Home	1.5	2.5	4.5	True
 2018-07-10T23:58:17.042089	1531281497.042089	3.5	cheerful	had a nice dinner date and convo with isabella	leisure, tv	2	True	Home	3	1	4	True
-2018-07-11T22:10:16.573051	1531361416.573051	1.5	abandoned, anxious, sad	k doesn't want to talk	leisure, tv, ash stuff	0	True	Home	1	4	3.5	True
+2018-07-11T22:10:16.573051	1531361416.573051	1.5	abandoned, anxious, sad	k doesn't want to talk	leisure, tv, ash stuff	0	True	Home	1	4.5	3.5	True
 2018-07-11T23:12:43.934073	1531365163.934073	1	abandoned, hopeless	maybe this relationship is over	ash stuff	1	True	Home	1	4	3.5	True
 2018-07-12T00:13:43.012613	1531368823.012613	3.5	hopeful again lol	having a productive conversation with k about our problems	chatting, ash stuff	2	True	Home	1.5	2	4.5	True
 2018-07-12T09:14:59.034279	1531401299.034279	3	pretty sleepy	just got up	errands, email	1	True	Home	2	1	4	False
@@ -450,13 +450,13 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-07-24T15:44:39.994635	1532461479.994635	2	tired, languishing again	still working on ash site	ash stuff	1	True	Home	2	2	3.5	True
 2018-07-25T12:46:18.452895	1532537178.452895	2.5	starving, focused	became too obsessed with fixing the ash site since I woke up and haven't eaten	ash stuff	1	True	Home	3.5	1	3	False
 2018-07-25T13:47:28.309243	1532540848.309243	3	a bit unfocused and sleepy	procrastinating on getting ready to go out, slept late last night	leisure, feedly	1	True	Home	2	0	3	True
-2018-07-25T18:05:29.073702	1532556329.073702	2.5	nervous, anxious	just told ash dev that we're using squarespace...	schoolwork, ash stuff, errands	2	True	K Home	3	3	3.5	True
+2018-07-25T18:05:29.073702	1532556329.073702	2.5	nervous, anxious	just told ash dev that we're using squarespace...	schoolwork, ash stuff, errands	2	True	K Home	3	4	3.5	True
 2018-07-25T22:41:58.122484	1532572918.122484	4	cheerful, content	having a good evening with k	leisure, with k	2	False	K Home	3	0.5	4	True
 2018-07-26T00:09:53.466154	1532578193.466154	3	sleepy and unfocused	didn't sleep enough last night, uninterested in doing any work, k is on his new laptop	leisure, feedly	1	False	K Home	1	0	4.5	False
 2018-07-26T13:58:10.927110	1532627890.92711	2.5	betrayed, focused	k lied about stupid shit for no reason, working on my cbt app	schoolwork, eating	1	True	Home	3.5	1	2	True
 2018-07-26T14:58:39.997080	1532631519.99708	2.5	still focused	still working on my cbt app	schoolwork	1	True	Home	3.5	1	2	True
 2018-07-26T17:59:27.296668	1532642367.296668	3.5	cheerful	am on the floor for a bit and having fun	in class, with friends, schoolwork	2	False	School	4	0.5	2	False
-2018-07-26T22:27:06.892689	1532658426.892689	2	a little anxious, unfocussed	I ignored k's chat but am still expecting him to try to talk	leisure, tv, feedly	0	True	Home	2	1	3	True
+2018-07-26T22:27:06.892689	1532658426.892689	2	a little anxious, unfocussed	I ignored k's chat but am still expecting him to try to talk	leisure, tv, feedly	0	True	Home	2	2	3	True
 2018-07-26T23:27:06.892689	1532662026.892689	2.5	focused again	working on app	schoolwork, chatting	1	True	Home	3.5	0.5	3	False
 2018-07-27T00:28:46.981847	1532665726.981847	2	betrayed, disappointed	just when i think we're making progress repairing our relationship, of course there's  always more bullshit	schoolwork	0	True	Home	3	2	3.5	True
 2018-07-27T02:01:10.916176	1532671270.916176	2	sleepy	wasting time watching SATC to distract from my feelings lol	leisure, tv	0	True	Home	1	3	5	True
@@ -492,7 +492,7 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-08-02T16:57:20.440003	1533243440.440003	3.5	cheerfulish	played ping pong with mo at school	leisure, with friends, schoolwork	2	False	School	2	1	3	False
 2018-08-02T17:58:32.244100	1533247112.2441	2	i might be despairing a little bit	the break up	leisure, feedly	1	True	School	1	4	3.5	False
 2018-08-02T22:26:08.979966	1533263168.979966	4	loved and supported	lots of support from my friends today; dan and yina stuffed me with foodd tonight	leisure, tv	4	True	Home	2	1	4	True
-2018-08-02T23:33:00.473536	1533267180.473536	2.5	restless and guilty	binging on SATC again	leisure, tv	1	True	Home	1	1	4.5	True
+2018-08-02T23:33:00.473536	1533267180.473536	2.5	restless and guilty	binging on SATC again	leisure, tv	1	True	Home	1	1.5	4.5	True
 2018-08-03T12:21:47.070256	1533313307.070256	3	fine	taking care of some things online before i meet casey for a museum date	email, errands	4	True	Home	3	1	4	False
 2018-08-03T21:51:14.641815	1533347474.641815	1	lonely, fragile, overwhelmed	terrified by the loss of constant companionship. not sure how to be  alone anymore	leisure, tv, chatting	3	True	Home	0	5	3	True
 2018-08-03T22:54:34.693898	1533351274.693898	3	loved, supported, grateful	was feeling panicky so i contacted a few friends for advice. michelle called and we had a good chat, made plans	chatting	5	True	Home	2	3	3.5	False
@@ -511,7 +511,7 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-08-05T23:49:34.506112	1533527374.506112	3.5	supported and cared for	spending the night at michelle's place because i was panicking	ash stuff, with friends	2	False	Friend Home	3	1	4	False
 2018-08-06T01:20:44.992588	1533532844.992588	3	exhausted	emotional day	ash stuff	1	False	Friend Home	3	2	5	True
 2018-08-06T11:58:16.033140	1533571096.03314	2.5	stunned	just realized that k was codependent, and bailed because I wouldn't let him be this way	email, leisure, chatting	4	True	Friend Home	2	2.5	3	False
-2018-08-06T14:45:42.224695	1533581142.224695	3	pretty okay albeit restless	waiting at the airport for my flight	leisure, feedly, email	2	False	Airport	3	1	3	True
+2018-08-06T14:45:42.224695	1533581142.224695	3	pretty okay albeit restless	waiting at the airport for my flight	leisure, feedly, email	2	False	Airport	3	1.5	3	True
 2018-08-06T20:58:57.704651	1533607137.704651	3.5	supported	parents were okay with breakup, chatting with friends	email, chatting	4	False	Parents Home	3	0	3	False
 2018-08-07T00:14:05.711789	1533618845.711789	3	focused	working on gratitude log	schoolwork	0	False	Parents Home	4	2	5	False
 2018-08-07T01:37:14.193657	1533623834.193657	4	relieved	i thought i deleted all my work, but alex saved me	schoolwork, chatting	1	False	Parents Home	3	3	5	True
@@ -538,7 +538,7 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-08-09T14:44:05.162534	1533843845.162534	3	focused, proud	doing well on project	schoolwork	0	True	Parents Home	3.5	1	2.5	True
 2018-08-09T16:23:43.337939	1533849823.337939	3	still focused	still working on project	schoolwork	3	False	Parents Home	3.5	1	2.5	True
 2018-08-09T17:49:07.966842	1533854947.966842	3.5	excited	talked to dawn on the phone, looking forward to visiting her	chatting, schoolwork	4	False	Parents Home	3	0.5	2.5	False
-2018-08-09T19:59:29.949517	1533862769.949517	3	fine, a little restless	taking a break from work	leisure, tv	3	False	Parents Home	2.5	0	3	False
+2018-08-09T19:59:29.949517	1533862769.949517	3	fine, a little restless	taking a break from work	leisure, tv	3	False	Parents Home	2.5	1	3	False
 2018-08-09T21:02:33.653008	1533866553.653008	3	still okay	chatting and watching SATC	leisure, tv, chatting	5	False	Parents Home	2	0	3	True
 2018-08-10T00:02:17.729514	1533877337.729514	3	focused	suddenly obsessed with getting my CBT app on my portfolio	schoolwork	2	False	Parents Home	3.5	0	4.5	False
 2018-08-10T10:30:01.636332	1533915001.636332	4	excited and terrified	was offered an artist stipend to travel to london and present at mozfest!	email, chatting	4	True	Parents Home	4	2.5	4	False
@@ -570,11 +570,11 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-08-16T00:27:50.127888	1534400870.127888	2.5	blah	watching tv again	leisure, tv	0	False	Friend Home	1.5	0	4.5	True
 2018-08-16T12:08:23.738625	1534442903.738625	3.5	focused	working on viz	schoolwork, with friends	2	False	Friend Home	3.5	0	2.5	True
 2018-08-16T13:08:23.738625	1534446503.738625	3.5	still focused	still working on viz	schoolwork, with friends	2	False	Friend Home	3.5	0	2.5	False
-2018-08-16T14:12:38.585986	1534450358.585986	3	a little restless	finished updating viz, don't want to continue work	schoolwork, leisure, feedly	2	False	Friend Home	2.5	0	3	False
+2018-08-16T14:12:38.585986	1534450358.585986	3	a little restless	finished updating viz, don't want to continue work	schoolwork, leisure, feedly	2	False	Friend Home	2.5	1	3	False
 2018-08-16T21:29:56.217367	1534476596.217367	4	content	had a nice hike and dinner with maryl	leisure, with friends, working out	2	False	Friend Home	3	0	3.5	False
 2018-08-16T22:50:26.951887	1534481426.951887	4	supported	encouragement from friends on fb and over text	leisure, feedly	3	False	Friend Home	3	0	4	True
 2018-08-16T23:51:15.390107	1534485075.390107	3	sleepy	watching tv before bed	leisure, tv	1	False	Friend Home	2	0	5	True
-2018-08-17T11:22:50.628881	1534526570.628881	3	a little restless	don't want to get too deep in the workhole before Maryl gets back	schoolwork, email, leisure, feedly	2	True	Friend Home	3	0	2	False
+2018-08-17T11:22:50.628881	1534526570.628881	3	a little restless	don't want to get too deep in the workhole before Maryl gets back	schoolwork, email, leisure, feedly	2	True	Friend Home	3	1	2	False
 2018-08-17T12:25:38.990113	1534530338.990113	4	cheerful	talking to maryl	errands, with friends	1	False	Friend Home	3	0	2	True
 2018-08-17T14:00:43.051302	1534536043.051302	2	resentful, hurt	got a text this morning from k about my stuff	errands, leisure, tv	1	True	Friend Home	2	3	1.5	True
 2018-08-17T22:33:46.120058	1534566826.120058	2.5	panicking	just realized i fucked up the timestamps for my trackers	schoolwork	2	False	airport	2.5	4.5	2	False
@@ -586,7 +586,7 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-08-19T13:58:25.180659	1534701505.180659	3	pretty good	chatting and planning the day	leisure, chatting	5	True	Home	3	0.5	3	False
 2018-08-19T19:49:08.673179	1534722548.673179	3	good but tired	went to park slope to hang out with jody and iris	leisure, with friends, errands	2	True	Home	2	0	4	True
 2018-08-19T20:50:07.186185	1534726207.186185	2.5	lazy	watching SATC	leisure, tv	0	True	Home	2	0	4	True
-2018-08-19T21:53:52.731291	1534730032.731291	2.5	a little restless	not doing anything in particular	leisure, feedly, errands	0	True	Home	2.5	0	3.5	True
+2018-08-19T21:53:52.731291	1534730032.731291	2.5	a little restless	not doing anything in particular	leisure, feedly, errands	0	True	Home	2.5	1	3.5	True
 2018-08-19T22:55:53.072263	1534733753.072263	4	excited	looking forward to socializing this semester; shroom weekend; barak and gunvor said they might join me in london for mozfest!	leisure, chatting, errands	9	True	Home	3	0	3	True
 2018-08-20T10:41:36.414756	1534776096.414756	3	groggy	just waking up	email, chatting	6	True	Home	3	0	3.5	False
 2018-08-20T11:43:30.699944	1534779810.699944	3	pretty okay, considering i have to see k today	figuring out this datetime conversion stuff	schoolwork, chatting	3	True	Home	3	1	3	False
@@ -632,14 +632,14 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-08-27T16:10:52.826640	1535400652.82664	3	focused	working on viz	schoolwork	1	True	Home	3	0	2.5	True
 2018-08-27T17:15:59.831152	1535404559.831152	2.5	lazy	physically tired from illness	schoolwork, leisure, tv	0	True	Home	2	0	3	True
 2018-08-27T18:17:23.200701	1535408243.200701	3	better	food, rest	leisure, tv, eating, schoolwork	0	True	Home	3	0	2.5	True
-2018-08-27T19:27:29.184676	1535412449.184676	2.5	restless	don't want to work	schoolwork	0	True	Home	2.5	1	2	True
+2018-08-27T19:27:29.184676	1535412449.184676	2.5	restless	don't want to work	schoolwork	0	True	Home	2.5	2	2	True
 2018-08-27T21:27:21.064931	1535419641.064931	3	focused	working on dashboard	schoolwork	0	True	Home	3	0	2.5	True
 2018-08-27T22:28:40.980436	1535423320.980436	3	still focused	still working on dashboard	schoolwork	0	True	Home	3	1	3	True
 2018-08-28T00:05:23.770702	1535429123.770702	2.5	lazy	taking a break from work to watch tv	leisure, tv	0	True	Home	2	0	3.5	True
 2018-08-28T01:35:37.286804	1535434537.286804	2.5	tired, frustrated	it's late and i can't figure out this tabcounter viz	schoolwork	0	True	Home	2.5	0	4	True
 2018-08-28T11:21:49.012380	1535469709.01238	3	neutral	recovering from illness	schoolwork	0	True	Home	3	1	2.5	True
 2018-08-28T14:08:47.854307	1535479727.854307	3	focused, a little weak	still recovering from illness but also a little hungry	schoolwork	3	False	School	3	0	3	True
-2018-08-28T15:38:03.429207	1535485083.429207	2.5	restless	it's too cold at school	schoolwork	1	False	School	2.5	1.5	2.5	True
+2018-08-28T15:38:03.429207	1535485083.429207	2.5	restless	it's too cold at school	schoolwork	1	False	School	2.5	2	2.5	True
 2018-08-28T16:54:55.628147	1535489695.628147	3	focused	took a break outside	schoolwork, leisure	0	False	School	3	0	2	True
 2018-08-28T17:54:55.628147	1535493295.628147	3	focused	working on big viz	schoolwork	1	False	School	3	1	2	False
 2018-08-28T18:54:55.628147	1535496895.628147	3	focused	working on big viz	schoolwork	1	False	School	3	1	2	False
@@ -701,3 +701,12 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-09-03T13:15:45.974271	1535994945.974271	3.5	still focused	trying to get firebase to work for affectiva	schoolwork	1	True	Home	4	2	3.5	False
 2018-09-03T14:30:31.164889	1535999431.164889	3	frantic	trying to finish affectiva thing before i leave	schoolwork, eating	1	True	Home	4	3	4	False
 2018-09-03T19:41:06.711475	1536018066.711475	4	content	had a nice day bouldering with michelle	with friends, eating, washing up, schoolwork, leisure, tv	1	True	Home	4	0	4.5	True
+2018-09-03T20:52:12.646704	1536022332.646704	3.5	lazy	so tired from working out	schoolwork, leisure, tv	1	True	Home	3.5	0	4.5	False
+2018-09-03T21:55:24.929030	1536026124.92903	3	a little lazy and restless	not sure what to do next	schoolwork, cooking	2	True	Home	3	1.5	4	True
+2018-09-03T22:58:02.321591	1536029882.321591	2.5	lazy and unmotivated	still tired from the day	leisure, tv	1	True	Home	2	0.5	4	True
+2018-09-03T23:58:53.023547	1536033533.023547	2	lonely, restless	nothing to do, no one to talk to	schoolwork	0	True	Home	2	1	4.5	True
+2018-09-04T01:07:35.636719	1536037655.636719	2.5	focused	working on google's fitnes api	schoolwork	0	True	Home	3	0.5	4.5	True
+2018-09-04T10:26:27.278147	1536071187.278147	3	content	just woke up	washing up, email	1	True	Home	3.5	0.5	3.5	False
+2018-09-04T11:32:32.135256	1536075152.135256	2.5	a little restless	don't want to shape my google fit data :(	schoolwork	1	True	Home	3	1	3.5	True
+2018-09-04T12:38:58.953550	1536079138.95355	2.5	woozy	shrooms	schoolwork	0	True	Home	2.5	1.5	4.5	False
+2018-09-04T13:42:41.173612	1536082961.173612	3	better	took a break	leisure, tv	1	True	Home	3	0.5	3.5	False

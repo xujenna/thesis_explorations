@@ -159,7 +159,7 @@ while True:
 
     # AFFECTIVA DF
 
-    with open('../../trackers/affectiva/analyses/merged_file.json', 'r') as f:
+    with open('../../trackers/getAPIdata/merged_file.json', 'r') as f:
         affectivaData = json.load(f)
 
     for x in range(0, len(affectivaData)):
@@ -269,12 +269,6 @@ while True:
 
 
 
-
-
-
-
-
-
     #TABCOUNTER
 
     with open('../../trackers/getAPIdata/chromeactivity.json', 'r') as f:
@@ -300,6 +294,47 @@ while True:
     # tabCounterDF.time = tabCounterDF.time.apply(roundTime)
 
 
+
+
+    # google fit
+
+    with open('../../trackers/google_fit/dataset.json', 'r') as f:
+        fitData = json.load(f)
+            
+    def convertTimeToStruct(timestamp):
+        timestamp = time.gmtime(timestamp)
+        return timestamp
+    
+    stepCountCompressed = []
+
+    def extract_fitData(fitData):
+        current_timestamp = int(fitData[0]['endTimeNanos']) / 1e9
+        current_hour = convertTimeToStruct(int(fitData[0]['endTimeNanos']) / 1e9)
+        stepCount = 0
+
+        for d in fitData:
+            dHour = convertTimeToStruct(int(d['endTimeNanos']) / 1e9)
+            if (dHour.tm_year == current_hour.tm_year and dHour.tm_mon == current_hour.tm_mon and dHour.tm_mday == current_hour.tm_mday and dHour.tm_hour == current_hour.tm_hour):
+                stepCount += int(d['value'][0]['intVal'])
+            else:
+                holder = [0] * 2
+                holder[0] = current_timestamp
+    #             holder[1] = current_hour
+                holder[1] = stepCount
+                
+                stepCountCompressed.append(tuple(holder))
+                stepCount = 0
+
+                current_hour = convertTimeToStruct(int(d['endTimeNanos']) / 1e9)
+                current_timestamp = int(d['endTimeNanos']) / 1e9
+
+                stepCount += int(d['value'][0]['intVal'])
+
+    extract_fitData(fitData['point'])
+
+
+    stepCountDF = DataFrame(stepCountCompressed, columns = ['time', 'stepCount'])
+    # exerciseDF.time = exerciseDF.time.apply(convertTimeToUnix)
 
 
 
@@ -344,7 +379,34 @@ while True:
 
 
 
+    #add googlefit
 
+    columns = list(mergedDF.columns) + list(stepCountDF.columns.drop('time'))
+
+    def process_row(row):
+        current_time = row['time']
+
+        output_values = list(row.values)
+
+        #for other_df in result:
+        candidates = stepCountDF[(current_time >= stepCountDF['time']) &
+                                  (((current_time - stepCountDF['time']) / 3600) <= 1.5)]
+        if candidates.empty:
+    #         return None
+            output_values += [0]
+        else:
+            index_of_max = candidates['time'].argmax()
+            candidate = candidates.ix[index_of_max].drop('time')
+            output_values += list(candidate.values)
+        return output_values
+
+    MergedData = []
+    for index, row in mergedDF.iterrows():
+        processed_row = process_row(row)
+        if processed_row is not None:
+            MergedData.append(processed_row)
+
+    newMergedDF = DataFrame(MergedData, columns=columns)
 
 
 
@@ -359,12 +421,12 @@ while True:
 
 
 
-    hourColumn = pd.to_datetime(mergedDF.time, unit='s')
+    hourColumn = pd.to_datetime(newMergedDF.time, unit='s')
     hourColumn = hourColumn.apply(hourOnly)
 
-    mergedDF = mergedDF.assign(time_of_day=pd.Series(hourColumn).values)
+    newMergedDF = newMergedDF.assign(time_of_day=pd.Series(hourColumn).values)
 
-    mergedDF = mergedDF.fillna(0)
+    newMergedDF = newMergedDF.fillna(0)
 
 
 
@@ -377,6 +439,8 @@ while True:
         makePrediction(mergedDF)
         time.sleep(3600)
     elif (previousDFlength == currentDFlength):
+        print(previousDFlength)
+        print(currentDFlength)
         print("waiting 600 seconds")
         time.sleep(600)
 
