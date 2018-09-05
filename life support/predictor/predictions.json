@@ -166,5 +166,101 @@
       "prediction": 3.9,
       "mean_abs_error": 0.4138461538461538
     }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1536087642.961816,
+    "linear_model": {
+      "prediction": 3.0229767241863854,
+      "mean_abs_error": 0.26066812729374644
+    },
+    "random_forest": {
+      "prediction": 3.15,
+      "mean_abs_error": 0.4384615384615385
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1536100146.4222732,
+    "linear_model": {
+      "prediction": 2.780856699263144,
+      "mean_abs_error": 0.2586130768509391
+    },
+    "random_forest": {
+      "prediction": 2.55,
+      "mean_abs_error": 0.3776923076923077
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1536106404.0560179,
+    "linear_model": {
+      "prediction": 2.320890865989025,
+      "mean_abs_error": 0.2680218219596783
+    },
+    "random_forest": {
+      "prediction": 2.6,
+      "mean_abs_error": 0.3623076923076923
+    }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1536110397.6746712,
+    "linear_model": {
+      "prediction": 3.450386931233326,
+      "mean_abs_error": 0.26621083979971766
+    },
+    "random_forest": {
+      "prediction": 3.2,
+      "mean_abs_error": 0.4151515151515151
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1536114022.248075,
+    "linear_model": {
+      "prediction": 2.8718099278072358,
+      "mean_abs_error": 0.25450677326346094
+    },
+    "random_forest": {
+      "prediction": 3.0,
+      "mean_abs_error": 0.3765151515151515
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1536117690.058865,
+    "linear_model": {
+      "prediction": 2.901714980097668,
+      "mean_abs_error": 0.26060630614982566
+    },
+    "random_forest": {
+      "prediction": 2.95,
+      "mean_abs_error": 0.35681818181818176
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1536121336.7141929,
+    "linear_model": {
+      "prediction": 2.3783428286696076,
+      "mean_abs_error": 0.27537916314615385
+    },
+    "random_forest": {
+      "prediction": 2.55,
+      "mean_abs_error": 0.37499999999999994
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1536168504.1542132,
+    "linear_model": {
+      "prediction": 2.5804225026792933,
+      "mean_abs_error": 0.2660608542618128
+    },
+    "random_forest": {
+      "prediction": 3.1,
+      "mean_abs_error": 0.35378787878787876
+    }
   }
 ]

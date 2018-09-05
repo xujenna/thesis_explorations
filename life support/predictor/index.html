@@ -1,0 +1,457 @@
+<html>
+<head>
+  <!DOCTYPE html>
+  <meta charset="utf-8">
+
+  <style type="text/css">
+    /*css to go here*/
+    body {
+      font-family: monospace;
+      font-size: 11px;
+      background-size: cover;
+      background-color:#fff;
+      text-align: center;
+  /*    background-image:url("hour13_cover.png");
+  */
+  }
+
+  svg {
+  /*  border: 1px solid #f0f;
+  */  /*color: white;*/
+      /*fill: white;*/
+      z-index: 100;
+      display:inline;
+      margin:100px;
+  }
+
+  .heading {
+    position:fixed;
+    left:50%;
+    transform: translate(-50%, 0);
+  }
+
+  .title {
+    font-size:15px;
+    font-family:monospace;
+    color:#000;
+    letter-spacing: 1px;
+  }
+
+  .kicker {
+    font-family:roboto;
+    font-size:11px;
+    letter-spacing: 2px;
+    text-align:center;
+    border-bottom: 1px solid white;
+    padding-bottom:4px;
+    display:table;
+    margin:auto;
+    width:inherit;
+    margin-top:40px;
+    margin-bottom:15px;
+    text-decoration: underline;
+  }
+
+
+  .Axis line,
+  .Axis path {
+    fill:none;
+    stroke:silver;
+    stroke-width:1;
+  }
+
+  .axis-labels {
+    text-anchor:middle;
+    font-family:roboto;
+    font-weight:bold;
+    letter-spacing: 2px;
+    font-color:#000;
+  }
+
+  .Axis text {
+    fill: black;
+  }
+
+  .tick line {
+    fill: none;
+    stroke-dasharray: 2px 4px;
+  }
+
+
+  .y-axis-label {
+    margin-left:0px;
+  }
+
+
+  .chart {
+    z-index: 101;
+  }
+
+  .time-title {
+    display:inline;
+  }
+
+  .wrapper {
+    height: 100%;
+    display:inline;
+    margin:20px;
+  }
+
+
+  .tooltip {
+    width: 200px;
+    font-size:12px;
+    font-family:monospace;
+    background:rgba(255,255,255,0.9);
+    padding:5px;
+    line-height:1.25;
+    clear:both;
+    text-align: center;
+  }
+
+
+.container {
+  display:inline;
+}
+
+
+  .n::after {
+    font-size:18px;
+    width: 200px;
+    color: black;
+    content: "\2193";
+    position:absolute;
+    text-align:center;
+    display:block;
+    pointer-events:none;
+    margin-top:5px;
+  }
+
+  .s::before {
+    font-size:18px;
+    width: 200px;
+    color: black;
+    content: "\2191";
+    position:absolute;
+    text-align:center;
+    display:block;
+    pointer-events:none;
+    clear:both;
+    margin-top:-27px;
+  }
+  .hover-line {
+  stroke: black;
+  fill: none;
+  stroke-width: 1px;
+}
+
+  </style>
+
+</head>
+<body>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-time.v1.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+
+
+
+<script>
+
+
+d3.json("predictions.json", function (err, data) {
+    if (err) console.warn(err, "error loading data");
+
+  var margin = {top: 30, right: 100, bottom: 50, left: 40};
+
+  var width = (window.innerWidth -300) - margin.left - margin.right,
+  height = (window.innerHeight * .8) - margin.top - margin.bottom;
+
+
+    var svg = d3.select("body").append("div")
+        .attr("class", "container")
+        .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+        .attr("class", "chart")
+        .style("display", "block");
+
+
+newPredictions = [];
+
+data.forEach(function(d, i) {
+  newPredictions.push(d);
+
+  if(i == data.length -1 ){
+    return;
+  }
+
+  var currentTime = data[i+1]["time"]
+
+  if(d["time"] < (currentTime - 36000)) {
+    var nullTime = currentTime - 36000;
+    var nullItems = {};
+    nullItems["actual_mood"] = null;
+    nullItems["time"] = nullTime;
+    nullItems["linear_model"] = {}
+    nullItems["linear_model"]["prediction"] = null;
+    nullItems["linear_model"]["mean_abs_error"] = null;
+    nullItems["random_forest"] = {}
+    nullItems["random_forest"]["prediction"] = null;
+    nullItems["random_forest"]["mean_abs_error"] = null;
+
+    newPredictions.push(nullItems)
+  }
+})
+
+console.log(newPredictions)
+var length = newPredictions.length - 1;
+
+    var xScale = d3.scaleTime()
+      .range([0,width])
+      .domain([new Date(newPredictions[0]['time'] * 1000), new Date(newPredictions[length]['time'] * 1000)]);
+
+    var yScale = d3.scaleLinear()
+      .range([height, 0])
+      .domain([0, 5]);
+
+var actualMoodArea = d3.area()
+    .x(function(d) {return xScale(d.time* 1000); })
+    .y1(function(d) {return yScale(d.actual_mood); })
+    .y0(yScale(0))
+      .defined(function(d){return d.actual_mood!=null;});
+
+var LMarea = d3.area()
+    .x(function(d) { return xScale(d.time* 1000); })
+    .y1(function(d) { return yScale(d["linear_model"]["prediction"]); })
+    .y0(yScale(0))
+      .defined(function(d){return d["linear_model"]["prediction"]!=null;});
+
+
+var RFarea = d3.area()
+    .x(function(d) { return xScale(d.time* 1000); })
+    .y1(function(d) { return yScale(d.random_forest.prediction); })
+    .y0(yScale(0))
+      .defined(function(d){return d.random_forest.prediction!=null;});
+
+
+  var actualMoodLine = d3.line()
+  .defined(function(d){return d.actual_mood!=null})
+    .x(function(d) {return xScale(d.time* 1000);})
+    .y(function(d){return yScale(d.actual_mood);});
+
+
+var xAxis = d3.axisBottom(xScale)
+  .tickPadding(10)
+  // .tickFormat(d3.timeFormat("%c"))
+  .ticks(4);
+
+
+var yAxis = d3.axisLeft(yScale)
+  .tickPadding(10)
+  .tickSize(-width)
+  .ticks(5);
+
+
+svg.append("g")
+  .attr("class", "Axis")
+  .attr("transform","translate(0, "+(height)+")")
+  .call(xAxis);
+
+svg.append("text")
+  .attr("class", "axis-labels")
+  .attr("transform","rotate(-90)")
+  .attr("y", 25)
+  .attr("x", (0 - width/10))
+  .attr("dy", "-7em")
+  .text("PRODUCTIVITY SCORE")
+  .attr("fill", "silver");
+
+svg.append("g")
+  .attr("class","Axis")
+  .call(yAxis);
+
+svg.append("text")
+    .attr("class", "axis")
+    .attr("y", yScale(newPredictions[newPredictions.length - 1].actual_mood)-10)
+    .attr("x", width + 10)
+    .text("Actual Mood Score");
+
+  // var actualMoodAreaChart = svg.append("path")
+  //   // .data(newProductivity)
+  //   .attr("d", actualMoodArea(newPredictions))
+  //   .attr("fill", "fuchsia")
+  //   .attr("opacity", 0.4);
+
+  var RFareaChart = svg.append("path")
+    // .data(newProductivity)
+    .attr("d", RFarea(newPredictions))
+    .attr("fill", "gold")
+    .attr("opacity", 0.5);
+
+
+  var LMareaChart = svg.append("path")
+    // .data(newProductivity)
+    .attr("d", LMarea(newPredictions))
+    .attr("fill", "cyan")
+    .attr("opacity", 0.35);
+
+
+svg.append("path")
+    .attr("d", actualMoodLine(newPredictions))
+    .attr("stroke", "fuchsia")
+    .attr("stroke-width", 2.5)
+    .attr("fill", "none")
+    .attr("class", "line");
+
+
+  var moodCircles = svg.selectAll(".mood-circle")
+    .data(newPredictions)
+    .enter()
+    .append("circle")
+    .attr("class","mood-circle")
+    .attr("cx", function(d) { return xScale(d.time* 1000)})
+    .attr("r", function(d) {return d.actual_mood == null ? 0 : 4})
+    .attr("cy", function(d) { return yScale(d.actual_mood);})
+    .attr("opacity", 100)
+    .attr("fill", "fuchsia");
+
+// svg.append("text")
+//     .attr("class", "axis")
+//     .attr("y", yScale(newResponses[newResponses.length - 1].morale))
+//     .attr("x", width + 10)
+//     .text("Morale");
+
+// svg.append("path")
+//     .attr("d", moraleLine(newResponses))
+//     .attr("stroke", "gold")
+//     .attr("stroke-width", 1)
+//     .attr("fill", "none")
+//     .attr("class", "line");
+
+
+
+
+// svg.append("text")
+//     .attr("class", "axis")
+//     .attr("y", yScale(newResponses[newResponses.length - 1].stress))
+//     .attr("x", width + 30)
+//     .text("Stress");
+
+// svg.append("path")
+//     .attr("d", stressLine(newResponses))
+//     .attr("stroke", "blue")
+//     .attr("stroke-width", 1)
+//     .attr("fill", "none")
+//     .attr("class", "line");
+
+
+// var moodCircles = svg.selectAll(".mood-circle")
+//   .data(newResponses)
+//   .enter()
+//   .append("circle")
+//   .attr("class","mood-circle")
+//   .attr("cx", function(d) {return xScale(d.time)})
+//   .attr("r", 20)
+//   .attr("cy", function(d) { return yScale(d.mood);})
+//   .attr("opacity",0)
+//   .attr("fill", "magenta");
+
+
+// svg.append("text")
+//     .attr("class", "axis")
+//     .attr("y", yScale(newResponses[newResponses.length - 1].mood))
+//     .attr("x", width + 10)
+//     .text("Mood")
+
+// svg.append("path")
+//   .attr("d", moodLine(newResponses))
+//   .attr("stroke", "magenta")
+//   .attr("stroke-width", 1)
+//   .attr("fill", "none")
+//   .attr("class", "line");
+
+
+
+// Hover line.
+var hoverLineGroup = svg.append("g")
+          .attr("class", "hover-line");
+var hoverLine = hoverLineGroup
+  .append("line")
+    .attr("y1", 50).attr("y2", height);
+
+// Hide hover line by default.
+hoverLineGroup.style("opacity", 1e-6);
+
+
+svg.selectAll("circle")
+.attr("cursor", "pointer")
+
+.on("mouseover", function(d) {
+  console.log(d)
+  d3.select("body")
+
+  svg.append("g")
+  .attr("class", "hoverLabels")
+  .append("text")
+  .attr("x", xScale(d.time * 1000) + 12)
+  .attr("y", yScale(d.actual_mood))
+
+  // .attr("y", 58)
+  .text("Actual Mood: " + d.actual_mood);
+    // svg.append("circle")
+    // .attr("class","hover-circle")
+    // .attr("cx", xScale(d.time* 1000))
+    // .attr("r", d.actual_mood == null ? 0 : 4)
+    // .attr("cy", yScale(d.actual_mood))
+    // .attr("opacity", 100)
+    // .attr("fill", "fuchsia")
+  svg.append("g")
+  .attr("class", "hoverLabels")
+  .append("text")
+  .attr("x", xScale(d.time * 1000) + 12)
+  .attr("y", yScale(d.linear_model.prediction))
+  // .attr("y", 76)
+  .text("Linear Model Prediction: " + d.linear_model.prediction);
+  svg.append("circle")
+    .attr("class","hover-circle")
+    .attr("cx", xScale(d.time* 1000))
+    .attr("r", d.linear_model.prediction == null ? 0 : 4)
+    .attr("cy", yScale(d.linear_model.prediction))
+    .attr("opacity", 100)
+    .attr("fill", "cyan")
+  svg.append("g")
+  .attr("class", "hoverLabels")
+  .append("text")
+  .attr("x", xScale(d.time * 1000) + 12)
+  // .attr("y", 92)
+    .attr("y", yScale(d.random_forest.prediction))
+  .text("Random Forest Prediction: " + d.random_forest.prediction);
+    svg.append("circle")
+    .attr("class","hover-circle")
+    .attr("cx", xScale(d.time* 1000))
+    .attr("r", d.random_forest.prediction == null ? 0 : 4)
+    .attr("cy", yScale(d.random_forest.prediction))
+    .attr("opacity", 100)
+    .attr("fill", "gold")
+  hoverLine.attr("x1", xScale(d.time * 1000)).attr("x2", xScale(d.time * 1000));
+ hoverLineGroup.style("opacity", 1);
+})
+
+
+d3.select("body")
+    .on("mouseout", function(d) {
+    // tip.hide(d);
+        hoverLineGroup.style("opacity", 1e-6);
+
+    d3.selectAll(".hover-circle").remove();
+    d3.selectAll(".hoverLabels").remove();
+  });
+
+});
+
+</script>
+
+</body>

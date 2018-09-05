@@ -710,3 +710,13 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-09-04T11:32:32.135256	1536075152.135256	2.5	a little restless	don't want to shape my google fit data :(	schoolwork	1	True	Home	3	1	3.5	True
 2018-09-04T12:38:58.953550	1536079138.95355	2.5	woozy	shrooms	schoolwork	0	True	Home	2.5	1.5	4.5	False
 2018-09-04T13:42:41.173612	1536082961.173612	3	better	took a break	leisure, tv	1	True	Home	3	0.5	3.5	False
+2018-09-04T15:00:42.961816	1536087642.961816	3.5	accomplished	finally finished this google fit thing	schoolwork, leisure	2	True	Home	3.5	1	3	False
+2018-09-04T18:29:06.422273	1536100146.422273	2.5	exhausted	walked for too long in the heat	leisure, tv	2	True	Home	2	1.5	4.5	True
+2018-09-04T20:13:24.056018	1536106404.056018	2.5	headache	still sick from the heat	leisure, tv	2	True	Home	2	2	4.5	False
+2018-09-04T21:19:57.674671	1536110397.674671	3.5	better, cheerful	chatting with friends and flirting with some dudes	chatting, ash stuff	5	True	Home	3	1	4	False
+2018-09-04T22:20:22.248075	1536114022.248075	3	focused	working on ML viz	schoolwork	2	True	Home	3	0.5	3.5	False
+2018-09-04T23:21:30.058865	1536117690.058865	3	still focused	still working on ML viz	schoolwork	2	True	Home	3	0.5	3.5	True
+2018-09-05T00:22:16.714193	1536121336.714193	2.5	focused, sleepy	still working on viz, had an edible and sleeptime tea	schoolwork	1	True	Home	2	0	4.5	False
+2018-09-05T10:30:30.427460	1536157830.42746	3	content	just woke up	washing up, email	2	True	Home	3	0.5	2.5	False
+2018-09-05T11:31:19.917076	1536161479.917076	2.5	nervous	need to go to first class of the semester, but it's so hot	  schoolwork	0	True	Home	3	2	3	False
+2018-09-05T13:28:24.154213	1536168504.154213	3	neutral	sitting in class	in class	4	False	School	3	0.5	2.5	False
