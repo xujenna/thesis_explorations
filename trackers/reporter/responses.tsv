@@ -720,3 +720,13 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-09-05T10:30:30.427460	1536157830.42746	3	content	just woke up	washing up, email	2	True	Home	3	0.5	2.5	False
 2018-09-05T11:31:19.917076	1536161479.917076	2.5	nervous	need to go to first class of the semester, but it's so hot	  schoolwork	0	True	Home	3	2	3	False
 2018-09-05T13:28:24.154213	1536168504.154213	3	neutral	sitting in class	in class	4	False	School	3	0.5	2.5	False
+2018-09-05T14:39:39.880757	1536172779.880757	3	neutral	still in class	in class	4	False	School	3	1	2	True
+2018-09-05T17:38:08.992717	1536183488.992717	3.5	proud	was able to help effy with d3	schoolwork, with friends	1	False	School, library	4	0.5	3	True
+2018-09-05T18:39:46.269256	1536187186.269256	2.5	restless	feeling lonely, not sure what to work on next	schoolwork	0	False	School, Library	2.5	2.5	3	True
+2018-09-05T19:52:43.294838	1536191563.294838	3	focused	working on script	schoolwork	0	False	School, Library	3	1.5	3.5	False
+2018-09-05T21:56:17.796859	1536198977.796859	3	focused	working on video	schoolwork	1	True	Home	3	0.5	4	False
+2018-09-05T22:57:35.829594	1536202655.829594	3	neutral	watching tv	leisure, tv	0	True	Home	3	0.5	4	True
+2018-09-06T00:00:37.740467	1536206437.740467	3	neutral	watching tv and finishing up the application	leisure, tv, schoolwork	0	True	Home	3	0.5	4	False
+2018-09-06T10:07:59.211142	1536242879.211142	3	neutral	just woke up	washing up, email	0	True	Home	3	1	2.5	False
+2018-09-06T12:11:52.749098	1536250312.749098	3	tired	just walked to school on a 90+ degree day	i in class	1	False	School	3	2	3.5	False
+2018-09-06T15:38:56.344285	1536262736.344285	3.5	cheerful	chatting with friends	chatting, with friends, eating	7	False	School	3	1	3	False

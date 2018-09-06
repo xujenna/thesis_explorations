@@ -262,5 +262,89 @@
       "prediction": 3.1,
       "mean_abs_error": 0.35378787878787876
     }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1536183488.992717,
+    "linear_model": {
+      "prediction": 3.971248605244276,
+      "mean_abs_error": 0.23508172740304276
+    },
+    "random_forest": {
+      "prediction": 3.9,
+      "mean_abs_error": 0.3485074626865671
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1536187186.269256,
+    "linear_model": {
+      "prediction": 2.096979427949825,
+      "mean_abs_error": 0.2239811185947151
+    },
+    "random_forest": {
+      "prediction": 2.5,
+      "mean_abs_error": 0.341044776119403
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1536191563.2948382,
+    "linear_model": {
+      "prediction": 2.6889772039303486,
+      "mean_abs_error": 0.22058297992247
+    },
+    "random_forest": {
+      "prediction": 3.1,
+      "mean_abs_error": 0.344776119402985
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1536202655.829594,
+    "linear_model": {
+      "prediction": 3.005055298336183,
+      "mean_abs_error": 0.2569027418535171
+    },
+    "random_forest": {
+      "prediction": 3.0,
+      "mean_abs_error": 0.3194029850746269
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1536206437.740467,
+    "linear_model": {
+      "prediction": 2.9548110403557972,
+      "mean_abs_error": 0.2213646520638799
+    },
+    "random_forest": {
+      "prediction": 2.85,
+      "mean_abs_error": 0.33235294117647063
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1536250312.749098,
+    "linear_model": {
+      "prediction": 2.6014239788292848,
+      "mean_abs_error": 0.24249423202496215
+    },
+    "random_forest": {
+      "prediction": 3.35,
+      "mean_abs_error": 0.3308823529411765
+    }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1536262736.344285,
+    "linear_model": {
+      "prediction": 4.269863663270939,
+      "mean_abs_error": 0.24216154970536566
+    },
+    "random_forest": {
+      "prediction": 4.05,
+      "mean_abs_error": 0.36397058823529405
+    }
   }
 ]

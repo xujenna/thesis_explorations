@@ -144,7 +144,17 @@
   fill: none;
   stroke-width: 1px;
 }
-
+  .description-key{
+    font-family: europa, sans-serif;
+    font-size:10px;
+    text-transform: uppercase;
+    text-align:left;
+    width:17%;
+    vertical-align: top;
+    position:fixed;
+    right:100px;
+    margin-top: 150px;    
+  }
   </style>
 
 </head>
@@ -152,10 +162,15 @@
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://d3js.org/d3-time.v1.min.js"></script>
   <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/fao6qlb.css">
 
 
 
-
+      <div class="description-key">
+        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span> Actual Mood Score</p>
+        <p><span style="color:rgb(0, 255, 255)">&block; &nbsp;</span> Linear Model Prediction</p>
+        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span> Random Forest Prediction</p>
+    </div>
 <script>
 
 
@@ -164,8 +179,8 @@ d3.json("predictions.json", function (err, data) {
 
   var margin = {top: 30, right: 100, bottom: 50, left: 40};
 
-  var width = (window.innerWidth -300) - margin.left - margin.right,
-  height = (window.innerHeight * .8) - margin.top - margin.bottom;
+  var width = (window.innerWidth -250) - margin.left - margin.right,
+  height = (window.innerHeight * .75) - margin.top - margin.bottom;
 
 
     var svg = d3.select("body").append("div")
@@ -273,11 +288,11 @@ svg.append("g")
   .attr("class","Axis")
   .call(yAxis);
 
-svg.append("text")
-    .attr("class", "axis")
-    .attr("y", yScale(newPredictions[newPredictions.length - 1].actual_mood)-10)
-    .attr("x", width + 10)
-    .text("Actual Mood Score");
+// svg.append("text")
+//     .attr("class", "axis")
+//     .attr("y", yScale(newPredictions[newPredictions.length - 1].actual_mood)-10)
+//     .attr("x", width + 10)
+//     .text("Actual Mood Score");
 
   // var actualMoodAreaChart = svg.append("path")
   //   // .data(newProductivity)
@@ -397,10 +412,9 @@ svg.selectAll("circle")
   .attr("class", "hoverLabels")
   .append("text")
   .attr("x", xScale(d.time * 1000) + 12)
-  .attr("y", yScale(d.actual_mood))
-
-  // .attr("y", 58)
-  .text("Actual Mood: " + d.actual_mood);
+  // .attr("y", yScale(d.actual_mood))
+  .attr("y", 58)
+  .text("Actual Mood Score: " + d.actual_mood);
     // svg.append("circle")
     // .attr("class","hover-circle")
     // .attr("cx", xScale(d.time* 1000))
@@ -412,8 +426,8 @@ svg.selectAll("circle")
   .attr("class", "hoverLabels")
   .append("text")
   .attr("x", xScale(d.time * 1000) + 12)
-  .attr("y", yScale(d.linear_model.prediction))
-  // .attr("y", 76)
+  // .attr("y", yScale(d.linear_model.prediction))
+  .attr("y", 76)
   .text("Linear Model Prediction: " + d.linear_model.prediction);
   svg.append("circle")
     .attr("class","hover-circle")
@@ -426,8 +440,8 @@ svg.selectAll("circle")
   .attr("class", "hoverLabels")
   .append("text")
   .attr("x", xScale(d.time * 1000) + 12)
-  // .attr("y", 92)
-    .attr("y", yScale(d.random_forest.prediction))
+  .attr("y", 92)
+    // .attr("y", yScale(d.random_forest.prediction))
   .text("Random Forest Prediction: " + d.random_forest.prediction);
     svg.append("circle")
     .attr("class","hover-circle")
