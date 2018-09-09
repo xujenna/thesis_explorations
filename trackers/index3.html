@@ -1385,7 +1385,7 @@ var productivityArea = d3.area()
       .defined(function(d){return d[4]!=null;});
 
 
-d3.json("affectiva/analyses/merged_file.json", function (err, affectiva) {
+d3.json("getAPIdata/merged_file.json", function (err, affectiva) {
   d3.json("getAPIdata/productivity.json", function(err, rescuetime){
       if (err) console.warn(err, "error loading data");
 

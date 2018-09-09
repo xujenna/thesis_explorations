@@ -95,11 +95,11 @@
       var time = Date.now();
       newobject["time"] = time;
       var emojiArray = []
-      var valence = 0;
-      var engagement = 0
-      var attention = 0
-      var counter = 0
-      var blinks = 0
+      var valence = [];
+      var engagement = [];
+      var attention = [];
+      var counter = 0;
+      var blinks = 0;
 
       //Add a callback to notify when the detector is initialized and ready for runing.
       detector.addEventListener("onInitializeSuccess", function() {
@@ -184,9 +184,9 @@
       if (bigEvent) {
         var emoji = faces[0].emojis["dominantEmoji"];
         emojiArray.push(emoji)
-        valence += faces[0].emotions["valence"];
-        engagement += faces[0].emotions["engagement"];
-        attention += faces[0].expressions["attention"]
+        valence.push(faces[0].emotions["valence"]);
+        engagement.push(faces[0].emotions["engagement"]);
+        attention.push(faces[0].expressions["attention"]);
         counter +=1;
 
 
@@ -280,11 +280,23 @@ firebase.initializeApp(config);
       emotionsobj = new Set(emotionsobj);
       emojiArray = new Set(emojiArray)
 
+      const reducer = (accumulator, currentValue) => accumulator + currentValue;
+      
+      if(blinks > 40){
+        blinks = Math.sqrt(blinks)
+      }
+
       newobject["time"] = Date.now();
       newobject["emoji"] = Array.from(emojiArray);
-      newobject["avg_valence"] = valence / counter;
-      newobject["avg_engagement"] = engagement / counter;
-      newobject["avg_attention"] = attention / counter;
+      newobject["max_valence"] = Math.max(...valence);
+      newobject["min_valence"] = Math.min(...valence);
+      newobject["avg_valence"] = valence.reduce(reducer) / valence.length;
+      newobject["max_engagement"] = Math.max(...engagement);
+      newobject["min_engagement"] = Math.min(...engagement);
+      newobject["avg_engagement"] = engagement.reduce(reducer) / engagement.length;
+      newobject["max_attention"] = Math.max(...attention);
+      newobject["min_attention"] = Math.min(...attention);
+      newobject["avg_attention"] = attention.reduce(reducer) / attention.length;
       newobject["blinks"] = blinks;
       newobject["emotions"] = Array.from(emotionsobj);
 

@@ -109,10 +109,12 @@ def on_press(key):
 			print(log)
 			print("current char count: ", charcount)
 			print("current word count: ", wordcount)
-			print("current unique word count: ", len(unique_words))
+			if(len(unique_words) > 0):
+				print("current unique word count: ", len(unique_words))
 			if(len(flightTimes) > 0):
 				print("current avg flight time: ", sum(flightTimes) / len(flightTimes))
-			print("current avg dwell time: ", sum(dwellTimes) / len(dwellTimes))
+			if(len(dwellTimes) > 0):
+				print("current avg dwell time: ", sum(dwellTimes) / len(dwellTimes))
 			print("backspace count: ", backspaceCount)
 
 			current_wordcount = 0
@@ -223,9 +225,9 @@ def analyser_every_hour():
 		
 		time.sleep(3600)
 
-		if (len(log) > 1):
+		if (len(log) >= 1):
 			analyser()
-		else:
+		elif (len(log) == 0):
 			tone = {}
 			tone["document_tone"] = {"tones" : []}
 			tone["sentences_tone"] = []
@@ -233,11 +235,22 @@ def analyser_every_hour():
 			tone["unix_time"] = dateTimeNum
 			tone["word_count"] = wordcount
 			tone["uniqueword_count"] = len(unique_words)
-			tone["uniqueword_ratio"] = len(unique_words) / wordcount
+			if(wordcount == 0):
+				tone["uniqueword_ratio"] = 0
+			else:
+				tone["uniqueword_ratio"] = len(unique_words) / wordcount
 			tone["char_count"] = charcount
 			tone["backspace_count"] = backspaceCount
-			tone["avg_dwelltime"] = sum(dwellTimes) / len(dwellTimes)
-			tone["avg_flighttime"] = sum(flightTimes) / len(flightTimes)
+
+			if(len(dwellTimes) == 0):
+				tone["avg_dwelltime"] = 0
+			else:
+				tone["avg_dwelltime"] = sum(dwellTimes) / len(dwellTimes)
+
+			if(len(flightTimes) == 0):
+				tone["avg_flighttime"] = 0
+			else:
+				tone["avg_flighttime"] = sum(flightTimes) / len(flightTimes)
 
 			with open('logs/log_new.json', 'r') as f:
 				brackets = json.load(f)

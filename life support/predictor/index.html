@@ -155,6 +155,22 @@
     right:100px;
     margin-top: 150px;    
   }
+
+  #next-link {
+    display:none;
+  
+  }
+
+  #prev-link{
+    display:inline-block;
+  }
+
+  #current-range {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
   </style>
 
 </head>
@@ -164,7 +180,10 @@
   <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
   <link rel="stylesheet" href="https://use.typekit.net/fao6qlb.css">
 
+<div class="predictions-nav" id="current-range"></div>
 
+<div class="predictions-nav" id="prev-link">◂ Prev Day</div>
+<div class="predictions-nav" id="next-link">Next Day ▸</div>
 
       <div class="description-key">
         <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span> Actual Mood Score</p>
@@ -183,7 +202,7 @@ d3.json("predictions.json", function (err, data) {
   height = (window.innerHeight * .75) - margin.top - margin.bottom;
 
 
-    var svg = d3.select("body").append("div")
+    var MLsvg = d3.select("body").append("div")
         .attr("class", "container")
         .append("svg")
           .attr("width", width + margin.left + margin.right)
@@ -195,18 +214,47 @@ d3.json("predictions.json", function (err, data) {
 
 
 newPredictions = [];
+nullPoints = [];
+
+data.forEach(function(d,i){
+  d.time = d.time * 1000;
+})
+
+
+  var nullTime = data[0]['time'] - 360000;
+  var nullItems = {};
+  nullItems["actual_mood"] = null;
+  nullItems["time"] = nullTime;
+  nullItems["linear_model"] = {}
+  nullItems["linear_model"]["prediction"] = null;
+  nullItems["linear_model"]["mean_abs_error"] = null;
+  nullItems["random_forest"] = {}
+  nullItems["random_forest"]["prediction"] = null;
+  nullItems["random_forest"]["mean_abs_error"] = null;
+
+ nullPoints.push(nullItems)
 
 data.forEach(function(d, i) {
   newPredictions.push(d);
 
-  if(i == data.length -1 ){
+  if(i == data.length -1){
+    var nullItems2 = {};
+    nullItems2["actual_mood"] = null;
+    nullItems2["time"] = data[i]["time"] + 360000;
+    nullItems2["linear_model"] = {}
+    nullItems2["linear_model"]["prediction"] = null;
+    nullItems2["linear_model"]["mean_abs_error"] = null;
+    nullItems2["random_forest"] = {}
+    nullItems2["random_forest"]["prediction"] = null;
+    nullItems2["random_forest"]["mean_abs_error"] = null;
+    nullPoints.push(nullItems2)
     return;
   }
 
   var currentTime = data[i+1]["time"]
 
-  if(d["time"] < (currentTime - 36000)) {
-    var nullTime = currentTime - 36000;
+  if(d["time"] < (currentTime - 36000000)) {
+    nullTime = currentTime - 360000;
     var nullItems = {};
     nullItems["actual_mood"] = null;
     nullItems["time"] = nullTime;
@@ -217,65 +265,213 @@ data.forEach(function(d, i) {
     nullItems["random_forest"]["prediction"] = null;
     nullItems["random_forest"]["mean_abs_error"] = null;
 
+    var nullItems2 = {};
+    nullItems2["actual_mood"] = null;
+    nullItems2["time"] = data[i]["time"] + 360000;
+    nullItems2["linear_model"] = {}
+    nullItems2["linear_model"]["prediction"] = null;
+    nullItems2["linear_model"]["mean_abs_error"] = null;
+    nullItems2["random_forest"] = {}
+    nullItems2["random_forest"]["prediction"] = null;
+    nullItems2["random_forest"]["mean_abs_error"] = null;
+
+    newPredictions.push(nullItems2)
     newPredictions.push(nullItems)
+    nullPoints.push(nullItems2)
+    nullPoints.push(nullItems)
   }
 })
 
-console.log(newPredictions)
+
+
 var length = newPredictions.length - 1;
 
-    var xScale = d3.scaleTime()
-      .range([0,width])
-      .domain([new Date(newPredictions[0]['time'] * 1000), new Date(newPredictions[length]['time'] * 1000)]);
+var domainMax = new Date(nullPoints[nullPoints.length - 1]['time']);
+var domainMin = new Date(nullPoints[nullPoints.length - 2]['time']);
 
-    var yScale = d3.scaleLinear()
-      .range([height, 0])
-      .domain([0, 5]);
+var MLxScale = d3.scaleTime()
+  .range([0,width])
+  .domain([domainMin, domainMax]);
+
+var MLyScale = d3.scaleLinear()
+  .range([height, 0])
+  .domain([1.5, 5]);
+
+var domainMaxStr = domainMax.toString().slice(3, -20)
+var domainMinStr = domainMin.toString().slice(3, -20)
+var predictions_nav_prev = d3.select("#prev-link");
+var predictions_nav_next = d3.select("#next-link");
+var currentRange = d3.select("#current-range")
+var currentNullMin = nullPoints.length -2
+currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
+
+
+predictions_nav_prev
+.style("cursor", "pointer")
+.on("mousedown", function(d){
+
+  if(nullPoints[currentNullMin - 2] == null){
+    predictions_nav_prev.style("display", "none")
+  }
+  else {
+    predictions_nav_next.style("display", "inline-block")
+    predictions_nav_prev.style("display", "inline-block")
+
+    currentNullMin = currentNullMin-2;
+  domainMax = new Date(nullPoints[currentNullMin + 1]['time'])
+  domainMin = new Date(nullPoints[currentNullMin]['time'])
+  MLxScale.domain([domainMin, domainMax])
+
+  currentRange = d3.select("#current-range")
+  domainMaxStr = domainMax.toString().slice(3, -20)
+  domainMinStr = domainMin.toString().slice(3, -20)
+
+  currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
+
+  RFareaChart.attr("d", RFarea(newPredictions));
+  LMareaChart.attr("d", LMarea(newPredictions));
+  LMlineChart.attr("d", LMline(newPredictions));
+  RFlineChart.attr("d", RFline(newPredictions));
+  actualMoodChart.attr("d", actualMoodLine(newPredictions))
+  actualMoodCircles.attr("cx", function(d) { return MLxScale(d.time)}).attr("cy", function(d) { return MLyScale(d.actual_mood);})
+
+  MLxAxisGroup.call(MLxAxis)
+
+  if(nullPoints[currentNullMin - 2] == null){
+    predictions_nav_prev.style("display", "none")
+
+  }
+  }
+
+})
+
+predictions_nav_next
+.style("cursor", "pointer")
+.on("mousedown", function(d){
+
+  if(nullPoints[currentNullMin + 2] == null){
+    predictions_nav_next.style("display", "none")
+  }
+  else {
+    predictions_nav_next.style("display", "inline-block")
+    predictions_nav_prev.style("display", "inline-block")
+
+  currentNullMin = currentNullMin+2;
+
+
+  domainMax = new Date(nullPoints[currentNullMin + 1]['time'])
+  domainMin = new Date(nullPoints[currentNullMin]['time'])
+  MLxScale.domain([domainMin, domainMax])
+
+  currentRange = d3.select("#current-range")
+  domainMaxStr = domainMax.toString().slice(3, -20)
+  domainMinStr = domainMin.toString().slice(3, -20)
+
+  currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
+
+  RFareaChart.attr("d", RFarea(newPredictions));
+  LMareaChart.attr("d", LMarea(newPredictions));
+  LMlineChart.attr("d", LMline(newPredictions));
+  RFlineChart.attr("d", RFline(newPredictions));
+  actualMoodChart.attr("d", actualMoodLine(newPredictions))
+  actualMoodCircles.attr("cx", function(d) { return MLxScale(d.time)}).attr("cy", function(d) { return MLyScale(d.actual_mood);})
+
+  MLxAxisGroup.call(MLxAxis)
+
+
+   if(nullPoints[currentNullMin + 2] == null){
+    predictions_nav_next.style("display", "none")
+
+  }
+}
+
+})
+// predictions_nav_next.text("◂ " + new Date(nullPoints[currentNullMin - 1]['time']))
+// .style("cursor", "pointer")
+// .on("mousedown", function(d){
+//   currentNullMin = currentNullMin-2;
+
+//   if(currentNullMin >= 0){
+//     predictions_nav_prev.text("◂ " + new Date(nullPoints[currentNullMin - 1]['time']))
+//     predictions_nav_next.text(new Date(nullPoints[currentNullMin + 1]['time']) + " ▸")
+//   }
+//   else {
+//     predictions_nav_prev.text(" ")
+//     predictions_nav_next.text(new Date(nullPoints[currentNullMin + 1]['time']) + " ▸")
+//   }
+
+//   domainMax = new Date(nullPoints[currentNullMin + 1]['time'])
+//   domainMin = new Date(nullPoints[currentNullMin]['time'])
+//   MLxScale.domain([domainMin, domainMax])
+
+//   console.log(domainMax)
+//   console.log(domainMin)
+
+//   RFareaChart.attr("d", RFarea(newPredictions));
+//   LMareaChart.attr("d", LMarea(newPredictions));
+//   LMlineChart.attr("d", LMline(newPredictions));
+//   RFlineChart.attr("d", RFline(newPredictions));
+//   actualMoodChart.attr("d", actualMoodLine(newPredictions))
+//   actualMoodCircles.attr("cx", function(d) { return MLxScale(d.time)}).attr("cy", function(d) { return MLyScale(d.actual_mood);})
+
+// })
+
 
 var actualMoodArea = d3.area()
-    .x(function(d) {return xScale(d.time* 1000); })
-    .y1(function(d) {return yScale(d.actual_mood); })
-    .y0(yScale(0))
+    .x(function(d) {return MLxScale(d.time); })
+    .y1(function(d) {return MLyScale(d.actual_mood); })
+    .y0(MLyScale(0))
       .defined(function(d){return d.actual_mood!=null;});
 
 var LMarea = d3.area()
-    .x(function(d) { return xScale(d.time* 1000); })
-    .y1(function(d) { return yScale(d["linear_model"]["prediction"]); })
-    .y0(yScale(0))
+    .x(function(d) { return MLxScale(d.time); })
+    .y1(function(d) { return MLyScale(d["linear_model"]["prediction"]); })
+    .y0(function(d) {return MLyScale(d.actual_mood);})
       .defined(function(d){return d["linear_model"]["prediction"]!=null;});
 
 
 var RFarea = d3.area()
-    .x(function(d) { return xScale(d.time* 1000); })
-    .y1(function(d) { return yScale(d.random_forest.prediction); })
-    .y0(yScale(0))
+    .x(function(d) { return MLxScale(d.time); })
+    .y1(function(d) { return MLyScale(d.random_forest.prediction); })
+    .y0(function(d) {return MLyScale(d.actual_mood);})
       .defined(function(d){return d.random_forest.prediction!=null;});
 
 
   var actualMoodLine = d3.line()
   .defined(function(d){return d.actual_mood!=null})
-    .x(function(d) {return xScale(d.time* 1000);})
-    .y(function(d){return yScale(d.actual_mood);});
+    .x(function(d) {return MLxScale(d.time);})
+    .y(function(d){return MLyScale(d.actual_mood);});
+
+  var LMline = d3.line()
+  .defined(function(d){return d["linear_model"]["prediction"]!=null})
+    .x(function(d) {return MLxScale(d.time);})
+    .y(function(d){return MLyScale(d["linear_model"]["prediction"]);});
 
 
-var xAxis = d3.axisBottom(xScale)
+  var RFline = d3.line()
+  .defined(function(d){return d.random_forest.prediction!=null})
+    .x(function(d) {return MLxScale(d.time);})
+    .y(function(d){return MLyScale(d.random_forest.prediction);});
+
+
+var MLxAxis = d3.axisBottom(MLxScale)
   .tickPadding(10)
   // .tickFormat(d3.timeFormat("%c"))
   .ticks(4);
 
 
-var yAxis = d3.axisLeft(yScale)
+var MLyAxis = d3.axisLeft(MLyScale)
   .tickPadding(10)
   .tickSize(-width)
   .ticks(5);
 
 
-svg.append("g")
+var MLxAxisGroup = MLsvg.append("g")
   .attr("class", "Axis")
   .attr("transform","translate(0, "+(height)+")")
-  .call(xAxis);
+  .call(MLxAxis);
 
-svg.append("text")
+MLsvg.append("text")
   .attr("class", "axis-labels")
   .attr("transform","rotate(-90)")
   .attr("y", 25)
@@ -284,37 +480,51 @@ svg.append("text")
   .text("PRODUCTIVITY SCORE")
   .attr("fill", "silver");
 
-svg.append("g")
+MLsvg.append("g")
   .attr("class","Axis")
-  .call(yAxis);
+  .call(MLyAxis);
 
-// svg.append("text")
+// MLsvg.append("text")
 //     .attr("class", "axis")
-//     .attr("y", yScale(newPredictions[newPredictions.length - 1].actual_mood)-10)
+//     .attr("y", MLyScale(newPredictions[newPredictions.length - 1].actual_mood)-10)
 //     .attr("x", width + 10)
 //     .text("Actual Mood Score");
 
-  // var actualMoodAreaChart = svg.append("path")
+  // var actualMoodAreaChart = MLsvg.append("path")
   //   // .data(newProductivity)
   //   .attr("d", actualMoodArea(newPredictions))
   //   .attr("fill", "fuchsia")
   //   .attr("opacity", 0.4);
 
-  var RFareaChart = svg.append("path")
+  var RFareaChart = MLsvg.append("path")
     // .data(newProductivity)
     .attr("d", RFarea(newPredictions))
     .attr("fill", "gold")
-    .attr("opacity", 0.5);
+    .attr("opacity", 0.3);
 
 
-  var LMareaChart = svg.append("path")
+  var LMareaChart = MLsvg.append("path")
     // .data(newProductivity)
     .attr("d", LMarea(newPredictions))
     .attr("fill", "cyan")
-    .attr("opacity", 0.35);
+    .attr("opacity", 0.25);
 
 
-svg.append("path")
+var LMlineChart = MLsvg.append("path")
+    .attr("d", LMline(newPredictions))
+    .attr("stroke", "cyan")
+    .attr("stroke-width", 2)
+    .attr("fill", "none")
+    .attr("class", "line");
+
+var RFlineChart = MLsvg.append("path")
+    .attr("d", RFline(newPredictions))
+    .attr("stroke", "gold")
+    .attr("stroke-width", 2)
+    .attr("fill", "none")
+    .attr("class", "line");
+
+var actualMoodChart = MLsvg.append("path")
     .attr("d", actualMoodLine(newPredictions))
     .attr("stroke", "fuchsia")
     .attr("stroke-width", 2.5)
@@ -322,24 +532,25 @@ svg.append("path")
     .attr("class", "line");
 
 
-  var moodCircles = svg.selectAll(".mood-circle")
+
+  var actualMoodCircles = MLsvg.selectAll(".mood-circle")
     .data(newPredictions)
     .enter()
     .append("circle")
     .attr("class","mood-circle")
-    .attr("cx", function(d) { return xScale(d.time* 1000)})
+    .attr("cx", function(d) { return MLxScale(d.time)})
     .attr("r", function(d) {return d.actual_mood == null ? 0 : 4})
-    .attr("cy", function(d) { return yScale(d.actual_mood);})
+    .attr("cy", function(d) { return MLyScale(d.actual_mood);})
     .attr("opacity", 100)
     .attr("fill", "fuchsia");
 
-// svg.append("text")
+// MLsvg.append("text")
 //     .attr("class", "axis")
-//     .attr("y", yScale(newResponses[newResponses.length - 1].morale))
+//     .attr("y", MLyScale(newResponses[newResponses.length - 1].morale))
 //     .attr("x", width + 10)
 //     .text("Morale");
 
-// svg.append("path")
+// MLsvg.append("path")
 //     .attr("d", moraleLine(newResponses))
 //     .attr("stroke", "gold")
 //     .attr("stroke-width", 1)
@@ -349,13 +560,13 @@ svg.append("path")
 
 
 
-// svg.append("text")
+// MLsvg.append("text")
 //     .attr("class", "axis")
-//     .attr("y", yScale(newResponses[newResponses.length - 1].stress))
+//     .attr("y", MLyScale(newResponses[newResponses.length - 1].stress))
 //     .attr("x", width + 30)
 //     .text("Stress");
 
-// svg.append("path")
+// MLsvg.append("path")
 //     .attr("d", stressLine(newResponses))
 //     .attr("stroke", "blue")
 //     .attr("stroke-width", 1)
@@ -363,25 +574,25 @@ svg.append("path")
 //     .attr("class", "line");
 
 
-// var moodCircles = svg.selectAll(".mood-circle")
+// var moodCircles = MLsvg.selectAll(".mood-circle")
 //   .data(newResponses)
 //   .enter()
 //   .append("circle")
 //   .attr("class","mood-circle")
-//   .attr("cx", function(d) {return xScale(d.time)})
+//   .attr("cx", function(d) {return MLxScale(d.time)})
 //   .attr("r", 20)
-//   .attr("cy", function(d) { return yScale(d.mood);})
+//   .attr("cy", function(d) { return MLyScale(d.mood);})
 //   .attr("opacity",0)
 //   .attr("fill", "magenta");
 
 
-// svg.append("text")
+// MLsvg.append("text")
 //     .attr("class", "axis")
-//     .attr("y", yScale(newResponses[newResponses.length - 1].mood))
+//     .attr("y", MLyScale(newResponses[newResponses.length - 1].mood))
 //     .attr("x", width + 10)
 //     .text("Mood")
 
-// svg.append("path")
+// MLsvg.append("path")
 //   .attr("d", moodLine(newResponses))
 //   .attr("stroke", "magenta")
 //   .attr("stroke-width", 1)
@@ -391,7 +602,7 @@ svg.append("path")
 
 
 // Hover line.
-var hoverLineGroup = svg.append("g")
+var hoverLineGroup = MLsvg.append("g")
           .attr("class", "hover-line");
 var hoverLine = hoverLineGroup
   .append("line")
@@ -401,56 +612,55 @@ var hoverLine = hoverLineGroup
 hoverLineGroup.style("opacity", 1e-6);
 
 
-svg.selectAll("circle")
+MLsvg.selectAll("circle")
 .attr("cursor", "pointer")
 
 .on("mouseover", function(d) {
-  console.log(d)
   d3.select("body")
 
-  svg.append("g")
+  MLsvg.append("g")
   .attr("class", "hoverLabels")
   .append("text")
-  .attr("x", xScale(d.time * 1000) + 12)
-  // .attr("y", yScale(d.actual_mood))
+  .attr("x", MLxScale(d.time ) + 12)
+  // .attr("y", MLyScale(d.actual_mood))
   .attr("y", 58)
   .text("Actual Mood Score: " + d.actual_mood);
-    // svg.append("circle")
+    // MLsvg.append("circle")
     // .attr("class","hover-circle")
-    // .attr("cx", xScale(d.time* 1000))
+    // .attr("cx", MLxScale(d.time))
     // .attr("r", d.actual_mood == null ? 0 : 4)
-    // .attr("cy", yScale(d.actual_mood))
+    // .attr("cy", MLyScale(d.actual_mood))
     // .attr("opacity", 100)
     // .attr("fill", "fuchsia")
-  svg.append("g")
+  MLsvg.append("g")
   .attr("class", "hoverLabels")
   .append("text")
-  .attr("x", xScale(d.time * 1000) + 12)
-  // .attr("y", yScale(d.linear_model.prediction))
+  .attr("x", MLxScale(d.time ) + 12)
+  // .attr("y", MLyScale(d.linear_model.prediction))
   .attr("y", 76)
   .text("Linear Model Prediction: " + d.linear_model.prediction);
-  svg.append("circle")
+  MLsvg.append("circle")
     .attr("class","hover-circle")
-    .attr("cx", xScale(d.time* 1000))
+    .attr("cx", MLxScale(d.time))
     .attr("r", d.linear_model.prediction == null ? 0 : 4)
-    .attr("cy", yScale(d.linear_model.prediction))
+    .attr("cy", MLyScale(d.linear_model.prediction))
     .attr("opacity", 100)
     .attr("fill", "cyan")
-  svg.append("g")
+  MLsvg.append("g")
   .attr("class", "hoverLabels")
   .append("text")
-  .attr("x", xScale(d.time * 1000) + 12)
+  .attr("x", MLxScale(d.time ) + 12)
   .attr("y", 92)
-    // .attr("y", yScale(d.random_forest.prediction))
+    // .attr("y", MLyScale(d.random_forest.prediction))
   .text("Random Forest Prediction: " + d.random_forest.prediction);
-    svg.append("circle")
+    MLsvg.append("circle")
     .attr("class","hover-circle")
-    .attr("cx", xScale(d.time* 1000))
+    .attr("cx", MLxScale(d.time))
     .attr("r", d.random_forest.prediction == null ? 0 : 4)
-    .attr("cy", yScale(d.random_forest.prediction))
+    .attr("cy", MLyScale(d.random_forest.prediction))
     .attr("opacity", 100)
     .attr("fill", "gold")
-  hoverLine.attr("x1", xScale(d.time * 1000)).attr("x2", xScale(d.time * 1000));
+  hoverLine.attr("x1", MLxScale(d.time )).attr("x2", MLxScale(d.time ));
  hoverLineGroup.style("opacity", 1);
 })
 
