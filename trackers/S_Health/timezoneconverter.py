@@ -11,7 +11,7 @@ COtz = timezone('America/Denver')
 epoch = datetime.datetime.utcfromtimestamp(0).replace(tzinfo=pytz.UTC)
 
 
-with open('com.samsung.health.exercise.201808301232.csv', newline='') as f:
+with open('com.samsung.health.exercise.201809132329.csv', newline='') as f:
 	reader = csv.reader(f, delimiter=',')
 	# writer = csv.writer(f, delimiter='\t')
 	header = next(reader)

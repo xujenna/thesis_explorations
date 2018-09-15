@@ -244,13 +244,19 @@ def analyser_every_hour():
 
 			if(len(dwellTimes) == 0):
 				tone["avg_dwelltime"] = 0
+				print("Average Dwell Time: 0")
+
 			else:
 				tone["avg_dwelltime"] = sum(dwellTimes) / len(dwellTimes)
+				print("Average Dwell Time: ", sum(dwellTimes) / len(dwellTimes))
 
 			if(len(flightTimes) == 0):
 				tone["avg_flighttime"] = 0
+				print("Average Flight Time: 0")
+
 			else:
 				tone["avg_flighttime"] = sum(flightTimes) / len(flightTimes)
+				print("Average Flight Time: ", sum(flightTimes) / len(flightTimes))
 
 			with open('logs/log_new.json', 'r') as f:
 				brackets = json.load(f)
@@ -264,8 +270,6 @@ def analyser_every_hour():
 			print("Unique Word Count: ", len(unique_words))
 			print("Character Count: ", charcount)
 			print("backspace count: ", backspaceCount)
-			print("Average Dwell Time: ", sum(dwellTimes) / len(dwellTimes))
-			print("Average Flight Time: ", sum(flightTimes) / len(flightTimes))
 
 			log = []
 			dwellTimes = []

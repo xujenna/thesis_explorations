@@ -728,13 +728,13 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-09-05T22:57:35.829594	1536202655.829594	3	neutral	watching tv	leisure, tv	0	True	Home	3	0.5	4	True
 2018-09-06T00:00:37.740467	1536206437.740467	3	neutral	watching tv and finishing up the application	leisure, tv, schoolwork	0	True	Home	3	0.5	4	False
 2018-09-06T10:07:59.211142	1536242879.211142	3	neutral	just woke up	washing up, email	0	True	Home	3	1	2.5	False
-2018-09-06T12:11:52.749098	1536250312.749098	3	tired	just walked to school on a 90+ degree day	i in class	1	False	School	3	2	3.5	False
+2018-09-06T12:11:52.749098	1536250312.749098	3	tired	just walked to school on a 90+ degree day	in class	1	False	School	3	2	3.5	False
 2018-09-06T15:38:56.344285	1536262736.344285	3.5	cheerful	chatting with friends	chatting, with friends, eating	7	False	School	3	1	3	False
 2018-09-07T00:32:34.751830	1536294754.75183	4.5	cheerful	had a nice night out with friends and date	with friends, leisure	7	True	Home	4	0	4	True
 2018-09-07T14:16:29.849289	1536344189.849289	4.5	cheerful	hanging out at school	schoolwork, with friends, leisure, eating, email	6	False	School	3	0	3.5	False
 2018-09-07T16:51:06.639503	1536353466.639503	4.5	cheerful	still hanging out at school	eating, with friends	2	False	School	3	0	3.5	False
 2018-09-07T18:49:18.023292	1536360558.023292	3	tired	didn't sleep enough last night	 leisure, tv	3	True	Home	2	0	4	True
-2018-09-07T20:29:50.377172	1536366590.377172	3	neutral	just relaxing	: leisure, tv	0	True	Home	2	0	3.5	True
+2018-09-07T20:29:50.377172	1536366590.377172	3	neutral	just relaxing	leisure, tv	0	True	Home	2	0	3.5	True
 2018-09-07T21:30:34.255216	1536370234.255216	3	still neutral	still relaxing	leisure, tv, cooking, eating	0	True	Home	2.5	0	3.5	True
 2018-09-07T22:31:58.730339	1536373918.730339	2.5	sleepy and a little restless	it's been a long day, still feel like i should have someone to   talk to all the time	schoolwork, studying	0	True	Home	2.5	0.5	4	True
 2018-09-07T23:37:01.409732	1536377821.409732	2	sleepy, out of control	can't stop picking	studying	0	True	Home	2	2	4.5	True
@@ -747,3 +747,58 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-09-08T22:20:30.783882	1536459630.783882	2.5	annoyed and still a little restless	can't figure out a simple thing	schoolwork, leisure, feedly, errands	2	True	Home	2.5	1.5	4	True
 2018-09-08T23:24:42.245409	1536463482.245409	2.5	unfocused	still can't figure out the thing	schoolwork, leisure	1	True	Home	2	1.5	4	True
 2018-09-09T00:25:27.410230	1536467127.41023	3	focused	finally figured this shit out	schoolwork	2	True	Home	3	1	4	False
+2018-09-09T01:27:10.801334	1536470830.801334	3	neutral	done for the day	schoolwork, leisure, feedly	0	True	Home	2	0	4	False
+2018-09-09T02:28:46.301850	1536474526.30185	3.5	peaceful	having a mood	leisure	0	True	Home	3	0	4.5	True
+2018-09-09T12:32:19.595825	1536510739.595825	3	neutral	just woke up	washing up, email, chatting	3	True	Home	3	0.5	3	False
+2018-09-09T13:33:33.208644	1536514413.208644	3.5	enjoying a slow morning	talking to some friends	chatting, schoolwork	4	True	Home	3.5	0.5	2.5	False
+2018-09-09T14:35:25.809567	1536518125.809567	3	fine	still chatting	chatting, leisure	4	True	Home	3	1	3	False
+2018-09-09T15:35:57.200034	1536521757.200034	3	neutral	working on ml viz	schoolwork	4	True	Home	3	1.5	2.5	True
+2018-09-09T16:36:07.365596	1536525367.365596	3	neutral	still working on viz, stuff around the house	schoolwork, leisure, feedly, errands	2	True	Home	3	1	2	True
+2018-09-09T17:36:07.365596	1536528967.365596	3	neutral	still working on viz	schoolwork, leisure	1	True	Home	2.5	1	2	False
+2018-09-10T09:16:12.397868	1536585372.397868	3	exhausted but cheerful	in a 9am makeup class after very little sleep	 in class	1	False	School	2.5	2	4	False
+2018-09-10T10:16:54.364015	1536589014.364015	2.5	sleepy	couldn't sleep last night	in class	0	False	School	2	1	4	False
+2018-09-10T11:27:55.247808	1536593275.247808	3	still tired but cheerful	chatted with friends during break	 in class	3	False	School	2.5	1	4.5	True
+2018-09-10T15:14:19.958426	1536606859.958426	3	content	just had a nap and lunch	cooking, eating, leisure, feedly	1	True	Home	3	0	2	False
+2018-09-10T16:15:20.547462	1536610520.547462	3	slow, sluggish	still pretty tired	schoolwork, feedly, email	2	True	Home	2.5	0	3	True
+2018-09-10T18:01:34.582769	1536616894.582769	3.5	cheerful	hanging out at shcool	leisure, with friends	6	False	School	3.5	0	3.5	False
+2018-09-10T19:08:03.656131	1536620883.656131	3	pretty neutral, a little engaged	in class	in class	1	False	School	3	1	3	False
+2018-09-10T20:24:34.827934	1536625474.827934	3.5	pretty engaged in class 	interesting discussions	in class	0	False	School	3.5	1	3.5	False
+2018-09-10T22:08:26.524025	1536631706.524025	2.5	a little restless	reluctant to start working, waiting for people to text me	leisure, feedly, cooking, eating	1	True	Home	2.5	1	4	False
+2018-09-10T23:09:13.580874	1536635353.580874	3	fine	just working, no longer expecting texts	schoolwork	2	True	Home	3	0	4	False
+2018-09-11T00:10:01.162047	1536639001.162047	3	still fine	still working	schoolwork	1	True	Home	3	0	3.5	False
+2018-09-11T01:28:35.163122	1536643715.163122	3.5	cheerful	listening to bruno mars lol	schoolwork, leisure	0	True	Home	2.5	0	4.5	False
+2018-09-11T10:56:28.256520	1536677788.25652	3	neutral	just got up	washing up, email, errands	1	True	Home	3	1.5	3	False
+2018-09-11T12:26:35.909802	1536683195.909802	4	pretty cheerful	woke up in a good mood i guess	in class	4	False	School	3.5	0.5	2.5	True
+2018-09-11T13:27:22.543209	1536686842.543209	3	focused	in class	in class	0	False	School	3	0	3.5	False
+2018-09-11T14:45:17.570022	1536691517.570022	4	engaged	in class	in class	2	False	School	3.5	0	3	False
+2018-09-11T15:59:26.849340	1536695966.84934	3	fine	procrastinating on homework	schoolwork, leisure	3	False	School	3	0	3	False
+2018-09-11T17:00:49.444831	1536699649.444831	3	cheerful but lazy	don't feel like doing homework	schoolwork, with friends, leisure, feedly	2	False	School	2	0	3.5	False
+2018-09-11T20:04:34.196268	1536710674.196268	2.5	pretty tired	long day, ran some errands	cooking, eating, leisure, feedly	2	True	Home	2	1	4	False
+2018-09-11T21:05:23.701807	1536714323.701807	2.5	unmotivated	not sure, don't feel like doing homework even though it's easy	leisure, feedly	1	True	Home	1.5	1	4	True
+2018-09-11T22:08:22.745670	1536718102.74567	3	focused	working on homework (kind of)	schoolwork	0	True	Home	2.5	0.5	3.5	False
+2018-09-11T23:09:32.361049	1536721772.361049	2.5	distracted	really do not want to work on hw	schoolwork, leisure	0	True	Home	2	1	4	True
+2018-09-12T00:55:03.559008	1536728103.559008	2.5	super sleepy but accomplished	finally finished hw for the most part	schoolwork	1	False	Home	1.5	0	5	False
+2018-09-12T10:43:25.016989	1536763405.016989	3	neutral	just woke up	washing up, email	2	True	Home	2.5	1.5	3.5	False
+2018-09-12T12:17:53.220363	1536769073.220363	3.5	cheerful but kind of tired	hanging out before class	in class, schoolwork, with friends	3	False	School	3	0.5	3	False
+2018-09-12T13:35:59.732120	1536773759.73212	3	tired and hungry	dumb body	in class	0	False	School	2.5	0.5	3.5	False
+2018-09-12T14:38:09.000805	1536777489.000805	3.5	entertained	shiffman is funny	in class	0	False	School	3	0	3.5	True
+2018-09-12T19:06:40.215384	1536793600.215384	4.5	cheerful	yoga, hanging out at school	working out, leisure, with friends	5	False	School	2.5	0	3.5	False
+2018-09-12T22:19:35.633618	1536805175.633618	3	neutral	just woke up from a nap	leisure, resting, feedly	1	True	Home	2.5	0.5	3	False
+2018-09-12T23:24:47.904480	1536809087.90448	2.5	still tired and unmotivated	long day	leisure, feedly	2	True	Home	2	1	4	True
+2018-09-13T00:37:15.356577	1536813435.356577	4.5	cheerful	had an amusing phone call with mingwei	chatting, with friends	1	True	Home	3	1.5	3.5	False
+2018-09-13T10:44:36.991221	1536849876.991221	3	neutral	just got up	washing up, email, leisure, feedly	1	True	Home	2.5	1	3	True
+2018-09-13T21:48:17.272308	1536889697.272308	3	so tired	been tired all day	leisure, feedly	1	True	Home	2	0	4	True
+2018-09-13T22:49:23.953644	1536893363.953644	2.5	mildly upset	election results were terrible	chatting, leisure	3	True	Home	2	0	4	True
+2018-09-13T23:50:04.272496	1536897004.272496	3	neutral	working on mozfest poster	schoolwork	2	True	Home	2.5	0	4	False
+2018-09-14T01:30:04.272496	1536903004.272496	4.5	cheerful	had a nice phone call with mingwei	leisure, chatting	1	True	Home	3	0	4	False
+2018-09-14T10:40:08.088709	1536936008.088709	3	neutral	just woke up	email	1	True	Home	3	0.5	2.5	False
+2018-09-14T11:51:35.968321	1536940295.968321	3	focused	working on poster	working	0	True	Home	3	1	2	False
+2018-09-14T14:24:08.683255	1536949448.683255	4	cheerful	fanni and daniel came by to pick up the bike	working out, leisure	3	True	Home	3	0	3.5	False
+2018-09-14T17:19:14.602888	1536959954.602888	3	neutral	in a workshop with gene	in class	2	False	School	2.5	0.5	3.5	False
+2018-09-14T18:27:41.383882	1536964061.383882	4.5	cheerful	hanging out on the floor	leisure, with friends	5	False	School	3	0.5	3	False
+2018-09-14T22:21:45.988728	1536978105.988728	3	neutral	just working on the poster	work, leisure	3	False	School	3	0.5	3	False
+2018-09-14T23:53:59.403877	1536983639.403877	2.5	bleh	i have to reject someone	chatting	3	True	Home	2	3	3	True
+2018-09-15T01:09:17.396715	1536988157.396715	2.5	guilty	rejected a hinge date	leisure, feedly, washing up	2	True	Home	2.5	1.5	3.5	True
+2018-09-15T11:10:19.238960	1537024219.23896	4	cheerful, motivated	ready to get on with the day, barak told me something amusing	washing up, email	2	True	Home	4	0.5	3.5	False
+2018-09-15T12:12:39.337763	1537027959.337763	3.5	pretty good	just finished planning the day	eating, leisure	1	True	Home	3.5	0	3	False
+2018-09-15T13:13:37.331476	1537031617.331476	3	neutral	listening to a TTA lecture	studying	2	True	Home	3	0	3.5	False

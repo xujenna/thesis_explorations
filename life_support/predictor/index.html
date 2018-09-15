@@ -1,0 +1,641 @@
+<html>
+<head>
+  <!DOCTYPE html>
+  <meta charset="utf-8">
+
+  <style type="text/css">
+    /*css to go here*/
+    body {
+      font-family: monospace;
+      font-size: 11px;
+      background-size: cover;
+      background-color:#fff;
+      text-align: center;
+  /*    background-image:url("hour13_cover.png");
+  */
+  }
+
+  svg {
+  /*  border: 1px solid #f0f;
+  */  /*color: white;*/
+      /*fill: white;*/
+      z-index: 100;
+      display:inline;
+      margin:100px;
+  }
+
+  .heading {
+    position:fixed;
+    left:50%;
+    transform: translate(-50%, 0);
+  }
+
+  .title {
+    font-size:15px;
+    font-family:monospace;
+    color:#000;
+    letter-spacing: 1px;
+  }
+
+  .kicker {
+    font-family:roboto;
+    font-size:11px;
+    letter-spacing: 2px;
+    text-align:center;
+    border-bottom: 1px solid white;
+    padding-bottom:4px;
+    display:table;
+    margin:auto;
+    width:inherit;
+    margin-top:40px;
+    margin-bottom:15px;
+    text-decoration: underline;
+  }
+
+
+  .Axis line,
+  .Axis path {
+    fill:none;
+    stroke:silver;
+    stroke-width:1;
+  }
+
+  .axis-labels {
+    text-anchor:middle;
+    font-family:roboto;
+    font-weight:bold;
+    letter-spacing: 2px;
+    font-color:#000;
+  }
+
+  .Axis text {
+    fill: black;
+  }
+
+  .tick line {
+    fill: none;
+    stroke-dasharray: 2px 4px;
+  }
+
+
+  .y-axis-label {
+    margin-left:0px;
+  }
+
+
+  .chart {
+    z-index: 101;
+  }
+
+  .time-title {
+    display:inline;
+  }
+
+  .wrapper {
+    height: 100%;
+    display:inline;
+    margin:20px;
+  }
+
+
+  .tooltip {
+    width: 200px;
+    font-size:12px;
+    font-family:monospace;
+    background:rgba(255,255,255,0.9);
+    padding:5px;
+    line-height:1.25;
+    clear:both;
+    text-align: center;
+  }
+
+
+.container {
+  display:inline;
+}
+
+
+  .n::after {
+    font-size:18px;
+    width: 200px;
+    color: black;
+    content: "\2193";
+    position:absolute;
+    text-align:center;
+    display:block;
+    pointer-events:none;
+    margin-top:5px;
+  }
+
+  .s::before {
+    font-size:18px;
+    width: 200px;
+    color: black;
+    content: "\2191";
+    position:absolute;
+    text-align:center;
+    display:block;
+    pointer-events:none;
+    clear:both;
+    margin-top:-27px;
+  }
+  .hover-line {
+  stroke: black;
+  fill: none;
+  stroke-width: 1px;
+}
+  .description-key{
+    font-family: europa, sans-serif;
+    font-size:10px;
+    text-transform: uppercase;
+    text-align:left;
+    width:17%;
+    vertical-align: top;
+    position:fixed;
+    right:100px;
+    margin-top: 150px;    
+  }
+
+  #next-link {
+    display:none;
+  
+  }
+
+  #prev-link{
+    display:inline-block;
+  }
+
+  #current-range {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+  </style>
+
+</head>
+<body>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-time.v1.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/fao6qlb.css">
+
+<div class="predictions-nav" id="current-range"></div>
+
+<div class="predictions-nav" id="prev-link">◂ Prev Day</div>
+<div class="predictions-nav" id="next-link">Next Day ▸</div>
+
+      <div class="description-key">
+        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span> Actual Mood Score</p>
+        <p><span style="color:rgb(0, 255, 255)">&block; &nbsp;</span> Linear Model Prediction</p>
+        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span> Random Forest Prediction</p>
+    </div>
+<script>
+
+
+d3.json("predictions.json", function (err, data) {
+    if (err) console.warn(err, "error loading data");
+
+  var margin = {top: 30, right: 100, bottom: 50, left: 40};
+
+  var width = (window.innerWidth -250) - margin.left - margin.right,
+  height = (window.innerHeight * .75) - margin.top - margin.bottom;
+
+
+  var MLsvg = d3.select("body").append("div")
+      .attr("class", "container")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+      .attr("class", "chart")
+      .style("display", "block");
+
+
+newPredictions = [];
+nullPoints = [];
+
+data.forEach(function(d,i){
+  d.time = d.time * 1000;
+})
+
+
+  var nullTime = data[0]['time'] - 360000;
+  var nullItems = {};
+  nullItems["actual_mood"] = null;
+  nullItems["time"] = nullTime;
+  nullItems["linear_model"] = {}
+  nullItems["linear_model"]["prediction"] = null;
+  nullItems["linear_model"]["mean_abs_error"] = null;
+  nullItems["random_forest"] = {}
+  nullItems["random_forest"]["prediction"] = null;
+  nullItems["random_forest"]["mean_abs_error"] = null;
+
+ nullPoints.push(nullItems)
+
+data.forEach(function(d, i) {
+  newPredictions.push(d);
+
+  if(i == data.length -1){
+    var nullItems2 = {};
+    nullItems2["actual_mood"] = null;
+    nullItems2["time"] = data[i]["time"] + 360000;
+    nullItems2["linear_model"] = {}
+    nullItems2["linear_model"]["prediction"] = null;
+    nullItems2["linear_model"]["mean_abs_error"] = null;
+    nullItems2["random_forest"] = {}
+    nullItems2["random_forest"]["prediction"] = null;
+    nullItems2["random_forest"]["mean_abs_error"] = null;
+    nullPoints.push(nullItems2)
+    return;
+  }
+
+  var currentTime = data[i+1]["time"]
+
+  if(d["time"] < (currentTime - 36000000)) {
+    nullTime = currentTime - 360000;
+    var nullItems = {};
+    nullItems["actual_mood"] = null;
+    nullItems["time"] = nullTime;
+    nullItems["linear_model"] = {}
+    nullItems["linear_model"]["prediction"] = null;
+    nullItems["linear_model"]["mean_abs_error"] = null;
+    nullItems["random_forest"] = {}
+    nullItems["random_forest"]["prediction"] = null;
+    nullItems["random_forest"]["mean_abs_error"] = null;
+
+    var nullItems2 = {};
+    nullItems2["actual_mood"] = null;
+    nullItems2["time"] = data[i]["time"] + 360000;
+    nullItems2["linear_model"] = {}
+    nullItems2["linear_model"]["prediction"] = null;
+    nullItems2["linear_model"]["mean_abs_error"] = null;
+    nullItems2["random_forest"] = {}
+    nullItems2["random_forest"]["prediction"] = null;
+    nullItems2["random_forest"]["mean_abs_error"] = null;
+
+    newPredictions.push(nullItems2)
+    newPredictions.push(nullItems)
+    nullPoints.push(nullItems2)
+    nullPoints.push(nullItems)
+  }
+})
+
+
+
+var length = newPredictions.length - 1;
+
+var domainMax = new Date(nullPoints[nullPoints.length - 1]['time']);
+var domainMin = new Date(nullPoints[nullPoints.length - 2]['time']);
+
+var MLxScale = d3.scaleTime()
+  .range([0,width])
+  .domain([domainMin, domainMax]);
+
+var MLyScale = d3.scaleLinear()
+  .range([height, 0])
+  .domain([1.5, 5]);
+
+var domainMaxStr = domainMax.toString().slice(3, -20)
+var domainMinStr = domainMin.toString().slice(3, -20)
+var predictions_nav_prev = d3.select("#prev-link");
+var predictions_nav_next = d3.select("#next-link");
+var currentRange = d3.select("#current-range")
+var currentNullMin = nullPoints.length -2
+currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
+
+
+predictions_nav_prev
+.style("cursor", "pointer")
+.on("mousedown", function(d){
+
+  if(nullPoints[currentNullMin - 2] == null){
+    predictions_nav_prev.style("display", "none")
+  }
+  else {
+    predictions_nav_next.style("display", "inline-block")
+    predictions_nav_prev.style("display", "inline-block")
+
+    currentNullMin = currentNullMin-2;
+  domainMax = new Date(nullPoints[currentNullMin + 1]['time'])
+  domainMin = new Date(nullPoints[currentNullMin]['time'])
+  MLxScale.domain([domainMin, domainMax])
+
+  currentRange = d3.select("#current-range")
+  domainMaxStr = domainMax.toString().slice(3, -20)
+  domainMinStr = domainMin.toString().slice(3, -20)
+
+  currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
+
+  RFareaChart.attr("d", RFarea(newPredictions));
+  LMareaChart.attr("d", LMarea(newPredictions));
+  LMlineChart.attr("d", LMline(newPredictions));
+  RFlineChart.attr("d", RFline(newPredictions));
+  RFerrorLineChart.attr("d", RFerrorLine(newPredictions));
+  LMerrorLineChart.attr("d", LMerrorLine(newPredictions));
+  actualMoodChart.attr("d", actualMoodLine(newPredictions))
+  actualMoodCircles.attr("cx", function(d) { return MLxScale(d.time)}).attr("cy", function(d) { return MLyScale(d.actual_mood);})
+  errorxAxisGroup.call(MLxAxis)
+
+  MLxAxisGroup.call(MLxAxis)
+
+  if(nullPoints[currentNullMin - 2] == null){
+    predictions_nav_prev.style("display", "none")
+
+  }
+  }
+
+})
+
+predictions_nav_next
+.style("cursor", "pointer")
+.on("mousedown", function(d){
+
+  if(nullPoints[currentNullMin + 2] == null){
+    predictions_nav_next.style("display", "none")
+  }
+  else {
+    predictions_nav_next.style("display", "inline-block")
+    predictions_nav_prev.style("display", "inline-block")
+
+  currentNullMin = currentNullMin+2;
+
+
+  domainMax = new Date(nullPoints[currentNullMin + 1]['time'])
+  domainMin = new Date(nullPoints[currentNullMin]['time'])
+  MLxScale.domain([domainMin, domainMax])
+
+  currentRange = d3.select("#current-range")
+  domainMaxStr = domainMax.toString().slice(3, -20)
+  domainMinStr = domainMin.toString().slice(3, -20)
+
+  currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
+
+  RFareaChart.attr("d", RFarea(newPredictions));
+  LMareaChart.attr("d", LMarea(newPredictions));
+  LMlineChart.attr("d", LMline(newPredictions));
+  RFlineChart.attr("d", RFline(newPredictions));
+   RFerrorLineChart.attr("d", RFerrorLine(newPredictions));
+  LMerrorLineChart.attr("d", LMerrorLine(newPredictions));
+  actualMoodChart.attr("d", actualMoodLine(newPredictions))
+  actualMoodCircles.attr("cx", function(d) { return MLxScale(d.time)}).attr("cy", function(d) { return MLyScale(d.actual_mood);})
+  errorxAxisGroup.call(MLxAxis)
+  MLxAxisGroup.call(MLxAxis)
+
+
+   if(nullPoints[currentNullMin + 2] == null){
+    predictions_nav_next.style("display", "none")
+
+  }
+}
+
+})
+
+
+
+var actualMoodArea = d3.area()
+    .x(function(d) {return MLxScale(d.time); })
+    .y1(function(d) {return MLyScale(d.actual_mood); })
+    .y0(MLyScale(0))
+      .defined(function(d){return d.actual_mood!=null;});
+
+var LMarea = d3.area()
+    .x(function(d) { return MLxScale(d.time); })
+    .y1(function(d) { return MLyScale(d["linear_model"]["prediction"]); })
+    .y0(function(d) {return MLyScale(d.actual_mood);})
+      .defined(function(d){return d["linear_model"]["prediction"]!=null;});
+
+
+var RFarea = d3.area()
+    .x(function(d) { return MLxScale(d.time); })
+    .y1(function(d) { return MLyScale(d.random_forest.prediction); })
+    .y0(function(d) {return MLyScale(d.actual_mood);})
+      .defined(function(d){return d.random_forest.prediction!=null;});
+
+
+  var actualMoodLine = d3.line()
+  .defined(function(d){return d.actual_mood!=null})
+    .x(function(d) {return MLxScale(d.time);})
+    .y(function(d){return MLyScale(d.actual_mood);});
+
+  var LMline = d3.line()
+  .defined(function(d){return d["linear_model"]["prediction"]!=null})
+    .x(function(d) {return MLxScale(d.time);})
+    .y(function(d){return MLyScale(d["linear_model"]["prediction"]);});
+
+
+  var RFline = d3.line()
+  .defined(function(d){return d.random_forest.prediction!=null})
+    .x(function(d) {return MLxScale(d.time);})
+    .y(function(d){return MLyScale(d.random_forest.prediction);});
+
+
+  var RFerrorLine = d3.line()
+  .defined(function(d){return d.random_forest.mean_abs_error!=null})
+    .x(function(d) {return MLxScale(d.time);})
+    .y(function(d){return erroryScale(d.random_forest.mean_abs_error);});
+
+
+  var LMerrorLine = d3.line()
+  .defined(function(d){return d.linear_model.mean_abs_error!=null})
+    .x(function(d) {return MLxScale(d.time);})
+    .y(function(d){return erroryScale(d.linear_model.mean_abs_error);});
+
+
+var MLxAxis = d3.axisBottom(MLxScale)
+  .tickPadding(10)
+  // .tickFormat(d3.timeFormat("%c"))
+  .ticks(4);
+
+
+var MLyAxis = d3.axisLeft(MLyScale)
+  .tickPadding(10)
+  .tickSize(-width)
+  .ticks(5);
+
+
+var MLxAxisGroup = MLsvg.append("g")
+  .attr("class", "Axis")
+  .attr("transform","translate(0, "+(height)+")")
+  .call(MLxAxis);
+
+MLsvg.append("g")
+  .attr("class","Axis")
+  .call(MLyAxis);
+
+
+  var RFareaChart = MLsvg.append("path")
+    // .data(newProductivity)
+    .attr("d", RFarea(newPredictions))
+    .attr("fill", "gold")
+    .attr("opacity", 0.3);
+
+
+  var LMareaChart = MLsvg.append("path")
+    // .data(newProductivity)
+    .attr("d", LMarea(newPredictions))
+    .attr("fill", "cyan")
+    .attr("opacity", 0.25);
+
+
+var LMlineChart = MLsvg.append("path")
+    .attr("d", LMline(newPredictions))
+    .attr("stroke", "cyan")
+    .attr("stroke-width", 2)
+    .attr("fill", "none")
+    .attr("class", "line");
+
+var RFlineChart = MLsvg.append("path")
+    .attr("d", RFline(newPredictions))
+    .attr("stroke", "gold")
+    .attr("stroke-width", 2)
+    .attr("fill", "none")
+    .attr("class", "line");
+
+var actualMoodChart = MLsvg.append("path")
+    .attr("d", actualMoodLine(newPredictions))
+    .attr("stroke", "fuchsia")
+    .attr("stroke-width", 2.5)
+    .attr("fill", "none")
+    .attr("class", "line");
+
+
+
+  var actualMoodCircles = MLsvg.selectAll(".mood-circle")
+    .data(newPredictions)
+    .enter()
+    .append("circle")
+    .attr("class","mood-circle")
+    .attr("cx", function(d) { return MLxScale(d.time)})
+    .attr("r", function(d) {return d.actual_mood == null ? 0 : 4})
+    .attr("cy", function(d) { return MLyScale(d.actual_mood);})
+    .attr("opacity", 100)
+    .attr("fill", "fuchsia");
+
+
+
+var errorHeight = height * .5
+var errorsvg = d3.select("body").append("div")
+    .attr("class", "container")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", errorHeight + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr("class", "chart")
+    .style("display", "block");
+
+var erroryScale = d3.scaleLinear()
+  .range([errorHeight, 0])
+  .domain([0, 1]);
+
+var erroryAxis = d3.axisLeft(erroryScale)
+  .tickPadding(10)
+  .tickSize(-width)
+  .ticks(5);
+
+
+var errorxAxisGroup = errorsvg.append("g")
+  .attr("class", "Axis")
+  .attr("transform","translate(0, "+(errorHeight)+")")
+  .call(MLxAxis);
+
+errorsvg.append("g")
+  .attr("class","Axis")
+  .call(erroryAxis);
+
+
+var RFerrorLineChart = errorsvg.append("path")
+  .attr("d", RFerrorLine(newPredictions))
+  .attr("stroke", "gold")
+  .attr("stroke-width", 2)
+  .attr("fill", "none")
+  .attr("class", "line");
+
+var LMerrorLineChart = errorsvg.append("path")
+  .attr("d", LMerrorLine(newPredictions))
+  .attr("stroke", "cyan")
+  .attr("stroke-width", 2)
+  .attr("fill", "none")
+  .attr("class", "line");
+
+
+// Hover line.
+var hoverLineGroup = MLsvg.append("g")
+          .attr("class", "hover-line");
+var hoverLine = hoverLineGroup
+  .append("line")
+    .attr("y1", 50).attr("y2", height);
+
+// Hide hover line by default.
+hoverLineGroup.style("opacity", 1e-6);
+
+
+MLsvg.selectAll("circle")
+.attr("cursor", "pointer")
+
+.on("mouseover", function(d) {
+  d3.select("body")
+
+  MLsvg.append("g")
+  .attr("class", "hoverLabels")
+  .append("text")
+  .attr("x", MLxScale(d.time ) + 12)
+  // .attr("y", MLyScale(d.actual_mood))
+  .attr("y", 58)
+  .text("Actual Mood Score: " + d.actual_mood);
+    // MLsvg.append("circle")
+    // .attr("class","hover-circle")
+    // .attr("cx", MLxScale(d.time))
+    // .attr("r", d.actual_mood == null ? 0 : 4)
+    // .attr("cy", MLyScale(d.actual_mood))
+    // .attr("opacity", 100)
+    // .attr("fill", "fuchsia")
+  MLsvg.append("g")
+  .attr("class", "hoverLabels")
+  .append("text")
+  .attr("x", MLxScale(d.time ) + 12)
+  // .attr("y", MLyScale(d.linear_model.prediction))
+  .attr("y", 76)
+  .text("Linear Model Prediction: " + d.linear_model.prediction);
+  MLsvg.append("circle")
+    .attr("class","hover-circle")
+    .attr("cx", MLxScale(d.time))
+    .attr("r", d.linear_model.prediction == null ? 0 : 4)
+    .attr("cy", MLyScale(d.linear_model.prediction))
+    .attr("opacity", 100)
+    .attr("fill", "cyan")
+  MLsvg.append("g")
+  .attr("class", "hoverLabels")
+  .append("text")
+  .attr("x", MLxScale(d.time ) + 12)
+  .attr("y", 92)
+    // .attr("y", MLyScale(d.random_forest.prediction))
+  .text("Random Forest Prediction: " + d.random_forest.prediction);
+    MLsvg.append("circle")
+    .attr("class","hover-circle")
+    .attr("cx", MLxScale(d.time))
+    .attr("r", d.random_forest.prediction == null ? 0 : 4)
+    .attr("cy", MLyScale(d.random_forest.prediction))
+    .attr("opacity", 100)
+    .attr("fill", "gold")
+  hoverLine.attr("x1", MLxScale(d.time )).attr("x2", MLxScale(d.time ));
+ hoverLineGroup.style("opacity", 1);
+})
+
+
+d3.select("body")
+    .on("mouseout", function(d) {
+    // tip.hide(d);
+        hoverLineGroup.style("opacity", 1e-6);
+
+    d3.selectAll(".hover-circle").remove();
+    d3.selectAll(".hoverLabels").remove();
+  });
+
+});
+
+</script>
+
+</body>

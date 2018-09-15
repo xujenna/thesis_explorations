@@ -18,6 +18,7 @@
   }
 
 
+
   svg {
   /*  border: 1px solid #f0f;
   */  /*color: white;*/
@@ -130,8 +131,8 @@ hr {
 
   .hover-line {
   fill: none;
-  stroke-dasharray: 2px 4px;
-  stroke:magenta;
+/*  stroke-dasharray: 2px 4px;
+*/  stroke:silver;
   stroke-width:1;
   }
 
@@ -198,8 +199,14 @@ hr {
 
   }
 
+  #intro-text p {
+    text-indent: 1.5em;
+    margin:0;
+    padding:0;
+  }
+
   #hed {
-    width: 40%;
+    width: 50%;
     line-height:60px;
     text-align: left;
     padding-left: 10%;
@@ -271,7 +278,14 @@ hr {
   .description{
     display:flex;
     align-items:center;
-    margin: 5% 20% 0% 20%;
+    margin: 5% 22% 0% 22%;
+  }
+
+
+  .description p {
+    text-indent: 1.5em;
+    margin:0;
+    padding:0;
   }
 
   .description-body {
@@ -279,8 +293,8 @@ hr {
     text-align: left;
     border-left: 1px solid;
     border-right: 1px solid;
-    padding: 0px 60px;
-    margin: 0px 60px;
+    padding: 0% 5%;
+    margin: 0% 5%;
     font-size:15px;
   }
 
@@ -295,16 +309,17 @@ hr {
     font-size:10px;
     text-transform: uppercase;
     text-align:left;
-    width:67%;
+    min-width:105px;
   }
   .description-key p {
     line-height: 22px;
+    text-indent: 0;
 }
 
-  .description p {
+/*  .description p {
     margin:0;
     padding:0;
-  }
+  }*/
 
   .description a {
     color:black;
@@ -341,6 +356,9 @@ hr {
 /*  padding: 0 0 0 0;
 */  text-align: center;
   background-color:#fcf9ef;
+}
+#correlation-description-key{
+  min-width: 160px;
 }
 
 #variable-description-container{
@@ -421,22 +439,80 @@ letter-spacing: 1px;
 }
 
 
-@media screen and (max-width: 1393px){
+#ML-container {
+  overflow: visible;
+  width:100%;
+  display:inline-block;
+  margin:auto;
+  padding-top: 120px;
+  padding-bottom: 150px;
+/*  padding: 0 0 0 0;
+*/  text-align: center;
+  background-color:#fcf9ef;
+}
+
+#predictions-nav-container{
+  font-family: europa, sans-serif;
+  margin-top:75px;
+  display:block;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+#prev-link{
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display:inline-block;
+  text-align:left;
+  padding:3px;
+/*  background-color: white;
+*//*  border: 1px solid black;
+*/  vertical-align: middle;
+}
+
+#next-link{
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display:inline-block;
+  text-align: right;
+  padding:3px;
+/*  border: 1px solid black;
+*/  vertical-align: middle;
+color:lightgrey;
+}
+
+#current-range{
+  display:inline-block;
+  padding-right:3%;
+  padding-left:3%;
+/*  margin-right: 1.5%;
+  margin-left: 1.5%;*/
+/*  border-right:1px solid black;
+  border-left: 1px solid black;*/
+  font-weight: bold;
+}
+
+
+#ML-description-key{
+  min-width: 185px;
+  margin-left: -2%;
+}
+
+@media screen and (max-width: 1535px){
   #intro-text {
-      margin:auto;
-      column-count: 1;
-      text-align: left;
-      line-height: 21px;
+      width:35%;
   }
 
-/*  .description {
-    display:inline-block;
-    width:60%;
-    text-align: left;
-    margin-top: 30px;
-    padding-right: 60px;
-    vertical-align:top;
-  }*/
+  .description {
+    margin: 5% 18% 0% 18%;
+  }
 
   h1 {
     font-size:36px;
@@ -448,6 +524,102 @@ letter-spacing: 1px;
   }
 
 }
+
+
+@media screen and (max-width: 1330px){
+  #intro-text {
+      width:45%;
+      margin-top: -20%;
+  }
+
+  #hed {
+    width:35%;
+  }
+
+  .description {
+    margin: 5% 15% 0% 15%;
+  }
+
+  h1 {
+    font-size:36px;
+    font-family: fanwood, serif;
+    font-style: regular;
+    font-weight: 400;
+    margin-bottom: 25px;
+    margin-top:25px;
+  }
+}
+
+@media screen and (max-width: 1250px){
+  #hed {
+    width:25%;
+    padding-right:10%;
+  }
+
+  .description{
+    display:block;
+  }
+
+  .description-hed{
+    width:inherit;
+    text-align: center;
+    display:block;
+    width: 87%;
+    margin:auto;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+  }
+
+  .description-body{
+    display: inline-block;
+    width:63%;
+    border-left: none;
+    padding: 0px 50px 0px 0px;
+    margin: 20px 50px 0px 0px;
+  }
+
+  .description-key{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width:1010px){
+  #correlation-description-body{
+    width:58%;
+  }
+  #correlation-description-hed{
+    width:95%;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .description-hed{
+    width:93%;
+  }
+
+  .description{
+    margin:5% 10% 0% 15%;
+  }
+
+  .description-body{
+    width:70%;
+    border:none;
+    padding: 0px;
+    margin:20px 50px 0px 0px;
+  }
+
+  #intro-text{
+    width:55%;
+    margin-top: -25%;
+  }
+
+  #hed{
+    padding: 0% 5% 0% 8%;
+  }
+}
+
   </style>
 
 
@@ -464,29 +636,28 @@ letter-spacing: 1px;
   <div id="intro-container">
     <div id="hero-img"><img src="affectiva/photos/composite4.jpg"></div>
     <div id="hed">
-    <p>😐😐😐😱</p>
+    😐😐😐😱
     <h1>Speak, (Random Access) Memory</h1>
-  </div>
+    </div>
+
   <div id = "intro-text">
      As a professional graphic designer, a grad student in a technology program, a handheld-device-phobe, and a single person who lives alone in NYC, I probably get more facetime with my computer than with all of humanity combined. So during the fall of 2018, when I began work on a system of trackers for a host of potential/evidenced metrics of depression, it was pretty clear that my laptop would be my best data collector.
-    <p>Speak, (Random Access) Memory is a project that hopes to monitor depression's cyclical nature, identify correlations between mood and my activity/environment, predict the onset of depression by feeding this data into a machine-learned model/neural network, and ultimately preempt it by teaching the system to recommend and enforce interventions. As a preliminary exercise, I've trained a couple ML models to predict mood with only a month of data; <a href="http://www.xujenna.com/itp_blog/2018/05/02/final-pt-2-data-analysis/" target="new">see the documentation here</a>.</p><p>Presently, there are seven trackers collecting data on 45 metrics; below are visualizations of the data collected by four of them: my <a href="http://www.xujenna.com/itp_blog/2018/04/26/final/" target="new">homemade python trackers</a>. The last chart visualizes correlations among 40 select metrics. </p><p>Use the brush at the bottom of the window to filter and navigate through my entire history of data.</p>
+    <p>Speak, (Random Access) Memory is a project that aims to monitor depression's cyclical nature, identify correlations between mood and my activity/environment, predict the onset of depression by feeding this data into a machine-learned model/neural network, and ultimately preempt it by teaching the system to recommend and enforce interventions.</p><p>Presently, there are seven trackers collecting data on 45 metrics; below are visualizations of the data collected by four of them: my three<a href="http://www.xujenna.com/itp_blog/2018/04/26/final/" target="new">homemade python trackers</a> and one Chrome extension. The last section offers a chart that visualizes correlations among 40 select metrics, and another that illustrates the training progress of my machine learning models.</p><p>Use the brush at the bottom of the window to filter and navigate through my entire history of data.</p>
   </div>
-<!--   <h5>To begin, filter the data by date:</h5><span class="arrow"></span></p>
- -->  </div>
-  </div>
+</div>
 
   <div class="container" id="reporter-container">
     <div class="description">
-      <div class="description-hed"><h2>Mood Reports</h2></div>
+      <div class="description-hed"><h2>Mood Reporter</h2></div>
       <div class="description-body">
         Psychiatry traditionally employs self-administered questionnaires as diagnostic tools for mood disorders; these usually attempt to quantify the severity of DSM-IV criteria. The module for depression is called the PHQ-9, and I've adapted several of its questions into my own questionnaire, which python deploys every hour via the command line.
       </div>
       <div class="description-key">
-        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span> Mood</p>
-        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span> Morale</p>
-        <p><span style="color:rgb(0, 0, 255)">&block; &nbsp;</span> Stress</p>
-        <p><span style="color:rgb(200, 200, 220)">&block; &nbsp;</span> Fatigue</p>
-        <p><span style="color:rgb(0, 0, 255); font-size:18px; line-height: 14px"><b>&times;&nbsp;</b></span> Compulsions</p>
+        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span>Mood</p>
+        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span>Morale</p>
+        <p><span style="color:rgb(0, 0, 255)">&block; &nbsp;</span>Stress</p>
+        <p><span style="color:rgb(200, 200, 220)">&block; &nbsp;</span>Fatigue</p>
+        <p><span style="color:rgb(0, 0, 255); font-size:18px; line-height: 14px"><b>&times;&nbsp;</b></span>Compulsions</p>
       </div>
 
     </div>
@@ -495,15 +666,15 @@ letter-spacing: 1px;
 
   <div class="container" id="affectiva-container">
     <div class="description">
-      <div class="description-hed"><h2>Facial Analysis</h2></div>
+      <div class="description-hed"><h2>Facial Analyzer</h2></div>
       <div class="description-body">
       This tracker utilizes the Affectiva API, an emotion and facial recognition model. Via my laptop's webcam, it analyses my face for a minute every hour; a python script counts blinks and calculates the averages for attention and valence scores. The yellow area chart in the background are my productivity scores via the Rescuetime API. I choose these variables as <a href="http://www.xujenna.com/itp_blog/2018/02/01/blinking-mind-wandering/" target="new">an attempt to measure mindwandering</a>, a marker strongly correlated with depression.
       </div>
       <div class="description-key">
-        <p><span style="color:rgb(0, 0, 255)">&block; &nbsp;</span> Blinks</p>
-        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span> Attention</p>
-        <p><span style="color:rgb(0, 225, 225)">&block; &nbsp;</span> Valence</p>
-        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span> Productivity</p>
+        <p><span style="color:rgb(0, 0, 255)">&block; &nbsp;</span>Blinks</p>
+        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span>Attention</p>
+        <p><span style="color:rgb(0, 225, 225)">&block; &nbsp;</span>Valence</p>
+        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span>Productivity</p>
       </div>
     </div>
     <svg id="affectiva"></svg>
@@ -512,19 +683,19 @@ letter-spacing: 1px;
   <div class="container" id="keylogger-container">
     <div class="description">
       <div class="description-hed">
-      <h2>Keylogged Sentiments</h2>
+      <h2>Sentiment Keylogger</h2>
       </div>
       <div class="description-body">
-      As an attempt to automatically measure mood, I created a sentiment analysis keylogger for my computer. Written in python, the keylogger collects any coherent phrase I type, and sends the log every hour to IBM's Tone Analyzer API, which returns sentiment scores for each sentence; below, only scores over 50% are visualized. The logs themselves have also been redacted, but the length of the analyzed sentence is encoded in each circle's diameter. At the end of May, I added keystroke dynamics and simple text analysis to this keylogger, which I hope to visualize soon.
+      As an attempt to automatically measure mood, I created a sentiment analysis keylogger for my computer. Written in python, the keylogger collects any coherent phrase I type, and sends the log every hour to IBM's Tone Analyzer API, which returns sentiment scores for each sentence; below, only scores over 50% are visualized. The logs themselves have also been redacted, but the length of the analyzed sentence is encoded in each circle's diameter. <p>I've relatively recently added keystroke dynamics and simple text analysis to this keylogger, which I hope to visualize soon.</p>
       </div>
       <div class="description-key">
-        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span> Joy</p>
-        <p><span style="color:rgb( 0, 255, 127)">&block; &nbsp;</span> Confidence</p>
-        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span> Analysis</p>
-        <p><span style="color:rgb(200, 200, 220)">&block; &nbsp;</span> Tentativeness</p>
-        <p><span style="color:rgb(0, 225, 225)">&block; &nbsp;</span> Sadness</p>
-        <p><span style="color:rgb(0, 0, 225)">&block; &nbsp;</span> Fear</p>
-        <p><span style="color:rgb(255, 105, 180)">&block; &nbsp;</span> Anger</p>
+        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span>Joy</p>
+        <p><span style="color:rgb( 0, 255, 127)">&block; &nbsp;</span>Confidence</p>
+        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span>Analysis</p>
+        <p><span style="color:rgb(200, 200, 220)">&block; &nbsp;</span>Tentativeness</p>
+        <p><span style="color:rgb(0, 225, 225)">&block; &nbsp;</span>Sadness</p>
+        <p><span style="color:rgb(0, 0, 225)">&block; &nbsp;</span>Fear</p>
+        <p><span style="color:rgb(255, 105, 180)">&block; &nbsp;</span>Anger</p>
     </div>
     </div>
     <svg id="keylogger"></svg>
@@ -533,35 +704,36 @@ letter-spacing: 1px;
   <div class="container" id="tabCounter-container">
     <div class="description">
       <div class="description-hed">
-        <h2>Browser Activity</h2>
+        <h2>Tab Counter</h2>
       </div>
       <div class="description-body">
         I'm an incorrigible tab hoarder, but if I'm feeling especially restless or unmotivated, I'm even more likely to open new—or activate existing—tabs but not actually consume their content, oftentimes leaving them open indefinitely. Inspired by the relationship between my mental states and my browser activity, I created a Chrome Extension that tracks tabs as they're created and activated, their corresponding favicons, and the final hourly count of tabs and windows left open.
       </div>
       <div class="description-key">
-        <p><span style="color:rgb(0, 255, 127)">&block; &nbsp;</span> Created</p>
-        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span> Activated</p>
-        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span> Final Count</p>
+        <p><span style="color:rgb(0, 255, 127)">&block; &nbsp;</span>Created</p>
+        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span>Activated</p>
+        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span>Final Count</p>
     </div>
     </div>
     <svg id="tabCounter"></svg>
   </div> 
+
   <div class="container" id="context-container">
     <div class="viewport-nav" id="viewport-back">&ltrif; prev</div>
     <svg id="context"></svg>
     <div class="viewport-nav" id="viewport-forward">next &rtrif;</div>
-
   </div>
+
 <div class="container" id="correlation-container">
   <div class="description">
     <div class="description-hed">
-      <h2>Okay, Computer</h2>
+      <h2>STAT 101</h2>
     </div>
     <div class="description-body">
-      So what is the data telling us? To get a sense of emerging relationships, we can look at 1) scatterplots, the shape of which suggests strength of correlation, 2) linear regression, the slope of which expresses the magnitude of how positive or negative a correlation is, and 3) Pearson coefficients, which measure the linear correlation between two variables.<br>
+      So what sense can we make from all this data? Before we make a machine do the learning, we can get a sense of emerging relationships with 1) scatterplots, the shape of which suggests strength of correlation, 2) linear regression, the slope of which expresses the magnitude of how positive or negative a correlation is, and 3) Pearson coefficients, which measure the linear correlation between two variables.<br>
         <p>A pearson correlation coefficient matrix can be generated by comparing <b>"All"</b> with <b>"All"</b> via the dropdown menus to the right (may take a minute to generate). Comparing a metric with another metric, or <b>"All"</b>, will generate scatterplots and trendlines.</p>
     </div>
-    <div class="description-key">
+    <div class="description-key" id="correlation-description-key">
       <p><b>Generate a matrix:</b></p><br>
       <form>
       <select id = "selection1">
@@ -576,25 +748,49 @@ letter-spacing: 1px;
       <br>
       <hr>
       <br>
-        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span> Positive</p>
-        <p><span style="color:rgb(0, 0, 255)">&block; &nbsp;</span> Negative</p>
+        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span>Positive Correlation</p>
+        <p><span style="color:rgb(0, 0, 255)">&block; &nbsp;</span>Negative Correlation</p>
 
     </div>
     </div>
     <br><br><br>
   <svg id="correlations"></svg>
+
     <div id="variable-description-container">
-  <div id="variable-description-title">METRICS KEY</div>
-  <div id="variable-description">
-  </div>
-  <div id="temp-instructions">
-        Use the dropdown menus at the top right to generate a matrix (may take a minute to generate).
+      <div id="variable-description-title">METRICS KEY</div>
+      <div id="variable-description">
       </div>
+      <div id="temp-instructions">
+            Use the dropdown menus at the top right to generate a matrix (may take a minute to generate).
+          </div>
+    </div>
 </div>
+
+
+<div class="container" id="ML-container">
+  <div class="description">
+    <div class="description-hed">
+      <h2>OK Computer</h2>
+    </div>
+    <div class="description-body">
+      As there isn't nearly enough data to feed into a neural network yet, my trackers are presently hooked up to two machine learning models—random forest and linear regression—that are making predictions on my mood as the data comes in. Below, you can see their predictions, along with the actual mood scores; the absolute errors can be inferred from the colored areas between the actual mood line and the random forest/linear regression lines.
+    </div>
+    <div class="description-key" id="ML-description-key">
+      <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span>Actual Mood Score</p>
+      <p><span style="color:rgb(0, 255, 255)">&block; &nbsp;</span>Linear Regression Prediction</p>
+      <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span>Random Forest Prediction</p>
+    </div>
+  </div>
+  <div id="predictions-nav-container">
+    <div class="predictions-nav" id="prev-link">◂ Prev Day</div>
+        <div class="predictions-nav" id="current-range"></div>
+    <div class="predictions-nav" id="next-link">Next Day ▸</div>
+  </div>
+  <svg id="mlPredictions"></svg>
 </div>
 
 <div id="footer">
-  An ongoing project by <a href="http://www.xujenna.com" target="new">Jenna Xu</a>, started during the Spring 2018 semester at NYU ITP. Featured in Mozilla's <a href="https://foundation.mozilla.org/opportunity/artists-open-web/" target="new"><i>Artists Open Web</i></a> and <a href="https://mozillafestival.org/" target="new">Mozfest 2018</a>.</div>
+  An ongoing project by <a href="http://www.xujenna.com" target="new">Jenna Xu</a>, started during the Spring 2018 semester at NYU ITP. Featured in: Mozilla's <a href="https://foundation.mozilla.org/opportunity/artists-open-web/" target="new"><i>Artists Open Web</i></a> and <a href="https://mozillafestival.org/" target="new">Mozfest 2018</a>; NYC Media Lab's <a href="https://www.summit.nycmedialab.org/" target="new">2018 Summit</a>.</div>
 
 <script>
 
@@ -1092,10 +1288,10 @@ let scrub = document.getElementById("context-container")
 window.addEventListener("scroll", function(){
   var targetElement = document.getElementById("tabCounter-container");
 
-  if(window.scrollY > (targetElement.offsetTop)){
+  if(window.scrollY > (targetElement.offsetTop + 100)){
     scrub.style.position = "inherit"
   }
-  else if(window.scrollY <= (targetElement.offsetTop)){
+  else if(window.scrollY <= (targetElement.offsetTop + 100)){
     scrub.style.position = "fixed"
 
   }
@@ -2516,6 +2712,384 @@ correlationSVG.selectAll("g").each(function(pair,i){
 
 }
   })
+});
+
+</script>
+
+
+
+<script>
+
+d3.json("predictions.json", function (err, data) {
+    if (err) console.warn(err, "error loading data");
+
+
+var MLsvg = d3.select("#mlPredictions")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+var MLChart = MLsvg.append("g")
+      .attr("class", "MLchartG")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+newPredictions = [];
+nullPoints = [];
+
+data.forEach(function(d,i){
+  d.time = d.time * 1000;
+})
+
+
+  var nullTime = data[0]['time'] - 360000;
+  var nullItems = {};
+  nullItems["actual_mood"] = null;
+  nullItems["time"] = nullTime;
+  nullItems["linear_model"] = {}
+  nullItems["linear_model"]["prediction"] = null;
+  nullItems["linear_model"]["mean_abs_error"] = null;
+  nullItems["random_forest"] = {}
+  nullItems["random_forest"]["prediction"] = null;
+  nullItems["random_forest"]["mean_abs_error"] = null;
+
+ nullPoints.push(nullItems)
+
+data.forEach(function(d, i) {
+  newPredictions.push(d);
+
+  if(i == data.length -1){
+    var nullItems2 = {};
+    nullItems2["actual_mood"] = null;
+    nullItems2["time"] = data[i]["time"] + 360000;
+    nullItems2["linear_model"] = {}
+    nullItems2["linear_model"]["prediction"] = null;
+    nullItems2["linear_model"]["mean_abs_error"] = null;
+    nullItems2["random_forest"] = {}
+    nullItems2["random_forest"]["prediction"] = null;
+    nullItems2["random_forest"]["mean_abs_error"] = null;
+    nullPoints.push(nullItems2)
+    return;
+  }
+
+  var currentTime = data[i+1]["time"]
+
+  if(d["time"] < (currentTime - 36000000)) {
+    nullTime = currentTime - 360000;
+    var nullItems = {};
+    nullItems["actual_mood"] = null;
+    nullItems["time"] = nullTime;
+    nullItems["linear_model"] = {}
+    nullItems["linear_model"]["prediction"] = null;
+    nullItems["linear_model"]["mean_abs_error"] = null;
+    nullItems["random_forest"] = {}
+    nullItems["random_forest"]["prediction"] = null;
+    nullItems["random_forest"]["mean_abs_error"] = null;
+
+    var nullItems2 = {};
+    nullItems2["actual_mood"] = null;
+    nullItems2["time"] = data[i]["time"] + 360000;
+    nullItems2["linear_model"] = {}
+    nullItems2["linear_model"]["prediction"] = null;
+    nullItems2["linear_model"]["mean_abs_error"] = null;
+    nullItems2["random_forest"] = {}
+    nullItems2["random_forest"]["prediction"] = null;
+    nullItems2["random_forest"]["mean_abs_error"] = null;
+
+    newPredictions.push(nullItems2)
+    newPredictions.push(nullItems)
+    nullPoints.push(nullItems2)
+    nullPoints.push(nullItems)
+  }
+})
+
+
+
+var length = newPredictions.length - 1;
+
+var domainMax = new Date(nullPoints[nullPoints.length - 1]['time']);
+var domainMin = new Date(nullPoints[nullPoints.length - 2]['time']);
+
+var MLxScale = d3.scaleTime()
+  .range([0,width])
+  .domain([domainMin, domainMax]);
+
+var MLyScale = d3.scaleLinear()
+  .range([height, 0])
+  .domain([1.5, 5]);
+
+var domainMaxStr = domainMax.toString().slice(3, -38)
+var domainMinStr = domainMin.toString().slice(3, -38)
+var predictions_nav_prev = d3.select("#prev-link");
+var predictions_nav_next = d3.select("#next-link");
+var currentRange = d3.select("#current-range")
+var currentNullMin = nullPoints.length -2
+currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
+
+
+predictions_nav_prev
+.style("cursor", "pointer")
+.on("mousedown", function(d){
+
+  if(nullPoints[currentNullMin - 2] == null){
+    predictions_nav_prev.style("color", "lightgrey")
+  }
+  else {
+    predictions_nav_next.style("display", "inline-block").style("color", "black")
+    predictions_nav_prev.style("display", "inline-block").style("color", "black")
+
+    currentNullMin = currentNullMin-2;
+  domainMax = new Date(nullPoints[currentNullMin + 1]['time'])
+  domainMin = new Date(nullPoints[currentNullMin]['time'])
+  MLxScale.domain([domainMin, domainMax])
+
+  currentRange = d3.select("#current-range")
+  domainMaxStr = domainMax.toString().slice(3, -38)
+  domainMinStr = domainMin.toString().slice(3, -38)
+
+  currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
+
+  RFareaChart.attr("d", RFarea(newPredictions));
+  LMareaChart.attr("d", LMarea(newPredictions));
+  LMlineChart.attr("d", LMline(newPredictions));
+  RFlineChart.attr("d", RFline(newPredictions));
+  actualMoodChart.attr("d", actualMoodLine(newPredictions))
+  actualMoodCircles.attr("cx", function(d) { return MLxScale(d.time)}).attr("cy", function(d) { return MLyScale(d.actual_mood);})
+  MLxAxisGroup.call(MLxAxis)
+
+  if(nullPoints[currentNullMin - 2] == null){
+    predictions_nav_prev.style("color", "lightgrey")
+
+  }
+  }
+
+})
+
+predictions_nav_next
+.style("cursor", "pointer")
+.on("mousedown", function(d){
+
+  if(nullPoints[currentNullMin + 2] == null){
+    predictions_nav_next.style("color", "lightgrey")
+  }
+  else {
+    predictions_nav_next.style("display", "inline-block").style("color", "black")
+    predictions_nav_prev.style("display", "inline-block").style("color", "black")
+
+  currentNullMin = currentNullMin+2;
+
+
+  domainMax = new Date(nullPoints[currentNullMin + 1]['time'])
+  domainMin = new Date(nullPoints[currentNullMin]['time'])
+  MLxScale.domain([domainMin, domainMax])
+
+  currentRange = d3.select("#current-range")
+  domainMaxStr = domainMax.toString().slice(3, -38)
+  domainMinStr = domainMin.toString().slice(3, -38)
+
+  currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
+
+  RFareaChart.attr("d", RFarea(newPredictions));
+  LMareaChart.attr("d", LMarea(newPredictions));
+  LMlineChart.attr("d", LMline(newPredictions));
+  RFlineChart.attr("d", RFline(newPredictions));
+  actualMoodChart.attr("d", actualMoodLine(newPredictions))
+  actualMoodCircles.attr("cx", function(d) { return MLxScale(d.time)}).attr("cy", function(d) { return MLyScale(d.actual_mood);})
+  MLxAxisGroup.call(MLxAxis)
+
+
+   if(nullPoints[currentNullMin + 2] == null){
+    predictions_nav_next.style("color", "lightgrey")
+
+  }
+}
+
+})
+
+
+
+var actualMoodArea = d3.area()
+    .x(function(d) {return MLxScale(d.time); })
+    .y1(function(d) {return MLyScale(d.actual_mood); })
+    .y0(MLyScale(0))
+      .defined(function(d){return d.actual_mood!=null;});
+
+var LMarea = d3.area()
+    .x(function(d) { return MLxScale(d.time); })
+    .y1(function(d) { return MLyScale(d["linear_model"]["prediction"]); })
+    .y0(function(d) {return MLyScale(d.actual_mood);})
+      .defined(function(d){return d["linear_model"]["prediction"]!=null;});
+
+
+var RFarea = d3.area()
+    .x(function(d) { return MLxScale(d.time); })
+    .y1(function(d) { return MLyScale(d.random_forest.prediction); })
+    .y0(function(d) {return MLyScale(d.actual_mood);})
+      .defined(function(d){return d.random_forest.prediction!=null;});
+
+
+  var actualMoodLine = d3.line()
+  .defined(function(d){return d.actual_mood!=null})
+    .x(function(d) {return MLxScale(d.time);})
+    .y(function(d){return MLyScale(d.actual_mood);});
+
+  var LMline = d3.line()
+  .defined(function(d){return d["linear_model"]["prediction"]!=null})
+    .x(function(d) {return MLxScale(d.time);})
+    .y(function(d){return MLyScale(d["linear_model"]["prediction"]);});
+
+
+  var RFline = d3.line()
+  .defined(function(d){return d.random_forest.prediction!=null})
+    .x(function(d) {return MLxScale(d.time);})
+    .y(function(d){return MLyScale(d.random_forest.prediction);});
+
+
+
+var MLxAxis = d3.axisBottom(MLxScale)
+  .tickPadding(10)
+  // .tickFormat(d3.timeFormat("%c"))
+  .ticks(4);
+
+
+var MLyAxis = d3.axisLeft(MLyScale)
+  .tickPadding(10)
+  .tickSize(-width)
+  .ticks(5)
+  .tickSizeOuter(0);
+
+
+var MLxAxisGroup = MLChart.append("g")
+  .attr("class", "Axis")
+  .attr("transform","translate(0, "+(height)+")")
+  .call(MLxAxis);
+
+MLChart.append("g")
+  .attr("class","Axis")
+  .call(MLyAxis);
+
+
+  var RFareaChart = MLChart.append("path")
+    // .data(newProductivity)
+    .attr("d", RFarea(newPredictions))
+    .attr("fill", "gold")
+    .attr("opacity", 0.3);
+
+
+  var LMareaChart = MLChart.append("path")
+    // .data(newProductivity)
+    .attr("d", LMarea(newPredictions))
+    .attr("fill", "cyan")
+    .attr("opacity", 0.3);
+
+
+var LMlineChart = MLChart.append("path")
+    .attr("d", LMline(newPredictions))
+    .attr("stroke", "cyan")
+    .attr("stroke-width", 1.5)
+    .attr("fill", "none")
+    .attr("class", "line");
+
+var RFlineChart = MLChart.append("path")
+    .attr("d", RFline(newPredictions))
+    .attr("stroke", "gold")
+    .attr("stroke-width", 1.5)
+    .attr("fill", "none")
+    .attr("class", "line");
+
+var actualMoodChart = MLChart.append("path")
+    .attr("d", actualMoodLine(newPredictions))
+    .attr("stroke", "fuchsia")
+    .attr("stroke-width", 2.5)
+    .attr("fill", "none")
+    .attr("class", "line");
+
+
+
+  var actualMoodCircles = MLChart.selectAll(".mood-circle")
+    .data(newPredictions)
+    .enter()
+    .append("circle")
+    .attr("class","mood-circle")
+    .attr("cx", function(d) { return MLxScale(d.time)})
+    .attr("r", function(d) {return d.actual_mood == null ? 0 : 4})
+    .attr("cy", function(d) { return MLyScale(d.actual_mood);})
+    .attr("opacity", 100)
+    .attr("fill", "fuchsia");
+
+
+
+// Hover line.
+var hoverLineGroup = MLChart.append("g")
+          .attr("class", "hover-line");
+var hoverLine = hoverLineGroup
+  .append("line")
+    .attr("y1", 0).attr("y2", height);
+
+// Hide hover line by default.
+hoverLineGroup.style("opacity", 1e-6);
+
+
+MLChart.selectAll("circle")
+.attr("cursor", "pointer")
+
+.on("mouseover", function(d) {
+  d3.select("body")
+
+  MLChart.append("g")
+  .attr("class", "hoverLabels")
+  .append("text")
+  .attr("x", MLxScale(d.time ) + 12)
+  // .attr("y", MLyScale(d.actual_mood))
+  .attr("y", 20)
+  .text("Actual Mood Score: " + d.actual_mood);
+    // MLChart.append("circle")
+    // .attr("class","hover-circle")
+    // .attr("cx", MLxScale(d.time))
+    // .attr("r", d.actual_mood == null ? 0 : 4)
+    // .attr("cy", MLyScale(d.actual_mood))
+    // .attr("opacity", 100)
+    // .attr("fill", "fuchsia")
+  MLChart.append("g")
+  .attr("class", "hoverLabels")
+  .append("text")
+  .attr("x", MLxScale(d.time ) + 12)
+  // .attr("y", MLyScale(d.linear_model.prediction))
+  .attr("y", 38)
+  .text("Linear Model Prediction: " + d.linear_model.prediction);
+  MLChart.append("circle")
+    .attr("class","hover-circle")
+    .attr("cx", MLxScale(d.time))
+    .attr("r", d.linear_model.prediction == null ? 0 : 4)
+    .attr("cy", MLyScale(d.linear_model.prediction))
+    .attr("opacity", 100)
+    .attr("fill", "cyan")
+  MLChart.append("g")
+  .attr("class", "hoverLabels")
+  .append("text")
+  .attr("x", MLxScale(d.time ) + 12)
+  .attr("y", 56)
+    // .attr("y", MLyScale(d.random_forest.prediction))
+  .text("Random Forest Prediction: " + d.random_forest.prediction);
+    MLChart.append("circle")
+    .attr("class","hover-circle")
+    .attr("cx", MLxScale(d.time))
+    .attr("r", d.random_forest.prediction == null ? 0 : 4)
+    .attr("cy", MLyScale(d.random_forest.prediction))
+    .attr("opacity", 100)
+    .attr("fill", "gold")
+  hoverLine.attr("x1", MLxScale(d.time )).attr("x2", MLxScale(d.time ));
+ hoverLineGroup.style("opacity", 1);
+})
+
+
+d3.select("body")
+    .on("mouseout", function(d) {
+    // tip.hide(d);
+        hoverLineGroup.style("opacity", 1e-6);
+
+    d3.selectAll(".hover-circle").remove();
+    d3.selectAll(".hoverLabels").remove();
+  });
+
 });
 
 </script>

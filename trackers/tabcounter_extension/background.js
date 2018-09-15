@@ -101,7 +101,7 @@ function saveMetrics(){
 
 	console.log("METRICS", hourlyData)
 
-	if(tabs_activated > 1){
+	if(tabs_created > 1){
 		database.ref(key).set(hourlyData);
 	}
 

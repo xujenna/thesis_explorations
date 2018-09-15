@@ -8,7 +8,7 @@
 <style>
 
 body {
-  background-color:#f3f2f7;
+  background-color:#fff;
 }
 
 .label {
@@ -55,29 +55,26 @@ body {
 // correlation matrix adapted from https://bl.ocks.org/emeeks/671c0e7adfb1ce7060b8
 // linear regression adapted from https://bl.ocks.org/HarryStevens/be559bed98d662f69e68fc8a7e0ad097
 
-// colors = d3.scale.ordinal().range(["gold", "springgreen", "magenta", "blue", "deeppink", "cyan"]);
-
-// colors = d3.scale.ordinal().range(["#827abf", "#f62150", "#6f89b6", "#f5e0b7", "#5b1e37", "#b9e3c5"]);
 
 d3.tsv("mergedDF.tsv", small_scatterplots);
 
 var margin = {top: 20, right: 20, left:30, bottom: 20}
-d3.select("body").append("svg").attr("height", 4400 + margin.top + margin.bottom).attr("width", 4400 + margin.left + margin.right)
+d3.select("body").append("svg").attr("height", 10000 + margin.top + margin.bottom).attr("width", 10000 + margin.left + margin.right)
 
 function small_scatterplots(data) {
-
-    attributes = ["mood", "social", "alone", "morale", "stress", "fatigue", "compulsions", "studying_activity", "eating_activity", "ash_stuff_activity", "with_friends_activity", "working_activity", "working_out_activity", "shopping_activity", "meditation_activity", "schoolwork_activity", "therapy_activity", "in_class_activity", "chatting_activity", "resting_activity", "reading_activity", "with_parents_activity", "feedly_activity", "tv_activity", "errands_activity", "leisure_activity", "work_activity", "email_activity", "home_location", "vacation_location", "cafe_location", "parents_home_location", "friend_home_location", "school_location", "library_location", "Sadness_score", "Analytical_score", "Joy_score", "Fear_score", "Tentative_score", "Anger_score", "Confident_score", "word_count", "uniqueword_count", "char_count", "backspace_count", "avg_dwelltime", "avg_flighttime", "avg_attention", "avg_engagement", "avg_valence", "blinks", "productivity_score", "current_tabCount", "current_windowCount", "tabs_activated", "tabs_created", "windows_created", "phone_unlocks", "phone_use_in_secs"]
+    attributes = ["mood", "unique_interactions", "alone", "morale", "stress", "fatigue", "compulsions", "email_activity", "errands_activity", "resting_activity", "with_parents_activity", "reading_activity", "with_friends_activity", "therapy_activity", "commuting_activity", "meditation_activity", "schoolwork_activity", "washing_up_activity", "eating_activity", "tv_activity", "working_out_activity", "feedly_activity", "leisure_activity", "cooking_activity", "chatting_activity", "in_class_activity", "studying_activity", "working_activity", "friend_home_location", "library_location", "parents_home_location", "vacation_location", "home_location", "cafe_location", "school_location", "Sadness_score", "Analytical_score", "Joy_score", "Fear_score", "Tentative_score", "Anger_score", "Confident_score", "word_count", "uniqueword_ratio", "backspace_count", "avg_dwelltime", "avg_flighttime", "avg_attention", "avg_engagement", "avg_valence", "blinks", "productivity_score", "current_tabCount", "current_windowCount", "tabs_activated", "tabs_created", "windows_created", "phone_unlocks", "phone_use_secs", "walking_distance", "walking_duration", "avg_walking_speed","stepCount", "time_of_day"]
     
   attributeMatrix = [];
 
   attributes.forEach(function(a,x) {
-    attributes.forEach(function(b,y){
-      attributeMatrix.push({a: a, b:b, x:x, y:y})
+    if(x>18 && x<=27){
+      attributes.forEach(function(b,y){
+        attributeMatrix.push({a: a, b:b, x:x, y:y})
     })
+    }
   })
-    // console.log(attributeMatrix)
+    console.log(attributeMatrix)
 
-  //d3.csv pulls in data as strings so they need to be formatted as numbers
   data.forEach(function (d) {
     attributes.forEach(function (att) {
       if(d[att] == "False"){
@@ -92,7 +89,6 @@ function small_scatterplots(data) {
     })
   })
 
-  //create scales dynamically for each attribute's extent
 
   scale = {};
   attributes.forEach(function (att) {
@@ -122,7 +118,7 @@ function small_scatterplots(data) {
     // else {
     //   shift = false;
     //   dx = d.x;
-    return "translate(" + ((d.x * 130) + margin.left) + "," + ((d.y * 130) + margin.top) + ")" 
+    return "translate(" + ((d.x * 150) + margin.left) + "," + ((d.y * 150) + margin.top) + ")" 
   });
 
   d3.selectAll("g")
@@ -133,7 +129,7 @@ function small_scatterplots(data) {
   scale[pair.b].range([100,0]);
 
   if(pair.a == pair.b){
-    d3.select(this).append("rect").style("fill", "none").style("stroke", "silver").style("stroke-width", 0.5)
+    d3.select(this).append("rect").style("fill", "none").style("stroke", "black").style("stroke-width", 0.5)
     .attr("height", 100)
     .attr("width", 100)
     d3.select(this).append("text")
@@ -175,7 +171,7 @@ function small_scatterplots(data) {
     .attr("class", "label")
     .attr("x", 55)
     .style("text-anchor", "middle")
-    .attr("y", 5)
+    .attr("y", 9)
     .attr("fill", "black")
 
     .text(function(d){
@@ -192,7 +188,7 @@ function small_scatterplots(data) {
     .attr("class", "label")
     .attr("x", 55)
     .style("text-anchor", "middle")
-    .attr("y", 15)
+    .attr("y", 19)
     .attr("fill", "black")
     .text(function(d){
       var string = pair.a + pair.b;
