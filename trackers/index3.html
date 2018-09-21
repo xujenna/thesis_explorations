@@ -2019,7 +2019,7 @@ yScaleTabCounter.domain([0,yMax]);
       for(var i = 0; i < dataset[d].favicons.length; i++){
         var jnURL = "http://localhost:8888/static/base/images/"
         if(dataset[d].favicons[i].includes(jnURL)){
-        imgString += "<img src='tabcounter/"+dataset[d].favicons[i].slice(jnURL.length)+"' width='13px' height='13px'>"
+        imgString += "<img src='tabcounter_extension/"+dataset[d].favicons[i].slice(jnURL.length)+"' width='13px' height='13px'>"
         }
         else{
         imgString += "<img src='"+dataset[d].favicons[i]+"' width='13px' height='13px'>"

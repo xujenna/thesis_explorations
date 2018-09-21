@@ -25,7 +25,7 @@ DATA_SOURCE = "derived:com.google.step_count.delta:com.google.android.gms:estima
 # 64 bit integers (epoch time with nanoseconds).
 # TODAY = datetime.today().date()
 NOW = datetime.today()
-START = 1527741710291550000
+START = 1522557710291550000
 END = int(time.mktime(NOW.timetuple())*1000000000)
 DATA_SET = "%s-%s" % (START, END)
 
