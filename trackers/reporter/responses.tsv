@@ -846,3 +846,34 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-09-20T20:50:10.979525	1537491010.979525	2.5	so lazy	long day	leisure, tv	0	True	Home	2	1	4.5	False
 2018-09-20T21:57:00.098074	1537495020.098074	2.5	still lazy	done for the day	leisure, tv	1	True	Home	2	1	4.5	False
 2018-09-21T00:33:12.519408	1537504392.519408	3	sleepy but focused	working on model	schoolwork, leisure, reading	0	True	Home	3	0.5	5	True
+2018-09-21T01:33:48.479722	1537508028.479722	2.5	super sleepy	long day, not enough sleep last night	studying,schoolwork, washing up	1	True	Home	2	0	5	True
+2018-09-21T12:37:18.658169	1537547838.658169	3	focused	working on model agai	schoolwork, email, leisure, feedly	0	True	Home	3	0.5	3	False
+2018-09-21T13:40:40.520209	1537551640.520209	3	neutral	getting ready to go	schoolwork,	3	True	Home	3	1	3.5	False
+2018-09-21T15:39:35.900143	1537558775.900143	4	cheerful	hanging out at school	leisure, schoolwork	4	False	School	3	0.5	3.5	False
+2018-09-21T17:47:07.344237	1537566427.344237	4	still cheerful	still hanging out at school	schoolwork, with friends	5	False	School	3	1	3.5	True
+2018-09-21T19:18:42.062836	1537571922.062836	4	cheerful	hanging out at school	with friends, schoolwork	6	False	School	3	0.5	3	True
+2018-09-21T20:39:04.224660	1537576744.22466	4	still cheerful	still hanging out at school	schoolwork, with friends, eating	2	False	School	3.5	0	3	False
+2018-09-21T21:49:32.130267	1537580972.130267	3.5	sleepy and slightly demoralized	models are not yielding good results	schoolwork	3	False	School	2.5	1	3.5	False
+2018-09-22T00:11:50.084673	1537589510.084673	2.5	lazy	was pretty tired all day	leisure, tv	1	True	Home	2	0.5	4.5	True
+2018-09-22T17:25:06.159288	1537651506.159288	2.5	exhausted	yoga and errands	leisure, feedly	0	True	Home	2	1	4	True
+2018-09-22T18:53:16.149997	1537656796.149997	2.5	kind of satisfied	having a cathartic cry to an old jay chou song lol	leisure, fschoolwork	0	True	Home	2.5	2	4	True
+2018-09-22T19:54:14.547738	1537660454.547738	3	focused	trying to semi-automate opencv heart rate script	schoolwork, leisure	0	True	Home	3	1	4	True
+2018-09-22T21:02:08.116025	1537664528.116025	3	neutral	eating	cooking, eating, schoolwork, leisure	0	True	Home	3	0.5	3.5	False
+2018-09-22T22:32:31.651051	1537669951.651051	3	focused	back to ensemble model	schoolwork	0	True	Home	2.5	1.5	4	False
+2018-09-22T23:42:39.914024	1537674159.914024	2.5	distracted	sleepy	leisure	0	True	Home	2	2	4.5	False
+2018-09-23T00:43:09.495590	1537677789.49559	3.5	proud	i love my markov model lol	schoolwork, leisure	0	True	Home	3	1.5	4	True
+2018-09-23T02:03:31.268668	1537682611.268668	2.5	super sleepy and annoyed	model is terrible without self-reported data	schoolwork	0	True	Home	2	2	5	True
+2018-09-23T12:33:16.928072	1537720396.928072	3.5	pretty good	not sure, planning the day? going to makerfaire/queens for food	leisure, errands, email	3	True	Home	3	2	3	True
+2018-09-23T20:17:34.155005	1537748254.155005	4	cheerful	had a nice day in queens	eating, leisure, with friends	4	True	Home	3	1.5	2.5	True
+2018-09-23T21:59:29.149545	1537754369.149545	3	brainless	started watching tv instead of working	leisure, tv	2	True	Home	2	2	3	True
+2018-09-23T23:17:12.008821	1537759032.008821	3.5	refreshed, a little plaintive	just had another cathartic cry watching Sorry For Your Loss	leisure, tv	3	True	Home	3	1	3.5	True
+2018-09-24T00:22:07.687521	1537762927.687521	3	was emotional, now getting back to work	feeling, thinking about being alone, being enough, and reconsidering my project	schoolwork, leisure, tv, email	2	True	Home	3	1	4	True
+2018-09-24T01:37:19.421058	1537767439.421058	2.5	getting lazy	sleepy and distracted	schoolwork, leisure	0	True	Home	2	1.5	4.5	True
+2018-09-24T14:50:33.139602	1537815033.139602	4	cheerful but distracted	at school, had a nice date with isabella	schoolwork, leisure, with friends	6	False	School	2.5	2	3	True
+2018-09-24T16:12:39.727549	1537819959.727549	3.5	a little distracted and restless	work is hard	schoolwork, with friends	4	False	School	2.5	2.5	3.5	True
+2018-09-24T17:16:01.894120	1537823761.89412	4	cheerful	hanging out at school and making some progress	schoolwork, with friends	3	False	School	3	1.5	3.5	True
+2018-09-24T18:56:25.513811	1537829785.513811	4	still cheerful	still at school	schoolwork, in class	4	False	School	3.5	2	3.5	True
+2018-09-24T19:59:06.259155	1537833546.259155	4	engaged	in class	in class	2	False	School	3	1.5	3	False
+2018-09-24T21:00:00.345078	1537837200.345078	3.5	interested	in hello computer	in class	0	False	School	3	1	3.5	False
+2018-09-24T23:00:48.179365	1537844448.179365	2.5	a little sad	listened to that jay chou song again lol	schoolwork, leisure, feedly, cooking, eating	0	True	Home	3	1.5	3	True
+2018-09-25T00:40:51.963585	1537850451.963585	3	neutral	just working on the ml model again	schoolwork, leisure	0	True	Home	2.5	1	4	True

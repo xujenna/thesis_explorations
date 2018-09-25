@@ -1378,5 +1378,317 @@
       "prediction": 2.65,
       "mean_abs_error": 0.3563953488372093
     }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1537508028.479722,
+    "linear_model": {
+      "prediction": 2.2008915524677577,
+      "mean_abs_error": 0.27157152694974424
+    },
+    "random_forest": {
+      "prediction": 2.6,
+      "mean_abs_error": 0.361046511627907
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1537547838.658169,
+    "linear_model": {
+      "prediction": -27130.184317199004,
+      "mean_abs_error": 0.2569948901801333
+    },
+    "random_forest": {
+      "prediction": 2.95,
+      "mean_abs_error": 0.3354651162790697
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1537551640.520209,
+    "linear_model": {
+      "prediction": 2.9181065512374946,
+      "mean_abs_error": 0.24050325659813612
+    },
+    "random_forest": {
+      "prediction": 3.1,
+      "mean_abs_error": 0.3209302325581395
+    }
+  },
+  {
+    "actual_mood": 4.0,
+    "time": 1537558775.900143,
+    "linear_model": {
+      "prediction": 3.2541645805483927,
+      "mean_abs_error": 0.25995195241519087
+    },
+    "random_forest": {
+      "prediction": 3.15,
+      "mean_abs_error": 0.36104651162790696
+    }
+  },
+  {
+    "actual_mood": 4.0,
+    "time": 1537566427.3442369,
+    "linear_model": {
+      "prediction": 3.7978089523384906,
+      "mean_abs_error": 0.2818525727121883
+    },
+    "random_forest": {
+      "prediction": 3.7,
+      "mean_abs_error": 0.3660919540229885
+    }
+  },
+  {
+    "actual_mood": 4.0,
+    "time": 1537571922.062836,
+    "linear_model": {
+      "prediction": 3.884741954986209,
+      "mean_abs_error": 0.28453772232570057
+    },
+    "random_forest": {
+      "prediction": 3.95,
+      "mean_abs_error": 0.3770114942528736
+    }
+  },
+  {
+    "actual_mood": 4.0,
+    "time": 1537576744.22466,
+    "linear_model": {
+      "prediction": 3.893297388027066,
+      "mean_abs_error": 0.2668645445579715
+    },
+    "random_forest": {
+      "prediction": 3.8,
+      "mean_abs_error": 0.38275862068965516
+    }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1537580972.130267,
+    "linear_model": {
+      "prediction": 3.1597098648893835,
+      "mean_abs_error": 0.2527528387466989
+    },
+    "random_forest": {
+      "prediction": 2.8,
+      "mean_abs_error": 0.3281609195402299
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1537589510.084673,
+    "linear_model": {
+      "prediction": 2.651701783144736,
+      "mean_abs_error": 0.2527600345629641
+    },
+    "random_forest": {
+      "prediction": 2.6,
+      "mean_abs_error": 0.34022988505747126
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1537656796.149997,
+    "linear_model": {
+      "prediction": 2.556043609674563,
+      "mean_abs_error": 0.23353402415471802
+    },
+    "random_forest": {
+      "prediction": 2.55,
+      "mean_abs_error": 0.35909090909090907
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1537660454.547738,
+    "linear_model": {
+      "prediction": 2.86929122054672,
+      "mean_abs_error": 0.23353402415468102
+    },
+    "random_forest": {
+      "prediction": 3.0,
+      "mean_abs_error": 0.3409090909090909
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1537664528.116025,
+    "linear_model": {
+      "prediction": 2.9933947508850616,
+      "mean_abs_error": 0.27346329427960275
+    },
+    "random_forest": {
+      "prediction": 3.1,
+      "mean_abs_error": 0.35
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1537669951.651051,
+    "linear_model": {
+      "prediction": 2.5465984159905464,
+      "mean_abs_error": 0.2577158872367557
+    },
+    "random_forest": {
+      "prediction": 2.6,
+      "mean_abs_error": 0.32954545454545453
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1537674159.914024,
+    "linear_model": {
+      "prediction": 2.4216225774632676,
+      "mean_abs_error": 0.2609375076549487
+    },
+    "random_forest": {
+      "prediction": 2.5,
+      "mean_abs_error": 0.36590909090909085
+    }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1537677789.49559,
+    "linear_model": {
+      "prediction": 2.8646864230024986,
+      "mean_abs_error": 0.25320035517115264
+    },
+    "random_forest": {
+      "prediction": 2.95,
+      "mean_abs_error": 0.39382022471910116
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1537682611.268668,
+    "linear_model": {
+      "prediction": 2.3305665288710746,
+      "mean_abs_error": 0.25699335623880054
+    },
+    "random_forest": {
+      "prediction": 2.4,
+      "mean_abs_error": 0.34662921348314607
+    }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1537720396.928072,
+    "linear_model": {
+      "prediction": 2.9074116855364904,
+      "mean_abs_error": 0.2606698745738848
+    },
+    "random_forest": {
+      "prediction": 3.2,
+      "mean_abs_error": 0.35449438202247197
+    }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1537759032.008821,
+    "linear_model": {
+      "prediction": 3.1091434134239653,
+      "mean_abs_error": 0.2685723317112322
+    },
+    "random_forest": {
+      "prediction": 3.4,
+      "mean_abs_error": 0.3769662921348315
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1537762927.687521,
+    "linear_model": {
+      "prediction": 3.3033546056437504,
+      "mean_abs_error": 0.24890391837410128
+    },
+    "random_forest": {
+      "prediction": 3.15,
+      "mean_abs_error": 0.3382022471910113
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1537767439.421058,
+    "linear_model": {
+      "prediction": 2.6323825487650994,
+      "mean_abs_error": 0.23315088839814394
+    },
+    "random_forest": {
+      "prediction": 2.45,
+      "mean_abs_error": 0.32555555555555554
+    }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1537819959.727549,
+    "linear_model": {
+      "prediction": 3.2317017156590753,
+      "mean_abs_error": 0.24895787842854078
+    },
+    "random_forest": {
+      "prediction": 2.55,
+      "mean_abs_error": 0.33444444444444443
+    }
+  },
+  {
+    "actual_mood": 4.0,
+    "time": 1537823761.89412,
+    "linear_model": {
+      "prediction": 3.5383486474039225,
+      "mean_abs_error": 0.248797044639292
+    },
+    "random_forest": {
+      "prediction": 3.7,
+      "mean_abs_error": 0.34388888888888886
+    }
+  },
+  {
+    "actual_mood": 4.0,
+    "time": 1537829785.5138109,
+    "linear_model": {
+      "prediction": 3.186520594025593,
+      "mean_abs_error": 0.2565011352046137
+    },
+    "random_forest": {
+      "prediction": 3.4,
+      "mean_abs_error": 0.3544444444444444
+    }
+  },
+  {
+    "actual_mood": 4.0,
+    "time": 1537833546.259155,
+    "linear_model": {
+      "prediction": 3.3378857411263736,
+      "mean_abs_error": 0.24742671926306936
+    },
+    "random_forest": {
+      "prediction": 3.65,
+      "mean_abs_error": 0.32999999999999996
+    }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1537837200.345078,
+    "linear_model": {
+      "prediction": 3.6332582515754646,
+      "mean_abs_error": 0.2334324805480936
+    },
+    "random_forest": {
+      "prediction": 3.6,
+      "mean_abs_error": 0.3175824175824175
+    }
+  },
+  {
+    "actual_mood": 2.5,
+    "time": 1537844448.1793652,
+    "linear_model": {
+      "prediction": 3.226185267189838,
+      "mean_abs_error": 0.24161539080990668
+    },
+    "random_forest": {
+      "prediction": 3.25,
+      "mean_abs_error": 0.29450549450549446
+    }
   }
 ]

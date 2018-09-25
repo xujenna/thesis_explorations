@@ -415,8 +415,8 @@ while True:
 
     def hourOnly(timestamp):
         timestamp = timestamp.hour
-        if (timestamp < 6):
-            timestamp = timestamp + 24
+        # if (timestamp < 6):
+        #     timestamp = timestamp + 24
         return timestamp
 
 
@@ -426,17 +426,18 @@ while True:
 
     newMergedDF = newMergedDF.assign(time_of_day=pd.Series(hourColumn).values)
 
+
+
+
     newMergedDF = newMergedDF.fillna(0)
 
 
-
-
     previousDFlength = currentDFlength
-    currentDFlength = len(mergedDF)
+    currentDFlength = len(newMergedDF)
 
 
     if (previousDFlength < currentDFlength):
-        makePrediction(mergedDF)
+        makePrediction(newMergedDF)
         time.sleep(3600)
     elif (previousDFlength == currentDFlength):
         print(previousDFlength)

@@ -1,6 +1,0 @@
-com.samsung.health.device_profile,6000085,5
-create_time,device_group,manufacturer,deviceuuid,pkg_name,update_time,datauuid,name,model
-2017-04-10 15:11:08.726,0,all_target,Mk66SbFqK1,com.sec.android.app.shealth,2018-03-15 06:14:08.583,471ca32b-a665-1e9e-7c27-7ac69485dc05,all_target,all_target
-2017-04-10 15:11:04.960,0,Combined,VfS0qUERdZ,com.sec.android.app.shealth,2018-03-15 06:14:08.583,7af9722c-cd99-07b7-853a-43ce58e819c5,Combined,Combined
-2018-07-18 13:29:56.619,360001,Samsung,dgrrqaEJmv,com.sec.android.app.shealth,2018-07-18 13:29:56.619,bdc84115-cfbb-7a15-4c7d-046e00a9e0c0,My Device,SM-G930T
-2017-04-10 15:10:00.204,360001,Samsung,avnWu77KPA,com.sec.android.app.shealth,2018-03-15 06:14:08.583,c141fe3b-df17-b912-b055-a42e53910656,My Device,SM-G930T
