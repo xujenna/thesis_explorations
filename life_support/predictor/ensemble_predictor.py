@@ -10,128 +10,203 @@ from functools import reduce
 import time
 import codecs
 import os
+from sklearn.externals import joblib
 
 # train tracker models on entire dataset for mood, morale, stress, fatigue, compulsion
 # test on respective columns of big merged DF
 # test predictions become training data for final prediction model
 # final prediction model updates every 15 minutes
 
+productivity_mood_SVR = joblib.load('saved_models/productivity_mood_SVR.pkl')
+affectiva_mood_LM = joblib.load('saved_models/affectiva_mood_LM.pkl')
+stepCount_mood_SVR = joblib.load('saved_models/stepCount_mood_SVR.pkl')
+ensemble_mood_SVR = joblib.load('saved_models/ensemble_mood_SVR.pkl')
 
-# browser activity tv column (amazon.com)
+productivity_lastUpdateTime = 0
+affectiva_lastUpdateTime = 0
+stepCount_lastUpdateTime = 0
+responses_lastUpdateTime = 0
 
-def roundUnixTime(timestamp):
-    timestamp = timestamp - (timestamp % 3600)
-    return timestamp
+latest_hour = 0
+responsesLength = 0
+currentIndexPredictions = {}
+currentIndexPredictions['predictions'] = []
 
-def convertTime(timestamp):
+
+def convertTimeToStruct(timestamp):
     timestamp = time.gmtime(timestamp)
     return timestamp
 
-def convertUTCToTimestamp(timestamp):
-    nanosecondTimestamp = timestamp * 1e9
-    timestamp = pd.Timestamp(nanosecondTimestamp, tz='US/Eastern')
-    return timestamp
+
+def ensemble_model_mood(prediction, type):
+    global responsesLength
+    global updatedPrediction
+    global currentIndexPredictions
+    global productivity_pred
+    global affectiva_pred
+    global stepCount_pred
+
+    responsesDF = pd.read_csv("../../trackers/reporter/responses.tsv", sep='\t', header=0)
+
+    if ((len(responsesDF) - 1) == responsesLength):
+        print("updating prediction")
+    else:
+        print("adding new round of predictions")
+        responsesLength = len(responsesDF) - 1
+        currentIndexPredictions['mood_index'] = responsesLength
+        currentIndexPredictions['predictions'] = []
+        updatedPrediction = {}
 
 
-# Mood Reporter DF
+    # if(currentTime.tm_hour == currentHour.tm_hour):
+    #     continue
+    # else:
+    #     currentHour = currentTime.replace(minute=0, second=0)
 
-responsesDF = pd.read_csv("../../trackers/reporter/responses.tsv", sep='\t', header=0)
+    if (type == 'productivity'):
+        productivity_pred = prediction
+        updatedPrediction['productivity_pred'] = prediction[0]
+        print("productivity_pred:")
+        print(productivity_pred)
+    elif(type == 'affectiva'):
+        affectiva_pred = prediction
+        updatedPrediction['affectiva_pred'] = prediction[0]
+        print("affectiva_pred:")
+        print(affectiva_pred)
+    elif(type == 'stepCount'):
+        stepCount_pred = prediction
+        updatedPrediction['stepCount_pred'] = prediction[0]
+        print("stepCount_pred:")
+        print(stepCount_pred)
+    elif(type =='actual_score'):
+        currentIndexPredictions['actual_score'] = prediction
+        print("actual_score:")
+        print(prediction)
+        writeToJSON(currentIndexPredictions)
 
-activity_names = list(set(list(map(lambda x: x.lower().strip(), reduce(lambda x,y: x+y, [x.split(",") for x in list(responsesDF.activity.values)])))))
+    try:
+        print(productivity_pred)
+        print(affectiva_pred)
+        print(stepCount_pred)
 
-for activity_name in activity_names:
-    responsesDF[activity_name.replace(" ", "_") + "_activity"] = responsesDF.activity.apply(lambda x: activity_name in x.lower())
+        latestDataDF = pd.DataFrame()
+        latestDataDF['productivity_pred'] = productivity_pred
+        latestDataDF['affectiva_pred'] = affectiva_pred
+        latestDataDF['stepCount_pred'] = stepCount_pred
+        print("predicting on:")
+        print(latestDataDF)
 
-location_names = list(set(list(map(lambda x: x.lower().strip(), reduce(lambda x,y: x+y, [x.split(",") for x in list(responsesDF.location.values)])))))
+        ensemble_pred = ensemble_mood_SVR.predict(latestDataDF)
+        print("current mood prediction:")
+        print(ensemble_pred)
 
-def split_locations(locations):
-    return list(map(lambda x: x.lower().strip(), locations.split(",")))
+        updatedPrediction['ensemble_pred'] = ensemble_pred[0]
+        updatedPrediction['timestamp'] = datetime.datetime.now().timestamp()
+        currentIndexPredictions['predictions'].append(updatedPrediction)
+        print(currentIndexPredictions)
+        updatedPrediction = {}
 
-for location_name in location_names:
-    responsesDF[location_name.replace(" ", "_") + "_location"] = responsesDF.location.apply(lambda x: location_name in split_locations(x))
-
-responsesDF.time = responsesDF.unix_time
-
-responsesDF.time = responsesDF.time.apply(convertUTCToTimestamp)
-
-del responsesDF['moodNotes']
-del responsesDF['trigger']
-del responsesDF['activity']
-del responsesDF['location']
-del responsesDF['unix_time']
-
-moodDF = responsesDF[['time','mood']].copy()
-moraleDF = responsesDF[['time', 'morale']].copy()
-stressDF = responsesDF[['time', 'stress']].copy()
-fatigueDF = responsesDF[['time', 'fatigue']].copy()
-compulsionDF = responsesDF[['time', 'compulsions']].copy()
-
-
-
-
-# Keylogger Model
-
-def trainKeylogger():
-    tone_names = ['Sadness', 'Analytical', 'Joy', 'Fear', 'Tentative', 'Anger', 'Confident']
-
-    with open('../../trackers/keylogger/logs/log_new.json', 'r') as f:
-        keyloggerData = json.load(f)
-
-    def extract_keyloggerData(data):
-        results = []
-
-        for d in data:
-            result = [0]*(len(tone_names) + 6)
-            try:
-                result[7] = d['word_count']
-    #             result[8] = d['uniqueword_count']
-                result[8] = d['uniqueword_ratio']
-    #             result[9] = d['char_count']
-                result[9] = d['backspace_count']
-                result[10] = d['avg_dwelltime']
-                result[11] = d['avg_flighttime']
-
-                tones = d['document_tone']['tones']
-                for i in range(len(tones)):
-                    score = tones[i]['score']
-                    tone_name = tones[i]['tone_name']
-                    tone_index = tone_names.index(tone_name)
-                    result[tone_index] = score            
-
-    #             time = utc_to_local(datetime.datetime.fromtimestamp(d['unix_time']))
-    #             result[-1] = time.gmtime(d['unix_time'])
-                result[-1] = d['unix_time']
-
-                results.append(tuple(result))
-            except:
-                continue
-                
-        return results
-
-    keyloggerDF = DataFrame(extract_keyloggerData(keyloggerData),
-                            columns=[tone_name+"_score" for tone_name in tone_names] + ['word_count','uniqueword_ratio', 'backspace_count','avg_dwelltime','avg_flighttime','time'])
-
-    keyloggerDF.time = keyloggerDF.time.apply(convertUTCToTimestamp)
-    
-    pd.merge_asof(moodDF, keyloggerDF, on='time', tolerance=(3600*2))
-
-    keyloggerFeatures = list(keyloggerDF.columns.drop())
+    except:
+        print("waiting to fill row")
 
 
+def writeToJSON(predictions):
 
-def keyloggerModel():
+    with open('ensemble_predictions.json', 'r') as f:
+        brackets = json.load(f)
+    with open('ensemble_predictions.json', 'w') as f:
+        brackets.append(predictions)
+        print(brackets)
+        json.dump(brackets, f, indent=2)
+    print("Wrote to JSON:")
+    print(predictions)
 
 
 
 
-# Final Prediction Model
+while True:
+    productivityFile_lastUpdateTime = os.path.getmtime('../../trackers/getAPIdata/productivity.json')
+    affectivaFile_lastUpdateTime = os.path.getmtime('../../trackers/getAPIdata/merged_file.json')
+    stepCountFile_lastUpdateTime = os.path.getmtime('../../trackers/google_fit/dataset.json')
+    responsesFile_lastUpdateTime = os.path.getmtime('../../trackers/reporter/responses.tsv')
 
-def finalPredictions():
-    keyloggerPrediction = keyloggerModel()
-    affectivaPrediction = affectivaModel()
-    productivityPrediction = productivityModel()
-    browserActivityPrediction = browserActivityModel()
-    stepCountPrediction = stepCountModel()
-    timePrediction = timeModel()
+    #update productivity prediction
+    if(productivityFile_lastUpdateTime > productivity_lastUpdateTime):
+        with open('../../trackers/getAPIdata/productivity.json', 'r') as f:
+            productivityFile = json.load(f)
+
+        productivityData = productivityFile['rows']
+        latestProductivityScore = productivityData[-1][4]
+        latestProductivityMoodPred = productivity_mood_SVR.predict(latestProductivityScore)
+        # print("productivity prediction:")
+        # print(latestProductivityMoodPred)
+        ensemble_model_mood(latestProductivityMoodPred, 'productivity')
+
+        productivity_lastUpdateTime = datetime.datetime.now().timestamp()
+
+    #update affectiva prediction
+    if(affectivaFile_lastUpdateTime > affectiva_lastUpdateTime):
+        with open('../../trackers/getAPIdata/merged_file.json', 'r') as f:
+            affectivaFile = json.load(f)
+
+        latestAffectivaData = []
+        latestAffectivaData.append(affectivaFile[-1])
+
+        latestAffectivaDF = DataFrame(latestAffectivaData)
+        affectivaFeaturesList = ['avg_attention', 'avg_engagement', 'avg_valence', 'blinks']
+
+        finalAffectivaDF = latestAffectivaDF[affectivaFeaturesList]
+
+        latestAffectivaMoodPred = affectiva_mood_LM.predict(finalAffectivaDF)
+        # print("affectiva prediction:")
+        # print(latestAffectivaMoodPred)
+        ensemble_model_mood(latestAffectivaMoodPred, 'affectiva')
+
+        affectiva_lastUpdateTime = datetime.datetime.now().timestamp()
+
+    #update stepCount prediction
+    if(stepCountFile_lastUpdateTime > stepCount_lastUpdateTime):
+
+        with open('../../trackers/google_fit/dataset.json', 'r') as f:
+            fitFile = json.load(f)
+            fitData = fitFile['point']
+
+        if(convertTimeToStruct(int(fitData[len(fitData)-1]['endTimeNanos']) / 1e9) == latest_hour):
+            latestStepCount = 0
+            lateststepCountMoodPred = stepCount_mood_SVR.predict(latestStepCount)
+        else:
+
+            latest_hour = convertTimeToStruct(int(fitData[len(fitData)-1]['endTimeNanos']) / 1e9)
+            latestStepCount = 0
+
+            for index in range(len(fitData) - 1, 0, -1):
+                current_hour = convertTimeToStruct(int(fitData[index]['endTimeNanos']) / 1e9)
+                if (latest_hour.tm_year == current_hour.tm_year and latest_hour.tm_mon == current_hour.tm_mon and latest_hour.tm_mday == current_hour.tm_mday and latest_hour.tm_hour == current_hour.tm_hour):
+                    latestStepCount += int(fitData[index]['value'][0]['intVal'])
+                else:
+                    break
+
+            latestStepCountMoodPred = stepCount_mood_SVR.predict(latestStepCount)
+            # print("stepCount prediction:")
+            # print(latestStepCountMoodPred)
+            ensemble_model_mood(latestStepCountMoodPred, 'stepCount')
+
+            stepCount_lastUpdateTime = datetime.datetime.now().timestamp()
+
+
+    #update actual mood score
+    if(responsesFile_lastUpdateTime > responses_lastUpdateTime):
+        responsesDF = pd.read_csv("../../trackers/reporter/responses.tsv", sep='\t', header=0)
+
+        latestMoodScore = responsesDF.iloc[-1]['mood']
+        # print("actual mood score:")
+        # print(latestMoodScore)        
+        ensemble_model_mood(latestMoodScore, 'actual_score')
+
+        responses_lastUpdateTime = datetime.datetime.now().timestamp()
+
+    time.sleep(900)
+
+
 
 

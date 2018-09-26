@@ -11,6 +11,7 @@ import socket
 import sys
 import time
 import csv
+import json
 
 class getPulseApp(object):
 
@@ -100,13 +101,25 @@ class getPulseApp(object):
         # data = np.vstack((self.processor.times, self.processor.samples)).T
         data = self.processor.bpms
         avg_bpm = sum(data)/len(data)
-
         timestamp = datetime.datetime.now().timestamp()
         response = [timestamp, avg_bpm]
+
+        newData = {}
+        newData['time'] = timestamp
+        newData['avg_bpm'] = avg_bpm
+        newData['all_data'] = data
+
         with open('heartRate.csv', 'a') as f:
             writer = csv.writer(f, delimiter=',')
             writer.writerow(response)
             print("Writing csv")
+
+        with open('new_heartRate.json', 'r') as f:
+            brackets = json.load(f)
+        with open('new_heartRate.json', 'w') as f:
+            brackets.append(newData)
+            json.dump(brackets, f, indent=2)
+
         # sys.exit()
 
 

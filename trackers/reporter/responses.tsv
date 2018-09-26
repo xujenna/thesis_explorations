@@ -877,3 +877,15 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-09-24T21:00:00.345078	1537837200.345078	3.5	interested	in hello computer	in class	0	False	School	3	1	3.5	False
 2018-09-24T23:00:48.179365	1537844448.179365	2.5	a little sad	listened to that jay chou song again lol	schoolwork, leisure, feedly, cooking, eating	0	True	Home	3	1.5	3	True
 2018-09-25T00:40:51.963585	1537850451.963585	3	neutral	just working on the ml model again	schoolwork, leisure	0	True	Home	2.5	1	4	True
+2018-09-25T10:47:56.033241	1537886876.033241	3.5	peaceful and rested	had a decent night's sleep last night	washing up, email	1	True	Home	3.5	1	2.5	False
+2018-09-25T12:19:34.453886	1537892374.453886	4	cheerful	in class, feeling good	in class	5	False	School	3	1.5	3	False
+2018-09-25T13:20:25.359885	1537896025.359885	3.5	inspired	in neural aesthetic	in class	0	False	School	4	2	3	False
+2018-09-25T14:26:02.900366	1537899962.900366	2.5	a little distracted and sleepy	thinking/working on my project	schoolwork, in class	0	False	School	3	2	4	True
+2018-09-25T15:39:45.319909	1537904385.319909	3	neutral	trying to decide what to work on first	schoolwork, eating	2	False	School	3	2	3.5	False
+2018-09-25T16:40:51.297020	1537908051.29702	3	focused	working on ml model again	schoolwork	0	False	School	3	1.5	3	False
+2018-09-25T17:51:09.506693	1537912269.506693	3	focused	still working on ml model	schoolwork	2	False	School	3	1.5	2	False
+2018-09-25T18:57:18.704662	1537916238.704662	3.5	grateful	got some more pandas help from jim	schoolwork, with friends	2	False	School	3	2	2.5	False
+2018-09-25T22:15:38.335880	1537928138.33588	3	focused	working on model	schoolwork	2	True	Home	3	2.5	3.5	True
+2018-09-25T23:16:49.362461	1537931809.362461	3.5	tentatively accomplished	i think my ensemble model is running	schoolwork	2	True	Home	3.5	2	3.5	True
+2018-09-26T00:17:55.493192	1537935475.493192	3	content	washing up	washing up	1	True	Home	3	1.5	3.5	False
+2018-09-26T01:23:20.638751	1537939400.638751	3	focused	working	schoolwork	0	True	Home	3.5	2	4	True

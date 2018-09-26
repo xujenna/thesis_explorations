@@ -1,0 +1,44 @@
+[
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.099202256563199,
+        "affectiva_pred": 2.9870418623393005,
+        "stepCount_pred": 3.17597950861749,
+        "ensemble_pred": 3.09054430342828,
+        "timestamp": 1537931833.686212
+      }
+    ],
+    "mood_index": 887,
+    "actual_score": 3.5
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.1010329254252453,
+        "affectiva_pred": 3.154252757374283,
+        "stepCount_pred": 3.17597950861749,
+        "ensemble_pred": 3.0895469943832308,
+        "timestamp": 1537935690.486566
+      }
+    ],
+    "mood_index": 888,
+    "actual_score": 3.0
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.1010949546118782,
+        "ensemble_pred": 3.0938913422614336,
+        "timestamp": 1537940191.903528
+      },
+      {
+        "affectiva_pred": 3.0028058858349715,
+        "ensemble_pred": 3.0940996368786435,
+        "timestamp": 1537940191.944254
+      }
+    ],
+    "mood_index": 889,
+    "actual_score": 3.0
+  }
+]
