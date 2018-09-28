@@ -85,10 +85,6 @@ def ensemble_model_mood(prediction, type):
         writeToJSON(currentIndexPredictions)
 
     try:
-        print(productivity_pred)
-        print(affectiva_pred)
-        print(stepCount_pred)
-
         latestDataDF = pd.DataFrame()
         latestDataDF['productivity_pred'] = productivity_pred
         latestDataDF['affectiva_pred'] = affectiva_pred
@@ -97,13 +93,15 @@ def ensemble_model_mood(prediction, type):
         print(latestDataDF)
 
         ensemble_pred = ensemble_mood_SVR.predict(latestDataDF)
+        print("------------------------------")
+        print("------------------------------")
         print("current mood prediction:")
         print(ensemble_pred)
-
+        print("------------------------------")
+        print("------------------------------")
         updatedPrediction['ensemble_pred'] = ensemble_pred[0]
         updatedPrediction['timestamp'] = datetime.datetime.now().timestamp()
         currentIndexPredictions['predictions'].append(updatedPrediction)
-        print(currentIndexPredictions)
         updatedPrediction = {}
 
     except:
@@ -116,15 +114,17 @@ def writeToJSON(predictions):
         brackets = json.load(f)
     with open('ensemble_predictions.json', 'w') as f:
         brackets.append(predictions)
-        print(brackets)
         json.dump(brackets, f, indent=2)
     print("Wrote to JSON:")
     print(predictions)
 
 
-
+productivity_Updated = False
+affectiva_Updated = False
+stepCount_Updated = False
 
 while True:
+    print("checking for file updates...")
     productivityFile_lastUpdateTime = os.path.getmtime('../../trackers/getAPIdata/productivity.json')
     affectivaFile_lastUpdateTime = os.path.getmtime('../../trackers/getAPIdata/merged_file.json')
     stepCountFile_lastUpdateTime = os.path.getmtime('../../trackers/google_fit/dataset.json')
@@ -132,6 +132,7 @@ while True:
 
     #update productivity prediction
     if(productivityFile_lastUpdateTime > productivity_lastUpdateTime):
+        print("productivity file updated")
         with open('../../trackers/getAPIdata/productivity.json', 'r') as f:
             productivityFile = json.load(f)
 
@@ -143,9 +144,11 @@ while True:
         ensemble_model_mood(latestProductivityMoodPred, 'productivity')
 
         productivity_lastUpdateTime = datetime.datetime.now().timestamp()
+        productivity_Updated = True
 
     #update affectiva prediction
     if(affectivaFile_lastUpdateTime > affectiva_lastUpdateTime):
+        print("affectiva file updated")
         with open('../../trackers/getAPIdata/merged_file.json', 'r') as f:
             affectivaFile = json.load(f)
 
@@ -163,10 +166,11 @@ while True:
         ensemble_model_mood(latestAffectivaMoodPred, 'affectiva')
 
         affectiva_lastUpdateTime = datetime.datetime.now().timestamp()
+        affectiva_Updated = True
 
     #update stepCount prediction
     if(stepCountFile_lastUpdateTime > stepCount_lastUpdateTime):
-
+        print("stepCount file updated")
         with open('../../trackers/google_fit/dataset.json', 'r') as f:
             fitFile = json.load(f)
             fitData = fitFile['point']
@@ -189,13 +193,15 @@ while True:
             latestStepCountMoodPred = stepCount_mood_SVR.predict(latestStepCount)
             # print("stepCount prediction:")
             # print(latestStepCountMoodPred)
-            ensemble_model_mood(latestStepCountMoodPred, 'stepCount')
+        ensemble_model_mood(latestStepCountMoodPred, 'stepCount')
 
-            stepCount_lastUpdateTime = datetime.datetime.now().timestamp()
+        stepCount_lastUpdateTime = datetime.datetime.now().timestamp()
+        stepCount_Updated = True
 
 
     #update actual mood score
-    if(responsesFile_lastUpdateTime > responses_lastUpdateTime):
+    if(responsesFile_lastUpdateTime > responses_lastUpdateTime and productivity_Updated == True and affectiva_Updated == True and stepCount_Updated == True):
+        print("all files have updated")
         responsesDF = pd.read_csv("../../trackers/reporter/responses.tsv", sep='\t', header=0)
 
         latestMoodScore = responsesDF.iloc[-1]['mood']
@@ -204,6 +210,9 @@ while True:
         ensemble_model_mood(latestMoodScore, 'actual_score')
 
         responses_lastUpdateTime = datetime.datetime.now().timestamp()
+        productivity_Updated = False
+        affectiva_Updated = False
+        stepCount_Updated = False
 
     time.sleep(900)
 

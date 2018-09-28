@@ -889,3 +889,23 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-09-25T23:16:49.362461	1537931809.362461	3.5	tentatively accomplished	i think my ensemble model is running	schoolwork	2	True	Home	3.5	2	3.5	True
 2018-09-26T00:17:55.493192	1537935475.493192	3	content	washing up	washing up	1	True	Home	3	1.5	3.5	False
 2018-09-26T01:23:20.638751	1537939400.638751	3	focused	working	schoolwork	0	True	Home	3.5	2	4	True
+2018-09-26T12:13:54.437915	1537978434.437915	3	cheerful but kind of stressed at the same time	busy week this week	in class, schoolwork	5	False	School	3	2.5	3	True
+2018-09-26T13:16:36.769867	1537982196.769867	2.5	a little tired and restless	sleepy for some reason, distracted by project in class	in class	0	False	School	3	2.5	3.5	True
+2018-09-26T14:37:06.465113	1537987026.465113	3.5	energetic	just ate a bunch of food lol	in class	3	False	School	3	2	3	False
+2018-09-26T19:31:13.202460	1538004673.20246	3	neutral	just got back home	resting, washing up, leisure	1	True	Home	2.5	1.5	3.5	False
+2018-09-26T20:34:23.224961	1538008463.224961	3.5	accomplished	just finished prepping two meals for tomorrow	cooking, etating, leisure	0	True	Home	3.5	2	3.5	False
+2018-09-26T21:35:40.547858	1538012140.547858	2.5	distracted	don't care about citizen science and don't want to do the readings	schoolwork, leisure, feedly	2	True	Home	2	2.5	4	True
+2018-09-26T22:57:06.847064	1538017026.847064	2.5	sleepy	sleepytime tea, bored by reading	schoolwork, leisure	2	True	Home	2	3	4.5	True
+2018-09-27T00:00:26.126328	1538020826.126328	3	neutral	gave myself a snack, which made me slightly less distracted	schoolwork, leisure, feedly	1	True	Home	2.5	2.5	4.5	False
+2018-09-27T11:19:31.799551	1538061571.799551	3	tired	biked to findi for betanyc talk, then to school	leisure, working out, studying	1	False	School	3	2.5	3.5	False
+2018-09-27T12:25:18.527764	1538065518.527764	3.5	tired but cheerful	long morning already, chatting	in class, schoolwork	4	False	School	3	1.5	3.5	True
+2018-09-27T13:36:17.364619	1538069777.364619	2.5	kind of bored	listening to people talk about their ideas	in class	2	False	School	2	1.5	3.5	True
+2018-09-27T14:44:13.009931	1538073853.009931	2.5	impatient to leave class and work on ml models	scores suddenly change	in class	1	False	School	3	2	3	True
+2018-09-27T15:55:17.751301	1538078117.751301	3	content	working on ml models	schoolwork	4	False	School	3.5	1	3.5	True
+2018-09-27T17:22:26.010330	1538083346.01033	3	frustrated	models are crap	schoolwork, with friends	4	False	School	2.5	3	3.5	False
+2018-09-27T21:47:26.476656	1538099246.476656	4.5	cheerful	dinner with barak, fun at school	eating, with friends, leisure	6	False	School	3	1.5	3.5	False
+2018-09-27T23:20:24.962734	1538104824.962734	3.5	content	had a fun day, back to work	schoolwork,	6	True	Home	3.5	1	4	False
+2018-09-28T01:27:01.807152	1538112421.807152	2.5	super sleepy	grid search is taking forever for some reason	schoolwork, washing up	3	True	Home	2.5	1.5	5	True
+2018-09-28T10:50:11.247351	1538146211.247351	3	neutral	just got up	washing up, email	0	True	Home	3	1.5	3	False
+2018-09-28T11:52:51.478291	1538149971.478291	3.5	pretty good	eating and chatting	schoolwork, cooking, eating	2	True	Home	3	1	3	False
+2018-09-28T12:54:48.984287	1538153688.984287	3	neutral	cleaning	errands	2	True	Home	3.5	1.5	2.5	False
