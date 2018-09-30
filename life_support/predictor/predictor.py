@@ -112,8 +112,7 @@ while True:
     # KEYLOGGER DF
 
     tone_names = ['Sadness', 'Analytical', 'Joy', 'Fear', 'Tentative', 'Anger', 'Confident']
-    tone_names
-
+    
     with open('../../trackers/keylogger/logs/log_new.json', 'r') as f:
         keyloggerData = json.load(f)
 
