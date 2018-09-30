@@ -1966,5 +1966,29 @@
       "prediction": 2.65,
       "mean_abs_error": 0.3473684210526315
     }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1538157434.4492538,
+    "linear_model": {
+      "prediction": 3.215544031683348,
+      "mean_abs_error": 0.2408380411292463
+    },
+    "random_forest": {
+      "prediction": 3.25,
+      "mean_abs_error": 0.33229166666666665
+    }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1538161098.1572962,
+    "linear_model": {
+      "prediction": 3.025489297660249,
+      "mean_abs_error": 0.25463789431546013
+    },
+    "random_forest": {
+      "prediction": 3.2,
+      "mean_abs_error": 0.3416666666666666
+    }
   }
 ]
