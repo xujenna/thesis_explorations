@@ -2026,5 +2026,53 @@
       "prediction": 2.35,
       "mean_abs_error": 0.3219387755102041
     }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1538374047.124799,
+    "linear_model": {
+      "prediction": 2.792636960348606,
+      "mean_abs_error": 0.22039426491451342
+    },
+    "random_forest": {
+      "prediction": 2.85,
+      "mean_abs_error": 0.3163265306122449
+    }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1538414136.2761679,
+    "linear_model": {
+      "prediction": 3.213473928211869,
+      "mean_abs_error": 0.21568099125574997
+    },
+    "random_forest": {
+      "prediction": 3.3,
+      "mean_abs_error": 0.3275510204081632
+    }
+  },
+  {
+    "actual_mood": 3.0,
+    "time": 1538418504.13179,
+    "linear_model": {
+      "prediction": 2.9109493473797925,
+      "mean_abs_error": 0.21413480713117178
+    },
+    "random_forest": {
+      "prediction": 2.65,
+      "mean_abs_error": 0.3280612244897959
+    }
+  },
+  {
+    "actual_mood": 3.5,
+    "time": 1538422434.58713,
+    "linear_model": {
+      "prediction": 3.0665722049406448,
+      "mean_abs_error": 0.21290338895327898
+    },
+    "random_forest": {
+      "prediction": 3.1,
+      "mean_abs_error": 0.3393939393939394
+    }
   }
 ]

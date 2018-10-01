@@ -58,8 +58,15 @@ def getChromeActivity():
 
     chromeData = r.json()
 
-    with open('chromeactivity.json', 'w+') as f:
-        json.dump(chromeData, f, indent=4, sort_keys=True)
+
+    with open('chromeactivity.json', 'r') as f:
+        allData = json.load(f)
+
+    if(len(chromeData) > len(allData)):
+        with open('chromeactivity.json', 'w+') as f:
+            json.dump(chromeData, f, indent=4, sort_keys=True)
+    else:
+        print("no new chrome data")
 
     lastTime = list(chromeData.keys())[-1]
     print("tabs created: ", chromeData[lastTime]['tabs_created'])

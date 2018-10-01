@@ -1,0 +1,76 @@
+[
+  {
+    "predictions": [
+      {
+        "mood_prediction": 3.062832650912502,
+        "morale_prediction": 2.9447985230226252,
+        "timestamp": 1538412495.316576
+      },
+      {
+        "mood_prediction": 3.145894939335764,
+        "morale_prediction": 3.035834255422383,
+        "timestamp": 1538414296.446654
+      }
+    ],
+    "mood_index": 926,
+    "actual_mood": 3.5,
+    "actual_morale": 3.0,
+    "response_time": "2018-10-01T13:15:36.276168"
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 3.1867464551274485,
+        "morale_prediction": 2.968495689872612,
+        "timestamp": 1538415197.253217
+      },
+      {
+        "mood_prediction": 3.122981354486608,
+        "morale_prediction": 3.0466617329605468,
+        "timestamp": 1538416097.641248
+      },
+      {
+        "mood_prediction": 2.9003282826112353,
+        "morale_prediction": 3.226073536610537,
+        "timestamp": 1538417897.996936
+      },
+      {
+        "mood_prediction": 2.9211616159445684,
+        "morale_prediction": 3.226073536610537,
+        "timestamp": 1538418799.080067
+      }
+    ],
+    "mood_index": 927,
+    "actual_mood": 3.0,
+    "actual_morale": 2.5,
+    "response_time": "2018-10-01T14:28:24.131790"
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.98413707282775,
+        "morale_prediction": 3.092253775633146,
+        "timestamp": 1538419699.398246
+      },
+      {
+        "mood_prediction": 3.1498747634151063,
+        "morale_prediction": 2.8686297084227377,
+        "timestamp": 1538421499.639063
+      },
+      {
+        "mood_prediction": 3.1498747634151063,
+        "morale_prediction": 2.8686297084227377,
+        "timestamp": 1538422400.555604
+      },
+      {
+        "mood_prediction": 3.2191956128943944,
+        "morale_prediction": 2.8335987826651166,
+        "timestamp": 1538423300.850674
+      }
+    ],
+    "mood_index": 928,
+    "actual_mood": 3.5,
+    "actual_morale": 3.0,
+    "response_time": "2018-10-01T15:33:54.587130"
+  }
+]

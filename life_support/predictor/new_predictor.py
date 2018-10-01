@@ -101,8 +101,8 @@ def makePrediction(df):
 		print(morale_prediction)
 		print("------------------------")
 
-		updatedPrediction['mood_prediction'] = mood_prediction
-		updatedPrediction['morale_prediction'] = morale_prediction
+		updatedPrediction['mood_prediction'] = mood_prediction[0]
+		updatedPrediction['morale_prediction'] = morale_prediction[0]
 		updatedPrediction['timestamp'] = datetime.datetime.now().timestamp()
 		currentIndexPredictions['predictions'].append(updatedPrediction)
 		updatedPrediction = {}
@@ -113,8 +113,8 @@ def makePrediction(df):
 			mood_prediction = mood_mean_diff_RF.predict(df) + rolling_mood_mean
 			morale_prediction = morale_RF.predict(df)
 
-			updatedPrediction['mood_prediction'] = mood_prediction
-			updatedPrediction['morale_prediction'] = morale_prediction
+			updatedPrediction['mood_prediction'] = mood_prediction[0]
+			updatedPrediction['morale_prediction'] = morale_prediction[0]
 			updatedPrediction['timestamp'] = datetime.datetime.now().timestamp()
 			currentIndexPredictions['predictions'].append(updatedPrediction)
 
@@ -143,9 +143,9 @@ def makePrediction(df):
 		
 
 def writeToJSON(currentIndexPredictions):
-	with open('RF_mood_predictions.json', 'r') as f:
+	with open('new_predictor.json', 'r') as f:
 		brackets = json.load(f)
-	with open('RF_mood_predictions.json', 'r') as f:
+	with open('new_predictor.json', 'w') as f:
 		brackets.append(currentIndexPredictions)
 		json.dump(brackets, f, indent=2)
 

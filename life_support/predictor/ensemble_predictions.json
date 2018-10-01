@@ -174,5 +174,90 @@
     ],
     "mood_index": 922,
     "actual_score": 2.5
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.099303097553326,
+        "ensemble_pred": 3.0883363844415053,
+        "timestamp": 1538375037.989135
+      },
+      {
+        "affectiva_pred": 2.9818991624048046,
+        "ensemble_pred": 3.089134019009683,
+        "timestamp": 1538375038.029353
+      },
+      {
+        "stepCount_pred": 3.1759795086164333,
+        "ensemble_pred": 3.089134019009683,
+        "timestamp": 1538375038.508587
+      }
+    ],
+    "mood_index": 923,
+    "actual_score": 3.0
+  },
+  {
+    "predictions": [],
+    "mood_index": 924,
+    "actual_score": 3.0
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.101018493909528,
+        "ensemble_pred": 3.0845577982174577,
+        "timestamp": 1538410089.085723
+      },
+      {
+        "affectiva_pred": 2.967304444681787,
+        "ensemble_pred": 3.0845577982174577,
+        "timestamp": 1538410089.121648
+      }
+    ],
+    "mood_index": 925,
+    "actual_score": 3.0
+  },
+  {
+    "predictions": [
+      {
+        "stepCount_pred": 3.1759795086164333,
+        "ensemble_pred": 3.0875986473556125,
+        "timestamp": 1538414591.140898
+      }
+    ],
+    "mood_index": 926,
+    "actual_score": 3.5
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 2.9879132991223054,
+        "ensemble_pred": 3.0705821204035244,
+        "timestamp": 1538419092.433437
+      },
+      {
+        "affectiva_pred": 2.9561098678809987,
+        "ensemble_pred": 3.0598848254773756,
+        "timestamp": 1538419092.487649
+      }
+    ],
+    "mood_index": 927,
+    "actual_score": 3.0
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.099503000545048,
+        "ensemble_pred": 3.0809188084302024,
+        "timestamp": 1538422693.366496
+      },
+      {
+        "affectiva_pred": 2.9743387646891195,
+        "ensemble_pred": 3.0869082990690315,
+        "timestamp": 1538422693.414952
+      }
+    ],
+    "mood_index": 928,
+    "actual_score": 3.5
   }
 ]
