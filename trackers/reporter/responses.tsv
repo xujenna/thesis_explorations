@@ -919,3 +919,7 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-09-30T16:39:20.525594	1538339960.525594	3	still focused	still working on ml model	schoolwork	2	False	School	3	2	2.5	False
 2018-09-30T17:40:01.715216	1538343601.715216	2.5	losing patience	have to pee, go grocery shopping	schoolwork	1	False	School	2	2	3	True
 2018-09-30T18:40:33.291835	1538347233.291835	3	focused again	fixing new ml model	schoolwork	1	False	School	3	2	3	False
+2018-09-30T22:29:48.735845	1538360988.735845	3	tired	long day, cooking was a struggle, want to watch tv but have to catch up on hw	leisure, cooking, eating, feedly	4	True	Home	2	2.5	3	True
+2018-09-30T23:39:21.551455	1538365161.551455	3	neutral	working on hw	schoolwork	1	True	Home	2.5	2	3.5	True
+2018-10-01T00:44:18.489718	1538369058.489718	2.5	frustrated	can't figure out why ml model isn't working	schoolwork	1	True	Home	2	2.5	4	True
+2018-10-01T02:07:27.124799	1538374047.124799	3	tired but hopeful	ml model might be working	schoolwork, leisure, feedly, washing up	1	True	Home	3	2	4.5	True

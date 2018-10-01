@@ -89,17 +89,44 @@ def makePrediction(df):
 
 	if (currentIndex == moodIndex):
 		print("updating this round's prediction")
+		rolling_mood_mean = responsesDF['mood'].iloc[-25:-1].mean()
+		mood_prediction = mood_mean_diff_RF.predict(df) + rolling_mood_mean
+		morale_prediction = morale_RF.predict(df)
+
+		print("------------------------")
+		print("current mood prediction:")
+		print(mood_prediction)
+		print("------------------------")
+		print("current morale prediction:")
+		print(morale_prediction)
+		print("------------------------")
+
+		updatedPrediction['mood_prediction'] = mood_prediction
+		updatedPrediction['morale_prediction'] = morale_prediction
+		updatedPrediction['timestamp'] = datetime.datetime.now().timestamp()
+		currentIndexPredictions['predictions'].append(updatedPrediction)
+		updatedPrediction = {}
+
 	else:
 		if(len(currentIndexPredictions['predictions']) > 0):
+			rolling_mood_mean = responsesDF['mood'].iloc[-25:-1].mean()
+			mood_prediction = mood_mean_diff_RF.predict(df) + rolling_mood_mean
+			morale_prediction = morale_RF.predict(df)
+
+			updatedPrediction['mood_prediction'] = mood_prediction
+			updatedPrediction['morale_prediction'] = morale_prediction
+			updatedPrediction['timestamp'] = datetime.datetime.now().timestamp()
+			currentIndexPredictions['predictions'].append(updatedPrediction)
+
 			print("------------------------")
 			print("actual mood for last round: ")
 			print(lastResponsesRow['mood'])
 			print("last prediction for last round: ")
-			print(currentIndexPredictions['predictions'][-1]['mood_prediction'])
+			print(mood_prediction)
 			print("actual morale for last round: ")
 			print(lastResponsesRow['morale'])
 			print("last prediction for last round: ")
-			print(currentIndexPredictions['predictions'][-1]['morale_prediction'])
+			print(morale_prediction)
 			print("------------------------")
 
 			currentIndexPredictions['actual_mood'] = lastResponsesRow['mood']
@@ -107,31 +134,13 @@ def makePrediction(df):
 			currentIndexPredictions['response_time'] = lastResponsesRow['time']
 			writeToJSON(currentIndexPredictions)
 
-		print("adding new round of predictions")
+		print("starting new round of predictions")
 		moodIndex = currentIndex
 		currentIndexPredictions['mood_index'] = moodIndex
 		currentIndexPredictions['predictions'] = []
 		updatedPrediction = {}
 
-	rolling_mood_mean = responsesDF['mood'].iloc[-25:-1].mean()
-	mood_prediction = mood_mean_diff_RF.predict(df) + rolling_mood_mean
-	morale_prediction = morale_RF.predict(df)
-
-
-	print("------------------------")
-	print("current mood prediction:")
-	print(mood_prediction)
-	print("------------------------")
-	print("current morale prediction:")
-	print(morale_prediction)
-	print("------------------------")
-
-	updatedPrediction['mood_prediction'] = mood_prediction
-	updatedPrediction['morale_prediction'] = morale_prediction
-	updatedPrediction['timestamp'] = datetime.datetime.now().timestamp()
-	currentIndexPredictions['predictions'].append(updatedPrediction)
-	updatedPrediction = {}
-
+		
 
 def writeToJSON(currentIndexPredictions):
 	with open('RF_mood_predictions.json', 'r') as f:
@@ -143,13 +152,16 @@ def writeToJSON(currentIndexPredictions):
 
 while True:
 	print("checking for file updates...")
+	df_updated = False
+
 	keyloggerFile_lastUpdateTime = os.path.getmtime('../../trackers/keylogger/logs/log_new.json')
 	productivityFile_lastUpdateTime = os.path.getmtime('../../trackers/getAPIdata/productivity.json')
 	affectivaFile_lastUpdateTime = os.path.getmtime('../../trackers/getAPIdata/merged_file.json')
 	stepCountFile_lastUpdateTime = os.path.getmtime('../../trackers/google_fit/dataset.json')
 	responsesFile_lastUpdateTime = os.path.getmtime('../../trackers/reporter/responses.tsv')
 	tabCounterFile_lastUpdateTime = os.path.getmtime('../../trackers/getAPIdata/chromeactivity.json')
-	heartRateFile_lastUpdateTime = os.path.getmtime('../../trackers/webcam-pulse-detector-no_openmdao/heartRate.csv')
+	# heartRateFile_lastUpdateTime = os.path.getmtime('../../trackers/webcam-pulse-detector-no_openmdao/heartRate.csv')
+	
 	# keylogger update
 	if(keyloggerFile_lastUpdateTime > keylogger_lastUpdateTime):
 		print("keylogger file updated")
@@ -188,6 +200,10 @@ while True:
 		df.loc[[0],'Anger_score'] = sentimentData[5]
 		df.loc[[0],'Confident_score'] = sentimentData[6]
 
+		keylogger_lastUpdateTime = datetime.datetime.now().timestamp()
+		df_updated = True
+
+
 
 	# productivity update
 	if(productivityFile_lastUpdateTime > productivity_lastUpdateTime):
@@ -199,6 +215,7 @@ while True:
 		df['productivity_score'] = productivityData[-1][4]
 
 		productivity_lastUpdateTime = datetime.datetime.now().timestamp()
+		df_updated = True
 
 
 	# affectiva update
@@ -215,6 +232,7 @@ while True:
 		df.loc[[0],'blinks'] = affectivaData['blinks']
 
 		affectiva_lastUpdateTime = datetime.datetime.now().timestamp()
+		df_updated = True
 
 
 	#tabcounter
@@ -233,6 +251,8 @@ while True:
 		df.loc[[0],'tabs_created'] = tabCounterData['tabs_created']
 		df.loc[[0],'windows_created'] = tabCounterData['windows_created']
 
+		tabCounter_lastUpdateTime = datetime.datetime.now().timestamp()
+		df_updated = True
 
 
 	# stepCount update
@@ -256,9 +276,8 @@ while True:
 					break
 
 		df.loc[[0],'stepCount'] = latestStepCount
-
 		stepCount_lastUpdateTime = datetime.datetime.now().timestamp()
-		stepCount_Updated = True
+		df_updated = True
 
 
 	#heart rate update
@@ -267,10 +286,16 @@ while True:
 	# 	df.loc[[0], 'heart']
 	# 	heartRateDF.iloc[-1]
 
-	if(df.equals(prev_df)):
-		print("no new data")
-	else:
-		makePrediction(df)
+	# if not(df.equals(prev_df)):
+	# 	makePrediction(df)
+	# 	prev_df = df.copy()
+	# else:
+	# 	print("no new data")
 
-	prev_df = df
+	if(df_updated):
+		makePrediction(df)
+		prev_df = df.copy()
+	else:
+		print("no new data")
+
 	time.sleep(900)
