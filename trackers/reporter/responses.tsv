@@ -928,3 +928,27 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-10-01T13:15:36.276168	1538414136.276168	3.5	relieved	finishing up homework	schoolwork	0	True	Home	3	1	3	False
 2018-10-01T14:28:24.131790	1538418504.13179	3	neutral, a little tired	doing readings	schoolwork	0	True	Home	2.5	1	3.5	True
 2018-10-01T15:33:54.587130	1538422434.58713	3.5	a bit energetic but sleepy	haven't left the house yet today	schoolwork, cooking, eating	0	True	Home	3	1	3.5	False
+2018-10-01T19:44:21.410603	1538437461.410603	3.5	cheerful but sleepy	in class, helping ilana design her brochure lol	in class	1	False	School	2.5	0.5	4	False
+2018-10-01T21:18:39.001884	1538443119.001884	4	cheerful but tired	in class, helping people; didn't sleep enough last night	in class	3	False	School	3.5	0.5	4.5	False
+2018-10-01T23:05:13.522468	1538449513.522468	3	neutral	relaxing	leisure, tv, eating	1	True	Home	2	0	4.5	False
+2018-10-02T00:06:03.169222	1538453163.169222	2.5	tired and lazy	need to sleep	leisure, tv	0	True	Home	1.5	0.5	4.5	True
+2018-10-02T10:51:19.610806	1538491879.610806	3	too rested	slept a lot last night	washing up, email	0	True	Home	3	0	2	False
+2018-10-02T12:15:00.366807	1538496900.366807	3	fine, just a little tired	walked to school and it was hot	in class	2	False	School	3	1	2.5	False
+2018-10-02T13:16:23.151152	1538500583.151152	3.5	interested	cristobal is subbing our NN class	in class	1	False	School	3.5	1.5	2	False
+2018-10-02T14:18:34.445376	1538504314.445376	3	neutral	just sitting in class	in class	4	False	School	3	1	1.5	False
+2018-10-02T18:16:54.844441	1538518614.844441	4	cheerful	had a nice lunch date with maryl	eating, with friends, email	5	False	School	3.5	1	2	False
+2018-10-02T19:20:07.563911	1538522407.563911	2.5	bored	don't want to work on citizen science hw	leisure, feedly, reading	0	False	School	2	2.5	2.5	True
+2018-10-02T20:27:19.261395	1538526439.261395	4	cheerful	having fun at school	sstudying, with friends, leisure	5	False	School	2.5	1	2.5	False
+2018-10-02T23:06:20.481707	1538535980.481707	3.5	relaxing	listening to radiolab, trying to think of ideas for the citizen science assignment	schoolwork, leisure, feedly	1	True	Home	2.5	1.5	3	True
+2018-10-03T00:29:33.335878	1538540973.335878	2.5	meh	sleepy but have made no progress with this gene drive assignment	schoolwork, reading, leisure, feedly	2	True	Home	2	2.5	4	True
+2018-10-03T10:17:37.555137	1538576257.555137	3.5	proud	was accepted to the art machines conference in hk	leisure, feedly, email	3	True	Home	3.5	3	3.5	False
+2018-10-03T11:19:16.058115	1538579956.058115	3.5	pretty good but a little overwhelmed	lots of things to do this month	schoolwork	0	True	Home	3	3.5	3	True
+2018-10-03T13:02:23.650683	1538586143.650683	3.5	engaged	learning about promises in a2z	in class	3	False	School	3	2	3	True
+2018-10-03T14:16:33.546122	1538590593.546122	4	cheerful	had a nice break chatting with people	in class	9	False	School	3.5	1.5	2.5	True
+2018-10-03T16:50:30.170043	1538599830.170043	3	feeling tired and unmotivated	should have slept more last night, trying to work on citizen science assignment	schoolwork, therapy	3	False	School	2	3	3.5	True
+2018-10-03T20:34:44.699290	1538613284.69929	2.5	guilty	binge ate chips again	schoolwork, leisure, eating	0	True	Home	3	2	4	True
+2018-10-03T21:58:07.428710	1538618287.42871	3	focused	working on presentation	schoolwork	0	True	Home	3	1.5	4	False
+2018-10-03T23:01:48.163243	1538622108.163243	3	still focused	still working	schoolwork	3	True	Home	3	2	4.5	False
+2018-10-04T00:03:43.230641	1538625823.230641	3.5	relieved	finally finished	schoolwork	0	True	Home	3	1	4.5	False
+2018-10-04T10:29:56.060522	1538663396.060522	3	neutral	just getting up	washing up, cooking, eating, email, leisure, feedly	1	True	Home	3	1.5	3	False
+2018-10-04T14:02:11.954387	1538676131.954387	2.5	nervous	have to give my presentation	in class	2	False	School	3	3.5	3	True

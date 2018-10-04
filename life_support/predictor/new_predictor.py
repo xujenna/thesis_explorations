@@ -107,7 +107,9 @@ def makePrediction(df):
 		currentIndexPredictions['predictions'].append(updatedPrediction)
 		updatedPrediction = {}
 
+
 	else:
+
 		if(len(currentIndexPredictions['predictions']) > 0):
 			rolling_mood_mean = responsesDF['mood'].iloc[-25:-1].mean()
 			mood_prediction = mood_mean_diff_RF.predict(df) + rolling_mood_mean
