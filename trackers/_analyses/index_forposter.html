@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Correlation Matrix</title>
+<style>
+
+body {
+  background-color:#fff;
+}
+
+.label {
+  font-size:9.5px;
+  font-family: europa, sans-serif;
+}
+
+.regression {
+  stroke-width: 2px;
+/*  stroke: black;
+*/  stroke-dasharray: 3.5,1.5;
+}
+
+.axis line,
+  .axis path {
+    fill:none;
+    stroke:silver;
+    stroke-width:1;
+  }
+
+  .axis text {
+    fill: black;
+    font-family: europa, sans-serif;
+    font-style: light;
+    text-transform: uppercase;
+    font-size: 7.5px;
+}
+
+.label_title {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5;
+    font-family: europa, sans-serif;
+
+}
+</style>
+</head>
+<body>
+    <link rel="stylesheet" href="https://use.typekit.net/fao6qlb.css">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script>
+
+// correlation matrix adapted from https://bl.ocks.org/emeeks/671c0e7adfb1ce7060b8
+// linear regression adapted from https://bl.ocks.org/HarryStevens/be559bed98d662f69e68fc8a7e0ad097
+
+
+d3.tsv("mergedDF_noHR.tsv", small_scatterplots);
+
+var margin = {top: 20, right: 20, left:30, bottom: 20}
+d3.select("body").append("svg").attr("height", 9000 + margin.top + margin.bottom).attr("width", 10000 + margin.left + margin.right)
+
+function small_scatterplots(data) {
+    attributes = ["mood","unique_interactions","alone","morale","stress","fatigue","compulsions","eating_activity","feedly_activity","with_friends_activity","tv_activity","in_class_activity","schoolwork_activity","errands_activity","school_location","home_location","hour","avg_attention","avg_engagement","avg_valence","blinks","emoji","Sadness_score","Analytical_score","Joy_score","Fear_score","Tentative_score","Anger_score","Confident_score","word_count","uniqueword_ratio","backspace_count","avg_dwelltime","avg_flighttime","stepCount","current_tabCount","current_windowCount","tabs_activated","tabs_created","windows_created","productivity_score","phone_unlocks","phone_use_secs"]
+    
+  attributeMatrix = [];
+
+  attributes.forEach(function(a,x) {
+    if(x>40 && x<=55){
+      attributes.forEach(function(b,y){
+        attributeMatrix.push({a: a, b:b, x:x-40, y:y})
+    })
+    }
+  })
+// var x = 0;
+// var y = 0;
+//   attributes.forEach(function(a) {
+//     if(a == "morale"){
+//       attributes.forEach(function(b){
+//         if(x%10==0){
+//           y++;
+//           x=0;
+//         }
+//         attributeMatrix.push({a: a, b:b, x:x, y:y})
+//         x++;
+//     })
+//     }
+//   })
+
+    // console.log(attributeMatrix)
+
+  data.forEach(function (d) {
+    attributes.forEach(function (att) {
+      if(d[att] == "False"){
+        d[att] = 0;
+      }
+      else if (d[att] == "True") {
+        d[att] = 1;
+      }
+      else {
+        d[att] = parseFloat(d[att])
+      }
+    })
+  })
+
+
+  scale = {};
+  attributes.forEach(function (att) {
+    scale[att] = d3.scaleLinear();
+    // if(att == "Confident_score" || att == "Sadness_score" || att == "Analytical_score" || att == "Joy_score" || att == "Fear_score" || att == "Tentative_score" || att == "Anger_score"){
+
+    //   attExtent = [0.5,1.0]
+    //   scale[att].domain(attExtent);
+    // }
+    // else{
+      attExtent = d3.extent(data, function (d) {return d[att]});
+      scale[att].domain(attExtent);
+    // }
+
+  })
+
+  //bind the matrix array to a grid of g elements
+
+
+  d3.select("svg")
+  .selectAll("g")
+  .data(attributeMatrix)
+  .enter()
+  .append("g")
+  .attr("transform", function (d,i) {
+    // if(d.a == d.b) {
+    //   shift = true;
+    //   dx = d.x;
+    // return
+    // }
+    // else if (shift == true && d.x == dx){
+    //   return "translate(" + ((d.x * 130) + margin.left) + "," + (((d.y -1) * 130) + margin.top) + ")"
+    // }
+    // else {
+    //   shift = false;
+    //   dx = d.x;
+
+    // if(d.a == d.b){
+    //   console.log("nope");
+    // }
+    // else{
+    return "translate(" + ((d.x * 150) + margin.left) + "," + ((d.y * 150) + margin.top) + ")" 
+
+  });
+
+
+  d3.selectAll("g")
+  .each(function (pair, i) {
+
+
+  scale[pair.a].range([0,100]);
+  scale[pair.b].range([100,0]);
+
+  if(pair.a == pair.b){
+    // console.log("nope again")
+    d3.select(this).append("rect").style("fill", "none").style("stroke", "black").style("stroke-width", 0.5)
+    .attr("height", 100)
+    .attr("width", 100)
+    d3.select(this).append("text")
+    .attr("class", "label_title")
+    .attr("x", 50)
+    .style("text-anchor", "middle")
+    .attr("y", 50)
+    .attr("fill", "black")
+    .text(pair.a.toUpperCase())  
+  }
+  else {
+    d3.select(this).append("rect").style("fill", "none").style("stroke", "none").style("stroke-width", 0)
+    .attr("height", 100)
+    .attr("width", 100);
+
+  var xAxis = d3.axisBottom()
+      .scale(scale[pair.a])
+      .tickSize(2)
+      .ticks(4);
+
+  var yAxis = d3.axisLeft()
+      .scale(scale[pair.b])
+      .tickSize(2)
+      .ticks(4);
+
+
+    d3.select(this).append("g")
+      .attr("class", "axis")
+      .attr("transform", "translate(0,100)")
+      .call(xAxis)
+
+    d3.select(this).append("g")
+        .attr("class", "axis")
+        .call(yAxis);
+
+
+    // label
+    d3.select(this).append("text")
+    .attr("class", "label")
+    .attr("x", 55)
+    .style("text-anchor", "middle")
+    .attr("y", 9)
+    .attr("fill", "black")
+
+    .text(function(d){
+      var string = pair.a + pair.b;
+
+      if(string.length <= 15){
+        return pair.a.toUpperCase() + " - " + pair.b.toUpperCase();
+      }
+      else if(string.length > 15){
+        return pair.a.toUpperCase() + " -";
+      }
+    })
+    d3.select(this).append("text")
+    .attr("class", "label")
+    .attr("x", 55)
+    .style("text-anchor", "middle")
+    .attr("y", 25)
+    .attr("fill", "black")
+    .text(function(d){
+      var string = pair.a + pair.b;
+      if(string.length > 15){
+        return pair.b.toUpperCase()
+      }
+    });
+
+    var lg = calcLinear(data, pair.a, pair.b, 
+      d3.min(data, function(d){ return d[pair.a] }), 
+      d3.min(data, function(d){ return d[pair.b] }), 
+      d3.max(data, function(d){ return d[pair.a] }));
+
+var circleclass;
+    // console.log("lg", lg)
+    d3.select(this).append("line")
+          .attr("class", "regression")
+          .attr("x1", scale[pair.a](lg.ptA.x))
+          .attr("y1", scale[pair.b](lg.ptA.y))
+          .attr("x2", scale[pair.a](lg.ptB.x))
+          .attr("y2", scale[pair.b](lg.ptB.y))
+          .attr("stroke", function(d){
+            if (pair.b == pair.a){
+              circleclass = "silver";
+              return "silver";
+            }
+            else if((scale[pair.b](lg.ptA.y)) >(scale[pair.b](lg.ptB.y))){
+              circleclass = "magenta";
+              return "magenta";
+            }
+            else {
+              circleclass = "blue";
+              return "blue";
+            }
+          });
+          // .attr("x1", function(d) {console.log(scale[pair.a](lg.ptA.d[pair.a]))})
+          // .attr("y1", function(d) {return scale[pair.b](lg.ptA.d[pair.b]) })
+          // .attr("x2", function(d) {return scale[pair.a](lg.ptB.d[pair.a]) })
+          // .attr("y2", function(d) {return scale[pair.b](lg.ptB.d[pair.b]) });
+    // scatterplot points
+    d3.select(this).selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+    .attr("r", 2)
+    .style("fill", circleclass)
+    // .style("fill", colors(i))
+    .style("opacity", 0.11)
+    .attr("cx", function (d) {
+      // if ((pair.a == "Sadness_score") && (pair.b == "mood")) {
+      //   console.log("data looks like: " + d[pair.a] + "," + d[pair.b]);
+      // }
+      return scale[pair.a](d[pair.a])
+    })
+    .attr("cy", function (d) {return scale[pair.b](d[pair.b])});
+
+ }
+  })
+   // Calculate a linear regression from the data
+
+    // Takes 5 parameters:
+    // (1) Your data
+    // (2) The column of data plotted on your x-axis
+    // (3) The column of data plotted on your y-axis
+    // (4) The minimum value of your x-axis
+    // (5) The minimum value of your y-axis
+
+    // Returns an object with two points, where each point is an object with an x and y coordinate
+
+    function calcLinear(data, x, y, minX, minY, maxX){
+      /////////
+      //SLOPE//
+      /////////
+
+      // Let n = the number of data points
+      var n = data.length;
+
+      // Get just the points
+      var pts = [];
+      data.forEach(function(d,i){
+        // console.log("+d[x]", +d[x])
+        var obj = {};
+        obj.x = +d[x];
+        obj.y = +d[y];
+        obj.mult = obj.x*obj.y;
+        pts.push(obj);
+      });
+
+      // console.log("pts", pts)
+      // Let a equal n times the summation of all x-values multiplied by their corresponding y-values
+      // Let b equal the sum of all x-values times the sum of all y-values
+      // Let c equal n times the sum of all squared x-values
+      // Let d equal the squared sum of all x-values
+      var sum = 0;
+      var xSum = 0;
+      var ySum = 0;
+      var sumSq = 0;
+      pts.forEach(function(pt){
+        // console.log(pt)
+        sum = sum + pt.mult;
+        xSum = xSum + pt.x;
+        ySum = ySum + pt.y;
+        sumSq = sumSq + (pt.x * pt.x);
+      });
+
+      var a = sum * n;
+      var b = xSum * ySum;
+      var c = sumSq * n;
+      var d = xSum * xSum;
+
+
+      // Plug the values that you calculated for a, b, c, and d into the following equation to calculate the slope
+      // slope = m = (a - b) / (c - d)
+      var m = (a - b) / (c - d);
+      /////////////
+      //INTERCEPT//
+      /////////////
+
+      // Let e equal the sum of all y-values
+      var e = ySum;
+      // Let f equal the slope times the sum of all x-values
+      var f = m * xSum;
+      // Plug the values you have calculated for e and f into the following equation for the y-intercept
+      // y-intercept = b = (e - f) / n
+      var b = (e - f) / n;
+
+      // return an object of two points
+      // each point is an object with an x and y coordinate
+      return {
+        ptA : {
+          x:minX,
+          y: m * minX + b
+          // x: minX,
+          // y: m * minX + b
+        },
+        ptB : {
+          x: maxX,
+          y: m * maxX + b
+          // y: minY,
+          // x: (minY - b) / m
+        }
+      }
+    }
+
+
+}
+
+</script>
+</body>
+</html>
