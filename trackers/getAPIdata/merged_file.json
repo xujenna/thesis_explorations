@@ -21218,5 +21218,239 @@
         "min_engagement": 0.07931224256753922,
         "min_valence": -30.56694793701172,
         "time": 1539323929330
+    },
+    {
+        "avg_attention": 98.37836815799093,
+        "avg_engagement": 5.149177492406044,
+        "avg_valence": 2.0372606550211683,
+        "blinks": 7,
+        "emoji": [
+            "\ud83d\ude10",
+            "\u263a"
+        ],
+        "emotions": [
+            "engagement",
+            "joy"
+        ],
+        "max_attention": 98.78515625,
+        "max_engagement": 99.92091369628906,
+        "max_valence": 59.24777603149414,
+        "min_attention": 97.32576751708984,
+        "min_engagement": 0.07939779758453369,
+        "min_valence": -19.066020965576172,
+        "time": 1539358149712
+    },
+    {
+        "avg_attention": 97.83464048161854,
+        "avg_engagement": 14.94235080902012,
+        "avg_valence": -1.840394278811343,
+        "blinks": 5,
+        "emoji": [
+            "\ud83d\ude10",
+            "\ud83d\ude1b"
+        ],
+        "emotions": [
+            "contempt",
+            "engagement"
+        ],
+        "max_attention": 98.7847671508789,
+        "max_engagement": 99.91284942626953,
+        "max_valence": 0,
+        "min_attention": 66.61222076416016,
+        "min_engagement": 0.07973942160606384,
+        "min_valence": -100,
+        "time": 1539361749222
+    },
+    {
+        "avg_attention": 87.99988143424677,
+        "avg_engagement": 22.924422750506945,
+        "avg_valence": -3.161678058102848,
+        "blinks": 1,
+        "emoji": [
+            "\ud83d\ude10",
+            "\ud83d\ude0f"
+        ],
+        "emotions": [
+            "disgust",
+            "engagement",
+            "contempt"
+        ],
+        "max_attention": 98.78527069091797,
+        "max_engagement": 99.81696319580078,
+        "max_valence": 11.925444602966309,
+        "min_attention": 41.57510757446289,
+        "min_engagement": 0.0809013620018959,
+        "min_valence": -55.02262496948242,
+        "time": 1539369922519
+    },
+    {
+        "avg_attention": 52.76704470316569,
+        "avg_engagement": 90.0069309870402,
+        "avg_valence": 55.45277868707975,
+        "blinks": 0,
+        "emoji": [
+            "\ud83d\ude33",
+            "\ud83d\ude31",
+            "\ud83d\ude10"
+        ],
+        "emotions": [
+            "engagement",
+            "joy",
+            "surprise",
+            "contempt"
+        ],
+        "max_attention": 97.1639633178711,
+        "max_engagement": 99.92091369628906,
+        "max_valence": 88.59590148925781,
+        "min_attention": 35.454689025878906,
+        "min_engagement": 29.38007354736328,
+        "min_valence": -3.531949281692505,
+        "time": 1539374444526
+    },
+    {
+        "avg_attention": 95.72125710169475,
+        "avg_engagement": 18.02047199933479,
+        "avg_valence": -9.611699931323528,
+        "blinks": 4,
+        "emoji": [
+            "\ud83d\ude10",
+            "\ud83d\ude33",
+            "\ud83d\ude1e",
+            "\u263a",
+            "\ud83d\ude0f"
+        ],
+        "emotions": [
+            "engagement",
+            "joy",
+            "contempt"
+        ],
+        "max_attention": 98.78697967529297,
+        "max_engagement": 99.91943359375,
+        "max_valence": 55.95536804199219,
+        "min_attention": 36.0827522277832,
+        "min_engagement": 0.08010196685791016,
+        "min_valence": -90.83744049072266,
+        "time": 1539382743830
+    },
+    {
+        "avg_attention": 93.92608619398541,
+        "avg_engagement": 25.27534863374765,
+        "avg_valence": 0.47355563417335766,
+        "blinks": 24,
+        "emoji": [
+            "\ud83d\ude10",
+            "\u263a",
+            "\ud83d\ude17",
+            "\ud83d\ude1b",
+            "\ud83d\ude33",
+            "\ud83d\ude31"
+        ],
+        "emotions": [
+            "engagement",
+            "joy",
+            "valence",
+            "surprise"
+        ],
+        "max_attention": 98.78124237060547,
+        "max_engagement": 99.92047882080078,
+        "max_valence": 99.58167266845703,
+        "min_attention": 35.54026412963867,
+        "min_engagement": 0.0791342556476593,
+        "min_valence": -99.99999237060547,
+        "time": 1539386545242
+    },
+    {
+        "avg_attention": 97.64430878719119,
+        "avg_engagement": 2.2908577137293027,
+        "avg_valence": -0.012954796274290577,
+        "blinks": 2,
+        "emoji": [
+            "\ud83d\ude10",
+            "\ud83d\ude1e"
+        ],
+        "emotions": [
+            "engagement",
+            "joy"
+        ],
+        "max_attention": 98.78620910644531,
+        "max_engagement": 99.88129425048828,
+        "max_valence": 86.54698944091797,
+        "min_attention": 95.46106719970703,
+        "min_engagement": 0.0796426311135292,
+        "min_valence": -69.58893585205078,
+        "time": 1539402303169
+    },
+    {
+        "avg_attention": 92.67000073470255,
+        "avg_engagement": 10.85024956483858,
+        "avg_valence": -3.6797010862530337,
+        "blinks": 6.928203230275509,
+        "emoji": [
+            "\ud83d\ude10",
+            "\ud83d\ude1b"
+        ],
+        "emotions": [
+            "engagement",
+            "disgust"
+        ],
+        "max_attention": 98.78116607666016,
+        "max_engagement": 97.7559814453125,
+        "max_valence": 20.9316463470459,
+        "min_attention": 41.81687927246094,
+        "min_engagement": 0.079771488904953,
+        "min_valence": -99.8713607788086,
+        "time": 1539445284583
+    },
+    {
+        "avg_attention": 97.6818747795065,
+        "avg_engagement": 0.5962121648548161,
+        "avg_valence": 0,
+        "blinks": 34,
+        "emoji": [
+            "\ud83d\ude10"
+        ],
+        "max_attention": 98.78412628173828,
+        "max_engagement": 35.422237396240234,
+        "max_valence": 0,
+        "min_attention": 95.37097930908203,
+        "min_engagement": 0.07953330874443054,
+        "min_valence": 0,
+        "time": 1539450772686
+    },
+    {
+        "avg_attention": 97.71732114330274,
+        "avg_engagement": 5.142689323679316,
+        "avg_valence": -1.0288754699799931,
+        "blinks": 10,
+        "emoji": [
+            "\ud83d\ude10"
+        ],
+        "max_attention": 98.76705169677734,
+        "max_engagement": 62.999046325683594,
+        "max_valence": 19.931913375854492,
+        "min_attention": 96.45619201660156,
+        "min_engagement": 0.07921125739812851,
+        "min_valence": -18.104642868041992,
+        "time": 1539454372810
+    },
+    {
+        "avg_attention": 96.77626300539289,
+        "avg_engagement": 21.788508484060213,
+        "avg_valence": -10.416035535559057,
+        "blinks": 0,
+        "emoji": [
+            "\ud83d\ude10",
+            "\ud83d\ude09"
+        ],
+        "emotions": [
+            "engagement"
+        ],
+        "max_attention": 98.78334045410156,
+        "max_engagement": 99.90301513671875,
+        "max_valence": 0,
+        "min_attention": 86.68600463867188,
+        "min_engagement": 0.08009463548660278,
+        "min_valence": -88.69962310791016,
+        "time": 1539457979457
     }
 ]
