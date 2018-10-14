@@ -1293,5 +1293,222 @@
     ],
     "mood_index": 1015,
     "actual_score": 3.0
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.0991954879977275,
+        "ensemble_pred": 3.033508471059192,
+        "timestamp": 1539465868.398945
+      },
+      {
+        "affectiva_pred": 2.995555286865102,
+        "ensemble_pred": 3.033508471059192,
+        "timestamp": 1539465868.471818
+      },
+      {
+        "stepCount_pred": 3.1509345225455556,
+        "ensemble_pred": 3.033508471059192,
+        "timestamp": 1539465869.683695
+      }
+    ],
+    "mood_index": 1016,
+    "actual_score": 3.0
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.1004103267330496,
+        "ensemble_pred": 3.030475759894743,
+        "timestamp": 1539474863.465982
+      },
+      {
+        "affectiva_pred": 2.979445033414393,
+        "ensemble_pred": 3.0306062844013026,
+        "timestamp": 1539474863.515
+      }
+    ],
+    "mood_index": 1017,
+    "actual_score": 3.5
+  },
+  {
+    "predictions": [],
+    "mood_index": 1018,
+    "actual_score": 3.0
+  },
+  {
+    "predictions": [],
+    "mood_index": 1019,
+    "actual_score": 3.5
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.1009424679118687,
+        "ensemble_pred": 3.0328332442431565,
+        "timestamp": 1539487466.439171
+      },
+      {
+        "affectiva_pred": 2.9800893545231153,
+        "ensemble_pred": 3.0306546905708904,
+        "timestamp": 1539487466.487702
+      },
+      {
+        "stepCount_pred": 3.1509345225455556,
+        "ensemble_pred": 3.0306546905708904,
+        "timestamp": 1539487467.52272
+      }
+    ],
+    "mood_index": 1020,
+    "actual_score": 3.5
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.0992750353965945,
+        "ensemble_pred": 3.0308778954939477,
+        "timestamp": 1539491067.726704
+      },
+      {
+        "affectiva_pred": 2.9707774582013324,
+        "ensemble_pred": 3.029049283231913,
+        "timestamp": 1539491067.795524
+      },
+      {
+        "stepCount_pred": 3.1509345225455556,
+        "ensemble_pred": 3.029049283231913,
+        "timestamp": 1539491068.588254
+      }
+    ],
+    "mood_index": 1021,
+    "actual_score": 3.0
+  },
+  {
+    "predictions": [],
+    "mood_index": 1022,
+    "actual_score": 3.0
+  },
+  {
+    "predictions": [],
+    "mood_index": 1023,
+    "actual_score": 3.5
+  },
+  {
+    "predictions": [],
+    "mood_index": 1024,
+    "actual_score": 3.5
+  },
+  {
+    "predictions": [],
+    "mood_index": 1025,
+    "actual_score": 3.0
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.0985266387818156,
+        "affectiva_pred": 3.02471707948201,
+        "stepCount_pred": 3.1509345225455556,
+        "ensemble_pred": 3.036994160816168,
+        "timestamp": 1539538887.369606
+      }
+    ],
+    "mood_index": 1025,
+    "actual_score": 3.0
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.099692649423612,
+        "ensemble_pred": 3.0309354596958586,
+        "timestamp": 1539541587.465077
+      },
+      {
+        "affectiva_pred": 2.98069481664071,
+        "ensemble_pred": 3.0309354596958586,
+        "timestamp": 1539541587.511505
+      },
+      {
+        "stepCount_pred": 3.1509345225455556,
+        "ensemble_pred": 3.0309354596958586,
+        "timestamp": 1539542488.2727
+      }
+    ],
+    "mood_index": 1026,
+    "actual_score": 2.5
+  },
+  {
+    "predictions": [
+      {
+        "stepCount_pred": 3.1509345225455556,
+        "ensemble_pred": 3.036841528153761,
+        "timestamp": 1539546089.46368
+      }
+    ],
+    "mood_index": 1027,
+    "actual_score": 3.0
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.099302152013965,
+        "ensemble_pred": 3.0255911865196587,
+        "timestamp": 1539549689.788974
+      },
+      {
+        "affectiva_pred": 2.955121977253092,
+        "ensemble_pred": 3.0255911865196587,
+        "timestamp": 1539549689.843585
+      },
+      {
+        "stepCount_pred": 3.1509345225455556,
+        "ensemble_pred": 3.0255911865196587,
+        "timestamp": 1539549690.890301
+      }
+    ],
+    "mood_index": 1028,
+    "actual_score": 3.5
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.100573115739895,
+        "ensemble_pred": 3.029874095492639,
+        "timestamp": 1539553291.851683
+      },
+      {
+        "affectiva_pred": 2.9757436281628444,
+        "ensemble_pred": 3.029874095492639,
+        "timestamp": 1539553291.898687
+      },
+      {
+        "stepCount_pred": 3.1509345225455556,
+        "ensemble_pred": 3.029874095492639,
+        "timestamp": 1539553292.374656
+      }
+    ],
+    "mood_index": 1029,
+    "actual_score": 4.0
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.0999606990129522,
+        "ensemble_pred": 3.0271282577747125,
+        "timestamp": 1539556892.517524
+      },
+      {
+        "affectiva_pred": 2.9622286827068995,
+        "ensemble_pred": 3.0271282577747125,
+        "timestamp": 1539556892.573234
+      },
+      {
+        "stepCount_pred": 3.1509345225455556,
+        "ensemble_pred": 3.0271282577747125,
+        "timestamp": 1539556893.400656
+      }
+    ],
+    "mood_index": 1030,
+    "actual_score": 3.5
   }
 ]

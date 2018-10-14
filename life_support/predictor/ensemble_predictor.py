@@ -17,10 +17,10 @@ from sklearn.externals import joblib
 # test predictions become training data for final prediction model
 # final prediction model updates every 15 minutes
 
-productivity_mood_SVR = joblib.load('saved_models/productivity_mood_SVR.pkl')
-affectiva_mood_LM = joblib.load('saved_models/affectiva_mood_LM.pkl')
-stepCount_mood_SVR = joblib.load('saved_models/stepCount_mood_SVR.pkl')
-ensemble_mood_SVR = joblib.load('saved_models/ensemble_mood_SVR.pkl')
+productivity_mood_SVR = joblib.load('saved_models/old_ensemble/productivity_mood_SVR.pkl')
+affectiva_mood_LM = joblib.load('saved_models/old_ensemble/affectiva_mood_LM.pkl')
+stepCount_mood_SVR = joblib.load('saved_models/old_ensemble/stepCount_mood_SVR.pkl')
+ensemble_mood_SVR = joblib.load('saved_models/old_ensemble/ensemble_mood_SVR.pkl')
 
 productivity_lastUpdateTime = 0
 affectiva_lastUpdateTime = 0

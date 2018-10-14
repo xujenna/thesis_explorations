@@ -13,16 +13,27 @@ import os
 from sklearn.externals import joblib
 from sklearn import ensemble
 
-import keras
-import tensorflow
 from keras.models import load_model
 
 import numpy as np
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+
+from sklearn.preprocessing import MinMaxScaler
+
+from pandas import concat
+
+from keras.models import Sequential
+from keras.layers import LSTM 
+from keras.layers import Dense
+from keras.optimizers import Adam
+import keras.backend as K
 
 model = load_model('LSTM_mood_predictor_no_reporter.h5')
+scaler = joblib.load('scaler.pkl')
 
 
 responsesDF = pd.read_csv("../../../trackers/reporter/responses.tsv", sep='\t', header=0)
@@ -62,6 +73,8 @@ finalFeaturesList = ['mood',
 
 tempRow = [[0] * len(finalFeaturesList)]
 df = pd.DataFrame(tempRow, columns=finalFeaturesList)
+df['mood'] = responsesDF['mood'].iloc[-1]
+
 
 prev_df = pd.DataFrame()
 
@@ -94,12 +107,27 @@ def makePrediction(df):
     currentIndex = len(responsesDF)
 
 
+    print("current DF: ")
+    print(df)
+    
     if (currentIndex == moodIndex):
+        cols = list(df)
+        cols.insert(0, cols.pop(cols.index('mood')))
+        df = df.loc[:,cols]
+
+        values = df.values
+        values = values.astype('float32')
+        test_X = scaler.transform(values)
+        
+        print("Predicting on: ")
+        print(test_X)
+
         # make a prediction
-        yhat = DataFrame(model.predict(df))
-        df = DataFrame(df.reshape((df.shape[0], df.shape[2])))
+        test_X = test_X.reshape((test_X.shape[0], 1, test_X.shape[1]))
+        yhat = DataFrame(model.predict(test_X))
+        test_X = DataFrame(test_X.reshape((test_X.shape[0], test_X.shape[2])))
         # invert scaling for forecast
-        inv_yhat = concat((yhat, df.iloc[:, 1:]), axis=1)
+        inv_yhat = concat((yhat, test_X.iloc[:, 1:]), axis=1)
         inv_yhat = scaler.inverse_transform(inv_yhat)
         inv_yhat = inv_yhat[:,0]
 
@@ -115,11 +143,20 @@ def makePrediction(df):
 
     else:
         if(len(currentIndexPredictions['predictions']) > 0):
+            cols = list(df)
+            cols.insert(0, cols.pop(cols.index('mood')))
+            df = df.loc[:,cols]
+
+            values = df.values
+            values = values.astype('float32')
+            test_X = scaler.transform(values)
+
             # make a prediction
-            yhat = DataFrame(model.predict(df))
-            df = DataFrame(df.reshape((df.shape[0], df.shape[2])))
+            test_X = test_X.reshape((test_X.shape[0], 1, test_X.shape[1]))
+            yhat = DataFrame(model.predict(test_X))
+            test_X = DataFrame(test_X.reshape((test_X.shape[0], test_X.shape[2])))
             # invert scaling for forecast
-            inv_yhat = concat((yhat, df.iloc[:, 1:]), axis=1)
+            inv_yhat = concat((yhat, test_X.iloc[:, 1:]), axis=1)
             inv_yhat = scaler.inverse_transform(inv_yhat)
             inv_yhat = inv_yhat[:,0]
 
@@ -135,7 +172,6 @@ def makePrediction(df):
             print("------------------------")
 
             currentIndexPredictions['actual_mood'] = lastResponsesRow['mood']
-            currentIndexPredictions['actual_morale'] = lastResponsesRow['morale']
             currentIndexPredictions['response_time'] = lastResponsesRow['time']
             writeToJSON(currentIndexPredictions)
 
