@@ -15,8 +15,12 @@ admin.initializeApp({
 var userId = "xujenna"
 var database = admin.database();
 
-
-
+// events used to trigger an intent
+// sys.any
+// routines (actions on google)
+// start exercise intent, continue exercise intent, stop exerise intent
+// conv.data.currentExercise to koeep place in the workout
+// data persists within a session
 
 // const lovingKindness = "<speak>" + "Okay, let's do a loving-kindness meditation. <break time = '2'/>" + "<audio src='https://emmaseppala.com/wp-content/uploads/2014/04/Loving-KindnessMeditation.mp3'></audio>" + "</speak>";
 
@@ -182,7 +186,7 @@ app.intent('breathing-exercise', (conv,params)=>{
 	})
 
 app.intent('good-things-log', (conv,params)=>{
-	conv.ask("That's great! Tell me about it and I'll add it to your good things log.")
+	conv.ask("That's great! Tell me what I should add to your good things log.")
 })
 
 app.intent('good-things-log-get-thing', (conv)=>{
@@ -219,18 +223,24 @@ app.intent('good-things-log-gratitude-log-get-response', (conv)=>{
 	conv.close("Great job! I've added your response to your gratitude log.")
 })
 
-// app.intent('gratitude-log', (conv,params)=>{
-// 	let gratitudeItem = conv.query;
-// 	let timestamp = Date.now();
-// 	var key = "/users/" + userId + "/gratitude/" + timestamp;
 
-// 	var newGratitudeItem = {
-// 		timestamp: timestamp,
-// 		goodThing: gratitudeItem
-// 	};
+
+app.intent('gratitude-log', (conv,params)=>{
+	conv.ask("That's great! Tell me what I should add to your gratitude log.")
+})
+
+app.intent('gratitude-log-get-thing', (conv, params)=>{
+	let gratitudeItem = conv.query;
+	let timestamp = Date.now();
+	var key = "/users/" + userId + "/gratitude/" + timestamp;
+
+	var newGratitudeItem = {
+		timestamp: timestamp,
+		goodThing: gratitudeItem
+	};
 	
-// 	database.ref(key).set(newGratitudeItem);
-// })
+	database.ref(key).set(newGratitudeItem);
+})
 
 // app.intent('guided-exercise-repeat', (conv, params)=>{
 // 	console.log("params.discomfort: " + params.discomfort)

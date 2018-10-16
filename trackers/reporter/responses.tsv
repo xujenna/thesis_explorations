@@ -987,7 +987,7 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-10-09T13:30:07.172256	1539106207.172256	3	focused	still doing hw	schoolwork	1	True	Home	3	3.5	3	False
 2018-10-09T14:34:42.409697	1539110082.409697	2.5	tired	didn't sleep enough	schoolwork	0	True	Home	2.5	3.5	4	True
 2018-10-09T15:50:23.637048	1539114623.637048	3	focused again	had a lunch break, now back to work	schoolwork, eating	0	True	Home	3	2.5	4	False
-2018-10-09T16:50:51.008246	1539118251.008246	2.5	tired	want to sleep	schoolwork	0	True    Home    2.5	3.5	4	False
+2018-10-09T16:50:51.008246	1539118251.008246	2.5	tired	want to sleep	schoolwork	0	True	Home	2.5	3.5	4	False
 2018-10-09T19:54:44.555172	1539129284.555172	3.5	tired but cheerful	hanging out during break	in class, chatting	5	False	School	2	2.5	4	True
 2018-10-09T23:04:35.410522	1539140675.410522	2.5	just tired and stressed 	have been working nonstop all week	leisure, tv	2	True	Home	2	3.5	4.5	True
 2018-10-10T14:16:39.457122	1539195399.457122	4	cheerful	got a good response to my life support bot; was hanging out during break	in class	7	False	School	4	3	3.5	True
@@ -1030,3 +1030,22 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-10-14T16:27:47.243239	1539548867.243239	3.5	accomplished	got firebase db connected to life support	schoolwork, eating	0	True	Home	3.5	1.5	3.5	True
 2018-10-14T17:31:54.222658	1539552714.222658	4	accomplished	implemented good things and gratitude logs to life support	schoolwork	1	True	Home	4	1	3.5	False
 2018-10-14T18:37:54.568506	1539556674.568506	3.5	scatterbrained	i keep distracting myself	schoolwork	1	True	Home	3	1.5	3.5	True
+2018-10-14T19:38:55.101841	1539560335.101841	3.5	pretty good	cooking	cooking, schoolwork	1	True	Home	3	1	3.5	True
+2018-10-14T20:43:55.940984	1539564235.940984	4	accomplished	cooked a lot of food for the week, listening to joanne	cooking, errands	0	True	Home	4	0.5	3	False
+2018-10-14T21:47:44.563600	1539568064.5636	3	distracted	don't feel like working on my paperrrrr	leisure, schoolwork	0	True	Home	2	1.5	3.5	False
+2018-10-14T22:53:51.347373	1539572031.347373	4	better	started playing with NNs again lol	schoolwork	0	True	Home	3	1	4	False
+2018-10-14T23:55:17.783017	1539575717.783017	3.5	focused	working on my paper finally	schoolwork, working	0	True	Home	3.5	1	4	False
+2018-10-15T00:56:21.657340	1539579381.65734	3	focused but tired	finishing up the paper	schoolwork	0	True	Home	3	1.5	4.5	False
+2018-10-15T01:57:32.671241	1539583052.671241	2.5	tired and annoyed	should have started working on this paper earlier lol	schoolwork	0	True	Home	2	3	4.5	True
+2018-10-15T03:06:59.414319	1539587219.414319	2	super sleepy	it's late and i'm still citing sources	schoolwork	0	True	Home	2	3.5	5	True
+2018-10-15T12:26:31.701879	1539620791.701879	3.5	excited about all the extracurricular things i''ll be involved in	got a bunch of e-mails this morning	schoolwork, washing up, email	1	True	Home	4	1.5	2	False
+2018-10-15T13:29:59.125735	1539624599.125735	3.5	still in a good mood	lots of good emails this morning	eating, washing up, email	3	True	Home	3.5	2	2.5	False
+2018-10-15T14:31:36.318000	1539628296.318	3.5	cheerful	good interactions, feeling good	email, schoolwork	5	True	Home	3	2.5	2.5	False
+2018-10-15T15:32:03.607096	1539631923.607096	3	focused	doing reading/blog post for class	schoolwork	0	True	Home	3	2	3	True
+2018-10-15T16:33:32.603017	1539635612.603017	3	neutral	still doing readings	schoolwork	0	True	Home	2.5	2.5	3.5	False
+2018-10-15T19:24:45.514111	1539645885.514111	3	fine	in class	in class	5	False	School	3	3	3.5	True
+2018-10-15T20:27:59.005524	1539649679.005524	2.5	a little bored and restless	instruction is going to fast for anyone to follow	in class	1	False	School	3	2.5	3	False
+2018-10-15T21:38:41.587300	1539653921.5873	3	fine	just doing some work at school	schoolwork	5	False	School	3	2.5	3.5	True
+2018-10-15T23:33:18.266670	1539660798.26667	3.5	kind of proud of myself	i just did the hackiest thing but it worked	schoolwork	2	False	School	3.5	4	3.5	True
+2018-10-16T01:00:21.192393	1539666021.192393	4	amused	still amused by my code	schoolwork	2	True	Home	3.5	3	3.5	False
+2018-10-16T02:25:54.397930	1539671154.39793	2.5	annoyed	stayed up late working too much again lol	schoolwork	2	True	Home	3	2	4.5	True
