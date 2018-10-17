@@ -1968,5 +1968,41 @@
     ],
     "mood_index": 1060,
     "actual_score": 4.0
+  },
+  {
+    "predictions": [
+      {
+        "productivity_pred": 3.099688185572031,
+        "ensemble_pred": 3.003622013606944,
+        "timestamp": 1539794261.304279
+      },
+      {
+        "affectiva_pred": 2.9994238100585506,
+        "ensemble_pred": 3.00484607717694,
+        "timestamp": 1539794261.335295
+      },
+      {
+        "stepCount_pred": 3.0856386673824683,
+        "ensemble_pred": 2.912525130993322,
+        "timestamp": 1539794261.781708
+      }
+    ],
+    "mood_index": 1063,
+    "actual_score": 3.5
+  },
+  {
+    "predictions": [],
+    "mood_index": 1064,
+    "actual_score": 4.0
+  },
+  {
+    "predictions": [],
+    "mood_index": 1065,
+    "actual_score": 3.5
+  },
+  {
+    "predictions": [],
+    "mood_index": 1066,
+    "actual_score": 4.0
   }
 ]

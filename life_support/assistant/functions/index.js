@@ -58,11 +58,21 @@ const sevenMinWorkout_pt10 = "<speak>" + "Next up, lunges. <break time = '2'/>" 
 
 const sevenMinWorkout_pt11 = "<speak>" + "Next, push-ups with rotation. <break time = '2'/>" + thirtySecs + "Now rest. <break time = '1'/>" + tenSecs + "</speak>"
 
-const sevenMinWorkout_pt12 = "<speak>" + "Last up, a side plank. <break time = '2'/>" + thirtySecs + "<audio src='https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg'></audio>" + "You did it! That's the end of the seven minute workout." + 
+const sevenMinWorkout_pt12 = "<speak>" + "Last up, a side plank. <break time = '2'/>" + thirtySecs + "<audio src='https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg'></audio>" + "You did it! That's the end of the seven minute workout." + "</speak>"
+
+var sevenMinWorkout = new Array(sevenMinWorkout_pt1, sevenMinWorkout_pt2, sevenMinWorkout_pt3, sevenMinWorkout_pt4, sevenMinWorkout_pt5, sevenMinWorkout_pt6, sevenMinWorkout_pt7, sevenMinWorkout_pt8, sevenMinWorkout_pt9, sevenMinWorkout_pt10, sevenMinWorkout_pt11, sevenMinWorkout_pt12)
 
 
+app.intent('7-min-workout-start', (conv,params) => {
+	// agent.setContext({
+	// 	name:'7-min-workout',
+	// 	lifespan: 12,
+	// 	parameters:{
+	// 	  'currentExercise': 0
+	// 	  }
+	//   });
+	conv.data.currentExercise = 0;
 
-app.intent('physical-exercise-start', (conv,params) => {
 	conv.ask(new SimpleResponse({
 		speech: sevenMinWorkout_pt1,
 		text: "Great! Let's start with jumping jacks."
@@ -70,90 +80,14 @@ app.intent('physical-exercise-start', (conv,params) => {
 	conv.ask("Would you like to continue?")
 })
 
-app.intent('physical-exercise-step2', (conv,params) => {
-	conv.ask(new SimpleResponse({
-		speech: sevenMinWorkout_pt2,
-		text: "Next up, a wall sit."
-	}))
-	conv.ask("Would you like to continue?")
-})
+app.intent('7-min-workout-continue', (conv,params) => {
+	conv.data.currentExercise += 1;
 
-app.intent('physical-exercise-step3', (conv,params) => {
 	conv.ask(new SimpleResponse({
-		speech: sevenMinWorkout_pt3,
-		text: "Next up, pushups."
+		speech: sevenMinWorkout[conv.data.currentExercise],
+		text: "Step" + conv.data.currentExercise
 	}))
 	conv.ask("Would you like to continue?")
-})
-
-app.intent('physical-exercise-step4', (conv,params) => {
-	conv.ask(new SimpleResponse({
-		speech: sevenMinWorkout_pt4,
-		text: "Abdominal crunches are next."
-	}))
-	conv.ask("Would you like to continue?")
-})
-
-app.intent('physical-exercise-step5', (conv,params) => {
-	conv.ask(new SimpleResponse({
-		speech: sevenMinWorkout_pt5,
-		text: "Next, step up onto a chair."
-	}))
-	conv.ask("Would you like to continue?")
-})
-
-app.intent('physical-exercise-step6', (conv,params) => {
-	conv.ask(new SimpleResponse({
-		speech: sevenMinWorkout_pt6,
-		text: "Next up, squats."
-	}))
-	conv.ask("Would you like to continue?")
-})
-
-app.intent('physical-exercise-step7', (conv,params) => {
-	conv.ask(new SimpleResponse({
-		speech: sevenMinWorkout_pt7,
-		text: "Next, tricep dips on a chair."
-	}))
-	conv.ask("Would you like to continue?")
-})
-
-app.intent('physical-exercise-step8', (conv,params) => {
-	conv.ask(new SimpleResponse({
-		speech: sevenMinWorkout_pt8,
-		text: "Next up, plank."
-	}))
-	conv.ask("Would you like to continue?")
-})
-
-app.intent('physical-exercise-step9', (conv,params) => {
-	conv.ask(new SimpleResponse({
-		speech: sevenMinWorkout_pt9,
-		text: "Next, high knees running in place."
-	}))
-	conv.ask("Would you like to continue?")
-})
-
-app.intent('physical-exercise-step10', (conv,params) => {
-	conv.ask(new SimpleResponse({
-		speech: sevenMinWorkout_pt10,
-		text: "Next up, lunges."
-	}))
-	conv.ask("Would you like to continue?")
-})
-
-app.intent('physical-exercise-step11', (conv,params) => {
-	conv.ask(new SimpleResponse({
-		speech: sevenMinWorkout_pt11,
-		text: "Next, push-ups with rotation."
-	}))
-	conv.ask("Would you like to continue?")
-})
-app.intent('physical-exercise-step12', (conv,params) => {
-	conv.close(new SimpleResponse({
-		speech: sevenMinWorkout_pt12,
-		text: "Last up, a side plank."
-	}))
 })
 
 

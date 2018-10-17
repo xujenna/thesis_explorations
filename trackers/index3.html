@@ -14,7 +14,6 @@
       text-align: center;
       letter-spacing: 0.5px;
       margin:0px;
-
   }
 
 #ml_mood_predictions {
@@ -577,12 +576,12 @@ color:lightgrey;
   }
 }
 
-@media screen and (max-width:1010px){
+@media screen and (max-width:1063px){
   #correlation-description-body{
-    width:58%;
+    width:55%;
   }
   #correlation-description-hed{
-    width:95%;
+    width:90%;
   }
 
   #footer{
@@ -613,6 +612,10 @@ color:lightgrey;
 
   #hed{
     padding: 0% 5% 0% 8%;
+  }
+
+   #correlation-description-body{
+    width:50%;
   }
 }
 
@@ -778,7 +781,7 @@ color:lightgrey;
       <h2>OK Computer</h2>
     </div>
     <div class="description-body" id="correlation-description-body">
-      My trackers are presently feeding data to three LSTM neural networks, which are predicting on my mood, stress, and fatigue scores, as well as one random forest model, which is predicting on morale scores. Model building is ongoing; special thanks to Jim Schmitz for sharing his data science expertise, and <a href="https://machinelearningmastery.com" target="new">Jason Brownlee</a> for his posts on building RNNs for time series data. Visualized below are my models' predictions compared to their respective reported scores.
+      My trackers are presently feeding data to three LSTM neural networks, which are predicting on my mood, stress, and fatigue scores, as well as one random forest model, which is predicting on morale scores. Model building is ongoing; special thanks to <a href="http://ixora.io" target="new">Jim Schmitz</a> for sharing his data science expertise, and <a href="https://machinelearningmastery.com" target="new">Jason Brownlee</a> for his posts on building RNNs for time series data. Visualized below are my models' predictions compared to their respective reported scores.
     </div>
     <div class="description-key" id="ML-description-key">
       <p><span style="color:rgb(255, 0, 255, 0.3)">&block; &nbsp;</span>Actual Mood Score</p>
@@ -1078,7 +1081,7 @@ month[11] = "December";
 var dataLength = newResponses.length
 var maxDate = newResponses[dataLength-1]['time']
 var maxDateDay = new Date()
-maxDateDay.setDate(maxDate.getDate() - 1)
+maxDateDay.setDate(maxDate.getDate() - 2)
 
 
 var contextNavBack = d3.select("#viewport-back");

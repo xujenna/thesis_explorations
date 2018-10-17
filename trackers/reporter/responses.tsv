@@ -1062,3 +1062,7 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-10-16T21:56:51.904626	1539741411.904626	4	cheerful	hanging out at school	schoolwork, leisure	6	False	School	3.5	1	3.5	False
 2018-10-16T23:52:33.874783	1539748353.874783	3	content	relaxing at home, too lazy to work	leisure, feedly	4	True	Home	2	1.5	4	True
 2018-10-17T01:07:13.757702	1539752833.757702	4	excited	mozilla tweeted about me	leisure, schoolwork, feedly	0	True	Home	4	1.5	4.5	True
+2018-10-17T12:30:33.955958	1539793833.955958	3.5	cheerful, proud	lots of good attention around my project	in class	1	False	School	4.5	2	3	False
+2018-10-17T13:45:33.664806	1539798333.664806	4	cheerful	hanging out during break	in class	5	False	School	4	2.5	3.5	True
+2018-10-17T14:46:08.769775	1539801968.769775	3.5	pretty good	just sitting in class	in class	2	False	School	3.5	2	3	True
+2018-10-17T17:53:43.922498	1539813223.922498	4	cheerful, excited	hanging out at school, sys.any worked	schoolwork	7	False	School	4.5	1.5	3	False
