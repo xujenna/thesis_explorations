@@ -140,17 +140,17 @@ def makePrediction(df):
     currentIndex = len(responsesDF)
 
     fatigueDF = df.copy()
-    fatigueDF['fatigue'] = responsesDF['fatigue']
+    fatigueDF['fatigue'] = lastResponsesRow['fatigue']
     del fatigueDF['mood']
     del fatigueDF['stress']
 
     moodDF = df.copy()
-    moodDF['mood'] = responsesDF['mood']
+    moodDF['mood'] = lastResponsesRow['mood']
     del moodDF['fatigue']
     del moodDF['stress']
 
     stressDF = df.copy()
-    stressDF['stress'] = responsesDF['stress']
+    stressDF['stress'] = lastResponsesRow['stress']
     del stressDF['fatigue']
     del stressDF['mood']
 
