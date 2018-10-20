@@ -2825,7 +2825,7 @@ LSTM_data.forEach(function(d, i) {
 
   var currentTime = LSTM_data[i+1]["timestamp"]
 
-  if(d["timestamp"] < (currentTime - 20000000)) {
+  if(d["timestamp"] < (currentTime - 22000000)) {
     nullTime = currentTime - 360000;
     var nullItems = {};
     nullItems["actual_mood"] = null;
@@ -2878,7 +2878,7 @@ RF_morale_data.forEach(function(d, i) {
 
   var currentMoraleTime = RF_morale_data[i+1]["timestamp"]
 
-  if(d["timestamp"] < (currentMoraleTime - 20000000)) {
+  if(d["timestamp"] < (currentMoraleTime - 22000000)) {
     nullMoraleTime = currentMoraleTime - 360000;
     var nullItems4 = {};
     nullItems4["actual_mood"] = null;

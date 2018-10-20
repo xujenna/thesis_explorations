@@ -1,0 +1,40 @@
+1539898797044	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zt/q1szsgyn29z1y3hrpnlbhvr80000gn/T/rust_mozprofile.wRkBxOBnL5vd"
+2018-10-18 17:39:58.687 plugin-container[11280:4339010] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x992f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-18 17:39:58.951 plugin-container[11281:4339043] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9c3b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539898799198	Marionette	INFO	Listening on port 56241
+1539898799243	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-10-18 17:39:59.632 plugin-container[11284:4339229] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9737, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript warning: https://www.instagram.com/static/bundles/base/ConsumerCommons.js/9fc3a3d540f1.js, line 1: unreachable code after return statement
+JavaScript warning: https://www.instagram.com/static/bundles/base/ConsumerCommons.js/9fc3a3d540f1.js, line 1: unreachable code after return statement
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1539898928142	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zt/q1szsgyn29z1y3hrpnlbhvr80000gn/T/rust_mozprofile.bVHP1ePRhw4y"
+2018-10-18 17:42:10.140 plugin-container[11351:4344409] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9e3b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-18 17:42:10.292 plugin-container[11352:4344438] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xa133, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539898930698	Marionette	INFO	Listening on port 56827
+1539898930725	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-10-18 17:42:11.235 plugin-container[11353:4344563] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9633, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript warning: https://www.instagram.com/static/bundles/base/ConsumerCommons.js/9fc3a3d540f1.js, line 1: unreachable code after return statement
+JavaScript warning: https://www.instagram.com/static/bundles/base/ConsumerCommons.js/9fc3a3d540f1.js, line 1: unreachable code after return statement
+1539899558517	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/zt/q1szsgyn29z1y3hrpnlbhvr80000gn/T/rust_mozprofile.GBYah0csjUfz"
+2018-10-18 17:52:39.928 plugin-container[11495:4364109] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9f37, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-18 17:52:40.101 plugin-container[11496:4364135] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9e37, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539899560325	Marionette	INFO	Listening on port 59470
+1539899560375	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-10-18 17:52:40.894 plugin-container[11497:4364273] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x963b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript warning: https://www.instagram.com/static/bundles/base/ConsumerCommons.js/9fc3a3d540f1.js, line 1: unreachable code after return statement
+JavaScript warning: https://www.instagram.com/static/bundles/base/ConsumerCommons.js/9fc3a3d540f1.js, line 1: unreachable code after return statement
+JavaScript warning: https://www.instagram.com/static/bundles/base/ConsumerCommons.js/9fc3a3d540f1.js, line 1: unreachable code after return statement
+JavaScript warning: https://www.instagram.com/static/bundles/base/ConsumerCommons.js/9fc3a3d540f1.js, line 1: unreachable code after return statement
+JavaScript warning: https://www.instagram.com/static/bundles/base/ConsumerCommons.js/9fc3a3d540f1.js, line 1: unreachable code after return statement
+JavaScript warning: https://www.instagram.com/static/bundles/base/ConsumerCommons.js/9fc3a3d540f1.js, line 1: unreachable code after return statement
+2018-10-18 18:10:11.663 plugin-container[11609:4394484] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x973b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.

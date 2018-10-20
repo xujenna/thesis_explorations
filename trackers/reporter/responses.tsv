@@ -1066,3 +1066,26 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-10-17T13:45:33.664806	1539798333.664806	4	cheerful	hanging out during break	in class	5	False	School	4	2.5	3.5	True
 2018-10-17T14:46:08.769775	1539801968.769775	3.5	pretty good	just sitting in class	in class	2	False	School	3.5	2	3	True
 2018-10-17T17:53:43.922498	1539813223.922498	4	cheerful, excited	hanging out at school, sys.any worked	schoolwork	7	False	School	4.5	1.5	3	False
+2018-10-17T18:54:37.562108	1539816877.562108	4	satisfied	all of nicole's suggestions worked so easily	schoolwork	3	False	School	4.5	1	3	True
+2018-10-17T19:55:14.241233	1539820514.241233	3.5	focused	working on life support bot	schoolwork	1	False	School	4	1.5	3.5	True
+2018-10-17T21:48:50.233598	1539827330.233598	3	tired/lazy	long day	leisure, feedly	0	True	Home	2	2	4	True
+2018-10-17T22:49:42.695791	1539830982.695791	3	still tired and lazy	long day	leisure, feedly, resting	2	True	Home	2	2	4.5	True
+2018-10-17T23:50:43.364490	1539834643.36449	2.5	still tired and lazy	i should just go to sleep	leisure, tv	0	True	Home	2	2.5	4.5	True
+2018-10-18T00:51:16.762899	1539838276.762899	3	more focused now	writing a cover letter for propublica	working	0	True	Home	3	1.5	4.5	True
+2018-10-18T01:51:45.380243	1539841905.380243	3	still focused	finishing up this cover letter	working	0	True	Home	2.5	1.5	5	True
+2018-10-18T11:20:04.946929	1539876004.946929	3	neutral	getting ready to leave for class	washing up, cooking	0	True	Home	3	2	2.5	True
+2018-10-18T17:24:07.357109	1539897847.357109	3	neutral	just got to school	schoolwork	2	False	School	3	1.5	3.5	True
+2018-10-18T18:35:28.284945	1539902128.284945	2.5	tired	not sure, took a nap but still have a headache	schoolwork	2	False	School	2.5	2	3.5	True
+2018-10-18T19:48:53.337304	1539906533.337304	4	cheerfule	hanging out at school	leisure, with friends, schoolwork	4	False	School	3	1.5	3	False
+2018-10-18T23:08:07.150814	1539918487.150814	2.5	super tired again	i guess i didn't sleep much	errands, leisure	6	True	Home	2.5	1.5	4.5	True
+2018-10-19T00:09:54.207398	1539922194.207398	3	better	trying to do some work	errands, schoolwork	3	True	Home	3	1	4.5	True
+2018-10-19T01:10:57.831621	1539925857.831621	3.5	inspired	listening to florence and the machine lol	schoolwork, leisure	1	True	Home	3.5	0.5	4.5	False
+2018-10-19T02:15:15.155671	1539929715.155671	3	content	just enjoying my night	schoolwork, leisure	0	True	Home	3	1	4.5	False
+2018-10-19T03:16:10.874936	1539933370.874936	2.5	super sleepy	my brain refuses to turn off	working, errands	0	True	Home	2.5	0.5	5	False
+2018-10-19T12:12:15.075536	1539965535.075536	3	content	just getting up	cooking, leisure, email, feedly	1	True	Home	3.5	1	3	False
+2018-10-19T13:32:46.055412	1539970366.055412	3.5	pretty good	florence is lifting my spirits lol	washing up, schoolwork	0	True	Home	4	0.5	3	False
+2018-10-19T15:02:12.315169	1539975732.315169	3.5	still pretty good, focused	working on life support assistant	schoolwork	4	False	School	3.5	1	2.5	True
+2018-10-19T17:10:13.508376	1539983413.508376	3.5	cheerful	got food with sandy, cleaning out my to do list	schoolwork, errands, with friends, eating	2	False	School	4	1.5	3	False
+2018-10-19T18:10:38.048102	1539987038.048102	3	focused	working on documentation	schoolwork	2	False	School	3.5	1.4	3.5	True
+2018-10-19T19:10:56.239706	1539990656.239706	3	focused	still working on documentation	schoolwork	1	False	School	3.5	1	4	False
+2018-10-19T20:11:38.169961	1539994298.169961	3	still focused	still working on documentation	schoolwork	1	False	School	3	1	4	False

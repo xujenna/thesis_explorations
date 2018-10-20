@@ -1,0 +1,3054 @@
+
+[
+  {
+    "date": "2016-05-05 13:47:13",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "My second favorite airport terminal in the world, where security takes less than 3 minutes and strangers smile and make small talk as if that's acceptable behavior in NYC.",
+        "tones": [
+          {
+            "score": 0.636688,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I like to credit this to the charm of the art deco building (circa 1939), but it's most likely because only Delta flights to Chicago and D.C. are served here.",
+        "tones": [
+          {
+            "score": 0.631525,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "tldr; I only ever want to be flying with other Chicagoans.",
+        "tones": [
+          {
+            "score": 0.579436,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2016-01-29 09:59:30",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "If this pineapple can grow on a sidewalk snow glacier, we can get through this week (and cross the melt-water moat said glacier carved into the street).",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "#inspiring",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2016-01-23 13:15:25",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "My coffee table thinks I have adult ADHD; this snow day, I'm proving it wrong.",
+        "tones": [
+          {
+            "score": 0.864115,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "866 pages in 7 books down, just 1176 more to go.",
+        "tones": [
+          {
+            "score": 0.786991,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-11-16 22:55:14",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Chinese enclaves outside of China are way more Chinese than the motherland itself.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "See: The Cultural Revolution; this photo.",
+        "tones": [
+          {
+            "score": 0.669393,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-11-09 07:19:40",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "I failed so badly at eating with my hands that two waiters asked if I wanted utensils, and the third simply gave them to me.",
+        "tones": [
+          {
+            "score": 0.608659,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "In my defense, I grew up transferring food into my mouth with two sticks, so five for me is unmanageably excessive.",
+        "tones": [
+          {
+            "score": 0.548449,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-11-08 08:21:23",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Just as I became convinced of Malaysia's status as the most pedestrian-hostile country ever, this happens.",
+        "tones": [
+          {
+            "score": 0.615352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "#ihavethisthingwithfloors",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2015-11-07 08:31:11",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Monkeys are actually terrifying IRL.",
+        "tones": [
+          {
+            "score": 0.833424,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          },
+          {
+            "score": 0.961633,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "This one snatched a bottle right out of a guy's hand, bit a hole through the bottom, and chugged the whole damn thing as if the beverage wasn't the size of its entire torso.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "While the physics of this display was mystifying, we all knew who the dominant species was this morning.",
+        "tones": [
+          {
+            "score": 0.515576,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.660207,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-11-05 06:08:17",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "\"I've been collecting for three years.\"--",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Game-changing cabbie",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2015-10-15 16:14:12",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "I probably have 3 precious minutes of freedom from The Great Firewall of China, and I'm spending the first here to see if anyone is willing to mail me printouts of my new e-mails as they come in?",
+        "tones": [
+          {
+            "score": 0.749966,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.525007,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Kind of a serious question.",
+        "tones": [
+          {
+            "score": 0.822231,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.97735,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-07-18 15:23:25",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "The Valencia Movie Palace: one of the most zealously ornate theaters I've ever seen, built in late 1920s Queens.",
+        "tones": [
+          {
+            "score": 0.636952,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Today, it's maintained by the congregation that calls it home.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "Thanks to Sister Forbes for the tour!",
+        "tones": [
+          {
+            "score": 0.856661,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-07-01 20:07:31",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "I swear, all of Catania looks like this (with varying degrees of dirt and grime).",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Nothing but Baroque architecture for this 3,000 year old city.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2015-06-29 10:32:14",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Can you believe this blue jello water?",
+        "tones": [
+          {
+            "score": 0.91961,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Not pictured: six fools crammed into the single tuktuk that brought us there",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2015-06-26 13:19:29",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Sicilian gelato in a brioche bun, bigger than my face!",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Game.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "Changer.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2015-06-23 16:56:30",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "\"Many disasters have befallen the world, but few have brought posterity so much joy.\"",
+        "tones": [
+          {
+            "score": 0.696413,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "--Goethe on Pompeii, 1786 (feeling pretty joyful about this ancient countertop right now)",
+        "tones": [
+          {
+            "score": 0.817072,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.867767,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-06-22 17:43:04",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "\"Here I only want to live, forgetting myself and the world, and it is a strange experience for me to be in a society where everyone does nothing but enjoy himself.\"",
+        "tones": [
+          {
+            "score": 0.549284,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "--Goethe on Naples, 1786",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2015-06-21 13:56:41",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Bye, New York.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "I live here now.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2015-06-20 15:59:25",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Well, I had a picture of the beautiful Neapolitan coastline to share, but was honestly more impressed by the countenance on this tiny baby hawk, no bigger than my hand.",
+        "tones": [
+          {
+            "score": 0.88138,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "This guy's definitely growing up to be some lucky country's national bird.",
+        "tones": [
+          {
+            "score": 0.770434,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.75152,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-04-22 19:06:23",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "From the flowered straw hat to the Jesus pamphlet casually peeking up over her baby blue handbag, se\u00f1ora is utter perfection.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "And then I got to watch her eat tamales!",
+        "tones": [
+          {
+            "score": 0.868982,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "\ud83d\udc98",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2015-04-11 13:25:46",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "The frequency at which I'm surprised by buildings in familiar neighborhoods makes me wonder if I don't walk around with permanently down-cast eyes/ have the memory of a goldfish (okay, guilty on both counts).",
+        "tones": [
+          {
+            "score": 0.58393,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I (still) love this neon signage from 1885.",
+        "tones": [
+          {
+            "score": 0.8322,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-03-29 12:02:06",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "@ibellacc and I sharing the world's smallest food, last night at Laduree.",
+        "tones": [
+          {
+            "score": 0.543623,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "\"Thanks for your concern, waiter who is actually french, but we really will just have one.\"",
+        "tones": [
+          {
+            "score": 0.558917,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.664451,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-02-20 14:15:40",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Tourism at its best: when your local guide jumps out of a bus to bring you The Best Pastry Ever (Danish Semla).",
+        "tones": [
+          {
+            "score": 0.768323,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I love @gunvorsg",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-02-19 11:35:42",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "It was such a privilege to pay my respects at the memorial for Dan Uzan today, and in a small way contribute my own feelings of solidarity with the victims of the attack and the peaceful Danish people.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "#NotAfraid",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2015-02-17 16:19:43",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "The Esterh\u00e1zy torta: a 19th century Hungarian cake consisting of layers of cognac-spiced buttercream and almond macaroon dough.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Favorite Hungarian treat despite the bewildering dearth of chocolate.",
+        "tones": [
+          {
+            "score": 0.614441,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.724236,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-02-08 13:39:13",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "The \"chokladboll\" (bottom right) was traditionally known as the \"negerboll\" until the Swedes unofficially, yet all but collectively, renounced the name after the word \"neger\" (\"negro\" in English) gained racist connotations in contemporary times.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Also of note: it is delicious.",
+        "tones": [
+          {
+            "score": 0.894325,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-02-07 12:01:38",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Amendment: Heaven is actually right here (in the empty, third-floor, \u00e2g\u00e9 riche dining room of the City Church), right now (with a Swedish dessert buffet and widest tea selection I've seen outside of Flushing's Chinatown).",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Nothing complements a sugar hangover more than distant church bells and a Swedish gospel choir.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2015-02-07 05:21:13",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Heaven is merely semlor in a Swedish food hall.",
+        "tones": [
+          {
+            "score": 0.5538,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "(I've applied the dreamiest filter to emphasize this point.)",
+        "tones": [
+          {
+            "score": 0.724236,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-02-06 12:09:52",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Five museums, five landmarks, one farmer's market, one 4:30pm sunset later and I'm actually pretty sure that, at the current hour of 6pm, it's time for bed.",
+        "tones": [
+          {
+            "score": 0.570004,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "#icantmove",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2015-01-26 16:18:09",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Having some slight visibility issues from my (#NBD) office window.",
+        "tones": [
+          {
+            "score": 0.928936,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "#andthatsmycue",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2015-01-19 10:51:00",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Bloomingdale's placed lowly little freelancer me into an office because there were no cubicles available.",
+        "tones": [
+          {
+            "score": 0.532616,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Assistant actually says at some point, \"we can never get our shit together.\"",
+        "tones": [
+          {
+            "score": 0.595648,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.509368,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-01-16 12:48:05",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "I just ate a bagel.",
+        "tones": [
+          {
+            "score": 0.968123,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "It's been a long week.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "#causality",
+        "tones": [
+          {
+            "score": 0.997482,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2015-01-12 21:33:48",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Happy birthday to my best friend, @ionutgitan.",
+        "tones": [
+          {
+            "score": 0.94775,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Many more years (and just as many, if not more, cakes)!",
+        "tones": [
+          {
+            "score": 0.786991,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.653099,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2014-12-25 19:26:52",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Flew westward in pursuit of this lividly setting sun.",
+        "tones": [
+          {
+            "score": 0.69985,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "#nofilter needed.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-12-20 17:23:48",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "The one thing that makes me happier than these cookies, homemade by @ionutgitan's mother on the eve of their multi-legged international vacation, is the packaging they came in.",
+        "tones": [
+          {
+            "score": 0.898052,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "It's amazing and I never want to stop looking at it.",
+        "tones": [
+          {
+            "score": 0.830522,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.579436,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "#imserious",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-11-25 16:19:31",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "One more for @kc_makela :) This one was hand-drawn on a doorframe in the Menara Gardens.",
+        "tones": [
+          {
+            "score": 0.832822,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I just cannot fathom this place.",
+        "tones": [
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2014-11-24 17:52:27",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Holiday card collages by Yves Saint Laurent.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Jardin Majorelle, Marrakech.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-11-23 17:22:52",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "The Medina.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Marrakech, Morocco.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-11-23 13:12:00",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Is this a joke?",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "I can't get away from these people.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "#help",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2014-11-21 12:54:18",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "The Medina.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Tangier, Morocco.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-11-16 10:36:38",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "I would have Instagrammed the actual painting, but let's be real, this is way better.",
+        "tones": [
+          {
+            "score": 0.538386,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.849827,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Munch Museum, Oslo.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-11-15 14:42:35",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Gol Stave Church in Oslo, Norway.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "#vscocam",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-11-15 14:15:37",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Vigeland Sculpture Park in Oslo, Norway.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "#vscocam",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-10-25 17:13:57",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Shopping for my father's belated birthday is turning me into a total model airplane nerd.",
+        "tones": [
+          {
+            "score": 0.69847,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Nothing feels better than emptying a hobby shop of all their Chinese war planes!",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-08-08 13:17:26",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Unless you're female, colored, homosexual, low-income, illegally im/migrated, transgender, disabled, or anything other than an able-bodied straight white male.",
+        "tones": [
+          {
+            "score": 0.822231,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "And no, I haven't purchased stamps since 2012.",
+        "tones": [
+          {
+            "score": 0.581805,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "#PoliticalAngstFriday #Warren2016",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-08-05 19:45:55",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "This entire collection of Kate Spade branded office supplies will be mine in exactly... next paycheck.",
+        "tones": [
+          {
+            "score": 0.853626,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "#goldembosseverything",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-08-02 20:29:30",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Protip: before deciding to ride your bike over a pile of glass shards, ensure that the guy you're rolling with has built one with his bare hands.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "That way, you can sit around eating ice cream while he gets his hands dirty.",
+        "tones": [
+          {
+            "score": 0.647986,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2014-07-16 19:54:34",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "The sky's on fire, you guys.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "A little help here?",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-07-03 16:55:26",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "We biked here, somehow.",
+        "tones": [
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Now I'll never feel obligated to exert myself again.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-06-26 16:42:11",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Said by bossfriend: \"you should have been a doctor.\"",
+        "tones": [
+          {
+            "score": 0.724236,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Funny, my parents say the same thing.",
+        "tones": [
+          {
+            "score": 0.641866,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2014-06-21 17:18:45",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "View of where the lakefront should have been from atop the John Hancock.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "At 95 floors up, we were right above the fog this morning.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-06-19 19:16:07",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Homeward bound at LGA.",
+        "tones": [
+          {
+            "score": 0.920855,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I'm such a sucker for Terminal B.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-06-07 18:37:11",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Why would you paint over this?",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Image Heights, I'm ashamed to call you my pharmacy.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-06-06 18:41:36",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Our one-sentence obituaries.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "#vivaciousyouth",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-05-27 22:18:42",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "I'm playing backgammon.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "On a hand-drawn t-shirt board.",
+        "tones": [
+          {
+            "score": 0.665049,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "On top of a hand-made, imitation Noguchi table.",
+        "tones": [
+          {
+            "score": 0.745088,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "While listening to Tom Waits.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "#help",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2014-05-26 11:40:25",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Wishing I could live in this moment FOREVER.",
+        "tones": [
+          {
+            "score": 0.673183,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Hasta luego, Puerto Rico.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "(Regram from @ionuteyez)",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-05-25 17:59:29",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "In the rainforest!",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "El Yunque National Park.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-05-25 10:23:07",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Obligatory beach shot.",
+        "tones": [
+          {
+            "score": 0.558033,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Warm waters and the sweetest solitude.",
+        "tones": [
+          {
+            "score": 0.869288,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "Vieques, eres linda.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-05-23 23:04:52",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Where even are we?",
+        "tones": [
+          {
+            "score": 0.984352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "#puertorico",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-05-21 08:41:33",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Uh oh.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Which bad idea bear gave me my own pair of hair scissors?",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "#amazon",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-04-19 16:13:34",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Much deserved after a taxing day of bunny companionship.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "#lifeissuffering",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-03-16 11:42:17",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Mornings with Miss Vreeland.",
+        "tones": [
+          {
+            "score": 0.867999,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "\"V as in 'victory'!",
+        "tones": [
+          {
+            "score": 0.754857,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "V as in 'violent'!\"",
+        "tones": [
+          {
+            "score": 0.697213,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2014-03-07 10:06:02",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "@andy_omel, your new personal identity is impeccable!",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "That flo pink drives me wild.",
+        "tones": [
+          {
+            "score": 0.657075,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "I also take great comfort in knowing you've been around since 1927 (but thanks to your stylist, you don't look a day before 1950).",
+        "tones": [
+          {
+            "score": 0.808565,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "Please take me back as your minion; I have much to learn yet!",
+        "tones": [
+          {
+            "score": 0.589295,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2014-02-17 19:46:52",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "My thumbs hurt already.",
+        "tones": [
+          {
+            "score": 0.82831,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Only 37 left to go.",
+        "tones": [
+          {
+            "score": 0.565932,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2014-02-14 15:01:22",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Made this giant cookie and am now seriously questioning why I ever made not-giant cookies.",
+        "tones": [
+          {
+            "score": 0.781949,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Life lessons courtesy of @carlygmarie's birthday.",
+        "tones": [
+          {
+            "score": 0.792522,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.890188,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2014-02-13 10:39:07",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "This utterly mental chicken disguised as a squirrel was literally trying to break into my apartment today.",
+        "tones": [
+          {
+            "score": 0.638151,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I know it was the same one because all the other sane, non-defective squirrels are HIBERNATING AS GOD INTENDED.",
+        "tones": [
+          {
+            "score": 0.638987,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.840825,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2014-01-26 11:03:56",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "He doesn't return my calls, but it's only because our super is too busy fighting crime to fix the leaky refrigerator that's threatening to flood my kitchen.",
+        "tones": [
+          {
+            "score": 0.622976,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "There's another one in the series that starts: MORON!! WHO IS THE BRAID DEAD IDIOT LEAVING THE LAUNDRY CART IN THE ELEVATOR?",
+        "tones": [
+          {
+            "score": 0.76325,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "SHOULD WE LEAVE OUR CRAP IN YOUR APARTMENT?",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-01-19 13:02:03",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Bolkonski turns six months old today and is a baby no longer.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "How time flies!",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "See what he's been up to @thepricklypig",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-01-15 21:43:27",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Oh yeah?",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Well I used to be the president of an environmental club and voted \"most likely to save the rainforest\" in high school.",
+        "tones": [
+          {
+            "score": 0.659112,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "How about you stop using virgin fibers, e-mail me my monthly bill, and shut up, ConEdison?",
+        "tones": [
+          {
+            "score": 0.506763,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "You have nothing to be sanctimonious about.",
+        "tones": [
+          {
+            "score": 0.681699,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2014-01-12 19:32:13",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Ghetto spinach paneer + last week's couscous salad = casserole big enough to get me through the week/cheap enough to (symbolically) get me to Europe this summer.",
+        "tones": [
+          {
+            "score": 0.504503,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "#lifeisonlyworthlivingabroad",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2014-01-12 16:33:38",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Some kinda Sunday.",
+        "tones": [
+          {
+            "score": 0.691093,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.999739,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "They're playing Celine @csheppardknell",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-12-30 17:42:23",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Half-pound Reese's cup.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "How we do.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-12-28 12:44:10",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "This two-dollar, half-eaten, day-old monstrous marshmallow from City Bakery is still the game-changer it was last night.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "#compoundadjectives #wenttoartschool",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-12-25 19:49:09",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "This lady looks like Roseanne and is basically sliming the wings of my plane.",
+        "tones": [
+          {
+            "score": 0.681699,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I feel like I'm being punk'd by Nickelodeon and other uncool 90s references.",
+        "tones": [
+          {
+            "score": 0.715043,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.900799,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-12-20 12:20:02",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Utmost diligence on the last work day of 2013.",
+        "tones": [
+          {
+            "score": 0.663187,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Not pictured: donut holes and bellinis.",
+        "tones": [
+          {
+            "score": 0.536002,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-12-15 20:57:10",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "He spoke.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "And drank rapidly a glass of water.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-12-14 21:41:59",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Can't remember the last time I put pencil to paper, but I wanted to honor this little guy.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Thanks for the memories @bunnymama, he'll live on.",
+        "tones": [
+          {
+            "score": 0.855455,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-11-20 09:09:12",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Homemade raw lunch.",
+        "tones": [
+          {
+            "score": 0.63024,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Go ahead and judge me.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-11-18 09:59:33",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Today, I'm wearing Helmut Lang and feeling pretty good about existence (empircal evidence suggests this is a causal relationship).",
+        "tones": [
+          {
+            "score": 0.6991,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.817566,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.730335,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Unforeseen result is that every man in the world wants to wish me a good morning.",
+        "tones": [
+          {
+            "score": 0.747894,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.704642,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.595347,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "And here I thought black + designer clothing + queercut + Ani Difranco in the earholes = The Universal Fuck Off Formula.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-11-15 07:50:49",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Baby finally receives his title of Keeper of My Sanity (thanks Dr. Leli!).",
+        "tones": [
+          {
+            "score": 0.846912,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I wonder if he'll want my portion of this Thanksgiving's turkey.",
+        "tones": [
+          {
+            "score": 0.786991,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.703409,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-11-07 11:44:51",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Food for the infirm (in which I pretend like I'm still in Mexico).",
+        "tones": [
+          {
+            "score": 0.716301,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Hot chocolate and cookies will definitely cure me, right?",
+        "tones": [
+          {
+            "score": 0.611324,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.874372,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-10-30 13:18:48",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "HALLOWEEN IS TOO CRASS, WE HEREBY DECLARE IT CHRISTMAS.",
+        "tones": [
+          {
+            "score": 0.817056,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.955445,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "--Saks Fifth Ave.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-10-21 13:40:28",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "\"There lay certitude; there, in the daily round.",
+        "tones": [
+          {
+            "score": 0.504315,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.898327,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "All the rest hung on mere threads and trivial contingencies; you couldn't waste your time on it.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "The thing was to do your job as it should be done.\"",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-10-13 23:13:49",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Finally reunited with my little prince, who immediately fell asleep on my arm after posing for this picture.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Thank you @raptorivve for keeping him alive while I was away!",
+        "tones": [
+          {
+            "score": 0.769768,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.653099,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-10-12 19:27:35",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "And that's the story of how I got stuck in art school, doomed forever to be a suck on society's resources and never make back the money my parents saved for my education.",
+        "tones": [
+          {
+            "score": 0.512667,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.579436,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "HOW SPECIAL A SNOWFLAKE I AM INDEED.",
+        "tones": [
+          {
+            "score": 0.740733,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.560098,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.92125,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-10-06 19:02:25",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "\" I think it pisses God off if you walk by the color purple in a field somewhere and don't notice it.",
+        "tones": [
+          {
+            "score": 0.73241,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "People think pleasing God is all God cares about.",
+        "tones": [
+          {
+            "score": 0.660207,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.724236,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "But any fool living in the world can see it always trying to please us back.\u201d",
+        "tones": [
+          {
+            "score": 0.503798,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "\u2015\u00a0Alice Walker",
+        "tones": [
+          {
+            "score": 0.579367,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-09-29 21:43:37",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Pie+omelette=quiche.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "No recipe required.",
+        "tones": [
+          {
+            "score": 0.955445,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-09-10 08:59:36",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "\"Crumbs, you are the worst.",
+        "tones": [
+          {
+            "score": 0.595775,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Please stop existing.\"",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "--Everyone",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-09-08 19:06:04",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Hidden gem of dollar store wisdom.",
+        "tones": [
+          {
+            "score": 0.635897,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Someone needs to teach Trisonic about emergent behavior.",
+        "tones": [
+          {
+            "score": 0.961411,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-08-17 14:53:31",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "My fifth pint of blueberries in 36 hours.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Summer is best when it ends!",
+        "tones": [
+          {
+            "score": 0.903362,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-08-11 00:51:08",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Happy birthday @andy_omel !",
+        "tones": [
+          {
+            "score": 0.973517,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I know this is the only reason why you invited me to brunch.",
+        "tones": [
+          {
+            "score": 0.874319,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-08-03 16:06:13",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "\"Crito, we owe a rooster to Asclepius.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Please don't forget to pay the debt.\"",
+        "tones": [
+          {
+            "score": 0.801827,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-08-02 09:44:08",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "\"If properly dried and trimmed, New York style pizza could be used to make a box for Chicago-style pizza.\"",
+        "tones": [
+          {
+            "score": 0.527318,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.525007,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Yes, Ron Swanson.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "Yes.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "Thank you.",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-07-18 10:44:05",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Can't consummate a marriage without cake.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Vegan, raw, gluten-free cake.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-07-04 18:29:57",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Gettin my nails did like a Colombian.",
+        "tones": [
+          {
+            "score": 0.681699,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Please note the reading material.",
+        "tones": [
+          {
+            "score": 0.570745,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-07-04 18:27:10",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Finally found a vegetarian restaurant in Bogota.",
+        "tones": [
+          {
+            "score": 0.76831,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.895415,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "You just kind of show up and eat whatever three-course meal the women have cooked for the day.",
+        "tones": [
+          {
+            "score": 0.541163,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "Everything is made from locally-sourced produce, and their juice is UNSWEETENED.",
+        "tones": [
+          {
+            "score": 0.653099,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "You guys, never have I been so happy to see vegetables on my plate.",
+        "tones": [
+          {
+            "score": 0.816485,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-06-29 08:42:53",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Primero cocina en Bogota: typical Colombian fare (made vegetarian upon request) of arepas, fried egg, fried plantains, avocado, and --por supuesto-- rice and beans.",
+        "tones": [
+          {
+            "score": 0.524974,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "So good to know locals when you're a dumb gringo.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-06-22 11:37:55",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Never knew ya, Old New York, yet miss you I still do.",
+        "tones": [
+          {
+            "score": 0.755232,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.543112,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "There's nothing favorable nor novel about the Anthropologie this sign belies.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-06-17 11:47:48",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "They like me!",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "They really like me!",
+        "tones": [
+          {
+            "score": 0.76533,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.920855,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-06-08 16:56:22",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Took a garden tour of Jackson Heights today and learned that Scrabble was invented here.",
+        "tones": [
+          {
+            "score": 0.756524,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.532616,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "#qnzmotherfuckers #betterrecognize",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-06-06 09:02:59",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Life, and all its trivial considerations; it took me all too long to realize that\u00a0considerations were mere trifles, and that these preoccupations were for the myopic.",
+        "tones": [
+          {
+            "score": 0.508755,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.763553,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "These were what kept me spinning in the same damn spot all these years.",
+        "tones": [
+          {
+            "score": 0.751512,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "It took a chemical intervention for me to realize this, to realize that the mind is a petty and limiting thing.",
+        "tones": [
+          {
+            "score": 0.664269,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "It was my own damn brain that was responsible for my unhappiness.",
+        "tones": [
+          {
+            "score": 0.691204,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "So don't trust it.",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "Don't trust its interminable fret.",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "In short: don't look, just leap.",
+        "tones": [
+          {
+            "score": 0.944551,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.968123,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "#manicmornings #helpmypersonalityissplitting",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-06-05 09:00:49",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Am I utterly sadistic for loving this little dead plant of mine?",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "One of the many reasons why I was never a babysitter.",
+        "tones": [
+          {
+            "score": 0.579436,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.653099,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-06-02 20:04:11",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "And this is why I haven't finished a book since HP7.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "#umichdropout #notactuallyliterate",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-05-31 10:52:39",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Of course Renoir would require forty years to discover something so obvious.",
+        "tones": [
+          {
+            "score": 0.862286,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.913755,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "#UGH",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-05-30 08:33:45",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Fun fact: when an animal gets all dishelved like this, it means their bodies are no longer capable of producing the oils necessary for a healthy coat.",
+        "tones": [
+          {
+            "score": 0.824015,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.829999,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.724236,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Death is imminent for this little guy.",
+        "tones": [
+          {
+            "score": 0.712135,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "#themoreyouknow #theworseyoufeelaboutlife",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-05-29 12:00:36",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Type made out of boobs.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "Thanks GQ.",
+        "tones": [
+          {
+            "score": 0.585654,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-05-10 20:32:03",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Class.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "#spdgala",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-05-10 19:22:56",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Being wined and dined.",
+        "tones": [
+          {
+            "score": 0.718995,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Like a boss.",
+        "tones": [
+          {
+            "score": 0.955445,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-05-05 19:25:11",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "It was also blasting Sinatra.",
+        "tones": [
+          {
+            "score": 0.591133,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "God bless NY.",
+        "tones": [
+          {
+            "score": 0.904189,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-04-23 22:40:34",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "That one can become ill from consuming too much chocolate is proof that there is no God/reason to live.",
+        "tones": [
+          {
+            "score": 0.560614,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "What else am I supposed to eat for dinner?",
+        "tones": [
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2013-02-23 10:43:53",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Things are okay in this moment.",
+        "tones": [
+          {
+            "score": 0.566152,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "@ionuteyez",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-01-17 12:58:30",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Oh, just having lunch with Nina Garcia.",
+        "tones": [
+          {
+            "score": 0.91961,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "NBD",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2013-01-02 09:02:48",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Did my mirror really just break on the morning of my first day at Marie Claire?",
+        "tones": [
+          {
+            "score": 0.506763,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.615352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "#fuckfuckfuckfuckfuck",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2012-12-25 19:59:20",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "My boys.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "#gobulls #9 #longliveMJ",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2012-12-14 20:15:13",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "SO MANLY.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "And so many lentils.",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2012-12-03 19:03:00",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Donated another 17 inches.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "#sanctimonious",
+        "tones": []
+      }
+    ]
+  },
+  {
+    "date": "2012-11-30 15:45:56",
+    "tones": [
+      {
+        "sentence_id": 0,
+        "text": "Flowers for no reason?",
+        "tones": [
+          {
+            "score": 0.795307,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.920855,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "One of the innumerable reasons why Dawn Lei is veritable love of my life.",
+        "tones": [
+          {
+            "score": 0.872704,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.751512,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.560098,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "A most worthy subject for my first instagram ever (hi, 21st century!)",
+        "tones": []
+      }
+    ]
+  }
+]
