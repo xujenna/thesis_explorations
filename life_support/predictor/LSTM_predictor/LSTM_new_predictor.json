@@ -1354,5 +1354,32 @@
     "actual_stress": 1.0,
     "actual_fatigue": 4.0,
     "response_time": "2018-10-19T20:11:38.169961"
+  },
+  {
+    "predictions": [
+      {
+        "LSTM_mood_prediction": 3.1584312915802,
+        "LSTM_stress_prediction": 2.6936802864074707,
+        "LSTM_fatigue_prediction": 3.5582358837127686,
+        "timestamp": 1539996579.381695
+      },
+      {
+        "LSTM_mood_prediction": 3.233476400375366,
+        "LSTM_stress_prediction": 2.768261671066284,
+        "LSTM_fatigue_prediction": 3.6301021575927734,
+        "timestamp": 1539997479.815893
+      },
+      {
+        "LSTM_mood_prediction": 3.843538761138916,
+        "LSTM_stress_prediction": 2.928649663925171,
+        "LSTM_fatigue_prediction": 3.6410748958587646,
+        "timestamp": 1539998380.341559
+      }
+    ],
+    "mood_index": 1090,
+    "actual_mood": 4.5,
+    "actual_stress": 1.5,
+    "actual_fatigue": 4.0,
+    "response_time": "2018-10-19T21:19:11.859988"
   }
 ]

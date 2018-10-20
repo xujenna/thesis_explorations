@@ -1,36 +1,27 @@
 import json
 import csv
+
+import numpy as np
+
 import pandas as pd
+from pandas import concat
 from pandas import DataFrame, Series
+
 import dateutil.parser
 from dateutil.tz import gettz
 import datetime
 import pytz
-from functools import reduce
 import time
+
+from functools import reduce
 import codecs
 import os
+
 from sklearn.externals import joblib
-from sklearn import ensemble
-
-from keras.models import load_model
-
-import numpy as np
-from sklearn.metrics import mean_squared_error
-from sklearn.metrics import r2_score
-
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
-
 from sklearn.preprocessing import MinMaxScaler
 
-from pandas import concat
-
-from keras.models import Sequential
-from keras.layers import LSTM 
-from keras.layers import Dense
-from keras.optimizers import Adam
-import keras.backend as K
+from keras.models import load_model
 
 mood_model = load_model('LSTM_mood_predictor_no_reporter.h5')
 fatigue_model = load_model('LSTM_fatigue_predictor_no_reporter.h5')
@@ -80,6 +71,7 @@ tempRow = [[0] * len(finalFeaturesList)]
 df = pd.DataFrame(tempRow, columns=finalFeaturesList)
 df['mood'] = responsesDF['mood'].iloc[-1]
 df['fatigue'] = responsesDF['fatigue'].iloc[-1]
+df['stress'] = responsesDF['stress'].iloc[-1]
 
 
 prev_df = pd.DataFrame()
@@ -113,7 +105,14 @@ def predictor(df, label):
 
     # make a  prediction
     test_X = test_X.reshape((test_X.shape[0], 1, test_X.shape[1]))
-    yhat = DataFrame(mood_model.predict(test_X))
+
+    if(label == "mood"):
+        yhat = DataFrame(mood_model.predict(test_X))
+    if(label == "fatigue"):
+        yhat = DataFrame(fatigue_model.predict(test_X))
+    if(label == "stress"):
+        yhat = DataFrame(stress_model.predict(test_X))
+
     test_X = DataFrame(test_X.reshape((test_X.shape[0], test_X.shape[2])))
     # invert scaling for forecast
     inv_yhat = concat((yhat, test_X.iloc[:, 1:]), axis=1)

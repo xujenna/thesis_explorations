@@ -4384,5 +4384,28 @@
     "actual_mood": 3.0,
     "actual_morale": 3.0,
     "response_time": "2018-10-19T20:11:38.169961"
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 3.218832889359347,
+        "morale_prediction": 2.9525584415701114,
+        "timestamp": 1539996574.862375
+      },
+      {
+        "mood_prediction": 3.085499306919545,
+        "morale_prediction": 2.822894583041173,
+        "timestamp": 1539997475.499713
+      },
+      {
+        "mood_prediction": 2.9820223450613828,
+        "morale_prediction": 2.826671881265199,
+        "timestamp": 1539998376.128044
+      }
+    ],
+    "mood_index": 1090,
+    "actual_mood": 4.5,
+    "actual_morale": 2.5,
+    "response_time": "2018-10-19T21:19:11.859988"
   }
 ]
