@@ -307,16 +307,40 @@ hr {
     text-indent: 0;
 }
 
-/*  .description p {
-    margin:0;
-    padding:0;
-  }*/
+#textAnalysis-description-key{
+  min-width:145px;
+}
 
   .description a {
     color:black;
   }
 
 
+#keystroke-description{
+  margin-bottom:0%;
+  margin-right:10%;
+  margin-left:16%;
+  display:flex;
+  align-items:center;
+  margin-top:100px;
+}
+.keystroke-description-hed {
+    display:inline-flex;
+    align-items:center;
+    text-align:left;
+    width:75%;
+    margin-right:5%;
+    min-width: 180px;
+  }
+
+#keystroke-description-key{
+  min-width:145px;
+}
+
+#keystroke-description-key p{
+  margin:0;
+  padding:0;
+}
 
   .alt-axis {
     font-family: europa, sans-serif;
@@ -614,7 +638,7 @@ color:lightgrey;
     padding: 0% 5% 0% 8%;
   }
 
-   #correlation-description-body{
+  #correlation-description-body{
     width:50%;
   }
 }
@@ -642,7 +666,7 @@ color:lightgrey;
   <link rel="stylesheet" href="https://use.typekit.net/fao6qlb.css">
 
   <div id="intro-container">
-    <div id="hero-img"><img src="affectiva/photos/composite4.jpg"></div>
+    <div id="hero-img"><img src="_viz/final_dashboard/composite4.jpg"></div>
     <div id="hed">
     😐😐😐😱
     <h1>Speak, (Random Access) Memory</h1>
@@ -694,7 +718,7 @@ color:lightgrey;
       <h2>Sentiment Keylogger</h2>
       </div>
       <div class="description-body">
-      As an attempt to automatically measure mood, I created a sentiment analysis keylogger for my computer. Written in python, the keylogger collects any coherent phrase I type, and sends the log every hour to IBM's Tone Analyzer API, which returns sentiment scores for each sentence; below, only scores over 50% are visualized. The logs themselves have also been redacted, but the length of the analyzed sentence is encoded in each circle's diameter. <p>I've relatively recently added keystroke dynamics and simple text analysis to this keylogger, which I hope to visualize soon.</p>
+      As an attempt to automatically measure mood, I created a sentiment analysis keylogger for my computer. Written in python, the keylogger collects any coherent phrase I type, and sends the log every hour to IBM's Tone Analyzer API, which returns sentiment scores for each sentence; below, only scores over 50% are visualized. The logs themselves have also been redacted, but the length of the analyzed sentence is encoded in each circle's diameter.</p>
       </div>
       <div class="description-key">
         <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span>Joy</p>
@@ -709,6 +733,35 @@ color:lightgrey;
     <svg id="keylogger"></svg>
   </div>
 
+  <div class="container" id="textAnalysis-container">
+    <div class="description">
+      <div class="description-hed">
+      <h2>Digital Phenotyping</h2>
+      </div>
+      <div class="description-body">
+      When depressed, a person is more likely to make spelling mistakes, use a smaller vocabulary, and generally say less; their psychomotor skills are normally impaired. In order to capture these metrics, I have added NLTK to my foregoing keylogger in order to count total and unique words. Keystroke dynamics are also calculated as an attempt to measure my psychomotor skills.</p>
+      </div>
+      <div class="description-key" id="textAnalysis-description-key">
+        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span>Character Count</p>
+        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span>Word Count</p>
+        <p><span style="color:rgb( 0, 255, 127)">&block; &nbsp;</span>Unique Word Count</p>
+        <p><span style="color:rgb(0, 0, 225)">&block; &nbsp;</span>Backspace Count</p>
+    </div>
+    </div>
+    <svg id="textAnalysis"></svg>
+
+    <div id="keystroke-description">
+        <div class="keystroke-description-hed">
+        <p class="alt-axis">KEYSTROKE DYNAMICS</p>
+        </div>
+    <div class="description-key" id="keystroke-description-key">
+      <p><span style="color:rgb(0, 0, 225)">&block; &nbsp;</span>Average Flight Time</p>
+      <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span>Average Dwell Time</p>
+  </div>
+  </div>
+    <svg id="keystrokedynamics"></svg>
+  </div>
+
   <div class="container" id="tabCounter-container">
     <div class="description">
       <div class="description-hed">
@@ -717,10 +770,12 @@ color:lightgrey;
       <div class="description-body">
         I'm an incorrigible tab hoarder, but if I'm feeling especially restless or unmotivated, I'm even more likely to open new—or activate existing—tabs but not actually consume their content, oftentimes leaving them open indefinitely. Inspired by the relationship between my mental states and my browser activity, I created a Chrome Extension that tracks tabs as they're created and activated, their corresponding favicons, and the final hourly count of tabs and windows left open.
       </div>
-      <div class="description-key">
-        <p><span style="color:rgb(0, 255, 127)">&block; &nbsp;</span>Created</p>
-        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span>Activated</p>
-        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span>Final Count</p>
+      <div class="description-key" id="textAnalysis-description-key">
+        <p><span style="color:rgb(0, 225, 225)">&block; &nbsp;</span>Tabs Created</p>
+        <p><span style="color:rgb(245, 205, 0)">&block; &nbsp;</span>Tabs Activated</p>
+        <p><span style="color:rgb(255, 0, 255)">&block; &nbsp;</span>Final Tab Count</p>
+        <p><span style="color:rgb(0, 0, 225)">&block; &nbsp;</span>Windows Created</p>
+
     </div>
     </div>
     <svg id="tabCounter"></svg>
@@ -815,7 +870,6 @@ color:lightgrey;
 
 <div id="footer">
   An ongoing project by <a href="http://www.xujenna.com" target="new">Jenna Xu</a>, started during the Spring 2018 semester at NYU ITP. Featured in: Mozilla's <a href="https://foundation.mozilla.org/opportunity/artists-open-web/" target="new"><i>Artists Open Web</i></a> and <a href="https://mozillafestival.org/" target="new">Mozfest 2018</a>; NYC Media Lab's <a href="https://www.summit.nycmedialab.org/" target="new">2018 Summit</a>; <a href="https://www.nyu.edu/life/information-technology/about-nyu-it/key-projects-and-initiatives/nyu-technology-summit.html" target="new">NYU's Tech Summit 2018</a>; <a href="https://itp.nyu.edu/adjacent/issue-3/" target="new">The Adjacent Conference</a>; and <a href="https://www.cityu.edu.hk/iscma/" target="new">Art Machines: International Symposium on Computational Media Art</a>.</div>
-
 <script>
 
 var margin = {top: 50, right: 40, bottom: 50, left: 40};
@@ -1107,11 +1161,7 @@ contextChart.selectAll(".mood-bars")
   .attr("id", function(d){
     var currentDate = new Date(parseInt(d.unix_time * 1000))
     var currentMonth = currentDate.getMonth()
-    if (month[currentMonth] == currentID) {
-      console.log("skip")
-    }
-    else {
-      currentID = month[currentMonth];
+    if (currentID = month[currentMonth]){
       return currentID;
     }
   })
@@ -1295,10 +1345,22 @@ function brushed() {
   expressionsChart.selectAll(".attentionLines").attr("x1", function(d){ return xScale(d.time);}).attr("x2", function(d) {return xScale(d.time);});
   expressionsChart.selectAll(".valenceLines").attr("x1", function(d){ return xScale(d.time);}).attr("x2", function(d) {return xScale(d.time);});
   emojiChart.selectAll(".emoji").attr("transform", function(d) {return "translate(" + (xScale(d.time)-7) + ")";});
-  tabCounterChart.select(".tabLine").attr("d", tabLine);
-  // tabCounterChart.select(".windowLine").attr("d", windowLine);
- tabCounterChart.selectAll("rect").attr("x", function(d) { return xScale(dataset[d].timestamp); }).attr("width", (xScale(new Date("Sun Apr 29 2018 02:00:00 GMT-0500 (CDT)")) - xScale( new Date("Sun Apr 29 2018 01:00:00 GMT-0500 (CDT)"))));  tabCounterChart.selectAll(".tabCircle").attr("cx", function(d) {return xScale(dataset[d].timestamp)});
-  tabCounterChart.selectAll(".windowCircle").attr("cx", function(d) {return xScale(dataset[d].timestamp)});
+
+
+tabCounterChart.selectAll(".created-circle").attr("cx", function(d) { return xScale(dataset[d].timestamp); }).attr("cy", function(d) { return yScaleTabCounter(dataset[d].tabs_activated + dataset[d].tabs_created + dataset[d].current_tabCount); })
+
+ tabCounterChart.selectAll(".activated-circle").attr("cx", function(d) { return xScale(dataset[d].timestamp); }).attr("cy", function(d){ return yScaleTabCounter(dataset[d].tabs_activated + dataset[d].tabs_created + dataset[d].current_tabCount); });
+
+ tabCounterChart.selectAll(".currentCount-circle").attr("cx", function(d) { return xScale(dataset[d].timestamp); }).attr("cy", function(d){ return yScaleTabCounter(dataset[d].tabs_activated + dataset[d].tabs_created + dataset[d].current_tabCount); })
+
+ tabCounterChart.selectAll(".currentWindowCount-circle").attr("cx", function(d) { return xScale(dataset[d].timestamp); }).attr("cy", function(d){ return yScaleTabCounter(dataset[d].tabs_activated + dataset[d].tabs_created + dataset[d].current_tabCount); })
+
+  textAnalysisChart.selectAll("rect").attr("x", function(d) { return xScale(d.time);}).attr("width", (xScale(new Date("Sun Apr 29 2018 02:00:00 GMT-0500 (CDT)")) - xScale( new Date("Sun Apr 29 2018 01:00:00 GMT-0500 (CDT)"))));  
+  textAnalysisChart.selectAll(".charCount-lines").attr("x1", function(d){ return xScale(d.time) + (xScale(new Date("Sun Apr 29 2018 02:00:00 GMT-0500 (CDT)")) - xScale( new Date("Sun Apr 29 2018 01:00:00 GMT-0500 (CDT)"))) / 2;}).attr("x2", function(d) {return xScale(d.time)+ (xScale(new Date("Sun Apr 29 2018 02:00:00 GMT-0500 (CDT)")) - xScale( new Date("Sun Apr 29 2018 01:00:00 GMT-0500 (CDT)"))) / 2;})
+  textAnalysisChart.selectAll(".backspace-lines").attr("x1", function(d){ return xScale(d.time);}).attr("x2", function(d) {return xScale(d.time)+ (xScale(new Date("Sun Apr 29 2018 02:00:00 GMT-0500 (CDT)")) - xScale( new Date("Sun Apr 29 2018 01:00:00 GMT-0500 (CDT)")));});
+  keystrokesChart.selectAll(".dwell-line").attr("d", keystrokes_avgDwell_Line)
+  keystrokesChart.selectAll(".flight-line").attr("d", keystrokes_avgFlight_Line)
+
   body.selectAll(".axis--x").call(xAxis);
 }
 
@@ -1309,10 +1371,10 @@ let scrub = document.getElementById("context-container")
 window.addEventListener("scroll", function(){
   var targetElement = document.getElementById("tabCounter-container");
 
-  if(window.scrollY > (targetElement.offsetTop + 100)){
+  if(window.scrollY > (targetElement.offsetTop)){
     scrub.style.position = "inherit"
   }
-  else if(window.scrollY <= (targetElement.offsetTop + 100)){
+  else if(window.scrollY <= (targetElement.offsetTop)){
     scrub.style.position = "fixed"
 
   }
@@ -1328,13 +1390,47 @@ var keyloggerChart = keyloggerSVG.append("g")
         .attr("class", "keyloggerG")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+var textAnalysisHeight = height + 50;
+var textAnalysisSVG = d3.select("#textAnalysis")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", textAnalysisHeight + margin.top + margin.bottom)
+var textAnalysisChart = textAnalysisSVG.append("g")
+        .attr("class", "textAnalysisG")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var keystrokesHeight = height / 2.5;
+var keystrokesSVG = d3.select("#keystrokedynamics")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", keystrokesHeight + margin.top)
+var keystrokesChart = keystrokesSVG.append("g")
+        .attr("class", "keystrokesG")
+        .attr("transform", "translate(" + margin.left + ",10)");
+
 
 var yScaleKeylogger = d3.scaleLinear()
   .range([height,0]);
   // .domain([0.45,1]);
 var yAxisKeylogger = d3.axisLeft(yScaleKeylogger).tickSize(-width).ticks(4).tickPadding(10).tickSizeOuter(0).tickFormat(function(d) { return d*100 + "%"; });
 
+var yScaleTextAnalysis = d3.scaleLinear()
+  .range([textAnalysisHeight,0]);
+  // .domain([0.45,1]);
+var yAxisTextAnalysis = d3.axisLeft(yScaleTextAnalysis).tickSize(-width).ticks(4).tickPadding(10).tickSizeOuter(0).tickFormat(function(d) { return d});
 
+var yScaleKeystrokes = d3.scaleLinear()
+  .range([keystrokesHeight,0]);
+  // .domain([0.45,1]);
+var yAxisKeystrokes = d3.axisLeft(yScaleKeystrokes).tickSize(-width).ticks(4).tickPadding(10).tickSizeOuter(0).tickFormat(function(d) { return d});
+
+var keystrokes_avgDwell_Line = d3.line()
+  .defined(function(d){return d.avg_dwelltime!=null})
+    .x(function(d) {return xScale(d.time);})
+    .y(function(d){return yScaleKeystrokes(d.avg_dwelltime);});
+
+var keystrokes_avgFlight_Line = d3.line()
+  .defined(function(d){return d.avg_flighttime!=null})
+    .x(function(d) {return xScale(d.time);})
+    .y(function(d){return yScaleKeystrokes(d.avg_flighttime);});
 
   d3.json("keylogger/logs/log_new.json", ready);
 
@@ -1356,8 +1452,49 @@ var yAxisKeylogger = d3.axisLeft(yScaleKeylogger).tickSize(-width).ticks(4).tick
   var fear = [];
   var tentative = [];
 
-  data.filter(function(d) {
+var textAnalysisData = [];
+var keystrokesData = [];
+
+  data.filter(function(d,i) {
     var holder;
+    
+    if(d.word_count){
+      var textAnalysisHolder = {};
+      textAnalysisHolder['time'] = d.time;
+      textAnalysisHolder['word_count'] = d.word_count;
+      textAnalysisHolder['uniqueword_count'] = d.uniqueword_count;
+      textAnalysisHolder['char_count'] = d.char_count;
+      textAnalysisHolder['backspace_count'] = d.backspace_count;
+      textAnalysisHolder['avg_dwelltime'] = d.avg_dwelltime;
+      textAnalysisHolder['avg_flighttime'] = d.avg_flighttime;
+      textAnalysisData.push(textAnalysisHolder)
+      textAnalysisHolder = {};
+    }
+
+    if(d.avg_dwelltime){
+      var keystrokesHolder = {};
+      keystrokesHolder['time'] = d.time;
+      keystrokesHolder['avg_dwelltime'] = d.avg_dwelltime;
+      keystrokesHolder['avg_flighttime'] = d.avg_flighttime;
+      keystrokesData.push(keystrokesHolder)
+      keystrokesHolder = {};
+
+      if(i < data.length - 1) {
+        var timee = data[i+1].time;
+
+      if(d.time < (timee - 24000000)) {
+        var nullTime = new Date(timee - 24000000);
+        var nullItems = {};
+
+        nullItems["time"] = nullTime;
+        nullItems["avg_dwelltime"] = null;
+
+        keystrokesData.push(nullItems);
+      }
+      }
+    }
+
+
     for(var i = 0; i < d.sentences_tone.length; i++) {
       if(d.sentences_tone[i].tones.length > 0) {
       for(var j = 0; j < d.sentences_tone[i].tones.length; j++) {
@@ -1422,8 +1559,6 @@ var yAxisKeylogger = d3.axisLeft(yScaleKeylogger).tickSize(-width).ticks(4).tick
     }
   });
 
-
-
   var tip = d3.tip()
     .attr("class", "tooltip")
     .offset([-20,-5])
@@ -1431,10 +1566,21 @@ var yAxisKeylogger = d3.axisLeft(yScaleKeylogger).tickSize(-width).ticks(4).tick
     return "<b>" + d.tone_name + "</b>: " + d.sentence;
     });
 
-  // xScale.domain(d3.extent(newResponses, function(d) {return d.time;}));
+  var textAnalyzerTip = d3.tip()
+  .attr("class", "tooltip")
+  .offset([-20,-5])
+  .html(function(d,i) {
+  return "<b>Character Count</b>: " + d.char_count + "<br><b>Word Count</b>: " + d.word_count + "<br><b>Unique Word Count</b>: " + d.uniqueword_count + "<br><b>Backspace Count</b>: " + d.backspace_count;
+  });
+
+
   yScaleKeylogger.domain([0.45,1]);
-  // xScale2.domain(xScale.domain());
-  // yScale2.domain(yScale.domain());
+
+  // var charCount_max = d3.max(textAnalysisData, function(d){return d['char_count']})
+  yScaleTextAnalysis.domain([0,1200]);
+
+  // var flightMax = d3.max(textAnalysisData, function(d){return d['avg_flighttime']})
+  yScaleKeystrokes.domain([0,0.7]);
 
   keyloggerChart.append("g")
     .attr("class", "axis axis--x")
@@ -1445,8 +1591,37 @@ var yAxisKeylogger = d3.axisLeft(yScaleKeylogger).tickSize(-width).ticks(4).tick
   .attr("class", "axis axis--y")
     .call(yAxisKeylogger);
 
+  textAnalysisChart.append("g")
+    .attr("class", "axis axis--x")
+    .attr("transform","translate(0, "+(textAnalysisHeight)+")")
+    .call(xAxis);
 
+  textAnalysisChart.append("g")
+  .attr("class", "axis axis--y")
+    .call(yAxisTextAnalysis);
 
+  // keystrokesChart.append("text")
+  //   .attr("class", "alt-axis")
+  //   .attr("y", -20)
+  //   .attr("x", 0)
+  //   .text("KEYSTROKE DYNAMICS");
+
+  // keystrokesChart.append("text")
+  //   .attr("class", "description-key")
+  //   .attr("y", -20)
+  //   .attr("x", 50)
+  //   .text("&block; &nbsp; Average Flight Time");
+
+  // keystrokesChart.append("g")
+  //   .attr("class", "axis axis--x")
+  //   .attr("transform","translate(0, "+(keystrokesHeight)+")")
+  //   .call(xAxis);
+
+ var keystroke_yaxis = keystrokesChart.append("g")
+     .attr("class", "axis axis--y")
+    .call(yAxisKeystrokes);
+
+keystroke_yaxis.select(".domain").remove();
 
     var joyCircles = keyloggerChart.selectAll(".joy-circle")
       .data(joy)
@@ -1549,19 +1724,127 @@ var yAxisKeylogger = d3.axisLeft(yScaleKeylogger).tickSize(-width).ticks(4).tick
       .attr("fill", "thistle");
 
 
+var textAnalysisMarkerData = [
+{ id: 0, name: 'circle', path: 'M 0, 0  m -5, 0  a 5,5 0 1,0 10,0  a 5,5 0 1,0 -10,0', viewbox: '-6 -6 12 12' }
+]
 
-    keyloggerSVG.selectAll("circle")
-    .call(tip)
+var textAnalysisDefs = textAnalysisSVG.append('svg:defs')
 
-    .on("mouseover", function(d) {
-      tip.show(d);
-    })
+var textAnalysisMarker = textAnalysisDefs.selectAll('wordCount_marker')
+  .data(textAnalysisMarkerData)
+  .enter()
+  .append('svg:marker')
+    .attr('id', "wordCount_marker")
+    .attr('markerHeight', 5)
+    .attr('markerWidth', 5)
+    .attr('markerUnits', 'strokeWidth')
+    .attr('orient', 'auto')
+    .attr('refX', 0)
+    .attr('refY', 0)
+    .attr('viewBox', '-1 -5 2 10')
+    .append('svg:circle')
+    .attr("r", 2)
+    .attr("fill", "fuchsia")
+    .attr("fill-opacity", 0.75);
 
-    .on("mouseout", function(d) {
-      tip.hide(d);
-    })
+
+var textAnalysisPixelInterval = xScale(new Date("Sun Apr 29 2018 02:00:00 GMT-0500 (CDT)")) - xScale( new Date("Sun Apr 29 2018 01:00:00 GMT-0500 (CDT)"));
 
 
+textAnalysisChart.selectAll(".wordCount-bar")
+     .data(textAnalysisData)
+   .enter().append("rect")
+     .attr("class", "wordCount-bar")
+     .style("fill", "gold")
+     .style("opacity", 0.6)
+     .attr("x", function(d) { return xScale(d.time); })
+     .attr("width", textAnalysisPixelInterval)
+     .attr("y", function(d) { return yScaleTextAnalysis(d.word_count); })
+     .attr("height", function(d) { return textAnalysisHeight - yScaleTextAnalysis(d.word_count); });
+
+textAnalysisChart.selectAll(".uniqueWordCount-bar")
+   .data(textAnalysisData)
+ .enter().append("rect")
+   .attr("class", "uniqueWordCount-bar")
+   .style("fill", "cyan")
+   .style("opacity", 0.5)
+   .attr("x", function(d) { return xScale(d.time); })
+   .attr("width", textAnalysisPixelInterval)
+   .attr("y", function(d) { return yScaleTextAnalysis(d.uniqueword_count); })
+   .attr("height", function(d) { return textAnalysisHeight - yScaleTextAnalysis(d.uniqueword_count); });
+
+  textAnalysisChart.selectAll(".charCount-lines")
+  .data(textAnalysisData)
+  .enter()
+  .append("line")
+  .attr("class", "charCount-lines")
+  .attr("stroke", "fuchsia")
+  .attr("stroke-width", 2.25)
+  .attr("stroke-opacity", 0.5)
+  .attr("x1", function(d){ return xScale(d.time) + textAnalysisPixelInterval / 2;})
+  .attr("x2", function(d) {return xScale(d.time)+ textAnalysisPixelInterval / 2;})
+  .attr("y1", textAnalysisHeight)
+  .attr("y2", function(d) {return yScaleTextAnalysis(d.char_count)})
+  .attr('marker-end', 'url(#wordCount_marker)');
+
+  textAnalysisChart.selectAll(".backspace-lines")
+  .data(textAnalysisData)
+  .enter()
+  .append("line")
+  .attr("class", "backspace-lines")
+  .attr("stroke", "blue")
+  .attr("stroke-width", 2.25)
+  .attr("stroke-opacity", 0.7)
+  .attr("x1", function(d){ return xScale(d.time);})
+  .attr("x2", function(d) {return xScale(d.time)+ textAnalysisPixelInterval;})
+  .attr("y1", function(d) {return yScaleTextAnalysis(d.backspace_count)})
+  .attr("y2", function(d) {return yScaleTextAnalysis(d.backspace_count)});
+
+
+keystrokesChart.append("path")
+  .datum(keystrokesData)
+  .attr("d", keystrokes_avgDwell_Line)
+  .attr("stroke", "magenta")
+  .attr("fill", "none")
+  .attr("opacity", 0.75)
+  .attr("stroke-width", 2)
+  .attr("class", "dwell-line");
+keystrokesChart.append("path")
+.datum(keystrokesData)
+  .attr("d", keystrokes_avgFlight_Line)
+  .attr("stroke", "blue")
+  .attr("fill", "none")
+  .attr("opacity", 0.75)
+  .attr("stroke-width", 2)
+  .attr("class", "flight-line");
+
+
+  keyloggerChart.selectAll("circle")
+  .call(tip)
+  .on("mouseover", function(d) {
+    tip.show(d);
+  })
+  .on("mouseout", function(d) {
+    tip.hide(d);
+  })
+
+  textAnalysisChart.selectAll("rect")
+  .call(textAnalyzerTip)
+  .on("mouseover", function(d) {
+    textAnalyzerTip.show(d);
+  })
+  .on("mouseout", function(d){
+    textAnalyzerTip.hide(d);
+  })
+
+  textAnalysisChart.selectAll("line")
+  .call(textAnalyzerTip)
+  .on("mouseover", function(d) {
+    textAnalyzerTip.show(d);
+  })
+  .on("mouseout", function(d){
+    textAnalyzerTip.hide(d);
+  })
 }
   </script>
 
@@ -1918,298 +2201,215 @@ affectiva.forEach(function(d){
 
 <script>
 
-var dataset; 
-// var tabCounterChartHeight = 800;
-// var tabCounterHeight = 500;
-// var faviconHeight = 300;
-
-var tabCounterSVG = d3.select("#tabCounter")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom);
-var tabCounterChart = tabCounterSVG.append("g")
-      .attr("class", "tabCounterG")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-      // .attr("height", tabCounterHeight);
-// var faviconChart = tabCounterSVG.append("g")
-//       .attr("class", "faviconG")
-//       .attr("transform", "translate(" + margin.left + "," + (margin.top + faviconHeight) + ")")
-//       .attr("height", faviconHeight);
-
-
-var yScaleTabCounter = d3.scaleLinear()
-  .range([height,0]);
-  // .domain([0.45,1]);
-var yAxisTabCounter = d3.axisLeft(yScaleTabCounter).tickSize(-width).ticks(4).tickPadding(10).tickSizeOuter(0);
-
-
-var tabLine = d3.line()
-// .defined(function(d) { return (typeof dataset[d].current_tabCount !== 'string'); })
-.defined(function(d){
-    // return dataset[d].current_tabCount!==null ? d : console.log("null")
-  return (dataset[d].current_tabCount!==null) && (dataset[d].tabs_activated > 0 || dataset[d].tabs_created > 0)
-})
-  .x(function(d) {return xScale(dataset[d].timestamp);})
-  .y(function(d){return yScaleTabCounter(dataset[d].current_tabCount);});
-
-
-
-
-d3.json("getAPIdata/chromeactivity.json", ready);
-
-function ready(err, data) {
-    if (err) console.warn(err, "error loading data");
-
-
-dataset = data;
-
-// console.log(dataset[1524982083090])
-var keyLookup = [];
-
-for(var key in dataset){
-  // console.log(dataset[key])
-  var dateTime = new Date(dataset[key].timestamp)
-  dataset[key].timestamp = dateTime;
-  keyLookup.push(key);
-
-  if(!dataset[key].favicons){
-    dataset[key]["favicons"] = [];
-  }
-}
-
-
-for(var key in dataset){
-
-  var currentIndex = keyLookup.indexOf(key);
-
-  if(currentIndex < keyLookup.length - 1){
-    var currentTime = dataset[key].timestamp;
-    var nextTime = dataset[keyLookup[currentIndex+1]].timestamp;
-
-
-    if (currentTime < (nextTime - 14000000)) {
-      var nullTime = nextTime - 14000000
-
-      var nullItems = {};
-
-      nullItems["timestamp"] = new Date(nullTime);
-      nullItems["current_windowCount"] = null;
-      nullItems["current_tabCount"] = null;
-      nullItems["favicons"] = [];
-      nullItems["tabs_activated"] = null;
-      nullItems["tabs_created"] = null;
-      nullItems["windows_created"] = null;
-
-      dataset[nullTime] = nullItems;
-    }
-
-    // else if (currentTime > (nextTime - 1800000)) {
-    //   var currentTimeMs = currentTime.getTime();
-    //   var nextTimeMs = nextTime.getTime();
-    //   dataset[currentTimeMs].tabs_activated += dataset[nextTimeMs].tabs_activated;
-    //   dataset[currentTimeMs].tabs_created += dataset[nextTimeMs].tabs_created;
-    //   dataset[currentTimeMs].windows_created += dataset[nextTimeMs].windows_created;
-    //   delete dataset[nextTimeMs];
-    // }
-  }
-}
-
-
-keyLookup = [];
-
-for(var key in dataset){
+  var dataset; 
+  // var tabCounterChartHeight = 800;
+  // var tabCounterHeight = 500;
+  // var faviconHeight = 300;
+  
+  var tabCounterSVG = d3.select("#tabCounter")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom);
+  var tabCounterChart = tabCounterSVG.append("g")
+        .attr("class", "tabCounterG")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        // .attr("height", tabCounterHeight);
+  // var faviconChart = tabCounterSVG.append("g")
+  //       .attr("class", "faviconG")
+  //       .attr("transform", "translate(" + margin.left + "," + (margin.top + faviconHeight) + ")")
+  //       .attr("height", faviconHeight);
+  
+  
+  var yScaleTabCounter = d3.scaleLinear()
+    .range([height,0]);
+    // .domain([0.45,1]);
+  var yAxisTabCounter = d3.axisLeft(yScaleTabCounter).tickSize(-width).ticks(4).tickPadding(10).tickSizeOuter(0);
+  
+  
+  var tabLine = d3.line()
+  // .defined(function(d) { return (typeof dataset[d].current_tabCount !== 'string'); })
+  .defined(function(d){
+      // return dataset[d].current_tabCount!==null ? d : console.log("null")
+    return (dataset[d].current_tabCount!==null) && (dataset[d].tabs_activated > 0 || dataset[d].tabs_created > 0)
+  })
+    .x(function(d) {return xScale(dataset[d].timestamp);})
+    .y(function(d){return yScaleTabCounter(dataset[d].current_tabCount);});
+  
+  
+  
+  
+  d3.json("getAPIdata/chromeactivity.json", ready);
+  
+  function ready(err, data) {
+      if (err) console.warn(err, "error loading data");
+  
+  
+  dataset = data;
+  
+  // console.log(dataset[1524982083090])
+  var keyLookup = [];
+  
+  for(var key in dataset){
+    // console.log(dataset[key])
+    var dateTime = new Date(dataset[key].timestamp)
+    dataset[key].timestamp = dateTime;
     keyLookup.push(key);
-}
-
-keyLookup.sort(function(a,b){
-  return a - b;
-})
-
-
-var yMax = d3.extent(keyLookup, function(d) {return dataset[d].tabs_activated;})[1];
-yScaleTabCounter.domain([0,yMax]);
-// xScale2.domain(xScale.domain());
-// yScale2.domain(yScale.domain());
-
-
-  var tabTip = d3.tip()
-    .attr("class", "tooltip")
-    .offset([-22,-5])
-    .direction("n")
-    .html(function(d) {
-      var imgString = "";
-      for(var i = 0; i < dataset[d].favicons.length; i++){
-        var jnURL = "http://localhost:8888/static/base/images/"
-        if(dataset[d].favicons[i].includes(jnURL)){
-        imgString += "<img src='tabcounter_extension/"+dataset[d].favicons[i].slice(jnURL.length)+"' width='13px' height='13px'>"
-        }
-        else{
-        imgString += "<img src='"+dataset[d].favicons[i]+"' width='13px' height='13px'>"
-        }
+  
+    if(!dataset[key].favicons){
+      dataset[key]["favicons"] = [];
+    }
+  }
+  
+  
+  for(var key in dataset){
+  
+    var currentIndex = keyLookup.indexOf(key);
+  
+    if(currentIndex < keyLookup.length - 1){
+      var currentTime = dataset[key].timestamp;
+      var nextTime = dataset[keyLookup[currentIndex+1]].timestamp;
+  
+  
+      if (currentTime < (nextTime - 14000000)) {
+        var nullTime = nextTime - 14000000
+  
+        var nullItems = {};
+  
+        nullItems["timestamp"] = new Date(nullTime);
+        nullItems["current_windowCount"] = null;
+        nullItems["current_tabCount"] = null;
+        nullItems["favicons"] = [];
+        nullItems["tabs_activated"] = null;
+        nullItems["tabs_created"] = null;
+        nullItems["windows_created"] = null;
+  
+        dataset[nullTime] = nullItems;
       }
-      return "<b>Tabs Activated:</b> "+dataset[d].tabs_activated+"<br><br>" + imgString;
-    });
-
-  var tabCreatedTip = d3.tip()
-    .attr("class", "tooltip")
-    .offset([-22,-5])
-    .direction("n")
-    .html(function(d) {
-      return "<b>Tabs Created:</b> "+dataset[d].tabs_created;
-    });
-
-  var tabCountTip = d3.tip()
-    .attr("class", "tooltip")
-    .offset([-22,-5])
-    .direction("n")
-    .html(function(d) {
-      return "<b>Tabs Left Open:</b> "+dataset[d].current_tabCount;
-    });
-
-  var windowCountTip = d3.tip()
-    .attr("class", "tooltip")
-    .offset([-22,-5])
-    .direction("n")
-    .html(function(d) {
-      return "<b>Windows Left Open:</b> "+dataset[d].current_windowCount;
-    });
-
-
-
-  tabCounterChart.append("g")
-    .attr("class", "axis axis--x")
-    .attr("transform","translate(0, "+(height)+")")
-    .call(xAxis);
-
-  tabCounterChart.append("g")
-  .attr("class", "axis axis--y")
-    .call(yAxisTabCounter);
-
-
-var pixelInterval = xScale(new Date("Sun Apr 29 2018 02:00:00 GMT-0500 (CDT)")) - xScale( new Date("Sun Apr 29 2018 01:00:00 GMT-0500 (CDT)"));
-
-
- tabCounterChart.selectAll(".activated-bar")
+  
+      // else if (currentTime > (nextTime - 1800000)) {
+      //   var currentTimeMs = currentTime.getTime();
+      //   var nextTimeMs = nextTime.getTime();
+      //   dataset[currentTimeMs].tabs_activated += dataset[nextTimeMs].tabs_activated;
+      //   dataset[currentTimeMs].tabs_created += dataset[nextTimeMs].tabs_created;
+      //   dataset[currentTimeMs].windows_created += dataset[nextTimeMs].windows_created;
+      //   delete dataset[nextTimeMs];
+      // }
+    }
+  }
+  
+  
+  keyLookup = [];
+  
+  for(var key in dataset){
+      keyLookup.push(key);
+  }
+  
+  keyLookup.sort(function(a,b){
+    return a - b;
+  })
+  
+  
+  var activatedMax = d3.extent(keyLookup, function(d) {return dataset[d].tabs_activated;})[1];
+  var countMax = d3.extent(keyLookup, function(d) {return dataset[d].current_tabCount;})[1];
+  
+  yScaleTabCounter.domain([0,activatedMax+countMax]);
+  // xScale2.domain(xScale.domain());
+  // yScale2.domain(yScale.domain());
+  
+  
+    var tabTip = d3.tip()
+      .attr("class", "tooltip")
+      .offset([-22,-5])
+      .direction("n")
+      .html(function(d) {
+        var imgString = "";
+        for(var i = 0; i < dataset[d].favicons.length; i++){
+          var jnURL = "http://localhost:8888/static/base/images/"
+          if(dataset[d].favicons[i].includes(jnURL)){
+          imgString += "<img src="+dataset[d].favicons[i].slice(jnURL.length)+" width='13px' height='13px'>"
+          }
+          else{
+          imgString += "<img src='"+dataset[d].favicons[i]+"' width='13px' height='13px'>"
+          }
+        }
+        return "<b>Windows Left Open:</b> "+dataset[d].current_windowCount + "<br><b>Tab Total:</b> "+dataset[d].current_tabCount+ "<br><b>Tabs Created:</b> "+dataset[d].tabs_created + "<br><b>Tabs Activated:</b> "+dataset[d].tabs_activated+"<br><br>" + imgString;
+      });
+  
+  
+    tabCounterChart.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform","translate(0, "+(height)+")")
+      .call(xAxis);
+  
+    tabCounterChart.append("g")
+    .attr("class", "axis axis--y")
+      .call(yAxisTabCounter);
+  
+  
+  tabCounterChart.selectAll(".created-circle")
       .data(keyLookup)
-    .enter().append("rect")
-      .attr("class", "activated-bar")
-      .style("fill", "gold")
-      .style("opacity", 0.5)
-      .attr("x", function(d) { return xScale(dataset[d].timestamp); })
-      .attr("width", pixelInterval)
-      .attr("y", function(d) { return yScaleTabCounter(dataset[d].tabs_activated); })
-      .attr("height", function(d) { return height - yScaleTabCounter(dataset[d].tabs_activated); });
-
-tabCounterChart.selectAll(".created-bar")
-    .data(keyLookup)
-  .enter().append("rect")
-    .attr("class", "created-bar")
-    .style("fill", "cyan")
-    .style("opacity", 0.5)
-    .attr("x", function(d) { return xScale(dataset[d].timestamp); })
-    .attr("width", pixelInterval)
-    .attr("y", function(d) { return yScaleTabCounter(dataset[d].tabs_created); })
-    .attr("height", function(d) { return height - yScaleTabCounter(dataset[d].tabs_created); });
-
-tabCounterChart.append("path")
-  .datum(keyLookup)
-  .attr("d", tabLine)
-  .attr("stroke", "magenta")
-  .attr("stroke-width", 2)
-  .attr("fill", "none")
-  .attr("class", "tabLine")
-  .attr("opacity", 0.6);
-
-// tabCounterChart.append("path")
-//   .datum(keyLookup)
-//   .attr("d", windowLine)
-//   .attr("stroke", "blue")
-//   .attr("stroke-width", 2)
-//   .attr("fill", "none")
-//   .attr("class", "windowLine")
-//   .attr("opacity", 0.6);
-
-tabCounterChart.selectAll(".tabCircle")
-  .data(keyLookup)
-  .enter()
-  .append("circle")
-  .attr("class","tabCircle")
-  .attr("cx", function(d) {return xScale(dataset[d].timestamp)})
-  .attr("r", function(d) {return (dataset[d].current_tabCount == null || dataset[d].tabs_activated == 0) ? 0 : 2; })
-  .attr("cy", function(d) { return yScaleTabCounter(dataset[d].current_tabCount);})
-  .attr("opacity", 0.7)
-  .attr("fill", "magenta");
-
-
-// tabCounterChart.selectAll(".windowCircle")
-//   .data(keyLookup)
-//   .enter()
-//   .append("circle")
-//   .attr("class","windowCircle")
-//   .attr("cx", function(d) {return xScale(dataset[d].timestamp)})
-//   .attr("r", function(d) {return dataset[d].current_windowCount == null ? 0 : 3; })
-//   .attr("cy", function(d) { return yScaleTabCounter(dataset[d].current_windowCount);})
-//   .attr("opacity", 0.65)
-//   .attr("fill", "blue");
-
-// faviconChart.selectAll(".chromeIcons")
-//   .data(keyLookup)
-//   .enter()
-//   .append("g")
-//   .attr("transform", function(d){return "translate(" + xScale(dataset[d].timestamp) +")"})
-//   .selectAll(".icons")
-//   .data(function(d) {return dataset[d].favicons;})
-//   .enter()
-//   .append("svg:image")
-//   // .attr("class", "logo")
-//   // .attr("cx", function(d){return xScale(d.time)})
-//   // .attr("cy", height)
-//   .attr("xlink:href", function(d,i){return d;})
-//   .attr("transform", function(d,j){return "translate(0," + yScaleTabCounter((j+2)*2) + ")";})
-//   .attr("height", 10)
-//   .attr("width", 10);
-
-
-tabCounterChart.selectAll(".activated-bar")
-.call(tabTip)
-
-.on("mouseover", function(d) {
-  tabTip.show(d);
-})
-
-.on("mouseout", function(d) {
-  tabTip.hide(d);
-})
-
-
-tabCounterChart.selectAll(".created-bar")
-.call(tabCreatedTip)
-
-.on("mouseover", function(d) {
-  tabCreatedTip.show(d);
-})
-
-.on("mouseout", function(d) {
-  tabCreatedTip.hide(d);
-})
-
-
-tabCounterChart.selectAll(".tabCircle")
-.call(tabCountTip)
-
-.on("mouseover", function(d) {
-  tabCountTip.show(d);
-})
-
-.on("mouseout", function(d) {
-  tabCountTip.hide(d);
-})
-
-
-}
-
-
-</script>
-
+    .enter().append("circle")
+      .attr("class", "created-circle")
+      .style("stroke", "cyan")
+      .style("opacity", 0.65)
+      .attr("fill", "none")
+      .attr("cx", function(d) { return xScale(dataset[d].timestamp); })
+      // .attr("width", pixelInterval)
+      .attr("cy", function(d) { return yScaleTabCounter(dataset[d].tabs_activated + dataset[d].tabs_created + dataset[d].current_tabCount); })
+      .attr("r", function(d) { return (dataset[d].tabs_activated/4) + (dataset[d].current_tabCount /2);})
+      .attr("stroke-width", function(d) { return dataset[d].tabs_created;});
+      // .attr("height", function(d) { return height - yScaleTabCounter(dataset[d].tabs_created); });
+  
+  
+   tabCounterChart.selectAll(".activated-circle")
+        .data(keyLookup)
+      .enter().append("circle")
+        .attr("class", "activated-circle")
+        .style("stroke", "gold")
+        .attr("fill", "none")
+        .style("opacity", 0.5)
+        .attr("cx", function(d) { return xScale(dataset[d].timestamp); })
+        .attr("cy", function(d){ return yScaleTabCounter(dataset[d].tabs_activated + dataset[d].tabs_created + dataset[d].current_tabCount); })
+        .attr("r", function(d) { return dataset[d].current_tabCount /2})
+        .attr("stroke-width", function(d) { return dataset[d].tabs_activated/2;});
+  
+  
+   tabCounterChart.selectAll(".currentCount-circle")
+        .data(keyLookup)
+      .enter().append("circle")
+        .attr("class", "currentCount-circle")
+        .style("fill", "magenta")
+        .style("opacity", 0.4)
+        .attr("cx", function(d) { return xScale(dataset[d].timestamp); })
+        .attr("cy", function(d){ return yScaleTabCounter(dataset[d].tabs_activated + dataset[d].tabs_created + dataset[d].current_tabCount); })
+        .attr("r", function(d) { return dataset[d].current_tabCount /2});
+  
+   tabCounterChart.selectAll(".currentWindowCount-circle")
+        .data(keyLookup)
+      .enter().append("circle")
+        .attr("class", "currentWindowCount-circle")
+        .style("fill", "blue")
+        .style("opacity", 0.5)
+        .attr("cx", function(d) { return xScale(dataset[d].timestamp); })
+        .attr("cy", function(d){ return yScaleTabCounter(dataset[d].tabs_activated + dataset[d].tabs_created + dataset[d].current_tabCount); })
+        .attr("r", function(d) { return dataset[d].windows_created});
+  
+  
+  
+  tabCounterChart.selectAll("circle")
+  .call(tabTip)
+  
+  .on("mouseover", function(d) {
+    tabTip.show(d);
+  })
+  
+  .on("mouseout", function(d) {
+    tabTip.hide(d);
+  })
+  
+  }
+  
+  
+  </script>
 
 <script>
 
@@ -3391,23 +3591,23 @@ var RF_moraleLineChart = ML_morale_chart.append("path")
 
 
 
-  var mlTip = d3.tip()
-    .attr("class", "tooltip")
-    .offset([-20,-5])
-    .html(function(d,i) {
-     return "<b>Actual Mood Score:</b> " + d.actual_mood + "<br><b>LSTM Mood Prediction:</b> " + d.predictions.LSTM_mood_prediction;
-    });
+  // var mlTip = d3.tip()
+  //   .attr("class", "tooltip")
+  //   .offset([-20,-5])
+  //   .html(function(d,i) {
+  //    return "<b>Actual Mood Score:</b> " + d.actual_mood + "<br><b>LSTM Mood Prediction:</b> " + d.predictions.LSTM_mood_prediction;
+  //   });
 
-  ML_mood_chart.selectAll(".mood-circle")
-  .call(mlTip)
+  // ML_mood_chart.selectAll(".mood-circle")
+  // .call(mlTip)
 
-  .on("mouseover", function(d) {
-    mlTip.show(d);
-  })
+  // .on("mouseover", function(d) {
+  //   mlTip.show(d);
+  // })
 
-  .on("mouseout", function(d) {
-    mlTip.hide(d);
-  })
+  // .on("mouseout", function(d) {
+  //   mlTip.hide(d);
+  // })
 
 
 });

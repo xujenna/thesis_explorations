@@ -2,11 +2,16 @@ const functions = require('firebase-functions');
 const {dialogflow, SimpleResponse} = require('actions-on-google');
 const app = dialogflow();
 
-exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
-	const agent = new WebhookClient({ request, response });
-	console.log('Dialogflow Request headers: ' + JSON.stringify(request.headers));
-	console.log('Dialogflow Request body: ' + JSON.stringify(request.body));
-});  
+
+// repeat intent/entity to make the user feel heard
+// cbt: direction to think abotu it
+// deep link to intent 
+
+// exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
+// 	const agent = new WebhookClient({ request, response });
+// 	console.log('Dialogflow Request headers: ' + JSON.stringify(request.headers));
+// 	console.log('Dialogflow Request body: ' + JSON.stringify(request.body));
+// });  
 
 var admin = require("firebase-admin");
 
@@ -58,6 +63,9 @@ const sevenMinWorkout_pt11 = "<speak>" + "Next, push-ups with rotation. <break t
 const sevenMinWorkout_pt12 = "<speak>" + "Last up, a side plank. <break time = '2'/>" + thirtySecs + "<audio src='https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg'></audio>" + "You did it! That's the end of the seven minute workout." + "</speak>"
 var sevenMinWorkout = new Array(sevenMinWorkout_pt1, sevenMinWorkout_pt2, sevenMinWorkout_pt3, sevenMinWorkout_pt4, sevenMinWorkout_pt5, sevenMinWorkout_pt6, sevenMinWorkout_pt7, sevenMinWorkout_pt8, sevenMinWorkout_pt9, sevenMinWorkout_pt10, sevenMinWorkout_pt11, sevenMinWorkout_pt12)
 
+// app.intent('Default Welcome Intent', (conv)=>{
+// 	console.log()
+// })
 
 app.intent('7-min-workout-start', (conv,params) => {
 	conv.data.currentExercise = 0;
@@ -177,21 +185,46 @@ app.intent('gratitude-log-get-thing', (conv, params)=>{
 	conv.ask("Great job! I've added your response to your gratitude log. You can tell me something else you're grateful for, or you can tell me you're done.")
 })
 
+
+
+
 app.intent('encouragement', (conv,params)=>{
 	// return admin.database().ref('/users/' + userId + "/good-things/").once('value').then((snapshot)=>{
 	// 	console.log(snapshot.val())
 	// 	conv.close(snapshot.val())
 	// 	return snapshot.val();
 	// });
-
-	var goodThings;
+	
 	let goodThingsDB = admin.database().ref('/users/' + userId + '/good-things/');
 	goodThingsDB.on('value', (snapshot)=>{
-	goodThings = snapshot.val();
+		let goodThings = snapshot.val();
+		let goodThingsKeys = Object.keys(goodThings)
+		console.log(goodThingsKeys)
+		let randomKeyIndex = Math.floor(Math.random() * Math.floor(goodThingsKeys.length))
+		let randomKey = goodThingsKeys[randomKeyIndex]
+		console.log(randomKey)
+		let randomGoodThing = goodThings[randomKey]['goodThing']
+		console.log(randomGoodThing)
+		conv.ask(`Here's an entry from your good things log: ${randomGoodThing}`)
+		conv.ask('Would you like another?')
 	});
-	
-	console.log(goodThings)
-	conv.close(goodThings.length)
+
+})
+
+app.intent('encouragement-more', (conv,params)=>{
+	let goodThingsDB = admin.database().ref('/users/' + userId + '/good-things/');
+	goodThingsDB.on('value', (snapshot)=>{
+		let goodThings = snapshot.val();
+		let goodThingsKeys = Object.keys(goodThings)
+		console.log(goodThingsKeys)
+		let randomKeyIndex = Math.floor(Math.random() * Math.floor(goodThingsKeys.length))
+		let randomKey = goodThingsKeys[randomKeyIndex]
+		console.log(randomKey)
+		let randomGoodThing = goodThings[randomKey]['goodThing']
+		console.log(randomGoodThing)
+		conv.ask(`Here's an entry from your good things log: ${randomGoodThing}`)
+		conv.ask('Would you like another?')
+})
 })
 
 exports.lifeSupport = functions.https.onRequest(app);

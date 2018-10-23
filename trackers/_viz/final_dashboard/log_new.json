@@ -106311,21 +106311,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-09T03:47:25.424524",
-    "unix_time": 1536479245.424524,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.609601,
@@ -108420,36 +108405,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-12T06:34:23.097640",
-    "unix_time": 1536748463.09764,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-12T08:34:23.239880",
-    "unix_time": 1536755663.23988,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.556994,
@@ -109230,36 +109185,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-13T01:00:20.255536",
-    "unix_time": 1536814820.255536,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-13T08:23:07.298665",
-    "unix_time": 1536841387.298665,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.827288,
@@ -109422,36 +109347,6 @@
     "backspace_count": 110,
     "avg_dwelltime": 0.09130779579838413,
     "avg_flighttime": 0.18475806174230944
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-13T15:44:00.751371",
-    "unix_time": 1536867840.751371,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-13T17:44:00.834375",
-    "unix_time": 1536875040.834375,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
   },
   {
     "document_tone": {
@@ -109992,51 +109887,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-14T01:16:16.394368",
-    "unix_time": 1536902176.394368,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 6,
-    "avg_dwelltime": 0.11140332117185488,
-    "avg_flighttime": 0.43014024325779504
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-14T06:09:42.568180",
-    "unix_time": 1536919782.56818,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-14T08:09:42.624027",
-    "unix_time": 1536926982.624027,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.525228,
@@ -110209,21 +110059,6 @@
     "backspace_count": 59,
     "avg_dwelltime": 0.15691827364535427,
     "avg_flighttime": 0.5159982392977471
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-14T13:09:54.426664",
-    "unix_time": 1536944994.426664,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
   },
   {
     "document_tone": {
@@ -112882,21 +112717,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-15T20:51:00.632153",
-    "unix_time": 1537059060.632153,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0.10174375772476196,
-    "avg_flighttime": 0.21692636609077454
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.622244,
@@ -113563,21 +113383,6 @@
     "backspace_count": 61,
     "avg_dwelltime": 0.09406724782905193,
     "avg_flighttime": 0.22007295928025608
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-17T00:54:25.239948",
-    "unix_time": 1537160065.239948,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
   },
   {
     "document_tone": {
@@ -114427,21 +114232,6 @@
     "backspace_count": 96,
     "avg_dwelltime": 0.10644478498939247,
     "avg_flighttime": 0.33567434593702367
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-18T08:02:13.333551",
-    "unix_time": 1537272133.333551,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
   },
   {
     "document_tone": {
@@ -116806,21 +116596,6 @@
       "tones": []
     },
     "sentences_tone": [],
-    "time": "2018-09-20T13:27:02.720507",
-    "unix_time": 1537464422.720507,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0.2880181074142456,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
     "time": "2018-09-20T15:27:02.815197",
     "unix_time": 1537471622.815197,
     "word_count": 1,
@@ -116894,21 +116669,6 @@
     "backspace_count": 16,
     "avg_dwelltime": 0.10090325696624979,
     "avg_flighttime": 0.2914233160953896
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-20T20:55:49.559270",
-    "unix_time": 1537491349.55927,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 4,
-    "avg_dwelltime": 0.17496748197646367,
-    "avg_flighttime": 0.5273823004502517
   },
   {
     "document_tone": {
@@ -119569,21 +119329,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-23T12:56:31.863207",
-    "unix_time": 1537721791.863207,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0.11292171478271484,
-    "avg_flighttime": 0.19942352097176647
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.843719,
@@ -120969,36 +120714,6 @@
     "backspace_count": 44,
     "avg_dwelltime": 0.11519389218232763,
     "avg_flighttime": 0.2121411422203327
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-25T04:26:00.367888",
-    "unix_time": 1537863960.367888,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-25T08:00:53.380640",
-    "unix_time": 1537876853.38064,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
   },
   {
     "document_tone": {
@@ -123041,21 +122756,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-26T04:23:54.588288",
-    "unix_time": 1537950234.588288,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.528025,
@@ -124437,21 +124137,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-27T02:41:05.938566",
-    "unix_time": 1538030465.938566,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.89196,
@@ -125238,7 +124923,7 @@
     "uniqueword_ratio": 0.7352941176470589,
     "char_count": 149,
     "backspace_count": 41,
-    "avg_dwelltime": 1.227002619066809,
+    "avg_dwelltime": 0.10759354254976572,
     "avg_flighttime": 0.294879469130266
   },
   {
@@ -126437,66 +126122,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-28T02:20:23.094468",
-    "unix_time": 1538115623.094468,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0.1623772382736206,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-28T04:20:25.058405",
-    "unix_time": 1538122825.058405,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-28T06:20:29.427724",
-    "unix_time": 1538130029.427724,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0.4663756543939764,
-    "avg_flighttime": 0.9077509244283041
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-28T08:20:29.331662",
-    "unix_time": 1538137229.331662,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.972662,
@@ -127542,21 +127167,6 @@
     "document_tone": {
       "tones": []
     },
-    "sentences_tone": [],
-    "time": "2018-09-28T15:20:54.021417",
-    "unix_time": 1538162454.021417,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 2,
-    "avg_dwelltime": 0.13826601872077354,
-    "avg_flighttime": 0.45295622132041236
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
     "sentences_tone": [
       {
         "sentence_id": 0,
@@ -127680,21 +127290,6 @@
     "backspace_count": 164,
     "avg_dwelltime": 0.1014836877124261,
     "avg_flighttime": 0.2781248550255872
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-29T00:49:26.844918",
-    "unix_time": 1538196566.844918,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 1.0396900177001953,
-    "avg_flighttime": 0
   },
   {
     "document_tone": {
@@ -128011,21 +127606,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-29T22:54:28.459721",
-    "unix_time": 1538276068.459721,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0.1134336789449056,
-    "avg_flighttime": 0.5208179950714111
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.606931,
@@ -128167,21 +127747,6 @@
     "backspace_count": 198,
     "avg_dwelltime": 0.09612373730231975,
     "avg_flighttime": 0.17586028757325858
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-30T03:54:40.101631",
-    "unix_time": 1538294080.101631,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
   },
   {
     "document_tone": {
@@ -128417,21 +127982,6 @@
     "backspace_count": 746,
     "avg_dwelltime": 0.08468711784362792,
     "avg_flighttime": 0.16646375375635483
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-09-30T12:14:46.827072",
-    "unix_time": 1538324086.827072,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 1,
-    "avg_dwelltime": 0.17560573931663268,
-    "avg_flighttime": 0.2434805461338588
   },
   {
     "document_tone": {
@@ -129250,8 +128800,8 @@
       ]
     },
     "sentences_tone": [],
-    "time": "2018-10-11T30:21:57.972560",
-    "unix_time": 1539339717.97256,
+    "time": "2018-10-01T04:21:57.972560",
+    "unix_time": 1538382116.71756,
     "word_count": 117,
     "uniqueword_count": 64,
     "uniqueword_ratio": 0.547008547008547,
@@ -130578,21 +130128,6 @@
     "backspace_count": 5,
     "avg_dwelltime": 0.10656005964366667,
     "avg_flighttime": 0.3692295174849661
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-02T03:59:12.959651",
-    "unix_time": 1538467152.959651,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
   },
   {
     "document_tone": {
@@ -132663,21 +132198,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-04T02:37:00.030545",
-    "unix_time": 1538635020.030545,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.911392,
@@ -133291,21 +132811,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-05T06:46:53.737016",
-    "unix_time": 1538736413.737016,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.516552,
@@ -133651,21 +133156,6 @@
     "backspace_count": 172,
     "avg_dwelltime": 0.08077006501797135,
     "avg_flighttime": 0.18010556885188428
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-05T12:19:55.471520",
-    "unix_time": 1538756395.47152,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 2,
-    "avg_dwelltime": 0.07729231683831465,
-    "avg_flighttime": 0.33066529494065505
   },
   {
     "document_tone": {
@@ -134332,21 +133822,6 @@
     "backspace_count": 0,
     "avg_dwelltime": 0.09847001706139516,
     "avg_flighttime": 0.17284970813327366
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-06T21:36:45.961612",
-    "unix_time": 1538876205.961612,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
   },
   {
     "document_tone": {
@@ -135204,21 +134679,6 @@
     "backspace_count": 48,
     "avg_dwelltime": 0.10784232739320736,
     "avg_flighttime": 0.4159911694548055
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-08T06:42:03.945119",
-    "unix_time": 1538995323.945119,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
   },
   {
     "document_tone": {
@@ -137634,36 +137094,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-10T01:33:44.353177",
-    "unix_time": 1539149624.353177,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-10T07:52:51.034433",
-    "unix_time": 1539172371.034433,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.588265,
@@ -139016,21 +138446,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-11T02:59:26.524396",
-    "unix_time": 1539241166.524396,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.589862,
@@ -139799,21 +139214,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-12T07:34:29.665117",
-    "unix_time": 1539344069.665117,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.705795,
@@ -140194,21 +139594,6 @@
     "backspace_count": 31,
     "avg_dwelltime": 0.11519173884901468,
     "avg_flighttime": 0.25045259669423103
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-13T04:36:39.908929",
-    "unix_time": 1539419799.908929,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
   },
   {
     "document_tone": {
@@ -142013,21 +141398,6 @@
     "backspace_count": 54,
     "avg_dwelltime": 0.08418574812002558,
     "avg_flighttime": 0.17702386581471988
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-14T04:47:45.143915",
-    "unix_time": 1539506865.143915,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
   },
   {
     "document_tone": {
@@ -144162,36 +143532,6 @@
     "backspace_count": 206,
     "avg_dwelltime": 0.10444956013805977,
     "avg_flighttime": 0.27245532871558154
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-15T03:38:25.246627",
-    "unix_time": 1539589105.246627,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 64,
-    "avg_dwelltime": 0.07581541816733162,
-    "avg_flighttime": 0.17670644972680952
-  },
-  {
-    "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-15T08:36:43.827625",
-    "unix_time": 1539607003.827625,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
   },
   {
     "document_tone": {
@@ -147227,21 +146567,6 @@
   },
   {
     "document_tone": {
-      "tones": []
-    },
-    "sentences_tone": [],
-    "time": "2018-10-16T05:34:46.769794",
-    "unix_time": 1539682486.769794,
-    "word_count": 0,
-    "uniqueword_count": 0,
-    "uniqueword_ratio": 0,
-    "char_count": 0,
-    "backspace_count": 0,
-    "avg_dwelltime": 0,
-    "avg_flighttime": 0
-  },
-  {
-    "document_tone": {
       "tones": [
         {
           "score": 0.634456,
@@ -148138,5 +147463,6088 @@
     "backspace_count": 72,
     "avg_dwelltime": 0.09880869230114801,
     "avg_flighttime": 0.2569866208997491
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.572405,
+          "tone_id": "anger",
+          "tone_name": "Anger"
+        },
+        {
+          "score": 0.526185,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.67826,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.720805,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "lots of good attention around my project. in class.",
+        "tones": [
+          {
+            "score": 0.686173,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.724236,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "this is a stupid question.",
+        "tones": [
+          {
+            "score": 0.833489,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.970179,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "but if i were to separate my millions of script tags into actual js files.",
+        "tones": [
+          {
+            "score": 0.532616,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.727798,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "do i load tke i load js librarie...?. like the script src thing.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "2\u00dflol \u00e5i hate you.",
+        "tones": [
+          {
+            "score": 0.695384,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "but i also appreciate you.",
+        "tones": [
+          {
+            "score": 0.666672,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.882284,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "i \u00e5you're mean to me.",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "look at what you just wrote.",
+        "tones": [
+          {
+            "score": 0.561593,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.989022,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.968123,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "python -m http.server",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "9999.",
+        "tones": []
+      },
+      {
+        "sentence_id": 10,
+        "text": "s\u00e5script \u00df\u00df\u2211jusgo ahead and try to tell me that i'm not supportive of you1.",
+        "tones": []
+      },
+      {
+        "sentence_id": 11,
+        "text": "\u221a\u00df\u00df\u00dfsflol i hate you\u00e5lol may i reiterate how much i hate you.",
+        "tones": [
+          {
+            "score": 0.801337,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.75152,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "you have such a british attitude.",
+        "tones": [
+          {
+            "score": 0.588927,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "can't do anything nice without saying something mean.",
+        "tones": [
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.984352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "Thanks so much Rose.",
+        "tones": []
+      },
+      {
+        "sentence_id": 15,
+        "text": "\u2020f.",
+        "tones": []
+      },
+      {
+        "sentence_id": 16,
+        "text": ", I would appreciate a reprint very muchvery much  for your accommodatio!\u2020xu.",
+        "tones": [
+          {
+            "score": 0.620279,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.80026,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 17,
+        "text": "i'm never talking toyou \u00e5\"it's HTML's fault\".",
+        "tones": [
+          {
+            "score": 0.66106,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.704642,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 18,
+        "text": "i'm never talking to you again.",
+        "tones": [
+          {
+            "score": 0.80026,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-17T13:21:09.998450",
+    "unix_time": 1539796869.99845,
+    "word_count": 117,
+    "uniqueword_count": 80,
+    "uniqueword_ratio": 0.6837606837606838,
+    "char_count": 452,
+    "backspace_count": 145,
+    "avg_dwelltime": 0.0974820085751113,
+    "avg_flighttime": 0.2303134105663504
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.557854,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.657827,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.647781,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "lol try harder .",
+        "tones": [
+          {
+            "score": 0.565843,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "by buying me soby buying me the soba you owe me -_-\u2211\u2020feed.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "how \u00e5can i like... link a js library inside a js file.",
+        "tones": [
+          {
+            "score": 0.620279,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "hanging out during break.",
+        "tones": [
+          {
+            "score": 0.593094,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "in class\u00df\u00df\u2211\u2020window.cha\u2211can",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "you usecan you explain with more words that i can google.",
+        "tones": [
+          {
+            "score": 0.703409,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-17T14:21:10.062552",
+    "unix_time": 1539800470.062552,
+    "word_count": 43,
+    "uniqueword_count": 35,
+    "uniqueword_ratio": 0.813953488372093,
+    "char_count": 144,
+    "backspace_count": 45,
+    "avg_dwelltime": 0.10042125896565092,
+    "avg_flighttime": 0.25326185699566794
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.680362,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.588625,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.560724,
+          "tone_id": "anger",
+          "tone_name": "Anger"
+        },
+        {
+          "score": 0.810583,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        },
+        {
+          "score": 0.528596,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "I'm ridiculous and forgot that I'll be on my flight back to NYC on Monday.",
+        "tones": [
+          {
+            "score": 0.714026,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.532616,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "I booked another office hour with you on Friday, but I can't for the life of me cancel my original booking for Monday (something about permissions between accounts, I think).",
+        "tones": [
+          {
+            "score": 0.533128,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "Do you think you could cancel it on your end?.",
+        "tones": [
+          {
+            "score": 0.718035,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.822231,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "Jenna\u00b4\u2211nancAaaaaand of course I figure it out immediately after I e-mail you about it.",
+        "tones": [
+          {
+            "score": 0.751512,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.560098,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "how to cancel it\u03a9\u03a9\u03a9Sorry, ignore me1 See you in two weeks.to",
+        "tones": [
+          {
+            "score": 0.853788,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "do today-email nicole about dialog flow API for web, etc. pretty good.",
+        "tones": [
+          {
+            "score": 0.826124,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "just sitting in class. in class.",
+        "tones": [
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "-notifications/ speaking to it through appedro.",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "-exec node > python\u2020can dialogue flow \u00e5can actions on google activate on a timer.",
+        "tones": [
+          {
+            "score": 0.61476,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-17T17:27:53.565607",
+    "unix_time": 1539811673.565607,
+    "word_count": 102,
+    "uniqueword_count": 68,
+    "uniqueword_ratio": 0.6666666666666666,
+    "char_count": 429,
+    "backspace_count": 93,
+    "avg_dwelltime": 0.08682270757705567,
+    "avg_flighttime": 0.20047089195650492
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.652454,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.830704,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.91688,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u2211something good happened.",
+        "tones": [
+          {
+            "score": 0.598142,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.994446,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "something good happened.",
+        "tones": [
+          {
+            "score": 0.598142,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.994446,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "i'm looking forward to something.",
+        "tones": [
+          {
+            "score": 0.755276,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.968123,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "mozilla promoted my work for mozfest.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "i'm grateful that aurelia recommended my work.",
+        "tones": [
+          {
+            "score": 0.810872,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "i'm grateful that my instructor is encouraging.",
+        "tones": [
+          {
+            "score": 0.796543,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "i'm grateful that summer is over.",
+        "tones": [
+          {
+            "score": 0.962455,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "i'm grateful that i'm excited about something.",
+        "tones": [
+          {
+            "score": 0.989693,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.974201,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "i figured out how to get you to accept an open ended answer and not get derailed by another intent.",
+        "tones": [
+          {
+            "score": 0.920855,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "i'm grateful that nicole suggested sys.anytrying suggested trying sys.any.",
+        "tones": [
+          {
+            "score": 0.75761,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.978587,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "hanging out at school.",
+        "tones": []
+      },
+      {
+        "sentence_id": 11,
+        "text": ", excited, sys.any worked\u00df\u00df\u22117-min-workout-starti wanna work out.",
+        "tones": [
+          {
+            "score": 0.845725,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.801827,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "i need to work out.",
+        "tones": [
+          {
+            "score": 0.955584,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.994057,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "i feel groggy.",
+        "tones": [
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "my brain feels foggy.",
+        "tones": [
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 15,
+        "text": "i feel blah.",
+        "tones": [
+          {
+            "score": 0.984352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 16,
+        "text": "i need to exercise.",
+        "tones": []
+      },
+      {
+        "sentence_id": 17,
+        "text": "i want to exercise.",
+        "tones": []
+      },
+      {
+        "sentence_id": 18,
+        "text": "help me exercise.",
+        "tones": []
+      },
+      {
+        "sentence_id": 19,
+        "text": "i can't concentrate.",
+        "tones": [
+          {
+            "score": 0.955445,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 20,
+        "text": "help me work out.",
+        "tones": [
+          {
+            "score": 0.97759,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.997482,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 21,
+        "text": "i need to wake up.",
+        "tones": []
+      },
+      {
+        "sentence_id": 22,
+        "text": "help me\u00e5help me wake up.",
+        "tones": []
+      },
+      {
+        "sentence_id": 23,
+        "text": "i feel sluggish.",
+        "tones": [
+          {
+            "score": 0.916667,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 24,
+        "text": "7-min-workout\u2020dialogflow set context.",
+        "tones": [
+          {
+            "score": 0.634393,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.506763,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 25,
+        "text": "let\u00dfarrayletjavascript array of variables.",
+        "tones": [
+          {
+            "score": 0.984352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 26,
+        "text": "no more.",
+        "tones": []
+      },
+      {
+        "sentence_id": 27,
+        "text": "Great job1 Make sure to hydrate!Be7-min-workout-continue.",
+        "tones": [
+          {
+            "score": 0.844926,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.92125,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-17T18:27:54.742422",
+    "unix_time": 1539815274.742422,
+    "word_count": 146,
+    "uniqueword_count": 84,
+    "uniqueword_ratio": 0.5753424657534246,
+    "char_count": 630,
+    "backspace_count": 256,
+    "avg_dwelltime": 0.08775152937493101,
+    "avg_flighttime": 0.21616830331751466
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.651891,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.857009,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u2020why don't my intents show up in google assistant integration test.",
+        "tones": [
+          {
+            "score": 0.703409,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "\u2211intents missing .",
+        "tones": [
+          {
+            "score": 0.777103,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.982476,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "help me exercise.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "7-mini feel sluggish.",
+        "tones": [
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "help me exercise.",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "help me exercise.",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "\u2211\u2211help me exercise.",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "Your idea about the three-part exercise intent worked tooyes.",
+        "tones": [
+          {
+            "score": 0.901894,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.5538,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "_I just gave them all the same context and it worked like a charm. .",
+        "tones": [
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "I'm so excited1.",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "git status.",
+        "tones": [
+          {
+            "score": 0.579367,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "git add -A. git commit -m \"fixvoice assistant, ml vizno.",
+        "tones": [
+          {
+            "score": 0.618451,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "git push.",
+        "tones": []
+      },
+      {
+        "sentence_id": 13,
+        "text": "\u2211i can't.",
+        "tones": []
+      },
+      {
+        "sentence_id": 14,
+        "text": "it blinded me.",
+        "tones": []
+      },
+      {
+        "sentence_id": 15,
+        "text": "all of nicole's suggestions worked so easily.",
+        "tones": [
+          {
+            "score": 0.751512,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 16,
+        "text": "the most crazy thing.",
+        "tones": [
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 17,
+        "text": "also, just saw this nietzche quote and thought of yoeie.",
+        "tones": [
+          {
+            "score": 0.625601,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.928936,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 18,
+        "text": "\u2211\u2020routins for\u00e5actions on google routines.",
+        "tones": []
+      },
+      {
+        "sentence_id": 19,
+        "text": "-how can models continuously learn from mistakes.",
+        "tones": [
+          {
+            "score": 0.93884,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 20,
+        "text": "s  factions on google trigger an intent at a certain time.",
+        "tones": [
+          {
+            "score": 0.952441,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.96597,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 21,
+        "text": "i want to add to my gratitude log.",
+        "tones": [
+          {
+            "score": 0.785456,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 22,
+        "text": "i'm grateful for the confidence of my peerscthat people believe in me.",
+        "tones": [
+          {
+            "score": 0.929932,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.825035,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.788547,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 23,
+        "text": "i'm grateful that people believe in me.",
+        "tones": [
+          {
+            "score": 0.819284,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.920855,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-17T19:27:56.323851",
+    "unix_time": 1539818876.323851,
+    "word_count": 141,
+    "uniqueword_count": 89,
+    "uniqueword_ratio": 0.6312056737588653,
+    "char_count": 612,
+    "backspace_count": 181,
+    "avg_dwelltime": 0.08399654547803619,
+    "avg_flighttime": 0.1895026741332786
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.729916,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.762626,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "i'm grateful for something.",
+        "tones": [
+          {
+            "score": 0.934201,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.984352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "What are you grateful fo\u00e7.",
+        "tones": [
+          {
+            "score": 0.870439,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "\u2211i'm grateful for something\u00e5i want to add to the gratitude log.",
+        "tones": [
+          {
+            "score": 0.938245,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "i'm grateful that people believe in me.",
+        "tones": [
+          {
+            "score": 0.819284,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.920855,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "What are you grateful for?. add to the gratitude log.",
+        "tones": [
+          {
+            "score": 0.963736,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "i'm grateful that people believe in me.",
+        "tones": [
+          {
+            "score": 0.819284,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.920855,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "\u00e7Of course I do .",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "I'm trying to look into this routines/daily updates feature, but the documentation for both instructs me to go to Gratitude ExerciseGood Things Exercised\u2211\u2211 Do you want to add another/ask3.5.",
+        "tones": [
+          {
+            "score": 0.687312,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "focuslife support bot. yesYou can tell me something else you're grateful for, or you can tell me to sGreat job1\u00dfyou're done\u00df\u00dfi'me done.",
+        "tones": [
+          {
+            "score": 0.786991,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "that's it.",
+        "tones": []
+      },
+      {
+        "sentence_id": 10,
+        "text": "add to my gratitude log.",
+        "tones": [
+          {
+            "score": 0.874333,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "i'm grateful for isabella checking in on me while on vacation.",
+        "tones": [
+          {
+            "score": 0.886172,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "i'm grateful for my friends at ITP. \u2211sfOf course I do .",
+        "tones": [
+          {
+            "score": 0.92309,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "\u2211\u2020routine suggestions developer preview actions on google.",
+        "tones": [
+          {
+            "score": 0.681699,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-17T20:27:57.381986",
+    "unix_time": 1539822477.381986,
+    "word_count": 111,
+    "uniqueword_count": 52,
+    "uniqueword_ratio": 0.46846846846846846,
+    "char_count": 468,
+    "backspace_count": 101,
+    "avg_dwelltime": 0.0812372726854773,
+    "avg_flighttime": 0.16321922169132852
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.687835,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.956097,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "So I followed the Routines documentation and enabled \"automatic discovery flow\", and spent a lot of time trying to figure out how to trigger it from the test app.",
+        "tones": [
+          {
+            "score": 0.699729,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Then I saw this message at the top of the page:.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "\u00e7\u221aIs there a workaround/ Or some other option I could try/ \u2020f.",
+        "tones": [
+          {
+            "score": 0.99249,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "lol you're just speaking from the depths of your greatest pains.",
+        "tones": [
+          {
+            "score": 0.659317,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.786991,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "but are on the path of your greatest joys.",
+        "tones": [
+          {
+            "score": 0.936802,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "long day.",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "florence and the machine\u2020florence\u2020feed.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-17T22:20:30.227799",
+    "unix_time": 1539829230.227799,
+    "word_count": 68,
+    "uniqueword_count": 50,
+    "uniqueword_ratio": 0.7352941176470589,
+    "char_count": 258,
+    "backspace_count": 88,
+    "avg_dwelltime": 0.09277544378890772,
+    "avg_flighttime": 0.18466909702231243
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.671372,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "still tired and lazy.",
+        "tones": [
+          {
+            "score": 0.755949,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "leisure, feedly, resting.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "leisure, feedly, resting.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-17T23:20:35.260867",
+    "unix_time": 1539832835.260867,
+    "word_count": 10,
+    "uniqueword_count": 8,
+    "uniqueword_ratio": 0.8,
+    "char_count": 44,
+    "backspace_count": 2,
+    "avg_dwelltime": 0.11844564731730971,
+    "avg_flighttime": 0.1993252815622272
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.819293,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "cha cha\u2211\u2020hunger how many have to die.",
+        "tones": [
+          {
+            "score": 0.85525,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.866237,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "this is so strange\u2211\u2211\u2020ACLU.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "still tired and lazy.",
+        "tones": [
+          {
+            "score": 0.755949,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "i should just go to sleep.",
+        "tones": [
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "wThe Scripps Howard Foundatw wf \u03a9(be of use to humanityrelative I'm\u03a9.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-18T00:20:42.218851",
+    "unix_time": 1539836442.218851,
+    "word_count": 25,
+    "uniqueword_count": 22,
+    "uniqueword_ratio": 0.88,
+    "char_count": 89,
+    "backspace_count": 58,
+    "avg_dwelltime": 0.13949603126162574,
+    "avg_flighttime": 0.3655805261680364
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.524598,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.704429,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.678343,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        },
+        {
+          "score": 0.86141,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "affinitHaving had an  how commercial the work waLooking for a skill that might be of relative benefit to humanity I indulged my long-held yet inexplicable affinity for dataand t.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "This led me down a rabbithole of digging around in public datasets for topics that I c. that bega, to graduate school, where I'm currently collecting, cleaning, analyzing, and visualizing my own personal data, as well as using it to train machine learning models.=",
+        "tones": [
+          {
+            "score": 0.838593,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "0=/scraping, ww\u03a9 , scraping,It's really not the type of work people come to ITP to do_in fact, several of my classmates are trying to leave it behind.",
+        "tones": [
+          {
+            "score": 0.513225,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.711887,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "While my peers are experimenting in AR, VR, =wtaudio-visual expres/VR\u03a9\u03a9orthimically generate and/or  environments 3-d printing and new-fangled fabrication other techniquesnew fang.",
+        "tones": [
+          {
+            "score": 0.636458,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "and incongruouswwww\u00dfte\u03a9new forms of wi wwtcame heretto grad school/ I'm digging myself further into this data science-y rabbit hole: teaching myself Python and its Pandas, Numpy, Scikit Learn modules2w by\u03a9\u03a9've been doing nothing but work with data.www\u03a9\u03a9t\u221a\u03a9\u221a. .",
+        "tones": [
+          {
+            "score": 0.505751,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "have beevetaught, scraped my online data to see what insights it holds on my history with depression, built an entire system of trackers to collect data on mood-related metr and held, and cleaned wtif it could tell the story of my wouldwwtcould tell the story of my depression and the \u00dfeventual recoverymywwtstruggle\u03a9struggle with 3. morriting a cover letter for propublica.",
+        "tones": [
+          {
+            "score": 0.90577,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "True\u00df, and transformed various 40+tthis data in countless ways in an attempt to find answers..",
+        "tones": [
+          {
+            "score": 0.544426,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.615352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.868982,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "I came tITP to look for answers to my own questipersonalspecifically w\u03a9with the intentionof to perhaps impossible questionsthis intention.",
+        "tones": [
+          {
+            "score": 0.96251,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "I wand new forms of creative expression in general, instead and proddedI came to ITP wtI came to ITP because I believed technology and data could help me, and I'll leave ITP with largely self-taught lessons on how data can help others as well.",
+        "tones": [
+          {
+            "score": 0.675548,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.776575,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "technology andw\u00dfwwtideaswt personall The reason why I'm interested in the Data Reporting Fellowship at ProPublica is because wts.",
+        "tones": [
+          {
+            "score": 0.724236,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "wwtis because ProPublica already does this to a scale onwtthat's just stunningwwwteven more .",
+        "tones": [
+          {
+            "score": 0.716301,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.589295,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-18T01:20:43.393142",
+    "unix_time": 1539840043.393142,
+    "word_count": 252,
+    "uniqueword_count": 135,
+    "uniqueword_ratio": 0.5357142857142857,
+    "char_count": 1063,
+    "backspace_count": 685,
+    "avg_dwelltime": 0.0935398489279273,
+    "avg_flighttime": 0.2009674821970971
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.508687,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.660303,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.621575,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "-flickr/ig analysis into one post for propublicasf\u00df\u2211populist, applying for the Data Reporting Fellowship at ProPublicaw\u00dfwwwttrul, and in an industry that needs reliable \u2020truth to.",
+        "tones": [
+          {
+            "score": 0.589295,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "information tomore than ever in order to speak truth to po and critical perspectiveer s to combat viral misinformation as well as misinformationwtwtand data  and datawtI'd love to be a Data Reporting Felw\u00dftthese tools t on behalf of our country's most vulnerable,wt in opposition to our country's most powerful,wrtto \u00df\u2211g,wwpandemictpandemictthe energy, experience, andforwtto make these tools helpwreally tand \u03a9\u00df In an era \u2020\u2211.",
+        "tones": [
+          {
+            "score": 0.80836,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "0== and inscrutablewinscrutablew\u00dftpassion, use ethestswhere I feel helpless on a dhelpless to fight w3.",
+        "tones": [
+          {
+            "score": 0.556207,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "still focused.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "finishing up this cover letter.",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "unwaveringly wtthese constant and flag and flagrant self-serving insolence in our leadershipinsolence\u2020m-w.",
+        "tones": [
+          {
+            "score": 0.589295,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.509368,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-18T02:40:04.445293",
+    "unix_time": 1539842791.176589,
+    "word_count": 92,
+    "uniqueword_count": 66,
+    "uniqueword_ratio": 0.717391304347826,
+    "char_count": 386,
+    "backspace_count": 216,
+    "avg_dwelltime": 0.09158922409958192,
+    "avg_flighttime": 0.22007604315292142
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.673712,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.585508,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.883574,
+          "tone_id": "confident",
+          "tone_name": "Confident"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "insolencepowerless, ProPublica's work is empowering because it shows that wdemonstrates that information can also be a source of power. is also \u00df\u00e5\u00e7\u02dc\u221awcs2\u00df\u00e7\u2211\u2020coders. getting ready to leave for class.",
+        "tones": [
+          {
+            "score": 0.532616,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "washing up, cooking.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "yes of course, why?. sssf\u2020new instagram \u00e5beautiful soup instagram dom tree.",
+        "tones": [
+          {
+            "score": 0.748049,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.913755,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-18T11:21:49.452541",
+    "unix_time": 1539876109.452541,
+    "word_count": 38,
+    "uniqueword_count": 33,
+    "uniqueword_ratio": 0.868421052631579,
+    "char_count": 153,
+    "backspace_count": 26,
+    "avg_dwelltime": 0.1187722040194329,
+    "avg_flighttime": 0.2643455642920274
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.959646,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "just got to school.",
+        "tones": [
+          {
+            "score": 0.984352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "\u2020terminal move file tomv geckodriver.exe",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "~/usr/local/bin?.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-18T17:43:48.638438",
+    "unix_time": 1539899028.638438,
+    "word_count": 16,
+    "uniqueword_count": 15,
+    "uniqueword_ratio": 0.9375,
+    "char_count": 91,
+    "backspace_count": 67,
+    "avg_dwelltime": 0.11884360282849042,
+    "avg_flighttime": 0.3485594395668276
+  },
+  {
+    "document_tone": {
+      "tones": []
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "for img in imgs:.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "second favorite.",
+        "tones": [
+          {
+            "score": 0.678224,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "not sure, took a nap but still have a headache.",
+        "tones": [
+          {
+            "score": 0.589796,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          },
+          {
+            "score": 0.650466,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "\u2211\u2020dialogflow fulfillment reading from firebase database.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "real time database.",
+        "tones": [
+          {
+            "score": 0.942582,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-18T18:43:49.729882",
+    "unix_time": 1539902629.729882,
+    "word_count": 27,
+    "uniqueword_count": 23,
+    "uniqueword_ratio": 0.8518518518518519,
+    "char_count": 136,
+    "backspace_count": 43,
+    "avg_dwelltime": 0.11057627293252453,
+    "avg_flighttime": 0.34739153050539784
+  },
+  {
+    "document_tone": {
+      "tones": []
+    },
+    "sentences_tone": [],
+    "time": "2018-10-18T18:43:50.707951",
+    "unix_time": 1539902630.707951,
+    "word_count": 2,
+    "uniqueword_count": 1,
+    "uniqueword_ratio": 0.5,
+    "char_count": 6,
+    "backspace_count": 8,
+    "avg_dwelltime": 0.1203847120678614,
+    "avg_flighttime": 0.3141163190205892
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.56476,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.767279,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [],
+    "time": "2018-10-18T23:43:50.707951",
+    "unix_time": 1539920630.707951,
+    "word_count": 63,
+    "uniqueword_count": 52,
+    "uniqueword_ratio": 0.825396825396825,
+    "char_count": 287,
+    "backspace_count": 65,
+    "avg_dwelltime": 0.10826870302359264,
+    "avg_flighttime": 0.20572892499322643
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.667666,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.56785,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.647781,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u2211\u2020equity research .",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "florence  should i do a 45-minute talk at the nyu tech summit.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "s    f                      3NoneNoneNon3.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "trying to do some work.",
+        "tones": [
+          {
+            "score": 0.991756,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "errands, schoolwork.",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "\u2020then() throw.",
+        "tones": [
+          {
+            "score": 0.920855,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "throw new Error(\"no good things\u00dfsnapshot\u00df.",
+        "tones": [
+          {
+            "score": 0.620279,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "\u00df\u00dfnpm i -g firebase-tools.",
+        "tones": [
+          {
+            "score": 0.701145,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "i need encouragement.",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "encourage me.",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "remind me of a good thing.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.620279,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "remind me how good my life is.",
+        "tones": [
+          {
+            "score": 0.836695,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.560098,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "i want encouragement.",
+        "tones": []
+      },
+      {
+        "sentence_id": 13,
+        "text": "give me encouragement.",
+        "tones": []
+      },
+      {
+        "sentence_id": 14,
+        "text": "remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 15,
+        "text": "\u2020the end of love .",
+        "tones": [
+          {
+            "score": 0.834884,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 16,
+        "text": "\u2211\u2020ship to wreck.",
+        "tones": [
+          {
+            "score": 0.72815,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-19T00:49:53.767904",
+    "unix_time": 1539924593.767904,
+    "word_count": 70,
+    "uniqueword_count": 47,
+    "uniqueword_ratio": 0.6714285714285714,
+    "char_count": 287,
+    "backspace_count": 101,
+    "avg_dwelltime": 0.1106507574613261,
+    "avg_flighttime": 0.27214677439919677
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.57077,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.62861,
+          "tone_id": "anger",
+          "tone_name": "Anger"
+        },
+        {
+          "score": 0.91594,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "listening to florence and the machine lol.",
+        "tones": [
+          {
+            "score": 0.730038,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "schoolwork, leisure.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "something in your voice.",
+        "tones": [
+          {
+            "score": 0.984352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "reminded me of someone.",
+        "tones": [
+          {
+            "score": 0.984352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "i used to be.",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "before i started talking to who \u00e5\u00e7\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8.",
+        "tones": [
+          {
+            "score": 0.500681,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "XuNWhat are suggested \u00e5parameter\u00e5What are the parameters for the presentation/ Anything in particular I should include/discuss/Hi Tim,.",
+        "tones": [
+          {
+            "score": 0.75152,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.842108,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "Thanks so minformation!",
+        "tones": [
+          {
+            "score": 0.608851,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "Regretfully, I was busy with midterms this week and didn't see this e-mail until now.",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "I just submitted the form_sorry for any inconve caused by my tar.",
+        "tones": [
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.620279,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "tardinessapologie.",
+        "tones": []
+      },
+      {
+        "sentence_id": 11,
+        "text": "ny equipment, as I can rentPlease let me know if anything else is needed from me at this time, and when you have more information any updates as they arise.. thanks a lot.",
+        "tones": [
+          {
+            "score": 0.709321,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.722704,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "yan lecun better come to my fucking presentationif my presentation has to be 45 minutes, yan lecun better fucking be there.",
+        "tones": [
+          {
+            "score": 0.867077,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "\u2211register for hk conference\u00df\u00df.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-19T01:50:02.390284",
+    "unix_time": 1539928202.390284,
+    "word_count": 116,
+    "uniqueword_count": 80,
+    "uniqueword_ratio": 0.6896551724137931,
+    "char_count": 478,
+    "backspace_count": 133,
+    "avg_dwelltime": 0.08151052771888165,
+    "avg_flighttime": 0.16689615764510335
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.652187,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.706659,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "depression wore me .",
+        "tones": [
+          {
+            "score": 0.95031,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "like a pair of shoes.",
+        "tones": [
+          {
+            "score": 0.822231,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "but it made me stronger too.",
+        "tones": [
+          {
+            "score": 0.67101,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "and i loved her.",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "i throw myself completel.",
+        "tones": [
+          {
+            "score": 0.582759,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "i loved hershesh .",
+        "tones": [
+          {
+            "score": 0.991342,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "just enjoying my night.",
+        "tones": [
+          {
+            "score": 0.811109,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.984352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "schoolwork, leisure.",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "utterl that's accessible to all people relentlewwamonstwwtofmany of usand myopia .",
+        "tones": [
+          {
+            "score": 0.849827,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "I'm fascinated by the ways in which journalism is evolving to keep up with the wtby hohasedway wit ever-changing ways we consume media these days, and am excited how 0= But data is nothing without wwtmeaningless without wwt\u2211\u2211.",
+        "tones": [
+          {
+            "score": 0.689138,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "everything i do these days.",
+        "tones": [
+          {
+            "score": 0.583603,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "is for herall\u03a9\u03a9.",
+        "tones": []
+      },
+      {
+        "sentence_id": 12,
+        "text": "though i wouldn't know.",
+        "tones": [
+          {
+            "score": 0.982476,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "what to say anymorI know all too well how meaningless data is without interpretation \u2020m-w.",
+        "tones": [
+          {
+            "score": 0.727798,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.781949,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-19T02:50:12.762840",
+    "unix_time": 1539931812.76284,
+    "word_count": 92,
+    "uniqueword_count": 66,
+    "uniqueword_ratio": 0.717391304347826,
+    "char_count": 389,
+    "backspace_count": 160,
+    "avg_dwelltime": 0.09491689933114358,
+    "avg_flighttime": 0.20598599643123394
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.510916,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "keen kee to bring it to life\u2211, and it would be an honor to wt\u00e7\u221a\u00e7\u221a1\u00df2\u00df\u2211\u019220002\u00df\u00df_. \u00e7\u221aBut data is meaninglesslearn how to do so from ProPublica's data teams. .",
+        "tones": [
+          {
+            "score": 0.650221,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "Coming from a creative tradition, wt I believe my creative background, experience in the media industry, and tireless data-driven graduate work makes me an excellent candidate for this fellowship, and I would greatly appreciate your consideration.ww\u00df",
+        "tones": [
+          {
+            "score": 0.614029,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "w0==\u00dftperformanc tand ww\u03a9\u00dfw\u001f\u001fpropublica.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "\u2020the outline.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "\u2020data mining.",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "super sleepy.",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "my brain refuses to turn off.",
+        "tones": [
+          {
+            "score": 0.58492,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "working, errands.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-19T09:50:41.126386",
+    "unix_time": 1539957041.126386,
+    "word_count": 69,
+    "uniqueword_count": 51,
+    "uniqueword_ratio": 0.7391304347826086,
+    "char_count": 309,
+    "backspace_count": 90,
+    "avg_dwelltime": 0.10743530135422051,
+    "avg_flighttime": 0.2311126387560809
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.751838,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.920133,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "sf\u0192ship\u2020black clothes dye.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "just getting up.",
+        "tones": [
+          {
+            "score": 0.994446,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "cooking, leisure, email, feedly.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "black clothes dye.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "\u2020dialogflow fulfillments repeat intent.",
+        "tones": [
+          {
+            "score": 0.920855,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-19T12:39:40.823466",
+    "unix_time": 1539967180.823466,
+    "word_count": 16,
+    "uniqueword_count": 14,
+    "uniqueword_ratio": 0.875,
+    "char_count": 83,
+    "backspace_count": 41,
+    "avg_dwelltime": 0.10769466054154145,
+    "avg_flighttime": 0.3014231878414489
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.663111,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.884138,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "yeah i think so.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "yes continue.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "keep going.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "\u2020fulfillment change context.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "pretty good.",
+        "tones": [
+          {
+            "score": 0.922182,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.998976,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "florence is lifting my spirits lol.",
+        "tones": [
+          {
+            "score": 0.683227,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "washing up, schoolwork.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-19T13:39:47.764492",
+    "unix_time": 1539970787.764492,
+    "word_count": 30,
+    "uniqueword_count": 27,
+    "uniqueword_ratio": 0.9,
+    "char_count": 146,
+    "backspace_count": 56,
+    "avg_dwelltime": 0.08682051685548597,
+    "avg_flighttime": 0.27727394580841064
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.683801,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.667625,
+          "tone_id": "fear",
+          "tone_name": "Fear"
+        },
+        {
+          "score": 0.743741,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "i want to add to the gratitude log.",
+        "tones": [
+          {
+            "score": 0.785456,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "si'm grateful to live in new york.",
+        "tones": [
+          {
+            "score": 0.818267,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "add to the gratitude log.",
+        "tones": [
+          {
+            "score": 0.874333,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "i'm grateful to live in new york.",
+        "tones": [
+          {
+            "score": 0.879845,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "i don't know where putney is but it sounds silly and let's go.",
+        "tones": [
+          {
+            "score": 0.642915,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "i might actually be off the hook on giving a talk but i might have to make an appearance also mightat their gallery that i'm exhibiting at.",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "so don't have to g\u00e5so i don't need your moral support anymore :P.",
+        "tones": [
+          {
+            "score": 0.704642,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "i just need your morale pie-eating support.",
+        "tones": [
+          {
+            "score": 0.91961,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "omg so exciting11.",
+        "tones": [
+          {
+            "score": 0.792262,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "\u2211\u00f7breathing-exercisebreathing-exercise8i feel anxious.",
+        "tones": [
+          {
+            "score": 0.839854,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          },
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "i fe\u00e5i feel nervous.",
+        "tones": [
+          {
+            "score": 0.943619,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          },
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "i feel restless.",
+        "tones": [
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "i'm nervous about something.",
+        "tones": [
+          {
+            "score": 0.953302,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          },
+          {
+            "score": 0.996505,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "help me calm down.",
+        "tones": [
+          {
+            "score": 0.701542,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "i need to calm down.",
+        "tones": []
+      },
+      {
+        "sentence_id": 15,
+        "text": "i want to do a breathing exercise.",
+        "tones": []
+      },
+      {
+        "sentence_id": 16,
+        "text": "help me relax.",
+        "tones": [
+          {
+            "score": 0.848924,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 17,
+        "text": "help me do a breathing exercise.",
+        "tones": []
+      },
+      {
+        "sentence_id": 18,
+        "text": "help me do a breathing exercise.",
+        "tones": []
+      },
+      {
+        "sentence_id": 19,
+        "text": "Okay, l + breathing.",
+        "tones": []
+      },
+      {
+        "sentence_id": 20,
+        "text": "help me do a breathing exercise.",
+        "tones": []
+      },
+      {
+        "sentence_id": 21,
+        "text": "help me do a breathing exercise.",
+        "tones": []
+      },
+      {
+        "sentence_id": 22,
+        "text": "Great job1Great job1i want to do a breathing exercise.",
+        "tones": [
+          {
+            "score": 0.754447,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 23,
+        "text": "still pretty good, focused.",
+        "tones": [
+          {
+            "score": 0.879294,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.984352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 24,
+        "text": "working on life support assistant.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-19T15:08:34.714268",
+    "unix_time": 1539976114.714268,
+    "word_count": 167,
+    "uniqueword_count": 77,
+    "uniqueword_ratio": 0.46107784431137727,
+    "char_count": 663,
+    "backspace_count": 194,
+    "avg_dwelltime": 0.08810673794224716,
+    "avg_flighttime": 0.16795669386050846
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.70215,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.624321,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "encourage me.",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "saic transcript.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "\u00e7\u00e7\u221atranscript request through clearinghouseHi there,.",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "I submitted a request for my SAIC transcript through Clearinghouse last night.",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "Just wanted to confirm that you , and if it's at all possible to have it approved today.",
+        "tones": [
+          {
+            "score": 0.855572,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.58393,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "I would really apprecia1.",
+        "tones": [
+          {
+            "score": 0.920855,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "Thanks so muc\u2211remind me of good things.",
+        "tones": [
+          {
+            "score": 0.913334,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "encourage me.",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "how to read from firebasereal time database in dialogflow fulfillment.",
+        "tones": [
+          {
+            "score": 0.506545,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "encourage me.",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "//\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u00b8\u00b8\u00b8\u03a9\u03a9\u03a9\u03a9\u00b8\u00b8\u00b8\u03a9read from firebase real time database in fulfillments.",
+        "tones": [
+          {
+            "score": 0.626997,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.618451,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "encourage me.",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 15,
+        "text": "encourage me.",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-19T16:59:00.072840",
+    "unix_time": 1539982740.07284,
+    "word_count": 83,
+    "uniqueword_count": 45,
+    "uniqueword_ratio": 0.5421686746987951,
+    "char_count": 363,
+    "backspace_count": 100,
+    "avg_dwelltime": 0.10568750484056207,
+    "avg_flighttime": 0.2448051963840519
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.6992,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.855265,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "Thank you so much1    3.5.",
+        "tones": [
+          {
+            "score": 1.0,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "got food with sandy, cleaning out my to do list.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "schoolwork, errands, with friends, eating.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "wordpressadd to the gratitude log.",
+        "tones": [
+          {
+            "score": 0.93352,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "i'm grateful that dawn wished me luck at mozfest.",
+        "tones": [
+          {
+            "score": 0.848334,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "i'm grateful that my transcript was sent in time.",
+        "tones": [
+          {
+            "score": 0.827851,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "I was a late adapter of the smartphone; my first was a Christmas present from my parents in 2012.",
+        "tones": [
+          {
+            "score": 0.656322,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "Since then, Naturally, I became immediately dependent on this device, and since then it has collected an unfathomable amount of data on me.",
+        "tones": [
+          {
+            "score": 0.866924,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "As an exercise in silver linings, Despite my initial resista be the steady parade of Samsung Galaxies that have marched through my lifeceon i this ongoing project is an attempt to reclaim my own records in order to reconstruct my past life, shed insight on a major depressive episode in 2013-2014, and reflect on my eventual recovery.lessons",
+        "tones": [
+          {
+            "score": 0.558981,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.846363,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "learned from it as well as add to .",
+        "tones": [
+          {
+            "score": 0.576083,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.972852,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "\u2211<h3><i>What I wanted to remember</i></h3>.",
+        "tones": [
+          {
+            "score": 0.724236,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-19T17:59:03.260694",
+    "unix_time": 1539986343.260694,
+    "word_count": 143,
+    "uniqueword_count": 92,
+    "uniqueword_ratio": 0.6433566433566433,
+    "char_count": 573,
+    "backspace_count": 348,
+    "avg_dwelltime": 0.0791561954498291,
+    "avg_flighttime": 0.17409231204155529
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.56926,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.782575,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "</p>My first dive waI've been backing up my photos to Flickr since the beginning, and thought that my 20,000+ thisitem dataset would be a good place to stand figured, because I had just moved to NYC and was getting around via hand-drawn mapssomehow with nothing butrelenmy first smartpho my analysis_or, rather, Clarifai's analysis, as I would be running this photoset through the image recognition \u2020clarif.",
+        "tones": [
+          {
+            "score": 0.609703,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.784145,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "computer vision company's API server.\u2211ice.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "working on documentation.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "rate and operations limits, I was only able to get through the first 4000 and last earlitest 4800 photos, ie July 2013-October 2015 and February 2018June 2016-, resepectively. .",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "<<i>Viewing Clarifai's JSON response in the browser.</A",
+        "tones": [
+          {
+            "score": 0.955445,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "v. </p>This would prove to be sufficiently  revealing after visualizing them in d3quickly :. <p></p>What was immediately obvious was that I photographed way fewer \"concepts\" in 2014 than in 2017.",
+        "tones": [
+          {
+            "score": 0.545236,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.592138,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "I also took fewer photos.. <p>>Another striking difference is that the concept \"no person\" is by far the most common concept of the 2014 photoset, while \"people\" is the most common for 2017.",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "Looking at the top 10 concepts for each set, one could definitely speculate that I was much lonelier when when I first moved here, which explains a lrin the first couple years myin NY, which coincides with my  depressive episode.f.",
+        "tones": [
+          {
+            "score": 0.683186,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "<pchart above did its job as an abstract overview of the data, I wanted the photos themselves to tell the story; so on my click, I had each column spit out their corresponding photos:</p>.",
+        "tones": [
+          {
+            "score": 0.571567,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "<p></p>What I wanted others to remember... about me-201.",
+        "tones": [
+          {
+            "score": 0.529588,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": ">At this point, Clarifai had granted me a 100,000 operation credit, so I was able to use both the .",
+        "tones": [
+          {
+            "score": 0.901894,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": ", on my entire Instagr ra tests to see if their markers corresponded with my depressive behavior as well,.</<p>throughout the years .",
+        "tones": [
+          {
+            "score": 0.746925,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "\u221a\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00e7\u00e7\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u03a9\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u00b8\u221a\u03a9\u00df\u00e7\u221a\u00e7\u00e7\u2211Mapping as Autobiography<p>Google truly has an enormous amount of data about me_take, for example, this 325MB JSON file on my location history:\u00e7</p>.",
+        "tones": [
+          {
+            "score": 0.746703,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 13,
+        "text": "\u221a\u221aShout-out to emacs for being the only text editor on my computer capable of opening it.<p>The",
+        "tones": []
+      },
+      {
+        "sentence_id": 14,
+        "text": "only way for a human to understand this data was to map it; however...</p>.",
+        "tones": [
+          {
+            "score": 0.855825,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 15,
+        "text": "\u221a\u03a9\u221a\u00e7\u221a...that wasn't going to happen.. <p>To make it easier on the browser, I ended up filtering out the coordinates outside of NYC bounds.",
+        "tones": []
+      },
+      {
+        "sentence_id": 16,
+        "text": "Dividing the data points into arraysGrouping the datapoints into arrays for each year I've been in this city, you get a sense of how much time I actually spent in it:</p>.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-19T18:59:04.332634",
+    "unix_time": 1539989944.332634,
+    "word_count": 330,
+    "uniqueword_count": 172,
+    "uniqueword_ratio": 0.5212121212121212,
+    "char_count": 1351,
+    "backspace_count": 708,
+    "avg_dwelltime": 0.08620276559034558,
+    "avg_flighttime": 0.18983235208186372
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.577668,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.526725,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.697753,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.527829,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "<p>\u00e7\u221aT2018/soul-searching after my run-in with depressio (ie, )</p>.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "\u221a\u00e7\u221a\u00e7\u221a2013 location history.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "<p>Relative to the later years, 2013's coordinates were limited to specific areas: 1) Jackson Heights, where I lived; 2) Midtown, where I worked,,3) mostly concentrated in\u2020xulocation (both in Midtown West and Bryant Pa West and Bryant ParkLower Manhattan, where I hung out, 4) Long Island City, where my only friend lived, and 5) Greenpoint/Williamsburg, where I dated \u2211guys.</p>.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "<p>saw a much greaterrange of motion\u00e7\u00e7.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "4..  as I began to crawl out of depression, in particular pretty thorough exploration of my home boroug:, as well as Manhattan.3.",
+        "tones": [
+          {
+            "score": 0.698304,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.952999,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "5\u00e7\u221aEven though it contains a third of the coordinates, 2015's location history is still far more spread out than 2013's.",
+        "tones": [
+          {
+            "score": 0.506951,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.840825,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "due to around six months of total travelabout\u00e7.",
+        "tones": [
+          {
+            "score": 0.895415,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.681699,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "\u221a minds matter.",
+        "tones": [
+          {
+            "score": 0.579367,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "I  I also began volunteering in Chelseawas still working in Bryant Park, but started going to Chelsea every week to volunteer6\u221aI began doing regular but short-term projects at offices in SoHo and \u2020maps.",
+        "tones": [
+          {
+            "score": 0.607647,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": ".\u00e7\u221aI",
+        "tones": []
+      },
+      {
+        "sentence_id": 10,
+        "text": "was still traveling regularly in 2016, very but this year saw perhaps the widest spread of coordinates still  some of  thus far_I was feeling decidedly better.\u00e7.",
+        "tones": [
+          {
+            "score": 0.507005,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.740384,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "7I worked full-time for most of 2017 in Midtown East, bbut was pretty active around ftown with new friends and boyfriends.",
+        "tones": [
+          {
+            "score": 0.698411,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.876534,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "bloomingdales.",
+        "tones": []
+      },
+      {
+        "sentence_id": 13,
+        "text": "haland started grad school in Greenwich Village the first during the second half, a (one of which had car, which explains the illuminated BQE.sudden.",
+        "tones": []
+      },
+      {
+        "sentence_id": 14,
+        "text": "I generally this year\u00df\u00df/ITP/data_mining_myself.",
+        "tones": [
+          {
+            "score": 0.620279,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.75152,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-19T19:59:05.593116",
+    "unix_time": 1539993545.593116,
+    "word_count": 189,
+    "uniqueword_count": 106,
+    "uniqueword_ratio": 0.5608465608465608,
+    "char_count": 772,
+    "backspace_count": 497,
+    "avg_dwelltime": 0.09063046060280842,
+    "avg_flighttime": 0.2380559118335597
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.660584,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.675784,
+          "tone_id": "confident",
+          "tone_name": "Confident"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u03a9height1\u00df\u00df\u0192the period from.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "still focused.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "still working on documentationation.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "\u00df\u00df\u2211While not advisable, you can try to load this visualization my location historyhere.</p><a",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "href=\"\u00e7\u2020\u221alocatin.",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "<p>You can view the visualizations here; unfortunately, Instagram has since change their DOM s\u2020instagram graph gl.",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "d their beautiful soup.",
+        "tones": [
+          {
+            "score": 0.884434,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "switched to Facebook's Graph API since the last time I scraped my account, so all of the photo links are broken.\u2211\u00e7\u00e7<a",
+        "tones": [
+          {
+            "score": 0.560944,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "href=\"\u221a\" target=\"new\"></a>\u00df\u00df\u2211</p>\u00df\u00df.",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "git status.",
+        "tones": [
+          {
+            "score": 0.579367,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "git status.",
+        "tones": [
+          {
+            "score": 0.579367,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "git add -A. git commit -m \"added data mining myself, replaced ig analyzer\".",
+        "tones": [
+          {
+            "score": 0.821913,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.509368,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "git push.",
+        "tones": []
+      },
+      {
+        "sentence_id": 13,
+        "text": "git status.",
+        "tones": [
+          {
+            "score": 0.579367,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "git add -A. git commit -m \"updated life support\".",
+        "tones": [
+          {
+            "score": 0.660207,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 15,
+        "text": "git push.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-19T20:59:06.599488",
+    "unix_time": 1539997146.599488,
+    "word_count": 86,
+    "uniqueword_count": 61,
+    "uniqueword_ratio": 0.7093023255813954,
+    "char_count": 376,
+    "backspace_count": 137,
+    "avg_dwelltime": 0.20061080083822655,
+    "avg_flighttime": 0.2568379512397192
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.523,
+          "tone_id": "anger",
+          "tone_name": "Anger"
+        },
+        {
+          "score": 0.625595,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "schoolwork, leisure, with friends.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "git status.",
+        "tones": [
+          {
+            "score": 0.579367,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "git add -A. git commit -m \"fixed lstm predictor\".",
+        "tones": [
+          {
+            "score": 0.660207,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "git push.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "just saw this and thought of you \u221a. the greater good at berkeley is legit center .",
+        "tones": [
+          {
+            "score": 0.817934,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.822231,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.532616,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "oh yeah sandy and i went out for a drink.",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "sunrise was CLOSED ya filthy liar.",
+        "tones": [
+          {
+            "score": 0.671424,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "yes i'm on the floor tomorrow.",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "what's that face.",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "don't be jealous.",
+        "tones": []
+      },
+      {
+        "sentence_id": 10,
+        "text": "you're the one making out all over the floor with your gf.",
+        "tones": [
+          {
+            "score": 0.80026,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-20T00:15:51.652439",
+    "unix_time": 1540008951.652439,
+    "word_count": 77,
+    "uniqueword_count": 62,
+    "uniqueword_ratio": 0.8051948051948052,
+    "char_count": 304,
+    "backspace_count": 81,
+    "avg_dwelltime": 0.08495904396403046,
+    "avg_flighttime": 0.22547591600765368
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.591753,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.58363,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "drinks and japanese dessert.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "yeah i'll be on the floordebuteathankssssss. i'll be there.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "with a suitcase.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "which i haven't packed yet.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "my flight is at ten so i'll probably leave around 7. omg they were a fucking disaster.",
+        "tones": [
+          {
+            "score": 0.686095,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.873263,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "so i yelled at them and demanded a refund.",
+        "tones": [
+          {
+            "score": 0.506015,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "surprisingly, they issued it and offered a reprint.",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "which are coming next wednesday .",
+        "tones": [
+          {
+            "score": 0.519953,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "there are some useable yeah i was not pleased .",
+        "tones": [
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "hahahaa that's okay... there are some useable ones ... i guess... .",
+        "tones": [
+          {
+            "score": 0.543129,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.968123,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "honestly, i just have high standards because i'm a print designer and am thus totally anal about production quality .",
+        "tones": [
+          {
+            "score": 0.613337,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.848326,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "but i t the nerds at mozilla will even noticebut they do not look very professional.",
+        "tones": [
+          {
+            "score": 0.836791,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.506763,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "ugh no time.",
+        "tones": []
+      },
+      {
+        "sentence_id": 13,
+        "text": "it's fine........... -_-.",
+        "tones": []
+      },
+      {
+        "sentence_id": 14,
+        "text": "yeah that's what i'm bank\u00e5LOLOL.",
+        "tones": []
+      },
+      {
+        "sentence_id": 15,
+        "text": "yeah that's what i'm banking on.",
+        "tones": []
+      },
+      {
+        "sentence_id": 16,
+        "text": "oohh the weather is really nice in london actually.",
+        "tones": [
+          {
+            "score": 0.81375,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.874372,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.842108,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 17,
+        "text": "better than here.",
+        "tones": [
+          {
+            "score": 0.851351,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 18,
+        "text": "i expected it to be cooler and rainy.",
+        "tones": [
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 19,
+        "text": "but it's 60s and sunny.",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 20,
+        "text": "omg give me all your recs please.",
+        "tones": [
+          {
+            "score": 0.92125,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 21,
+        "text": "i'll make my british friend navigate for me so i can mindlessly eatto them for just.",
+        "tones": [
+          {
+            "score": 0.60385,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.615352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 22,
+        "text": "i'm so exced to see hyde park againnnn.",
+        "tones": []
+      },
+      {
+        "sentence_id": 23,
+        "text": "and eat pie111111111.",
+        "tones": []
+      },
+      {
+        "sentence_id": 24,
+        "text": "hyde park is fucking beautiful1.",
+        "tones": [
+          {
+            "score": 0.635282,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 25,
+        "text": "don't pretend like you didn't enjoy it when you were there.",
+        "tones": [
+          {
+            "score": 0.507907,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 26,
+        "text": "i don't know why you're having second thoughts about tokyo.",
+        "tones": []
+      },
+      {
+        "sentence_id": 27,
+        "text": "i've been trying to get out of here literally since i moved here .",
+        "tones": [
+          {
+            "score": 0.654375,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 28,
+        "text": "6 years agyou already know find me a job and i'ld i'll consider it.",
+        "tones": [
+          {
+            "score": 0.560098,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 29,
+        "text": "i've always wanted to live in asia .",
+        "tones": [
+          {
+            "score": 0.92125,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 30,
+        "text": "that shouldn't been our project name.",
+        "tones": []
+      },
+      {
+        "sentence_id": 31,
+        "text": "\u2211it's catchy.",
+        "tones": []
+      },
+      {
+        "sentence_id": 32,
+        "text": "change \u00e5edit our application immediately.",
+        "tones": []
+      },
+      {
+        "sentence_id": 33,
+        "text": "it's ...beautiful.",
+        "tones": [
+          {
+            "score": 0.880435,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 34,
+        "text": "you're definitely going to jp this winter though right/?. we need to \u00e5i need you to take me around tokyo.",
+        "tones": []
+      },
+      {
+        "sentence_id": 35,
+        "text": "omg dream come true.",
+        "tones": [
+          {
+            "score": 0.780539,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.898327,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 36,
+        "text": "i can't wait.",
+        "tones": []
+      },
+      {
+        "sentence_id": 37,
+        "text": "the hk conference ends on the 7th.",
+        "tones": []
+      },
+      {
+        "sentence_id": 38,
+        "text": "i was planning on spending 1.5 weeks in jp.",
+        "tones": []
+      },
+      {
+        "sentence_id": 39,
+        "text": "oi'm not going to force you to play my tour guide the entire time since your parents are there.",
+        "tones": [
+          {
+            "score": 0.707362,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.527318,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 40,
+        "text": "but i also expect you takeyessomg i love asian grandmas are you kidding me.",
+        "tones": [
+          {
+            "score": 0.771533,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.560098,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 41,
+        "text": "wait but wt are your dates?. do y4.5.",
+        "tones": []
+      },
+      {
+        "sentence_id": 42,
+        "text": "had a nice night with sandy.",
+        "tones": [
+          {
+            "score": 0.833546,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 43,
+        "text": "leisure, with friends, errands.",
+        "tones": []
+      },
+      {
+        "sentence_id": 44,
+        "text": "are you around on sunday?. i get in first thing in the morning.",
+        "tones": [
+          {
+            "score": 0.721114,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.716301,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 45,
+        "text": "want to hear about another dumbass thing i did.",
+        "tones": [
+          {
+            "score": 0.5538,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-20T01:15:59.553258",
+    "unix_time": 1540012559.553258,
+    "word_count": 335,
+    "uniqueword_count": 180,
+    "uniqueword_ratio": 0.5373134328358209,
+    "char_count": 1302,
+    "backspace_count": 205,
+    "avg_dwelltime": 0.07954830068433913,
+    "avg_flighttime": 0.15203058171546321
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.541542,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.961693,
+          "tone_id": "confident",
+          "tone_name": "Confident"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "getting tired.",
+        "tones": [
+          {
+            "score": 0.670231,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "have to pack.",
+        "tones": [
+          {
+            "score": 0.992572,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "i... ugh.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "so i trained 3 LSTMs on mood, stress, and fatigue scores.",
+        "tones": [
+          {
+            "score": 0.550927,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "and i'm having them predict on those things in real time as the data comes in.",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "and. in my script..... i accidentally used the mood predictor for EVERY ONE.",
+        "tones": [
+          {
+            "score": 0.775702,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "i loaded all 3 models but i only used ONE FOR ALL OF THEM. it tme an entire week to notice.",
+        "tones": [
+          {
+            "score": 0.649389,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.560098,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.888841,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-20T02:16:21.163900",
+    "unix_time": 1540016181.1639,
+    "word_count": 57,
+    "uniqueword_count": 44,
+    "uniqueword_ratio": 0.7719298245614035,
+    "char_count": 211,
+    "backspace_count": 36,
+    "avg_dwelltime": 0.08151773272491084,
+    "avg_flighttime": 0.16906579933335295
+  },
+  {
+    "document_tone": {
+      "tones": []
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "getting ready for bed.",
+        "tones": [
+          {
+            "score": 0.628433,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "washing up.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-20T08:23:02.100449",
+    "unix_time": 1540038182.100449,
+    "word_count": 11,
+    "uniqueword_count": 11,
+    "uniqueword_ratio": 1.0,
+    "char_count": 44,
+    "backspace_count": 11,
+    "avg_dwelltime": 0.09376433316399069,
+    "avg_flighttime": 0.39516541991435306
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.600879,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.564185,
+          "tone_id": "confident",
+          "tone_name": "Confident"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "yeah the 21st.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "are you back?.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "i can't check in until 2 :(hahaha did that actually happen to you/?. true, they are correlated, so the predictions weren't actually that bad lol.",
+        "tones": [
+          {
+            "score": 0.716022,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "hwoever, the sess\u00e5however, the stress scale was completelstress was on a differentand consistent by 1. which is  big difference since the scale is only 0 -5 .",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "keeps me humble .",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "remind me how good i have it.",
+        "tones": [
+          {
+            "score": 0.860546,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.560098,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "eating breakfast.",
+        "tones": [
+          {
+            "score": 0.595722,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "cooking, eating, errands.",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "\u00e7\u2211\u221a\u2211\u2211\u2211\u2211xujenna@nyu.eduJenna",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "Xuxujenna@nyu.edu\u2211uniHave not attended previouslyHave not previously attended1\u00e7\u221a.",
+        "tones": []
+      },
+      {
+        "sentence_id": 10,
+        "text": "lol\u2020london time zone.",
+        "tones": [
+          {
+            "score": 0.64671,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-20T12:54:07.434821",
+    "unix_time": 1540054447.434821,
+    "word_count": 72,
+    "uniqueword_count": 55,
+    "uniqueword_ratio": 0.7638888888888888,
+    "char_count": 295,
+    "backspace_count": 109,
+    "avg_dwelltime": 0.09363425040862247,
+    "avg_flighttime": 0.20298656798501052
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.900556,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "i'm also free monday and tuesday\u2020cal.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "w. at some point i have to do some work at their coworking space but it's flexible.",
+        "tones": [
+          {
+            "score": 0.723305,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "i should be free wednesdaythursday i signed you up for a movie about \u00e7\u221a\u00e5\u221a.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "\u2211\u00e5otherwise i have a pretty packed schedule the rest of the weekbut let's play it by ear/ .",
+        "tones": [
+          {
+            "score": 0.58393,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "Jenna Xuxujenna@nyu.edu\u2211\u00e5xuj\u00e5xuDid not previously attend\u2211w\u00e7\u221a10am4pm.",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "\u00e7\u221aoops i'm free after 4 on tuesday.",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "freei sent you a ticket to some documentary they're showing but we can do something else.",
+        "tones": [
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "signing up for mozfest events.",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "leisure, errands.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-20T13:54:12.485666",
+    "unix_time": 1540058052.485666,
+    "word_count": 77,
+    "uniqueword_count": 56,
+    "uniqueword_ratio": 0.7272727272727273,
+    "char_count": 283,
+    "backspace_count": 84,
+    "avg_dwelltime": 0.08587012580408455,
+    "avg_flighttime": 0.19941670749449897
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.920133,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "trying to pack up to leave.",
+        "tones": [
+          {
+            "score": 0.641018,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.75152,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "errands, washing up.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-20T15:18:54.266225",
+    "unix_time": 1540063134.266225,
+    "word_count": 11,
+    "uniqueword_count": 9,
+    "uniqueword_ratio": 0.8181818181818182,
+    "char_count": 43,
+    "backspace_count": 29,
+    "avg_dwelltime": 0.09281219486007117,
+    "avg_flighttime": 0.2579652445086874
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.670744,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.635318,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        },
+        {
+          "score": 0.607065,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 2,
+        "text": "remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "let ref =. remind me of good things.",
+        "tones": [
+          {
+            "score": 0.660937,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "update node.",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "brew update node.",
+        "tones": []
+      },
+      {
+        "sentence_id": 6,
+        "text": "\u2211\u2211brew upgrade node.",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "brew upgrade node.",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "\u2020install node.",
+        "tones": [
+          {
+            "score": 0.579367,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "homebrew install node.",
+        "tones": []
+      },
+      {
+        "sentence_id": 10,
+        "text": "brew install node.",
+        "tones": []
+      },
+      {
+        "sentence_id": 11,
+        "text": "chomebrew upgrade node.",
+        "tones": []
+      },
+      {
+        "sentence_id": 12,
+        "text": "loop through .",
+        "tones": []
+      },
+      {
+        "sentence_id": 13,
+        "text": "remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 14,
+        "text": "let randomGoodThing = \u00e7\u00e7\u221a`Here's a good thing from your ln entgood things : ${}`\u00df.",
+        "tones": [
+          {
+            "score": 0.697192,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.716301,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 15,
+        "text": "\u2211\u2211remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 16,
+        "text": "remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 17,
+        "text": "working on life support.",
+        "tones": [
+          {
+            "score": 0.513422,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 18,
+        "text": "remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 19,
+        "text": "remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 20,
+        "text": "i feel demoralized.",
+        "tones": [
+          {
+            "score": 0.931034,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          },
+          {
+            "score": 0.916667,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 21,
+        "text": "conv.ask('Would",
+        "tones": []
+      },
+      {
+        "sentence_id": 22,
+        "text": "you like another/remind me of good things.",
+        "tones": [
+          {
+            "score": 0.764488,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.506763,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.615352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 23,
+        "text": "yes please.",
+        "tones": []
+      },
+      {
+        "sentence_id": 24,
+        "text": "another one.",
+        "tones": []
+      },
+      {
+        "sentence_id": 25,
+        "text": "tell me another one.",
+        "tones": []
+      },
+      {
+        "sentence_id": 26,
+        "text": "tell me more.",
+        "tones": []
+      },
+      {
+        "sentence_id": 27,
+        "text": "encourageHope you feel better!remind me of good things.",
+        "tones": [
+          {
+            "score": 0.854413,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.5538,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 28,
+        "text": "remind me of a good thing.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.620279,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 29,
+        "text": "remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-20T16:18:55.197867",
+    "unix_time": 1540066735.197867,
+    "word_count": 161,
+    "uniqueword_count": 50,
+    "uniqueword_ratio": 0.3105590062111801,
+    "char_count": 617,
+    "backspace_count": 133,
+    "avg_dwelltime": 0.09545293613506929,
+    "avg_flighttime": 0.2538913012585257
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.631306,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.875846,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "remind me of good things.",
+        "tones": [
+          {
+            "score": 0.822716,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.687768,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "i suck.",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "to make the user feel heard// cbt: direction to think abotu it.",
+        "tones": [
+          {
+            "score": 0.672469,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "// deep link to intent .",
+        "tones": [
+          {
+            "score": 0.982476,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "finished my hello computer final.",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "Thanks for thinking of mlooking out for my project11 I'm dying to work with vocal markerstrack vocal markers but haven't had the bandwidth to figure it out, since there's nothing readymade out ther_it's a relatively new finding).",
+        "tones": [
+          {
+            "score": 0.609749,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "Maybe Ellipsis Health will have a demo that I can hack .",
+        "tones": [
+          {
+            "score": 0.786991,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "I love this; \u2020fa.",
+        "tones": [
+          {
+            "score": 0.887264,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 11,
+        "text": "that is so deceitful .",
+        "tones": [
+          {
+            "score": 0.916667,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 12,
+        "text": "i paid to get flown around by finnish people.",
+        "tones": [
+          {
+            "score": 0.856622,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-20T17:23:56.303209",
+    "unix_time": 1540070636.303209,
+    "word_count": 97,
+    "uniqueword_count": 69,
+    "uniqueword_ratio": 0.711340206185567,
+    "char_count": 394,
+    "backspace_count": 152,
+    "avg_dwelltime": 0.08376982769693898,
+    "avg_flighttime": 0.18342759907245637
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.650487,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.687305,
+          "tone_id": "anger",
+          "tone_name": "Anger"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u00df\u00df\u2211finnair is great -_-.",
+        "tones": [
+          {
+            "score": 0.956801,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "american is fine -_- -_- -_-.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "what are we going to eat\u00e5so w\u00e5ugh.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "tell me what we're goingmake me feel better by telling me what we're going to eat ^_^.",
+        "tones": [
+          {
+            "score": 0.584097,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "\u2020mozomfg that looks so good.",
+        "tones": [
+          {
+            "score": 0.83816,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "god \u00e5i'm actually salivating .",
+        "tones": [
+          {
+            "score": 0.647622,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.97759,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          },
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "fuck now i'm hungry.",
+        "tones": [
+          {
+            "score": 0.922593,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          }
+        ]
+      },
+      {
+        "sentence_id": 7,
+        "text": "i looked \u00e5this is after glancing at it for literally 2 seconds.",
+        "tones": []
+      },
+      {
+        "sentence_id": 8,
+        "text": "i closed it immediately after seeing the fish pie.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-20T18:23:57.360961",
+    "unix_time": 1540074237.360961,
+    "word_count": 58,
+    "uniqueword_count": 42,
+    "uniqueword_ratio": 0.7241379310344828,
+    "char_count": 215,
+    "backspace_count": 73,
+    "avg_dwelltime": 0.0848582994158023,
+    "avg_flighttime": 0.16067556596138108
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.532621,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.969945,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "hanging out at school.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "leisure, with friends.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "hahah tofu skins .",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "good memory\u00e5that's quite a memory you have there.",
+        "tones": [
+          {
+            "score": 0.655388,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.762356,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          },
+          {
+            "score": 0.615352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 4,
+        "text": "!",
+        "tones": []
+      },
+      {
+        "sentence_id": 5,
+        "text": "I forgot my power adapter_where's the nearest place I could get one/buypI walked around and none of them had any.",
+        "tones": [
+          {
+            "score": 0.91961,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "What stores nearby would sell them tomorrow/the opstores that were openI'm going to look tomorrow, what stores should I check/\u2020fa.",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "ugh nothing around here is open.",
+        "tones": [
+          {
+            "score": 0.946222,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "would a tesco metro have one/or sainsbury .",
+        "tones": [
+          {
+            "score": 0.88939,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 9,
+        "text": "What about today/ Stores should be open today.",
+        "tones": [
+          {
+            "score": 0.615352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 10,
+        "text": "I just need something nearby because my phone is dead and I won't be able to travel anywhere.\u00e5]\u2020maps.",
+        "tones": [
+          {
+            "score": 0.928936,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-22T12:31:21.644599",
+    "unix_time": 1540207881.644599,
+    "word_count": 85,
+    "uniqueword_count": 62,
+    "uniqueword_ratio": 0.7294117647058823,
+    "char_count": 350,
+    "backspace_count": 134,
+    "avg_dwelltime": 0.09903954880908855,
+    "avg_flighttime": 0.19522558067872273
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.662198,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.730029,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "relieved but impatient.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "cleaning lady at airbnb gave me a power adapter; now am charging everything but impatient to leave because it's already latee.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "sting, eating.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "The desk at Mozfest House said I wasn't registered for either the House or Mozfest_I think he arranged it for House but told me to e-mail you about the festival (and said he could help if you needed with registration it).. Thanks1I got a name tag and everything) so much1fa.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "aww thanks  i'm proud of YOU.",
+        "tones": [
+          {
+            "score": 0.964588,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "can't wait to see your beautiful marbled, color-changing ,leather bowl.",
+        "tones": [
+          {
+            "score": 0.778828,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "\u2211\u2211\u2211life support stuff\u2211\u00e7_separatescripts.",
+        "tones": [
+          {
+            "score": 0.63411,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-22T14:43:12.938420",
+    "unix_time": 1540219392.93842,
+    "word_count": 87,
+    "uniqueword_count": 70,
+    "uniqueword_ratio": 0.8045977011494253,
+    "char_count": 371,
+    "backspace_count": 190,
+    "avg_dwelltime": 0.10492443396634654,
+    "avg_flighttime": 0.2791588854940199
+  },
+  {
+    "document_tone": {
+      "tones": []
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "working on viz.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "My first foray into digital phenotyping Digital Phenotypin includes Digital phenotyping \u2020digital phenot.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-22T15:46:22.783544",
+    "unix_time": 1540223182.783544,
+    "word_count": 13,
+    "uniqueword_count": 12,
+    "uniqueword_ratio": 0.9230769230769231,
+    "char_count": 66,
+    "backspace_count": 293,
+    "avg_dwelltime": 0.11438230506889785,
+    "avg_flighttime": 0.36893876033042794
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.617189,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        },
+        {
+          "score": 0.858292,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "is a new concept that explores The dText analyzer\u03a9\u03a9Text AnalyzerA person is more likely to make spelling mistakes,When depressed,  use a smaller vocabulary,  say less,mo and generally say less They also keystroke dynamics depressoin.",
+        "tones": [
+          {
+            "score": 0.752233,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          },
+          {
+            "score": 0.82709,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "psychomotor skills keystroke dynamic.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "\u0192compute\u00e5depressoin\u2020psychomotor skills depression.",
+        "tones": [
+          {
+            "score": 0.805647,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 3,
+        "text": "\u03a9; their psychomotor skills are normally impaired.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "\u2211In order to capture these metrics, I have added NLTK to my foregoing keylogger in order to count total and unique words.",
+        "tones": [
+          {
+            "score": 0.8766,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 5,
+        "text": "Keystroke dynamics are also calculated as an attempt to measure my psychomotor skills.\u00df\u00df3.",
+        "tones": [
+          {
+            "score": 0.615352,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          },
+          {
+            "score": 0.61476,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 6,
+        "text": "leisure, eating.",
+        "tones": []
+      },
+      {
+        "sentence_id": 7,
+        "text": "\u00e7\u221a.select(All\"rect.attr(\"x,",
+        "tones": [
+          {
+            "score": 0.942582,
+            "tone_id": "confident",
+            "tone_name": "Confident"
+          }
+        ]
+      },
+      {
+        "sentence_id": 8,
+        "text": "function(d) {return \u0192attr\", \"x'.",
+        "tones": []
+      },
+      {
+        "sentence_id": 9,
+        "text": "25100Grad student at ITP, NYUhttp://www.xujenna.com\u00e5\u00e7\u2020\u221a.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-22T18:26:18.615461",
+    "unix_time": 1540232778.615461,
+    "word_count": 74,
+    "uniqueword_count": 54,
+    "uniqueword_ratio": 0.7297297297297297,
+    "char_count": 348,
+    "backspace_count": 298,
+    "avg_dwelltime": 0.10502455105501063,
+    "avg_flighttime": 0.2571377006833808
+  },
+  {
+    "document_tone": {
+      "tones": []
+    },
+    "sentences_tone": [],
+    "time": "2018-10-22T21:33:47.505331",
+    "unix_time": 1540240427.505331,
+    "word_count": 10,
+    "uniqueword_count": 10,
+    "uniqueword_ratio": 1.0,
+    "char_count": 50,
+    "backspace_count": 137,
+    "avg_dwelltime": 0.11998564241340416,
+    "avg_flighttime": 0.34020574535790654
+  },
+  {
+    "document_tone": {
+      "tones": []
+    },
+    "sentences_tone": [],
+    "time": "2018-10-22T22:33:48.803492",
+    "unix_time": 1540244028.803492,
+    "word_count": 6,
+    "uniqueword_count": 6,
+    "uniqueword_ratio": 1.0,
+    "char_count": 39,
+    "backspace_count": 138,
+    "avg_dwelltime": 0.1288635577802053,
+    "avg_flighttime": 0.4270466804504395
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.838983,
+          "tone_id": "analytical",
+          "tone_name": "Analytical"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u2020how to get rid of y axis domain axis.",
+        "tones": [
+          {
+            "score": 0.895415,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "still focused.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "still working on viz.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "i've so far had 2 pies, 1 serving of fish and chips, and 2.5 hobnobs 3 cups of tea,.",
+        "tones": [
+          {
+            "score": 0.644979,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.599421,
+            "tone_id": "analytical",
+            "tone_name": "Analytical"
+          }
+        ]
+      }
+    ],
+    "time": "2018-10-22T23:59:32.375202",
+    "unix_time": 1540249172.375202,
+    "word_count": 37,
+    "uniqueword_count": 31,
+    "uniqueword_ratio": 0.8378378378378378,
+    "char_count": 139,
+    "backspace_count": 121,
+    "avg_dwelltime": 0.1150088398458895,
+    "avg_flighttime": 0.335204069908721
+  },
+  {
+    "document_tone": {
+      "tones": []
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "\u2020time in nyc.",
+        "tones": []
+      },
+      {
+        "sentence_id": 1,
+        "text": "long day.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "washing up, schoolwork.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "i'm back \u2020cal.",
+        "tones": []
+      },
+      {
+        "sentence_id": 4,
+        "text": "position: relative;.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-23T08:44:34.914364",
+    "unix_time": 1540280674.914364,
+    "word_count": 22,
+    "uniqueword_count": 20,
+    "uniqueword_ratio": 0.9090909090909091,
+    "char_count": 101,
+    "backspace_count": 103,
+    "avg_dwelltime": 0.1039843965942661,
+    "avg_flighttime": 0.27467382741597024
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.82057,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.966403,
+          "tone_id": "tentative",
+          "tone_name": "Tentative"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "didn't sleep too well, but had some coffee with breakfast.",
+        "tones": [
+          {
+            "score": 0.883455,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.822231,
+            "tone_id": "tentative",
+            "tone_name": "Tentative"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "schoolwork, eating.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-23T10:41:08.056896",
+    "unix_time": 1540291268.056896,
+    "word_count": 15,
+    "uniqueword_count": 15,
+    "uniqueword_ratio": 1.0,
+    "char_count": 74,
+    "backspace_count": 116,
+    "avg_dwelltime": 0.11073605012611525,
+    "avg_flighttime": 0.27692246373067764
+  },
+  {
+    "document_tone": {
+      "tones": [
+        {
+          "score": 0.633735,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        }
+      ]
+    },
+    "sentences_tone": [
+      {
+        "sentence_id": 0,
+        "text": "too much mental/emotional exertion at this public service internet conference.",
+        "tones": [
+          {
+            "score": 0.701771,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "sentence_id": 1,
+        "text": "schoolwork, eating.",
+        "tones": []
+      },
+      {
+        "sentence_id": 2,
+        "text": "\u00df\u00df\u00df\u00f7\u03a9\u00f7\u00df\u00df\u00f7\u03a9\u00f7\u00df\u00df;currentCount-circle\u00e7\u221a\u00df\u00df/2\u00df\u00df\u00df\u00e7 + \u221acreated + \u221acurrent_.",
+        "tones": []
+      },
+      {
+        "sentence_id": 3,
+        "text": "\u00e7\u221a\u00df\u2020align stroke width css.",
+        "tones": []
+      }
+    ],
+    "time": "2018-10-23T13:01:57.160734",
+    "unix_time": 1540299717.160734,
+    "word_count": 17,
+    "uniqueword_count": 17,
+    "uniqueword_ratio": 1.0,
+    "char_count": 95,
+    "backspace_count": 133,
+    "avg_dwelltime": 0.1301218787606379,
+    "avg_flighttime": 0.37557156152263604
   }
 ]
