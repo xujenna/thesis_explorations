@@ -2975,13 +2975,13 @@ correlationSVG.selectAll("g").each(function(pair,i){
   nullPoints = [];
   
   LSTM_data.forEach(function(d,i){
-    var currentTimestamp = new Date(d.response_time)
-    d['timestamp'] = currentTimestamp.getTime();
+    // var currentTimestamp = new Date(d.response_time)
+    d['timestamp'] = d.response_time * 1000;
   })
   
   RF_morale_data.forEach(function(d,i){
-    var currentTimestamp = new Date(d.response_time)
-    d['timestamp'] = currentTimestamp.getTime();
+    // var currentTimestamp = new Date(d.response_time)
+    d['timestamp'] = d.response_time * 1000;
   })
   
     var nullTime = LSTM_data[0]['timestamp'] - 360000;
@@ -3049,7 +3049,6 @@ correlationSVG.selectAll("g").each(function(pair,i){
     }
   })
   
-  
   newMoralePredictions = [];
   nullMoralePoints = [];
   
@@ -3113,8 +3112,8 @@ correlationSVG.selectAll("g").each(function(pair,i){
     .range([MLheight, 0])
     .domain([0, 5]);
   
-  var domainMaxStr = domainMax.toString().slice(3, -38)
-  var domainMinStr = domainMin.toString().slice(3, -38)
+  var domainMaxStr = domainMax.toString().slice(3, 19)
+  var domainMinStr = domainMin.toString().slice(3, 19)
   var predictions_nav_prev = d3.select("#prev-link");
   var predictions_nav_next = d3.select("#next-link");
   var currentRange = d3.select("#current-range")
@@ -3139,8 +3138,8 @@ correlationSVG.selectAll("g").each(function(pair,i){
       MLxScale.domain([domainMin, domainMax])
   
       currentRange = d3.select("#current-range")
-      domainMaxStr = domainMax.toString().slice(3, -38)
-      domainMinStr = domainMin.toString().slice(3, -38)
+      var domainMaxStr = domainMax.toString().slice(3, 19)
+      var domainMinStr = domainMin.toString().slice(3, 19)
   
       currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
   
@@ -3244,8 +3243,8 @@ correlationSVG.selectAll("g").each(function(pair,i){
     MLxScale.domain([domainMin, domainMax])
   
     currentRange = d3.select("#current-range")
-    domainMaxStr = domainMax.toString().slice(3, -38)
-    domainMinStr = domainMin.toString().slice(3, -38)
+    var domainMaxStr = domainMax.toString().slice(3, 19)
+    var domainMinStr = domainMin.toString().slice(3, 19)
   
     currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
   

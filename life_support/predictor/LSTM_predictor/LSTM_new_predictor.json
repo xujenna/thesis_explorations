@@ -12,7 +12,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.5,
     "actual_fatigue": 4.5,
-    "response_time": "2018-10-15T00:56:21.657340"
+    "response_time": 1539579381.65734
   },
   {
     "predictions": [
@@ -33,7 +33,7 @@
     "actual_mood": 2.5,
     "actual_stress": 3.0,
     "actual_fatigue": 4.5,
-    "response_time": "2018-10-15T01:57:32.671241"
+    "response_time": 1539583052.671241
   },
   {
     "predictions": [
@@ -54,7 +54,7 @@
     "actual_mood": 2.0,
     "actual_stress": 3.5,
     "actual_fatigue": 5.0,
-    "response_time": "2018-10-15T03:06:59.414319"
+    "response_time": 1539587219.414319
   },
   {
     "predictions": [
@@ -75,7 +75,7 @@
     "actual_mood": 3.5,
     "actual_stress": 1.5,
     "actual_fatigue": 2.0,
-    "response_time": "2018-10-15T12:26:31.701879"
+    "response_time": 1539620791.701879
   },
   {
     "predictions": [
@@ -96,7 +96,7 @@
     "actual_mood": 3.5,
     "actual_stress": 2.0,
     "actual_fatigue": 2.5,
-    "response_time": "2018-10-15T13:29:59.125735"
+    "response_time": 1539624599.125735
   },
   {
     "predictions": [
@@ -117,7 +117,7 @@
     "actual_mood": 3.5,
     "actual_stress": 2.5,
     "actual_fatigue": 2.5,
-    "response_time": "2018-10-15T14:31:36.318000"
+    "response_time": 1539628296.318
   },
   {
     "predictions": [
@@ -144,7 +144,7 @@
     "actual_mood": 3.0,
     "actual_stress": 2.0,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-15T15:32:03.607096"
+    "response_time": 1539631923.607096
   },
   {
     "predictions": [
@@ -165,7 +165,7 @@
     "actual_mood": 3.0,
     "actual_stress": 2.5,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-15T16:33:32.603017"
+    "response_time": 1539635612.603017
   },
   {
     "predictions": [
@@ -198,7 +198,7 @@
     "actual_mood": 3.0,
     "actual_stress": 3.0,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-15T19:24:45.514111"
+    "response_time": 1539645885.514111
   },
   {
     "predictions": [
@@ -231,7 +231,7 @@
     "actual_mood": 2.5,
     "actual_stress": 2.5,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-15T20:27:59.005524"
+    "response_time": 1539649679.005524
   },
   {
     "predictions": [
@@ -264,7 +264,7 @@
     "actual_mood": 3.0,
     "actual_stress": 2.5,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-15T21:38:41.587300"
+    "response_time": 1539653921.5873
   },
   {
     "predictions": [
@@ -315,7 +315,7 @@
     "actual_mood": 3.5,
     "actual_stress": 4.0,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-15T23:33:18.266670"
+    "response_time": 1539660798.26667
   },
   {
     "predictions": [
@@ -342,7 +342,7 @@
     "actual_mood": 4.0,
     "actual_stress": 3.0,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-16T01:00:21.192393"
+    "response_time": 1539666021.192393
   },
   {
     "predictions": [
@@ -375,7 +375,7 @@
     "actual_mood": 2.5,
     "actual_stress": 2.0,
     "actual_fatigue": 4.5,
-    "response_time": "2018-10-16T02:25:54.397930"
+    "response_time": 1539671154.39793
   },
   {
     "predictions": [
@@ -402,7 +402,7 @@
     "actual_mood": 2.5,
     "actual_stress": 2.0,
     "actual_fatigue": 5.0,
-    "response_time": "2018-10-16T03:26:28.531646"
+    "response_time": 1539674788.531646
   },
   {
     "predictions": [
@@ -435,7 +435,7 @@
     "actual_mood": 2.5,
     "actual_stress": 2.5,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-16T11:05:50.755643"
+    "response_time": 1539702350.755643
   },
   {
     "predictions": [
@@ -456,7 +456,7 @@
     "actual_mood": 3.5,
     "actual_stress": 1.5,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-16T12:27:36.176999"
+    "response_time": 1539707256.176999
   },
   {
     "predictions": [
@@ -489,7 +489,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.0,
     "actual_fatigue": 4.0,
-    "response_time": "2018-10-16T13:34:15.770904"
+    "response_time": 1539711255.770904
   },
   {
     "predictions": [
@@ -516,7 +516,7 @@
     "actual_mood": 3.0,
     "actual_stress": 0.5,
     "actual_fatigue": 4.0,
-    "response_time": "2018-10-16T16:35:50.964755"
+    "response_time": 1539722150.964755
   },
   {
     "predictions": [
@@ -537,7 +537,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.0,
     "actual_fatigue": 4.0,
-    "response_time": "2018-10-16T18:38:30.968560"
+    "response_time": 1539729510.96856
   },
   {
     "predictions": [
@@ -564,7 +564,7 @@
     "actual_mood": 3.5,
     "actual_stress": 1.0,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-16T19:54:57.843886"
+    "response_time": 1539734097.843886
   },
   {
     "predictions": [
@@ -585,7 +585,7 @@
     "actual_mood": 4.0,
     "actual_stress": 1.5,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-16T20:56:00.484858"
+    "response_time": 1539737760.484858
   },
   {
     "predictions": [
@@ -606,7 +606,7 @@
     "actual_mood": 4.0,
     "actual_stress": 1.0,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-16T21:56:51.904626"
+    "response_time": 1539741411.904626
   },
   {
     "predictions": [
@@ -627,7 +627,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.5,
     "actual_fatigue": 4.0,
-    "response_time": "2018-10-16T23:52:33.874783"
+    "response_time": 1539748353.874783
   },
   {
     "predictions": [
@@ -648,7 +648,7 @@
     "actual_mood": 4.0,
     "actual_stress": 1.5,
     "actual_fatigue": 4.5,
-    "response_time": "2018-10-17T01:07:13.757702"
+    "response_time": 1539752833.757702
   },
   {
     "predictions": [
@@ -675,7 +675,7 @@
     "actual_mood": 3.5,
     "actual_stress": 2.0,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-17T12:30:33.955958"
+    "response_time": 1539793833.955958
   },
   {
     "predictions": [
@@ -702,7 +702,7 @@
     "actual_mood": 4.0,
     "actual_stress": 2.5,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-17T13:45:33.664806"
+    "response_time": 1539798333.664806
   },
   {
     "predictions": [
@@ -723,7 +723,7 @@
     "actual_mood": 3.5,
     "actual_stress": 2.0,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-17T14:46:08.769775"
+    "response_time": 1539801968.769775
   },
   {
     "predictions": [
@@ -744,7 +744,7 @@
     "actual_mood": 4.0,
     "actual_stress": 1.5,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-17T17:53:43.922498"
+    "response_time": 1539813223.922498
   },
   {
     "predictions": [
@@ -765,7 +765,7 @@
     "actual_mood": 4.0,
     "actual_stress": 1.0,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-17T18:54:37.562108"
+    "response_time": 1539816877.562108
   },
   {
     "predictions": [
@@ -786,7 +786,7 @@
     "actual_mood": 3.5,
     "actual_stress": 1.5,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-17T19:55:14.241233"
+    "response_time": 1539820514.241233
   },
   {
     "predictions": [
@@ -807,7 +807,7 @@
     "actual_mood": 3.0,
     "actual_stress": 2.0,
     "actual_fatigue": 4.0,
-    "response_time": "2018-10-17T21:48:50.233598"
+    "response_time": 1539827330.233598
   },
   {
     "predictions": [
@@ -828,7 +828,7 @@
     "actual_mood": 3.0,
     "actual_stress": 2.0,
     "actual_fatigue": 4.5,
-    "response_time": "2018-10-17T22:49:42.695791"
+    "response_time": 1539830982.695791
   },
   {
     "predictions": [
@@ -861,7 +861,7 @@
     "actual_mood": 2.5,
     "actual_stress": 2.5,
     "actual_fatigue": 4.5,
-    "response_time": "2018-10-17T23:50:43.364490"
+    "response_time": 1539834643.36449
   },
   {
     "predictions": [
@@ -888,7 +888,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.5,
     "actual_fatigue": 4.5,
-    "response_time": "2018-10-18T00:51:16.762899"
+    "response_time": 1539838276.762899
   },
   {
     "predictions": [
@@ -915,7 +915,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.5,
     "actual_fatigue": 5.0,
-    "response_time": "2018-10-18T01:51:45.380243"
+    "response_time": 1539841905.380243
   },
   {
     "predictions": [
@@ -936,7 +936,7 @@
     "actual_mood": 3.0,
     "actual_stress": 2.0,
     "actual_fatigue": 2.5,
-    "response_time": "2018-10-18T11:20:04.946929"
+    "response_time": 1539876004.946929
   },
   {
     "predictions": [
@@ -963,7 +963,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.5,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-18T17:24:07.357109"
+    "response_time": 1539897847.357109
   },
   {
     "predictions": [
@@ -984,7 +984,7 @@
     "actual_mood": 2.5,
     "actual_stress": 2.0,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-18T18:35:28.284945"
+    "response_time": 1539902128.284945
   },
   {
     "predictions": [
@@ -1017,7 +1017,7 @@
     "actual_mood": 4.0,
     "actual_stress": 1.5,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-18T19:48:53.337304"
+    "response_time": 1539906533.337304
   },
   {
     "predictions": [
@@ -1038,7 +1038,7 @@
     "actual_mood": 2.5,
     "actual_stress": 1.5,
     "actual_fatigue": 4.5,
-    "response_time": "2018-10-18T23:08:07.150814"
+    "response_time": 1539918487.150814
   },
   {
     "predictions": [
@@ -1065,7 +1065,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.0,
     "actual_fatigue": 4.5,
-    "response_time": "2018-10-19T00:09:54.207398"
+    "response_time": 1539922194.207398
   },
   {
     "predictions": [
@@ -1092,7 +1092,7 @@
     "actual_mood": 3.5,
     "actual_stress": 0.5,
     "actual_fatigue": 4.5,
-    "response_time": "2018-10-19T01:10:57.831621"
+    "response_time": 1539925857.831621
   },
   {
     "predictions": [
@@ -1125,7 +1125,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.0,
     "actual_fatigue": 4.5,
-    "response_time": "2018-10-19T02:15:15.155671"
+    "response_time": 1539929715.155671
   },
   {
     "predictions": [
@@ -1152,7 +1152,7 @@
     "actual_mood": 2.5,
     "actual_stress": 0.5,
     "actual_fatigue": 5.0,
-    "response_time": "2018-10-19T03:16:10.874936"
+    "response_time": 1539933370.874936
   },
   {
     "predictions": [
@@ -1179,7 +1179,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.0,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-19T12:12:15.075536"
+    "response_time": 1539965535.075536
   },
   {
     "predictions": [
@@ -1212,7 +1212,7 @@
     "actual_mood": 3.5,
     "actual_stress": 0.5,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-19T13:32:46.055412"
+    "response_time": 1539970366.055412
   },
   {
     "predictions": [
@@ -1239,7 +1239,7 @@
     "actual_mood": 3.5,
     "actual_stress": 1.0,
     "actual_fatigue": 2.5,
-    "response_time": "2018-10-19T15:02:12.315169"
+    "response_time": 1539975732.315169
   },
   {
     "predictions": [
@@ -1272,7 +1272,7 @@
     "actual_mood": 3.5,
     "actual_stress": 1.5,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-19T17:10:13.508376"
+    "response_time": 1539983413.508376
   },
   {
     "predictions": [
@@ -1299,7 +1299,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.4,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-19T18:10:38.048102"
+    "response_time": 1539987038.048102
   },
   {
     "predictions": [
@@ -1326,7 +1326,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.0,
     "actual_fatigue": 4.0,
-    "response_time": "2018-10-19T19:10:56.239706"
+    "response_time": 1539990656.239706
   },
   {
     "predictions": [
@@ -1353,7 +1353,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.0,
     "actual_fatigue": 4.0,
-    "response_time": "2018-10-19T20:11:38.169961"
+    "response_time": 1539994298.169961
   },
   {
     "predictions": [
@@ -1380,7 +1380,7 @@
     "actual_mood": 4.5,
     "actual_stress": 1.5,
     "actual_fatigue": 4.0,
-    "response_time": "2018-10-19T21:19:11.859988"
+    "response_time": 1539998351.859988
   },
   {
     "predictions": [
@@ -1413,7 +1413,7 @@
     "actual_mood": 4.5,
     "actual_stress": 1.0,
     "actual_fatigue": 4.0,
-    "response_time": "2018-10-20T00:43:29.067913"
+    "response_time": 1540010609.067913
   },
   {
     "predictions": [
@@ -1440,7 +1440,7 @@
     "actual_mood": 3.5,
     "actual_stress": 1.5,
     "actual_fatigue": 4.5,
-    "response_time": "2018-10-20T01:47:14.050220"
+    "response_time": 1540014434.05022
   },
   {
     "predictions": [
@@ -1473,7 +1473,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.0,
     "actual_fatigue": 4.5,
-    "response_time": "2018-10-20T02:56:46.048506"
+    "response_time": 1540018606.048506
   },
   {
     "predictions": [
@@ -1500,7 +1500,7 @@
     "actual_mood": 3.0,
     "actual_stress": 2.0,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-20T12:34:41.496057"
+    "response_time": 1540053281.496057
   },
   {
     "predictions": [
@@ -1527,7 +1527,7 @@
     "actual_mood": 3.5,
     "actual_stress": 1.5,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-20T13:37:02.656647"
+    "response_time": 1540057022.656647
   },
   {
     "predictions": [
@@ -1554,7 +1554,7 @@
     "actual_mood": 3.0,
     "actual_stress": 2.5,
     "actual_fatigue": 2.5,
-    "response_time": "2018-10-20T14:41:22.057372"
+    "response_time": 1540060882.057372
   },
   {
     "predictions": [
@@ -1581,7 +1581,7 @@
     "actual_mood": 3.0,
     "actual_stress": 3.0,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-20T16:06:39.659376"
+    "response_time": 1540065999.659376
   },
   {
     "predictions": [
@@ -1608,7 +1608,7 @@
     "actual_mood": 4.0,
     "actual_stress": 1.0,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-20T17:13:54.175944"
+    "response_time": 1540070034.175944
   },
   {
     "predictions": [
@@ -1653,7 +1653,7 @@
     "actual_mood": 4.0,
     "actual_stress": 2.0,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-20T18:37:10.821753"
+    "response_time": 1540075030.821753
   },
   {
     "predictions": [
@@ -1674,7 +1674,7 @@
     "actual_mood": 3.0,
     "actual_stress": 2.5,
     "actual_fatigue": 1.5,
-    "response_time": "2018-10-22T13:48:45.525877"
+    "response_time": 1540212525.525877
   },
   {
     "predictions": [
@@ -1707,7 +1707,7 @@
     "actual_mood": 3.0,
     "actual_stress": 0.5,
     "actual_fatigue": 1.0,
-    "response_time": "2018-10-22T15:03:13.517107"
+    "response_time": 1540220593.517107
   },
   {
     "predictions": [
@@ -1734,7 +1734,7 @@
     "actual_mood": 3.0,
     "actual_stress": 0.5,
     "actual_fatigue": 2.0,
-    "response_time": "2018-10-22T17:44:44.096967"
+    "response_time": 1540230284.096967
   },
   {
     "predictions": [
@@ -1755,7 +1755,7 @@
     "actual_mood": 3.0,
     "actual_stress": 0.5,
     "actual_fatigue": 2.5,
-    "response_time": "2018-10-22T18:45:12.908526"
+    "response_time": 1540233912.908526
   },
   {
     "predictions": [
@@ -1782,7 +1782,7 @@
     "actual_mood": 3.0,
     "actual_stress": 0.5,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-22T21:53:51.451813"
+    "response_time": 1540241631.451813
   },
   {
     "predictions": [
@@ -1815,7 +1815,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.0,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-22T22:54:51.055006"
+    "response_time": 1540245291.055006
   },
   {
     "predictions": [
@@ -1848,7 +1848,7 @@
     "actual_mood": 2.5,
     "actual_stress": 1.0,
     "actual_fatigue": 4.0,
-    "response_time": "2018-10-23T00:21:14.977196"
+    "response_time": 1540250474.977196
   },
   {
     "predictions": [
@@ -1875,7 +1875,7 @@
     "actual_mood": 3.0,
     "actual_stress": 1.5,
     "actual_fatigue": 3.0,
-    "response_time": "2018-10-23T09:13:12.426947"
+    "response_time": 1540282392.426947
   },
   {
     "predictions": [
@@ -1902,7 +1902,7 @@
     "actual_mood": 3.0,
     "actual_stress": 3.0,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-23T12:26:15.109849"
+    "response_time": 1540297575.109849
   },
   {
     "predictions": [
@@ -1929,7 +1929,7 @@
     "actual_mood": 3.5,
     "actual_stress": 3.5,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-23T13:29:56.598361"
+    "response_time": 1540301396.598361
   },
   {
     "predictions": [
@@ -1956,6 +1956,33 @@
     "actual_mood": 3.0,
     "actual_stress": 2.0,
     "actual_fatigue": 3.5,
-    "response_time": "2018-10-23T14:30:52.361141"
+    "response_time": 1540305052.361141
+  },
+  {
+    "predictions": [
+      {
+        "LSTM_mood_prediction": 3.110971689224243,
+        "LSTM_stress_prediction": 2.1540783643722534,
+        "LSTM_fatigue_prediction": 3.406501054763794,
+        "timestamp": 1540307217.901765
+      },
+      {
+        "LSTM_mood_prediction": 3.110971689224243,
+        "LSTM_stress_prediction": 2.1540783643722534,
+        "LSTM_fatigue_prediction": 3.406501054763794,
+        "timestamp": 1540308118.068898
+      },
+      {
+        "LSTM_mood_prediction": 3.2006566524505615,
+        "LSTM_stress_prediction": 2.4329800605773926,
+        "LSTM_fatigue_prediction": 3.5422732830047607,
+        "timestamp": 1540310032.044074
+      }
+    ],
+    "mood_index": 1111,
+    "actual_mood": 3.0,
+    "actual_stress": 2.5,
+    "actual_fatigue": 3.5,
+    "response_time": 1540308819.238961
   }
 ]

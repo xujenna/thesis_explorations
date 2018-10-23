@@ -2941,678 +2941,659 @@ correlationSVG.selectAll("g").each(function(pair,i){
 
 <script>
 
-d3.json("LSTM_new_predictor.json", function (err, LSTM_data) {
-  d3.json("new_predictor.json", function(err, RF_morale_data){
-
-    if (err) console.warn(err, "error loading data");
-
-var MLheight = height - 200;
-var MLwidth = width/2.5;
-
-var ML_mood_svg = d3.select("#ml_mood_predictions")
-      .attr("width", MLwidth + margin.left + margin.right)
-      .attr("height", MLheight + margin.top + margin.bottom)
-var ML_mood_chart = ML_mood_svg.append("g")
-      .attr("class", "ML_mood_chartG")
-      .attr("transform", "translate(" + (margin.left + 10) + "," + margin.top + ")");
-
-var ML_morale_svg = d3.select("#ml_morale_predictions")
-      .attr("width", MLwidth + margin.left + margin.right)
-      .attr("height", MLheight + margin.top + margin.bottom)
-var ML_morale_chart = ML_morale_svg.append("g")
-      .attr("class", "ML_morale_chartG")
-      .attr("transform", "translate(" + (margin.left + 10) + "," + margin.top + ")");
-
-var ML_stress_svg = d3.select("#ml_stress_predictions")
-      .attr("width", MLwidth + margin.left + margin.right)
-      .attr("height", MLheight + margin.top + margin.bottom)
-var ML_stress_chart = ML_stress_svg.append("g")
-      .attr("class", "ML_stress_chartG")
-      .attr("transform", "translate(" + (margin.left + 10) + "," + margin.top + ")");
-
-var ML_fatigue_svg = d3.select("#ml_fatigue_predictions")
-      .attr("width", MLwidth + margin.left + margin.right)
-      .attr("height", MLheight + margin.top + margin.bottom)
-var ML_fatigue_chart = ML_fatigue_svg.append("g")
-      .attr("class", "ML_fatigue_chartG")
-      .attr("transform", "translate(" + (margin.left + 10) + "," + margin.top + ")");
-
-
-newPredictions = [];
-nullPoints = [];
-
-LSTM_data.forEach(function(d,i){
-  var currentTimestamp = new Date(d.response_time)
-  d['timestamp'] = currentTimestamp.getTime();
-})
-
-RF_morale_data.forEach(function(d,i){
-  var currentTimestamp = new Date(d.response_time)
-  d['timestamp'] = currentTimestamp.getTime();
-})
-
-  var nullTime = LSTM_data[0]['timestamp'] - 360000;
-  var nullItems = {};
-  nullItems["actual_mood"] = null;
-  nullItems["actual_stress"] = null;
-  nullItems["actual_fatigue"] = null;
-  nullItems["timestamp"] = nullTime;
-  nullItems["predictions"] = {}
-  nullItems["predictions"]["LSTM_mood_prediction"] = null;
-  nullItems["predictions"]["LSTM_stress_prediction"] = null;
-  nullItems["predictions"]["LSTM_fatigue_prediction"] = null;
-  nullItems["predictions"]["timestamp"] = null;
-
- nullPoints.push(nullItems)
-
-LSTM_data.forEach(function(d, i) {
-  newPredictions.push(d);
-
-  if(i == LSTM_data.length -1){
-    var nullItems2 = {};
-    nullItems2["actual_mood"] = null;
-    nullItems2["actual_stress"] = null;
-    nullItems2["actual_fatigue"] = null;
-    nullItems2["timestamp"] = LSTM_data[i]['timestamp'] + 360000;
-    nullItems2["predictions"] = {}
-    nullItems2["predictions"]["LSTM_mood_prediction"] = null;
-    nullItems2["predictions"]["LSTM_stress_prediction"] = null;
-    nullItems2["predictions"]["LSTM_fatigue_prediction"] = null;
-    nullItems2["predictions"]["timestamp"] = null;
-    nullPoints.push(nullItems2)
-    return;
-  }
-
-  var currentTime = LSTM_data[i+1]["timestamp"]
-
-  if(d["timestamp"] < (currentTime - 22000000)) {
-    nullTime = currentTime - 360000;
-    var nullItems = {};
-    nullItems["actual_mood"] = null;
-    nullItems["actual_stress"] = null;
-    nullItems["actual_fatigue"] = null;
-    nullItems["timestamp"] = nullTime;
-    nullItems["predictions"] = {}
-    nullItems["predictions"]["LSTM_mood_prediction"] = null;
-    nullItems["predictions"]["LSTM_stress_prediction"] = null;
-    nullItems["predictions"]["LSTM_fatigue_prediction"] = null;
-    nullItems["predictions"]["timestamp"] = null;
-
-    var nullItems2 = {};
-    nullItems2["actual_mood"] = null;
-    nullItems2["actual_stress"] = null;
-    nullItems2["actual_fatigue"] = null;
-    nullItems2["timestamp"] = LSTM_data[i]["timestamp"] + 360000;
-    nullItems2["predictions"] = {}
-    nullItems2["predictions"]["LSTM_mood_prediction"] = null;
-    nullItems2["predictions"]["LSTM_stress_prediction"] = null;
-    nullItems2["predictions"]["LSTM_fatigue_prediction"] = null;
-    nullItems2["predictions"]["timestamp"] = null;
-
-    // newPredictions.push(nullItems2)
-    // newPredictions.push(nullItems)
-    nullPoints.push(nullItems2)
-    nullPoints.push(nullItems)
-  }
-})
-
-
-newMoralePredictions = [];
-nullMoralePoints = [];
-
-RF_morale_data.forEach(function(d, i) {
-  newMoralePredictions.push(d);
-
-  if(i == RF_morale_data.length -1){
-    var nullItems3 = {};
-    nullItems3["actual_mood"] = null;
-    nullItems3["actual_morale"] = null;
-    nullItems3["timestamp"] = RF_morale_data[i]['timestamp'] + 360000;
-    nullItems3["predictions"] = {}
-    nullItems3["predictions"]["mood_prediction"] = null;
-    nullItems3["predictions"]["morale_prediction"] = null;
-    nullItems3["predictions"]["timestamp"] = null;
-    nullMoralePoints.push(nullItems3)
-    return;
-  }
-
-  var currentMoraleTime = RF_morale_data[i+1]["timestamp"]
-
-  if(d["timestamp"] < (currentMoraleTime - 22000000)) {
-    nullMoraleTime = currentMoraleTime - 360000;
-    var nullItems4 = {};
-    nullItems4["actual_mood"] = null;
-    nullItems4["actual_morale"] = null;
-    nullItems4["timestamp"] = nullMoraleTime;
-    nullItems4["predictions"] = {}
-    nullItems4["predictions"]["mood_prediction"] = null;
-    nullItems4["predictions"]["morale_prediction"] = null;
-    nullItems4["predictions"]["timestamp"] = null;
-
-    var nullItems5 = {};
-    nullItems5["actual_mood"] = null;
-    nullItems5["actual_morale"] = null;
-    nullItems5["timestamp"] = RF_morale_data[i]["timestamp"] + 360000;
-    nullItems5["predictions"] = {}
-    nullItems5["predictions"]["mood_prediction"] = null;
-    nullItems5["predictions"]["morale_prediction"] = null;
-    nullItems5["predictions"]["timestamp"] = null;
-
-
-    // newPredictions.push(nullItems2)
-    // newPredictions.push(nullItems)
-    nullMoralePoints.push(nullItems5)
-    nullMoralePoints.push(nullItems4)
-  }
-})
-
-var length = newPredictions.length - 1;
-
-var domainMax = new Date(nullPoints[nullPoints.length - 1]['timestamp']);
-var domainMin = new Date(nullPoints[nullPoints.length - 2]['timestamp']);
-
-
-var MLxScale = d3.scaleTime()
-  .range([0,MLwidth])
-  .domain([domainMin, domainMax]);
-
-var MLyScale = d3.scaleLinear()
-  .range([MLheight, 0])
-  .domain([0, 5]);
-
-var domainMaxStr = domainMax.toString().slice(3, -38)
-var domainMinStr = domainMin.toString().slice(3, -38)
-var predictions_nav_prev = d3.select("#prev-link");
-var predictions_nav_next = d3.select("#next-link");
-var currentRange = d3.select("#current-range")
-var currentNullMin = nullPoints.length -2
-currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
-
-
-predictions_nav_prev
-.style("cursor", "pointer")
-.on("mousedown", function(d){
-
-  if(nullPoints[currentNullMin - 2] == null){
-    predictions_nav_prev.style("color", "lightgrey")
-  }
-  else {
-    predictions_nav_next.style("display", "inline-block").style("color", "black")
-    predictions_nav_prev.style("display", "inline-block").style("color", "black")
-
-    currentNullMin = currentNullMin-2;
-    domainMax = new Date(nullPoints[currentNullMin + 1]['timestamp'])
-    domainMin = new Date(nullPoints[currentNullMin]['timestamp'])
-    MLxScale.domain([domainMin, domainMax])
-
-    currentRange = d3.select("#current-range")
-    domainMaxStr = domainMax.toString().slice(3, -38)
-    domainMinStr = domainMin.toString().slice(3, -38)
-
+    d3.json("LSTM_new_predictor.json", function (err, LSTM_data) {
+      d3.json("new_predictor.json", function(err, RF_morale_data){
+    
+        if (err) console.warn(err, "error loading data");
+    
+    var MLheight = height - 200;
+    var MLwidth = width/2.5;
+    
+    var ML_mood_svg = d3.select("#ml_mood_predictions")
+          .attr("width", MLwidth + margin.left + margin.right)
+          .attr("height", MLheight + margin.top + margin.bottom)
+    var ML_mood_chart = ML_mood_svg.append("g")
+          .attr("class", "ML_mood_chartG")
+          .attr("transform", "translate(" + (margin.left + 10) + "," + margin.top + ")");
+    
+    var ML_morale_svg = d3.select("#ml_morale_predictions")
+          .attr("width", MLwidth + margin.left + margin.right)
+          .attr("height", MLheight + margin.top + margin.bottom)
+    var ML_morale_chart = ML_morale_svg.append("g")
+          .attr("class", "ML_morale_chartG")
+          .attr("transform", "translate(" + (margin.left + 10) + "," + margin.top + ")");
+    
+    var ML_stress_svg = d3.select("#ml_stress_predictions")
+          .attr("width", MLwidth + margin.left + margin.right)
+          .attr("height", MLheight + margin.top + margin.bottom)
+    var ML_stress_chart = ML_stress_svg.append("g")
+          .attr("class", "ML_stress_chartG")
+          .attr("transform", "translate(" + (margin.left + 10) + "," + margin.top + ")");
+    
+    var ML_fatigue_svg = d3.select("#ml_fatigue_predictions")
+          .attr("width", MLwidth + margin.left + margin.right)
+          .attr("height", MLheight + margin.top + margin.bottom)
+    var ML_fatigue_chart = ML_fatigue_svg.append("g")
+          .attr("class", "ML_fatigue_chartG")
+          .attr("transform", "translate(" + (margin.left + 10) + "," + margin.top + ")");
+    
+    
+    newPredictions = [];
+    nullPoints = [];
+    
+    LSTM_data.forEach(function(d,i){
+      // var currentTimestamp = new Date(d.response_time)
+      d['timestamp'] = d.response_time * 1000;
+    })
+    
+    RF_morale_data.forEach(function(d,i){
+      // var currentTimestamp = new Date(d.response_time)
+      d['timestamp'] = d.response_time * 1000;
+    })
+    
+      var nullTime = LSTM_data[0]['timestamp'] - 360000;
+      var nullItems = {};
+      nullItems["actual_mood"] = null;
+      nullItems["actual_stress"] = null;
+      nullItems["actual_fatigue"] = null;
+      nullItems["timestamp"] = nullTime;
+      nullItems["predictions"] = {}
+      nullItems["predictions"]["LSTM_mood_prediction"] = null;
+      nullItems["predictions"]["LSTM_stress_prediction"] = null;
+      nullItems["predictions"]["LSTM_fatigue_prediction"] = null;
+      nullItems["predictions"]["timestamp"] = null;
+    
+     nullPoints.push(nullItems)
+    
+    LSTM_data.forEach(function(d, i) {
+      newPredictions.push(d);
+    
+      if(i == LSTM_data.length -1){
+        var nullItems2 = {};
+        nullItems2["actual_mood"] = null;
+        nullItems2["actual_stress"] = null;
+        nullItems2["actual_fatigue"] = null;
+        nullItems2["timestamp"] = LSTM_data[i]['timestamp'] + 360000;
+        nullItems2["predictions"] = {}
+        nullItems2["predictions"]["LSTM_mood_prediction"] = null;
+        nullItems2["predictions"]["LSTM_stress_prediction"] = null;
+        nullItems2["predictions"]["LSTM_fatigue_prediction"] = null;
+        nullItems2["predictions"]["timestamp"] = null;
+        nullPoints.push(nullItems2)
+        return;
+      }
+    
+      var currentTime = LSTM_data[i+1]["timestamp"]
+    
+      if(d["timestamp"] < (currentTime - 22000000)) {
+        nullTime = currentTime - 360000;
+        var nullItems = {};
+        nullItems["actual_mood"] = null;
+        nullItems["actual_stress"] = null;
+        nullItems["actual_fatigue"] = null;
+        nullItems["timestamp"] = nullTime;
+        nullItems["predictions"] = {}
+        nullItems["predictions"]["LSTM_mood_prediction"] = null;
+        nullItems["predictions"]["LSTM_stress_prediction"] = null;
+        nullItems["predictions"]["LSTM_fatigue_prediction"] = null;
+        nullItems["predictions"]["timestamp"] = null;
+    
+        var nullItems2 = {};
+        nullItems2["actual_mood"] = null;
+        nullItems2["actual_stress"] = null;
+        nullItems2["actual_fatigue"] = null;
+        nullItems2["timestamp"] = LSTM_data[i]["timestamp"] + 360000;
+        nullItems2["predictions"] = {}
+        nullItems2["predictions"]["LSTM_mood_prediction"] = null;
+        nullItems2["predictions"]["LSTM_stress_prediction"] = null;
+        nullItems2["predictions"]["LSTM_fatigue_prediction"] = null;
+        nullItems2["predictions"]["timestamp"] = null;
+    
+        // newPredictions.push(nullItems2)
+        // newPredictions.push(nullItems)
+        nullPoints.push(nullItems2)
+        nullPoints.push(nullItems)
+      }
+    })
+    
+    newMoralePredictions = [];
+    nullMoralePoints = [];
+    
+    RF_morale_data.forEach(function(d, i) {
+      newMoralePredictions.push(d);
+    
+      if(i == RF_morale_data.length -1){
+        var nullItems3 = {};
+        nullItems3["actual_mood"] = null;
+        nullItems3["actual_morale"] = null;
+        nullItems3["timestamp"] = RF_morale_data[i]['timestamp'] + 360000;
+        nullItems3["predictions"] = {}
+        nullItems3["predictions"]["mood_prediction"] = null;
+        nullItems3["predictions"]["morale_prediction"] = null;
+        nullItems3["predictions"]["timestamp"] = null;
+        nullMoralePoints.push(nullItems3)
+        return;
+      }
+    
+      var currentMoraleTime = RF_morale_data[i+1]["timestamp"]
+    
+      if(d["timestamp"] < (currentMoraleTime - 22000000)) {
+        nullMoraleTime = currentMoraleTime - 360000;
+        var nullItems4 = {};
+        nullItems4["actual_mood"] = null;
+        nullItems4["actual_morale"] = null;
+        nullItems4["timestamp"] = nullMoraleTime;
+        nullItems4["predictions"] = {}
+        nullItems4["predictions"]["mood_prediction"] = null;
+        nullItems4["predictions"]["morale_prediction"] = null;
+        nullItems4["predictions"]["timestamp"] = null;
+    
+        var nullItems5 = {};
+        nullItems5["actual_mood"] = null;
+        nullItems5["actual_morale"] = null;
+        nullItems5["timestamp"] = RF_morale_data[i]["timestamp"] + 360000;
+        nullItems5["predictions"] = {}
+        nullItems5["predictions"]["mood_prediction"] = null;
+        nullItems5["predictions"]["morale_prediction"] = null;
+        nullItems5["predictions"]["timestamp"] = null;
+    
+    
+        // newPredictions.push(nullItems2)
+        // newPredictions.push(nullItems)
+        nullMoralePoints.push(nullItems5)
+        nullMoralePoints.push(nullItems4)
+      }
+    })
+    
+    var length = newPredictions.length - 1;
+    
+    var domainMax = new Date(nullPoints[nullPoints.length - 1]['timestamp']);
+    var domainMin = new Date(nullPoints[nullPoints.length - 2]['timestamp']);
+    
+    
+    var MLxScale = d3.scaleTime()
+      .range([0,MLwidth])
+      .domain([domainMin, domainMax]);
+    
+    var MLyScale = d3.scaleLinear()
+      .range([MLheight, 0])
+      .domain([0, 5]);
+    
+    var domainMaxStr = domainMax.toString().slice(3, 19)
+    var domainMinStr = domainMin.toString().slice(3, 19)
+    var predictions_nav_prev = d3.select("#prev-link");
+    var predictions_nav_next = d3.select("#next-link");
+    var currentRange = d3.select("#current-range")
+    var currentNullMin = nullPoints.length -2
     currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
-
-    // LSTM_moodAreaChart.attr("d", LSTM_moodArea(newPredictions));
-  LSTM_moodLineChart.attr("d", function(d,i){
-      var d = "";
-      for(var i = 0; i < newPredictions.length; i++){
-        var newCommand = LSTM_moodLine(newPredictions[i]['predictions']);
-        if(i>0){
-          d+= "L" + newCommand.slice(1);
-        }
-        else{
-          d += newCommand;
-        }
+    
+    
+    predictions_nav_prev
+    .style("cursor", "pointer")
+    .on("mousedown", function(d){
+    
+      if(nullPoints[currentNullMin - 2] == null){
+        predictions_nav_prev.style("color", "lightgrey")
       }
-      return d
-      });
-
-  actualMoodChart.attr("d", actualMoodLine(newPredictions))
-
-    LSTM_stressLineChart.attr("d", function(d,i){
-      var d = "";
-      for(var i = 0; i < newPredictions.length; i++){
-        var newCommand = LSTM_stressLine(newPredictions[i]['predictions']);
-        if(i>0){
-          d+= "L" + newCommand.slice(1);
-        }
-        else{
-          d += newCommand;
-        }
-
+      else {
+        predictions_nav_next.style("display", "inline-block").style("color", "black")
+        predictions_nav_prev.style("display", "inline-block").style("color", "black")
+    
+        currentNullMin = currentNullMin-2;
+        domainMax = new Date(nullPoints[currentNullMin + 1]['timestamp'])
+        domainMin = new Date(nullPoints[currentNullMin]['timestamp'])
+        MLxScale.domain([domainMin, domainMax])
+    
+        currentRange = d3.select("#current-range")
+        var domainMaxStr = domainMax.toString().slice(3, 19)
+        var domainMinStr = domainMin.toString().slice(3, 19)
+    
+        currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
+    
+        // LSTM_moodAreaChart.attr("d", LSTM_moodArea(newPredictions));
+      LSTM_moodLineChart.attr("d", function(d,i){
+          var d = "";
+          for(var i = 0; i < newPredictions.length; i++){
+            var newCommand = LSTM_moodLine(newPredictions[i]['predictions']);
+            if(i>0){
+              d+= "L" + newCommand.slice(1);
+            }
+            else{
+              d += newCommand;
+            }
+          }
+          return d
+          });
+    
+      actualMoodChart.attr("d", actualMoodLine(newPredictions))
+    
+        LSTM_stressLineChart.attr("d", function(d,i){
+          var d = "";
+          for(var i = 0; i < newPredictions.length; i++){
+            var newCommand = LSTM_stressLine(newPredictions[i]['predictions']);
+            if(i>0){
+              d+= "L" + newCommand.slice(1);
+            }
+            else{
+              d += newCommand;
+            }
+    
+          }
+          return d;
+          })
+      actualStressChart.attr("d", actualStressLine(newPredictions))
+      // actualStressCircles.attr("cx", function(d) { return MLxScale(d.timestamp)}).attr("cy", function(d) { return MLyScale(d.actual_stress);})
+      
+      LSTM_fatigueLineChart.attr("d", function(d,i){
+          var d = "";
+          for(var i = 0; i < newPredictions.length; i++){
+            var newCommand = LSTM_fatigueLine(newPredictions[i]['predictions']);
+            if(i>0){
+              d+= "L" + newCommand.slice(1);
+            }
+            else{
+              d += newCommand;
+            }
+    
+          }
+          return d;
+          })
+      actualFatigueChart.attr("d", actualFatigueLine(newPredictions))
+      // actualFatigueCircles.attr("cx", function(d) { return MLxScale(d.timestamp)}).attr("cy", function(d) { return MLyScale(d.actual_fatigue);})
+     
+      RF_moraleLineChart.attr("d", function(d,i){
+          var d = "";
+          for(var i = 0; i < newMoralePredictions.length; i++){
+            var newCommand = RF_moraleLine(newMoralePredictions[i]['predictions']);
+            if(i>0){
+              d+= "L" + newCommand.slice(1);
+            }
+            else{
+              d += newCommand;
+            }
+    
+          }
+          return d;
+          })
+      actualMoraleChart.attr("d", actualMoraleLine(newMoralePredictions))
+      
+      MLxAxisGroup_mood.call(MLxAxis)
+      MLxAxisGroup_morale.call(MLxAxis)
+      MLxAxisGroup_stress.call(MLxAxis)
+      MLxAxisGroup_fatigue.call(MLxAxis)
+    
+    
+      if(nullPoints[currentNullMin - 2] == null){
+        predictions_nav_prev.style("color", "lightgrey")
+    
       }
-      return d;
-      })
-  actualStressChart.attr("d", actualStressLine(newPredictions))
-  // actualStressCircles.attr("cx", function(d) { return MLxScale(d.timestamp)}).attr("cy", function(d) { return MLyScale(d.actual_stress);})
+      }
+    
+    })
+    
+    predictions_nav_next
+    .style("cursor", "pointer")
+    .on("mousedown", function(d){
+    
+      if(nullPoints[currentNullMin + 2] == null){
+        predictions_nav_next.style("color", "lightgrey")
+      }
+      else {
+        predictions_nav_next.style("display", "inline-block").style("color", "black")
+        predictions_nav_prev.style("display", "inline-block").style("color", "black")
+    
+      currentNullMin = currentNullMin+2;
+    
+    
+      domainMax = new Date(nullPoints[currentNullMin + 1]['timestamp'])
+      domainMin = new Date(nullPoints[currentNullMin]['timestamp'])
+      MLxScale.domain([domainMin, domainMax])
+    
+      currentRange = d3.select("#current-range")
+      var domainMaxStr = domainMax.toString().slice(3, 19)
+      var domainMinStr = domainMin.toString().slice(3, 19)
+    
+      currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
+    
+      //  LSTM_moodAreaChart.attr("d", LSTM_moodArea(newPredictions));
+      LSTM_moodLineChart.attr("d", function(d,i){
+          var d = "";
+          for(var i = 0; i < newPredictions.length; i++){
+            var newCommand = LSTM_moodLine(newPredictions[i]['predictions']);
+            if(i>0){
+              d+= "L" + newCommand.slice(1);
+            }
+            else{
+              d += newCommand;
+            }
+    
+          }
+          return d
+          })
+      actualMoodChart.attr("d", actualMoodLine(newPredictions))
+      // actualMoodCircles.attr("cx", function(d) { return MLxScale(d.timestamp)}).attr("cy", function(d) { return MLyScale(d.actual_mood);})
+      
+      LSTM_stressLineChart.attr("d", function(d,i){
+          var d = "";
+          for(var i = 0; i < newPredictions.length; i++){
+            var newCommand = LSTM_stressLine(newPredictions[i]['predictions']);
+            if(i>0){
+              d+= "L" + newCommand.slice(1);
+            }
+            else{
+              d += newCommand;
+            }
+    
+          }
+          return d;
+          })
+      actualStressChart.attr("d", actualStressLine(newPredictions))
+      // actualStressCircles.attr("cx", function(d) { return MLxScale(d.timestamp)}).attr("cy", function(d) { return MLyScale(d.actual_stress);})
+      
+      LSTM_fatigueLineChart.attr("d", function(d,i){
+          var d = "";
+          for(var i = 0; i < newPredictions.length; i++){
+            var newCommand = LSTM_fatigueLine(newPredictions[i]['predictions']);
+            if(i>0){
+              d+= "L" + newCommand.slice(1);
+            }
+            else{
+              d += newCommand;
+            }
+    
+          }
+          return d;
+          })
+      actualFatigueChart.attr("d", actualFatigueLine(newPredictions))
+      // actualFatigueCircles.attr("cx", function(d) { return MLxScale(d.timestamp)}).attr("cy", function(d) { return MLyScale(d.actual_fatigue);})
+      
+      RF_moraleLineChart.attr("d", function(d,i){
+          var d = "";
+          for(var i = 0; i < newMoralePredictions.length; i++){
+            var newCommand = RF_moraleLine(newMoralePredictions[i]['predictions']);
+            if(i>0){
+              d+= "L" + newCommand.slice(1);
+            }
+            else{
+              d += newCommand;
+            }
+    
+          }
+          return d;
+          })
+      actualMoraleChart.attr("d", actualMoraleLine(newMoralePredictions))
+    
+    
+      MLxAxisGroup_mood.call(MLxAxis)
+      MLxAxisGroup_morale.call(MLxAxis)
+      MLxAxisGroup_stress.call(MLxAxis)
+      MLxAxisGroup_fatigue.call(MLxAxis)
+    
+    
+       if(nullPoints[currentNullMin + 2] == null){
+        predictions_nav_next.style("color", "lightgrey")
+    
+      }
+    }
+    
+    })
+    
+    
+    
+    
+    
+      var actualMoodLine = d3.area()
+      .defined(function(d){return d.actual_mood!=null})
+        .x(function(d) {return MLxScale(d.timestamp);})
+        .y1(function(d){return MLyScale(d.actual_mood);})
+        .y0(MLyScale(0));
+    
+      var actualStressLine = d3.area()
+      .defined(function(d){return d.actual_stress!=null})
+        .x(function(d) {return MLxScale(d.timestamp);})
+        .y1(function(d){return MLyScale(d.actual_stress);})
+        .y0(MLyScale(0));
+    
+    
+      var actualFatigueLine = d3.area()
+      .defined(function(d){return d.actual_fatigue!=null})
+        .x(function(d) {return MLxScale(d.timestamp);})
+        .y1(function(d){return MLyScale(d.actual_fatigue);})
+        .y0(MLyScale(0));
+    
+    
+      var LSTM_moodLine = d3.line()
+      .x(function(d) {return MLxScale(d.timestamp*1000) })
+        .y(function(d) {return MLyScale(d.LSTM_mood_prediction) })
+          // .defined(function(d,i){return d[i]["LSTM_mood_prediction"]!=null;});
+    
+      var LSTM_stressLine = d3.line()
+      .x(function(d) {return MLxScale(d.timestamp*1000) })
+        .y(function(d) {return MLyScale(d.LSTM_stress_prediction) })
+          // .defined(function(d,i){return d[i]["LSTM_mood_prediction"]!=null;});
+    
+      var LSTM_fatigueLine = d3.line()
+      .x(function(d) {return MLxScale(d.timestamp*1000) })
+        .y(function(d) {return MLyScale(d.LSTM_fatigue_prediction) })
+          // .defined(function(d,i){
+    
+      var RF_moraleLine = d3.line()
+      .x(function(d) {return MLxScale(d.timestamp*1000) })
+        .y(function(d) {return MLyScale(d.morale_prediction) })
+    
+      var actualMoraleLine = d3.area()
+      .defined(function(d){return d.actual_morale!=null})
+        .x(function(d) {return MLxScale(d.timestamp);})
+        .y1(function(d){return MLyScale(d.actual_morale);})
+        .y0(MLyScale(0));
+    
+    
+    var MLxAxis = d3.axisBottom(MLxScale)
+      .tickPadding(10)
+      // .tickFormat(d3.timeFormat("%c"))
+      .ticks(4);
+    
+    
+    var MLyAxis = d3.axisLeft(MLyScale)
+      .tickPadding(10)
+      .tickSize(-MLwidth)
+      .ticks(5)
+      .tickSizeOuter(0);
+    
+    
+    var MLxAxisGroup_mood = ML_mood_chart.append("g")
+      .attr("class", "Axis")
+      .attr("transform","translate(0, "+(MLheight)+")")
+      .call(MLxAxis);
+    
+    
+    var MLxAxisGroup_stress = ML_stress_chart.append("g")
+      .attr("class", "Axis")
+      .attr("transform","translate(0, "+(MLheight)+")")
+      .call(MLxAxis);
+    
+    
+    var MLxAxisGroup_fatigue = ML_fatigue_chart.append("g")
+      .attr("class", "Axis")
+      .attr("transform","translate(0, "+(MLheight)+")")
+      .call(MLxAxis);
+    
+    var MLxAxisGroup_morale = ML_morale_chart.append("g")
+      .attr("class", "Axis")
+      .attr("transform","translate(0, "+(MLheight)+")")
+      .call(MLxAxis);
+    
+      ML_mood_chart.append("g")
+      .attr("class", "axis-label")
+      // .attr("transform","translate(0, "+(MLheight/2)+")")
+      .append("text")
+      .attr("x", -MLheight/2)
+      .attr("y", -30)
+      .attr("text-anchor", "middle")
+      .text("Mood Score");
+    
+    ML_morale_chart.append("g")
+      .attr("class", "axis-label")
+      // .attr("transform","translate(0, "+(MLheight/2)+")")
+      .append("text")
+      .attr("x", -MLheight/2)
+      .attr("y", -30)
+      .attr("text-anchor", "middle")
+      .text("Morale Score");
+    
+      ML_stress_chart.append("g")
+      .attr("class", "axis-label")
+      // .attr("transform","translate(0, "+(MLheight/2)+")")
+      .append("text")
+      .attr("x", -MLheight/2)
+      .attr("y", -30)
+      .attr("text-anchor", "middle")
+      .text("Stress Score");
+    
+      ML_fatigue_chart.append("g")
+      .attr("class", "axis-label")
+      // .attr("transform","translate(0, "+(MLheight/2)+")")
+      .append("text")
+      .attr("x", -MLheight/2)
+      .attr("y", -30)
+      .attr("text-anchor", "middle")
+      .text("Fatigue Score");
+    
+    ML_mood_chart.append("g")
+      .attr("class","Axis")
+      .call(MLyAxis);
+    
+    ML_stress_chart.append("g")
+      .attr("class","Axis")
+      .call(MLyAxis);
+    
+    ML_fatigue_chart.append("g")
+      .attr("class","Axis")
+      .call(MLyAxis);
+    
+    ML_morale_chart.append("g")
+      .attr("class","Axis")
+      .call(MLyAxis);
+    
+    
+    
+    
+    
+    var actualMoodChart = ML_mood_chart.append("path")
+        .attr("d", actualMoodLine(newPredictions))
+        // .attr("stroke", "black")
+        // .attr("stroke-width", 2.5)
+        .attr("fill", "fuchsia")
+        .attr("opacity", 0.2)
+        .attr("class", "line");
+    
+    var actualStressChart = ML_stress_chart.append("path")
+        .attr("d", actualStressLine(newPredictions))
+        // .attr("stroke", "black")
+        // .attr("stroke-width", 2.5)
+        .attr("fill", "blue")
+        .attr("opacity", 0.2)
+        .attr("class", "line");
+    
+    var actualFatigueChart = ML_fatigue_chart.append("path")
+        .attr("d", actualFatigueLine(newPredictions))
+        // .attr("stroke", "black")
+        // .attr("stroke-width", 2.5)
+        .attr("fill", "lavender")
+        .attr("opacity", 0.45)
+        .attr("class", "line");
+    
+    var actualMoraleChart = ML_morale_chart.append("path")
+        .attr("d", actualMoraleLine(newMoralePredictions))
+        // .attr("stroke", "black")
+        // .attr("stroke-width", 2.5)
+        .attr("fill", "gold")
+        .attr("opacity", 0.25)
+        .attr("class", "line");
+    
+    
+    var LSTM_moodLineChart = ML_mood_chart.append("path")
+        .attr("d", function(d,i){
+          var d = "";
+          for(var i = 0; i < newPredictions.length; i++){
+            var newCommand = LSTM_moodLine(newPredictions[i]['predictions']);
+            if(i>0){
+              d += "L" + newCommand.slice(1);
+            }
+            else{
+              d += newCommand;
+            }
+          }
+          return d;
+          })
+        .attr("stroke", "fuchsia")
+        .attr("stroke-width", 1.75)
+        .attr("fill", "none")
+        .attr("class", "line");
+    
+    var LSTM_stressLineChart = ML_stress_chart.append("path")
+        .attr("d", function(d,i){
+          var d = "";
+          for(var i = 0; i < newPredictions.length; i++){
+            var newCommand = LSTM_stressLine(newPredictions[i]['predictions']);
+            if(i>0){
+              d += "L" + newCommand.slice(1);
+            }
+            else{
+              d += newCommand;
+            }
+          }
+          return d;
+          })
+        .attr("stroke", "blue")
+        .attr("stroke-width", 1.75)
+        .attr("fill", "none")
+        .attr("class", "line");
+    
+    var LSTM_fatigueLineChart = ML_fatigue_chart.append("path")
+        .attr("d", function(d,i){
+          var d = "";
+          for(var i = 0; i < newPredictions.length; i++){
+            var newCommand = LSTM_fatigueLine(newPredictions[i]['predictions']);
+            if(i>0){
+              d += "L" + newCommand.slice(1);
+            }
+            else{
+              d += newCommand;
+            }
+          }
+          return d;
+          })
+        .attr("stroke", "silver")
+        .attr("stroke-width", 2)
+        .attr("fill", "none")
+        .attr("class", "line");
+    
+    var RF_moraleLineChart = ML_morale_chart.append("path")
+        .attr("d", function(d,i){
+          var d = "";
+          for(var i = 0; i < newMoralePredictions.length; i++){
+            var newCommand = RF_moraleLine(newMoralePredictions[i]['predictions']);
+            if(i>0){
+              d += "L" + newCommand.slice(1);
+            }
+            else{
+              d += newCommand;
+            }
+          }
+          return d;
+          })
+        .attr("stroke", "gold")
+        .attr("stroke-width", 2)
+        .attr("fill", "none")
+        .attr("class", "line");
+    
   
-  LSTM_fatigueLineChart.attr("d", function(d,i){
-      var d = "";
-      for(var i = 0; i < newPredictions.length; i++){
-        var newCommand = LSTM_fatigueLine(newPredictions[i]['predictions']);
-        if(i>0){
-          d+= "L" + newCommand.slice(1);
-        }
-        else{
-          d += newCommand;
-        }
-
-      }
-      return d;
-      })
-  actualFatigueChart.attr("d", actualFatigueLine(newPredictions))
-  // actualFatigueCircles.attr("cx", function(d) { return MLxScale(d.timestamp)}).attr("cy", function(d) { return MLyScale(d.actual_fatigue);})
- 
-  RF_moraleLineChart.attr("d", function(d,i){
-      var d = "";
-      for(var i = 0; i < newMoralePredictions.length; i++){
-        var newCommand = RF_moraleLine(newMoralePredictions[i]['predictions']);
-        if(i>0){
-          d+= "L" + newCommand.slice(1);
-        }
-        else{
-          d += newCommand;
-        }
-
-      }
-      return d;
-      })
-  actualMoraleChart.attr("d", actualMoraleLine(newMoralePredictions))
-  
-  MLxAxisGroup_mood.call(MLxAxis)
-  MLxAxisGroup_morale.call(MLxAxis)
-  MLxAxisGroup_stress.call(MLxAxis)
-  MLxAxisGroup_fatigue.call(MLxAxis)
-
-
-  if(nullPoints[currentNullMin - 2] == null){
-    predictions_nav_prev.style("color", "lightgrey")
-
-  }
-  }
-
-})
-
-predictions_nav_next
-.style("cursor", "pointer")
-.on("mousedown", function(d){
-
-  if(nullPoints[currentNullMin + 2] == null){
-    predictions_nav_next.style("color", "lightgrey")
-  }
-  else {
-    predictions_nav_next.style("display", "inline-block").style("color", "black")
-    predictions_nav_prev.style("display", "inline-block").style("color", "black")
-
-  currentNullMin = currentNullMin+2;
-
-
-  domainMax = new Date(nullPoints[currentNullMin + 1]['timestamp'])
-  domainMin = new Date(nullPoints[currentNullMin]['timestamp'])
-  MLxScale.domain([domainMin, domainMax])
-
-  currentRange = d3.select("#current-range")
-  domainMaxStr = domainMax.toString().slice(3, -38)
-  domainMinStr = domainMin.toString().slice(3, -38)
-
-  currentRange.text(domainMinStr + "00 — " + domainMaxStr + "00")
-
-  //  LSTM_moodAreaChart.attr("d", LSTM_moodArea(newPredictions));
-  LSTM_moodLineChart.attr("d", function(d,i){
-      var d = "";
-      for(var i = 0; i < newPredictions.length; i++){
-        var newCommand = LSTM_moodLine(newPredictions[i]['predictions']);
-        if(i>0){
-          d+= "L" + newCommand.slice(1);
-        }
-        else{
-          d += newCommand;
-        }
-
-      }
-      return d
-      })
-  actualMoodChart.attr("d", actualMoodLine(newPredictions))
-  // actualMoodCircles.attr("cx", function(d) { return MLxScale(d.timestamp)}).attr("cy", function(d) { return MLyScale(d.actual_mood);})
-  
-  LSTM_stressLineChart.attr("d", function(d,i){
-      var d = "";
-      for(var i = 0; i < newPredictions.length; i++){
-        var newCommand = LSTM_stressLine(newPredictions[i]['predictions']);
-        if(i>0){
-          d+= "L" + newCommand.slice(1);
-        }
-        else{
-          d += newCommand;
-        }
-
-      }
-      return d;
-      })
-  actualStressChart.attr("d", actualStressLine(newPredictions))
-  // actualStressCircles.attr("cx", function(d) { return MLxScale(d.timestamp)}).attr("cy", function(d) { return MLyScale(d.actual_stress);})
-  
-  LSTM_fatigueLineChart.attr("d", function(d,i){
-      var d = "";
-      for(var i = 0; i < newPredictions.length; i++){
-        var newCommand = LSTM_fatigueLine(newPredictions[i]['predictions']);
-        if(i>0){
-          d+= "L" + newCommand.slice(1);
-        }
-        else{
-          d += newCommand;
-        }
-
-      }
-      return d;
-      })
-  actualFatigueChart.attr("d", actualFatigueLine(newPredictions))
-  // actualFatigueCircles.attr("cx", function(d) { return MLxScale(d.timestamp)}).attr("cy", function(d) { return MLyScale(d.actual_fatigue);})
-  
-  RF_moraleLineChart.attr("d", function(d,i){
-      var d = "";
-      for(var i = 0; i < newMoralePredictions.length; i++){
-        var newCommand = RF_moraleLine(newMoralePredictions[i]['predictions']);
-        if(i>0){
-          d+= "L" + newCommand.slice(1);
-        }
-        else{
-          d += newCommand;
-        }
-
-      }
-      return d;
-      })
-  actualMoraleChart.attr("d", actualMoraleLine(newMoralePredictions))
-
-
-  MLxAxisGroup_mood.call(MLxAxis)
-  MLxAxisGroup_morale.call(MLxAxis)
-  MLxAxisGroup_stress.call(MLxAxis)
-  MLxAxisGroup_fatigue.call(MLxAxis)
-
-
-   if(nullPoints[currentNullMin + 2] == null){
-    predictions_nav_next.style("color", "lightgrey")
-
-  }
-}
-
-})
-
-
-
-
-
-  var actualMoodLine = d3.area()
-  .defined(function(d){return d.actual_mood!=null})
-    .x(function(d) {return MLxScale(d.timestamp);})
-    .y1(function(d){return MLyScale(d.actual_mood);})
-    .y0(MLyScale(0));
-
-  var actualStressLine = d3.area()
-  .defined(function(d){return d.actual_stress!=null})
-    .x(function(d) {return MLxScale(d.timestamp);})
-    .y1(function(d){return MLyScale(d.actual_stress);})
-    .y0(MLyScale(0));
-
-
-  var actualFatigueLine = d3.area()
-  .defined(function(d){return d.actual_fatigue!=null})
-    .x(function(d) {return MLxScale(d.timestamp);})
-    .y1(function(d){return MLyScale(d.actual_fatigue);})
-    .y0(MLyScale(0));
-
-
-  var LSTM_moodLine = d3.line()
-  .x(function(d) {return MLxScale(d.timestamp*1000) })
-    .y(function(d) {return MLyScale(d.LSTM_mood_prediction) })
-      // .defined(function(d,i){return d[i]["LSTM_mood_prediction"]!=null;});
-
-  var LSTM_stressLine = d3.line()
-  .x(function(d) {return MLxScale(d.timestamp*1000) })
-    .y(function(d) {return MLyScale(d.LSTM_stress_prediction) })
-      // .defined(function(d,i){return d[i]["LSTM_mood_prediction"]!=null;});
-
-  var LSTM_fatigueLine = d3.line()
-  .x(function(d) {return MLxScale(d.timestamp*1000) })
-    .y(function(d) {return MLyScale(d.LSTM_fatigue_prediction) })
-      // .defined(function(d,i){
-
-  var RF_moraleLine = d3.line()
-  .x(function(d) {return MLxScale(d.timestamp*1000) })
-    .y(function(d) {return MLyScale(d.morale_prediction) })
-
-  var actualMoraleLine = d3.area()
-  .defined(function(d){return d.actual_morale!=null})
-    .x(function(d) {return MLxScale(d.timestamp);})
-    .y1(function(d){return MLyScale(d.actual_morale);})
-    .y0(MLyScale(0));
-
-
-var MLxAxis = d3.axisBottom(MLxScale)
-  .tickPadding(10)
-  // .tickFormat(d3.timeFormat("%c"))
-  .ticks(4);
-
-
-var MLyAxis = d3.axisLeft(MLyScale)
-  .tickPadding(10)
-  .tickSize(-MLwidth)
-  .ticks(5)
-  .tickSizeOuter(0);
-
-
-var MLxAxisGroup_mood = ML_mood_chart.append("g")
-  .attr("class", "Axis")
-  .attr("transform","translate(0, "+(MLheight)+")")
-  .call(MLxAxis);
-
-
-var MLxAxisGroup_stress = ML_stress_chart.append("g")
-  .attr("class", "Axis")
-  .attr("transform","translate(0, "+(MLheight)+")")
-  .call(MLxAxis);
-
-
-var MLxAxisGroup_fatigue = ML_fatigue_chart.append("g")
-  .attr("class", "Axis")
-  .attr("transform","translate(0, "+(MLheight)+")")
-  .call(MLxAxis);
-
-var MLxAxisGroup_morale = ML_morale_chart.append("g")
-  .attr("class", "Axis")
-  .attr("transform","translate(0, "+(MLheight)+")")
-  .call(MLxAxis);
-
-  ML_mood_chart.append("g")
-  .attr("class", "axis-label")
-  // .attr("transform","translate(0, "+(MLheight/2)+")")
-  .append("text")
-  .attr("x", -MLheight/2)
-  .attr("y", -30)
-  .attr("text-anchor", "middle")
-  .text("Mood Score");
-
-ML_morale_chart.append("g")
-  .attr("class", "axis-label")
-  // .attr("transform","translate(0, "+(MLheight/2)+")")
-  .append("text")
-  .attr("x", -MLheight/2)
-  .attr("y", -30)
-  .attr("text-anchor", "middle")
-  .text("Morale Score");
-
-  ML_stress_chart.append("g")
-  .attr("class", "axis-label")
-  // .attr("transform","translate(0, "+(MLheight/2)+")")
-  .append("text")
-  .attr("x", -MLheight/2)
-  .attr("y", -30)
-  .attr("text-anchor", "middle")
-  .text("Stress Score");
-
-  ML_fatigue_chart.append("g")
-  .attr("class", "axis-label")
-  // .attr("transform","translate(0, "+(MLheight/2)+")")
-  .append("text")
-  .attr("x", -MLheight/2)
-  .attr("y", -30)
-  .attr("text-anchor", "middle")
-  .text("Fatigue Score");
-
-ML_mood_chart.append("g")
-  .attr("class","Axis")
-  .call(MLyAxis);
-
-ML_stress_chart.append("g")
-  .attr("class","Axis")
-  .call(MLyAxis);
-
-ML_fatigue_chart.append("g")
-  .attr("class","Axis")
-  .call(MLyAxis);
-
-ML_morale_chart.append("g")
-  .attr("class","Axis")
-  .call(MLyAxis);
-
-
-
-
-
-var actualMoodChart = ML_mood_chart.append("path")
-    .attr("d", actualMoodLine(newPredictions))
-    // .attr("stroke", "black")
-    // .attr("stroke-width", 2.5)
-    .attr("fill", "fuchsia")
-    .attr("opacity", 0.2)
-    .attr("class", "line");
-
-var actualStressChart = ML_stress_chart.append("path")
-    .attr("d", actualStressLine(newPredictions))
-    // .attr("stroke", "black")
-    // .attr("stroke-width", 2.5)
-    .attr("fill", "blue")
-    .attr("opacity", 0.2)
-    .attr("class", "line");
-
-var actualFatigueChart = ML_fatigue_chart.append("path")
-    .attr("d", actualFatigueLine(newPredictions))
-    // .attr("stroke", "black")
-    // .attr("stroke-width", 2.5)
-    .attr("fill", "lavender")
-    .attr("opacity", 0.45)
-    .attr("class", "line");
-
-var actualMoraleChart = ML_morale_chart.append("path")
-    .attr("d", actualMoraleLine(newMoralePredictions))
-    // .attr("stroke", "black")
-    // .attr("stroke-width", 2.5)
-    .attr("fill", "gold")
-    .attr("opacity", 0.25)
-    .attr("class", "line");
-
-
-var LSTM_moodLineChart = ML_mood_chart.append("path")
-    .attr("d", function(d,i){
-      var d = "";
-      for(var i = 0; i < newPredictions.length; i++){
-        var newCommand = LSTM_moodLine(newPredictions[i]['predictions']);
-        if(i>0){
-          d += "L" + newCommand.slice(1);
-        }
-        else{
-          d += newCommand;
-        }
-      }
-      return d;
-      })
-    .attr("stroke", "fuchsia")
-    .attr("stroke-width", 1.75)
-    .attr("fill", "none")
-    .attr("class", "line");
-
-var LSTM_stressLineChart = ML_stress_chart.append("path")
-    .attr("d", function(d,i){
-      var d = "";
-      for(var i = 0; i < newPredictions.length; i++){
-        var newCommand = LSTM_stressLine(newPredictions[i]['predictions']);
-        if(i>0){
-          d += "L" + newCommand.slice(1);
-        }
-        else{
-          d += newCommand;
-        }
-      }
-      return d;
-      })
-    .attr("stroke", "blue")
-    .attr("stroke-width", 1.75)
-    .attr("fill", "none")
-    .attr("class", "line");
-
-var LSTM_fatigueLineChart = ML_fatigue_chart.append("path")
-    .attr("d", function(d,i){
-      var d = "";
-      for(var i = 0; i < newPredictions.length; i++){
-        var newCommand = LSTM_fatigueLine(newPredictions[i]['predictions']);
-        if(i>0){
-          d += "L" + newCommand.slice(1);
-        }
-        else{
-          d += newCommand;
-        }
-      }
-      return d;
-      })
-    .attr("stroke", "silver")
-    .attr("stroke-width", 2)
-    .attr("fill", "none")
-    .attr("class", "line");
-
-var RF_moraleLineChart = ML_morale_chart.append("path")
-    .attr("d", function(d,i){
-      var d = "";
-      for(var i = 0; i < newMoralePredictions.length; i++){
-        var newCommand = RF_moraleLine(newMoralePredictions[i]['predictions']);
-        if(i>0){
-          d += "L" + newCommand.slice(1);
-        }
-        else{
-          d += newCommand;
-        }
-      }
-      return d;
-      })
-    .attr("stroke", "gold")
-    .attr("stroke-width", 2)
-    .attr("fill", "none")
-    .attr("class", "line");
-
-
-
-  // var mlTip = d3.tip()
-  //   .attr("class", "tooltip")
-  //   .offset([-20,-5])
-  //   .html(function(d,i) {
-  //    return "<b>Actual Mood Score:</b> " + d.actual_mood + "<br><b>LSTM Mood Prediction:</b> " + d.predictions.LSTM_mood_prediction;
-  //   });
-
-  // ML_mood_chart.selectAll(".mood-circle")
-  // .call(mlTip)
-
-  // .on("mouseover", function(d) {
-  //   mlTip.show(d);
-  // })
-
-  // .on("mouseout", function(d) {
-  //   mlTip.hide(d);
-  // })
-
-
-});
-});
-
-</script>
+    
+    
+    });
+    });
+    
+    </script>
 
 </body>

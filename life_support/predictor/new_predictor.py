@@ -133,7 +133,7 @@ def makePrediction(df):
 
 			currentIndexPredictions['actual_mood'] = lastResponsesRow['mood']
 			currentIndexPredictions['actual_morale'] = lastResponsesRow['morale']
-			currentIndexPredictions['response_time'] = lastResponsesRow['time']
+			currentIndexPredictions['response_time'] = lastResponsesRow['unix_time']
 			writeToJSON(currentIndexPredictions)
 
 		print("starting new round of predictions")

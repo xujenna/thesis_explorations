@@ -23413,5 +23413,22 @@
         "min_engagement": 0.07940022647380829,
         "min_valence": 0,
         "time": 1540304016652
+    },
+    {
+        "avg_attention": 97.41650747466122,
+        "avg_engagement": 1.1384383130129132,
+        "avg_valence": 0,
+        "blinks": 0,
+        "emoji": [
+            "\ud83d\ude10",
+            "\ud83d\ude33"
+        ],
+        "max_attention": 98.77635955810547,
+        "max_engagement": 50.37430953979492,
+        "max_valence": 0,
+        "min_attention": 95.00737762451172,
+        "min_engagement": 0.07925995439291,
+        "min_valence": 0,
+        "time": 1540307616568
     }
 ]
