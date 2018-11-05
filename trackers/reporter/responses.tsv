@@ -1111,3 +1111,90 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-10-23T13:29:56.598361	1540301396.598361	3.5	cheerful	working on viz, talking to mitchell	schoolwork	1	False	Mozfest House	3	3.5	3.5	True
 2018-10-23T14:30:52.361141	1540305052.361141	3	neutral	finished viz, catching up on emails	schoolwork, email	1	False	Mozfest House	2.5	2	3.5	True
 2018-10-23T16:33:39.238961	1540308819.238961	3	focused	fixing some stuff	schoolwork	0	False	Mozfest House	2.5	2.5	3.5	True
+2018-10-23T17:36:05.938679	1540312565.938679	3	focused	getting viz online	schoolwork	1	False	Mozfest House	3	3.5	3.5	False
+2018-10-23T22:21:34.836919	1540329694.836919	3.5	content	had a good, productive day	email, errands, leisure	3	True	Home, London	3.5	1.5	3.5	True
+2018-10-23T23:22:14.070555	1540333334.070555	3	fine	planning the week	leisure, errands	2	False	Home, London	3	1.5	4	True
+2018-10-24T00:33:46.630739	1540337626.630739	3	neutral	washing up	washing up	2	True	Home, London	2.5	1	4	True
+2018-10-24T22:21:26.493633	1540416086.493633	4	tired but cheerful	had a nice day with adam and lorraine	leisure, with friends	2	True	Home, London	3	1.5	4	True
+2018-10-24T23:22:20.707705	1540419740.707705	3	lazy	just tired now lol	leisure, email, feedly	1	True	Home, London	2	2	4.5	True
+2018-10-25T00:48:40.778125	1540424920.778125	2.5	sleepy	staying up late packing	errands	1	True	Home, London	2.5	1.5	4.5	True
+2018-10-25T10:51:22.579957	1540461082.579957	3	pretty energetic	getting ready to check out	errands, washing up, eating	3	True	Home, London	3	2	2.5	True
+2018-10-25T13:14:02.161413	1540469642.161413	3	focused	working on hello computer final documentation	schoolwork	0	False	Mozfest House	3	0.5	3	False
+2018-10-25T14:15:01.455912	1540473301.455912	3.5	relieved but hungry	finished hello computer blog post	schoolwork, errands	0	False	Mozfest House	3	1	3.5	True
+2018-10-25T20:07:17.308425	1540494437.308425	3	pretty tired	mingling is exhausting lol	leisure, resting, email	9	True	Home, London	3	0.5	4	True
+2018-10-25T21:12:34.455822	1540498354.455822	3.5	cheerful-ish	just relaxing in the hotel	leisure, email, feedly	4	True	Home, London	3.5	0.5	3.5	True
+2018-10-25T22:14:13.391365	1540502053.391365	3.5	excited	got an idea for my neural aesthetic final	schoolwork, washing up	3	True	Home, London	3.5	1	4	True
+2018-10-25T23:16:09.463531	1540505769.463531	3.5	in a pretty good mood	feeling optimistic about life lol	studying, errands	3	True	Home, London	3.5	0.5	4	False
+2018-10-26T00:36:29.224946	1540510589.224946	3	sleepy	long day	leisure, studying	3	True	Home, London	3	0.5	4.5	True
+2018-10-26T11:35:24.236949	1540550124.236949	3	tired	woke up early and had breakfast with a trump supporter	eating, email, leisure	3	True	Home, London	2.5	1	4	True
+2018-10-26T13:04:45.784224	1540555485.784224	2.5	nervous	i have to rasterize my poster files :(	working, errands	0	True	Home, London	2.5	2.5	3.5	True
+2018-10-26T14:05:31.031143	1540559131.031143	3	relieved	finally sent those files off	leisure, working	1	True	Home, London	3	1.5	3	True
+2018-10-26T16:51:21.332063	1540569081.332063	2.5	kind of bored and really tired for some reason	waiting for my poster to print	leisure, email	4	False	Mozfest	2.5	1	4	False
+2018-10-26T22:00:14.270641	1540587614.270641	3	exhausted but content	long day at mozfest	washing up, leisure, feedly	3	True	Home, London	3	1	4.5	False
+2018-10-26T23:12:45.032041	1540591965.032041	3	fine	just tired	email, leisure	0	True	Home, London	2.5	0.5	4.5	False
+2018-10-27T17:30:58.757062	1540657858.757062	2.5	super tired	long day at mozfest	leisure, studying, working	5	False	Mozfest	2.5	2	4	True
+2018-10-27T19:48:04.555380	1540666084.55538	3	exhausted but content	long day at mozfest	schoolwork, leisure	2	True	Home, London	2.5	0.5	4	True
+2018-10-27T20:48:47.460494	1540669727.460494	2.5	unfocused and lazy	tired after a long day	schoolwork, leisure	0	True	Home, London	2	0.5	4.5	True
+2018-10-27T22:45:27.317174	1540676727.317174	3	lazy but okay with it	still tired	schoolwork, leisure	0	True	Home, London	2.5	0.5	4.5	True
+2018-10-27T23:46:10.362772	1540680370.362772	3	fine but still lazy	still tired, should sleep	schoolwork, leisure, feedly	0	True	Home, London	2.5	1	4.5	True
+2018-10-28T11:30:06.667069	1540726206.667069	3	fine	gearing up for the last day of mozfest	studying, mozfest	2	False	Mozfest	3	1.5	2.5	True
+2018-10-28T12:30:50.522338	1540729850.522338	3	still fine	sitting in a workshop	studying, mozfest	2	False	Mozfest	3	1	2.5	True
+2018-10-28T14:03:31.285467	1540735411.285467	4	cheerful	chatting with people at mozfest	leisure, mozfest	4	False	Mozfest	3.5	0.5	3	True
+2018-10-28T19:23:23.506749	1540754603.506749	3	pretty tired	another long day at mozfest	eating	2	True	Home, London	3	1	3.5	True
+2018-10-28T20:24:31.443193	1540758271.443193	2.5	restless	feeling a little lonely	studying	0	True	Home, London	2.5	2	4	True
+2018-10-28T21:51:42.071678	1540763502.071678	3	fine now	took a shower	leisure, washing up	0	True	Home, London	3	1	4	True
+2018-10-28T22:53:44.259107	1540767224.259107	3	still fine	watching neural aesthetic lecture	studying, leisure	0	True	Home, London	2.5	1.5	4	True
+2018-10-28T23:55:29.013575	1540770929.013575	2.5	fine i guess	just wasting time	studying, leisure	0	True	Home, London	2.5	2	4	True
+2018-10-29T00:56:35.819325	1540774595.819325	3	fine, just really tired	long day, it's late	errands	0	True	Home, London	2.5	1.5	4.5	True
+2018-10-29T16:42:01.256543	1540831321.256543	3	fine	killing time at heathrow	studying	1	False	airport	3	2	3.5	True
+2018-10-30T10:21:44.149944	1540909304.149944	3	content	just ate, finishing up lecture	studying, cooking, eating, washing up	0	True	Home	3	1.5	2.5	True
+2018-10-30T11:24:19.719604	1540913059.719604	2.5	tired and lazy	jetlag i guess, long weekend	studying, getting ready	0	True	Home	2	2	3.5	True
+2018-10-30T12:51:23.250836	1540918283.250836	3.5	cheerful	had coffee, convos at school	in class	7	False	School	3.5	1.5	3	False
+2018-10-30T13:54:14.011002	1540922054.011002	3.5	pretty good	just sitting in class	in class	2	False	School	3	1	3	False
+2018-10-30T14:54:49.997569	1540925689.997569	3	fine	in class	in class	0	False	School	3	1.5	3.5	False
+2018-10-30T22:16:40.899674	1540952200.899674	4.5	cheerful	hanging out at school, had nice dinner with dan	leisure, with friends, chatting, schoolwork	8	False	School	4	1	4	False
+2018-10-30T23:48:39.315655	1540957719.315655	4.5	happy	having fun at school	schoolwork, with friends	4	False	School	3.5	1.5	3.5	False
+2018-10-31T01:13:47.231309	1540962827.231309	5	happy	had fun at school	leisure, with friends, schoolwork	6	True	Home	3.5	1.5	4	False
+2018-10-31T02:14:29.722693	1540966469.722693	3.5	relieved	finished my hello computer video documentation	schoolwork	1	True	Home	3	0.5	4.5	True
+2018-10-31T11:21:58.895197	1540999318.895197	3	neutral	getting ready to leave	washing up, cooking, eating, email	2	True	Home	3	1.5	2.5	False
+2018-10-31T12:44:24.760900	1541004264.7609	2.5	restless for some reason	a little bored in class	in class	2	False	School	2.5	2	3	True
+2018-10-31T13:57:57.525815	1541008677.525815	3	fine	sitting in class	in class	6	False	School	3	1	3	False
+2018-10-31T20:33:47.377665	1541032427.377665	3	pretty good, just tired	went to yoga, spent forever finding bike parking, came home and cooked for the week	errands, working out, cooking, eating	1	True	Home	3	1.5	4	False
+2018-10-31T21:36:34.719701	1541036194.719701	4.5	cheerful	facetiming dawn	leisure	1	True	Home	3	1	3.5	False
+2018-10-31T22:38:17.249483	1541039897.249483	4	cheerful	still facetiming with dawn	leisure	1	True	Home	2.5	1.5	4	False
+2018-11-01T09:30:31.910563	1541079031.910563	2.5	slightly annoyed	don't want to work on things i need to work on	washing up, cooking, eating, schoolwork	0	True	Home	2.5	2.5	3	False
+2018-11-01T10:31:34.069910	1541082694.06991	2.5	tired again	not sure, i slept well last night	schoolwork	0	True	Home	3	2	3.5	True
+2018-11-01T13:10:35.176001	1541092235.176001	2.5	still tired	no idea	in class	5	False	School	2.5	1.5	4	False
+2018-11-01T15:30:15.900668	1541100615.900668	3.5	more cheerful	hung out with sandy for a bit	working, in class, with friends	2	False	School	3	2	3	True
+2018-11-01T16:31:20.167284	1541104280.167284	3	fine	still kind of tired but finished adjacent slides	working	4	False	School	3	1	3.5	True
+2018-11-01T21:36:13.662006	1541122573.662006	3.5	content	had a nice date with casey, taking the rest of the night off	leisure, with friends, eating	4	True	Home	2.5	0.5	4	True
+2018-11-01T22:56:46.586622	1541127406.586622	2.5	lazy	watching SATC	leisure, tv	0	True	Home	2	1	4.5	True
+2018-11-02T08:50:10.697726	1541163010.697726	3	content	just got up	washing up, email	1	True	Home	3	1.5	2	False
+2018-11-02T09:52:01.728934	1541166721.728934	3	focused	working on good vibes documentation for the open house thing	schoolwork	1	True	Home	3.5	2	2.5	False
+2018-11-02T10:53:10.646601	1541170390.646601	3.5	pretty good	finished the video, had some breakfast	schoolwork, cooking, eating	1	True	Home	3.5	1	3	False
+2018-11-02T12:52:37.190327	1541177557.190327	3	neutral	finally unpacked, planning what i'll show at the open house	errands	2	True	Home	3	1	3.5	False
+2018-11-02T13:56:53.002922	1541181413.002922	3	fine	just getting ready to leave	errands	0	True	Home	3	1.5	3	True
+2018-11-02T18:19:24.670226	1541197164.670226	4.5	cheerful	fun at school	leisure, eating, with friends	6	False	School	3.5	2	3.5	False
+2018-11-02T19:44:53.047140	1541202293.04714	3	frustrated	can't get the prince clusters to work	schoolwork	1	False	School	2.5	2	4	False
+2018-11-02T21:30:54.632658	1541208654.632658	3	fine	doing some research for tomorrow's adjacent panel	studying	0	True	Home	3	1.5	4	True
+2018-11-02T22:32:33.274732	1541212353.274732	2.5	a little sleepy	jet lag i guess	studying, errands	1	True	Home	2.5	1.5	4.5	True
+2018-11-02T23:33:07.799794	1541215987.799794	2.5	still sleepy	jet lag	errands	0	True	Home	2.5	2	4.5	True
+2018-11-03T00:39:06.171916	1541219946.171916	3	relieved	done prepping for adjacent panel	washing up	0	True	Home	3	1	4.5	True
+2018-11-03T09:39:02.180574	1541252342.180574	2.5	nervous	reviewing my adjacent notes	washing up, studying	0	True	Home	3	3.5	2.5	False
+2018-11-03T17:14:55.722771	1541279695.722771	3.5	relieved	survived the adjacent conference	eating, with friends	4	True	Home	2.5	2	4	False
+2018-11-03T18:16:58.967988	1541283418.967988	3	lazy	exhausted from earlier	leisure, tv	0	True	Home	2	1.5	4	True
+2018-11-03T19:19:55.307060	1541287195.30706	2.5	still lazy	been watching SATC for hours	leisure, tv	0	True	Home	2	1	4	True
+2018-11-03T20:23:13.374588	1541290993.374588	2.5	still super lazy	still watching SATC	leisure, tv	5	True	Home	2	1.5	4.5	True
+2018-11-03T21:32:42.530879	1541295162.530879	3	slowly snapping out of it	too much tv	schoolwork, leisure, tv	2	True	Home	2.5	1.5	4	True
+2018-11-03T22:34:38.444190	1541298878.44419	3	okay but a little scatterbrained	traumatized from this morning lol	studying, schoolwork	0	True	Home	2.5	1	4	True
+2018-11-03T23:44:00.195666	1541303040.195666	3	still okay, focused on some random thing	wanted to put my markov oracle online	schoolwork	0	True	Home	3	1	4	False
+2018-11-04T00:44:34.472838	1541306674.472838	2.5	guilty	didn't do anything productive today	washing up, leisure	1	True	Home	2	2	4.5	True
+2018-11-04T09:46:22.948789	1541342782.948789	2.5	scatterbrained	testing the feasibility of an idea	schoolwork, leisure	2	True	Home	3	1.5	2.5	True
+2018-11-04T11:05:37.077675	1541347537.077675	3	better but tired	catching up on emails finally	errands, email	2	True	Home	3	2	3.5	True
+2018-11-04T12:09:06.642424	1541351346.642424	2.5	tired	have a headache	errands, email, resting	1	True	Home	2.5	2	4	True
+2018-11-04T13:09:44.790415	1541354984.790415	3	still tired but a bit better	had a break, did some cleaning	errands, email	0	True	Home	3	1.5	3.5	True
+2018-11-04T14:13:45.564995	1541358825.564995	3.5	relieved, grateful	almost done catching up with emails, grateful for all the mozfest contacts	errands, email, resting	4	True	Home	3	1	4	True
+2018-11-04T16:27:06.332149	1541366826.332149	3	fine	taking a break	errands, eating, leisure, tv	1	True	Home	3	1.5	3.5	False
+2018-11-04T17:27:41.656574	1541370461.656574	3	still fine	trying to set up paperspace	schoolwork	1	True	Home	3	2	3	False
+2018-11-04T18:28:31.087536	1541374111.087536	2.5	flailing a little	paperspace has a bug, trying out kaggle for no reason	schoolwork	0	True	Home	2.5	2.5	3.5	False
+2018-11-04T19:29:04.296410	1541377744.29641	3	okay	might be getting somewhere	schoolwork	0	True	Home	3	1.5	4	False
