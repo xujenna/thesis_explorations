@@ -32,11 +32,11 @@ happyNLTK = POSifiedText(happyDB)
 # horoscopeNLTK = POSifiedText(horoscope)
 # oprahNLTK = POSifiedText(oprah)
 # happyModel = markovify.Text(happyNLTK)
-happyModel = markovify.combine([happyNLTK], [1])
+# happyModel = markovify.combine([happyNLTK], [1])
 
 # for i in range(2):
 #     print("\n"+comboModel.make_sentence()+"\n")
 
 # Print three randomly-generated sentences of no more than 140 characters
 for i in range(20):
-    print("\n"+happyModel.make_short_sentence(140)+"\n")
+    print("\n"+happyNLTK.make_short_sentence(140)+"\n")
