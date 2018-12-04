@@ -30426,5 +30426,26 @@
         "min_engagement": 0.07923081517219543,
         "min_valence": -81.71525573730469,
         "time": 1543956333744
+    },
+    {
+        "avg_attention": 95.71321036161308,
+        "avg_engagement": 16.02067106045571,
+        "avg_valence": -7.826577622431686,
+        "blinks": 3,
+        "emoji": [
+            "\ud83d\ude10",
+            "\ud83d\ude17"
+        ],
+        "emotions": [
+            "sadness",
+            "contempt"
+        ],
+        "max_attention": 98.68864440917969,
+        "max_engagement": 65.30471801757812,
+        "max_valence": 0,
+        "min_attention": 93.12738037109375,
+        "min_engagement": 0.07960864156484604,
+        "min_valence": -58.81773376464844,
+        "time": 1543959933685
     }
 ]
