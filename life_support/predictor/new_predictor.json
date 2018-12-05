@@ -8954,5 +8954,51 @@
     "actual_mood": 3.0,
     "actual_morale": 3.5,
     "response_time": 1543959459.782221
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.8109744258737517,
+        "morale_prediction": 3.0003277033043267,
+        "timestamp": 1543961006.82956
+      },
+      {
+        "mood_prediction": 2.817806986847295,
+        "morale_prediction": 3.0115578720437037,
+        "timestamp": 1543962807.142502
+      },
+      {
+        "mood_prediction": 2.75811428632607,
+        "morale_prediction": 2.9766449606282848,
+        "timestamp": 1543963751.195667
+      }
+    ],
+    "mood_index": 1420,
+    "actual_mood": 3.0,
+    "actual_morale": 3.5,
+    "response_time": 1543963100.9009778
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.7358069460390473,
+        "morale_prediction": 3.037042272154003,
+        "timestamp": 1543964652.173558
+      },
+      {
+        "mood_prediction": 2.7248701696855115,
+        "morale_prediction": 3.028378013054384,
+        "timestamp": 1543966452.533465
+      },
+      {
+        "mood_prediction": 2.718461218469147,
+        "morale_prediction": 3.0344985178503623,
+        "timestamp": 1543967352.898449
+      }
+    ],
+    "mood_index": 1421,
+    "actual_mood": 3.0,
+    "actual_morale": 3.5,
+    "response_time": 1543966810.6718721
   }
 ]
