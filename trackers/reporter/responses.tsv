@@ -1421,3 +1421,7 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-12-04T16:37:39.782221	1543959459.782221	3	focused	cleaning up notebooks for the pudding	working	5	False	School	3.5	2	3	True
 2018-12-04T17:38:20.900978	1543963100.900978	3	focused	working on word2vec game	schoolwork	2	False	School	3.5	1.5	3	False
 2018-12-04T18:40:10.671872	1543966810.671872	3	still focused	still working on cleaning data for w2v game	schoolwork	4	False	School	3.5	1	3.5	False
+2018-12-04T20:25:55.235316	1543973155.235316	3	still focused	still working	schoolwork	1	True	Home	3	1.5	3.5	False
+2018-12-04T22:04:58.292553	1543979098.292553	3	still focused	still working	schoolwork	2	True	Home	3	1	3.5	True
+2018-12-04T23:35:06.218310	1543984506.21831	2.5	tired	still working	schoolwork	1	True	Home	2.5	1.5	4	True
+2018-12-05T01:07:32.594945	1543990052.594945	2.5	burning out	was not successful with these w2v models	schoolwork	0	True	Home	2	1.5	4	True
