@@ -1497,3 +1497,16 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2018-12-19T21:34:44.166389	1545276884.166389	3	still content	made some cookies	cooking, eating	2	False	Parents Home	3.5	0	3	True
 2018-12-19T23:55:46.149457	1545285346.149457	3	fine	getting some small stuff done	errands	2	False	Parents Home	3	0.5	3.5	True
 2018-12-20T00:57:01.928432	1545289021.928432	2.5	pretty tired	getting late	washing up, leisure, feedly, reading	2	False	Parents Home	2.5	0.5	4	True
+2018-12-20T13:15:47.378233	1545333347.378233	3	content	had breakfast, doing ash stuff, watching chinese tv lol	eating, leisure, tv, ash stuff	2	True	Parents Home	3	0.5	1.5	True
+2018-12-20T14:24:19.950045	1545337459.950045	3	fine	snacking and watching tv	eating, leisure, tv	1	True	Parents Home	3	0.5	1.5	False
+2018-12-20T16:06:31.772045	1545343591.772045	2.5	tired for some reason	maybe hungry	leisure, tv	4	False	parents home	3	1	2.5	True
+2018-12-20T20:59:48.554662	1545361188.554662	3	fine	looking at a dataset	working, leisure, eating	6	False	Parents Home	3	1.5	3	True
+2018-12-20T22:23:01.675580	1545366181.67558	2.5	anxious	thinking about what to tell conde tomorrow during the call	errands, washing up	3	False	Parents Home	3	2	3.5	True
+2018-12-21T13:02:57.469317	1545418977.469317	3	focused	working on w2v documentation	schoolwork, washing up	2	False	Parents Home	3	0.5	1.5	False
+2018-12-21T16:33:05.613896	1545431585.613896	3	accomplished	finished documentation, did a lot of roadtrip planning	errands, schoolwork	5	False	Parents Home	3.5	0.5	1.5	False
+2018-12-21T21:18:31.867613	1545448711.867613	4	cheerful	fun evening with extended fam	leisure, with family	7	False	Parents Home	3	0	2.5	False
+2018-12-21T22:37:52.323123	1545453472.323123	3	fine	letting myself relax	leisure, tv, washing up	4	False	Parents Home	2.5	0.5	3	True
+2018-12-22T00:53:46.959235	1545461626.959235	2.5	super tired and overwhelmed	started looking into joey's friends' work and feel overwhelmed by how impressive they are lol	errands, leisure	1	False	Parents Home	2	2.5	4.5	False
+2018-12-23T00:48:56.403594	1545547736.403594	3	content but tired	long day out with fam, big dinner and xmas gift exchange	leisure, tv	4	False	Parents Home	2.5	1	4.5	True
+2018-12-25T19:09:00.091852	1545786540.091852	2.5	tired	long day in the car	leisure, eating	4	False	Hotel, New Orleans	3	0.5	4	False
+2018-12-25T20:09:42.315728	1545790182.315728	2.5	still tired	maybe the drammamine	schoolwork	2	False	Hotel, New Orleans	3	1	4	False

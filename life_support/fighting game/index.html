@@ -1,142 +1,188 @@
 <html>
-	<head>
-		<meta name = "viewport" content="width=device-width,initial-scale=1">
-		<style type="text/css">
+<head>
+	<meta name = "viewport" content="width=device-width,initial-scale=1">
+	<style type="text/css">
 
-		body{
-			margin:0px;
-		}
-		img, embed, object, video {
-			max-width: 100%;
-		}
+	body{
+		margin:0px;
+	}
+	img, embed, object, video {
+		max-width: 100%;
+	}
 
-		@media screen and (min-width: 500px){
+	@media screen and (min-width: 500px){
 
-		}
+	}
 
-		.step-container {
-			min-width: 100%;
-			min-height: 100%;
-		}
-		.player1{
-			background-color: #d8ffed;
-		}
+	.step-container {
+		min-width: 100%;
+		min-height: 100%;
+		display:none;
+	}
+	.player1{
+		background-color: #d8ffed;
+	}
 
-		.player2{
-			background-color: #ffe0d8;
-		}
-		.step {
-			width:50%;
-			vertical-align: middle;
-			font-size:16px;
-			margin:auto;
-			padding:10%;
-			font-family: fanwood;
-			font-weight: 400;
-		}
+	.player2{
+		background-color: #ffe0d8;
+	}
+	.step {
+		width:50%;
+		vertical-align: middle;
+		font-size:16px;
+		margin:auto;
+		padding:10%;
+		font-family: fanwood;
+		font-weight: 400;
+	}
 
-		.step-num{
-			font-family: europa;
-			font-size: 13px;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			border-bottom: 1px solid black;
-			padding-bottom: 4px;
-			margin-bottom: 20px;
-		}
-		.player{
-			font-size:22px;
-		}
+	.step-num{
+		font-family: europa;
+		font-size: 13px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		border-bottom: 1px solid black;
+		padding-bottom: 4px;
+		margin-bottom: 20px;
+	}
+	.player{
+		font-size:22px;
+	}
 
-		.script {
-			font-family: europa;
-			font-size: 22px;
-			font-weight: bold;
-			line-height: 1.5;
-		}
+	.script {
+		font-family: europa;
+		font-size: 22px;
+		font-weight: bold;
+		line-height: 1.5;
+	}
 
-		.bonus{
-			border: 1px solid black;
-			padding: 20px;
-		}
+	.bonus{
+		border: 1px solid black;
+		padding: 20px;
+	}
 
-		</style>
-	</head>
+.start{
+	font-size:18px;
+	text-align:center;
+}
+.start > button{
+    width:300px;
+    height:300px;
+    background-color:red;
+    border-radius: 300px;
+    font-size: 23px;
+    font-family: monospace;
+    font-weight:bold;
+    color: white;
+    padding: 20px;
+    cursor:pointer;
+    text-align: center;
+    box-shadow: 10px 20px darkred;
+    border: none;
+  }
 
-	<body>
- 		 <link rel="stylesheet" href="https://use.typekit.net/fao6qlb.css">
+  .start > button:hover {
+    background-color: red;
+    color:white;
+  }
+  .start > button:active {
+    /* background-color: red; */
+    box-shadow: 10px 10px darkred;
+    transform: translateY(10px)
+  }
 
-		<div class="step-container player1">
-			<div class="step">
-				<p class="step-num">#1 <b>Player 1 and 2</b>: Accept the Challenge</p>
+  .start > button:focus{
+    outline:0;
+  }
+  #step0{
+	  display:block;
+  }
 
-				<p>Approach the game as a challenge and opportunity to communicate and understand your partner better. Maintain a positive, generous, warm, compassionate tone. Listen carefully, trust fully,  be honest, empathetic, and give the benefit of the doubt. </p>
-				<p class="script"><input type="checkbox" name="breaths" /><label for="breaths"> Take 3 deep breaths.</label></p>
-				<p>
-				<p class="script"><input type="checkbox" name="position" /><label for="position"> Face each other, sit at the same level, maintain open body language and eye contact.</label></p>
+</style>
+</head>
+
+<body>
+	<link rel="stylesheet" href="https://use.typekit.net/fao6qlb.css">
+	<script src="script.js"></script>
+	<div class="step-container" id="step0">
+		<div class="start">
+
+			<p><i>The Fighting Game</i> is a cooperative game in which two players team up for the ultimate quest: to resolve an interpersonal issue!</p>
+			<button onclick="nextStep();">START GAME</button>
+
+		</div>
+	</div>
+	<div class="step-container player1" id="step1">
+		<div class="step">
+			<p class="step-num">#1 <b>Player 1 and 2</b>: Accept the Challenge</p>
+
+			<p>Approach the game as a challenge and opportunity to communicate and understand your partner better. Maintain a positive, generous, warm, compassionate tone. Listen carefully, trust fully,  be honest, empathetic, and give the benefit of the doubt. </p>
+			<p class="script"><input type="checkbox" name="breaths" /><label for="breaths"> Take 3 deep breaths.</label></p>
+			<p>
+			<p class="script"><input type="checkbox" name="position" /><label for="position"> Face each other, sit at the same level, maintain open body language and eye contact.</label></p>
+		</div>
+	</div>
+	<div class="step-container player2" id="step2">
+		<div class="step">
+			<p class="step-num">#2 <b>Player 1</b>: Identify the complaint, not the criticism.</p>
+
+			<p>Formulate the "I" statement. Elaborate as necessary, using feeling words and avoiding the word "you", "always", and "never". Consider and include assertions of individual responsibility, self-disclosure, and empathy.</p>
+
+			<p class="script"><input type="checkbox" name="iStatement" /><label for="iStatement"> "I feel <input type="text" name="feeling"> when you <input type="text" name="trigger">."</label></p>
+
+			<p>Define your emotional needs.</p>
+			<p class="script"><input type="checkbox" name="needStatement" /><label for="needStatement"> "I need <input type="text" name="need"> when <input type="text" name="trigger">."</label></p>
+
+			<div class="bonus">
+				<p><b>Bonus point:</b> Empathize.</p>
+
+				<p class="script"><input type="checkbox" name="empathize" /><label for="empathize"> "I recognize that you did not mean to <input type="text" name="trigger"> because <input type="text" name="feeling">."</label></p>
+
+				<p><b>Bonus Point:</b> Mention instances in which your partner has done the positive/reverse version of the complaint as an example of a solution.</p>
+
+				<p class="script"><input type="checkbox" name="gratitude" /><label for="gratitude"> "I really appreciate when you <input type="text" name="trigger"> and <input type="text" name="trigger"> in the past, because it made me feel <input type="text" name="trigger">."</label></p>
 			</div>
 		</div>
-		<div class="step-container player2">
-			<div class="step">
-				<p class="step-num">#2 <b>Player 1</b>: Identify the complaint, not the criticism.</p>
+	</div>
+	<div class="step-container player1" id="step3">
+		<div class="step">
+			<p class="step-num">#3 <b>Player 2</b>: Acknowledge Your Partner</p>
 
-				<p>Formulate the "I" statement. Elaborate as necessary, using feeling words and avoiding the word "you", "always", and "never". Consider and include assertions of individual responsibility, self-disclosure, and empathy.</p>
+			<p>Acknowledge and repeat the "I" statement.</p>
 
-				<p class="script"><input type="checkbox" name="iStatement" /><label for="iStatement"> "I feel <input type="text" name="feeling"> when you <input type="text" name="trigger">."</label></p>
+			<p class="script"><input type="checkbox" name="acknowledgement" /><label for="acknowledgement"> "I understand that you feel <input type="text" name="feeling"> when I <input type="text" name="trigger">. I'm sorry for making you feel that way."</label></p>
 
-				<p>Define your emotional needs.</p>
-				<p class="script"><input type="checkbox" name="needStatement" /><label for="needStatement"> "I need <input type="text" name="need"> when <input type="text" name="trigger">."</label></p>
+			<p>Consider and assert your responsibility, and explain your intentions/perspective. Include self-disclosure, use feeling words, and avoid using the word "you", "always", and "never".</p>
+			<p class="script"><input type="checkbox" name="explanation" /><label for="explanation"> "I know I do <input type="text" name="need">, but it's because I <input type="checkbox" name="explanation" />. I don't mean to make you feel <input type="text" name="trigger">...."</label></p>
 
-				<div class="bonus">
-					<p><b>Bonus point:</b> Empathize.</p>
+			<div class="bonus">
+				<p><b>Bonus point:</b> Make positive declarations that abate your partner's feelings.</p>
 
-					<p class="script"><input type="checkbox" name="empathize" /><label for="empathize"> "I recognize that you did not mean to <input type="text" name="trigger"> because <input type="text" name="feeling">."</label></p>
+				<p class="script"><input type="checkbox" name="empathize" /><label for="empathize"> "I'm sorry my actions made you feel  <input type="text" name="feeling">. I think you are <input type="text" name="affirmation"> because <input type="text" name="reasons">."</label></p>
 
-					<p><b>Bonus Point:</b> Mention instances in which your partner has done the positive/reverse version of the complaint as an example of a solution.</p>
-
-					<p class="script"><input type="checkbox" name="gratitude" /><label for="gratitude"> "I really appreciate when you <input type="text" name="trigger"> and <input type="text" name="trigger"> in the past, because it made me feel <input type="text" name="trigger">."</label></p>
-				</div>
 			</div>
 		</div>
-		<div class="step-container player1">
-			<div class="step">
-				<p class="step-num">#3 <b>Player 2</b>: Acknowledge Your Partner</p>
+	</div>
+	<div class="step-container player2" id="step4">
+		<div class="step">
+			<p class="step-num">#4 <b>Player 1</b>: Acknowledge Your Partner</p>
 
-				<p>Acknowledge and repeat the "I" statement.</p>
+			<p>Acknowledge and repeat the "I" statement.</p>
 
-				<p class="script"><input type="checkbox" name="acknowledgement" /><label for="acknowledgement"> "I understand that you feel <input type="text" name="feeling"> when I <input type="text" name="trigger">. I'm sorry for making you feel that way."</label></p>
+			<p class="script"><input type="checkbox" name="acknowledgement" /><label for="acknowledgement"> "I understand that you feel <input type="text" name="feeling"> when I <input type="text" name="trigger">. I'm sorry for making you feel that way."</label></p>
 
-				<p>Consider and assert your responsibility, and explain your intentions/perspective. Include self-disclosure, use feeling words, and avoid using the word "you", "always", and "never".</p>
-				<p class="script"><input type="checkbox" name="explanation" /><label for="explanation"> "I know I do <input type="text" name="need">, but it's because I <input type="checkbox" name="explanation" />. I don't mean to make you feel <input type="text" name="trigger">...."</label></p>
+			<p>Consider and assert your responsibility, and explain your intentions/perspective. Include self-disclosure, use feeling words, and avoid using the word "you", "always", and "never".</p>
+			<p class="script"><input type="checkbox" name="explanation" /><label for="explanation"> "I know I do <input type="text" name="need">, but it's because I <input type="checkbox" name="explanation" />. I don't mean to make you feel <input type="text" name="trigger">...."</label></p>
 
-				<div class="bonus">
-					<p><b>Bonus point:</b> Make positive declarations that abate your partner's feelings.</p>
+			<div class="bonus">
+				<p><b>Bonus point:</b> Make positive declarations that abate your partner's feelings.</p>
 
-					<p class="script"><input type="checkbox" name="empathize" /><label for="empathize"> "I'm sorry my actions made you feel  <input type="text" name="feeling">. I think you are <input type="text" name="affirmation"> because <input type="text" name="reasons">."</label></p>
+				<p class="script"><input type="checkbox" name="empathize" /><label for="empathize"> "I'm sorry my actions made you feel  <input type="text" name="feeling">. I think you are <input type="text" name="affirmation"> because <input type="text" name="reasons">."</label></p>
 
-				</div>
 			</div>
 		</div>
-		<div class="step-container player2">
-			<div class="step">
-				<p class="step-num">#4 <b>Player 1</b>: Acknowledge Your Partner</p>
-
-				<p>Acknowledge and repeat the "I" statement.</p>
-
-				<p class="script"><input type="checkbox" name="acknowledgement" /><label for="acknowledgement"> "I understand that you feel <input type="text" name="feeling"> when I <input type="text" name="trigger">. I'm sorry for making you feel that way."</label></p>
-
-				<p>Consider and assert your responsibility, and explain your intentions/perspective. Include self-disclosure, use feeling words, and avoid using the word "you", "always", and "never".</p>
-				<p class="script"><input type="checkbox" name="explanation" /><label for="explanation"> "I know I do <input type="text" name="need">, but it's because I <input type="checkbox" name="explanation" />. I don't mean to make you feel <input type="text" name="trigger">...."</label></p>
-
-				<div class="bonus">
-					<p><b>Bonus point:</b> Make positive declarations that abate your partner's feelings.</p>
-
-					<p class="script"><input type="checkbox" name="empathize" /><label for="empathize"> "I'm sorry my actions made you feel  <input type="text" name="feeling">. I think you are <input type="text" name="affirmation"> because <input type="text" name="reasons">."</label></p>
-
-				</div>
-			</div>
-		</div>
+	</div>
 
 
-	</body>
+</body>
 </html>
