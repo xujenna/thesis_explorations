@@ -1,30 +1,90 @@
-
 let turns = 0;
+let transcriptIndex = 0;
+
+let interactions = {
+    speaking : false,
+    listening : false,
+    executeCommand : false,
+    selectedCommand : {}
+}
+
+let absolutistWords = ["always", "never", "all the time", "absolutely", "completely", "constantly", "constant", "definitely", "every", "ever", "everything", "entire", "all", "what about when you", "remember when you", "i hate when you", "not my fault", "it's your fault"]
+
+let stepContent = {};
+
+stepContent[0] = {};
+stepContent[0]["playerNum"] = 0;
+stepContent[0]["transcript"] = "Please take a comfortable seat at the same level. [[slnc 1000]] Take a moment to establish which teammate had the original complaint."
+// stepContent[1]["transcript"] = "Please take a comfortable seat at the same level, maintain open body language, and face each other. [[slnc 1000]] Take a moment to establish which teammate had the original complaint. They are player one. [[slnc 1000]] Now close your eyes.[[slnc 2000]] We'll start with a breathing ritual. [[slnc 2500]] Breathe in for one, [[slnc 1000]] two, [[slnc 1000]] three, [[slnc 1000]] four. [[slnc 1000]] Back out for one [[slnc 1000]], two [[slnc 1000]], three [[slnc 1000]], four [[slnc 1000]]. In for one, [[slnc 1000]] two, [[slnc 1000]] three, [[slnc 1000]] four. [[slnc 1000]] Out for one [[slnc 1000]], two [[slnc 1000]], three [[slnc 1000]], four [[slnc 1000]]. In for one, [[slnc 1000]] two, [[slnc 1000]] three, [[slnc 1000]] four. [[slnc 1000]] Out for one [[slnc 1000]], two [[slnc 1000]], three [[slnc 1000]], four [[slnc 3000]]. You'll only get out alive if you communicate honestly and listen carefully, without assumptions. [[slnc 1500]] Focus on the challenge at hand; you will lose points for global statements, as well as excessive anger. [[slnc 1500]] The quest cannot be completed without the full cooperation of two people, so maintain a positive, generous, and compassionate attitude. [[slnc 1500]] Remember, there can only be either two winners, or two losers, so leave your ego and pride with me before you go. [[slnc 1500]] When a player completes their turn, let me know by saying [[slnc 500]] I'm done. [[slnc 3000]] Now open your eyes. Player one, let me know when you're ready, and we can begin."
+stepContent[0]["bonuses"] = []
+
+stepContent[1] = {};
+stepContent[1]["playerNum"] = 1;
+stepContent[1]["transcript"] = ["Player 1: identify the complaint, not the criticism, by formulating the 'I' statement. Elaborate as necessary, using feeling words. [[slnc 1000]] Consider and include assertions of individual responsibility, self-disclosure, and empathy.", "Define your emotional needs, elaborating as necessary, using feeling words. [[slnc 1000]] Let me know when you're done."]
+stepContent[1]["nextSubstep"] = ["i feel", "i need"]
+stepContent[1]["bonuses"] = ["i recognize", "you didn't mean", "you did not mean", "you didn't intend", "i appreciate", "i appreciated"]
+
+stepContent[2] = {};
+stepContent[2]["playerNum"] = 2;
+stepContent[2]["transcript"] = ["Player 2: acknowledge their feelings by repeating their 'I' statement.", "Consider and assert your responsibility, and explain your intentions or perspective using feeling words."]
+stepContent[2]["nextSubstep"] = ["i understand that you feel", "i know i"]
+stepContent[2]["bonuses"] = ["i'm sorry", "caused you to feel", "i'm sorry my actions", "i'm sorry my behavior", "made you feel"]
+
+stepContent[3] = {};
+stepContent[3]["playerNum"] = 1;
+stepContent[3]["transcript"] = ["Player 1: acknowledge their intentions, consider your role in your emotions, recognize any misunderstandings, and reevaluate your feelings based on the new information given."]
+stepContent[3]["nextSubstep"] = []
+stepContent[3]["bonuses"] = []
+
+stepContent[4] = {};
+stepContent[4]["playerNum"] = 2;
+stepContent[4]["transcript"] = ["Player 2: address the complaint and propose a solution."]
+stepContent[4]["nextSubstep"] = []
+stepContent[4]["bonuses"] = []
+
+stepContent[5] = {};
+stepContent[5]["playerNum"] = 1;
+stepContent[5]["transcript"] = ["Player 1: evaluate the solution, consider your needs honestly, and renegotiate based on your needs."]
+stepContent[5]["nextSubstep"] = []
+stepContent[5]["bonuses"] = []
+
+stepContent[6] = {};
+stepContent[6]["playerNum"] = 2;
+stepContent[6]["transcript"] = ["Player 2: if a solution has been agreed to, say 'the challenge has been completed'. Otherwise, continue negotiating, referring to steps 5 and 6 if needed."]
+stepContent[6]["nextSubstep"] = []
+stepContent[6]["bonuses"] = []
 
 
-let stepTranscripts = [];
-let step1 = "We'll do a centering ceremony before you set out on your journey. Please take a comfortable seat at the same level, maintain open body language, and face each other. <silence msec='3000'/> Take a moment to decide which teammate had the original complaint—they are player one. <silence msec='3000'/> Now close your eyes.<silence msec='1000'/> We'll start with a breathing ritual. <silence msec='2500'/> Breathe in for one, <silence msec='1000'/> two, <silence msec='1000'/> three, <silence msec='1000'/> four. And back out for one <silence msec='1000'/>, two <silence msec='1000'/>, three <silence msec='1000'/>, four <silence msec='1000'/>. In for one, <silence msec='1000'/> two, <silence msec='1000'/> three, <silence msec='1000'/> four. Out for one <silence msec='1000'/>, two <silence msec='1000'/>, three <silence msec='1000'/>, four <silence msec='1000'/>. In for one, <silence msec='1000'/> two, <silence msec='1000'/> three, <silence msec='1000'/> four. Out for one <silence msec='1000'/>, two <silence msec='1000'/>, three <silence msec='1000'/>, four <silence msec='3500'/>. Be careful out there: relationships can be treacherous landscapes, so you must tread carefully and deliberately. <silence msec='1000'/> You'll only get out alive if you communicate honestly and listen carefully, without assumptions. <silence msec='1000'/> Focus on the challenge at hand; you will lose points for global statements. <silence msec='1000'/>The quest cannot be completed without the full cooperation of two people, so maintain a positive, generous, and compassionate attitude. <silence msec='1000'/> Remember, there can only be either two winners, or two losers, so leave your ego and pride with me before you go. <silence msec='4000'/> Now open your eyes. Player one, let me know when you're ready, and we can begin."
+let deEscalationScript = "Let's take a break to calm down and collect our thoughts. [[slnc 1000]] We'll start with a breathing exercise. Please close your eyes. [[slnc 2000]] Breathe in for one, [[slnc 1000]] two, [[slnc 1000]] three, [[slnc 1000]] four. [[slnc 1000]] Back out for one [[slnc 1000]], two [[slnc 1000]], three [[slnc 1000]], four [[slnc 1000]]. In for one, [[slnc 1000]] two, [[slnc 1000]] three, [[slnc 1000]] four. [[slnc 1000]] Out for one [[slnc 1000]], two [[slnc 1000]], three [[slnc 1000]], four [[slnc 1000]]. In for one, [[slnc 1000]] two, [[slnc 1000]] three, [[slnc 1000]] four. [[slnc 1000]] Out for one [[slnc 1000]], two [[slnc 1000]], three [[slnc 1000]], four [[slnc 3000]]. Remember that you are on the same team, playing for the same goal of a healthy, harmonious relationship. [[slnc 2000]] Let go of your pride, or feelings of being wronged, and consider your partner's pain. [[slnc 4000]] What can you both do to heal each other's pain and protect your relationship? [[slnc 5000]] When you're ready, open your eyes, and try to continue the conversation with one of the following phrases."
 
-stepTranscripts.push(step1)
-
+let scores = {};
+scores["player1"] = {};
+scores["player1"]["score"] = 0;
+scores["player1"]["penalties"] = 0;
+scores["player1"]["bonusPts"] = 0;
+scores["player2"] = {};
+scores["player2"]["score"] = 0;
+scores["player2"]["penalties"] = 0;
+scores["player2"]["bonusPts"] = 0;
 
 
 const SpeechRecognition = webkitSpeechRecognition;
 const synth = window.speechSynthesis;
+let utterThis;
 
 async function speak(textInput) {
     if (synth.speaking) {
-      console.error('already speaking')
-      setTimeout(function () {
+        console.error('already speaking')
+        setTimeout(function () {
         let utterThis = new SpeechSynthesisUtterance(textInput)
         synth.speak(utterThis) 
-      }, 2500);
+        }, 2500);
     }
     else{
-      let utterThis = new SpeechSynthesisUtterance(textInput)
-      await synth.speak(utterThis)
+        utterThis = new SpeechSynthesisUtterance(textInput);
+        await synth.speak(utterThis);
     }
-  }
+}
 
 function listen(){
     const recognition = new SpeechRecognition();
@@ -32,59 +92,80 @@ function listen(){
     recognition.continuous = true;
     recognition.interimResults = true;
     recognition.start();
+    let newString = "";
   
+    recognition.onstart = () => {
+        interactions.listening = true;
+        console.log("listening: "+ interactions.listening)
+    }
     recognition.onresult = event => {
         if (typeof (event.results) !== 'undefined') {
             for (var i = event.resultIndex; i < event.results.length; ++i) {
-                if(event.results[i][0].transcript.includes("always", "never", "all the time")){
+                console.log(event.results[i][0].transcript);
+                if(new RegExp(absolutistWords.join("|")).test(event.results[i][0].transcript)){
+                    scores["player" + stepContent[1]["playerNum"]]["penalties"] += 10;
                     speak("Focus on the issue at hand; avoid using global statements.")
+                }
+                if(new RegExp(stepContent[turns]["bonuses"].join("|")).test(event.results[i][0].transcript.toLowerCase())){
+                    scores["player" + stepContent[1]["playerNum"]]["bonusPts"] += 10;
                 }
                 if (event.results[i].isFinal) {
                     recognition.stop();
-                    newString += event.results[i][0].transcript;
+                    newString += event.results[i][0].transcript.toLowerCase();
                 }
             }
         }
     }
     recognition.onend = () => {
-        if(newString.includes("I'm ready", "I'm done", "next step")){
+        interactions.listening = false;
+        console.log("listening: "+ interactions.listening)
+
+        if(newString.includes("i'm ready", "i'm done", "next step", "continue")){
+            recognition.stop();
+            turns += 1;
+            transcriptIndex = 0;
             nextStep();
         }
+        else if(new RegExp(stepContent[turns]["nextSubstep"].join("|")).test(newString)){
+            transcriptIndex += 1;
+            nextStep();
+        }
+        else if(newString.includes("we're done, the challenge has been completed")){
+            recognition.stop();
+        }
         else{
+            recognition.stop();
             listen();
         }
     }
 
     recognition.onerror = event => {
         console.log("error" + event.error);
-        speak("I didn't hear you. Try again.");
+        // speak("I didn't hear you. Try again.");
         listen();
     }
 }
 
 function nextStep(){
-    turns += 1;
-    let currentStep = document.getElementById("step"+turns);
+    let currentStep = document.getElementById("step"+turns+"_"+transcriptIndex);
     currentStep.style.display="block";
     currentStep.scrollIntoView({behavior:"smooth", block:"center"});
 
-    speak(stepTranscripts[turns]);
-    listen();
+    speak(stepContent[turns]["transcript"][transcriptIndex]);
+
+    
+    utterThis.addEventListener('start', function(event){
+        interactions.speaking = true;
+        console.log("speaking: " + interactions.speaking);
+    });
+    utterThis.addEventListener('end', function(event){
+        interactions.speaking = false;
+        console.log("speaking: " + interactions.speaking);
+        listen();
+    });
+    utterThis.addEventListener('error', function(event){
+        console.log("error: "+ event.error)
+    });
+
+    // turns += 1;
 }
-
-
-
-
-// function start(){
-//     let step1 = document.getElementById("step1");
-//     step1.style.display="block";
-//     step1.scrollIntoView({behavior:"smooth", block:"center"});
-
-//     speak("We'll do a centering ceremony before you set out on your journey. Please take a comfortable seat at the same level, maintain open body language, and face each other. <silence msec='3000'/> Take a moment to decide which teammate had the original complaint—they are player one. <silence msec='3000'/> Now close your eyes.<silence msec='1000'/> We'll start with a breathing ritual. <silence msec='2500'/> Breathe in for one, <silence msec='1000'/> two, <silence msec='1000'/> three, <silence msec='1000'/> four. And back out for one <silence msec='1000'/>, two <silence msec='1000'/>, three <silence msec='1000'/>, four <silence msec='1000'/>. In for one, <silence msec='1000'/> two, <silence msec='1000'/> three, <silence msec='1000'/> four. Out for one <silence msec='1000'/>, two <silence msec='1000'/>, three <silence msec='1000'/>, four <silence msec='1000'/>. In for one, <silence msec='1000'/> two, <silence msec='1000'/> three, <silence msec='1000'/> four. Out for one <silence msec='1000'/>, two <silence msec='1000'/>, three <silence msec='1000'/>, four <silence msec='3500'/>. Be careful out there: relationships can be treacherous landscapes, so you must tread carefully and deliberately. <silence msec='1000'/> You'll only get out alive if you communicate honestly and listen carefully, without assumptions. <silence msec='1000'/> Focus on the challenge at hand; you will lose points for global statements. <silence msec='1000'/>The quest cannot be completed without the full cooperation of two people, so maintain a positive, generous, and compassionate attitude. <silence msec='1000'/> Remember, there can only be either two winners, or two losers, so leave your ego and pride with me before you go. <silence msec='4000'/> Now open your eyes. Player one, let me know when you're ready, and we can begin.");
-
-//     listen();
-// }
-
-// Be careful out there: relationships can be treacherous landscapes, so you must tread carefully and deliberately. <silence msec='1000'/> You'll only get out alive if you communicate honestly and listen carefully, without assumptions.  <silence msec='1000'/> The quest cannot be completed without the full cooperation of two people, so maintain a positive, generous, and compassionate attitude.  <silence msec='1000'/> There can only be either two winners, or two losers, so leave your ego and pride with me before you go.
-
-//Now return your breathing to normal. <silence msec='3000'/>  Player one, repeat after me: <silence msec='1000'/>I promise to communicate honestly and listen carefully, without assumptions. <silence msec='10000'/> I promise to listen with empathy and give the benefit of the doubt. <silence msec='10000'/> I promise to maintain a positive, generous, and compassionate attitude. <silence msec='10000'/> <silence msec='5000'/> Player two, repeat after me: <silence msec='1000'/>I promise to communicate honestly and listen carefully, without assumptions. <silence msec='10000'/> I promise to listen with empathy and give the benefit of the doubt. <silence msec='10000'/> I promise to maintain a positive, generous, and compassionate attitude. <silence msec='5000'/>  You are ready. Remember, there can only be either two winners, or two losers, so leave your ego and pride with me before you go.

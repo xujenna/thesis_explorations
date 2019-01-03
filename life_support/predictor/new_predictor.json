@@ -11717,5 +11717,342 @@
     "actual_mood": 2.5,
     "actual_morale": 3.0,
     "response_time": 1545790182.315728
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.990290929073378,
+        "morale_prediction": 2.633014434267945,
+        "timestamp": 1546219924.442697
+      },
+      {
+        "mood_prediction": 2.991650892953572,
+        "morale_prediction": 2.625119343195082,
+        "timestamp": 1546221725.721671
+      },
+      {
+        "mood_prediction": 2.8509380794893673,
+        "morale_prediction": 2.650757953576224,
+        "timestamp": 1546223525.738899
+      }
+    ],
+    "mood_index": 1512,
+    "actual_mood": 2.5,
+    "actual_morale": 2.5,
+    "response_time": 1546221844.776598
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 3.0746164223812658,
+        "morale_prediction": 2.4147221363856777,
+        "timestamp": 1546280853.954061
+      },
+      {
+        "mood_prediction": 3.083674960879354,
+        "morale_prediction": 2.364792302655284,
+        "timestamp": 1546289911.949069
+      }
+    ],
+    "mood_index": 1513,
+    "actual_mood": 3.0,
+    "actual_morale": 3.0,
+    "response_time": 1546289262.797653
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 3.051362396173799,
+        "morale_prediction": 2.3489740667328616,
+        "timestamp": 1546291059.21379
+      },
+      {
+        "mood_prediction": 2.6921266042526435,
+        "morale_prediction": 3.242958062562207,
+        "timestamp": 1546292859.719663
+      },
+      {
+        "mood_prediction": 2.728276839118516,
+        "morale_prediction": 3.233335135532361,
+        "timestamp": 1546293760.358567
+      }
+    ],
+    "mood_index": 1514,
+    "actual_mood": 3.0,
+    "actual_morale": 3.0,
+    "response_time": 1546293285.6115801
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.785674629898878,
+        "morale_prediction": 3.1106795972014885,
+        "timestamp": 1546294660.721051
+      },
+      {
+        "mood_prediction": 2.848153565963383,
+        "morale_prediction": 2.7142489845214026,
+        "timestamp": 1546296461.395594
+      },
+      {
+        "mood_prediction": 2.8446697324110874,
+        "morale_prediction": 2.6714479862126503,
+        "timestamp": 1546315689.729702
+      }
+    ],
+    "mood_index": 1515,
+    "actual_mood": 3.0,
+    "actual_morale": 3.0,
+    "response_time": 1546315354.7939029
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.763201249423697,
+        "morale_prediction": 2.700584885726311,
+        "timestamp": 1546317055.852603
+      },
+      {
+        "mood_prediction": 2.7238258413590133,
+        "morale_prediction": 2.778391217837207,
+        "timestamp": 1546395600.265002
+      },
+      {
+        "mood_prediction": 2.7203760737065563,
+        "morale_prediction": 2.836225624056925,
+        "timestamp": 1546396501.45754
+      }
+    ],
+    "mood_index": 1516,
+    "actual_mood": 3.0,
+    "actual_morale": 2.5,
+    "response_time": 1546396318.2159529
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.7786877176677933,
+        "morale_prediction": 2.6638528087872886,
+        "timestamp": 1546398301.703242
+      },
+      {
+        "mood_prediction": 2.9265615849021307,
+        "morale_prediction": 2.4859127507509804,
+        "timestamp": 1546413627.284149
+      },
+      {
+        "mood_prediction": 2.930513205468036,
+        "morale_prediction": 2.489965689281411,
+        "timestamp": 1546449807.204086
+      },
+      {
+        "mood_prediction": 2.943543631713613,
+        "morale_prediction": 2.481286958648213,
+        "timestamp": 1546451607.267427
+      },
+      {
+        "mood_prediction": 2.917648314736361,
+        "morale_prediction": 2.6703905716937495,
+        "timestamp": 1546452507.988405
+      }
+    ],
+    "mood_index": 1517,
+    "actual_mood": 2.5,
+    "actual_morale": 2.5,
+    "response_time": 1546452469.037683
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 3.0062782954319784,
+        "morale_prediction": 2.6149164268260736,
+        "timestamp": 1546453409.098059
+      },
+      {
+        "mood_prediction": 3.0108322519837367,
+        "morale_prediction": 2.638798405244251,
+        "timestamp": 1546455209.1311
+      },
+      {
+        "mood_prediction": 2.987109667815642,
+        "morale_prediction": 2.6779626112265387,
+        "timestamp": 1546457009.783888
+      }
+    ],
+    "mood_index": 1518,
+    "actual_mood": 3.0,
+    "actual_morale": 3.0,
+    "response_time": 1546456315.2300801
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.97798555288516,
+        "morale_prediction": 2.64396187252241,
+        "timestamp": 1546458809.872233
+      },
+      {
+        "mood_prediction": 3.0383006755214725,
+        "morale_prediction": 2.5747872422570075,
+        "timestamp": 1546459710.525335
+      },
+      {
+        "mood_prediction": 3.0165057415537264,
+        "morale_prediction": 2.5426002145340223,
+        "timestamp": 1546460611.667699
+      }
+    ],
+    "mood_index": 1519,
+    "actual_mood": 2.5,
+    "actual_morale": 2.5,
+    "response_time": 1546460166.0178
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 3.0127357544703672,
+        "morale_prediction": 2.5380611866027647,
+        "timestamp": 1546462411.943744
+      },
+      {
+        "mood_prediction": 2.905552721032322,
+        "morale_prediction": 2.75722836793706,
+        "timestamp": 1546463312.256214
+      },
+      {
+        "mood_prediction": 2.923759314059441,
+        "morale_prediction": 2.754262837512211,
+        "timestamp": 1546464213.40981
+      },
+      {
+        "mood_prediction": 2.885895333760451,
+        "morale_prediction": 2.8252588373495797,
+        "timestamp": 1546466013.440105
+      }
+    ],
+    "mood_index": 1520,
+    "actual_mood": 2.5,
+    "actual_morale": 2.5,
+    "response_time": 1546464384.4543982
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 3.051199199319596,
+        "morale_prediction": 2.6060590101322134,
+        "timestamp": 1546466913.778564
+      },
+      {
+        "mood_prediction": 3.0256318908782665,
+        "morale_prediction": 2.57196524248651,
+        "timestamp": 1546467814.791716
+      },
+      {
+        "mood_prediction": 3.0014579856099792,
+        "morale_prediction": 2.57386526403359,
+        "timestamp": 1546469615.001608
+      }
+    ],
+    "mood_index": 1521,
+    "actual_mood": 2.5,
+    "actual_morale": 2.5,
+    "response_time": 1546468135.2246711
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.86723977522168,
+        "morale_prediction": 2.764090796109187,
+        "timestamp": 1546470516.511349
+      },
+      {
+        "mood_prediction": 2.8475920934518073,
+        "morale_prediction": 2.7544892195418256,
+        "timestamp": 1546471418.031571
+      },
+      {
+        "mood_prediction": 2.848391500859215,
+        "morale_prediction": 2.7544892195418256,
+        "timestamp": 1546473219.191127
+      },
+      {
+        "mood_prediction": 2.901844242817879,
+        "morale_prediction": 2.5618488626590565,
+        "timestamp": 1546477476.107446
+      },
+      {
+        "mood_prediction": 2.90693093040868,
+        "morale_prediction": 2.5276174781301806,
+        "timestamp": 1546478377.159157
+      }
+    ],
+    "mood_index": 1522,
+    "actual_mood": 3.0,
+    "actual_morale": 3.0,
+    "response_time": 1546477499.8876839
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.931989758333332,
+        "morale_prediction": 2.5153492455144204,
+        "timestamp": 1546480177.470008
+      },
+      {
+        "mood_prediction": 2.931958269800162,
+        "morale_prediction": 2.5304188442543776,
+        "timestamp": 1546481978.264475
+      }
+    ],
+    "mood_index": 1523,
+    "actual_mood": 3.0,
+    "actual_morale": 3.0,
+    "response_time": 1546481154.387261
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.9151498771022433,
+        "morale_prediction": 2.5279262949860892,
+        "timestamp": 1546483778.28691
+      },
+      {
+        "mood_prediction": 2.8198118050169603,
+        "morale_prediction": 3.0263814333248305,
+        "timestamp": 1546484678.678772
+      },
+      {
+        "mood_prediction": 2.8223230433767825,
+        "morale_prediction": 3.0301129012296855,
+        "timestamp": 1546485568.382022
+      }
+    ],
+    "mood_index": 1524,
+    "actual_mood": 3.5,
+    "actual_morale": 3.5,
+    "response_time": 1546484821.136293
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.8198181577921524,
+        "morale_prediction": 3.0140643622817938,
+        "timestamp": 1546489643.706552
+      },
+      {
+        "mood_prediction": 2.8869806872786064,
+        "morale_prediction": 2.7765764590106117,
+        "timestamp": 1546490543.951767
+      },
+      {
+        "mood_prediction": 2.8747219120176384,
+        "morale_prediction": 2.878486112330861,
+        "timestamp": 1546491444.662923
+      }
+    ],
+    "mood_index": 1525,
+    "actual_mood": 3.0,
+    "actual_morale": 3.0,
+    "response_time": 1546490837.853375
   }
 ]
