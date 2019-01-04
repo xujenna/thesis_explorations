@@ -5,6 +5,7 @@
 
 	body{
 		margin:0px;
+		font-family: ibm-plex-serif;
 	}
 	img, embed, object, video {
 		max-width: 100%;
@@ -19,6 +20,7 @@
 		min-height: 100%;
 		display:none;
 	}
+
 	.player1{
 		background-color: gold;
 	}
@@ -27,22 +29,29 @@
 		background-color: aquamarine;
 	}
 	.step {
-		width:50%;
+		width:55%;
 		vertical-align: middle;
-		font-size:16px;
-		margin:auto;
+		font-size:34px;
+		line-height:1.5;
+		word-spacing: -5;
+		/* margin:auto; */
 		padding:10%;
-		font-family: fanwood;
+		font-family: courier-prime, monospace;
 		font-weight: 400;
+		/* position:fixed;
+		left:5%; */
+		color:white;
 	}
 
 	.step-num{
-		font-family: europa;
+		font-family: josefin-sans;
+		font-weight: 700;
 		font-size: 13px;
+		word-spacing: normal;
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		border-bottom: 1px solid black;
-		padding-bottom: 4px;
+		border-bottom: 1px solid white;
+		padding-bottom: 12px;
 		margin-bottom: 20px;
 	}
 	.player{
@@ -50,17 +59,12 @@
 	}
 
 	.script {
-		font-family: europa;
+		font-family: josefin-sans;
+		font-weight: 700;
 		font-size: 22px;
-		font-weight: bold;
 		line-height: 1.5;
 	}
 
-	.bonus{
-		border: 1px solid black;
-		padding: 20px;
-		display:none;
-	}
 
 .start{
 	font-size:18px;
@@ -72,8 +76,8 @@
     background-color:red;
     border-radius: 300px;
     font-size: 23px;
-    font-family: monospace;
-    font-weight:bold;
+	font-family: josefin-sans;
+	font-weight: 700;
     color: white;
     padding: 20px;
     cursor:pointer;
@@ -99,25 +103,89 @@
 	  display:block;
   }
 
-.de-escalation{
+#de-escalationScreen{
+	background-color:violet;
+}
+
+#rules{
+	background-color:white;
+	color:midnightblue;
+	border:1px midnightblue solid;
+	padding: 1%;
 	display:none;
+	width:10%;
+	position:fixed;
+	top:50%;
+	right:2%;
+	}
+
+#de-escalation{
+	font-family: josefin-sans;
+	font-weight: 700;
+	display:none;
+	position:fixed;
+	bottom:5%;
+	right:2%;
+	background-color:white;
+	color:midnightblue;
+	border:3px midnightblue solid;
+	padding: 1%;
+	cursor:pointer;
+	letter-spacing: 1.5;
+}
+#de-escalation:hover {
+	background-color:midnightblue;
+    color:white;
+	border:3px white solid;
+  }
+
+#score{
+	display:none;
+	width:10%;
+	position:fixed;
+	top:5%;
+	right:2%;
+	background-color:white;
+	color:midnightblue;
+	border:1px midnightblue solid;
+	padding: 1%;
+
+}
+
+#bonus{
+	background-color:white;
+	color:midnightblue;
+	border:1px midnightblue solid;
+	padding: 1%;
+	display:none;
+	width:10%;
+	position:fixed;
+	top:20%;
+	right:2%;
+}
+
+#homepage{
+	display:block;
+}
+
+#step0_0{
+	background-color:skyblue;
 }
 </style>
 </head>
 
 <body>
-	<link rel="stylesheet" href="https://use.typekit.net/fao6qlb.css">
-	<script src="script.js"></script>
+	<link rel="stylesheet" href="https://use.typekit.net/jwv7rhn.css">
 	<div class="step-container" id="homepage">
-		<div class="start">
+	<div class="start">
 
 			<p><i>The Fighting Game</i> is a cooperative game in which two players team up for the ultimate quest: to resolve an interpersonal issue!</p>
 			<button onclick="nextStep();">START GAME</button>
 
 		</div>
 	</div>
-	<div class="rules">
-		<ol>
+	<div id="rules">
+		<ul>
 			<li>Listen carefully</li>
 			<li>Be honest to yourself and your partner</li>
 			<li>Use "I" statements; refrain from "you"</li>
@@ -127,9 +195,9 @@
 			<li>Refrain from narratives</li>
 			<li>Avoid absolutist words, like "always" or "never"</li>
 			<li>Avoid the "four horsemen": criticism, contempt, defensiveness, and stonewalling</li>
-		</ol>
+		</ul>
 	</div>
-	<div class="bonus">
+	<div id="bonus">
 			<!-- <p><b>Bonus point:</b> Empathize.</p>
 	
 			<p class="script"><input type="checkbox" name="empathize" /><label for="empathize"> "I recognize that you did not mean to <input type="text" name="trigger"> because <input type="text" name="feeling">."</label></p>
@@ -138,12 +206,12 @@
 	
 			<p class="script"><input type="checkbox" name="gratitude" /><label for="gratitude"> "I really appreciate when you <input type="text" name="trigger"> and <input type="text" name="trigger"> in the past, because it made me feel <input type="text" name="trigger">."</label></p> -->
 	</div>
-	<div class="score">
+	<div id="score">
 	</div>
-	<div class="de-escalation">
-		<b>⚠️ De-Escalate ⚠️</b>
+	<div id="de-escalation">
+		<b>DE-ESCALATE!</b>
 	</div>
-	<div class="step-container player1" id="step0_0">
+	<div class="step-container" id="step0_0">
 		<div class="step">
 			<p class="step-num">#1 <b>Player 1 and 2</b>: Accept the Challenge</p>
 
@@ -219,5 +287,19 @@
 				<p class="script"><input type="checkbox" name="acknowledgement" /><label for="acknowledgement"> "I understand that you feel <input type="text" name="feeling"> and need <input type="text" name="need">. What if I/we <input type="text" name="solution">."</label></p>
 			</div>
 		</div>
+	<div class="step-container" id="de-escalationScreen">
+		<div class="step">
+			<p>Let go of your pride, or feelings of being wronged, and consider your partner's pain. What can you both do to heal each other's pain and protect your relationship?</p>
+			<ul>
+				<li>"What if we..."</li>
+				<li>"I know this is hard..."</li>
+				<li>"I hear what you’re saying..."</li>
+				<li>"What do you think about..."</li>
+			</ul>
+			<button id="deEscalate-continue" onclick="backToStep();">Return to last step</button>
+		</div>
+	</div>
+<script src="script.js"></script>
+
 </body>
 </html>

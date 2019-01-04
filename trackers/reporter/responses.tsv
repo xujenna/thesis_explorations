@@ -1526,3 +1526,5 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2019-01-02T21:07:01.136293	1546484821.136293	3.5	focused	working on fighting game	schoolwork	0	False	Parents Home	3.5	0	3.5	False
 2019-01-02T22:47:17.853375	1546490837.853375	3	fine	just relaxing before bed	leisure, tv, washing up	1	False	Parents Home	3	0	4	False
 2019-01-03T12:35:41.083172	1546540541.083172	3	focused but getting restless	working on fighting game	schoolwork, reading	0	True	Parents Home	2.5	0.5	1.5	False
+2019-01-03T14:23:49.170555	1546547029.170555	3	fine	eating and watching tv	leisure, tv, eating	0	True	Parents Home	2.5	0.5	2	True
+2019-01-03T20:51:43.360926	1546570303.360926	3	fine	focused on work	schoolwork	3	False	Parents Home	3	0	2.5	False
