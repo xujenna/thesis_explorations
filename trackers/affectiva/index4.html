@@ -11,7 +11,8 @@
       <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
       <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-      <script type="text/javascript" src="https://download.affectiva.com/js/3.2/affdex.js"></script>
+      <!-- <script type="text/javascript" src="https://download.affectiva.com/js/3.2/affdex.js"></script> -->
+      <script src="https://download.affectiva.com/js/3.2.1/affdex.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
       <script src="firebase.js"></script>
 
@@ -175,6 +176,7 @@
 
       for (var key in emotions) {
         if (emotions[key] > 95){
+          console.log(key)
           emotionsobj.push(key);
           bigEvent = true;
           // data.push(newobject);
@@ -183,6 +185,7 @@
 
       if (bigEvent) {
         var emoji = faces[0].emojis["dominantEmoji"];
+        console.log(emoji)
         emojiArray.push(emoji)
         valence.push(faces[0].emotions["valence"]);
         engagement.push(faces[0].emotions["engagement"]);

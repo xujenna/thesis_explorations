@@ -26,9 +26,13 @@ from keras.models import load_model
 mood_model = load_model('LSTM_mood_predictor_no_reporter.h5')
 fatigue_model = load_model('LSTM_fatigue_predictor_no_reporter.h5')
 stress_model = load_model('LSTM_stress_predictor_no_reporter.h5')
+morale_model = load_model('LSTM_morale_predictor_no_reporter.h5')
 
-scaler = joblib.load('scaler.pkl')
+
+scaler_mood = joblib.load('scaler_mood.pkl')
 scaler_stress = joblib.load('scaler_stress.pkl')
+scaler_fatigue = joblib.load('scaler_fatigue.pkl')
+scaler_morale = joblib.load('scaler_morale.pkl')
 
 responsesDF = pd.read_csv("../../../trackers/reporter/responses.tsv", sep='\t', header=0)
 
@@ -40,38 +44,42 @@ latest_hour = 0
 finalFeaturesList = ['mood',
 'stress',
 'fatigue',
- 'avg_attention',
- 'avg_engagement',
- 'avg_valence',
- 'blinks',
- 'emoji',
- 'Sadness_score',
- 'Analytical_score',
- 'Joy_score',
- 'Fear_score',
- 'Tentative_score',
- 'Anger_score',
- 'Confident_score',
- 'word_count',
- 'uniqueword_ratio',
- 'backspace_count',
- 'avg_dwelltime',
- 'avg_flighttime',
- 'stepCount',
- 'current_tabCount',
- 'current_windowCount',
- 'tabs_activated',
- 'tabs_created',
- 'windows_created',
- 'productivity_score',
- 'hour']
-
+'morale',
+'avg_attention',
+'avg_engagement',
+'avg_valence',
+'blinks',
+'emoji',
+'Sadness_score',
+'Analytical_score',
+'Joy_score',
+'Fear_score',
+'Tentative_score',
+'Anger_score',
+'Confident_score',
+'word_count',
+'uniqueword_ratio',
+'backspace_count',
+'avg_dwelltime',
+'avg_flighttime',
+'stepCount',
+'current_tabCount',
+'current_windowCount',
+'tabs_activated',
+'tabs_created',
+'windows_created',
+'productivity_score',
+'heart_rate',
+'compulsions',
+'unique_interactions',
+'hour']
 
 tempRow = [[0] * len(finalFeaturesList)]
 df = pd.DataFrame(tempRow, columns=finalFeaturesList)
 df['mood'] = responsesDF['mood'].iloc[-1]
 df['fatigue'] = responsesDF['fatigue'].iloc[-1]
 df['stress'] = responsesDF['stress'].iloc[-1]
+df['morale'] = responsesDF['morale'].iloc[-1]
 
 
 prev_df = pd.DataFrame()
@@ -82,6 +90,7 @@ productivity_lastUpdateTime = 0
 affectiva_lastUpdateTime = 0
 stepCount_lastUpdateTime = 0
 responses_lastUpdateTime = 0
+heartRate_lastUpdateTime = 0
 
 
 def convertTimeToStruct(timestamp):
@@ -97,26 +106,40 @@ def predictor(df, label):
     values = values.astype('float32')
     if(label == "stress"):
         test_X = scaler_stress.transform(values)
-    else:
-        test_X = scaler.transform(values)
-    
+    elif (label == "mood"):
+        test_X = scaler_mood.transform(values)
+    elif (label == "fatigue"):
+        test_X = scaler_fatigue.transform(values)
+    elif (label == "morale"):
+        test_X = scaler_morale.transform(values)
+
     print("Predicting on: ")
     print(test_X)
 
-    # make a  prediction
+    # make a prediction
     test_X = test_X.reshape((test_X.shape[0], 1, test_X.shape[1]))
 
     if(label == "mood"):
         yhat = DataFrame(mood_model.predict(test_X))
-    if(label == "fatigue"):
+    elif(label == "fatigue"):
         yhat = DataFrame(fatigue_model.predict(test_X))
-    if(label == "stress"):
+    elif(label == "stress"):
         yhat = DataFrame(stress_model.predict(test_X))
+    elif(label == "morale"):
+        yhat = DataFrame(morale_model.predict(test_X))
 
     test_X = DataFrame(test_X.reshape((test_X.shape[0], test_X.shape[2])))
     # invert scaling for forecast
     inv_yhat = concat((yhat, test_X.iloc[:, 1:]), axis=1)
-    inv_yhat = scaler.inverse_transform(inv_yhat)
+    if(label == "mood"):
+        inv_yhat = scaler_mood.inverse_transform(inv_yhat)
+    elif(label == "fatigue"):
+        inv_yhat = scaler_fatigue.inverse_transform(inv_yhat)
+    elif(label == "stress"):
+        inv_yhat = scaler_stress.inverse_transform(inv_yhat)
+    elif(label == "morale"):
+        inv_yhat = scaler_morale.inverse_transform(inv_yhat)
+
     inv_yhat = inv_yhat[:,0]
 
     return inv_yhat
@@ -142,22 +165,33 @@ def makePrediction(df):
     fatigueDF['fatigue'] = lastResponsesRow['fatigue']
     del fatigueDF['mood']
     del fatigueDF['stress']
+    del fatigueDF['morale']
 
     moodDF = df.copy()
     moodDF['mood'] = lastResponsesRow['mood']
     del moodDF['fatigue']
     del moodDF['stress']
+    del moodDF['morale']
 
     stressDF = df.copy()
     stressDF['stress'] = lastResponsesRow['stress']
     del stressDF['fatigue']
     del stressDF['mood']
+    del stressDF['morale']
+
+    moraleDF = df.copy()
+    moraleDF['morale'] = lastResponsesRow['morale']
+    del moraleDF['fatigue']
+    del moraleDF['mood']
+    del moraleDF['stress']
 
     
     if (currentIndex == moodIndex):
         mood_prediction = predictor(moodDF, "mood")
         stress_prediction = predictor(stressDF, "stress")
         fatigue_prediction = predictor(fatigueDF, "fatigue")
+        morale_prediction = predictor(moraleDF, "morale")
+
 
         print("------------------------")
         print("current mood prediction:")
@@ -169,10 +203,14 @@ def makePrediction(df):
         print("current fatigue prediction:")
         print(fatigue_prediction)
         print("------------------------")
+        print("current morale prediction:")
+        print(morale_prediction)
+        print("------------------------")
 
         updatedPrediction['LSTM_mood_prediction'] = mood_prediction[0]
         updatedPrediction['LSTM_stress_prediction'] = stress_prediction[0]
         updatedPrediction['LSTM_fatigue_prediction'] = fatigue_prediction[0]
+        updatedPrediction['LSTM_morale_prediction'] = morale_prediction[0]
         updatedPrediction['timestamp'] = datetime.datetime.now().timestamp()
         currentIndexPredictions['predictions'].append(updatedPrediction)
         updatedPrediction = {}
@@ -182,10 +220,13 @@ def makePrediction(df):
             mood_prediction = predictor(moodDF, "mood")
             stress_prediction = predictor(stressDF, "stress")
             fatigue_prediction = predictor(fatigueDF, "fatigue")
+            morale_prediction = predictor(moraleDF, "morale")
 
             updatedPrediction['LSTM_mood_prediction'] = mood_prediction[0]
             updatedPrediction['LSTM_stress_prediction'] = stress_prediction[0]
             updatedPrediction['LSTM_fatigue_prediction'] = fatigue_prediction[0]
+            updatedPrediction['LSTM_morale_prediction'] = morale_prediction[0]
+
             updatedPrediction['timestamp'] = datetime.datetime.now().timestamp()
             currentIndexPredictions['predictions'].append(updatedPrediction)
 
@@ -205,10 +246,16 @@ def makePrediction(df):
             print("last prediction for last round: ")
             print(fatigue_prediction)
             print("------------------------")
+            print("actual morale for last round: ")
+            print(lastResponsesRow['morale'])
+            print("last prediction for last round: ")
+            print(morale_prediction)
+            print("------------------------")
 
             currentIndexPredictions['actual_mood'] = lastResponsesRow['mood']
             currentIndexPredictions['actual_stress'] = lastResponsesRow['stress']
             currentIndexPredictions['actual_fatigue'] = lastResponsesRow['fatigue']
+            currentIndexPredictions['actual_morale'] = lastResponsesRow['morale']
             currentIndexPredictions['response_time'] = lastResponsesRow['unix_time']
             writeToJSON(currentIndexPredictions)
 
@@ -237,7 +284,7 @@ while True:
     stepCountFile_lastUpdateTime = os.path.getmtime('../../../trackers/google_fit/dataset.json')
     responsesFile_lastUpdateTime = os.path.getmtime('../../../trackers/reporter/responses.tsv')
     tabCounterFile_lastUpdateTime = os.path.getmtime('../../../trackers/getAPIdata/chromeactivity.json')
-    # heartRateFile_lastUpdateTime = os.path.getmtime('../../../trackers/webcam-pulse-detector-no_openmdao/heartRate.csv')
+    heartRateFile_lastUpdateTime = os.path.getmtime('../../../trackers/webcam-pulse-detector-no_openmdao/heartRate.csv')
     
     # keylogger update
     if(keyloggerFile_lastUpdateTime > keylogger_lastUpdateTime):
@@ -356,12 +403,13 @@ while True:
         stepCount_lastUpdateTime = datetime.datetime.now().timestamp()
         df_updated = True
 
-
-    #heart rate update
-    # if(heartRateFile_lastUpdateTime > heartRate_lastUpdateTime):
-    # 	heartRateDF = pd.read_csv("../webcam-pulse-detector-no_openmdao/heartRate.csv", sep=',', header=0)
-    # 	df.loc[[0], 'heart']
-    # 	heartRateDF.iloc[-1]
+    # heart rate update
+    if(heartRateFile_lastUpdateTime > heartRate_lastUpdateTime):
+        print("heart rate file updated")
+        heartRateDF = pd.read_csv("../../../trackers/webcam-pulse-detector-no_openmdao/heartRate.csv", sep=',', header=0)
+        df.loc[[0], 'heart_rate'] = heartRateDF.iloc[-1][' heart_rate']
+        heartRate_lastUpdateTime = datetime.datetime.now().timestamp()
+        df_updated = True
 
     # if not(df.equals(prev_df)):
     # 	makePrediction(df)

@@ -21,14 +21,14 @@ stepContent[0]["bonuses"] = []
 
 stepContent[1] = {};
 stepContent[1]["playerNum"] = 1;
-stepContent[1]["transcript"] = ["Player 1: identify the complaint, not the criticism, by formulating the 'I' statement. Elaborate as necessary, using feeling words. [[slnc 1000]] Consider and include assertions of individual responsibility, self-disclosure, and empathy.", "Define your emotional needs, elaborating as necessary, using feeling words. [[slnc 1000]] Let me know when you're done."]
-stepContent[1]["nextSubstep"] = ["i feel", "i need"]
+stepContent[1]["transcript"] = ["Player 1: identify the complaint, not the criticism, by formulating the 'I' statement. Elaborate as necessary, using feeling words. [[slnc 1000]] Consider and include assertions of individual responsibility, self-disclosure, and empathy.", "[[slnc 1500]] Define your emotional needs, elaborating as necessary, using feeling words. [[slnc 1000]] Let me know when you're done."]
+stepContent[1]["nextSubstep"] = ["i feel"]
 stepContent[1]["bonuses"] = ["i recognize", "you didn't mean", "you did not mean", "you didn't intend", "i appreciate", "i appreciated"]
 
 stepContent[2] = {};
 stepContent[2]["playerNum"] = 2;
-stepContent[2]["transcript"] = ["Player 2: acknowledge their feelings by repeating their 'I' statement.", "Consider and assert your responsibility, and explain your intentions or perspective using feeling words."]
-stepContent[2]["nextSubstep"] = ["i understand that you feel", "i know i"]
+stepContent[2]["transcript"] = ["Player 2: acknowledge their feelings by repeating their 'I' statement.", "[[slnc 1000]] Consider and assert your responsibility, and explain your intentions or perspective using feeling words."]
+stepContent[2]["nextSubstep"] = ["i understand that you feel"]
 stepContent[2]["bonuses"] = ["i'm sorry", "caused you to feel", "i'm sorry my actions", "i'm sorry my behavior", "made you feel"]
 
 stepContent[3] = {};
@@ -109,7 +109,8 @@ function listen(){
     recognition.interimResults = true;
     recognition.start();
     let newString = "";
-  
+    let offendingString;
+
     recognition.onstart = () => {
         interactions.listening = true;
         console.log("listening: "+ interactions.listening)
@@ -117,18 +118,29 @@ function listen(){
     recognition.onresult = event => {
         if (typeof (event.results) !== 'undefined') {
             for (var i = event.resultIndex; i < event.results.length; ++i) {
-                console.log(event.results[i][0].transcript);
-                if(new RegExp(absolutistWords.join("|")).test(event.results[i][0].transcript)){
-                    scores["player" + stepContent[turns]["playerNum"]]["penalties"] += 10;
-                    scores["player" + stepContent[turns]["playerNum"]]["score"] -= 10;
-                    speak("Focus on the issue at hand; avoid using global statements.")
-                }
-                if(stepContent[turns]["bonuses"].length > 0 && new RegExp(stepContent[turns]["bonuses"].join("|")).test(event.results[i][0].transcript.toLowerCase())){
-                    scores["player" + stepContent[turns]["playerNum"]]["bonusPts"] += 10;
-                    scores["player" + stepContent[turns]["playerNum"]]["score"] += 10;
-                }
+                // console.log("resultIndex: " + event.resultIndex)
+                // console.log("results.length: " + event.results.length)
+                // console.log("i: "+ i)
+                // console.log(event.results[i][0].transcript);
+                // console.log(event.results[0][0].transcript);
+                // console.log(offendingString)
+                // console.log(event.results[0][0].transcript.includes(offendingString))
+
                 if (event.results[i].isFinal) {
+                    if(new RegExp(absolutistWords.join("|")).test(event.results[i][0].transcript.toLowerCase()) && stepContent[turns]["playerNum"] !== 0){
+                        offendingString = event.results[i][0].transcript;
+                        console.log("offendingString: "+ offendingString)
+                        scores["player" + stepContent[turns]["playerNum"]]["penalties"] += 10;
+                        scores["player" + stepContent[turns]["playerNum"]]["score"] -= 10;
+                        speak("Focus on the issue at hand; avoid using global statements.")
+                    }
+                    if(stepContent[turns]["bonuses"].length > 0 && new RegExp(stepContent[turns]["bonuses"].join("|")).test(event.results[i][0].transcript.toLowerCase())){
+                        scores["player" + stepContent[turns]["playerNum"]]["bonusPts"] += 10;
+                        scores["player" + stepContent[turns]["playerNum"]]["score"] += 10;
+                    }
                     recognition.stop();
+                    // console.log("final")
+                    // console.log(event.results[i][0].transcript)
                     newString += event.results[i][0].transcript.toLowerCase();
                 }
             }
@@ -138,7 +150,7 @@ function listen(){
         interactions.listening = false;
         console.log("listening: "+ interactions.listening)
 
-        if(newString.includes("i'm ready", "i'm done", "next step", "continue")){
+        if(newString.includes("i'm ready", "i'm done", "next step", "continue", "we're ready", "we are ready")){
             recognition.stop();
             if(stepContent[turns]["playerNum"] > 0){
                 scores["player" + stepContent[turns]["playerNum"]]["score"] += 10;
@@ -162,7 +174,7 @@ function listen(){
 
     recognition.onerror = event => {
         console.log("error" + event.error);
-        // speak("I didn't hear you. Try again.");
+        //error no-speech goes to not listening repeatedly
         listen();
     }
 }
