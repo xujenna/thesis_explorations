@@ -1542,3 +1542,108 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2019-01-05T18:33:08.386437	1546734788.386437	3.5	pretty good	had a shower, working on fighting game	schoolwork, washing up	2	False	Parents Home	3.5	0	3	False
 2019-01-05T20:30:50.805132	1546741850.805132	3	content	just had dinner, watching satc	leisure, tv, feedly, eating	3	False	Parents Home	2.5	0	3	False
 2019-01-05T22:27:30.381600	1546748850.3816	3	focused	working on fighting game	schoolwork	1	False	Parents Home	3	0	3.5	False
+2019-01-06T10:49:04.872030	1546793344.87203	3.5	pretty good	just woke up, chatting	washing up, email	4	False	Parents Home	3.5	0.5	2.5	False
+2019-01-06T11:49:51.620594	1546796991.620594	3	fine	getting ready to leave for lunch	leisure, feedly, eating	5	False	Parents Home	3	0.5	2.5	True
+2019-01-06T14:36:34.544530	1546806994.54453	3	fine	recovering from a food coma	schoolwork, chatting, leisure, feedly	5	False	Parents Home	2.5	0.5	3	False
+2019-01-06T15:45:16.595872	1546811116.595872	3.5	cheerful	making barak debug my code lol	schoolwork, chatting	3	False	Parents Home	3	0	2.5	False
+2019-01-06T16:47:26.408026	1546814846.408026	4	still cheerful	still chatting	schoolwork, leisure, feedly, chatting	5	False	Parents Home	3.5	0	2.5	False
+2019-01-06T17:48:37.348579	1546818517.348579	3.5	still pretty good but getting hungry/restless	working on fighting game	schoolwork, leisure, feedly, chatting	3	False	Parents Home	3	0	2.5	False
+2019-01-06T19:38:18.082325	1546825098.082325	3	content but getting restless	just had dinner and am feeling lazy	eating, schoolwork	3	False	Parents Home	2.5	0.5	3	True
+2019-01-06T20:44:35.623730	1546829075.62373	3	content	mindlessly watching satc	leisure, tv	0	False	Parents Home	3	0	3	True
+2019-01-06T21:50:24.056022	1546833024.056022	3	content	just finished satc for the 2000th time	leisure, tv	2	False	Parents Home	3	0	3.5	False
+2019-01-07T13:11:02.434468	1546888262.434468	2.5	feeling kind of lazy	don't want to work	schoolwork, chatting	3	True	Parents Home	2.5	0.5	2.5	False
+2019-01-07T14:18:05.340548	1546892285.340548	3.5	pretty good	figured out a big problem and now the fighting game is working pretty well!	schoolwork	3	True	Parents Home	3.5	0	2.5	False
+2019-01-07T15:35:59.654604	1546896959.654604	3	fine	just doing some errands, eating, being lazy	errands, eating, leisure, feedly	2	True	Parents Home	3	0.5	2.5	False
+2019-01-07T16:55:11.224076	1546901711.224076	2.5	restless	not sure, don't feel like working?	schoolwork, leisure, feedly	2	False	Parents Home	2.5	1	2.5	True
+2019-01-07T18:15:44.486444	1546906544.486444	3	okay	managing to get some work done	schoolwork, leisure, feedly	2	False	Parents Home	3	0.5	2.5	False
+2019-01-07T23:03:18.459965	1546923798.459965	2.5	a little guilty	just watched 4 episodes of homecoming	leisure, tv	2	False	Parents Home	2.5	1	3	True
+2019-01-08T11:27:46.092590	1546968466.09259	2.5	guilty	just wasted a lot of time online	leisure, feedly	0	True	Parents Home	2.5	1	2.5	True
+2019-01-08T12:31:07.106987	1546972267.106987	3	focused	working finally	schoolwork	0	True	Parents Home	3	0	2.5	False
+2019-01-08T13:31:51.529538	1546975911.529538	2.5	lazy again	leaving soon, don't feel like packing, so wasting time instead	leisure, feedly, errands	0	True	Parents Home	2.5	0.5	2.5	False
+2019-01-08T17:21:57.031468	1546989717.031468	3.5	pretty excited	looking forward to SF	schoolwork, leisure, feedly, eating	4	False	Airport, Chicago	3	0.5	2.5	True
+2019-01-11T14:31:07.894239	1547245867.894239	3	pretty content	slept in, just had breakfast, waiting for shaon and nupur to stop arguing lol	leisure, tv, email, eating	5	False	Home, San Francisco	3	0.5	2.5	False
+2019-01-12T23:57:22.768095	1547366242.768095	4	content	had a nice day with friends	leisure, tv, with friends	4	False	Home, San Francisco	3.5	0.5	4	False
+2019-01-14T21:25:54.026023	1547519154.026023	3.5	energetic	slept all day lol	errands, ash stuff, leisure, feedly	3	True	Home	3.5	0	3	True
+2019-01-15T00:33:58.622522	1547530438.622522	2.5	lazy and groggy	still recovering from yesterday's journey home	email, leisure, feedly, errands	0	True	Home	2.5	0.5	3.5	True
+2019-01-15T01:48:02.087876	1547534882.087876	2	still lazy	too lazy to go to bed	leisure, feedly	0	True	Home	2	1	4	True
+2019-01-15T14:48:25.297466	1547581705.297466	2.5	slow	jet lagged	washing up, eating, leisure, feedly	0	True	Home	2.5	1	2	False
+2019-01-15T17:57:40.906686	1547593060.906686	3	fine	making congee	leisure, tv, cooking	2	True	Home	3	0.5	2.5	True
+2019-01-15T19:51:52.871456	1547599912.871456	3	fine	binge watching homecoming lol	leisure, tv	0	True	Home	2.5	1	3	True
+2019-01-15T22:46:46.139159	1547610406.139159	2.5	restless	not sure what to do	email, errands	5	True	Home	2.5	1	3.5	True
+2019-01-15T23:53:12.251760	1547614392.25176	2.5	still restless	still not doing much	errands, leisure, feedly	1	True	Home	2.5	1.5	3.5	False
+2019-01-16T11:56:34.321834	1547657794.321834	2.5	woozy	jet lagged	washing up, cooking	0	True	Home	2	2	3.5	False
+2019-01-16T14:39:15.404334	1547667555.404334	3	fine, a little jittery	had a coffee, running errands	errands, meeting	4	False	School	3	1.5	3	False
+2019-01-16T18:50:33.640578	1547682633.640578	2.5	super lazy again	long day	leisure, tv, feedly	1	True	Home	2	1.5	3.5	True
+2019-01-16T19:54:07.065681	1547686447.065681	2.5	still super lazy	tired from the day	leisure, feedly, tv	1	True	Home	2.5	1.5	3.5	False
+2019-01-16T21:28:41.337113	1547692121.337113	3	fine	finally preparing my documents for court tomorrow	errands	0	True	Home	3	1.5	3	False
+2019-01-17T00:41:39.443716	1547703699.443716	2	so lazy	have been really out of it since getting back to ny	leisure, feedly, tv	0	True	Home	2	1.5	4	True
+2019-01-17T22:21:10.939626	1547781670.939626	2.5	lazy	had long day with court date	leisure, tv	3	True	Home	2	1	3.5	True
+2019-01-18T00:04:05.851785	1547787845.851785	2.5	still lazy	still tired	leisure, tv, eating	2	True	Home	2	1	4	True
+2019-01-18T15:00:41.977338	1547841641.977338	3	pretty lazy	still jetlagged, but managing to do things	errands, eating	2	True	Home	2.5	1.5	3.5	False
+2019-01-18T16:03:37.744422	1547845417.744422	2.5	guilty	am so lazy	leisure, feedly	1	True	Home	2.5	2	3.5	True
+2019-01-18T18:23:14.927934	1547853794.927934	3	slightly refreshed	went out to run errands	errands, eating	1	True	Home	3	0.5	2.5	True
+2019-01-18T20:58:35.544468	1547863115.544468	3	pretty good	doing youtube yoga lol	working out, leisure	1	True	Home	3.5	0.5	3	True
+2019-01-18T22:25:51.079078	1547868351.079078	3	still pretty good	starting to go back to work, about to eat	schoolwork, cooking	2	True	Home	3	0.5	3.5	True
+2019-01-19T00:33:31.652199	1547876011.652199	2.5	frustrated	trying to get random code to work	schoolwork	0	True	Home	2.5	1	3.5	False
+2019-01-19T02:14:14.190118	1547882054.190118	3	fine	made some progress on the fighting game	schoolwork	0	True	Home	3	0.5	4	True
+2019-01-19T14:26:57.315297	1547926017.315297	3.5	pretty content	just had breakfast, planning unconference session with barak	errands, email, chatting	3	True	Home	3.5	1.5	1.5	False
+2019-01-19T15:28:12.769482	1547929692.769482	3	fine	about to shower	errands, chatting	3	True	Home	3	1	1.5	False
+2019-01-19T16:35:36.055435	1547933736.055435	3	fine	planning charts for unconference sesh	schoolwork, errands	1	True	Home	3	1	2	False
+2019-01-19T17:37:09.640598	1547937429.640598	3	fine	kaggle is finally alive	schoolwork	0	True	Home	3	1.5	2	False
+2019-01-20T00:36:57.508339	1547962617.508339	3	content	had a nice museum/dinner date with casey	schoolwork	2	True	Home	3	1	3	True
+2019-01-20T15:24:26.540983	1548015866.540983	3	focused	working on unconference materials	schoolwork	0	True	Home	3	1.5	2	True
+2019-01-20T21:07:52.503884	1548036472.503884	2.5	physically uncomfortable	too much coffee, not enough food	schoolwork, leisure, feedly	1	True	Home	3	2	3	True
+2019-01-20T23:29:46.601271	1548044986.601271	3	fine	focused on avocado viz	schoolwork	0	True	Home	3	1	3.5	False
+2019-01-21T02:03:30.352376	1548054210.352376	3	still focused	still working on avocado viz	schoolwork	1	True	Home	3	0.5	4	True
+2019-01-21T16:40:13.686962	1548106813.686962	2.5	frustrated	can't figured out stacked bar charts lol	schoolwork	1	True	Home	2.5	1.5	2.5	True
+2019-01-21T19:43:22.031560	1548117802.03156	3	okay	finally getting somewhere with the map	schoolwork	1	True	Home	3	1	3	False
+2019-01-22T00:48:21.300226	1548136101.300226	3.5	satisfied	rearranged furniture to make room for my new clothes rack	errands, schoolwork	1	True	Home	3.5	0.5	3.5	False
+2019-01-22T02:31:29.941400	1548142289.9414	3	focused	working on unconference stuff again	schoolwork	0	True	Home	3	0.5	4	False
+2019-01-22T13:15:03.123393	1548180903.123393	3	content	just had breakfast	email	2	True	Home	3	0.5	2	True
+2019-01-22T14:49:34.722646	1548186574.722646	3	content	working on unconference materials, just had shower	schoolwork, washing up	1	True	Home	3	0	1.5	False
+2019-01-22T16:40:48.434590	1548193248.43459	3.5	accomplished	doing some clean coding work here	schoolwork	5	True	Home	4	0.5	2.5	True
+2019-01-22T20:04:25.496708	1548205465.496708	3	content	pretty much wrapped up	schoolwork	1	True	Home	3	0.5	2.5	True
+2019-01-22T21:46:15.906570	1548211575.90657	2.5	restless	not sure what to do now lol	cooking, eating	1	True	Home	3	1	3	False
+2019-01-22T22:53:50.846353	1548215630.846353	3	fine	doing a little of my own work	schoolwork	0	True	Home	3	0.5	3.5	True
+2019-01-23T00:31:16.364152	1548221476.364152	3	focused	working on fighting game again	schoolwork	0	True	Home	3	0.5	4	True
+2019-01-23T01:59:34.278370	1548226774.27837	3	content	just had a shower	washing up, leisure	1	True	Home	3	0.5	4.5	False
+2019-01-23T13:58:32.628613	1548269912.628613	3	content	just had breakfast	washing up, eating	3	True	Home	3.5	1	1.5	False
+2019-01-24T12:54:40.934898	1548352480.934898	3	content	just had breakfast	washing up, eating	2	True	Home	3	1	2	False
+2019-01-25T01:02:28.719003	1548396148.719003	3	content	just showered	with friends, washing up, leisure, feedly	2	True	Home	3	1	4	False
+2019-01-26T00:50:19.567517	1548481819.567517	4	grateful	happy to have such good friends	schoolwork, leisure, feedly	4	True	Home	4	0	4	False
+2019-01-26T09:36:30.533610	1548513390.53361	3	fine	getting ready to leave for ash retreat	washing up, eating	0	True	Home	3	1	3.5	False
+2019-01-26T23:21:51.329181	1548562911.329181	4	cheerful	had a fun day with friends	leisure, with friends	6	True	Home	3	1	4	True
+2019-01-27T00:48:03.511528	1548568083.511528	3	content	just had a shower	washing up, leisure, feedly	2	True	Home	2.5	0.5	4	True
+2019-01-27T22:12:12.601262	1548645132.601262	3	exhausted	long week	leisure, tv	1	True	Home	2	1	4.5	False
+2019-01-27T23:18:45.577004	1548649125.577004	3	content	took a shower	leisure, tv, washing up	2	True	Home	2.5	0.5	4	True
+2019-01-28T12:50:15.861237	1548697815.861237	3	fine	doing some ash stuff	cooking, ash stuff	3	True	Home	3	0.5	1.5	False
+2019-01-28T13:54:33.672253	1548701673.672253	2.5	lazy	don't feel like doing anything	eating, leisure, feedly	4	True	Home	2.5	1	2	False
+2019-01-28T15:37:42.821168	1548707862.821168	3	fine	getting ready to go	errands	4	True	Home	3	1.5	2	True
+2019-01-29T01:40:10.001696	1548744010.001696	3	focused	working on avo viz again lol	working	0	True	Home	3	0.5	3.5	False
+2019-01-29T12:11:58.784542	1548781918.784542	2.5	restless	not sure what to do before class	leisure, feedly, eating	0	True	Home	2.5	1	2	False
+2019-01-29T14:18:11.136956	1548789491.136956	3	fine	just cleaning	errands	2	True	Home	3	0.5	2	False
+2019-01-29T15:21:04.788332	1548793264.788332	2.5	lazy again	tired for some reason	errands, cooking, eating	1	True	Home	2	1	3.5	False
+2019-01-29T16:35:45.537771	1548797745.537771	3	fine	just cleaning up a little	errands	0	True	Home	2.5	0.5	2.5	False
+2019-01-29T21:10:49.377524	1548814249.377524	3	fine	watching satc, waiting for people to arrive	leisure, tv	2	True	Home	3	1	3	True
+2019-01-30T00:44:41.800186	1548827081.800186	4.5	cheerful	had fun hosting TNI	leisure, with friends, errands	5	True	Home	4	0	4	False
+2019-01-30T16:10:15.135005	1548882615.135005	3.5	pretty good but hungry	at school but haven't eaten since cereal this morning	in class	1	False	School	3	1	3.5	True
+2019-01-30T21:05:28.736581	1548900328.736581	2.5	pretty lazy	had kind of a long day	leisure, tv	0	True	Home	2	1	3.5	True
+2019-01-30T22:06:43.659645	1548904003.659645	2.5	still lazy	tired	leisure, tv	1	True	Home	2	1.5	3.5	True
+2019-01-30T23:35:06.352782	1548909306.352782	2.5	lazy and restless	don't feel like doing anything	leisure, tv, feedly	1	True	Home	2	2	4	True
+2019-01-31T12:14:06.785844	1548954846.785844	3	fine, a little restless	trying to start my day	email, leisure, feedly, eating	2	True	Home	2.5	1	2	False
+2019-01-31T13:42:50.811530	1548960170.81153	3	okay	procrastinating on homework by working on other things i've been procrastinating on lol	errands, schoolwork	1	True	Home	3	1	2	False
+2019-01-31T15:22:14.706214	1548966134.706214	3	fine	finally starting to do my hw	schoolwork	2	True	Home	3	0.5	2	False
+2019-01-31T16:30:46.993335	1548970246.993335	3	content	just ate 	eating	0	True	Home	3	0	2	False
+2019-01-31T17:31:22.940250	1548973882.94025	2.5	lazy	don't want to do hw	schoolwork, leisure, feedly	1	True	Home	2	1	2.5	True
+2019-01-31T20:01:10.256882	1548982870.256882	2.5	guilty	just watched a lot of satc to avoid doing hw	leisure, tv	1	True	Home	2	1.5	3	False
+2019-01-31T21:06:14.613345	1548986774.613345	3	fine	back to work	schoolwork	2	True	Home	3	1	3	False
+2019-01-31T22:06:42.294379	1548990402.294379	3	tired	just did a little yoga	working out, washing up	0	True	Home	3	0.5	3.5	True
+2019-01-31T23:07:13.641821	1548994033.641821	3	content	had a shower and ate	washing up, eating, schoolwork	0	True	Home	3	0.5	3	False
+2019-02-01T13:43:51.182431	1549046631.182431	4	relieved	adaora liked my presentation lol	in class	3	False	School	4	1	2	False
+2019-02-01T17:03:22.579363	1549058602.579363	4	cheerful	hanging out at school	leisure, with friends, schoolwork	7	False	School	4	1.5	3	False
+2019-02-01T18:53:28.718614	1549065208.718614	3.5	cheerful but tired	long day	leisure, chatting	4	True	Home	3	1	4	True
+2019-02-01T19:54:50.709636	1549068890.709636	3	lazy	tired	leisure, tv	0	True	Home	2.5	1	3.5	False
+2019-02-01T21:19:48.381954	1549073988.381954	2.5	a little guilty	not doing anything	leisure, tv	0	True	Home	2.5	1.5	3.5	True
+2019-02-01T22:43:47.417337	1549079027.417337	3	fine	cooking	cooking, eating	0	True	Home	3	0.5	3	False
+2019-02-02T01:39:45.940232	1549089585.940232	3	focused	working on fighting game	schoolwork	1	True	Home	3	1	4	True
+2019-02-02T12:45:30.943595	1549129530.943595	3	focused	working on fighting game again lol	schoolwork	3	True	Home	3.5	1	2	False

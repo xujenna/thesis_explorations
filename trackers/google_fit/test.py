@@ -56,9 +56,8 @@ def retrieve_data():
                   datasets(). \
                   get(userId='me', dataSourceId=DATA_SOURCE, datasetId=DATA_SET). \
                   execute()
-                  
         with open('dataset.json', 'w+') as outfile:
-            json.dump(dataset, outfile, indent=2)
+            json.dump(dataset, outfile)
 
         starts = []
         ends = []

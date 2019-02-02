@@ -39,14 +39,21 @@
 	}
 
 	.script > input {
-		font-size:20px;
+		font-size:36px;
 		font-family:inherit;
-		color:darkslategrey;
-		width:200px;
-		padding-bottom:0px;
+		color:white;
+		padding:4px;
+		padding-top:0px;
+		background-color: rgba(255,255,255,0.5);
+		border: 2px dashed white;
 	}
 	.script > input:focus{
 		outline:0;
+	}
+
+	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		color: white;
+		opacity: 1; /* Firefox */
 	}
 
 	.instructions{
@@ -67,11 +74,11 @@
 	.step-num{
 		font-family: josefin-sans;
 		font-weight: 400;
-		font-size: 22px;
+		font-size: 20px;
 		word-spacing: normal;
 		/* text-transform: uppercase; */
 		letter-spacing: 0.1px;
-		border-bottom: 1px solid white;
+		border-bottom: 2px solid white;
 		padding-bottom: 32px;
 		margin-bottom: 60px;
 	}
@@ -118,17 +125,26 @@
 	  display:block;
   }
 
-#de-escalationScreen{
+#de-escalationScreen, #theEnd{
 	background-color:lightslategray;
+}
+#de-escalationScreen > a{
+	font-family:josefin-sans;
+	font-weight:700;
+	color:white;
+}
+
+#de-escalationScreen > a:visited{
+	color:white;
 }
 
 #rules{
 	background-color:white;
 	color:midnightblue;
 	border:1px midnightblue solid;
-	padding: 1%;
+	padding: 2%;
 	display:none;
-	width:10%;
+	width:14%;
 	position:fixed;
 	top:50%;
 	right:2%;
@@ -156,27 +172,56 @@
 
 #score{
 	display:none;
-	width:10%;
+	width:20%;
 	position:fixed;
 	top:5%;
 	right:2%;
 	background-color:white;
-	color:midnightblue;
-	border:1px midnightblue solid;
+	color:silver;
+	border:3px silver solid;
 	padding: 1%;
+	font-family: josefin-sans;
+	font-size:14px;
+}
 
+#score > hr {
+	border:3px silver solid;
+}
+
+#score > p {
+	line-height:1.5;
+}
+
+#score > div{
+	width:45%;
+	display:inline-block;
+}
+
+#player1scores{
+	border-right: 3px silver solid;
+	padding-right:1%;
+	margin-right:4%;
+	line-height:1.25;
+}
+
+#player2scores{
+	line-height:1.25;
 }
 
 #bonus{
 	background-color:white;
-	color:midnightblue;
-	border:1px midnightblue solid;
+	color:silver;
+	border:2px silver solid;
 	padding: 1%;
 	display:none;
-	width:10%;
+	width:20%;
 	position:fixed;
-	top:20%;
+	top:35%;
 	right:2%;
+	font-family: josefin-sans;
+	font-weight: 400;
+	font-size: 17px;
+	word-spacing: normal;
 }
 
 #homepage{
@@ -186,6 +231,73 @@
 #step0_0{
 	background-color:lightslategray;
 }
+
+.rules{
+	font-size:26px;
+}
+
+.transcriptDiv {
+	/* min-width: 100%; */
+	/* min-height: 100%; */
+	display:none;
+	font-family: josefin-sans;
+	font-weight: 600;
+	font-size:34px;
+	line-height:1.75;
+	padding:10%;
+}
+
+.transcriptDiv > p:focus{
+	outline:0;
+}
+
+.offendingString{
+	background-color: rgba(255,0,0,0.75);
+	padding-left:4px;
+	padding-right:4px;
+}
+
+.bonusString{
+	background-color: rgba(0,255,255,0.75);
+	padding-left:4px;
+	padding-right:4px;
+	text-decoration: none;
+}
+
+.you-underline{
+	padding-bottom:3px;
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+	text-decoration-color:rgba(255,0,0,0.5);
+}
+
+.angryString{
+	padding-bottom:3px;
+	border-bottom: 1px wavy red;
+}
+
+.joyfulString{
+	padding-bottom:3px;
+	border-bottom: 1px wavy cyan;
+}
+
+.transcriptInstructions{
+	font-family: josefin-sans;
+	font-weight: 400;
+	color: silver;
+	font-size:14px;
+}
+a{
+	font-family: josefin-sans;
+	font-weight: 600;
+	font-size:14px;
+	color:white;
+	text-decoration: none;
+}
+a:visited{
+	color:white;
+}
+
 </style>
 </head>
 
@@ -199,7 +311,7 @@
 
 		</div>
 	</div>
-	<div id="rules">
+	<!-- <div id="rules">
 		<ul>
 			<li>Listen carefully</li>
 			<li>Be honest to yourself and your partner</li>
@@ -208,11 +320,14 @@
 			<li>Give the benefit of the doubt</li>
 			<li>Refrain from bringing up past issues</li>
 			<li>Refrain from narratives</li>
-			<li>Avoid absolutist words, like "always" or "never"</li>
+			<li>Players will lose points for global statements ("always", "never", etc), as well as excessive anger.</li>
 			<li>Avoid the "four horsemen": criticism, contempt, defensiveness, and stonewalling</li>
+			<li>Once a turn is completed, say "I'm done" to continue.</li>
+			<li>There can only be either two winners, or two losers.</li>
 		</ul>
-	</div>
+	</div> -->
 	<div id="bonus">
+			<b>BONUS</b>
 			<!-- <p><b>Bonus point:</b> Empathize.</p>
 	
 			<p class="script"><input type="checkbox" name="empathize" /><label for="empathize"> "I recognize that you did not mean to <input type="text" name="trigger"> because <input type="text" name="feeling">."</label></p>
@@ -222,6 +337,25 @@
 			<p class="script"><input type="checkbox" name="gratitude" /><label for="gratitude"> "I really appreciate when you <input type="text" name="trigger"> and <input type="text" name="trigger"> in the past, because it made me feel <input type="text" name="trigger">."</label></p> -->
 	</div>
 	<div id="score">
+		<div id="player1scores">
+			<p><b>PLAYER 1</b></p>
+			<p>BONUS: <span id = "player1bonus"></span></p>
+			<p><b>Penalties: </b><span id = "player1Penalties"></span></p>
+			<p><b>Score: </b><span id = "player1score"></span></p>
+			<p><b>"You" count: </b><span id = "player1yous"></span></p>
+			<p><b>"I" count: </b><span id = "player1Is"></span></p>
+			<p><b>"We" count: </b><span id = "player1Wes"></span></p>
+
+		</div>
+		<div id="player2scores">
+			<p><b>PLAYER 2</b></p>
+			<p><b>Bonus: </b><span id = "player2bonus"></span></p>
+			<p><b>Penalties: </b><span id = "player2Penalties"></span></p>
+			<p><b>Score: </b><span id = "player2score"></span></p>
+			<p><b>"You" count: </b><span id = "player2yous"></span></p>
+			<p><b>"I" count: </b><span id = "player2Is"></span></p>
+			<p><b>"We" count: </b><span id = "player2Wes"></span></p>
+		</div>
 	</div>
 	<div id="de-escalation">
 		<b>DE-ESCALATE!</b>
@@ -229,8 +363,22 @@
 	<div class="step-container" id="step0_0">
 		<div class="step">
 			<!-- <p class="step-num">Player 1 and 2</p> -->
-
-			<p class="step-num">1. Approach the game as a challenge and opportunity to communicate and understand your partner better. Maintain a positive, generous, warm, compassionate tone. Listen carefully, trust fully,  be honest, empathetic, and give the benefit of the doubt. </p>
+			<p class="step-num">1. This is a two-player cooperative challenge to communicate to and understand your partner better by working through an issue of your choice. The rules are:</p>
+	
+			<ul class="rules">
+				<li>Listen carefully; make no assumptions.</li>
+				<li>Give the benefit of the doubt.</li>
+				<li>Be honest to yourself and your partner.</li>
+				<li>Use "I" statements; refrain from "you".</li>
+				<li>Refrain from referencing past issues.</li>
+				<li>Refrain from narratives.</li>
+				<li>Refrain from speaking out of turn.</li>
+				<li>Players will lose points for global statements ("always", "never", etc)</li>
+				<li>Players will lose points for excessive anger.</li>
+				<li>Avoid the "four horsemen": criticism, contempt, defensiveness, and stonewalling.</li>
+				<li>Once a turn is completed, say "I'm done" to continue.</li>
+				<li>There can only be either two winners, or two losers.</li>
+			</ul>
 		</div>
 	</div>
 	<div class="step-container player1" id="step1_0">
@@ -239,24 +387,26 @@
 
 			<p class="step-num">2.1 Identify the complaint, not the criticism, by formulating your "I" statement. Elaborate as necessary, using feeling words and avoiding the word "you", "always", and "never". Consider and include assertions of individual responsibility, self-disclosure, and empathy.</p>
 
-			<p class="script">"I feel <input type="text" name="feeling"> when you <input type="text" name="trigger">."</label></p>
+			<p class="script">"I feel/felt <input type="text" name="feeling" placeholder="(emotion)"> when/because <input type="text" name="trigger" placeholder="(specific action/incident)">."</label></p>
 		</div>
 	</div>
 	<div class="step-container player1" id="step1_1">
 		<div class="step">
 			<!-- <p class="step-num">Player 1</p> -->
 			<p class="step-num">2.2 Define your emotional needs.</p>
-			<p class="script">"I need <input type="text" name="need"> when <input type="text" name="trigger">."</label></p>
+			<p class="script">"I need <input type="text" name="need" placeholder="(request for behavior change)"> when <input type="text" name="trigger" placeholder="(situation)">."</label></p>
 		</div>
 	</div>
-
+	<div class="transcriptDiv" id="transcript1">
+		<p class="transcriptInstructions">Edit this directly if there are errors in the transcript.</p>
+	</div>
 	<div class="step-container player2" id="step2_0">
 		<div class="step">
 			<!-- <p class="step-num">Player 2</p> -->
 
 			<p class="step-num">3.1 Acknowledge your partner by repeating their "I" statement.</p>
 
-			<p class="script">"I understand that you feel <input type="text" name="feeling"> when I <input type="text" name="trigger">. I'm sorry for making you feel that way."</label></p>
+			<p class="script">"I understand that you feel/felt <input type="text" name="feeling" placeholder="(emotion)"> when <input type="text" name="trigger" placeholder="(specific action/incident)">."</label></p>
 		</div>
 	</div>
 	<div class="step-container player2" id="step2_1">
@@ -265,6 +415,9 @@
 			<p class="step-num">3.2 Consider and assert your responsibility, and explain your intentions/perspective. Include self-disclosure, use feeling words, and avoid using the word "you", "always", and "never".</p>
 			<p class="script">"I know I <input type="text" name="action">, but I don't mean to make you feel <input type="text" name="trigger">...."</label></p>
 		</div>
+	</div>
+	<div class="transcriptDiv" id="transcript2">
+		<p class="transcriptInstructions">Edit this directly if there are errors in the transcript.</p>
 	</div>
 	<div class="step-container player1" id="step3_0">
 		<div class="step">
@@ -275,6 +428,9 @@
 			<p class="script">"I understand that you <input type="text" name="intention">. Now I feel <input type="text" name="feeling"> now that I know you <input type="text" name="intention">."</label></p>
 		</div>
 	</div>
+	<div class="transcriptDiv" id="transcript3">
+		<p class="transcriptInstructions">Edit this directly if there are errors in the transcript.</p>
+	</div>
 	<div class="step-container player2" id="step4_0">
 		<div class="step">
 			<!-- <p class="step-num">Player 2</p> -->
@@ -283,6 +439,9 @@
 
 			<p class="script">"I understand that you feel <input type="text" name="feeling"> and need <input type="text" name="need">. What if I/we <input type="text" name="solution">."</label></p>
 		</div>
+	</div>
+	<div class="transcriptDiv" id="transcript4">
+		<p class="transcriptInstructions">Edit this directly if there are errors in the transcript.</p>
 	</div>
 	<div class="step-container player1" id="step5_0">
 		<div class="step">
@@ -293,28 +452,42 @@
 			<p class="script">"That's a good idea because it addresses my needs by <input type="text" name="reason">. I would also appreciate if we/you could <input type="text" name="solution"> because it would make me feel <input type="text" name="feeling">."</label></p>
 		</div>
 	</div>
+	<div class="transcriptDiv" id="transcript5">
+		<p class="transcriptInstructions">Edit this directly if there are errors in the transcript.</p>
+	</div>
 	<div class="step-container player2" id="step6_0">
-			<div class="step">
-				<!-- <p class="step-num">Player 2</p> -->
-				
-				<p class="step-num">7. Repeat steps 5-6 until a solution is reached and both parties are satisfied.</p>
-	
-				<p class="script">"I understand that you feel <input type="text" name="feeling"> and need <input type="text" name="need">. What if I/we <input type="text" name="solution">."</label></p>
-			</div>
+		<div class="step">
+			<!-- <p class="step-num">Player 2</p> -->
+			
+			<p class="step-num">7. Repeat steps 5-6 until a solution is reached and both parties are satisfied.</p>
+
+			<p class="script">"I understand that you feel <input type="text" name="feeling"> and need <input type="text" name="need">. What if I/we <input type="text" name="solution">."</label></p>
 		</div>
+	</div>
+	<div class="transcriptDiv" id="transcript6">
+		<p class="transcriptInstructions">Edit this directly if there are errors in the transcript.</p>
+	</div>
 	<div class="step-container" id="de-escalationScreen">
 		<div class="step">
 			<p class="step-num">Let go of your pride, or feelings of being wronged, and consider your partner's pain. What can you both do to heal each other's pain and protect your relationship?</p>
 			<!-- <ul class="script"> -->
-			<p class="script">"What if we..."</p>
-			<p class="script">"I know this is hard..."</p>
-			<p class="script">"I hear what you're saying..."</p>
-			<p class="script">"What do you think about..."</p>
-			<!-- </ul> -->
-			<button id="deEscalate-continue" onclick="backToStep();">Return to last step</button>
+			<p class="script">
+				"What if we..."<br>
+				"I know this is hard..."<br>
+				"I hear what you're saying..."<br>
+				"What do you think about..."
+			</p>
+			<a href="javascript:nextStep()"><b>Return to last step</b></a>
+		</div>
+	</div>
+	<div class="step-container" id="theEnd">
+		<div class="step">
+			<p class="script">Great job completing the challenge. Be sure to review the transcript, note any markings, and discuss ways to further improve your communication. To save this transcript for future reference, go to <span style="font-variant:small-caps; font-weight:500; font-family:josefin-sans">file &gt; save page as &gt; webpage, complete</span>.</p>
 		</div>
 	</div>
 <script src="script.js"></script>
+<script src="https://unpkg.com/compromise@latest/builds/compromise.min.js"></script>
+
 
 </body>
 </html>
