@@ -1647,3 +1647,56 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2019-02-01T22:43:47.417337	1549079027.417337	3	fine	cooking	cooking, eating	0	True	Home	3	0.5	3	False
 2019-02-02T01:39:45.940232	1549089585.940232	3	focused	working on fighting game	schoolwork	1	True	Home	3	1	4	True
 2019-02-02T12:45:30.943595	1549129530.943595	3	focused	working on fighting game again lol	schoolwork	3	True	Home	3.5	1	2	False
+2019-02-02T13:47:18.190807	1549133238.190807	3.5	cheerful	just chatting and working	chatting, wschoolwork	3	True	Home	3	0.5	2	False
+2019-02-02T14:51:23.056207	1549137083.056207	3	fine	doing some yoga	working out, studying	2	True	Home	3	1	2.5	True
+2019-02-02T16:17:41.729731	1549142261.729731	3	content	had a shower, chipping away at data science hw	schoolwork, washing up	2	True	Home	3	1	2	False
+2019-02-03T00:42:22.509287	1549172542.509287	2.5	a little stressed	not sure what to propose for my data science proj	schoolwork	0	True	Home	2.5	2	3.5	False
+2019-02-03T11:34:22.357991	1549211662.357991	3	fine	just woke up	washing up	1	True	Home	3	1	1.5	False
+2019-02-04T12:23:47.818057	1549301027.818057	3	content	just had breakfast, finishing up hw	schoolwork, eating	1	True	Home	3	2	2	True
+2019-02-04T13:26:56.571244	1549304816.571244	2.5	a little stressed	the reading for data science is so boring lol	schoolwork, eating	0	True	Home	2.5	2.5	2	True
+2019-02-04T15:07:58.177022	1549310878.177022	3	fine	just had OH with gene; trying to do data science reading	schoolwork	1	True	School	3	2	2	True
+2019-02-04T16:16:47.557230	1549315007.55723	2.5	stressed about this reading again lol	trying to finish up before class	schoolwork	0	True	School	2.5	2.5	2	True
+2019-02-04T21:47:07.065691	1549334827.065691	2.5	lazy and restless	don't feel like doing more homework	ash stuff, leisure, tv	3	True	Home	2.5	1.5	2.5	True
+2019-02-04T22:53:52.339136	1549338832.339136	2.5	still lazy and restless	still don't want to do hw	leisure, tv	1	True	Home	2.5	2	2.5	True
+2019-02-05T00:42:03.897671	1549345323.897671	2.5	meh	begrudgingly doing thesis hw	schoolwork	2	True	Home	3	1	3	False
+2019-02-05T01:51:05.076619	1549349465.076619	3	content	giving up on hw and going to sleep lol	schoolwork, washing up	0	True	Home	2.5	1	4	False
+2019-02-05T12:59:59.616915	1549389599.616915	3	content	getting ready to leave	washing up	2	True	Home	3	0.5	1.5	False
+2019-02-05T15:49:59.242798	1549399799.242798	3.5	cheerfulish	hung out a little before class	in class	7	False	School	3.5	0.5	2	False
+2019-02-06T01:00:04.481445	1549432804.481445	4.5	cheerful	had a huge turnout for TNI tonight	with friends, leisure	10	True	Home	3.5	0.5	3.5	False
+2019-02-06T02:00:30.714477	1549436430.714477	3	content	just doing some reading for tomorrow, had a shower	washing up, schoolwork	2	True	Home	3	1	4	False
+2019-02-06T03:01:17.476457	1549440077.476457	2.5	tired	trying to do a decent amount of reading for class tomorrow	schoolwork	0	True	Home	2.5	1.5	4.5	True
+2019-02-06T12:23:59.794902	1549473839.794902	3	fine	just had breakfast, wrote a threatening email to lofficiel lol	 errands, eating, schoolwork	1	True	Home	3	1	2	False
+2019-02-06T13:43:19.273032	1549478599.273032	3	still fine	getting ready to leave	washing up	0	True	Home	3	2	2.5	True
+2019-02-06T17:42:51.257503	1549492971.257503	4	cheerful	hung out a little during break	in class	9	False	School	3.5	0.5	3.5	True
+2019-02-06T21:04:14.629801	1549505054.629801	2.5	tired	don't know, long day	leisure, tv	1	True	Home	2.5	0.5	3.5	True
+2019-02-06T22:45:52.473052	1549511152.473052	2.5	lazy	not in the mood to do anything	leisure, tv	0	True	Home	2.5	1	4	True
+2019-02-07T00:10:53.678725	1549516253.678725	2	guilty	haven't done anything productive tonight	leisure, feedly	0	True	Home	2	1.5	4	False
+2019-02-07T01:13:19.348360	1549519999.34836	2.5	tired but getting excited about thesis	getting some ideas from elpha	schoolwork	0	True	Home	3	0.5	4	True
+2019-02-07T12:30:29.748986	1549560629.748986	4	cheerful	hanging out in class	sin class	5	False	School	3.5	0.5	1	False
+2019-02-07T13:57:18.105266	1549565838.105266	4	cheerful	still hanging out in class	in class	2	False	School	3	0	1.5	False
+2019-02-07T15:53:42.640372	1549572822.640372	3	restless	don't feel like doing work	leisure, with friends, errands	4	False	School	2	1	2	True
+2019-02-07T18:02:27.174185	1549580547.174185	2.5	tired and lazy	didn't sleep enough	leisure, tv	0	True	Home	2.5	1	3.5	True
+2019-02-07T20:12:57.698921	1549588377.698921	3	pretty good	doing a gratitude thing for hw	schoolwork, leisure, feedly	2	True	Home	3.5	0.5	3	True
+2019-02-07T21:23:07.241446	1549592587.241446	3	fine	relaxing a bit	schoolwork, leisure, tv	1	True	Home	3	0.5	3.5	True
+2019-02-07T23:27:01.788642	1549600021.788642	2.5	nervous	scared this fb experiment is going to fail lol	schoolwork	0	True	Home	3	2	3.5	False
+2019-02-08T00:32:31.461186	1549603951.461186	2.5	feeling lazy again	i did enough work today lol	leisure, tv	1	True	Home	2.5	1.5	4	True
+2019-02-08T01:33:01.124562	1549607581.124562	2.5	feeling too lazy to go to bed lol	tired	leisure, tv	0	True	Home	2	1.5	4	True
+2019-02-08T12:57:05.836362	1549648625.836362	2.5	feeling a little restless	not sure what to do	schoolwork, leisure, feedly	4	True	Home	3	1	2.5	False
+2019-02-08T14:55:06.783373	1549655706.783373	2.5	frustrated	npm is dumb lol	schoolwork	2	True	Home	2.5	1.5	2	False
+2019-02-09T01:31:11.467814	1549693871.467814	2.5	super lazy	long day	leisure, tv, feedly, errands	1	True	Home	2	0.5	4	True
+2019-02-09T12:21:33.911452	1549732893.911452	3	content	just had breakfast	cooking, eating, email, chatting	4	True	Home	3	0.5	1	False
+2019-02-09T13:22:46.328265	1549736566.328265	2.5	a little restless	can't handle starting projects lol	studying	3	True	Home	3	1	1.5	False
+2019-02-09T14:38:40.874348	1549741120.874348	3	okay	calmed my brain with some R exercises lol	studying	1	True	Home	3	0.5	1.5	False
+2019-02-09T15:42:07.887551	1549744927.887551	2.5	still feeling low motivation to work	just finished mending my jeans as a distraction lol	errands	1	True	Home	2.5	1	2	True
+2019-02-09T18:09:16.618772	1549753756.618772	3	content	went grocery shopping, had a snack, doing some hw	schoolwork, errands	1	True	Home	3	0.5	2.5	False
+2019-02-09T19:37:02.296748	1549759022.296748	2.5	lazy	don't feel like working	schoolwork, leisure, tv	1	True	Home	2.5	1	3	False
+2019-02-09T21:30:50.984475	1549765850.984475	3	fine	finally doing some hw	cooking, eating, schoolwork	1	True	Home	3	0.5	3	True
+2019-02-09T22:50:52.339029	1549770652.339029	3	still fine	still doing hw	schoolwork	0	True	Home	3	0.5	3	False
+2019-02-10T00:43:06.180863	1549777386.180863	3	fine	still doing hw lol	schoolwork	0	True	Home	2.5	0	3.5	False
+2019-02-10T03:04:50.220750	1549785890.22075	2	annoyed	got into bed and realized i was hungry	cooking, eating, schoolwork	1	True	Home	2.5	1	4	False
+2019-02-10T12:33:51.980853	1549820031.980853	3	content	just had breakfast, working on new gratitude script	schoolwork, eating	2	True	Home	3	1	2	True
+2019-02-10T14:10:02.636676	1549825802.636676	2.5	frustrated	laundry pickup was 2 hours late and i'm stumped by calling terminal in python	washing up, schoolwork	0	True	Home	2.5	1.5	2	False
+2019-02-10T20:43:58.324532	1549849438.324532	2.5	still frustrated and tired	long day in queens with casey, terminal is not cooperating	schoolwork, email	2	True	Home	3	1	2.5	False
+2019-02-10T22:17:09.085010	1549855029.08501	3	focused	working on fb thing	schoolwork	2	True	Home	3	0.5	2.5	False
+2019-02-10T23:36:22.012087	1549859782.012087	3	still focused	still working on fb thing	schoolwork	3	True	Home	3	0.5	3	False
+2019-02-11T00:49:08.669282	1549864148.669282	4	cheerful	had a nice convo with luigi and huiyi	schoolwork	4	True	Home	3.5	0.5	3.5	False
