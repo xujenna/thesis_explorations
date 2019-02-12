@@ -82,12 +82,11 @@ def job():
 
     print(gratitudeList)
 
-    contacts = ["Barak Chamo", "Chian Huang", "Michelle Maeng", "Gunvor B. G. Dreijer", "Anna Clements", "Sam Chasan", "Kellee Massey", "Alexandra Lopez", "Asha Veeraswamy", "Isabella Cruz-Chong", "Junie Lee", "Katya Rozanova", "Max Horwich", "Ridwan Madon", "Kemi Sijuwade-Ukadike", "Dan Shin", "Kathy Wu", "Jasmyne Robertson", "Kenzo Nakamura", "Lin Zhang", "Susan Churchfield", "Liz Wallace", "Helen Tang", "Rushali Paratey", "Nick Wallace", "Zohreh Zadbood", "Carrie Sijia Wang", "Akmyrat Tuyliyev", "Alejandro Nicolás Sanín Ordoñez", "Luigi Menduni", "Sandy Hsieh", "Christina Coclanes", "Json Yung", "Mary Notari"]
+    contacts = ["Barak Chamo", "Chian Huang", "Michelle Maeng", "Gunvor B. G. Dreijer", "Anna Clements", "Sam Chasan", "Kellee Massey", "Alexandra Lopez", "Asha Veeraswamy", "Isabella Cruz-Chong", "Junie Lee", "Katya Rozanova", "Max Horwich", "Ridwan Madon", "Kemi Sijuwade-Ukadike", "Dan Shin", "Kathy Wu", "Jasmyne Robertson", "Kenzo Nakamura", "Lin Zhang", "Susan Churchfield", "Liz Wallace", "Helen Tang", "Rushali Paratey", "Nick Wallace", "Zohreh Zadbood", "Carrie Sijia Wang", "Akmyrat Tuyliyev", "Alejandro Nicolás Sanín Ordoñez", "Luigi Menduni", "Sandy Hsieh", "Christina Coclanes", "Json Yung", "Mary Notari", "Chelsea Chen Chen"]
 
-    # name = contacts[random.randint(0,len(contacts))]
-    name = "Barak Chamo"
+    name = contacts[random.randint(0,len(contacts))]
 
-    intro = "Hey " + name + "! I\'m Jenna\'s thesis assistant, contacting you to see if you\'d like to share a gratitude practice with her today. It\'s super simple: you\'ll just exchange a brief list of good things that happened in each of your days. If you\'re game, simply respond to this message. If not, just ignore this message. Thanks!"
+    intro = "Hey " + name.split(' ')[0] + "! I`m Jenna`s thesis bot, and was wondering if you`d like to share a gratitude practice with her today. It`s super simple: you`ll just exchange a brief list of good things that happened in each of your days. If you`re game, simply respond to this message. If not, just ignore it. Thanks!"
     
     appscript.app('Terminal').do_script("cd /Users/jxu2/github/thesis_explorations/life_support/gratitude/fb/ && messer --command='m \"" + name + "\" " + intro + "' ")
 
