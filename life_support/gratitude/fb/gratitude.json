@@ -423,5 +423,30 @@
         "entry": "my own wit lol"
       }
     ]
+  },
+  {
+    "date": "2019-02-12",
+    "gratitude_entries": [
+      {
+        "timestamp": 1550028806.469155,
+        "entry": "the universe helping me with my python environment problems"
+      },
+      {
+        "timestamp": 1550028876.315248,
+        "entry": "chocolate"
+      },
+      {
+        "timestamp": 1550031653.746303,
+        "entry": "donald glover"
+      },
+      {
+        "timestamp": 1550031761.263005,
+        "entry": "huiyi for letting me spam her"
+      },
+      {
+        "timestamp": 1550032350.773884,
+        "entry": "alex for sending me cute bunny gifs"
+      }
+    ]
   }
 ]

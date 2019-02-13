@@ -17436,5 +17436,82 @@
     "actual_mood": 2.5,
     "actual_morale": 2.0,
     "response_time": 1549999019.4149551
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.898751245479898,
+        "morale_prediction": 2.7386542490589196,
+        "timestamp": 1550007836.352365
+      },
+      {
+        "mood_prediction": 2.8867959035991033,
+        "morale_prediction": 2.8568198253700756,
+        "timestamp": 1550017375.608407
+      }
+    ],
+    "mood_index": 1714,
+    "actual_mood": 2.0,
+    "actual_morale": 2.0,
+    "response_time": 1550008688.87976
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.828842363671999,
+        "morale_prediction": 2.921060197763334,
+        "timestamp": 1550018276.959858
+      },
+      {
+        "mood_prediction": 2.6945359598047345,
+        "morale_prediction": 2.9176144258622583,
+        "timestamp": 1550020977.891434
+      }
+    ],
+    "mood_index": 1715,
+    "actual_mood": 2.5,
+    "actual_morale": 2.5,
+    "response_time": 1550018455.679628
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.770687078224561,
+        "morale_prediction": 2.8554275416858914,
+        "timestamp": 1550021879.076397
+      },
+      {
+        "mood_prediction": 2.6499335781290596,
+        "morale_prediction": 3.0219803644564673,
+        "timestamp": 1550024579.644361
+      }
+    ],
+    "mood_index": 1716,
+    "actual_mood": 3.0,
+    "actual_morale": 3.0,
+    "response_time": 1550022800.2447212
+  },
+  {
+    "predictions": [
+      {
+        "mood_prediction": 2.6499335781290596,
+        "morale_prediction": 3.0219803644564673,
+        "timestamp": 1550025480.784822
+      },
+      {
+        "mood_prediction": 2.711437830989284,
+        "morale_prediction": 2.4793643297082615,
+        "timestamp": 1550028180.45369
+      },
+      {
+        "mood_prediction": 2.711437830989284,
+        "morale_prediction": 2.4793643297082615,
+        "timestamp": 1550029081.549356
+      }
+    ],
+    "mood_index": 1717,
+    "actual_mood": 3.0,
+    "actual_morale": 3.0,
+    "response_time": 1550028855.174979
   }
 ]
