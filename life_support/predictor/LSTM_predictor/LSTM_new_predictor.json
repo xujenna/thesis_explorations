@@ -7293,146 +7293,292 @@
   {
     "predictions": [
       {
-        "LSTM_mood_prediction": 2.721795439720154,
-        "LSTM_stress_prediction": 2.232649309689929,
-        "LSTM_fatigue_prediction": 3.553357965449125,
-        "LSTM_morale_prediction": 2.4448013458788296,
-        "timestamp": 1550002451.65772
+        "LSTM_mood_prediction": 2.9699411392211914,
+        "LSTM_stress_prediction": 0.9262415325176602,
+        "LSTM_fatigue_prediction": 3.697315697411959,
+        "LSTM_morale_prediction": 2.9934455864619793,
+        "timestamp": 1550030310.628017
       },
       {
-        "LSTM_mood_prediction": 2.7281347513198853,
-        "LSTM_stress_prediction": 2.328137559234071,
-        "LSTM_fatigue_prediction": 3.5618805354553382,
-        "LSTM_morale_prediction": 2.4532033655553804,
-        "timestamp": 1550004251.858693
+        "LSTM_mood_prediction": 2.9022326469421387,
+        "LSTM_stress_prediction": 0.7732433693614351,
+        "LSTM_fatigue_prediction": 3.6568006328225042,
+        "LSTM_morale_prediction": 2.9378592190305945,
+        "timestamp": 1550032111.150615
       },
       {
-        "LSTM_mood_prediction": 2.776137113571167,
-        "LSTM_stress_prediction": 2.2868487068500465,
-        "LSTM_fatigue_prediction": 3.4656142672059795,
-        "LSTM_morale_prediction": 2.5567680146040916,
-        "timestamp": 1550008163.425385
+        "LSTM_mood_prediction": 2.8915590047836304,
+        "LSTM_stress_prediction": 0.7127360201423166,
+        "LSTM_fatigue_prediction": 3.629157787126932,
+        "LSTM_morale_prediction": 2.9260867355310416,
+        "timestamp": 1550033012.667499
       },
       {
-        "LSTM_mood_prediction": 2.6265504360198975,
-        "LSTM_stress_prediction": 2.425292533447649,
-        "LSTM_fatigue_prediction": 3.5187860799016644,
-        "LSTM_morale_prediction": 2.5374790427276563,
-        "timestamp": 1550012643.610613
+        "LSTM_mood_prediction": 3.1139018535614014,
+        "LSTM_stress_prediction": 0.6599858205021484,
+        "LSTM_fatigue_prediction": 3.6564051560103126,
+        "LSTM_morale_prediction": 3.20245618594843,
+        "timestamp": 1550033913.561124
       }
     ],
-    "mood_index": 1714,
-    "actual_mood": 2.0,
-    "actual_stress": 3.0,
+    "mood_index": 1718,
+    "actual_mood": 3.5,
+    "actual_stress": 0.5,
     "actual_fatigue": 3.5,
-    "actual_morale": 2.0,
-    "response_time": 1550008688.87976
+    "actual_morale": 3.5,
+    "response_time": 1550033631.769421
   },
   {
     "predictions": [
       {
-        "LSTM_mood_prediction": 2.569926619529724,
-        "LSTM_stress_prediction": 2.42188371403602,
-        "LSTM_fatigue_prediction": 3.60130334494556,
-        "LSTM_morale_prediction": 2.4394900356271116,
-        "timestamp": 1550017703.426974
+        "LSTM_mood_prediction": 3.082988739013672,
+        "LSTM_stress_prediction": 0.7873322756042161,
+        "LSTM_fatigue_prediction": 2.984232560035101,
+        "LSTM_morale_prediction": 3.296921709202813,
+        "timestamp": 1550034813.799462
       },
       {
-        "LSTM_mood_prediction": 2.710963487625122,
-        "LSTM_stress_prediction": 1.8164495988454699,
-        "LSTM_fatigue_prediction": 3.6366933042303726,
-        "LSTM_morale_prediction": 2.634414478135001,
-        "timestamp": 1550018604.72169
+        "LSTM_mood_prediction": 3.0560436248779297,
+        "LSTM_stress_prediction": 0.8168801604443776,
+        "LSTM_fatigue_prediction": 3.069451703586404,
+        "LSTM_morale_prediction": 3.2571359667395354,
+        "timestamp": 1550035715.678316
+      },
+      {
+        "LSTM_mood_prediction": 3.0560436248779297,
+        "LSTM_stress_prediction": 0.8168801604443776,
+        "LSTM_fatigue_prediction": 3.069451703586404,
+        "LSTM_morale_prediction": 3.2571359667395354,
+        "timestamp": 1550036617.19378
+      },
+      {
+        "LSTM_mood_prediction": 3.0511558055877686,
+        "LSTM_stress_prediction": 0.8019483029697216,
+        "LSTM_fatigue_prediction": 3.1309186945718723,
+        "LSTM_morale_prediction": 3.294106194420858,
+        "timestamp": 1550037518.085166
+      },
+      {
+        "LSTM_mood_prediction": 3.0534815788269043,
+        "LSTM_stress_prediction": 0.7996173962979213,
+        "LSTM_fatigue_prediction": 3.15825219216567,
+        "LSTM_morale_prediction": 3.2910329193544916,
+        "timestamp": 1550038418.3607
+      },
+      {
+        "LSTM_mood_prediction": 3.0595409870147705,
+        "LSTM_stress_prediction": 0.7313300987233959,
+        "LSTM_fatigue_prediction": 3.5114630533536815,
+        "LSTM_morale_prediction": 3.3928981207840283,
+        "timestamp": 1550039318.984502
       }
     ],
-    "mood_index": 1715,
-    "actual_mood": 2.5,
-    "actual_stress": 2.0,
-    "actual_fatigue": 3.5,
-    "actual_morale": 2.5,
-    "response_time": 1550018455.679628
+    "mood_index": 1719,
+    "actual_mood": 3.5,
+    "actual_stress": 0.5,
+    "actual_fatigue": 4.0,
+    "actual_morale": 4.0,
+    "response_time": 1550039057.061652
   },
   {
     "predictions": [
       {
-        "LSTM_mood_prediction": 2.7205311059951782,
-        "LSTM_stress_prediction": 1.9432805333787162,
-        "LSTM_fatigue_prediction": 3.6223080214514134,
-        "LSTM_morale_prediction": 2.640774800324628,
-        "timestamp": 1550019504.846244
+        "LSTM_mood_prediction": 3.0595409870147705,
+        "LSTM_stress_prediction": 0.7313300987233959,
+        "LSTM_fatigue_prediction": 3.5114630533536815,
+        "LSTM_morale_prediction": 3.3928981207840283,
+        "timestamp": 1550040220.97218
       },
       {
-        "LSTM_mood_prediction": 2.7758712768554688,
-        "LSTM_stress_prediction": 1.9409608249294696,
-        "LSTM_fatigue_prediction": 3.6283230240892914,
-        "LSTM_morale_prediction": 2.7273459119547465,
-        "timestamp": 1550021305.424887
+        "LSTM_mood_prediction": 3.082989454269409,
+        "LSTM_stress_prediction": 0.746532121699064,
+        "LSTM_fatigue_prediction": 3.4693601210510714,
+        "LSTM_morale_prediction": 3.3767024064309714,
+        "timestamp": 1550041121.58619
       },
       {
-        "LSTM_mood_prediction": 2.7772035598754883,
-        "LSTM_stress_prediction": 1.9366864566751834,
-        "LSTM_fatigue_prediction": 3.586139923540653,
-        "LSTM_morale_prediction": 2.7370336485130067,
-        "timestamp": 1550022206.511593
+        "LSTM_mood_prediction": 3.0888209342956543,
+        "LSTM_stress_prediction": 0.7245957424894293,
+        "LSTM_fatigue_prediction": 3.5591324633489183,
+        "LSTM_morale_prediction": 3.3696326399621914,
+        "timestamp": 1550049255.742586
       },
       {
-        "LSTM_mood_prediction": 2.9194470643997192,
-        "LSTM_stress_prediction": 1.3130756816783868,
-        "LSTM_fatigue_prediction": 3.233343314627658,
-        "LSTM_morale_prediction": 2.947609048727087,
-        "timestamp": 1550023106.767638
+        "LSTM_mood_prediction": 3.0712344646453857,
+        "LSTM_stress_prediction": 0.7092043555587205,
+        "LSTM_fatigue_prediction": 3.46634323200072,
+        "LSTM_morale_prediction": 3.3922669970075265,
+        "timestamp": 1550050157.108401
+      },
+      {
+        "LSTM_mood_prediction": 3.0712344646453857,
+        "LSTM_stress_prediction": 0.7092043555587205,
+        "LSTM_fatigue_prediction": 3.46634323200072,
+        "LSTM_morale_prediction": 3.3922669970075265,
+        "timestamp": 1550051057.523744
+      },
+      {
+        "LSTM_mood_prediction": 3.0651490688323975,
+        "LSTM_stress_prediction": 0.683976838857108,
+        "LSTM_fatigue_prediction": 3.4487592660075537,
+        "LSTM_morale_prediction": 3.383253433680136,
+        "timestamp": 1550051956.617797
+      },
+      {
+        "LSTM_mood_prediction": 2.810075044631958,
+        "LSTM_stress_prediction": 0.49971095845318614,
+        "LSTM_fatigue_prediction": 3.4286787595051713,
+        "LSTM_morale_prediction": 3.0355015506185477,
+        "timestamp": 1550065210.745959
+      },
+      {
+        "LSTM_mood_prediction": 2.810075044631958,
+        "LSTM_stress_prediction": 0.49971095845318614,
+        "LSTM_fatigue_prediction": 3.4286787595051713,
+        "LSTM_morale_prediction": 3.0355015506185477,
+        "timestamp": 1550066111.121038
+      },
+      {
+        "LSTM_mood_prediction": 2.812230348587036,
+        "LSTM_stress_prediction": 0.5009281113674633,
+        "LSTM_fatigue_prediction": 3.459911294878851,
+        "LSTM_morale_prediction": 3.0341523994941086,
+        "timestamp": 1550067011.166027
+      },
+      {
+        "LSTM_mood_prediction": 2.816510319709778,
+        "LSTM_stress_prediction": 0.5033869258807083,
+        "LSTM_fatigue_prediction": 3.523390836665171,
+        "LSTM_morale_prediction": 3.031249981140718,
+        "timestamp": 1550073870.830703
+      },
+      {
+        "LSTM_mood_prediction": 2.6840643882751465,
+        "LSTM_stress_prediction": 0.9396940176211743,
+        "LSTM_fatigue_prediction": 1.9715226892900066,
+        "LSTM_morale_prediction": 2.654616473953303,
+        "timestamp": 1550075671.749581
       }
     ],
-    "mood_index": 1716,
+    "mood_index": 1720,
     "actual_mood": 3.0,
     "actual_stress": 1.0,
-    "actual_fatigue": 3.0,
+    "actual_fatigue": 1.5,
     "actual_morale": 3.0,
-    "response_time": 1550022800.2447212
+    "response_time": 1550075055.099138
   },
   {
     "predictions": [
       {
-        "LSTM_mood_prediction": 2.966953158378601,
-        "LSTM_stress_prediction": 1.258434524696808,
-        "LSTM_fatigue_prediction": 3.3131753904644343,
-        "LSTM_morale_prediction": 2.958677988807276,
-        "timestamp": 1550024907.235365
+        "LSTM_mood_prediction": 2.9614734649658203,
+        "LSTM_stress_prediction": 1.1138259089453078,
+        "LSTM_fatigue_prediction": 1.9587516492791228,
+        "LSTM_morale_prediction": 2.922696959803276,
+        "timestamp": 1550077473.888978
       },
       {
-        "LSTM_mood_prediction": 2.966953158378601,
-        "LSTM_stress_prediction": 1.258434524696808,
-        "LSTM_fatigue_prediction": 3.3131753904644343,
-        "LSTM_morale_prediction": 2.958677988807276,
-        "timestamp": 1550025808.60859
+        "LSTM_mood_prediction": 2.973764181137085,
+        "LSTM_stress_prediction": 1.1930646658460449,
+        "LSTM_fatigue_prediction": 2.034463554107196,
+        "LSTM_morale_prediction": 2.9143003045447147,
+        "timestamp": 1550089566.668417
       },
       {
-        "LSTM_mood_prediction": 2.957703471183777,
-        "LSTM_stress_prediction": 1.1106956369377998,
-        "LSTM_fatigue_prediction": 3.3047604068404377,
-        "LSTM_morale_prediction": 2.9546176608307833,
-        "timestamp": 1550026707.692497
-      },
-      {
-        "LSTM_mood_prediction": 2.971262812614441,
-        "LSTM_stress_prediction": 1.261909326449712,
-        "LSTM_fatigue_prediction": 3.34189469602861,
-        "LSTM_morale_prediction": 2.99409843613134,
-        "timestamp": 1550028508.824008
-      },
-      {
-        "LSTM_mood_prediction": 2.971262812614441,
-        "LSTM_stress_prediction": 0.9473483715403946,
-        "LSTM_fatigue_prediction": 3.6985495135404243,
-        "LSTM_morale_prediction": 2.99409843613134,
-        "timestamp": 1550029410.239764
+        "LSTM_mood_prediction": 3.1206820011138916,
+        "LSTM_stress_prediction": 1.2211258022403284,
+        "LSTM_fatigue_prediction": 2.7383428403982095,
+        "LSTM_morale_prediction": 2.9090303003115183,
+        "timestamp": 1550095109.78929
       }
     ],
-    "mood_index": 1717,
+    "mood_index": 1721,
+    "actual_mood": 3.5,
+    "actual_stress": 1.0,
+    "actual_fatigue": 2.5,
+    "actual_morale": 3.0,
+    "response_time": 1550090075.774752
+  },
+  {
+    "predictions": [
+      {
+        "LSTM_mood_prediction": 3.1238853931427,
+        "LSTM_stress_prediction": 1.2913581036675117,
+        "LSTM_fatigue_prediction": 2.8486239485647684,
+        "LSTM_morale_prediction": 2.9767555409911606,
+        "timestamp": 1550096910.621838
+      },
+      {
+        "LSTM_mood_prediction": 3.118283271789551,
+        "LSTM_stress_prediction": 1.2056847273879892,
+        "LSTM_fatigue_prediction": 2.842333870495351,
+        "LSTM_morale_prediction": 2.9759506100717887,
+        "timestamp": 1550097810.880661
+      },
+      {
+        "LSTM_mood_prediction": 3.179849624633789,
+        "LSTM_stress_prediction": 1.2577814068065478,
+        "LSTM_fatigue_prediction": 3.0252775099087135,
+        "LSTM_morale_prediction": 3.0233439019073254,
+        "timestamp": 1550105779.687033
+      },
+      {
+        "LSTM_mood_prediction": 3.190645694732666,
+        "LSTM_stress_prediction": 1.0985786907480755,
+        "LSTM_fatigue_prediction": 3.0245038416310575,
+        "LSTM_morale_prediction": 2.9441157397321183,
+        "timestamp": 1550107591.740233
+      },
+      {
+        "LSTM_mood_prediction": 3.1933603286743164,
+        "LSTM_stress_prediction": 1.1339608495387372,
+        "LSTM_fatigue_prediction": 3.0243253257226153,
+        "LSTM_morale_prediction": 2.944996308945147,
+        "timestamp": 1550108492.204353
+      },
+      {
+        "LSTM_mood_prediction": 3.1283907890319824,
+        "LSTM_stress_prediction": 0.8554042588516753,
+        "LSTM_fatigue_prediction": 3.7309538762129266,
+        "LSTM_morale_prediction": 2.9895622842791507,
+        "timestamp": 1550109392.862408
+      }
+    ],
+    "mood_index": 1722,
     "actual_mood": 3.0,
     "actual_stress": 0.5,
     "actual_fatigue": 3.5,
     "actual_morale": 3.0,
-    "response_time": 1550028855.174979
+    "response_time": 1550109104.470921
+  },
+  {
+    "predictions": [
+      {
+        "LSTM_mood_prediction": 3.1041946411132812,
+        "LSTM_stress_prediction": 0.834180877848112,
+        "LSTM_fatigue_prediction": 3.583664542680017,
+        "LSTM_morale_prediction": 3.0668635475124155,
+        "timestamp": 1550111194.780556
+      },
+      {
+        "LSTM_mood_prediction": 3.087296485900879,
+        "LSTM_stress_prediction": 0.6226011915311128,
+        "LSTM_fatigue_prediction": 3.5808878603445313,
+        "LSTM_morale_prediction": 3.0531966197997584,
+        "timestamp": 1550112095.087584
+      },
+      {
+        "LSTM_mood_prediction": 3.1272923946380615,
+        "LSTM_stress_prediction": 0.3456056464790877,
+        "LSTM_fatigue_prediction": 3.302655468841561,
+        "LSTM_morale_prediction": 3.265186885258653,
+        "timestamp": 1550112996.487629
+      }
+    ],
+    "mood_index": 1723,
+    "actual_mood": 3.5,
+    "actual_stress": 0.0,
+    "actual_fatigue": 3.0,
+    "actual_morale": 3.5,
+    "response_time": 1550112744.042244
   }
 ]

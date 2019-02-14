@@ -448,5 +448,34 @@
         "entry": "alex for sending me cute bunny gifs"
       }
     ]
+  },
+  {
+    "date": "2019-02-13",
+    "gratitude_entries": [
+      {
+        "timestamp": 1550039091.231962,
+        "entry": "the internet for solving my python environment problem"
+      },
+      {
+        "timestamp": 1550095972.75538,
+        "entry": "my therapist, who is awesome and fun"
+      },
+      {
+        "timestamp": 1550096039.424813,
+        "entry": "my single girlfriends, to celebrate galentine`s day with"
+      },
+      {
+        "timestamp": 1550096091.744223,
+        "entry": "sandy, for always listening and caring"
+      },
+      {
+        "timestamp": 1550096383.639711,
+        "entry": "hughes, for translating stackoverflow lingo"
+      },
+      {
+        "timestamp": 1550110770.061225,
+        "entry": "shreiya, for taking care of the projector stuff"
+      }
+    ]
   }
 ]

@@ -28,7 +28,7 @@ from firebase_admin import credentials
 from firebase_admin import db
 
 cred = credentials.Certificate("mood-predictions-firebase-adminsdk-0ns22-7a7b9f250c.json")
-firebase_admin.initialize_app(cred)
+firebase_admin.initialize_app(cred, {'databaseURL' : 'https://mood-predictions.firebaseio.com/'})
 
 root = db.reference()
 
@@ -201,7 +201,6 @@ def makePrediction(df):
         fatigue_prediction = predictor(fatigueDF, "fatigue")
         morale_prediction = predictor(moraleDF, "morale")
 
-
         print("------------------------")
         print("current mood prediction:")
         print(mood_prediction)
@@ -221,6 +220,9 @@ def makePrediction(df):
         updatedPrediction['LSTM_fatigue_prediction'] = fatigue_prediction[0]
         updatedPrediction['LSTM_morale_prediction'] = morale_prediction[0]
         updatedPrediction['timestamp'] = datetime.datetime.now().timestamp()
+        
+        root.child('predictions').push(updatedPrediction)
+
         currentIndexPredictions['predictions'].append(updatedPrediction)
         updatedPrediction = {}
 
@@ -281,7 +283,6 @@ def writeToJSON(currentIndexPredictions):
     with open('LSTM_new_predictor.json', 'w') as f:
         brackets.append(currentIndexPredictions)
         json.dump(brackets, f, indent=2)
-
 
 while True:
     print("checking for file updates...")
