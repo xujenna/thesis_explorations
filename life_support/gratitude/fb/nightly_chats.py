@@ -81,26 +81,29 @@ def job():
                 print("nothing in gratitude log")
 
 
-    contacts = ["Barak Chamo", "Chian Huang", "Michelle Maeng", "Gunvor B. G. Dreijer", "Anna Clements", "Sam Chasan", "Kellee Massey", "Alexandra Lopez", "Asha Veeraswamy", "Isabella Cruz-Chong", "Junie Lee", "Katya Rozanova", "Max Horwich", "Ridwan Madon", "Kemi Sijuwade-Ukadike", "Dan Shin", "Kathy Wu", "Jasmyne Robertson", "Kenzo Nakamura", "Lin Zhang", "Susan Churchfield", "Liz Wallace", "Helen Tang", "Rushali Paratey", "Nick Wallace", "Zohreh Zadbood", "Carrie Sijia Wang", "Akmyrat Tuyliyev", "Alejandro Nicolás Sanín Ordoñez", "Luigi Menduni", "Sandy Hsieh", "Christina Coclanes", "Json Yung", "Mary Notari", "Chelsea Chen Chen"]
 
-    name = contacts[random.randint(0,len(contacts))]
-
-    intro = "Hey " + name.split(' ')[0] + "! I`m Jenna`s thesis bot, and was wondering if you`d like to share a gratitude practice with her today. It`s super simple: you`ll just exchange a brief list of good things that happened in each of your days."
-    
     myList = ""
     for x in range(0, len(gratitudeList)):
         myList += str(x+1) + ". " + gratitudeList[x] + ", "
 
+    randomContacts = ["Barak Chamo", "Chian Huang", "Michelle Maeng", "Gunvor B. G. Dreijer", "Anna Clements", "Sam Chasan", "Kellee Massey", "Alexandra Lopez", "Asha Veeraswamy", "Isabella Cruz-Chong", "Junie Lee", "Katya Rozanova", "Max Horwich", "Ridwan Madon", "Kemi Sijuwade-Ukadike", "Dan Shin", "Kathy Wu", "Jasmyne Robertson", "Kenzo Nakamura", "Lin Zhang", "Susan Churchfield", "Liz Wallace", "Helen Tang", "Rushali Paratey", "Nick Wallace", "Zohreh Zadbood", "Carrie Sijia Wang", "Akmyrat Tuyliyev", "Alejandro Nicolás Sanín Ordoñez", "Luigi Menduni", "Sandy Hsieh", "Christina Coclanes", "Json Yung", "Mary Notari", "Chelsea Chen Chen"]
 
-    middle = "Here`s her list: " + myList
+    dailyContacts = ["Huiyi Chen"]
 
-    end = "If you`re game, simply respond with your own list. If not, just ignore me. Thanks!"
+    randomName = randomContacts[random.randint(0,len(randomContacts))]
+
+    dailyContacts.append(randomName)
+
+    for name in dailyContacts:
+
+        intro = "Hey " + name.split(' ')[0] + "! I`m Jenna`s thesis bot, and was wondering if you`d like to share a gratitude practice with her today. It`s super simple: you`ll just exchange a brief list of good things that happened in each of your days."
+
+        middle = "Here`s her list: " + myList
+
+        end = "If you`re game, simply respond with your own list. If not, just ignore me. Thanks!"
+        
+        appscript.app('Terminal').do_script("cd /Users/jxu2/github/thesis_explorations/life_support/gratitude/fb/ && messer --command='m \"" + name + "\" " + intro + "' && messer --command='m \"" + name + "\" " + middle[:-2] + "' && messer --command='m \"" + name + "\" " + end + "'")
     
-    appscript.app('Terminal').do_script("cd /Users/jxu2/github/thesis_explorations/life_support/gratitude/fb/ && messer --command='m \"" + name + "\" " + intro + "' && messer --command='m \"" + name + "\" " + middle[:-2] + "' && messer --command='m \"" + name + "\" " + end + "'")
-    
-    # appscript.app('Terminal').do_script("cd /Users/jxu2/github/thesis_explorations/life_support/gratitude/fb/ && messer --command='m \"" + name + "\" " + middle + "' ")
-    
-    # appscript.app('Terminal').do_script("cd /Users/jxu2/github/thesis_explorations/life_support/gratitude/fb/ && messer --command='m \"" + name + "\" " + end + "' ")
 
 
 schedule.every().day.at("22:30").do(job)
