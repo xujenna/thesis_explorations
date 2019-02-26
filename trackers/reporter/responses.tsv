@@ -1724,3 +1724,66 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2019-02-13T20:51:44.470921	1550109104.470921	3	pretty tired but content	long day running around and not eating	schoolwork, leisure, feedly, resting	2	True	Home	3	0.5	3.5	True
 2019-02-13T21:52:24.042244	1550112744.042244	3.5	pretty good	just cooked a ton of zhou, planning galentine's day	cooking, chatting	3	True	Home	3.5	0	3	False
 2019-02-13T22:58:53.874588	1550116733.874588	3	content	doing some work	schoolwork	3	True	Home	3	0.5	3.5	True
+2019-02-14T00:00:45.459181	1550120445.459181	3.5	cheerful	doing some work, looking forward to galentine's day, really into woman by kesha	schoolwork	2	True	Home	3.5	0.5	3.5	True
+2019-02-14T01:09:07.411434	1550124547.411434	3.5	hyped	getting into tarot reading	leisure, errands	1	True	Home	3.5	0	4	False
+2019-02-14T13:05:11.136404	1550167511.136404	3	fine, distracted from class by this node stuff	didn't sleep enough again lol	schoolwork, in class	4	False	School	3	1	3	False
+2019-02-14T14:29:43.387100	1550172583.3871	2.5	super restless 	IBM is being difficult, need to use the bathroom lol	schoolwork, in class	1	True	Home	3	2	3	False
+2019-02-14T17:21:16.685283	1550182876.685283	2.5	tired	cleaning for galentine's day	errands, eating	3	True	Home	3	1	3.5	False
+2019-02-15T03:57:13.752489	1550221033.752489	4	cheerful but exhausted	very successful galentine's day	with friends, leisure	6	True	Home	3.5	1	4.5	True
+2019-02-15T04:57:49.579404	1550224669.579404	3.5	very tired	working on thesis statement	schoolwork	5	True	Home	3	2	5	True
+2019-02-15T13:42:39.297553	1550256159.297553	3	cheerful but dead tired	hungover from galentine's day	working	4	False	School	3	2.5	4	True
+2019-02-15T16:08:01.563450	1550264881.56345	3	relieved but still tired	finished my proposal	schoolwork	2	True	Home	3	1	4	True
+2019-02-15T17:10:45.475732	1550268645.475732	3	relieved again, still tired	super half fixed my sink problem lol	schoolwork, leisure, eating	5	True	Home	2.5	1	4	False
+2019-02-16T20:31:38.653331	1550367098.653331	3	cheerful but exhausted	not enough sleep, long day running around with gunvor and sebastian	leisure, with friends	5	True	Home	2.5	0.5	4	False
+2019-02-17T10:53:31.699237	1550418811.699237	2.5	distracted	boys lol	leisure, schoolwork	2	True	Home	2.5	1	3	True
+2019-02-17T14:58:51.102621	1550433531.102621	2.5	distracted	don't really feel like working	schoolwork	1	True	Home	2	1.5	3.5	True
+2019-02-17T16:04:34.870523	1550437474.870523	3	fine	finally doing some work	schoolwork	3	True	Home	2.5	1	3	True
+2019-02-17T17:14:34.379208	1550441674.379208	3	still fine	took a break, back to work	schoolwork, errands	1	True	Home	3	1	2.5	True
+2019-02-17T18:57:17.793249	1550447837.793249	2.5	a little restless	not sure what to do now	cooking, eating	0	True	Home	2.5	1.5	3	False
+2019-02-17T22:21:23.220618	1550460083.220618	3	fine	just had dinner with gunvor and sebastian	eating, with friends	3	False	Home	2.5	0.5	3.5	True
+2019-02-17T23:38:23.430268	1550464703.430268	3.5	pretty good	hanging out with gunvor and sebastian	chatting, with friends	5	False	School	3	0.5	3	True
+2019-02-18T00:52:08.418545	1550469128.418545	2.5	distracted	do not want to do this thesis hw	schoolwork, leisure	1	True	Home	2	1.5	3.5	True
+2019-02-18T11:11:39.572234	1550506299.572234	2.5	unmotivated	still do not want to do thesis hw lol	leisure, eating, schoolwork	2	True	Home	2.5	1.5	2	False
+2019-02-18T12:45:21.574804	1550511921.574804	2	lazy and unmotivated	i hate thesis lol	leisure, feedly	0	True	Home	2	2	2.5	False
+2019-02-18T14:09:45.397627	1550516985.397627	2	still lazy and unmotivated	can't force myself to do thesis hw	leisure, feedly, tv	1	True	Home	2	2.5	2.5	False
+2019-02-18T15:37:45.617951	1550522265.617951	3	focused	finally writing this damn thing	schoolwork	0	True	Home	3	1.5	3	False
+2019-02-18T16:41:37.092096	1550526097.092096	3.5	relieved	finally finished my context paper	schoolwork	2	True	Home	3.5	1	2.5	False
+2019-02-18T23:31:08.329570	1550550668.32957	3	frustrated	thesis advisor is MIA 	leisure, eating, with friends, chatting	5	False	Home	3	2	3.5	False
+2019-02-19T11:36:01.024013	1550594161.024013	3.5	tired but excited	bernie's officially running	eating, leisure, feedly, schoolwork	3	True	Home	3	1	3	False
+2019-02-19T13:01:01.429145	1550599261.429145	2.5	restless, angry	supervisor of the parking garage is an asshole	leisure, feedly, errands	3	True	Home	2.5	2	3	False
+2019-02-19T17:18:44.199763	1550614724.199763	3	cheerful but restless	hanging out at school but frustrated with thesis class	in class, leisure, with friends	8	False	School	2.5	2	3.5	True
+2019-02-19T19:48:34.637066	1550623714.637066	4	excited	brainstorming ideas with huiyi for lacma app	leisure, eating, with friends	3	False	School	4	1.5	3.5	True
+2019-02-19T22:04:17.521568	1550631857.521568	3.5	very content	just relaxing with gunvor and sebastian	cooking, eating, leisure, with friends, errands	2	False	Home	3	0.5	3.5	False
+2019-02-19T23:28:10.790134	1550636890.790134	4	excited	just made an introduction to my crush lol	email, leisure, chatting	4	False	Home	3.5	1	3.5	True
+2019-02-20T00:39:29.035854	1550641169.035854	3	restless	can't stop thinking about my crush lol	leisure	1	False	Home	3	2	4	True
+2019-02-20T11:11:28.288461	1550679088.288461	2.5	pretty tired	not sleeping enough this week	schoolwork, washing up	3	True	Home	2.5	1.5	3	True
+2019-02-20T12:31:55.649880	1550683915.64988	3	tired, unmotivated	don't want to read, gunvor and sebastian are back due to the snow	schoolwork	2	False	Home	2.5	1	3.5	True
+2019-02-21T13:50:13.253608	1550775013.253608	4	cheerful	got a lot of sleep, hanging out at school	in class, eating	5	False	School	3.5	0.5	0.5	False
+2019-02-21T16:18:11.868260	1550783891.86826	4	cheerful	hanging out at school, had OH with shiffman for ml5	leisure, with friends, schoolwork	7	False	School	4	1	1	False
+2019-02-21T17:58:33.679215	1550789913.679215	4	still cheerful	still hanging out at school, working with huiyi on our lacma proposal	working, with friends	3	False	School	4	1.5	2	False
+2019-02-21T19:27:27.504984	1550795247.504984	4.5	cheerful	hanging out at school	schoolwork, with friends, leisure	4	False	School	4	2	2	False
+2019-02-21T20:28:19.506744	1550798899.506744	3	tired	don't want to work on this grant proposal anymore	working, with friends	4	False	School	2.5	2.5	2.5	False
+2019-02-21T23:23:35.520387	1550809415.520387	3.5	cheerful	barak is writing our budget lol	schoolwork, with friends, leisure	4	False	Home	3.5	1.5	3	False
+2019-02-22T00:42:29.512643	1550814149.512643	3	content	i did something today lol	errands	3	False	Home	3	0.5	4	False
+2019-02-22T13:57:10.310714	1550861830.310714	3.5	motivated	want to work on ml5 lol	working	4	False	School	4	0.5	2	False
+2019-02-22T22:17:00.879068	1550891820.879068	2.5	sad and tired	gunvor and sebastian left, didn't sleep well last night, long day	with friends, leisure, feedly	4	True	Home	2.5	1	4	False
+2019-02-22T23:41:07.876134	1550896867.876134	2.5	lazy	tired	leisure, tv	0	True	Home	2.5	1	4	True
+2019-02-23T01:09:31.190175	1550902171.190175	2	super dead	so tired	working, leisure, tv	0	True	Home	2	1.5	4.5	True
+2019-02-23T12:59:38.282350	1550944778.28235	3	content, a little stressed	lots of stuff to do this weekend	schoolwork, chatting, cooking, eating	3	True	Home	3.5	2	2.5	False
+2019-02-23T15:20:21.749244	1550953221.749244	3.5	pretty good	getting my fighting game ready for documentation	schoolwork, cooking, eating	3	True	Home	3.5	2.5	3	False
+2019-02-23T17:19:59.293508	1550960399.293508	4	cheerful	hanging out at school	with friends, leisure	4	False	School	3	1	2.5	True
+2019-02-23T19:22:00.779116	1550967720.779116	4	still cheerful	still hanging out at school, barak helped me with documentation	schoolwork, with friends	5	False	School	4	1.5	2	False
+2019-02-24T12:13:51.116250	1551028431.11625	3.5	relieved	finished this documentation video	schoolwork, errands, eating	2	True	Home	3.5	1	1.5	False
+2019-02-24T13:36:10.196595	1551033370.196595	2.5	annoyed and tired	submission portal makes no sense	working, cooking	1	True	Home	3	2	2.5	False
+2019-02-24T14:36:40.246364	1551037000.246364	3	content	just had a shower	washing up, cooking, schoolwork	0	True	Home	3	1.5	2	False
+2019-02-24T17:04:45.349759	1551045885.349759	2	super sleepy	tired today	schoolwork	0	True	Home	2	2	4	True
+2019-02-24T21:38:45.282046	1551062325.282046	3.5	excited	barak and i working on AI Lab proposal	schoolwork, with friends	2	False	School	3.5	1.5	2.5	False
+2019-02-24T23:09:06.228593	1551067746.228593	4	pretty good	just hanging out at school, working on hw	schoolwork	4	False	School	4	2	3	False
+2019-02-25T01:08:16.857769	1551074896.857769	2.5	blah	tired again	schoolwork	1	True	Home	2.5	2	4	False
+2019-02-25T02:27:08.811939	1551079628.811939	2	unmotivated	too tired	schoolwork, reading	2	True	Home	2	2.5	4.5	False
+2019-02-25T11:22:57.673034	1551111777.673034	3	fine	just doing hw for data science	schoolwork, eating	0	True	Home	3	1.5	2	False
+2019-02-25T12:36:30.346145	1551116190.346145	3	fine	took a break to put away laundry	errands, schoolwork	0	True	Home	3	1	2	False
+2019-02-25T15:22:03.311587	1551126123.311587	3.5	pretty good	finally figuring out R after hours of flailing lol	schoolwork	1	True	Home	3.5	1.5	2	False
+2019-02-25T21:52:19.972778	1551149539.972778	3	content	making a dataset of poetry	schoolwork	1	True	Home	3.5	1	2.5	True
+2019-02-25T23:04:37.847469	1551153877.847469	3.5	happy	reading poetry for hw lol	schoolwork	1	True	Home	4	0.5	3	False
+2019-02-26T02:06:37.493276	1551164797.493276	2.5	super sleepy	reading poetry all night	schoolwork, washing up	3	True	Home	2.5	1	4.5	True

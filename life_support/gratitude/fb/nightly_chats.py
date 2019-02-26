@@ -21,7 +21,7 @@ def writeToJSON(response):
             with open('gratitude.json', 'w') as outfile:
                 json.dump(gratitude_log, outfile, indent=2)
 
-            print("Appended entry to today's log")
+            print("\nAppended entry to today's log\n")
 
         else:
             gratitude_log.append(response)
@@ -29,7 +29,7 @@ def writeToJSON(response):
             with open('gratitude.json', 'w') as outfile:
                 json.dump(gratitude_log, outfile, indent=2)
 
-            print("Added new log for today")
+            print("\nAdded new log for today\n")
 
 
 def getGratitude():
@@ -86,7 +86,7 @@ def job():
     for x in range(0, len(gratitudeList)):
         myList += str(x+1) + ". " + gratitudeList[x] + ", "
 
-    randomContacts = ["Barak Chamo", "Chian Huang", "Michelle Maeng", "Gunvor B. G. Dreijer", "Anna Clements", "Sam Chasan", "Kellee Massey", "Alexandra Lopez", "Asha Veeraswamy", "Isabella Cruz-Chong", "Junie Lee", "Katya Rozanova", "Max Horwich", "Ridwan Madon", "Kemi Sijuwade-Ukadike", "Dan Shin", "Kathy Wu", "Jasmyne Robertson", "Kenzo Nakamura", "Lin Zhang", "Susan Churchfield", "Liz Wallace", "Helen Tang", "Rushali Paratey", "Nick Wallace", "Zohreh Zadbood", "Carrie Sijia Wang", "Akmyrat Tuyliyev", "Alejandro Nicolás Sanín Ordoñez", "Luigi Menduni", "Sandy Hsieh", "Christina Coclanes", "Json Yung", "Mary Notari", "Chelsea Chen Chen"]
+    randomContacts = ["Chian Huang", "Michelle Maeng", "Gunvor B. G. Dreijer", "Anna Clements", "Sam Chasan", "Kellee Massey", "Alexandra Lopez", "Asha Veeraswamy", "Isabella Cruz-Chong", "Junie Lee", "Katya Rozanova", "Max Horwich", "Ridwan Madon", "Kemi Sijuwade-Ukadike", "Dan Shin", "Kathy Wu", "Jasmyne Robertson", "Lin Zhang", "Susan Churchfield", "Barak Chamo", "Liz Wallace", "Helen Tang", "Rushali Paratey", "Nick Wallace", "Zohreh Zadbood", "Carrie Sijia Wang", "Akmyrat Tuyliyev", "Alejandro Nicolás Sanín Ordoñez", "Luigi Menduni", "Sandy Hsieh", "Json Yung", "Mary Notari", "Chelsea Chen Chen"]
 
     dailyContacts = ["Huiyi Chen"]
 

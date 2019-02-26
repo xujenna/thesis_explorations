@@ -17,7 +17,7 @@ let interactions = {
     selectedCommand : {}
 }
 
-let absolutistWords = ["always", "never", "all the time", "absolutely", "completely", "constantly", "constant", "definitely", "every", "ever", "everything", "entire", "all", "what about when you", "remember when you", "i hate when you", "not my fault", "it's your fault"]
+let absolutistWords = ["always", "never", "all the time", "absolutely", "completely", "constantly", "definitely", "every", "ever", "everything", "entire", "what about when you", "remember when you", "i hate when you", "not my fault", "it's your fault"]
 
 let continueWords = ["i'm ready", "i'm done", "i am done", "next step", "we're ready", "we are ready"]
 
@@ -25,7 +25,7 @@ let stepContent = {};
 
 stepContent[0] = {};
 stepContent[0]["playerNum"] = 0;
-stepContent[0]["transcript"] = ["Please take a comfortable seat at the same level. [[slnc 1000]] First, establish which teammate had the original complaint; they are player one. [[slnc 1000]] Take a moment to read the rules on the screen, then let me know when you're ready."]
+stepContent[0]["transcript"] = ["Please take a comfortable seat at the same level. [[slnc 1000]] First, establish which teammate had the original complaint; they are player one. [[slnc 1000]] Then, take turns reading each rule aloud. Let me know when you're ready."]
 // stepContent[1]["transcript"] = "Please take a comfortable seat at the same level, maintain open body language, and face each other. [[slnc 1000]] Take a moment to establish which teammate had the original complaint. They are player one. [[slnc 1000]] Now close your eyes.[[slnc 2000]] We'll start with a breathing ritual. [[slnc 2500]] Breathe in for one, [[slnc 1000]] two, [[slnc 1000]] three, [[slnc 1000]] four. [[slnc 1000]] Back out for one [[slnc 1000]], two [[slnc 1000]], three [[slnc 1000]], four [[slnc 1000]]. In for one, [[slnc 1000]] two, [[slnc 1000]] three, [[slnc 1000]] four. [[slnc 1000]] Out for one [[slnc 1000]], two [[slnc 1000]], three [[slnc 1000]], four [[slnc 1000]]. In for one, [[slnc 1000]] two, [[slnc 1000]] three, [[slnc 1000]] four. [[slnc 1000]] Out for one [[slnc 1000]], two [[slnc 1000]], three [[slnc 1000]], four [[slnc 3000]]. You'll only get out alive if you communicate honestly and listen carefully, without assumptions. [[slnc 1500]] Focus on the challenge at hand; you will lose points for global statements, as well as excessive anger. [[slnc 1500]] The quest cannot be completed without the full cooperation of two people, so maintain a positive, generous, and compassionate attitude. [[slnc 1500]] Remember, there can only be either two winners, or two losers, so leave your ego and pride with me before you go. [[slnc 1500]] When a player completes their turn, let me know by saying [[slnc 500]] I'm done. [[slnc 3000]] Now open your eyes. Player one, let me know when you're ready, and we can begin."
 stepContent[0]["nextSubstep"] = [];
 stepContent[0]["bonus"] = [];
@@ -67,7 +67,7 @@ stepContent[5]["bonusWords"] = []
 
 stepContent[6] = {};
 stepContent[6]["playerNum"] = 2;
-stepContent[6]["transcript"] = ["Player 2: if a solution has been agreed to, say 'the challenge has been completed'. Otherwise, continue negotiating, referring to steps 5 and 6 if needed."]
+stepContent[6]["transcript"] = ["Player 2: if a solution has been agreed to, say we're done. Otherwise, continue negotiating, referring to steps 5 and 6 if needed."]
 stepContent[6]["nextSubstep"] = []
 stepContent[6]["bonusWords"] = []
 
@@ -287,11 +287,12 @@ function listen(){
             transcriptIndex = 0;
             turns += 1;
             
-            if((stepContent[turns]["nextSubstep"].length) == transcriptIndex){
+            if((stepContent[turns]["nextSubstep"].length) == transcriptIndex && stepContent[turns]["bonus"] !== undefined){
+                bonusCard.style.display = "block"
                 bonusCard.innerHTML = "<b>BONUS</b>" + stepContent[turns]["bonus"];
             }
             else{
-                bonusCard.innerHTML = "<b>BONUS</b>"
+                bonusCard.style.display = "none"
             }
 
             transcript[turns] = {};
@@ -305,12 +306,12 @@ function listen(){
         else if(stepContent[turns]["nextSubstep"].length > 0 && transcriptIndex < stepContent[turns]["nextSubstep"].length && !!stepContent[turns]["nextSubstep"].find(p => finalString.match(`(^|[^a-z])(${p})($|[^a-z])`, 'g'))){
         // else if(stepContent[turns]["nextSubstep"].length > 0 && new RegExp(stepContent[turns]["nextSubstep"].join("|")).test(newString)){
             transcriptIndex += 1;
-            if(transcriptIndex == stepContent[turns]["nextSubstep"].length && stepContent[turns]["bonus"] !== undefined){
-                // bonusCard.style.display = "block";
+            if((stepContent[turns]["nextSubstep"].length) == transcriptIndex && stepContent[turns]["bonus"] !== undefined){
+                bonusCard.style.display = "block"
                 bonusCard.innerHTML = "<b>BONUS</b>" + stepContent[turns]["bonus"];
             }
             else{
-                bonusCard.innerHTML = "<b>BONUS</b>"
+                bonusCard.style.display = "none"
             }
             nextStep();
         }
