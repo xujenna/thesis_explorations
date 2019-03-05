@@ -1,0 +1,32 @@
+{
+    "interventions":
+    {
+        "workouts": [
+            {
+                "title": "Seven Minute Workout",
+                "guide": [
+                    "Let's do the seven minute workout! <break time = '15s'/>Start with jumping jacks. <break time = '30s'/>Now rest for ten seconds. <break time = '10s'/> Next up, a wall sit. <break time = '30s'/> Now rest. <break time = '10s'/>Next up, push-ups. <break time = '30s'/> Now rest. <break time = '10s'/> Abdominal crunches are next. <break time = '30s'/>Now rest. <break time = '10s'/>Next, step-up onto a chair. <break time = '30s'/>Now rest. <break time = '10s'/>Next up, squats. <break time = '30s'/>Now rest. <break time = '10s'/>Next, tricep dips on a chair. <break time = '30s'/>Now rest. <break time = '10s'/>Next up, plank. <break time = '30s'/>Now rest. <break time = '10s'/>Next, high knees running in place. <break time = '30s'/>Now rest. <break time = '10s'/>Next up, lunges. <break time = '30s'/>Now rest. <break time = '10s'/>Next, push-ups with rotation. <break time = '30s'/>Now rest. <break time = '10s'/>Last is the side plank. <break time = '30s'/> You did it! That's the end of the seven minute workout."
+                ]
+            }
+        ],
+        "dance": [
+            {
+                "title" : "TK",
+                "guide" : [
+
+                ]
+            }
+        ]
+    },
+    "rituals":
+    {
+        "exerises":[
+            {
+                "title": "TK",
+                "guide": [
+
+                ]
+            }
+        ]
+    }
+}

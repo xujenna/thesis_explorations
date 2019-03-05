@@ -1,7 +1,7 @@
 [
     {
         "poet": "Maya Angelou",
-        "symbol": "Ascension",
+        "symbol": "Beyond",
         "poems": [
             {
                 "title": "Glory Falls",
@@ -286,7 +286,7 @@
     },
     {
         "poet": "Li-Young Lee",
-        "symbol": "Reemergence",
+        "symbol": "Before",
         "poems": [
             {
                 "title": "Furious Versions",
@@ -505,7 +505,7 @@
     },
     {
         "poet": "Mary Oliver",
-        "symbol": "Reverence",
+        "symbol": "Betwixt",
         "poems": [
             {
                 "title": "7 The Forest",
@@ -648,7 +648,7 @@
                     "streaming upward on its heavenly oils,",
                     "say, on a morning in early summer,",
                     "at its perfect imperial distance—",
-                    "and have you ever felt for antyhing",
+                    "and have you ever felt for anything",
                     "",
                     "such wild love—",
                     "do you think there is anywhere, in any language,",
@@ -854,16 +854,6 @@
                     "over and over announcing your place",
                     "in the family of things."
                 ]
-            }
-        ]
-    },
-    {
-        "poet": "Maya Angelou",
-        "symbol": "Ascension",
-        "poems": [
-            {
-                "title": "Glory Falls",
-                "text": []
             }
         ]
     }

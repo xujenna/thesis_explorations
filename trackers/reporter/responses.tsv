@@ -1787,3 +1787,41 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2019-02-25T21:52:19.972778	1551149539.972778	3	content	making a dataset of poetry	schoolwork	1	True	Home	3.5	1	2.5	True
 2019-02-25T23:04:37.847469	1551153877.847469	3.5	happy	reading poetry for hw lol	schoolwork	1	True	Home	4	0.5	3	False
 2019-02-26T02:06:37.493276	1551164797.493276	2.5	super sleepy	reading poetry all night	schoolwork, washing up	3	True	Home	2.5	1	4.5	True
+2019-02-26T12:11:22.819745	1551201082.819745	3	focused	working on intervention bot	schoolwork, eating	3	True	Home	3	1.5	2	True
+2019-02-26T13:38:21.592127	1551206301.592127	2.5	fine but a little stressed	late for OH	washing up	1	True	Home	3	2	2	False
+2019-02-26T15:19:32.688647	1551212372.688647	2.5	annoyed	in thesis lol	in class	5	False	School	3	1.5	2.5	False
+2019-02-26T16:29:32.193465	1551216572.193465	3.5	pretty good	escaping thesis and hanging out at school	in class	8	False	School	3.5	1	2.5	False
+2019-02-26T20:26:18.871416	1551230778.871416	3	content	had a good dinner with huiyi	schoolwork, leisure, eating, with friends	5	False	School	3	1.5	3	False
+2019-02-26T22:21:51.859241	1551237711.859241	2.5	kind of stressed	too much to do	schoolwork	4	False	School	3	2.5	3.5	False
+2019-02-27T05:11:07.085139	1551262267.085139	3.5	happy	had a nice TNI with sandy, huiyi, and anthony	schoolwork, leisure, with friends	3	True	Home	3.5	1.5	4.5	True
+2019-02-27T13:38:36.494436	1551292716.494436	3.5	cheerful	had fun last night	washing up, eating	2	True	Home	3.5	2	2.5	False
+2019-02-27T17:37:39.252206	1551307059.252206	2.5	really tired	hung over lol	in class	3	False	School	2.5	1.5	4	False
+2019-02-27T20:31:50.532714	1551317510.532714	2.5	still super tired	late night last night	leisure, tv	0	True	Home	2	1	4.5	False
+2019-02-27T23:07:59.170079	1551326879.170079	3	content	did the dishes and watched a lot of satc	leisure, tv, errands	3	True	Home	2	0.5	4.5	True
+2019-02-28T12:32:37.785627	1551375157.785627	3.5	cheerful	hanging out at school	errands	7	False	School	3.6	0.5	2	False
+2019-02-28T14:44:30.583917	1551383070.583917	4	cheerful	shared mad libs with lin	leisure, with friends	3	False	School	4	1	2	False
+2019-02-28T16:20:14.031594	1551388814.031594	3.5	pretty good	at school working on ml5	working	3	False	School	3.5	0.5	2	False
+2019-02-28T17:21:11.325049	1551392471.325049	3	fine	getting stuck	working	0	False	School	3	1	2.5	False
+2019-02-28T22:31:27.458678	1551411087.458678	4	cheerful	had pho with sandy, got help from barak	schoolwork, eating, with friends	4	FAlse	School	3.5	1	3	True
+2019-02-28T23:39:30.279526	1551415170.279526	3	focused	trying to figure out w2v shit	working	2	False	School	3	1.5	3.5	False
+2019-03-01T12:43:52.977578	1551462232.977578	3	content	just had breakfast	eating, leisure, feedly, chatting	3	True	Home	3	1	2	True
+2019-03-01T14:09:21.574566	1551467361.574566	3	fine	getting ready to go	washing up, email, errands	3	True	Home	3	1.5	2	False
+2019-03-01T16:05:49.663263	1551474349.663263	3.5	pretty good	listening to the carters and writing a proposal	schoolwork	7	False	School	3.5	1	2.5	False
+2019-03-01T17:06:46.330411	1551478006.330411	3.5	still pretty good	submitted two proposals to this ieee conference	schoolwork	4	False	School	3.5	0.5	2	False
+2019-03-01T18:31:52.693337	1551483112.693337	3	content	taking care of some stuff, thinking about thesis	schoolwork, email	5	False	School	3	1	2.5	False
+2019-03-01T19:33:12.700541	1551486792.700541	3.5	cheerful but stressed lol	hanging out at school, confused about thesis	schoolwork, chatting, with friends	5	False	School	2.5	2	2.5	False
+2019-03-01T22:31:10.477603	1551497470.477603	4	cheerful	had a good dinner with huiyi at tipsy shanghai	eating, with friends, errands	4	False	School	3	1	3	False
+2019-03-02T00:09:08.624530	1551503348.62453	3.5	cheerful	just got home, chatting on fb	chatting, errands	2	True	Home	3	1.5	3.5	True
+2019-03-03T01:27:45.189177	1551594465.189177	4	tired but happy	had a long day visiting people	leisure, with friends	12	True	Home	3	0.5	4	True
+2019-03-03T12:18:23.783527	1551633503.783527	3	pretty content	slept a lot last night, just had breakfast	eating, washing up	3	True	Home	3	1	1	False
+2019-03-03T23:19:53.233196	1551673193.233196	3.5	cheerful but tired	long weekend of socializing, had a nice dinner with ellen	leisure, with friends	2	True	Home	3	1.5	3.5	True
+2019-03-04T00:52:46.812656	1551678766.812656	3	super restless	boy drama	leisure, chatting	4	True	Home	2.5	2	3	False
+2019-03-04T01:56:24.063920	1551682584.06392	3	contentish	reading poetry	reading	2	True	Home	2.5	1.5	3.5	True
+2019-03-04T12:43:09.682979	1551721389.682979	2.5	unmotivated	overwhelmed by how much work i have to dooo	schoolwork, leisure	1	True	Home	2	2	2.5	True
+2019-03-04T14:28:18.274433	1551727698.274433	2.5	stressed	too much thesis talk	leisure, chatting	5	True	Home	2	3	2.5	False
+2019-03-04T17:49:53.554922	1551739793.554922	3	fine	went grocery shopping	errands, schoolwork	1	True	Home	3	1.5	3	False
+2019-03-04T18:50:53.870450	1551743453.87045	3	fine but sleepy	tired from my TJ's run i guess	schoolwork, resting	0	True	Home	3	1	3.5	True
+2019-03-04T19:54:03.136077	1551747243.136077	3	pretty focused	working on thesis finally	schoolwork	0	True	Home	3	1	3	False
+2019-03-04T20:58:51.560551	1551751131.560551	3.5	pretty good	just doing some cooking/cleaning	cooking, errands	0	True	Home	3.5	0.5	2.5	False
+2019-03-04T21:59:52.137157	1551754792.137157	3	focused	back to work	schoolwork	0	True	Home	3.5	0.5	2	True
+2019-03-05T00:32:41.432737	1551763961.432737	3	still pretty focused	still working on thesis	schoolwork	0	True	Home	3	1	3	True
