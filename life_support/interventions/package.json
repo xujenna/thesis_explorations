@@ -1,0 +1,24 @@
+{
+  "name": "interventions",
+  "version": "1.0.0",
+  "description": "Jenna\\'s interventions",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run cred node index.js",
+    "dev": "",
+    "test": "test",
+    "test_speech": "npm run cred node tests/speech.js",
+    "cred": "GOOGLE_APPLICATION_CREDENTIALS=./credentials.json"
+  },
+  "keywords": [
+    "thesis"
+  ],
+  "author": "Jenna Xu",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^0.5.1",
+    "install": "^0.12.2",
+    "npm": "^6.9.0",
+    "play-sound": "^1.1.3"
+  }
+}
