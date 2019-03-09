@@ -106,7 +106,7 @@ def job():
     
 
 
-schedule.every().day.at("22:30").do(job)
+schedule.every().day.at("22:35").do(job)
 
 
 def runScheduler():

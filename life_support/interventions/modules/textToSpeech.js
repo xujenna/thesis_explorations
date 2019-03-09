@@ -8,42 +8,56 @@ const textToSpeech = require('@google-cloud/text-to-speech');
 const client = new textToSpeech.TextToSpeechClient();
 
 
-
+//en-GB-Standard-D
 async function say(something){
+    let arrayTranscript = [];
+    let playlist = [];
+    if(typeof something == "string"){
+        arrayTranscript.push(something)
+    }
+    else{
+        arrayTranscript = something
+    }
 
-    var sayThis = something.replace(/["]+/g, '\"');
+    arrayTranscript.forEach((d,i) =>{
+        var sayThis = d.replace(/["]+/g, '\"');
+        playlist.push('output'+i+'.mp3');
+
+        const request = {
+            input: {text: sayThis},
+            voice: {languageCode: 'en-US', ssmlGender: 'NEUTRAL'},
+            audioConfig: {audioEncoding: 'MP3'},
+        };
+        // console.log(d);
     
-    const request = {
-        input: {text: sayThis},
-        voice: {languageCode: 'en-US', ssmlGender: 'NEUTRAL'},
-        audioConfig: {audioEncoding: 'MP3'},
-    };
-
-    // Performs the Text-to-Speech request
-    client.synthesizeSpeech(request, (err, response) => {
-        if (err) {
-            console.error('ERROR:', err);
-            return;
-        }
-    
-        // Write the binary audio content to a local file
-        fs.writeFile('output.mp3', response.audioContent, 'binary', err => {
-        if (err) {
-            console.error('ERROR:', err);
-            return;
-        }
-
-        playAudio();
+        // Performs the Text-to-Speech request
+        client.synthesizeSpeech(request, (err, response) => {
+            if (err) {
+                console.error('ERROR:', err);
+                return;
+            }
+        
+            // Write the binary audio content to a local file
+            fs.writeFile('output'+i+'.mp3', response.audioContent, 'binary', err => {
+            if (err) {
+                console.error('ERROR:', err);
+                return;
+            }
+            if(i == arrayTranscript.length-1){
+                console.log(playlist)
+                playlist.forEach(d=>{
+                    playAudio(d)
+                })
+            }
+            });
         });
-    });
 
+    })
 }
 
 
-function playAudio() {
-    playlist.addToPlayQueue('output.mp3');
-    playlist.addToPlayQueue('output.mp3', () => console.log('TWO'));
-    playlist.addToPlayQueue('output.mp3', () => console.log('THREE'));
+function playAudio(file) {
+    playlist.addToPlayQueue(file);
 }
 
 // Export say function

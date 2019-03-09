@@ -1833,3 +1833,16 @@ time	unix_time	mood	moodNotes	trigger	activity	unique_interactions	alone	locatio
 2019-03-06T21:06:33.824023	1551924393.824023	3	fine	focused on getting google web speech to work	schoolwork	3	False	School	3	1.5	3.5	False
 2019-03-06T23:27:25.991046	1551932845.991046	3	overwhelmed but grateful	got a lot of node help from barak	schoolwork	2	False	School	3	2.5	3.5	False
 2019-03-07T00:41:19.573171	1551937279.573171	3.5	content	had a good dinner with barak	eating, with friends	1	False	School	3	1.5	3.5	False
+2019-03-07T02:43:14.653797	1551944594.653797	3.5	pretty good	just chatting a little	leisure, chatting	3	True	Home	3.5	1	4	True
+2019-03-07T16:03:48.085115	1551992628.085115	3.5	cheerful but tired	hungry	working	6	False	School	3.5	1.5	3.5	False
+2019-03-07T18:46:28.207209	1552002388.207209	3.5	cheerful but drunk	went to yokocho with barak and sandy	leisure, eating, with friends, errands	4	False	School	2.5	1.5	4	False
+2019-03-07T20:03:47.863174	1552007027.863174	3	fine	waking up	schoolwork, resting	0	False	School	3	1	3	False
+2019-03-07T21:16:15.665638	1552011375.665638	3.5	motivated	getting shit to work	schoolwork	1	False	School	3.5	1.5	3	False
+2019-03-07T22:17:23.410092	1552015043.410092	3	nervous	sandy is talking to roland and i can't stand it lol	schoolwork, leisure	2	False	School	3	2.5	3.5	False
+2019-03-08T00:51:31.062015	1552024291.062015	3	content	relaxing at home	errands, leisure	1	True	Home	3	1	4	False
+2019-03-08T12:06:03.018632	1552064763.018632	3.5	motivated	too many ideas for thesis	schoolwork	1	True	Home	4	1.5	2	True
+2019-03-08T17:12:39.301088	1552083159.301088	4	cheerful	bopping around the floor	working, studying, with friends	7	False	School	4	1	2.5	True
+2019-03-08T20:33:52.058818	1552095232.058818	3.5	excited but slightly overwhelmed	barak just set up my raspberry pi	schoolwork, with friends	2	False	School	3.5	2.5	3	True
+2019-03-08T22:01:28.897218	1552100488.897218	3	fine	getting back into my thesis	schoolwork	2	False	School	3	2	3.5	True
+2019-03-08T23:58:05.272353	1552107485.272353	2.5	restless	boy stuff	leisure, eating, resting	0	True	Home	2.5	2.5	3.5	True
+2019-03-09T01:08:58.835658	1552111738.835658	2.5	just tired now	time to sleep	schoolwork, leisure	0	True	Home	2.5	1.5	4.5	False

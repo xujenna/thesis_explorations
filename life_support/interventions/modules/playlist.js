@@ -14,7 +14,6 @@ function noOp() {
 function addToPlayQueue(file, callback) {
     // Add file to play queue
     playQueue.push(file)
-
     // Add callback to queue, pass noOp if no callback was called
     callbackQueue.push(callback || noOp)
 
@@ -37,6 +36,7 @@ function playFile(file, playingFromQueue) {
 }
 
 function onPlayDone() {
+
     // Mark as done playing
     isPlaying = false
 

@@ -4,4 +4,3 @@ documentation/
 *.mp3
 credentials.json
 node_modules/
-google-cloud-sdk/

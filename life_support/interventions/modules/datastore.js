@@ -1,6 +1,6 @@
 // initialize firebase
 var admin = require("firebase-admin");
-var serviceAccount = require('./mood-predictions-firebase-adminsdk-0ns22-7a7b9f250c.json');
+var serviceAccount = require('../mood-predictions-firebase-adminsdk-0ns22-7a7b9f250c.json');
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
